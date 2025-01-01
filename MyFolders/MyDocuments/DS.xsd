@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCapturingSignatures" targetNamespace="http://tempuri.org/DSCapturingSignatures.xsd" xmlns:mstns="http://tempuri.org/DSCapturingSignatures.xsd" xmlns="http://tempuri.org/DSCapturingSignatures.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DB_A3F994_coConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DB_A3F994_coConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.DB_A3F994_coConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCapturingSignatures" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCapturingSignatures" msprop:Generator_UserDSName="DSCapturingSignatures">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CapturingSignatures" msprop:Generator_UserTableName="CapturingSignatures" msprop:Generator_RowEvArgName="CapturingSignaturesRowChangeEvent" msprop:Generator_TableVarName="tableCapturingSignatures" msprop:Generator_TablePropName="CapturingSignatures" msprop:Generator_RowDeletingName="CapturingSignaturesRowDeleting" msprop:Generator_RowChangingName="CapturingSignaturesRowChanging" msprop:Generator_RowDeletedName="CapturingSignaturesRowDeleted" msprop:Generator_RowEvHandlerName="CapturingSignaturesRowChangeEventHandler" msprop:Generator_TableClassName="CapturingSignaturesDataTable" msprop:Generator_RowChangedName="CapturingSignaturesRowChanged" msprop:Generator_RowClassName="CapturingSignaturesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCS" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDCS" msprop:Generator_ColumnPropNameInRow="IDCS" msprop:Generator_ColumnPropNameInTable="IDCSColumn" msprop:Generator_UserColumnName="IDCS" type="xs:int" minOccurs="0" />
+              <xs:element name="CS1" msprop:Generator_ColumnVarNameInTable="columnCS1" msprop:Generator_ColumnPropNameInRow="CS1" msprop:Generator_ColumnPropNameInTable="CS1Column" msprop:Generator_UserColumnName="CS1" type="xs:string" minOccurs="0" />
+              <xs:element name="CS2" msprop:Generator_ColumnVarNameInTable="columnCS2" msprop:Generator_ColumnPropNameInRow="CS2" msprop:Generator_ColumnPropNameInTable="CS2Column" msprop:Generator_UserColumnName="CS2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CS3" msprop:Generator_ColumnVarNameInTable="columnCS3" msprop:Generator_ColumnPropNameInRow="CS3" msprop:Generator_ColumnPropNameInTable="CS3Column" msprop:Generator_UserColumnName="CS3" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="USERNAME" msprop:Generator_ColumnVarNameInTable="columnUSERNAME" msprop:Generator_ColumnPropNameInRow="USERNAME" msprop:Generator_ColumnPropNameInTable="USERNAMEColumn" msprop:Generator_UserColumnName="USERNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="Auditor" msprop:Generator_ColumnVarNameInTable="columnAuditor" msprop:Generator_ColumnPropNameInRow="Auditor" msprop:Generator_ColumnPropNameInTable="AuditorColumn" msprop:Generator_UserColumnName="Auditor" type="xs:string" minOccurs="0" />
+              <xs:element name="CUser" msprop:Generator_ColumnVarNameInTable="columnCUser" msprop:Generator_ColumnPropNameInRow="CUser" msprop:Generator_ColumnPropNameInTable="CUserColumn" msprop:Generator_UserColumnName="CUser" type="xs:string" minOccurs="0" />
+              <xs:element name="COUser" msprop:Generator_ColumnVarNameInTable="columnCOUser" msprop:Generator_ColumnPropNameInRow="COUser" msprop:Generator_ColumnPropNameInTable="COUserColumn" msprop:Generator_UserColumnName="COUser" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Previouspost1" msdata:Locale="" msprop:Generator_UserTableName="Previouspost1" msprop:Generator_RowEvArgName="Previouspost1RowChangeEvent" msprop:Generator_TableVarName="tablePreviouspost1" msprop:Generator_TablePropName="Previouspost1" msprop:Generator_RowDeletingName="Previouspost1RowDeleting" msprop:Generator_RowChangingName="Previouspost1RowChanging" msprop:Generator_RowDeletedName="Previouspost1RowDeleted" msprop:Generator_RowEvHandlerName="Previouspost1RowChangeEventHandler" msprop:Generator_TableClassName="Previouspost1DataTable" msprop:Generator_RowChangedName="Previouspost1RowChanged" msprop:Generator_RowClassName="Previouspost1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="account_no" msprop:Generator_ColumnVarNameInTable="columnaccount_no" msprop:Generator_ColumnPropNameInRow="account_no" msprop:Generator_ColumnPropNameInTable="account_noColumn" msprop:Generator_UserColumnName="account_no" type="xs:string" minOccurs="0" />
+              <xs:element name="MOVD4" msprop:Generator_ColumnVarNameInTable="columnMOVD4" msprop:Generator_ColumnPropNameInRow="MOVD4" msprop:Generator_ColumnPropNameInTable="MOVD4Column" msprop:Generator_UserColumnName="MOVD4" type="xs:string" minOccurs="0" />
+              <xs:element name="account_name" msprop:Generator_ColumnVarNameInTable="columnaccount_name" msprop:Generator_ColumnPropNameInRow="account_name" msprop:Generator_ColumnPropNameInTable="account_nameColumn" msprop:Generator_UserColumnName="account_name" type="xs:string" minOccurs="0" />
+              <xs:element name="MOVD3" msprop:Generator_ColumnVarNameInTable="columnMOVD3" msprop:Generator_ColumnPropNameInRow="MOVD3" msprop:Generator_ColumnPropNameInTable="MOVD3Column" msprop:Generator_UserColumnName="MOVD3" type="xs:string" minOccurs="0" />
+              <xs:element name="SUMDEBIT" msprop:Generator_ColumnVarNameInTable="columnSUMDEBIT" msprop:Generator_ColumnPropNameInRow="SUMDEBIT" msprop:Generator_ColumnPropNameInTable="SUMDEBITColumn" msprop:Generator_UserColumnName="SUMDEBIT" type="xs:string" minOccurs="0" />
+              <xs:element name="SUMCREDIT" msprop:Generator_ColumnVarNameInTable="columnSUMCREDIT" msprop:Generator_ColumnPropNameInRow="SUMCREDIT" msprop:Generator_ColumnPropNameInTable="SUMCREDITColumn" msprop:Generator_UserColumnName="SUMCREDIT" type="xs:string" minOccurs="0" />
+              <xs:element name="SUMDEBIT1" msprop:Generator_ColumnVarNameInTable="columnSUMDEBIT1" msprop:Generator_ColumnPropNameInRow="SUMDEBIT1" msprop:Generator_ColumnPropNameInTable="SUMDEBIT1Column" msprop:Generator_UserColumnName="SUMDEBIT1" type="xs:string" minOccurs="0" />
+              <xs:element name="SUMCREDIT1" msprop:Generator_ColumnVarNameInTable="columnSUMCREDIT1" msprop:Generator_ColumnPropNameInRow="SUMCREDIT1" msprop:Generator_ColumnPropNameInTable="SUMCREDIT1Column" msprop:Generator_UserColumnName="SUMCREDIT1" type="xs:string" minOccurs="0" />
+              <xs:element name="ACC" msprop:Generator_ColumnVarNameInTable="columnACC" msprop:Generator_ColumnPropNameInRow="ACC" msprop:Generator_ColumnPropNameInTable="ACCColumn" msprop:Generator_UserColumnName="ACC" type="xs:string" minOccurs="0" />
+              <xs:element name="AccountKind" msprop:Generator_ColumnVarNameInTable="columnAccountKind" msprop:Generator_ColumnPropNameInRow="AccountKind" msprop:Generator_ColumnPropNameInTable="AccountKindColumn" msprop:Generator_UserColumnName="AccountKind" type="xs:string" minOccurs="0" />
+              <xs:element name="YEAR" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" msprop:Generator_UserColumnName="YEAR" type="xs:string" minOccurs="0" />
+              <xs:element name="YEAR1" msprop:Generator_ColumnVarNameInTable="columnYEAR1" msprop:Generator_ColumnPropNameInRow="YEAR1" msprop:Generator_ColumnPropNameInTable="YEAR1Column" msprop:Generator_UserColumnName="YEAR1" type="xs:string" minOccurs="0" />
+              <xs:element name="yearearlier" msprop:Generator_ColumnVarNameInTable="columnyearearlier" msprop:Generator_ColumnPropNameInRow="yearearlier" msprop:Generator_ColumnPropNameInTable="yearearlierColumn" msprop:Generator_UserColumnName="yearearlier" type="xs:string" minOccurs="0" />
+              <xs:element name="CUser" msprop:Generator_ColumnVarNameInTable="columnCUser" msprop:Generator_ColumnPropNameInRow="CUser" msprop:Generator_ColumnPropNameInTable="CUserColumn" msprop:Generator_UserColumnName="CUser" type="xs:string" minOccurs="0" />
+              <xs:element name="CUser1" msprop:Generator_ColumnVarNameInTable="columnCUser1" msprop:Generator_ColumnPropNameInRow="CUser1" msprop:Generator_ColumnPropNameInTable="CUser1Column" msprop:Generator_UserColumnName="CUser1" type="xs:string" minOccurs="0" />
+              <xs:element name="COUser" msprop:Generator_ColumnVarNameInTable="columnCOUser" msprop:Generator_ColumnPropNameInRow="COUser" msprop:Generator_ColumnPropNameInTable="COUserColumn" msprop:Generator_UserColumnName="COUser" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="CapturingSignaturesKey1">
+      <xs:selector xpath=".//mstns:CapturingSignatures" />
+      <xs:field xpath="mstns:IDCS" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

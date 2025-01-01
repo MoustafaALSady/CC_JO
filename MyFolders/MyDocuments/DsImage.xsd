@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsImage" targetNamespace="http://tempuri.org/DsImage.xsd" xmlns:mstns="http://tempuri.org/DsImage.xsd" xmlns="http://tempuri.org/DsImage.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="8" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ART_DataConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="ART_DataConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.ART_DataConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StoringDBConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="StoringDBConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.StoringDBConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="StoringDBConnectionString2" IsAppSettingsProperty="true" Modifier="Assembly" Name="StoringDBConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.StoringDBConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ARTConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="ARTConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.ARTConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="Demo" IsAppSettingsProperty="true" Modifier="Assembly" Name="Demo (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.Demo" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="coConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="coConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.coConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=(local);Initial Catalog=DB_A3F994_co;User ID=sa" IsAppSettingsProperty="false" Modifier="Assembly" Name="coj-pc.DB_A3F994_CC_JO.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DB_A3F994_coConnectionString" IsAppSettingsProperty="true" Modifier="Public" Name="DB_A3F994_coConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CC_JO.My.MySettings.GlobalReference.Default.DB_A3F994_coConnectionString3" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=co;Initial Catalog=DB_A3F994_co;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="co.DB_A3F994_co.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MYDOCUMENTSHOMETableAdapter" GeneratorDataComponentClassName="MYDOCUMENTSHOMETableAdapter" Name="MYDOCUMENTSHOME" UserDataComponentName="MYDOCUMENTSHOMETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="co.DB_A3F994_co.dbo" DbObjectName="DB_A3F994_co.dbo.MYDOCUMENTSHOME" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[MYDOCUMENTSHOME] WHERE (([DOC1] = @Original_DOC1) AND ((@IsNull_LO = 1 AND [LO] IS NULL) OR ([LO] = @Original_LO)) AND ((@IsNull_DOC2 = 1 AND [DOC2] IS NULL) OR ([DOC2] = @Original_DOC2)) AND ((@IsNull_DOC3 = 1 AND [DOC3] IS NULL) OR ([DOC3] = @Original_DOC3)) AND ((@IsNull_DOC4 = 1 AND [DOC4] IS NULL) OR ([DOC4] = @Original_DOC4)) AND ((@IsNull_DOC5 = 1 AND [DOC5] IS NULL) OR ([DOC5] = @Original_DOC5)) AND ((@IsNull_DOC7 = 1 AND [DOC7] IS NULL) OR ([DOC7] = @Original_DOC7)) AND ((@IsNull_DOC8 = 1 AND [DOC8] IS NULL) OR ([DOC8] = @Original_DOC8)) AND ((@IsNull_date_1 = 1 AND [date_1] IS NULL) OR ([date_1] = @Original_date_1)) AND ((@IsNull_USERNAME = 1 AND [USERNAME] IS NULL) OR ([USERNAME] = @Original_USERNAME)) AND ((@IsNull_CUser = 1 AND [CUser] IS NULL) OR ([CUser] = @Original_CUser)) AND ((@IsNull_COUser = 1 AND [COUser] IS NULL) OR ([COUser] = @Original_COUser)) AND ((@IsNull_da = 1 AND [da] IS NULL) OR ([da] = @Original_da)) AND ((@IsNull_ne = 1 AND [ne] IS NULL) OR ([ne] = @Original_ne)) AND ((@IsNull_da1 = 1 AND [da1] IS NULL) OR ([da1] = @Original_da1)) AND ((@IsNull_ne1 = 1 AND [ne1] IS NULL) OR ([ne1] = @Original_ne1)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DOC1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC4" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC5" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC7" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC7" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC8" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC8" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_date_1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_date_1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_USERNAME" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_USERNAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_COUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_COUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_da" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_da" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ne" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ne" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_da1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_da1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ne1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ne1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[MYDOCUMENTSHOME] ([LO], [DOC2], [DOC3], [DOC4], [DOC5], [DOC6], [DOC7], [DOC8], [date_1], [USERNAME], [CUser], [COUser], [da], [ne], [da1], [ne1]) VALUES (@LO, @DOC2, @DOC3, @DOC4, @DOC5, @DOC6, @DOC7, @DOC8, @date_1, @USERNAME, @CUser, @COUser, @da, @ne, @da1, @ne1);
+SELECT DOC1, LO, DOC2, DOC3, DOC4, DOC5, DOC6, DOC7, DOC8, date_1, USERNAME, CUser, COUser, da, ne, da1, ne1 FROM MYDOCUMENTSHOME WHERE (DOC1 = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@DOC6" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="DOC6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC7" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC8" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@date_1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@USERNAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@COUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@da" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ne" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@da1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ne1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DOC1, LO, DOC2, DOC3, DOC4, DOC5, DOC6, DOC7, DOC8, date_1, USERNAME, CUser, COUser, da, ne, da1, ne1 FROM dbo.MYDOCUMENTSHOME</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[MYDOCUMENTSHOME] SET [LO] = @LO, [DOC2] = @DOC2, [DOC3] = @DOC3, [DOC4] = @DOC4, [DOC5] = @DOC5, [DOC6] = @DOC6, [DOC7] = @DOC7, [DOC8] = @DOC8, [date_1] = @date_1, [USERNAME] = @USERNAME, [CUser] = @CUser, [COUser] = @COUser, [da] = @da, [ne] = @ne, [da1] = @da1, [ne1] = @ne1 WHERE (([DOC1] = @Original_DOC1) AND ((@IsNull_LO = 1 AND [LO] IS NULL) OR ([LO] = @Original_LO)) AND ((@IsNull_DOC2 = 1 AND [DOC2] IS NULL) OR ([DOC2] = @Original_DOC2)) AND ((@IsNull_DOC3 = 1 AND [DOC3] IS NULL) OR ([DOC3] = @Original_DOC3)) AND ((@IsNull_DOC4 = 1 AND [DOC4] IS NULL) OR ([DOC4] = @Original_DOC4)) AND ((@IsNull_DOC5 = 1 AND [DOC5] IS NULL) OR ([DOC5] = @Original_DOC5)) AND ((@IsNull_DOC7 = 1 AND [DOC7] IS NULL) OR ([DOC7] = @Original_DOC7)) AND ((@IsNull_DOC8 = 1 AND [DOC8] IS NULL) OR ([DOC8] = @Original_DOC8)) AND ((@IsNull_date_1 = 1 AND [date_1] IS NULL) OR ([date_1] = @Original_date_1)) AND ((@IsNull_USERNAME = 1 AND [USERNAME] IS NULL) OR ([USERNAME] = @Original_USERNAME)) AND ((@IsNull_CUser = 1 AND [CUser] IS NULL) OR ([CUser] = @Original_CUser)) AND ((@IsNull_COUser = 1 AND [COUser] IS NULL) OR ([COUser] = @Original_COUser)) AND ((@IsNull_da = 1 AND [da] IS NULL) OR ([da] = @Original_da)) AND ((@IsNull_ne = 1 AND [ne] IS NULL) OR ([ne] = @Original_ne)) AND ((@IsNull_da1 = 1 AND [da1] IS NULL) OR ([da1] = @Original_da1)) AND ((@IsNull_ne1 = 1 AND [ne1] IS NULL) OR ([ne1] = @Original_ne1)));
+SELECT DOC1, LO, DOC2, DOC3, DOC4, DOC5, DOC6, DOC7, DOC8, date_1, USERNAME, CUser, COUser, da, ne, da1, ne1 FROM MYDOCUMENTSHOME WHERE (DOC1 = @DOC1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@DOC6" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="DOC6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC7" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DOC8" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@date_1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@USERNAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@COUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@da" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ne" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@da1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ne1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DOC1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LO" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC3" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC4" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC4" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC5" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC5" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC7" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC7" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC7" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DOC8" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DOC8" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DOC8" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_date_1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_date_1" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="date_1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_USERNAME" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_USERNAME" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="USERNAME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_COUser" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_COUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="COUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_da" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_da" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ne" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ne" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_da1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_da1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="da1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ne1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ne1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ne1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DOC1" ColumnName="DOC1" DataSourceName="DB_A3F994_co.dbo.MYDOCUMENTSHOME" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@DOC1" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="DOC1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DOC1" DataSetColumn="DOC1" />
+              <Mapping SourceColumn="LO" DataSetColumn="LO" />
+              <Mapping SourceColumn="DOC2" DataSetColumn="DOC2" />
+              <Mapping SourceColumn="DOC3" DataSetColumn="DOC3" />
+              <Mapping SourceColumn="DOC4" DataSetColumn="DOC4" />
+              <Mapping SourceColumn="DOC5" DataSetColumn="DOC5" />
+              <Mapping SourceColumn="DOC6" DataSetColumn="DOC6" />
+              <Mapping SourceColumn="DOC7" DataSetColumn="DOC7" />
+              <Mapping SourceColumn="DOC8" DataSetColumn="DOC8" />
+              <Mapping SourceColumn="date_1" DataSetColumn="date_1" />
+              <Mapping SourceColumn="USERNAME" DataSetColumn="USERNAME" />
+              <Mapping SourceColumn="CUser" DataSetColumn="CUser" />
+              <Mapping SourceColumn="COUser" DataSetColumn="COUser" />
+              <Mapping SourceColumn="da" DataSetColumn="da" />
+              <Mapping SourceColumn="ne" DataSetColumn="ne" />
+              <Mapping SourceColumn="da1" DataSetColumn="da1" />
+              <Mapping SourceColumn="ne1" DataSetColumn="ne1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsImage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsImage" msprop:Generator_UserDSName="DsImage">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MYDOCUMENTSHOME" msprop:Generator_TableClassName="MYDOCUMENTSHOMEDataTable" msprop:Generator_TableVarName="tableMYDOCUMENTSHOME" msprop:Generator_TablePropName="MYDOCUMENTSHOME" msprop:Generator_RowDeletingName="MYDOCUMENTSHOMERowDeleting" msprop:Generator_RowChangingName="MYDOCUMENTSHOMERowChanging" msprop:Generator_RowEvHandlerName="MYDOCUMENTSHOMERowChangeEventHandler" msprop:Generator_RowDeletedName="MYDOCUMENTSHOMERowDeleted" msprop:Generator_UserTableName="MYDOCUMENTSHOME" msprop:Generator_RowChangedName="MYDOCUMENTSHOMERowChanged" msprop:Generator_RowEvArgName="MYDOCUMENTSHOMERowChangeEvent" msprop:Generator_RowClassName="MYDOCUMENTSHOMERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOC1" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDOC1" msprop:Generator_ColumnPropNameInRow="DOC1" msprop:Generator_ColumnPropNameInTable="DOC1Column" msprop:Generator_UserColumnName="DOC1" type="xs:int" />
+              <xs:element name="LO" msprop:Generator_ColumnVarNameInTable="columnLO" msprop:Generator_ColumnPropNameInRow="LO" msprop:Generator_ColumnPropNameInTable="LOColumn" msprop:Generator_UserColumnName="LO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC2" msprop:Generator_ColumnVarNameInTable="columnDOC2" msprop:Generator_ColumnPropNameInRow="DOC2" msprop:Generator_ColumnPropNameInTable="DOC2Column" msprop:Generator_UserColumnName="DOC2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC3" msprop:Generator_ColumnVarNameInTable="columnDOC3" msprop:Generator_ColumnPropNameInRow="DOC3" msprop:Generator_ColumnPropNameInTable="DOC3Column" msprop:Generator_UserColumnName="DOC3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC4" msprop:Generator_ColumnVarNameInTable="columnDOC4" msprop:Generator_ColumnPropNameInRow="DOC4" msprop:Generator_ColumnPropNameInTable="DOC4Column" msprop:Generator_UserColumnName="DOC4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC5" msprop:Generator_ColumnVarNameInTable="columnDOC5" msprop:Generator_ColumnPropNameInRow="DOC5" msprop:Generator_ColumnPropNameInTable="DOC5Column" msprop:Generator_UserColumnName="DOC5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC6" msprop:Generator_ColumnVarNameInTable="columnDOC6" msprop:Generator_ColumnPropNameInRow="DOC6" msprop:Generator_ColumnPropNameInTable="DOC6Column" msprop:Generator_UserColumnName="DOC6" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="DOC7" msprop:Generator_ColumnVarNameInTable="columnDOC7" msprop:Generator_ColumnPropNameInRow="DOC7" msprop:Generator_ColumnPropNameInTable="DOC7Column" msprop:Generator_UserColumnName="DOC7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC8" msprop:Generator_ColumnVarNameInTable="columnDOC8" msprop:Generator_ColumnPropNameInRow="DOC8" msprop:Generator_ColumnPropNameInTable="DOC8Column" msprop:Generator_UserColumnName="DOC8" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_1" msprop:Generator_ColumnVarNameInTable="columndate_1" msprop:Generator_ColumnPropNameInRow="date_1" msprop:Generator_ColumnPropNameInTable="date_1Column" msprop:Generator_UserColumnName="date_1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="USERNAME" msprop:Generator_ColumnVarNameInTable="columnUSERNAME" msprop:Generator_ColumnPropNameInRow="USERNAME" msprop:Generator_ColumnPropNameInTable="USERNAMEColumn" msprop:Generator_UserColumnName="USERNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUser" msprop:Generator_ColumnVarNameInTable="columnCUser" msprop:Generator_ColumnPropNameInRow="CUser" msprop:Generator_ColumnPropNameInTable="CUserColumn" msprop:Generator_UserColumnName="CUser" type="xs:int" minOccurs="0" />
+              <xs:element name="COUser" msprop:Generator_ColumnVarNameInTable="columnCOUser" msprop:Generator_ColumnPropNameInRow="COUser" msprop:Generator_ColumnPropNameInTable="COUserColumn" msprop:Generator_UserColumnName="COUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="da" msprop:Generator_ColumnVarNameInTable="columnda" msprop:Generator_ColumnPropNameInRow="da" msprop:Generator_ColumnPropNameInTable="daColumn" msprop:Generator_UserColumnName="da" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ne" msprop:Generator_ColumnVarNameInTable="columnne" msprop:Generator_ColumnPropNameInRow="ne" msprop:Generator_ColumnPropNameInTable="neColumn" msprop:Generator_UserColumnName="ne" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="da1" msprop:Generator_ColumnVarNameInTable="columnda1" msprop:Generator_ColumnPropNameInRow="da1" msprop:Generator_ColumnPropNameInTable="da1Column" msprop:Generator_UserColumnName="da1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ne1" msprop:Generator_ColumnVarNameInTable="columnne1" msprop:Generator_ColumnPropNameInRow="ne1" msprop:Generator_ColumnPropNameInTable="ne1Column" msprop:Generator_UserColumnName="ne1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MYDOCUMENTSHOME" />
+      <xs:field xpath="mstns:DOC1" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
