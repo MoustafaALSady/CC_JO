@@ -1,0 +1,31 @@
+﻿[*.vb]
+
+# IDE0081: 'ByVal' keyword is unnecessary and can be removed.
+dotnet_diagnostic.IDE0081.severity = none
+
+# IDE0060: Remove unused parameter
+dotnet_code_quality_unused_parameters = all
+
+# IDE0060: Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = none
+
+# BC42016: Implicit conversion
+dotnet_diagnostic.BC42016.severity = none
+
+# BC42019: Operands of type Object used for operator
+dotnet_diagnostic.BC42019.severity = none
+
+# BC42018: Operands of type Object used for operator
+dotnet_diagnostic.BC42018.severity = none
+
+# BC42032: Operands of type Object used for operator <>
+dotnet_diagnostic.BC42032.severity = none
+
+# BC42017: Late bound resolution
+dotnet_diagnostic.BC42017.severity = none
+
+# BC42021: Function without an 'As' clause
+dotnet_diagnostic.BC42021.severity = none
+
+# BC42020: Variable declaration without an 'As' clause
+dotnet_diagnostic.BC42020.severity = none
