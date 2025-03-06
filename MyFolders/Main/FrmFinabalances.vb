@@ -7,12 +7,20 @@
     Dim MouseY As Integer
     Dim Drag As Boolean
 
+<<<<<<< HEAD
     Private Sub FrmDATE_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Click
+=======
+    Private Sub FrmDATE_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Timer1.Enabled = False
         Me.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmDATE_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FrmDATE_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -22,7 +30,11 @@
         End Select
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmDATE_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmDATE_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()
@@ -104,7 +116,11 @@
 
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer1.Tick
+=======
+    Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If xx >= 1 And xx <= 20 Then
             For I As Integer = 0 To Me.DataGridView1.Rows.Count - 1
                 Dim row As DataGridViewRow = Me.DataGridView1.Rows(I)

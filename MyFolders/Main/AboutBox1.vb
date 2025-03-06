@@ -6,7 +6,11 @@ Public NotInheritable Class AboutBox1
     ReadOnly sr As IO.StreamReader
     ReadOnly VProject As String
     Dim versionNumber As Version
+<<<<<<< HEAD
     Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         Dim ApplicationTitle As String
@@ -31,6 +35,7 @@ Public NotInheritable Class AboutBox1
             Me.Button1.Visible = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles OKButton.Click
         Me.Close()
     End Sub
@@ -42,6 +47,19 @@ Public NotInheritable Class AboutBox1
         Process.Start("http://jcc.gov.jo/")
     End Sub
     Private Sub AboutBox1_Load_1(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
+        Me.Close()
+    End Sub
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        On Error Resume Next
+        Process.Start("mailto:ma965880@gmail.com")
+    End Sub
+    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        Process.Start("http://jcc.gov.jo/")
+    End Sub
+    Private Sub AboutBox1_Load_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()
@@ -49,7 +67,11 @@ Public NotInheritable Class AboutBox1
         Next
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Trim(tmpV) > Trim(mykey.GetValue("ProductVersion", "")) Then
             Dim MSG_ As Integer = MessageBox.Show("هل تريد اتمام تحديث البرنامج للاصدار الجديد؟", "تنبيه بوجود تحديثات جديدة", MessageBoxButtons.YesNo)
             If MSG_ = DialogResult.Yes Then
@@ -62,7 +84,11 @@ Public NotInheritable Class AboutBox1
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button2.Click
+=======
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If VersionCheckDB.SetupDatabase() = False Then
                 Return

@@ -89,6 +89,10 @@ Partial Class FrmBanks5
         Me.lblOPERATIONDATE = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Panel18 = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
+=======
+        Me.CircularProgress1 = New DevComponents.DotNetBar.Controls.CircularProgress()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ComboMotionSource = New System.Windows.Forms.ComboBox()
         Me.lblBANKNAME = New System.Windows.Forms.Label()
@@ -97,7 +101,10 @@ Partial Class FrmBanks5
         Me.lblCOLLECTDATE = New System.Windows.Forms.Label()
         Me.lblNOTES = New System.Windows.Forms.Label()
         Me.RadioLnvoiceStatusCash_Credit = New System.Windows.Forms.RadioButton()
+<<<<<<< HEAD
         Me.CircularProgress1 = New DevComponents.DotNetBar.Controls.CircularProgress()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ProgressBar1 = New DevComponents.DotNetBar.Controls.ProgressBarX()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -1184,6 +1191,25 @@ Partial Class FrmBanks5
         Me.Panel18.Size = New System.Drawing.Size(278, 104)
         Me.Panel18.TabIndex = 0
         '
+<<<<<<< HEAD
+=======
+        'CircularProgress1
+        '
+        Me.CircularProgress1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CircularProgress1.Location = New System.Drawing.Point(241, 69)
+        Me.CircularProgress1.Name = "CircularProgress1"
+        Me.CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Spoke
+        Me.CircularProgress1.ProgressColor = System.Drawing.Color.RoyalBlue
+        Me.CircularProgress1.Size = New System.Drawing.Size(25, 25)
+        Me.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP
+        Me.CircularProgress1.TabIndex = 986
+        Me.CircularProgress1.Visible = False
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
@@ -1286,6 +1312,7 @@ Partial Class FrmBanks5
         Me.RadioLnvoiceStatusCash_Credit.Text = "حالةالفاتورة نقدا/ اجل"
         Me.RadioLnvoiceStatusCash_Credit.UseVisualStyleBackColor = False
         '
+<<<<<<< HEAD
         'CircularProgress1
         '
         Me.CircularProgress1.BackColor = System.Drawing.Color.Transparent
@@ -1302,6 +1329,8 @@ Partial Class FrmBanks5
         Me.CircularProgress1.TabIndex = 986
         Me.CircularProgress1.Visible = False
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'ProgressBar1
         '
         Me.ProgressBar1.BackColor = System.Drawing.Color.Transparent
@@ -1418,9 +1447,15 @@ Partial Class FrmBanks5
         Me.PanelAccount_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelAccount_Name.Controls.Add(Me.TextAccount_Name)
         Me.PanelAccount_Name.Controls.Add(Me.List1)
+<<<<<<< HEAD
         Me.PanelAccount_Name.Location = New System.Drawing.Point(6, 6)
         Me.PanelAccount_Name.Name = "PanelAccount_Name"
         Me.PanelAccount_Name.Size = New System.Drawing.Size(319, 260)
+=======
+        Me.PanelAccount_Name.Location = New System.Drawing.Point(6, 8)
+        Me.PanelAccount_Name.Name = "PanelAccount_Name"
+        Me.PanelAccount_Name.Size = New System.Drawing.Size(319, 258)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PanelAccount_Name.TabIndex = 991
         Me.PanelAccount_Name.Visible = False
         '

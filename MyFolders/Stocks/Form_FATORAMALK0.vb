@@ -16,7 +16,11 @@ Public Class Form_FATORAMALK0
                 Exit Sub
             End If
             Try
+<<<<<<< HEAD
                 Dim Consum As New SqlConnection(constring)
+=======
+                Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 If Ra1.Checked = True Then
                     Form_beea.Datab.Columns.Clear()
                     Form_beea.Timsum.Start()
@@ -53,7 +57,11 @@ Public Class Form_FATORAMALK0
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub Form_FATORAMALK0_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form_FATORAMALK0_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)

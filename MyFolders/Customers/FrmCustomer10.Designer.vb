@@ -835,6 +835,10 @@ Partial Class FrmCustomer10
         '
         Me.ButtonXP4.BackColor = System.Drawing.Color.Transparent
         Me.ButtonXP4.Cursor = System.Windows.Forms.Cursors.Hand
+<<<<<<< HEAD
+=======
+        Me.ButtonXP4.Dock = System.Windows.Forms.DockStyle.Left
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonXP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonXP4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.ButtonXP4.Image = Global.CC_JO.My.Resources.Resources.AddItem_16x16
@@ -865,15 +869,27 @@ Partial Class FrmCustomer10
         '
         Me.CMDBROWSE.BackColor = System.Drawing.Color.Transparent
         Me.CMDBROWSE.Cursor = System.Windows.Forms.Cursors.Hand
+<<<<<<< HEAD
+=======
+        Me.CMDBROWSE.Dock = System.Windows.Forms.DockStyle.Left
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CMDBROWSE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CMDBROWSE.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CMDBROWSE.Image = Global.CC_JO.My.Resources.Resources.PInternalAuditor_16x16
         Me.CMDBROWSE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.CMDBROWSE.Location = New System.Drawing.Point(4, 302)
         Me.CMDBROWSE.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CMDBROWSE.Name = "CMDBROWSE"
         Me.CMDBROWSE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CMDBROWSE.Size = New System.Drawing.Size(324, 31)
+=======
+        Me.CMDBROWSE.Location = New System.Drawing.Point(3, 302)
+        Me.CMDBROWSE.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.CMDBROWSE.Name = "CMDBROWSE"
+        Me.CMDBROWSE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.CMDBROWSE.Size = New System.Drawing.Size(326, 31)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CMDBROWSE.TabIndex = 508
         Me.CMDBROWSE.Text = "عرض مستندات الرسالة Alt +  B"
         Me.CMDBROWSE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -886,11 +902,19 @@ Partial Class FrmCustomer10
         Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DOC1, Me.DOC2, Me.DOC4, Me.DOC5, Me.LO11})
+<<<<<<< HEAD
+=======
+        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Top
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersWidth = 25
+<<<<<<< HEAD
         Me.DataGridView3.Size = New System.Drawing.Size(670, 294)
+=======
+        Me.DataGridView3.Size = New System.Drawing.Size(670, 299)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.TabIndex = 754
         '
         'DOC1

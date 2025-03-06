@@ -6,7 +6,11 @@ Public Class FrmOptions
     Dim fs As IO.FileStream
     Dim sw As IO.StreamWriter
 
+<<<<<<< HEAD
     Private Sub FrmOPTIONS_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmOPTIONS_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -19,13 +23,25 @@ Public Class FrmOptions
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmOPTIONS_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmOPTIONS_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         Me.BackgroundImage = img
         Me.TabP1.BackgroundImage = img
         Me.TabP2.BackgroundImage = img
         Me.TabP3.BackgroundImage = img
         Me.TabP4.BackgroundImage = img
+<<<<<<< HEAD
+=======
+        'For a As Byte = 0 To 10
+        '    System.Threading.Thread.Sleep(10)
+        '    Application.DoEvents()
+        '    Me.Opacity = a / 10
+        'Next
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
         Me.BackgroundWorker1.WorkerReportsProgress = True
         Me.BackgroundWorker1.RunWorkerAsync()
@@ -34,7 +50,11 @@ Public Class FrmOptions
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonAPPLY_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAPPLY.Click
+=======
+    Private Sub ButtonAPPLY_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAPPLY.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
 
         'If Me.ComboBox1.Text = "YES" Then
@@ -321,7 +341,11 @@ Public Class FrmOptions
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP1.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         With Me.FolderBrowserDialog1
             .ShowNewFolderButton = True
@@ -750,7 +774,11 @@ Public Class FrmOptions
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             SplashScreenManager.ShowForm(Me, GetType(WaitForm), True, True, False)
             If tstURL = False Then

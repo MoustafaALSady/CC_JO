@@ -1,4 +1,5 @@
 Public Class ListRestrictions
+<<<<<<< HEAD
     Inherits Form
     Dim adp As New SqlClient.SqlDataAdapter
     Public WithEvents BS As New BindingSource
@@ -7,6 +8,16 @@ Public Class ListRestrictions
         Consum.Close()
     End Sub
     Private Sub Listrestrictions_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Inherits System.Windows.Forms.Form
+    Dim adp As New SqlClient.SqlDataAdapter
+    Public WithEvents BS As New BindingSource
+    Private Sub Listrestrictions_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        On Error Resume Next
+        Consum.Close()
+    End Sub
+    Private Sub Listrestrictions_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
@@ -16,7 +27,11 @@ Public Class ListRestrictions
         Me.BackgroundImage = img
         TextBox1.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+=======
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmDailyrestrictions
         Try
             f.TB1 = Trim(Me.DataGridView1.Item("MOV2", Me.DataGridView1.CurrentRow.Index).Value)
@@ -26,7 +41,11 @@ Public Class ListRestrictions
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBox1.KeyPress
+=======
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Asc(e.KeyChar) = 13 Then
                 If TestNet = False Then
@@ -45,7 +64,11 @@ Public Class ListRestrictions
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextBox1.TextChanged
+=======
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Trim(TextBox1.Text) <> "" Then
                 DataGridView1.Rows.Clear()

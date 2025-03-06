@@ -26,12 +26,21 @@ Partial Class FrmAllCustomers1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAllCustomers1))
         Dim Panel4 As System.Windows.Forms.Panel
         Dim Panel3 As System.Windows.Forms.Panel
+<<<<<<< HEAD
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+=======
+        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -1279,9 +1288,15 @@ Partial Class FrmAllCustomers1
         Me.ButtonXP4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.ButtonXP4.Image = Global.CC_JO.My.Resources.Resources.AddItem_16x16
         Me.ButtonXP4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.ButtonXP4.Location = New System.Drawing.Point(398, 440)
         Me.ButtonXP4.Name = "ButtonXP4"
         Me.ButtonXP4.Size = New System.Drawing.Size(393, 32)
+=======
+        Me.ButtonXP4.Location = New System.Drawing.Point(366, 435)
+        Me.ButtonXP4.Name = "ButtonXP4"
+        Me.ButtonXP4.Size = New System.Drawing.Size(356, 35)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonXP4.TabIndex = 800
         Me.ButtonXP4.Text = "اضافة مستندات االإعضاء \ العملاء "
         Me.ButtonXP4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1293,9 +1308,15 @@ Partial Class FrmAllCustomers1
         Me.CMDBROWSE.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.CMDBROWSE.Image = Global.CC_JO.My.Resources.Resources.PInternalAuditor_16x16
         Me.CMDBROWSE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.CMDBROWSE.Location = New System.Drawing.Point(3, 440)
         Me.CMDBROWSE.Name = "CMDBROWSE"
         Me.CMDBROWSE.Size = New System.Drawing.Size(393, 32)
+=======
+        Me.CMDBROWSE.Location = New System.Drawing.Point(3, 435)
+        Me.CMDBROWSE.Name = "CMDBROWSE"
+        Me.CMDBROWSE.Size = New System.Drawing.Size(361, 35)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CMDBROWSE.TabIndex = 801
         Me.CMDBROWSE.Text = "عرض مستندات الإعضاء \ العملاء"
         Me.CMDBROWSE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1318,8 +1339,13 @@ Partial Class FrmAllCustomers1
         '
         Me.DataGridView3.AllowUserToAddRows = False
         Me.DataGridView3.AllowUserToDeleteRows = False
+<<<<<<< HEAD
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+=======
+        DataGridViewCellStyle73.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView3.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle73
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DOC1, Me.DOC2, Me.DOC4, Me.DOC5, Me.LO11})
@@ -1328,14 +1354,23 @@ Partial Class FrmAllCustomers1
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersWidth = 25
+<<<<<<< HEAD
         Me.DataGridView3.Size = New System.Drawing.Size(788, 433)
+=======
+        Me.DataGridView3.Size = New System.Drawing.Size(788, 426)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.TabIndex = 755
         '
         'DOC1
         '
         Me.DOC1.DataPropertyName = "DOC1"
+<<<<<<< HEAD
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DOC1.DefaultCellStyle = DataGridViewCellStyle2
+=======
+        DataGridViewCellStyle74.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DOC1.DefaultCellStyle = DataGridViewCellStyle74
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DOC1.FillWeight = 45.0!
         Me.DOC1.HeaderText = "المعرف"
         Me.DOC1.Name = "DOC1"
@@ -1344,8 +1379,13 @@ Partial Class FrmAllCustomers1
         'DOC2
         '
         Me.DOC2.DataPropertyName = "DOC2"
+<<<<<<< HEAD
         DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DOC2.DefaultCellStyle = DataGridViewCellStyle3
+=======
+        DataGridViewCellStyle75.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DOC2.DefaultCellStyle = DataGridViewCellStyle75
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DOC2.FillWeight = 55.0!
         Me.DOC2.HeaderText = "رقم الملف"
         Me.DOC2.Name = "DOC2"
@@ -1354,8 +1394,13 @@ Partial Class FrmAllCustomers1
         'DOC4
         '
         Me.DOC4.DataPropertyName = "DOC4"
+<<<<<<< HEAD
         DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DOC4.DefaultCellStyle = DataGridViewCellStyle4
+=======
+        DataGridViewCellStyle76.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DOC4.DefaultCellStyle = DataGridViewCellStyle76
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DOC4.FillWeight = 75.0!
         Me.DOC4.HeaderText = "اسم الملف"
         Me.DOC4.Name = "DOC4"
@@ -1364,8 +1409,13 @@ Partial Class FrmAllCustomers1
         'DOC5
         '
         Me.DOC5.DataPropertyName = "DOC5"
+<<<<<<< HEAD
         DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DOC5.DefaultCellStyle = DataGridViewCellStyle5
+=======
+        DataGridViewCellStyle77.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DOC5.DefaultCellStyle = DataGridViewCellStyle77
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DOC5.HeaderText = "وصف الملف"
         Me.DOC5.Name = "DOC5"
         Me.DOC5.ReadOnly = True
@@ -1373,8 +1423,13 @@ Partial Class FrmAllCustomers1
         'LO11
         '
         Me.LO11.DataPropertyName = "lo"
+<<<<<<< HEAD
         DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LO11.DefaultCellStyle = DataGridViewCellStyle6
+=======
+        DataGridViewCellStyle78.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LO11.DefaultCellStyle = DataGridViewCellStyle78
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LO11.HeaderText = "Column4"
         Me.LO11.Name = "LO11"
         Me.LO11.ReadOnly = True

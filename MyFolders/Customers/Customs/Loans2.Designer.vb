@@ -801,7 +801,10 @@ Partial Class Loans2
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(994, 520)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "Loans2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "مراجعة الاقساط"

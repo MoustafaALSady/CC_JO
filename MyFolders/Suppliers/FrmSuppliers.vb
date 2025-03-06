@@ -3,10 +3,17 @@ Imports System.Data.SqlClient
 Imports System.Diagnostics
 
 Public Class FrmSuppliers
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -18,14 +25,22 @@ Public Class FrmSuppliers
     Dim RowCount As Integer = 0
     Public TB1 As String
     Public TB2 As String
+<<<<<<< HEAD
     Private Sub TEXTBOX1_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs)
+=======
+    Private Sub TEXTBOX1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 SendKeys.SendWait("{TAB}")
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSuppliers_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmSuppliers_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F3
@@ -52,7 +67,11 @@ Public Class FrmSuppliers
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSUPPLIER_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmSUPPLIER_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -73,7 +92,11 @@ Public Class FrmSuppliers
     End Sub
     Public Sub DanLOd()
         On Error Resume Next
+<<<<<<< HEAD
         Me.BackWorker2 = New ComponentModel.BackgroundWorker With {
+=======
+        Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -85,6 +108,7 @@ Public Class FrmSuppliers
         Try
 1:
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             Me.myds.EnforceConstraints = False
@@ -93,6 +117,16 @@ Public Class FrmSuppliers
                 .CommandText = String.Concat(New String() {"SELECT  sup1, sup2, sup3, sup4, sup5, sup7, USERNAME, Auditor, Cuser, COUser, da, ne FROM SUPPLIER  WHERE  CUser='", ModuleGeneral.CUser, "' and sup1 ='", Strings.Trim(Me.TB1), "' or sup3 ='", Strings.Trim(Me.TB2), "' ORDER BY sup1"})
             End With
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+            Me.myds.EnforceConstraints = False
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            With strSQL
+                .CommandText = String.Concat(New String() {"SELECT  sup1, sup2, sup3, sup4, sup5, sup7, USERNAME, Auditor, Cuser, COUser, da, ne FROM SUPPLIER  WHERE  CUser='", ModuleGeneral.CUser, "' and sup1 ='", Strings.Trim(Me.TB1), "' or sup3 ='", Strings.Trim(Me.TB2), "' ORDER BY sup1"})
+            End With
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.myds = New DataSet
             If Consum.State = ConnectionState.Closed Then Consum.Open()
             Me.SqlDataAdapter1.TableMappings.Add("Table1", "SUPPLIER")
@@ -142,9 +176,15 @@ Public Class FrmSuppliers
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Public Sub Load_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles load1.Click
         On Error Resume Next
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Public Sub Load_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles load1.Click
+        On Error Resume Next
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -155,6 +195,7 @@ Public Class FrmSuppliers
         Try
 1:
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             Me.myds.EnforceConstraints = False
@@ -163,6 +204,16 @@ Public Class FrmSuppliers
                 .CommandText = String.Concat(New String() {"SELECT  sup1, sup2, sup3, sup4, sup5, sup7, USERNAME, Auditor, Cuser, COUser, da, ne FROM SUPPLIER  WHERE  CUser='", ModuleGeneral.CUser, "'and sup1 ='", Strings.Trim(Me.TB1), "' or sup3 ='", Strings.Trim(Me.TB2), "'ORDER BY sup1"})
             End With
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+            Me.myds.EnforceConstraints = False
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            With strSQL
+                .CommandText = String.Concat(New String() {"SELECT  sup1, sup2, sup3, sup4, sup5, sup7, USERNAME, Auditor, Cuser, COUser, da, ne FROM SUPPLIER  WHERE  CUser='", ModuleGeneral.CUser, "'and sup1 ='", Strings.Trim(Me.TB1), "' or sup3 ='", Strings.Trim(Me.TB2), "'ORDER BY sup1"})
+            End With
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.myds = New DataSet
             If Consum.State = ConnectionState.Closed Then Consum.Open()
             Me.SqlDataAdapter1.TableMappings.Add("Table1", "SUPPLIER")
@@ -230,9 +281,15 @@ Public Class FrmSuppliers
     End Sub
     Private Sub UPDATERECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As String = " Update SUPPLIER SET   sup2 = @sup2, sup3 = @sup3, sup4 = @sup4, sup5 = @sup5, sup7 = @sup7 WHERE sup1 = @sup1"
         Dim CMD As New SqlCommand With {
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As String = " Update SUPPLIER SET   sup2 = @sup2, sup3 = @sup3, sup4 = @sup4, sup5 = @sup5, sup7 = @sup7 WHERE sup1 = @sup1"
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -309,7 +366,11 @@ Public Class FrmSuppliers
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             If Click1 = True Then
                 Try
@@ -372,7 +433,11 @@ Public Class FrmSuppliers
         Me.NEXTBUTTON.Enabled = Forward
         Me.LASTBUTTON.Enabled = Forward
     End Sub
+<<<<<<< HEAD
     Private Sub NETBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NETBUTTON.Click
+=======
+    Private Sub NETBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NETBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim CON As Integer
         Dim s As String
@@ -383,7 +448,11 @@ Public Class FrmSuppliers
             CON = ShellExecute(0, vbNullString, s, vbNullString, "C:\", SW_SHOWNORMAL)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub EMAILBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EMAILBUTTON.Click
+=======
+    Private Sub EMAILBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EMAILBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Dim CON As Integer
         'Dim s As String
@@ -395,27 +464,47 @@ Public Class FrmSuppliers
         'End If
         Process.Start("mailto:" & Me.TextE_mail.EditValue)
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -437,7 +526,11 @@ Public Class FrmSuppliers
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -448,7 +541,11 @@ Public Class FrmSuppliers
         Me.EMAILBUTTON.Enabled = True
         Click2 = True
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.EDITBUTTON.Enabled = True
         Me.BUTTONCANCEL.Enabled = True
@@ -458,7 +555,11 @@ Public Class FrmSuppliers
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -469,12 +570,21 @@ Public Class FrmSuppliers
             MsgBox("⁄›Ê« .. ﬁ«„ «·√œ„‰ »„‰⁄ Œ«’Ì… Õ–› «·”Ã·«  „‰ «·»—‰«„Ã", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim strsql1 As New SqlCommand("SELECT DISTINCT IDCAB FROM Suppliers1 WHERE CAB11 = '" & Me.TEXTBOX1.Text & "'", Consum)
         Dim ds1 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT IDCAB FROM Suppliers1 WHERE CAB11 = '" & Me.TEXTBOX1.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds1.Clear()
         Adp1.Fill(ds1, "Suppliers1")
@@ -482,9 +592,15 @@ Public Class FrmSuppliers
             MsgBox("·«Ì„ﬂ‰ Õ–›  «·”Ã· «·Õ«·Ï ·√‰Â „— »ÿ »Õ—ﬂ«  «·„Ê—œÌ‰ ... ", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim strsql2 As New SqlCommand("SELECT DISTINCT BUY1 FROM BUYS WHERE BUY5 = '" & Me.TEXTSupplierName.Text & "'", Consum)
         Dim ds2 As New DataSet
         Dim Adp2 As New SqlDataAdapter(strsql1)
+=======
+        Dim strsql2 As New SqlClient.SqlCommand("SELECT DISTINCT BUY1 FROM BUYS WHERE BUY5 = '" & Me.TEXTSupplierName.Text & "'", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp2 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Adp2.Fill(ds2, "BUYS")
@@ -492,9 +608,15 @@ Public Class FrmSuppliers
             MsgBox("·«Ì„ﬂ‰ Õ–›  «·”Ã· «·Õ«·Ï ·√‰Â „— »ÿ »Õ—ﬂ«  «·„‘ —Ì«  ... ", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim strsql3 As New SqlCommand("SELECT DISTINCT IDCH FROM Checks WHERE CH8 = '" & Me.TEXTBOX1.Text & "'", Consum)
         Dim ds3 As New DataSet
         Dim Adp3 As New SqlDataAdapter(strsql3)
+=======
+        Dim strsql3 As New SqlClient.SqlCommand("SELECT DISTINCT IDCH FROM Checks WHERE CH8 = '" & Me.TEXTBOX1.Text & "'", Consum)
+        Dim ds3 As New DataSet
+        Dim Adp3 As New SqlClient.SqlDataAdapter(strsql3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds3.Clear()
         Adp3.Fill(ds3, "Checks")
@@ -509,17 +631,29 @@ Public Class FrmSuppliers
         Insert_Actions(Me.TEXTBOX1.Text.Trim, "Õ–›", Me.Text)
 
     End Sub
+<<<<<<< HEAD
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox1.SelectedIndexChanged
+=======
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.ListBox1.SelectedIndex
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX24_SelectedIndexChanged1(ByVal sender As Object, ByVal e As EventArgs) Handles TxtSearch.SelectedIndexChanged
+=======
+    Private Sub TEXTBOX24_SelectedIndexChanged1(ByVal sender As Object, ByVal e As System.EventArgs) Handles TxtSearch.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.TxtSearch.SelectedIndex
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonResourcePayment.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonResourcePayment.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -530,6 +664,7 @@ Public Class FrmSuppliers
             Exit Sub
         End If
         Dim ds As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         Dim F As New SuppliersPay
@@ -537,6 +672,15 @@ Public Class FrmSuppliers
         Dim str As New SqlCommand("SELECT * FROM SupplierPay  WHERE  CUser='" & CUser & "'  ORDER BY lo1", Consum)
         SqlDataAdapter1 = New SqlDataAdapter(str)
         Dim builder68 As New SqlCommandBuilder(SqlDataAdapter1)
+=======
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim F As New SuppliersPay
+        ds.EnforceConstraints = False
+        Dim str As New SqlCommand("SELECT * FROM SupplierPay  WHERE  CUser='" & CUser & "'  ORDER BY lo1", Consum)
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+        Dim builder68 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         SqlDataAdapter1.Fill(ds, "SupplierPay")
         F.BS.DataMember = "SupplierPay"

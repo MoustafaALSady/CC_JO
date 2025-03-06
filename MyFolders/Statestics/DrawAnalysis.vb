@@ -1,6 +1,10 @@
 Imports System.Data.SqlClient
 Public Class DrawAnalysis
+<<<<<<< HEAD
     Private Sub DrawAnalysis_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub DrawAnalysis_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -130,18 +134,31 @@ Public Class DrawAnalysis
 
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub SubtractButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles subtractButton.Click
+=======
+    Private Sub SubtractButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subtractButton.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CreatePointsAndSizes()
         DrawStringPointF()
         Sales()
     End Sub
     Private Sub ViuSALES()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
         Dim strsql As New SqlCommand("select *from SALES where deleted = '" & False & "'order by SLS1", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("select *from SALES where deleted = '" & False & "'order by SLS1", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         Adp.Fill(ds, "SALES")
@@ -162,12 +179,21 @@ Public Class DrawAnalysis
         Dim Flt As String
         Flt = "select *from invheadout"
         Application.DoEvents()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
         Dim ds As New DataSet
         Dim strsql As New SqlCommand("", Consum)
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim ds As New DataSet
+        Dim strsql As New SqlCommand("", Consum)
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With strsql
             .CommandText = "select * from SALES  WHERE deleted ='" & False & "' and CUser='" & CUser & "'  ORDER BY SLS1"
             If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -431,7 +457,11 @@ Public Class DrawAnalysis
             MsgBox("·« ÌÊÃœ »Ì«‰«  ·⁄—÷Â«", 64 + 524288, "⁄—÷ «·»Ì«‰« ")
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Close()
     End Sub
 

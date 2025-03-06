@@ -193,7 +193,10 @@ Partial Class FrmSuppliersB
         Me.TextITEMNAME.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextITEMNAME.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TextITEMNAME.Location = New System.Drawing.Point(5, 128)
+<<<<<<< HEAD
         Me.TextITEMNAME.MaxLength = 249
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextITEMNAME.Multiline = True
         Me.TextITEMNAME.Name = "TextITEMNAME"
         Me.TextITEMNAME.RightToLeft = System.Windows.Forms.RightToLeft.Yes

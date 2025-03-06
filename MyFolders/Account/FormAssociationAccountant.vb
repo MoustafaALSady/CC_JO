@@ -3,7 +3,11 @@
 Public Class FormAssociationAccountant
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
     Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
@@ -23,15 +27,22 @@ Public Class FormAssociationAccountant
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormAssociationaccountant_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Me.BackWorker2 = New ComponentModel.BackgroundWorker With {
+=======
+    Private Sub FormAssociationaccountant_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
         Me.BackWorker2.RunWorkerAsync()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBAssociationName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBAssociationName.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -39,6 +50,15 @@ Public Class FormAssociationAccountant
         Dim strsql As New SqlCommand("SELECT CMP5  FROM COMPANY WHERE CMP2 ='" & Me.ComboBAssociationName.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBAssociationName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBAssociationName.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CMP5  FROM COMPANY WHERE CMP2 ='" & Me.ComboBAssociationName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -52,9 +72,15 @@ Public Class FormAssociationAccountant
     Private Sub SAVERECORD()
         Try
             MAXIDBudget()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO FinancialList( IDFL, FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15, USERNAME, CUser, COUser, da, ne) VALUES     ( @IDFL, @FL1, @FL2, @FL3, @FL4, @FL5, @FL6, @FL7, @FL8, @FL9, @FL10, @FL11, @FL12, @FL13, @FL14, @FL15, @USERNAME, @CUser, @COUser, @da, @ne)"
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO FinancialList( IDFL, FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15, USERNAME, CUser, COUser, da, ne) VALUES     ( @IDFL, @FL1, @FL2, @FL3, @FL4, @FL5, @FL6, @FL7, @FL8, @FL9, @FL10, @FL11, @FL12, @FL13, @FL14, @FL15, @USERNAME, @CUser, @COUser, @da, @ne)"
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -92,7 +118,11 @@ Public Class FormAssociationAccountant
             Me.ButtonSave.Enabled = False
 
 
+<<<<<<< HEAD
             Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -101,12 +131,20 @@ Public Class FormAssociationAccountant
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonSave_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSave.Click
+=======
+    Private Sub ButtonSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSave.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         SAVERECORD()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAttachDocument.Click
+=======
+    Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAttachDocument.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -148,11 +186,18 @@ Public Class FormAssociationAccountant
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewDocuments.Click
         Try
             Dim Year As Integer = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
             Dim f As New FormDOCUMENTS With {
                 .XU = "BU" & Year & Me.TextAssociationNationalNumber.Text,
+=======
+    Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewDocuments.Click
+        Try
+            Dim f As New FormDOCUMENTS With {
+                .XU = "BU" & Me.TextAssociationNationalNumber.Text,
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .BUD = True
             }
             f.Show()
@@ -162,7 +207,11 @@ Public Class FormAssociationAccountant
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonButtonAddFundInventory_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonButtonAddFundInventory.Click
+=======
+    Private Sub ButtonButtonAddFundInventory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonButtonAddFundInventory.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim F As New FormInventoryBox
         F.Show()
@@ -170,13 +219,18 @@ Public Class FormAssociationAccountant
 
 
 
+<<<<<<< HEAD
     Private Sub ButtonAddAssociationProjects_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAddAssociationProjects.Click
+=======
+    Private Sub ButtonAddAssociationProjects_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAddAssociationProjects.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim F As New FormAssociationProjects
 
         F.Show()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonApproval_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonApproval.Click
         AccountantA = True
         FinanceAuditA = False
@@ -189,11 +243,26 @@ Public Class FormAssociationAccountant
         '    If value <> "" Then
         '        If f.GridView1.RowCount > 0 Then
         '            MsgBox("لايمكن اعتماد الموازنة الحالية يجب مراجعة و تدقيق جميع السجلات ... ", 16, "تنبيه")
+=======
+    Private Sub ButtonApproval_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonApproval.Click
+        AccountantA = True
+        FinanceAuditA = False
+        'Dim f As New Finabalances1
+        'f.Show()
+        'For Each r As DataGridViewRow In f.DataGridView1.Rows
+        '    If r.Cells("IDNumber").Value <> "" Then
+        '        If f.DataGridView1.RowCount > 0 Then
+        '            MsgBox("لايمكن اعتماد الموازنة الحالية يجب ترحيل جميع السجلات  ... ", 16, "تنبيه")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '            Exit Sub
         '        Else
         '            f.Close()
         '        End If
+<<<<<<< HEAD
         '    ElseIf value = "" Then
+=======
+        '    ElseIf r.Cells("IDNumber").Value = "" Then
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '        '
         '    End If
         'Next
@@ -204,10 +273,17 @@ Public Class FormAssociationAccountant
                 MsgBox("الرجاء اضافة ميزانية والنقر على امر حفظ ... ", 16, "تنبيه")
                 Exit Sub
             Else
+<<<<<<< HEAD
                 Dim Consum As New SqlConnection(constring)
 
                 Dim SQL As New SqlCommand(" Update FinancialList SET    FL3 = @FL3, FL4 = @FL4, FL5 = @FL5, FL10 = @FL10, FL11 = @FL11, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
                 Dim CMD As New SqlCommand With {
+=======
+                Dim Consum As New SqlClient.SqlConnection(constring)
+
+                Dim SQL As New SqlCommand(" Update FinancialList SET    FL3 = @FL3, FL4 = @FL4, FL5 = @FL5, FL10 = @FL10, FL11 = @FL11, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }
@@ -237,7 +313,11 @@ Public Class FormAssociationAccountant
                 Consum.Open()
                 CMD.ExecuteNonQuery()
                 Consum.Close()
+<<<<<<< HEAD
                 Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+                Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .WorkerReportsProgress = True,
                     .WorkerSupportsCancellation = True
                 }
@@ -254,10 +334,17 @@ Public Class FormAssociationAccountant
 
     Private Sub ButtonRefusal_Click(sender As Object, e As EventArgs) Handles ButtonRefusal.Click
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
 
             Dim SQL As New SqlCommand(" Update FinancialList SET    FL3 = @FL3, FL4 = @FL4, FL5 = @FL5, FL10 = @FL10, FL11 = @FL11, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+
+            Dim SQL As New SqlCommand(" Update FinancialList SET    FL3 = @FL3, FL4 = @FL4, FL5 = @FL5, FL10 = @FL10, FL11 = @FL11, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -289,7 +376,11 @@ Public Class FormAssociationAccountant
             Consum.Open()
             CMD.ExecuteNonQuery()
             Consum.Close()
+<<<<<<< HEAD
             Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -304,23 +395,37 @@ Public Class FormAssociationAccountant
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonX12_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub ButtonX12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AccountantA = False
         FinanceAuditA = True
         Dim f As New FinaBalances1
         f.Show()
+<<<<<<< HEAD
         Dim currentRowIndex As Integer = f.GridView1.FocusedRowHandle
         Dim value As Object = f.GridView1.GetRowCellValue(currentRowIndex, f.GridView1.Columns("ID"))
         'For Each r As DataGridViewRow In f.DataGridView1.Rows
         For i As Integer = 0 To f.GridView1.DataRowCount - 1
             If value <> "" Then
                 If f.GridView1.RowCount > 0 Then
+=======
+        For Each r As DataGridViewRow In f.DataGridView1.Rows
+            If r.Cells("IDNumber").Value <> "" Then
+                If f.DataGridView1.RowCount > 0 Then
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     MsgBox("لايمكن اعتماد الموازنة الحالية يجب مراجعة و تدقيق جميع السجلات ... ", 16, "تنبيه")
                     Exit Sub
                 Else
                     f.Close()
                 End If
+<<<<<<< HEAD
             ElseIf value = "" Then
+=======
+            ElseIf r.Cells("IDNumber").Value = "" Then
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 '
             End If
         Next
@@ -345,11 +450,19 @@ Public Class FormAssociationAccountant
 
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum) With {
                 .CommandText = " select   IDFL, FL1, FL2, FL3, FL4, FL5, FL10, FL11, FL12,  USERNAME, Auditor, CUser, COUser, da, ne  FROM FinancialList   WHERE  CUser='" & ModuleGeneral.CUser & "'and FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' "
             }
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum) With {
+                .CommandText = " select   IDFL, FL1, FL2, FL3, FL4, FL5, FL10, FL11, FL12,  USERNAME, Auditor, CUser, COUser, da, ne  FROM FinancialList   WHERE  CUser='" & ModuleGeneral.CUser & "'and FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' "
+            }
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.myds.Clear()
             Me.myds = New DataSet
             Consum.Open()
@@ -405,7 +518,11 @@ Public Class FormAssociationAccountant
                 Me.ButtonSave.Enabled = True
             End If
             FILLCOMBOBOX3("Users", "UserName", "COUser", COUser, "InternalAuditor", 1, Me.ComboAuditor)
+<<<<<<< HEAD
             FILLCOMBOBOX3("FiscalYear", "Year(Year2)", "CUser", CUser, "YE1", 1, Me.ComboFiscalYear)
+=======
+            FILLCOMBOBOX10("FiscalYear", "Year(Year2)", "CUser", CUser, "YE1", 1, Me.ComboFiscalYear)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FILLCOMBOBOX1("COMPANY", "CMP2", "CUser", CUser, Me.ComboBAssociationName)
 
 

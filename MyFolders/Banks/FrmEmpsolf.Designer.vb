@@ -1564,9 +1564,15 @@ Partial Class FrmEmpsolf
         Me.PanelAccount_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PanelAccount_Name.Controls.Add(Me.TextAccount_Name)
         Me.PanelAccount_Name.Controls.Add(Me.List1)
+<<<<<<< HEAD
         Me.PanelAccount_Name.Location = New System.Drawing.Point(3, 0)
         Me.PanelAccount_Name.Name = "PanelAccount_Name"
         Me.PanelAccount_Name.Size = New System.Drawing.Size(321, 253)
+=======
+        Me.PanelAccount_Name.Location = New System.Drawing.Point(3, 29)
+        Me.PanelAccount_Name.Name = "PanelAccount_Name"
+        Me.PanelAccount_Name.Size = New System.Drawing.Size(321, 224)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PanelAccount_Name.TabIndex = 993
         Me.PanelAccount_Name.Visible = False
         '

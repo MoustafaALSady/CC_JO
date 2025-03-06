@@ -58,6 +58,10 @@ Partial Class FrmStocks1
         Me.TextInitialBalance = New System.Windows.Forms.TextBox()
         Me.ComboGROUPNAME = New System.Windows.Forms.ComboBox()
         Me.lblGROUPCODE = New System.Windows.Forms.Label()
+<<<<<<< HEAD
+=======
+        Me.TextSumAmounTOTALSTOCKS = New System.Windows.Forms.TextBox()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -304,6 +308,10 @@ Partial Class FrmStocks1
         Me.Panel2.Controls.Add(Me.GroupBox10)
         Me.Panel2.Controls.Add(Me.GroupBox5)
         Me.Panel2.Controls.Add(Me.GroupBox7)
+<<<<<<< HEAD
+=======
+        Me.Panel2.Controls.Add(Me.TextSumAmounTOTALSTOCKS)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(252, 3)
         Me.Panel2.Name = "Panel2"
@@ -636,6 +644,22 @@ Partial Class FrmStocks1
         Me.lblGROUPCODE.TabIndex = 6
         Me.lblGROUPCODE.Text = "كود المجموعة"
         '
+<<<<<<< HEAD
+=======
+        'TextSumAmounTOTALSTOCKS
+        '
+        Me.TextSumAmounTOTALSTOCKS.BackColor = System.Drawing.Color.Lavender
+        Me.TextSumAmounTOTALSTOCKS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextSumAmounTOTALSTOCKS.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextSumAmounTOTALSTOCKS.ForeColor = System.Drawing.Color.Indigo
+        Me.TextSumAmounTOTALSTOCKS.Location = New System.Drawing.Point(81, 257)
+        Me.TextSumAmounTOTALSTOCKS.Name = "TextSumAmounTOTALSTOCKS"
+        Me.TextSumAmounTOTALSTOCKS.Size = New System.Drawing.Size(68, 22)
+        Me.TextSumAmounTOTALSTOCKS.TabIndex = 350
+        Me.TextSumAmounTOTALSTOCKS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextSumAmounTOTALSTOCKS.Visible = False
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TabPage2
         '
         Me.TabPage2.BackgroundImage = Global.CC_JO.My.Resources.Resources.BG3
@@ -1819,6 +1843,10 @@ Partial Class FrmStocks1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+<<<<<<< HEAD
+=======
+        Me.Panel2.PerformLayout()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox10.ResumeLayout(False)
         Me.Panel17.ResumeLayout(False)
         Me.Panel17.PerformLayout()
@@ -1875,6 +1903,10 @@ Partial Class FrmStocks1
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents LISTBOX As System.Windows.Forms.ListBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+<<<<<<< HEAD
+=======
+    Friend WithEvents TextSumAmounTOTALSTOCKS As System.Windows.Forms.TextBox
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents ComboGROUPNAME As System.Windows.Forms.ComboBox
     Friend WithEvents lblCODE As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

@@ -13,7 +13,11 @@ Public Class Formsignature
     Private currentCurve As Integer = -1
     '======================================================================
     Public WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public ds As New DataSet
     Dim RowCount As Integer = 0
 
@@ -26,10 +30,16 @@ Public Class Formsignature
 
 
     ReadOnly Draw As Boolean
+<<<<<<< HEAD
     ReadOnly DrawColor As Color = Color.Black
     ReadOnly DrawSize As Integer = 3
     ReadOnly pmb As Bitmap
 
+=======
+    ReadOnly DrawColor As Color = Color.BlueViolet
+    ReadOnly DrawSize As Integer = 2
+    ReadOnly pmb As Bitmap
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub SHOWPHOTO()
         On Error Resume Next
         Dim Consum As New SqlConnection(ModuleGeneral.constring)
@@ -37,7 +47,11 @@ Public Class Formsignature
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim reader As SqlDataReader
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         reader = cmd.ExecuteReader()
         reader.Read()
         Dim sw() As Byte = CType(reader("CS3"), Byte())
@@ -53,7 +67,11 @@ Public Class Formsignature
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim reader As SqlDataReader
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         reader = cmd.ExecuteReader()
         reader.Read()
         Dim sw() As Byte = CType(reader("CS3"), Byte())
@@ -74,13 +92,21 @@ Public Class Formsignature
                 Directory.CreateDirectory(ModuleGeneral.MYFOLDER & "\Photos")
             End If
             Me.ds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT   IDCS, CS1, CS2, CS3, USERNAME, Auditor, CUser, COUser FROM     CapturingSignatures WHERE  USERNAME='" & USERNAME & "' "
 
             End With
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.ds = New DataSet
             Consum.Open()
             Me.SqlDataAdapter1.Fill(Me.ds, "CapturingSignatures")
@@ -122,14 +148,32 @@ Public Class Formsignature
             End If
             Me.SHOWPHOTO()
             Me.CBFontSize.SelectedIndex = 3
+<<<<<<< HEAD
             Me.CBFontSize1.SelectedIndex = 2
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             'pmb = New Bitmap((Me.pBoxSignature.Width), (Me.pBoxSignature.Height))
             'Me.pBoxSignature.Image = pmb
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error2", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
         End Try
     End Sub
+<<<<<<< HEAD
 
+=======
+    Private Sub PintBrush(X As Integer, Y As Integer)
+        'If DrawU = True Then
+        '    DrawColor = Color.White
+        'Else
+        '    DrawColor = Color.BlueViolet
+        'End If
+
+        Using g As Graphics = Graphics.FromImage(Me.pBoxSignature.Image)
+            g.FillRectangle(New SolidBrush(DrawColor), New Rectangle(X, Y, DrawSize, DrawSize))
+        End Using
+        Me.pBoxSignature.Refresh()
+    End Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private Sub PBoxSignature_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles pBoxSignature.MouseDown
         'Draw = True
@@ -231,7 +275,11 @@ Public Class Formsignature
         Return newImage
     End Function
 
+<<<<<<< HEAD
     Private Sub ButtonAddNaem_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAddNaem.Click
+=======
+    Private Sub ButtonAddNaem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAddNaem.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim signatureFileName = txtSignatureFileName.Text.Trim()
         If String.IsNullOrEmpty(signatureFileName) Then Return
         If currentCurve < 0 OrElse signatureObject(currentCurve).Count = 0 Then Return
@@ -267,13 +315,19 @@ Public Class Formsignature
         If currentCurve < 0 OrElse signatureObject(currentCurve).Count = 0 Then Return
         DrawSignature(e.Graphics)
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub DrawSignature(ByVal g As Graphics)
         g.CompositingMode = CompositingMode.SourceOver
         g.CompositingQuality = CompositingQuality.HighQuality
         g.SmoothingMode = SmoothingMode.AntiAlias
         Dim curve As Object
+<<<<<<< HEAD
         Dim signaturePen As New Pen(colorPickEdit1.Color, Me.CBFontSize1.SelectedItem)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For Each curve In signatureObject
             If curve.Value.Count < 2 Then Continue For
             Using gPath As New GraphicsPath()
@@ -302,7 +356,11 @@ Public Class Formsignature
         End If
         If NMImage = "Signature" Then
             Dim SQL As String = " Update CapturingSignatures SET  CS3 = @CS3 WHERE IDCS = @IDCS"
+<<<<<<< HEAD
             Dim CMD As New SqlCommand With {
+=======
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -327,9 +385,15 @@ Public Class Formsignature
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(IDCS) FROM CapturingSignatures", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(IDCS) FROM CapturingSignatures", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -435,18 +499,30 @@ Public Class Formsignature
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         SAVERECORD()
         Formsignature_Load(sender, e)
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         PHOTOEDIT()
         Formsignature_Load(sender, e)
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextRight.KeyPress
+=======
+    Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextRight.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not Char.IsControl(e.KeyChar) Then
             If Not Char.IsDigit(e.KeyChar) Then
                 e.Handled = True
@@ -454,7 +530,11 @@ Public Class Formsignature
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextUP_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextUP.KeyPress
+=======
+    Private Sub TextUP_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextUP.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not Char.IsControl(e.KeyChar) Then
             If Not Char.IsDigit(e.KeyChar) Then
                 e.Handled = True
@@ -462,7 +542,11 @@ Public Class Formsignature
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextFont_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub TextFont_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not Char.IsControl(e.KeyChar) Then
             If Not Char.IsDigit(e.KeyChar) Then
                 e.Handled = True
@@ -470,12 +554,20 @@ Public Class Formsignature
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Formsignature_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Formsignature_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         Me.TextRealname.Text = Realname
         On Error Resume Next
+<<<<<<< HEAD
         Me.BackWorker2 = New BackgroundWorker With {
+=======
+        Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -506,5 +598,8 @@ Public Class Formsignature
         SaveB = True
         MAXRECORD()
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

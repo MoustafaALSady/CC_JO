@@ -1,6 +1,7 @@
 Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 Public Class FrmEmployees5
+<<<<<<< HEAD
     Inherits Form
     Dim WithEvents BS As New BindingSource
     ReadOnly ds As New DataSet
@@ -13,6 +14,20 @@ Public Class FrmEmployees5
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label2 As Label
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Dim WithEvents BS As New BindingSource
+    ReadOnly ds As New DataSet
+    Friend WithEvents PRINTBUTTON As System.Windows.Forms.Button
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents SEARCHBUTTON As System.Windows.Forms.Button
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label2 As Label
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 #Region " Windows Form Designer generated code "
     Public Sub New()
@@ -28,6 +43,7 @@ Public Class FrmEmployees5
         MyBase.Dispose(disposing)
     End Sub
     Private ReadOnly components As System.ComponentModel.IContainer
+<<<<<<< HEAD
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
@@ -109,6 +125,89 @@ Public Class FrmEmployees5
         Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DATAGRID, ComponentModel.ISupportInitialize).BeginInit()
+=======
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ComboEmployeeName As System.Windows.Forms.ComboBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents ComboMonths As System.Windows.Forms.ComboBox
+    Friend WithEvents DATAGRID As System.Windows.Forms.DataGrid
+    Friend WithEvents STYLE As System.Windows.Forms.DataGridTableStyle
+    Friend WithEvents COL1 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL2 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL3 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL4 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL5 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL6 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL7 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL8 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL9 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL10 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL11 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL12 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL13 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL14 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL15 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL16 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL17 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL18 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL19 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL20 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL21 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL22 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL23 As System.Windows.Forms.DataGridTextBoxColumn
+    Friend WithEvents COL24 As System.Windows.Forms.DataGridTextBoxColumn
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmployees5))
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboEmployeeName = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.DATAGRID = New System.Windows.Forms.DataGrid()
+        Me.STYLE = New System.Windows.Forms.DataGridTableStyle()
+        Me.COL1 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL2 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL3 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL4 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL5 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL6 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL7 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL8 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL9 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL10 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL11 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL12 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL13 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL14 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL15 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL16 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL17 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL18 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL19 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL20 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL21 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL22 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL23 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.COL24 = New System.Windows.Forms.DataGridTextBoxColumn()
+        Me.ComboMonths = New System.Windows.Forms.ComboBox()
+        Me.PRINTBUTTON = New System.Windows.Forms.Button()
+        Me.SEARCHBUTTON = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DATAGRID, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -116,6 +215,7 @@ Public Class FrmEmployees5
         '
         'Label4
         '
+<<<<<<< HEAD
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
@@ -124,6 +224,16 @@ Public Class FrmEmployees5
         Me.Label4.Location = New Point(352, 6)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New Size(41, 15)
+=======
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(352, 6)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label4.TabIndex = 71
         Me.Label4.Text = "«·„ÊŸ›"
         '
@@ -131,14 +241,21 @@ Public Class FrmEmployees5
         '
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.Label3.Location = New Point(208, -19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New Size(112, 27)
+=======
+        Me.Label3.Location = New System.Drawing.Point(208, -19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(112, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label3.TabIndex = 70
         Me.Label3.Text = "—ﬁ„ «·«–‰"
         '
         'Label1
         '
+<<<<<<< HEAD
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
@@ -147,12 +264,23 @@ Public Class FrmEmployees5
         Me.Label1.Location = New Point(352, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New Size(27, 15)
+=======
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(352, 30)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(27, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label1.TabIndex = 63
         Me.Label1.Text = "‘Â—"
         '
         'ComboEmployeeName
         '
         Me.ComboEmployeeName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.ComboEmployeeName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.ComboEmployeeName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
@@ -160,11 +288,21 @@ Public Class FrmEmployees5
         Me.ComboEmployeeName.Location = New Point(7, 2)
         Me.ComboEmployeeName.Name = "ComboEmployeeName"
         Me.ComboEmployeeName.Size = New Size(343, 23)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboEmployeeName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.ComboEmployeeName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboEmployeeName.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ComboEmployeeName.Location = New System.Drawing.Point(7, 2)
+        Me.ComboEmployeeName.Name = "ComboEmployeeName"
+        Me.ComboEmployeeName.Size = New System.Drawing.Size(343, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboEmployeeName.TabIndex = 59
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.Panel3)
@@ -173,6 +311,16 @@ Public Class FrmEmployees5
         Me.GroupBox1.Location = New Point(407, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New Size(152, 102)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.Panel3)
+        Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(407, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(152, 102)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.TabIndex = 58
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "»ÕÀ »Ê«”ÿ…"
@@ -184,20 +332,34 @@ Public Class FrmEmployees5
         Me.Panel3.Controls.Add(Me.RadioButton1)
         Me.Panel3.Controls.Add(Me.RadioButton2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.Panel3.Location = New Point(3, 18)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(146, 81)
+=======
+        Me.Panel3.Location = New System.Drawing.Point(3, 18)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(146, 81)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 452
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton3.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.RadioButton3.ForeColor = System.Drawing.Color.Black
         Me.RadioButton3.Location = New Point(13, 56)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New Size(119, 19)
+=======
+        Me.RadioButton3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton3.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton3.Location = New System.Drawing.Point(13, 56)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(119, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton3.TabIndex = 734
         Me.RadioButton3.Text = "«·”Ã·«  «·€Ì— „—«Ã⁄…"
         Me.RadioButton3.UseVisualStyleBackColor = False
@@ -207,11 +369,19 @@ Public Class FrmEmployees5
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.BackColor = System.Drawing.Color.Transparent
         Me.RadioButton1.Checked = True
+<<<<<<< HEAD
         Me.RadioButton1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.RadioButton1.ForeColor = System.Drawing.Color.Black
         Me.RadioButton1.Location = New Point(15, 3)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New Size(117, 19)
+=======
+        Me.RadioButton1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton1.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton1.Location = New System.Drawing.Point(15, 3)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(117, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "«”„ «·„ÊŸ› Ê«· «—ÌŒ"
@@ -221,11 +391,19 @@ Public Class FrmEmployees5
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton2.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.RadioButton2.ForeColor = System.Drawing.Color.Black
         Me.RadioButton2.Location = New Point(21, 30)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New Size(111, 19)
+=======
+        Me.RadioButton2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton2.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton2.Location = New System.Drawing.Point(21, 30)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(111, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.Text = "⁄—÷ «·ﬂ· Ê«· «—ÌŒ"
         Me.RadioButton2.UseVisualStyleBackColor = False
@@ -234,6 +412,7 @@ Public Class FrmEmployees5
         '
         Me.DATAGRID.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.DATAGRID.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DATAGRID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -250,6 +429,24 @@ Public Class FrmEmployees5
         Me.DATAGRID.Size = New Size(566, 192)
         Me.DATAGRID.TabIndex = 67
         Me.DATAGRID.TableStyles.AddRange(New DataGridTableStyle() {Me.STYLE})
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DATAGRID.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DATAGRID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.DATAGRID.CaptionBackColor = System.Drawing.SystemColors.Control
+        Me.DATAGRID.CaptionFont = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DATAGRID.CaptionVisible = False
+        Me.DATAGRID.DataMember = ""
+        Me.DATAGRID.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.DATAGRID.HeaderForeColor = System.Drawing.SystemColors.ControlText
+        Me.DATAGRID.Location = New System.Drawing.Point(3, 147)
+        Me.DATAGRID.Name = "DATAGRID"
+        Me.DATAGRID.ReadOnly = True
+        Me.DATAGRID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.DATAGRID.Size = New System.Drawing.Size(566, 192)
+        Me.DATAGRID.TabIndex = 67
+        Me.DATAGRID.TableStyles.AddRange(New System.Windows.Forms.DataGridTableStyle() {Me.STYLE})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'STYLE
         '
@@ -257,7 +454,11 @@ Public Class FrmEmployees5
         Me.STYLE.BackColor = System.Drawing.Color.Pink
         Me.STYLE.DataGrid = Me.DATAGRID
         Me.STYLE.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.STYLE.GridColumnStyles.AddRange(New DataGridColumnStyle() {Me.COL1, Me.COL2, Me.COL3, Me.COL4, Me.COL5, Me.COL6, Me.COL7, Me.COL8, Me.COL9, Me.COL10, Me.COL11, Me.COL12, Me.COL13, Me.COL14, Me.COL15, Me.COL16, Me.COL17, Me.COL18, Me.COL19, Me.COL20, Me.COL21, Me.COL22, Me.COL23, Me.COL24})
+=======
+        Me.STYLE.GridColumnStyles.AddRange(New System.Windows.Forms.DataGridColumnStyle() {Me.COL1, Me.COL2, Me.COL3, Me.COL4, Me.COL5, Me.COL6, Me.COL7, Me.COL8, Me.COL9, Me.COL10, Me.COL11, Me.COL12, Me.COL13, Me.COL14, Me.COL15, Me.COL16, Me.COL17, Me.COL18, Me.COL19, Me.COL20, Me.COL21, Me.COL22, Me.COL23, Me.COL24})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.STYLE.GridLineColor = System.Drawing.Color.Blue
         Me.STYLE.HeaderForeColor = System.Drawing.Color.Black
         Me.STYLE.LinkColor = System.Drawing.SystemColors.Control
@@ -496,6 +697,7 @@ Public Class FrmEmployees5
         'ComboMonths
         '
         Me.ComboMonths.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.ComboMonths.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.ComboMonths.ForeColor = System.Drawing.Color.Black
@@ -503,11 +705,21 @@ Public Class FrmEmployees5
         Me.ComboMonths.Location = New Point(7, 26)
         Me.ComboMonths.Name = "ComboMonths"
         Me.ComboMonths.Size = New Size(343, 23)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ComboMonths.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ComboMonths.ForeColor = System.Drawing.Color.Black
+        Me.ComboMonths.Items.AddRange(New Object() {"ﬂ«‰Ê‰ À«‰Ì", "‘»«ÿ", "«–«—", "‰Ì”«‰", "«Ì«—", "Õ“Ì—«‰", " „Ê“", "«»", "«Ì·Ê·", " ‘—Ì‰ «Ê·", " ‘—Ì‰ À«‰Ì", "ﬂ«‰Ê‰ À«‰Ì"})
+        Me.ComboMonths.Location = New System.Drawing.Point(7, 26)
+        Me.ComboMonths.Name = "ComboMonths"
+        Me.ComboMonths.Size = New System.Drawing.Size(343, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboMonths.TabIndex = 239
         '
         'PRINTBUTTON
         '
         Me.PRINTBUTTON.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.PRINTBUTTON.BackColor = System.Drawing.Color.Transparent
         Me.PRINTBUTTON.Cursor = System.Windows.Forms.Cursors.Hand
@@ -519,6 +731,19 @@ Public Class FrmEmployees5
         Me.PRINTBUTTON.Name = "PRINTBUTTON"
         Me.PRINTBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.PRINTBUTTON.Size = New Size(168, 25)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PRINTBUTTON.BackColor = System.Drawing.Color.Transparent
+        Me.PRINTBUTTON.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PRINTBUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PRINTBUTTON.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.PRINTBUTTON.Image = Global.CC_JO.My.Resources.Resources.Print_Quick
+        Me.PRINTBUTTON.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.PRINTBUTTON.Location = New System.Drawing.Point(7, 51)
+        Me.PRINTBUTTON.Name = "PRINTBUTTON"
+        Me.PRINTBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.PRINTBUTTON.Size = New System.Drawing.Size(168, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PRINTBUTTON.TabIndex = 449
         Me.PRINTBUTTON.Text = "ÿ»«⁄…"
         Me.PRINTBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -526,6 +751,7 @@ Public Class FrmEmployees5
         '
         'SEARCHBUTTON
         '
+<<<<<<< HEAD
         Me.SEARCHBUTTON.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.SEARCHBUTTON.BackColor = System.Drawing.Color.Transparent
         Me.SEARCHBUTTON.Cursor = System.Windows.Forms.Cursors.Hand
@@ -537,6 +763,19 @@ Public Class FrmEmployees5
         Me.SEARCHBUTTON.Name = "SEARCHBUTTON"
         Me.SEARCHBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.SEARCHBUTTON.Size = New Size(174, 25)
+=======
+        Me.SEARCHBUTTON.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SEARCHBUTTON.BackColor = System.Drawing.Color.Transparent
+        Me.SEARCHBUTTON.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SEARCHBUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SEARCHBUTTON.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.SEARCHBUTTON.Image = Global.CC_JO.My.Resources.Resources.FindByID_16x16
+        Me.SEARCHBUTTON.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.SEARCHBUTTON.Location = New System.Drawing.Point(176, 51)
+        Me.SEARCHBUTTON.Name = "SEARCHBUTTON"
+        Me.SEARCHBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.SEARCHBUTTON.Size = New System.Drawing.Size(174, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SEARCHBUTTON.TabIndex = 448
         Me.SEARCHBUTTON.Text = "»ÕÀ"
         Me.SEARCHBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -545,7 +784,11 @@ Public Class FrmEmployees5
         'Panel1
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.ComboMonths)
@@ -554,28 +797,46 @@ Public Class FrmEmployees5
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.ComboEmployeeName)
         Me.Panel1.Controls.Add(Me.Label1)
+<<<<<<< HEAD
         Me.Panel1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Panel1.Location = New Point(1, 20)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New Size(400, 81)
+=======
+        Me.Panel1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Panel1.Location = New System.Drawing.Point(1, 20)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(400, 81)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 450
         '
         'Panel2
         '
         Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Controls.Add(Me.GroupBox1)
+<<<<<<< HEAD
         Me.Panel2.Location = New Point(3, 36)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(566, 109)
+=======
+        Me.Panel2.Location = New System.Drawing.Point(3, 36)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(566, 109)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 451
         '
         'Panel4
         '
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+<<<<<<< HEAD
             Or System.Windows.Forms.AnchorStyles.Right), AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -583,12 +844,22 @@ Public Class FrmEmployees5
         Me.Panel4.Location = New Point(3, 2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New Size(566, 32)
+=======
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.Label2)
+        Me.Panel4.Location = New System.Drawing.Point(3, 2)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(566, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.TabIndex = 742
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
+<<<<<<< HEAD
         Me.Label2.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Image = Global.CC_JO.My.Resources.Resources.printpreview_32x32
@@ -596,26 +867,50 @@ Public Class FrmEmployees5
         Me.Label2.Location = New Point(0, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New Size(564, 29)
+=======
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Image = Global.CC_JO.My.Resources.Resources.printpreview_32x32
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(564, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2.TabIndex = 90
         Me.Label2.Text = "«·„— »«  »ÕÀ Ê ÿ»«⁄…"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmEmployees5
         '
+<<<<<<< HEAD
         Me.AutoScaleBaseSize = New Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New Size(573, 343)
+=======
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(573, 343)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.DATAGRID)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label3)
+<<<<<<< HEAD
         Me.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.MinimumSize = New Size(589, 382)
+=======
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmEmployees5"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -623,7 +918,11 @@ Public Class FrmEmployees5
         Me.GroupBox1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+<<<<<<< HEAD
         CType(Me.DATAGRID, ComponentModel.ISupportInitialize).EndInit()
+=======
+        CType(Me.DATAGRID, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -633,7 +932,11 @@ Public Class FrmEmployees5
     End Sub
 
 #End Region
+<<<<<<< HEAD
     Private Sub FrmEmployees5_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FrmEmployees5_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -648,7 +951,11 @@ Public Class FrmEmployees5
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmEmployees5_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmEmployees5_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -656,7 +963,11 @@ Public Class FrmEmployees5
             Application.DoEvents()
             Me.Opacity = a / 10
         Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.EnforceConstraints = False
         Consum.Open()
         Dim strSQL As New SqlCommand("", Consum)
@@ -678,13 +989,18 @@ Public Class FrmEmployees5
         SHOWBUTTON()
         Call MangUsers()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AutoComplete(ComboEmployeeName, e, )
     End Sub
     Private Sub SHOWBUTTON()
         On Error Resume Next
         Me.PRINTBUTTON.Enabled = LockPrint
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton2.Click
         On Error Resume Next
         Me.ComboEmployeeName.Enabled = False
@@ -694,6 +1010,17 @@ Public Class FrmEmployees5
         Me.ComboEmployeeName.Enabled = True
     End Sub
     Private Sub SEARCHBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SEARCHBUTTON.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+        On Error Resume Next
+        Me.ComboEmployeeName.Enabled = False
+    End Sub
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
+        On Error Resume Next
+        Me.ComboEmployeeName.Enabled = True
+    End Sub
+    Private Sub SEARCHBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SEARCHBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -703,14 +1030,24 @@ Public Class FrmEmployees5
             MsgBox("⁄›Ê« .. ﬁ«„ «·√œ„‰ »„‰⁄ Œ«’Ì… „⁄«Ì‰… «Ê ÿ»«⁄… «·”Ã·«  „‰ «·»—‰«„Ã", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strsql1 As New SqlCommand("SELECT SLY1, SLY2, SLY3, SLY4, SLY6, SLY8, SLY10, SLY11, SLY12, SLY13, SLY14, SLY15, SLY16, SLY17, SLY18, SLY19, SLY20, SLY21, SLY22, SLY23, SLY24  FROM SALARIES WHERE  SLY3='" & Me.ComboMonths.Text & "'" & "AND" & " SLY2='" & Me.ComboEmployeeName.Text & "'", Consum)
         Dim strsql2 As New SqlCommand("SELECT SLY1, SLY2, SLY3, SLY4, SLY6, SLY8, SLY10, SLY11, SLY12, SLY13, SLY14, SLY15, SLY16, SLY17, SLY18, SLY19, SLY20, SLY21, SLY22, SLY23, SLY24 FROM SALARIES WHERE  SLY3='" & Me.ComboMonths.Text & "'", Consum)
         Dim strsql3 As New SqlCommand("SELECT SLY1, SLY2, SLY3, SLY4, SLY6, SLY8, SLY10, SLY11, SLY12, SLY13, SLY14, SLY15, SLY16, SLY17, SLY18, SLY19, SLY20, SLY21, SLY22, SLY23, SLY24 FROM SALARIES WHERE  CUser='" & CUser & "' and   SLY28='" & False & "'", Consum)
         Dim ds As New DataSet
+<<<<<<< HEAD
         Dim Adp1 As New SqlDataAdapter(strsql1)
         Dim Adp2 As New SqlDataAdapter(strsql2)
         Dim Adp3 As New SqlDataAdapter(strsql3)
+=======
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+        Dim Adp2 As New SqlClient.SqlDataAdapter(strsql2)
+        Dim Adp3 As New SqlClient.SqlDataAdapter(strsql3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.RadioButton1.Checked Then
             If Len(Me.ComboEmployeeName.Text) = 0 Then
@@ -756,7 +1093,11 @@ Public Class FrmEmployees5
         Adp3.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -771,7 +1112,11 @@ Public Class FrmEmployees5
         Dim txtToDate As String
         Dim txt As TextObject
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RadioButton1.Checked Then
             Dim rpt As New rptEmployees16
             If Len(Me.ComboEmployeeName.Text) = 0 Then
@@ -787,7 +1132,11 @@ Public Class FrmEmployees5
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM SALARIES  WHERE  CUser='" & CUser & "' and Year(SLY26) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and SLY3 like '" & Me.ComboMonths.Text & "' AND SLY2 like '" & ComboEmployeeName.Text & "'", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim builder37 As New SqlCommandBuilder(SqlDataAdapter1)
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "SALARIES")
@@ -822,7 +1171,11 @@ Public Class FrmEmployees5
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM SALARIES   WHERE  CUser='" & CUser & "' and Year(SLY26) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and SLY3 like '" & Me.ComboMonths.Text & "'", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "SALARIES")
             rpt.SetDataSource(ds)
@@ -852,7 +1205,11 @@ Public Class FrmEmployees5
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM SALARIES   WHERE  CUser='" & CUser & "' and Year(SLY26) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and  SLY28 ='" & False & "'", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim builder37 As New SqlCommandBuilder(SqlDataAdapter1)
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "SALARIES")

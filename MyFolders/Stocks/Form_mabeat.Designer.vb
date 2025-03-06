@@ -1936,6 +1936,10 @@ Partial Class Form_mabeat
     Friend WithEvents TextInvoiceNumber1 As System.Windows.Forms.TextBox
     Friend WithEvents TextInvoiceNumber As System.Windows.Forms.TextBox
     Friend WithEvents TextFullInvoiceNumber1 As System.Windows.Forms.TextBox
+<<<<<<< HEAD
+=======
+    Friend WithEvents BuakrT As System.Windows.Forms.Button
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -2003,5 +2007,8 @@ Partial Class Form_mabeat
     Private WithEvents TextCostGoodsSold As DevExpress.XtraEditors.TextEdit
     Private WithEvents TextTotalDiscount As DevExpress.XtraEditors.TextEdit
     Private WithEvents TextTotalPurchasePrice As DevExpress.XtraEditors.TextEdit
+<<<<<<< HEAD
     Public WithEvents BuakrT As Button
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

@@ -9,7 +9,11 @@ Imports DevExpress.Pdf
 Public Class FrmMyDocuments
     'Dim ds1 As New DataSet
     'Dim WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Private Sub FrmMyDocuments_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmMyDocuments_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -24,7 +28,11 @@ Public Class FrmMyDocuments
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmDOC_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmDOC_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -52,7 +60,11 @@ Public Class FrmMyDocuments
         'Consum.Close()
         FILLCOMBOBOX3("DOCUMENTS", "DOC4", "CUser", CUser, "DOC3", Trim(".pdf"), Me.ComboBox1)
     End Sub
+<<<<<<< HEAD
     Private Sub CMDBROWSE_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CMDBROWSE.Click
+=======
+    Private Sub CMDBROWSE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDBROWSE.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.OpenFileDialog1.RestoreDirectory = True
             Me.OpenFileDialog1.InitialDirectory = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
@@ -84,7 +96,11 @@ Public Class FrmMyDocuments
             Me.AxAcroPDF1.Show()
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub CMDBROWSE2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CMDBROWSE2.Click
+=======
+    Private Sub CMDBROWSE2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDBROWSE2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If File.Exists(mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA") & "\" & Me.ComboBox1.Text + ".pdf") = True Then
                 'Me.AxAcroPDF1.Visible = False
@@ -100,7 +116,11 @@ Public Class FrmMyDocuments
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub CMDBROWSE3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CMDBROWSE3.Click
+=======
+    Private Sub CMDBROWSE3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDBROWSE3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             'Me.OpenFileDialog1.RestoreDirectory = True
             'Me.OpenFileDialog1.InitialDirectory = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")

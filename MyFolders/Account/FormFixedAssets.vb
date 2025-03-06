@@ -1,10 +1,17 @@
 ﻿Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 Public Class FormFixedAssets
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -13,7 +20,11 @@ Public Class FormFixedAssets
     Dim RowCount As Integer = 0
 
 
+<<<<<<< HEAD
     Private Sub FormFixedAssets_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FormFixedAssets_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -43,9 +54,15 @@ Public Class FormFixedAssets
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(IDFA) FROM FixedAssets", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(IDFA) FROM FixedAssets", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -61,7 +78,11 @@ Public Class FormFixedAssets
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub FormFixedAssets_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormFixedAssets_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             For a As Byte = 0 To 10
                 System.Threading.Thread.Sleep(10)
@@ -69,7 +90,11 @@ Public Class FormFixedAssets
                 Me.Opacity = a / 10
             Next
 
+<<<<<<< HEAD
             Me.BackWorker2 = New ComponentModel.BackgroundWorker With {
+=======
+            Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -127,7 +152,11 @@ Public Class FormFixedAssets
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & BS.Count - RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             If Click1 = True Then
                 Try
@@ -270,7 +299,11 @@ Public Class FormFixedAssets
         On Error Resume Next
         Me.RECORDSLABEL.Text = Me.BS.Position + 1 & " من " & Me.BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -289,13 +322,21 @@ Public Class FormFixedAssets
 
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -313,7 +354,11 @@ Public Class FormFixedAssets
         Me.SAVERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -325,10 +370,17 @@ Public Class FormFixedAssets
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO FixedAssets(  IDFA, FA1, FA2, FA3, FA4, FA5, FA6, FA7, FA8, FA9, FA10, FA11, FA12, USERNAME, CUser, COUser, da, ne) VALUES   (   @IDFA, @FA1, @FA2, @FA3, @FA4, @FA5, @FA6, @FA7, @FA8, @FA9, @FA10, @FA11, @FA12, @USERNAME, @CUser, @COUser, @da, @ne)"
 
             Dim cmd As New SqlCommand(Sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO FixedAssets(  IDFA, FA1, FA2, FA3, FA4, FA5, FA6, FA7, FA8, FA9, FA10, FA11, FA12, USERNAME, CUser, COUser, da, ne) VALUES   (   @IDFA, @FA1, @FA2, @FA3, @FA4, @FA5, @FA6, @FA7, @FA8, @FA9, @FA10, @FA11, @FA12, @USERNAME, @CUser, @COUser, @da, @ne)"
+
+            Dim cmd As New SqlClient.SqlCommand(Sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -384,12 +436,21 @@ Public Class FormFixedAssets
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum) With {
                 .CommandText = String.Concat(New String() {"SELECT   IDFA, FA1, FA2, FA3, FA4, FA5, FA6, FA7, FA8, FA9, FA10, FA11, FA12, USERNAME, Auditor, CUser, COUser, da, ne FROM FixedAssets  WHERE  CUser='", ModuleGeneral.CUser, "'ORDER BY IDFA"})
             }
 
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum) With {
+                .CommandText = String.Concat(New String() {"SELECT   IDFA, FA1, FA2, FA3, FA4, FA5, FA6, FA7, FA8, FA9, FA10, FA11, FA12, USERNAME, Auditor, CUser, COUser, da, ne FROM FixedAssets  WHERE  CUser='", ModuleGeneral.CUser, "'ORDER BY IDFA"})
+            }
+
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
             Me.myds = New DataSet
             Consum.Open()
@@ -472,9 +533,15 @@ Public Class FormFixedAssets
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update FixedAssets SET  FA1 = @FA1, FA2 = @FA2, FA3 = @FA3, FA4 = @FA4, FA5 = @FA5, FA6 = @FA6, FA7 = @FA7, FA8 = @FA8, FA9 = @FA9, FA10 = @FA10,FA11 = @FA11, FA12 = @FA12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFA = @IDFA", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update FixedAssets SET  FA1 = @FA1, FA2 = @FA2, FA3 = @FA3, FA4 = @FA4, FA5 = @FA5, FA6 = @FA6, FA7 = @FA7, FA8 = @FA8, FA9 = @FA9, FA10 = @FA10,FA11 = @FA11, FA12 = @FA12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFA = @IDFA", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -520,7 +587,11 @@ Public Class FormFixedAssets
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -542,7 +613,11 @@ Public Class FormFixedAssets
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -550,13 +625,21 @@ Public Class FormFixedAssets
         Click2 = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.CancelEdit()
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -567,14 +650,22 @@ Public Class FormFixedAssets
             MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim rpt As New CrystalFixedAssets
         Dim F As New FrmPRINT
         GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
         Dim ds As New DataSet
         Dim str As New SqlCommand("SELECT * FROM FixedAssets   WHERE  CUser='" & ModuleGeneral.CUser & "'   ", Consum)
         Dim builder19 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
         SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         SqlDataAdapter1.Fill(ds, "FixedAssets")
         rpt.SetDataSource(ds)
@@ -601,7 +692,11 @@ Public Class FormFixedAssets
 
 
 
+<<<<<<< HEAD
     Private Sub TextBox5_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextConsumptionRate.TextChanged, DatePurchase.ValueChanged, TextCurrentConsumption.TextChanged, TextTotalPreviousConsumption.TextChanged
+=======
+    Private Sub TextBox5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextConsumptionRate.TextChanged, DatePurchase.ValueChanged, TextCurrentConsumption.TextChanged, TextTotalPreviousConsumption.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TextNumberYearsDepreciation.Text = FiscalYear_currentDateMustBeInFiscalYear() - Year(DatePurchase.Value)
         'Me.TextBox6.Text = Val(Me.TextBox4.Text) * Val(Me.TextBox5.Text)
@@ -611,25 +706,41 @@ Public Class FormFixedAssets
         Me.TextTotalPreviousConsumption.Text = Val(Me.TextNumberYearsDepreciation.Text) * Val(Me.TextCurrentConsumption.Text)
     End Sub
 
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()

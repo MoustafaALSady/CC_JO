@@ -5,7 +5,11 @@ Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FrmAdvancedSearchMoviesTransaction
     ReadOnly cmd As New SqlCommand
+<<<<<<< HEAD
     Dim Adp As New SqlDataAdapter
+=======
+    Dim Adp As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly Ds As New DataSet
     ReadOnly bs As New BindingSource
     Private dtSource As DataTable
@@ -14,7 +18,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
     Private pageSize As Integer
     Private currentPage As Integer
     Private recNo As Integer
+<<<<<<< HEAD
     Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSearch.Click
+=======
+    Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -92,7 +100,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim DataSetTab30 As DataSet
         DataSetTab30 = Ds.GetChanges
         DataSetTab30 = New DataSet
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "SELECT TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK22, TBNK23 FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1"
@@ -127,7 +139,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         recNo = 0
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAdvancedSearchMoviesCustomers_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmAdvancedSearchMoviesCustomers_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Escape
@@ -140,7 +156,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAdvancedSearchMoviesCustomers_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmAdvancedSearchMoviesCustomers_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -150,7 +170,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             Next
             Me.DataGridView1.AutoGenerateColumns = False
             FillDataBS()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL1 As New SqlCommand("SELECT distinct  TBNK6 FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
             Consum.Open()
             DR = strSQL1.ExecuteReader()
@@ -194,7 +218,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         '==============================
         Call MangUsers()
     End Sub
+<<<<<<< HEAD
     Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox3.SelectedIndexChanged
+=======
+    Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBox3.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim Str As String = ListBox3.Text
             Dim strArr() As String
@@ -206,7 +234,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonPrintreport_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonPrintreport.Click
+=======
+    Private Sub ButtonPrintreport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonPrintreport.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim F As New FrmPRINT
         Dim txtFromDate As String
         Dim txtToDate As String
@@ -221,7 +253,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد حساب خلال فترة معينة" Then
                 Dim rpt As New rptPTRANSACTION
@@ -243,7 +279,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                         .CommandText = "SELECT * FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'"
                     End If
                     Dim ds As New DataSet
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "PTRANSACTION")
                     rpt.SetDataSource(ds)
@@ -285,7 +325,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                     Else
                         .CommandText = "SELECT * FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'"
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -328,7 +372,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                     Else
                         .CommandText = "SELECT * FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'"
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -380,7 +428,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                             .CommandText = "SELECT * FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK5='" & TextDebit_Cred.Text & "'"
                         End If
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -409,6 +461,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         End Try
     End Sub
     Private Sub SumAmounFINALBALANCE1()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -416,6 +469,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -429,6 +491,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Me.TextBalance1.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE52()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -436,6 +499,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -449,6 +521,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Me.TextBalance1.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -456,6 +529,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -469,6 +551,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         TextBalance1.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE3()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -476,6 +559,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "'  and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "'  and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -489,6 +581,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         TextBalance1.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE4()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -496,6 +589,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         Adp1.Fill(ds1)
@@ -509,6 +611,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE5()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -516,6 +619,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -529,6 +641,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE6()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -536,6 +649,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4)  FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4)  FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -549,6 +671,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE7()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -556,6 +679,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK4='" & TextDebit_Cred.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK4='" & TextDebit_Cred.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -569,6 +701,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE8()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -576,6 +709,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK5='" & TextDebit_Cred.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK5='" & TextDebit_Cred.Text & "'  AND TBNK6='" & ComboAccount.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -589,6 +731,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE9()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -596,6 +739,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK4='" & TextDebit_Cred.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK4='" & TextDebit_Cred.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -609,6 +761,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE10()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -616,6 +769,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "'  and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK5='" & TextDebit_Cred.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(TBNK5-TBNK4) FROM PTRANSACTION  WHERE   CUser='" & CUser & "'  and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK5='" & TextDebit_Cred.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -628,7 +790,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         TextBalance1.Text = Format(Val(SUM1), "#,#0.00")
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEnquiry.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEnquiry.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ListBox3.Items.Clear()
         Me.TxtSearch.Text = ""
         Me.Label1.Text = ""
@@ -646,7 +812,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MsgBox("عفوا .. قام الأدمن بمنع خاصية قرات السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد حساب خلال فترة معينة" Then
                 If Me.DateFrom.Checked = False And Me.DateTO.Checked = False Then
@@ -668,7 +838,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                         .CommandText = "SELECT TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK22, TBNK23 FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'"
                         SumAmounFINALBALANCE52()
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -700,7 +874,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                         .CommandText = "SELECT TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK22, TBNK23 FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK10='" & ComboSource.Text & "'  ORDER BY TBNK1"
                         SumAmounFINALBALANCE4()
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -732,7 +910,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                         .CommandText = "SELECT TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK22, TBNK23 FROM PTRANSACTION  WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND TBNK8='" & ComboType.Text & "'"
                         SumAmounFINALBALANCE6()
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -775,7 +957,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                             SumAmounFINALBALANCE10()
                         End If
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
                     Ds.Clear()
                     SqlDataAdapter1.Fill(Ds, "PTRANSACTION")
@@ -795,7 +981,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBEnquiry.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboBEnquiry.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد حساب خلال فترة معينة" Then
                 Me.ComboAccount.Enabled = True
@@ -827,7 +1017,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDisplyAll.Click
+=======
+    Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDisplyAll.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             FillDataBS()
             Me.ListBox3.Items.Clear()
@@ -848,12 +1042,20 @@ Public Class FrmAdvancedSearchMoviesTransaction
                 MessageBox.Show("من فضلك ادخل التاريخ  فى خانة من - الى", "بحث وطباعه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading)
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim rpt1 As New rptAccount
             GETSERVERNAMEANDDATABASENAME(rpt1, DBServer, "", "")
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "DETAILSACCOUNT")
             rpt1.SetDataSource(ds)
@@ -885,10 +1087,17 @@ Public Class FrmAdvancedSearchMoviesTransaction
                 MessageBox.Show("من فضلك ادخل التاريخ  فى خانة من - الى", "بحث وطباعه", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading)
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim ds As New DataSet
+            Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "DETAILSACCOUNT")
             bs.DataSource = ds
@@ -904,6 +1113,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         End Try
     End Sub
     Private Sub SELECTTHECUSTOMERFORCERTIFICATE()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -911,6 +1121,15 @@ Public Class FrmAdvancedSearchMoviesTransaction
         Dim strsq1 As New SqlCommand("SELECT CEMP3 FROM CABLESCOEMPLOYEES WHERE   CUser='" & CUser & "' and CEMP28 = '" & Me.ComboSource.Text & "'" & "ORDER BY CEMP3", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT CEMP3 FROM CABLESCOEMPLOYEES WHERE   CUser='" & CUser & "' and CEMP28 = '" & Me.ComboSource.Text & "'" & "ORDER BY CEMP3", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         ComboAccount.Items.Clear()
@@ -926,6 +1145,7 @@ Public Class FrmAdvancedSearchMoviesTransaction
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Try
             Dim ds As New DataSet
@@ -935,6 +1155,17 @@ Public Class FrmAdvancedSearchMoviesTransaction
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT TBNK1 FROM PTRANSACTION WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1", Consum)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Try
+            Dim ds As New DataSet
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim f As New FrmTransaction
+            ds.EnforceConstraints = False
+            Dim str As New SqlCommand("SELECT TBNK1 FROM PTRANSACTION WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1", Consum)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Consum.Open()
             SqlDataAdapter1.Fill(ds, "PTRANSACTION")
@@ -952,7 +1183,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+=======
+    Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strFileName As String
         If DataGridView1.RowCount <= 1 Then
             MessageBox.Show("الجدول فارغ من السجلات", " ملحوظة", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -978,19 +1213,32 @@ Public Class FrmAdvancedSearchMoviesTransaction
             Dim excel As New Microsoft.Office.Interop.Excel.Application
             Dim wBook As Microsoft.Office.Interop.Excel.Workbook
             Dim wSheet As Microsoft.Office.Interop.Excel.Worksheet
+<<<<<<< HEAD
             Dim newCulture As Globalization.CultureInfo
             Dim OldCulture As Globalization.CultureInfo
             OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
             Dim cultureInfo As New Globalization.CultureInfo(
+=======
+            Dim newCulture As System.Globalization.CultureInfo
+            Dim OldCulture As System.Globalization.CultureInfo
+            OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
+            Dim cultureInfo As New System.Globalization.CultureInfo(
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 excel.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoConnectorType.msoConnectorTypeMixed))
             newCulture = cultureInfo
             System.Threading.Thread.CurrentThread.CurrentCulture = newCulture
             wBook = excel.Workbooks.Add()
             wSheet = wBook.ActiveSheet()
             wSheet.Name = "الحركات_الدائنة_والمدينة"
+<<<<<<< HEAD
             Dim dt As DataTable = dset.Tables(0)
             Dim dc As DataColumn
             Dim dr As DataRow
+=======
+            Dim dt As System.Data.DataTable = dset.Tables(0)
+            Dim dc As System.Data.DataColumn
+            Dim dr As System.Data.DataRow
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim colIndex As Integer = 0
             Dim rowIndex As Integer = 0
             For Each dc In dt.Columns
@@ -1028,7 +1276,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
                 End If
             End With
             Try
+<<<<<<< HEAD
                 Dim fileTemp As IO.FileStream = System.IO.File.OpenWrite(strFileName)
+=======
+                Dim fileTemp As System.IO.FileStream = System.IO.File.OpenWrite(strFileName)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 fileTemp.Close()
             Catch ex As Exception
                 blnFileOpen = False
@@ -1056,7 +1308,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         TextTotalCred.Text = Format(Val(TextTotalCred.Text), "#,#0.00")
         TextBalance.Text = Format(Val(TextTotalCred.Text - TextTotalDebit.Text), "#,#0.00")
     End Sub
+<<<<<<< HEAD
     Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Buttoncalcluter.Click
+=======
+    Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buttoncalcluter.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Process.Start("calc.exe")
     End Sub
@@ -1092,7 +1348,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
             CheckFillButton = True
         End If
     End Function
+<<<<<<< HEAD
     Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNextPage.Click
+=======
+    Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNextPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         currentPage -= 1
         If currentPage < 1 Then
@@ -1104,7 +1364,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         End If
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnPreviousPage.Click
+=======
+    Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPreviousPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If pageSize = 0 Then
             MessageBox.Show("ضبط حجم الصفحة، ثم انقر فوق ""ملء الشبكة"" زر!")
@@ -1120,7 +1384,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         End If
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFirstPage.Click
+=======
+    Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirstPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If recNo = maxRec Then
             MessageBox.Show("أنت في الصفحة الأخيرة!")
@@ -1130,7 +1398,11 @@ Public Class FrmAdvancedSearchMoviesTransaction
         recNo = pageSize * (currentPage - 1)
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLastPage.Click
+=======
+    Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLastPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If currentPage = 1 Then
             MessageBox.Show("أنت في الصفحة الأولى!")

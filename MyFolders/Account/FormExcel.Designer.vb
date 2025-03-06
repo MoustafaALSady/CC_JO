@@ -5232,7 +5232,10 @@ Partial Class FormExcel
         Me.Controls.Add(Me.RibbonControl1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1100, 600)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormExcel"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Excel "

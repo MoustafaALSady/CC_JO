@@ -2202,10 +2202,15 @@ Partial Class FrmCUSTOMER11
         '
         Me.ButtonViewDocuments.BackColor = System.Drawing.Color.Transparent
         Me.ButtonViewDocuments.Cursor = System.Windows.Forms.Cursors.Hand
+<<<<<<< HEAD
+=======
+        Me.ButtonViewDocuments.Dock = System.Windows.Forms.DockStyle.Left
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonViewDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonViewDocuments.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonViewDocuments.Image = Global.CC_JO.My.Resources.Resources.PInternalAuditor_16x16
         Me.ButtonViewDocuments.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.ButtonViewDocuments.Location = New System.Drawing.Point(2, 333)
         Me.ButtonViewDocuments.Margin = New System.Windows.Forms.Padding(0)
         Me.ButtonViewDocuments.Name = "ButtonViewDocuments"
@@ -2215,6 +2220,17 @@ Partial Class FrmCUSTOMER11
         Me.ButtonViewDocuments.Text = "⁄—÷ „” ‰œ«  «·—”«·… Alt +  B"
         Me.ButtonViewDocuments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonViewDocuments.UseVisualStyleBackColor = True
+=======
+        Me.ButtonViewDocuments.Location = New System.Drawing.Point(3, 332)
+        Me.ButtonViewDocuments.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonViewDocuments.Name = "ButtonViewDocuments"
+        Me.ButtonViewDocuments.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ButtonViewDocuments.Size = New System.Drawing.Size(342, 35)
+        Me.ButtonViewDocuments.TabIndex = 508
+        Me.ButtonViewDocuments.Text = "⁄—÷ „” ‰œ«  «·—”«·… Alt +  B"
+        Me.ButtonViewDocuments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonViewDocuments.UseVisualStyleBackColor = False
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'ButtonInsertData
         '
@@ -2825,14 +2841,25 @@ Partial Class FrmCUSTOMER11
         '
         Me.ButtonAttachDocument.BackColor = System.Drawing.Color.Transparent
         Me.ButtonAttachDocument.Cursor = System.Windows.Forms.Cursors.Hand
+<<<<<<< HEAD
+=======
+        Me.ButtonAttachDocument.Dock = System.Windows.Forms.DockStyle.Left
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonAttachDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonAttachDocument.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.ButtonAttachDocument.Image = Global.CC_JO.My.Resources.Resources.AddItem_16x16
         Me.ButtonAttachDocument.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.ButtonAttachDocument.Location = New System.Drawing.Point(343, 333)
         Me.ButtonAttachDocument.Name = "ButtonAttachDocument"
         Me.ButtonAttachDocument.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.ButtonAttachDocument.Size = New System.Drawing.Size(340, 32)
+=======
+        Me.ButtonAttachDocument.Location = New System.Drawing.Point(345, 332)
+        Me.ButtonAttachDocument.Name = "ButtonAttachDocument"
+        Me.ButtonAttachDocument.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ButtonAttachDocument.Size = New System.Drawing.Size(342, 35)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonAttachDocument.TabIndex = 797
         Me.ButtonAttachDocument.Text = "«÷«›… „” ‰œ«  «·„’«—Ì›  "
         Me.ButtonAttachDocument.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2845,11 +2872,19 @@ Partial Class FrmCUSTOMER11
         Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DOC1, Me.DOC2, Me.DOC4, Me.DOC5, Me.LO11})
+<<<<<<< HEAD
+=======
+        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Top
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersWidth = 25
+<<<<<<< HEAD
         Me.DataGridView3.Size = New System.Drawing.Size(680, 324)
+=======
+        Me.DataGridView3.Size = New System.Drawing.Size(680, 329)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView3.TabIndex = 754
         '
         'DOC1
@@ -2897,7 +2932,11 @@ Partial Class FrmCUSTOMER11
         Me.TextDOC1.Enabled = False
         Me.TextDOC1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TextDOC1.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.TextDOC1.Location = New System.Drawing.Point(574, 335)
+=======
+        Me.TextDOC1.Location = New System.Drawing.Point(598, 340)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextDOC1.Name = "TextDOC1"
         Me.TextDOC1.Size = New System.Drawing.Size(86, 22)
         Me.TextDOC1.TabIndex = 798

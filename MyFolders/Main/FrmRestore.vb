@@ -4,7 +4,11 @@ Imports Microsoft.SqlServer.Management.Smo
 
 Public Class FrmRestore
 
+<<<<<<< HEAD
     Private Sub FrmRestore_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmRestore_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Enter
@@ -17,7 +21,11 @@ Public Class FrmRestore
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmRestore_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmRestore_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -89,7 +97,11 @@ Public Class FrmRestore
         End With
     End Sub
 
+<<<<<<< HEAD
     Private Sub BUTTONDeatch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONDeatch.Click
+=======
+    Private Sub BUTTONDeatch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONDeatch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If RAdmin = False Then
             MsgBox("عفوا .. هذا الامر للمشرف العام فقط", 16, "تنبيه")
             Exit Sub
@@ -211,7 +223,11 @@ Public Class FrmRestore
         End If
         Me.LabelRestore.Text = e.Percent.ToString + "% Restore"
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioStandard.Click
+=======
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioStandard.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.RadioStandard.Checked = True Then
                 Me.GroupBox3.Enabled = False
@@ -224,7 +240,11 @@ Public Class FrmRestore
             MessageBox.Show(ex.Message & vbCrLf & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioCustom.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioCustom.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.RadioCustom.Checked = True Then
                 Me.GroupBox3.Enabled = True
@@ -237,7 +257,11 @@ Public Class FrmRestore
             MessageBox.Show(ex.Message & vbCrLf & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.LabelRestore.Text = ""
         Catch ex As Exception

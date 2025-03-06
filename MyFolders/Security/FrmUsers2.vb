@@ -1,11 +1,20 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmUsers2
+<<<<<<< HEAD
     ReadOnly Consum As New SqlConnection(constring)
     ReadOnly ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
 
     Dim SQLstr As String = "SELECT * FROM Users"
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    ReadOnly Consum As New SqlClient.SqlConnection(constring)
+    ReadOnly ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+
+    Dim SQLstr As String = "SELECT * FROM Users"
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TextBox1.Text = "" Then
             MsgBox("إدخل كلمة المرور", MsgBoxStyle.OkOnly, "تنبيه")
             Exit Sub
@@ -32,7 +41,11 @@ Public Class FrmUsers2
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button2.Click
+=======
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
@@ -63,11 +76,19 @@ Public Class FrmUsers2
             Me.GroupBox2.Enabled = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button3.Click
         Me.Close()
     End Sub
 
     Private Sub FrmUsers2_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Me.Close()
+    End Sub
+
+    Private Sub FrmUsers2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
     End Sub

@@ -2,10 +2,17 @@ Option Explicit Off
 Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 Public Class CustomerPay
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Public WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -21,7 +28,11 @@ Public Class CustomerPay
     Public TB1 As String
     Public TB2 As String
 
+<<<<<<< HEAD
     Public Sub CustomerPay_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Public Sub CustomerPay_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -30,7 +41,11 @@ Public Class CustomerPay
             Me.Opacity = a / 10
         Next
 
+<<<<<<< HEAD
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -38,6 +53,7 @@ Public Class CustomerPay
     End Sub
 
     Private Sub SumAmounBALANCE()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
@@ -45,6 +61,15 @@ Public Class CustomerPay
         Consum = New SqlConnection(constring)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT Sum(Loa6)  FROM LoansPa WHERE Lo ='" & Me.TextDebtNumber.Text & "'", Consum)
+        Consum = New SqlClient.SqlConnection(constring)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -61,11 +86,19 @@ Public Class CustomerPay
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             Me.myds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT  Loa1, Lo, Loa, Loa2, Loa3, Loa4, Loa5, Loa6, Loa7, Loa8, Loa9, Loa10, Loa11, Loa12, Loa13, Loa14, Loa15, Loa16, lo25, CB1, Auditor, USERNAME, CUser,COUser, da, ne, da1, ne1 FROM LoansPa    WHERE  CUser='" & CUser & "' and Loa1 ='" & Trim(Me.TB1) & "'  ORDER BY Loa1"
                 SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            With strSQL
+                .CommandText = "SELECT  Loa1, Lo, Loa, Loa2, Loa3, Loa4, Loa5, Loa6, Loa7, Loa8, Loa9, Loa10, Loa11, Loa12, Loa13, Loa14, Loa15, Loa16, lo25, CB1, Auditor, USERNAME, CUser,COUser, da, ne, da1, ne1 FROM LoansPa    WHERE  CUser='" & CUser & "' and Loa1 ='" & Trim(Me.TB1) & "'  ORDER BY Loa1"
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
                 Me.myds = New DataSet
                 If Consum.State = ConnectionState.Closed Then Consum.Open()
@@ -183,13 +216,22 @@ Public Class CustomerPay
     End Sub
 
     Private Sub AmountLoa6()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim SUM1 As Double
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT Loa7 FROM LoansPa WHERE Lo ='" & Me.TextDebtNumber.Text & "'", Consum)
         Dim ds2 As New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(strsql)
+=======
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Adp.Fill(ds2)
         If ds2.Tables(0).Rows.Count > 0 Then
@@ -308,7 +350,11 @@ Public Class CustomerPay
                 MsgBox(" „  ⁄„·Ì… «·Õ›Ÿ ›Ì ﬁ«⁄œ… «·»Ì«‰«  »‰Ã«Õ" & vbCrLf & "  ‰»ÌÂ : ﬁ«„ «Õœ «·„” Œœ„Ì‰ »«÷«›… ”Ã·«  ⁄œœ " & Me.BS.Count - Me.RowCount, 64 + 524288, " ‰Ã«Õ «·Õ›Ÿ Ê«· €ÌÌ—« ")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             If Click1 = True Then
                 Try
@@ -342,7 +388,11 @@ Public Class CustomerPay
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextMonthlyInstallment.TextChanged, TextTotalDebt.TextChanged
+=======
+    Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextMonthlyInstallment.TextChanged, TextTotalDebt.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim p As String
         If myds.Tables("LoansPa").Compute("Count(Loa1)", "Loa7 ='" & Me.TextMonthlyInstallment.Text.Trim.ToLower & "'").ToString > 0 Then
@@ -380,14 +430,23 @@ Public Class CustomerPay
     End Sub
 
     Private Sub SumAmount()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim SUM1 As Double
         Dim SUM2 As Double
         Dim strsql As New SqlCommand("SELECT Sum(Loa6) FROM LoansPa WHERE Lo ='" & Me.TextDebtNumber.Text & "'", Consum)
         Dim ds2 As New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(strsql)
+=======
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Adp.Fill(ds2)
         If ds2.Tables(0).Rows.Count > 0 Then
@@ -404,10 +463,17 @@ Public Class CustomerPay
 
     Private Sub InternalAuditorBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT sum(Loa6)  FROM LoansPa  WHERE LoansPa.Lo='" & Me.TextDebtNumber.Text & "'AND LoansPa.Loa1 <'" & Me.TextDocumentNumber1.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT sum(Loa6)  FROM LoansPa  WHERE LoansPa.Lo='" & Me.TextDebtNumber.Text & "'AND LoansPa.Loa1 <'" & Me.TextDocumentNumber1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "LoansPa")
         If ds.Tables(0).Rows.Count > 0 Then
@@ -419,7 +485,11 @@ Public Class CustomerPay
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub CmdSave_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdSave.Click
+=======
+    Private Sub CmdSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdSave.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -452,12 +522,20 @@ Public Class CustomerPay
         Me.TEXTUserName.Text = USERNAME
         Me.TEXTAddDate.Text = ServerDateTime.ToString("yyyy-MM-dd")
         Me.TextTimeAdd.Text = ServerDateTime.ToString("hh:mm:ss tt")
+<<<<<<< HEAD
         ButtonViewrestrictions.PerformClick()
+=======
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Me.Cursor = Cursors.WaitCursor
         Me.PictureBox2.Visible = True
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -466,12 +544,20 @@ Public Class CustomerPay
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub CmdCancel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdCancel.Click
+=======
+    Private Sub CmdCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdCancel.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.CancelEdit()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextMonthlyInstallment.TextChanged
+=======
+    Private Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextMonthlyInstallment.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Dim x As Double = Val(Me.TextBox8.Text)
         'Me.TextBox8.Text = Format(Val(x) - Val(Me.TextBox3.Text), "0.000")
@@ -481,7 +567,11 @@ Public Class CustomerPay
         'Me.InternalAuditorBalance()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTBOX4_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextDocumentNumber.KeyPress
+=======
+    Private Sub TEXTBOX4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextDocumentNumber.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -495,7 +585,11 @@ Public Class CustomerPay
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTBOX3_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextMonthlyInstallment.KeyPress
+=======
+    Private Sub TEXTBOX3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextMonthlyInstallment.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -509,7 +603,11 @@ Public Class CustomerPay
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles DatePayment.KeyPress
+=======
+    Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DatePayment.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -523,8 +621,15 @@ Public Class CustomerPay
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
         On Error Resume Next
+=======
+    Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+        On Error Resume Next
+        Dim HeightInInch As Double
+        HeightInInch = (phieght * 0.24096) + 0.90921
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -534,6 +639,7 @@ Public Class CustomerPay
             MsgBox("⁄›Ê« .. ﬁ«„ «·√œ„‰ »„‰⁄ Œ«’Ì… „⁄«Ì‰… «Ê ÿ»«⁄… «·”Ã·«  „‰ «·»—‰«„Ã", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
 
         Dim rpt As New rptcashA
         Dim F As New FrmPRINT
@@ -569,21 +675,76 @@ Public Class CustomerPay
             Exit Sub
         End If
         If Consum.State = ConnectionState.Open Then Consum.Close()
+=======
+        Dim rpt As New rptcashA
+            Dim F As New FrmPRINT
+            Dim txt As TextObject
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
+            Dim ds As New DataSet
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM LoansPa  WHERE (LoansPa.LO) ='" & Me.TextDebtNumber.Text & "' AND Loa=" & Me.TextContractNumber.Text, Consum)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+            ds.Clear()
+            SqlDataAdapter1.Fill(ds, "LoansPa")
+            If ds.Tables(0).Rows.Count > 0 Then
+                rpt.SetDataSource(ds)
+                txt = rpt.Section1.ReportObjects("TEXT2")
+                txt = rpt.Section1.ReportObjects("TEXT7")
+                txt.Text = AssociationName
+                txt = rpt.Section1.ReportObjects("TEXT42")
+                txt.Text = Character
+
+                txt = rpt.Section1.ReportObjects("TEXT9")
+                txt.Text = Directorate
+                txt = rpt.Section1.ReportObjects("TEXT44")
+                txt.Text = Recorded
+                txt = rpt.Section1.ReportObjects("TEXT40")
+            txt.Text = "«·⁄‰Ê«‰" & " " & ":" & " " & Adrss & " " & "|" & " " & "Â« ›" & " " & ":" & " " & Phone & " " & "|" & " " & "Â« ›" & " " & ":" & " " & Phone1
+            txt = rpt.Section1.ReportObjects("TEXT18")
+            txt.Text = AssociationName
+            txt = rpt.Section1.ReportObjects("TEXT6")
+            txt.Text = Character
+
+            txt = rpt.Section1.ReportObjects("TEXT19")
+            txt.Text = Directorate
+            txt = rpt.Section1.ReportObjects("Text49")
+            txt.Text = Recorded
+            txt = rpt.Section1.ReportObjects("Text45")
+            txt.Text = "«·⁄‰Ê«‰" & " " & ":" & " " & Adrss & " " & "|" & " " & "Â« ›" & " " & ":" & " " & Phone & " " & "|" & " " & "Â« ›" & " " & ":" & " " & Phone1
+            F.CrystalReportViewer1.ReportSource = rpt
+                F.CrystalReportViewer1.Zoom(90%)
+                F.CrystalReportViewer1.Refresh()
+                F.Show()
+            Else
+                MessageBox.Show("·« ÊÃœ »Ì«‰«  Õ«·Ì… ··ÿ»«⁄…", "ÿ»«⁄…", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading)
+                Exit Sub
+            End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Catch ex As Exception
         '    MessageBox.Show(ex.Message & ex.Source)
         'End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub CustomerPay_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
+=======
+    Private Sub CustomerPay_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Consum.Close()
     End Sub
 
     Private Sub DELETEDATAempsolf()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As String = "DELETE FROM CASHIER  WHERE CSH4 = '" & Me.TextMovementSymbol.Text.ToString & "'"
             Dim cmd As New SqlCommand(sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As String = "DELETE FROM CASHIER  WHERE CSH4 = '" & Me.TextMovementSymbol.Text.ToString & "'"
+            Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             cmd.ExecuteNonQuery()
@@ -604,9 +765,15 @@ Public Class CustomerPay
 
     Private Sub UPDATELoans()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" UPDATE  LoansPa SET  Loa14 = @Loa14  WHERE Loa1 = '" & TextDocumentNumber1.Text & "'", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" UPDATE  LoansPa SET  Loa14 = @Loa14  WHERE Loa1 = '" & TextDocumentNumber1.Text & "'", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -670,7 +837,11 @@ Public Class CustomerPay
 
     Private Sub DELETEDATMOVESDATA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             MYDELETERECORD("MOVES", "MOV2", Me.TextMovementRestrictions, Me.BS, True)
@@ -682,7 +853,11 @@ Public Class CustomerPay
 
     Private Sub DELETEDATMOVESDATA1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             MYDELETERECORD("MOVESDATA", "MOV2", Me.MOVESFalseDELET, Me.BS, True)
@@ -832,7 +1007,11 @@ Public Class CustomerPay
 
 
 
+<<<<<<< HEAD
     Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonUpdateA.Click
+=======
+    Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonUpdateA.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -841,7 +1020,11 @@ Public Class CustomerPay
             Me.Cursor = Cursors.WaitCursor
             Me.TextCustomerNumber.Clear()
             Me.PictureBox2.Visible = True
+<<<<<<< HEAD
             Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -852,9 +1035,15 @@ Public Class CustomerPay
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ButtonViewrestrictions_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewrestrictions.Click
         SEARCHDATA.Account_Name = SEARCHDATA.Account_Name
         SEARCHDATA.MaxIDMoves()
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewrestrictions.Click
+        SEARCHDATA.account_name = SEARCHDATA.account_name
+        SEARCHDATA.MAXIDMOVES()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         SEARCHDATA.SEARCHMOVESFalse(Me.TextMovementSymbol.Text)
         Me.TextMovementRestrictions.Text = SEARCHDATA.MOV1C
@@ -865,6 +1054,7 @@ Public Class CustomerPay
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCB1.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -872,6 +1062,15 @@ Public Class CustomerPay
         Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCB1.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -897,9 +1096,15 @@ Public Class CustomerPay
 
     Private Sub FundBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim N As Double
         Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim N As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         N = cmd1.ExecuteScalar

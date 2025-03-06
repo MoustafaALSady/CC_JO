@@ -89,7 +89,11 @@ Public Class FormScan
         FillcombByScanners()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Threading.Thread.Sleep(100)
         MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
         If Not IO.Directory.Exists(MYFOLDER & "\FailImag") Then Directory.CreateDirectory(MYFOLDER & "\FolderImageName")
@@ -200,7 +204,11 @@ Public Class FormScan
     Shared Function GetFileDescription(ByVal filePath As String) As String
         Dim regKey As RegistryKey = Nothing
         Try
+<<<<<<< HEAD
             regKey = Registry.ClassesRoot.OpenSubKey(New FileInfo(filePath).Extension)
+=======
+            regKey = Registry.ClassesRoot.OpenSubKey(New System.IO.FileInfo(filePath).Extension)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If regKey IsNot Nothing Then
                 Dim className As String = regKey.GetValue("")
                 If className.Length > 0 Then
@@ -418,13 +426,21 @@ Public Class FormScan
     End Sub
 
     Private Sub Pb1_MouseDown(ByVal sender As Object,
+<<<<<<< HEAD
         ByVal e As MouseEventArgs) _
+=======
+        ByVal e As System.Windows.Forms.MouseEventArgs) _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          Handles PictureBox1.MouseDown
         'Capture the initial point 
         m_PanStartPoint = New Point(e.X, e.Y)
     End Sub
     Private Sub Pb1_MouseMove(ByVal sender As Object,
+<<<<<<< HEAD
         ByVal e As MouseEventArgs) _
+=======
+        ByVal e As System.Windows.Forms.MouseEventArgs) _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Handles PictureBox1.MouseMove
         'Verify Left Button is pressed while the mouse is moving
         If e.Button = Windows.Forms.MouseButtons.Left Then
@@ -436,7 +452,11 @@ Public Class FormScan
             'Then we set the new autoscroll position.
             'ALWAYS pass positive integers to the panels autoScrollPosition method
             PanelImage.AutoScrollPosition =
+<<<<<<< HEAD
             New Point(DeltaX - PanelImage.AutoScrollPosition.X,
+=======
+            New Drawing.Point(DeltaX - PanelImage.AutoScrollPosition.X,
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             DeltaY - PanelImage.AutoScrollPosition.Y)
         End If
 

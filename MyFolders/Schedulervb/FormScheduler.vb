@@ -24,7 +24,11 @@ Public Class FormScheduler
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'SplashScreenManager.ShowForm(Me, GetType(WaitForm), True, True, False)
 
     End Sub
@@ -61,7 +65,11 @@ Public Class FormScheduler
 
 
     Private Sub SchedulerControl1_EditAppointmentFormShowing_1(sender As Object, e As AppointmentFormEventArgs) Handles SchedulerControl1.EditAppointmentFormShowing
+<<<<<<< HEAD
         Dim scheduler As SchedulerControl = CType(sender, SchedulerControl)
+=======
+        Dim scheduler As DevExpress.XtraScheduler.SchedulerControl = CType(sender, DevExpress.XtraScheduler.SchedulerControl)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim form As New OutlookAppointmentForm(scheduler, e.Appointment, e.OpenRecurrenceForm)
         Try
             e.DialogResult = form.ShowDialog

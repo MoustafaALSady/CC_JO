@@ -2,12 +2,20 @@
 
 Imports System.Data.SqlClient
 Imports System.Threading
+<<<<<<< HEAD
 Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class FinaBalances2
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+
+Public Class FinaBalances2
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
     Private Delegate Sub checkstatusDel()
     Public Delegate Sub PictureBox2Callback()
@@ -17,10 +25,17 @@ Public Class FinaBalances2
     ReadOnly dt2 As New DataTable()
     ReadOnly Cancelled As Boolean
 
+<<<<<<< HEAD
     Private Sub Finabalances2_HandleCreated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.HandleCreated
         'R.Container = Me
     End Sub
     Private Sub Finabalances2_Resize(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Resize
+=======
+    Private Sub Finabalances2_HandleCreated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.HandleCreated
+        'R.Container = Me
+    End Sub
+    Private Sub Finabalances2_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Resize
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'R.ResizeControls()
     End Sub
     Private Sub BackWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackWorker1.DoWork
@@ -28,12 +43,20 @@ Public Class FinaBalances2
             Me.CircularProgress1.Value = 0
             Me.CircularProgress1.Visible = True
             Me.CircularProgress1.IsRunning = True
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim str1 As New SqlCommand("", Consum)
             With str1
                 .CommandText = "SELECT account_no, account_name , SUMDEBIT, SUMCREDIT, ACC ,Finabalances  FROM Finabalances  WHERE Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'"
             End With
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.ds.Clear()
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -157,7 +180,11 @@ Public Class FinaBalances2
             '    MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & BS.Count - RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
             '    Exit Sub
             'End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -174,7 +201,11 @@ Public Class FinaBalances2
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Finabalances2_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Finabalances2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -188,7 +219,11 @@ Public Class FinaBalances2
         Me.BackWorker1.RunWorkerAsync()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+=======
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim I As Integer
         Me.PBar2.Value += 1
@@ -577,15 +612,24 @@ Public Class FinaBalances2
             Me.CircularProgress2.Visible = True
             Me.CircularProgress2.IsRunning = True
             Me.TabPage3.Show()
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim str2 As New SqlCommand("", Consum)
             With str2
                 .CommandText = "SELECT  TBNK1, TBNK6, TBNK19, TBNK119, TBNK20, TBNK21, OpeningBalance, OpeningBalance1, OpeningBalance2, CUser FROM ALLShares  WHERE Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'"
                 '.CommandText = "SELECT  * FROM ALLShares  WHERE Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'"
             End With
             Me.ds3 = New DataSet
+<<<<<<< HEAD
             Adp = New SqlDataAdapter(str2)
+=======
+            Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.ds3.Clear()
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -616,13 +660,22 @@ Public Class FinaBalances2
 
     Private Sub Sponsor()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT  account_no1,  account_name1, SUMDEBIT1, SUMCREDIT1, ACC1,Debits FROM Debits  WHERE Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "' and account_no1<>'23007'"
         End With
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds1 = New DataSet
         Me.ds1.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -643,14 +696,23 @@ Public Class FinaBalances2
     Private Sub Sponsor2()
         On Error Resume Next
         Me.TabPage2.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT * FROM SumCABLES  WHERE Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'and CAB7>'" & 0 & "'"
         End With
         Me.ds2 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds2.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -682,14 +744,23 @@ Public Class FinaBalances2
     Private Sub Sponsor4()
         On Error Resume Next
         Me.TabPage5.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT * FROM SumEMPSOLF  WHERE Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'and Sumcsh>'" & 0 & "'"
         End With
         Me.ds4 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds4.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -706,14 +777,23 @@ Public Class FinaBalances2
     Private Sub Sponsor5()
         On Error Resume Next
         Me.TabPage4.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT * FROM SumSuppliers  WHERE Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'and Sumcsh>'" & 0 & "'"
         End With
         Me.ds5 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds5.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -737,14 +817,23 @@ Public Class FinaBalances2
     Private Sub Sponsor6()
         On Error Resume Next
         Me.TabPage7.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT IDCH, CH1, CH3, CH4, CH5, CH6, CH12 FROM Checks1   WHERE CH17 ='" & False & "' and CUser='" & CUser & "'"
         End With
         Me.ds6 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds6.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -761,14 +850,23 @@ Public Class FinaBalances2
     Private Sub Sponsor7()
         On Error Resume Next
         Me.TabPage8.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT IDCH, CH1, CH3, CH5, CH6, CH12 FROM Checks2  WHERE CH17 ='" & False & "' and CUser='" & CUser & "'"
         End With
         Me.ds7 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds7.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -785,14 +883,23 @@ Public Class FinaBalances2
     Private Sub Sponsor8()
         On Error Resume Next
         Me.TabPage6.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT * FROM Stockwarehouse  WHERE Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'"
         End With
         Me.ds8 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds8.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -831,14 +938,23 @@ Public Class FinaBalances2
         On Error Resume Next
         TabControl1.Select()
         Me.TabPage11.Show()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str2 As New SqlCommand("", Consum)
         With str2
             .CommandText = "SELECT  Lo,Lo4,Lo5,Lo2,SUMcab5,SUMcab4,CAB7,OpeningBalance1 FROM CustomersCABLES2  WHERE Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CUser='" & CUser & "'"
         End With
         Me.ds9 = New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(str2)
+=======
+        Adp = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds9.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -939,7 +1055,11 @@ Public Class FinaBalances2
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView10_CurrentCellChanged(ByVal sender As Object, ByVal e As EventArgs)
+=======
+    Private Sub DataGridView10_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TextItemBalance.Text = 0
         Me.TextTotalCred.Text = 0
@@ -965,7 +1085,11 @@ Public Class FinaBalances2
         Next
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button2.Click
+=======
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -983,7 +1107,11 @@ Public Class FinaBalances2
         'Me.BackWorker2.RunWorkerAsync()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonFinalEntryFormation_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonFinalEntryFormation.Click
+=======
+    Private Sub ButtonFinalEntryFormation_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonFinalEntryFormation.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
@@ -1001,6 +1129,7 @@ Public Class FinaBalances2
 
         Dim f As New FinaBalances1
         f.Show()
+<<<<<<< HEAD
         Dim currentRowIndex As Integer = f.GridView1.FocusedRowHandle
         Dim value As Object = f.GridView1.GetRowCellValue(currentRowIndex, f.GridView1.Columns("ID"))
         'For Each r As DataGridViewRow In f.DataGridView1.Rows
@@ -1008,19 +1137,36 @@ Public Class FinaBalances2
             If value <> "" Then
                 If f.GridView1.RowCount > 0 Then
                     MsgBox("لايمكن اعتماد الموازنة الحالية يجب مراجعة و تدقيق جميع السجلات ... ", 16, "تنبيه")
+=======
+        For Each r As DataGridViewRow In f.DataGridView1.Rows
+            If r.Cells("IDNumber").Value <> "" Then
+                If f.DataGridView1.RowCount > 0 Then
+                    MsgBox("لايمكن ترحيل الحسابات الحالية يجب التخلص من الخطاء ... ", 16, "تنبيه")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Exit Sub
                 Else
                     f.Close()
                 End If
+<<<<<<< HEAD
             ElseIf value = "" Then
+=======
+            ElseIf r.Cells("IDNumber").Value = "" Then
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 '
             End If
         Next
         f.Close()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql1 As New SqlCommand("SELECT DISTINCT MOVD1 FROM Previouspost WHERE yearearlier = '" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim ds1 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT MOVD1 FROM Previouspost WHERE yearearlier = '" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim ds1 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1, "Previouspost")
         If ds1.Tables(0).Rows.Count > 0 Then
@@ -1029,7 +1175,11 @@ Public Class FinaBalances2
         End If
         Try
             Me.Labelstatus.Visible = True
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -1040,6 +1190,55 @@ Public Class FinaBalances2
         End Try
     End Sub
 
+<<<<<<< HEAD
+=======
+    Private Function MAXLoansA() As Object
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+
+        Dim Year As String
+        Dim NO As Integer = 0
+        Dim NO1 As Integer = 0
+        Year = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear() + 1), 3, 2)
+        NO1 = CType(Year, Integer) & String.Concat(New String() {CUser})
+        Dim cusera As Double = CDbl(CUser)
+        Select Case cusera
+            Case 1 To 9
+                NO = "000"
+            Case 10 To 99
+                NO = "00"
+            Case 100 To 999
+                NO = "0"
+            Case Else
+                NO = "0000"
+        End Select
+        NO1 = CType(Year, Integer) & String.Concat(New String() {NO}) & CType(CUser, Integer)
+
+
+        Dim cmd2 As New SqlClient.SqlCommand("SELECT MAX(Loans.LO) FROM Loans WHERE CUser = '" & CUser & " 'and Year(LO2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        Dim resualt2 As Object = cmd2.ExecuteScalar()
+        Dim noD As Object = Strings.Mid(cmd2.ExecuteScalar(), 7)
+        If IsDBNull(resualt2) Then
+            SEARCHDATA.MAXIDLoans = CType(NO1, Integer) & 1
+        Else
+            SEARCHDATA.MAXIDLoans = String.Concat(New String() {NO1}) & CType(noD, Integer) + 1
+        End If
+        'If IsDBNull(resualt) Then
+        '    MAXIDLoans = CType(NO1, Integer) & 1
+        'Else
+        '    MAXIDLoans = String.Concat(New String() {NO1}) & CType(noD, Integer) + 1
+        'End If
+
+
+
+
+        Consum.Close()
+
+    End Function
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub AddValue(ByVal i As Integer)
         PBar1.Value = i
         'PBar2.Value = i
@@ -1106,7 +1305,11 @@ Public Class FinaBalances2
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum1.Tick
+=======
+    Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim I As Integer
         Me.PBar2.Value += 1
@@ -1391,7 +1594,11 @@ Public Class FinaBalances2
         'INSERTRChecks()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button3.Click
+=======
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strFileName As String
         If Me.DataGridView1.RowCount <= 1 Then
             MessageBox.Show("الجدول فارغ من السجلات", " ملحوظة", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1434,10 +1641,17 @@ Public Class FinaBalances2
             Dim excel As New Microsoft.Office.Interop.Excel.Application
             Dim wBook As Microsoft.Office.Interop.Excel.Workbook
             Dim wSheet As Microsoft.Office.Interop.Excel.Worksheet
+<<<<<<< HEAD
             Dim newCulture As Globalization.CultureInfo
             Dim OldCulture As Globalization.CultureInfo
             OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
             newCulture = New Globalization.CultureInfo( _
+=======
+            Dim newCulture As System.Globalization.CultureInfo
+            Dim OldCulture As System.Globalization.CultureInfo
+            OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
+            newCulture = New System.Globalization.CultureInfo( _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 excel.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID.msoLanguageIDUI))
             System.Threading.Thread.CurrentThread.CurrentCulture = newCulture
             wBook = excel.Workbooks.Add()
@@ -1445,6 +1659,7 @@ Public Class FinaBalances2
             wSheet.Name = "الميزان العمومي"
             '==================================================================
 
+<<<<<<< HEAD
             Dim dt As DataTable = dset.Tables(0)
             Dim dc As DataColumn
             Dim dr As DataRow
@@ -1454,6 +1669,17 @@ Public Class FinaBalances2
             Dim dt1 As DataTable = dset1.Tables(0)
             Dim dc1 As DataColumn
             Dim dr3 As DataRow
+=======
+            Dim dt As System.Data.DataTable = dset.Tables(0)
+            Dim dc As System.Data.DataColumn
+            Dim dr As System.Data.DataRow
+            Dim colIndex As Integer = 0
+            Dim rowIndex As Integer = 0
+            '========================================================================
+            Dim dt1 As System.Data.DataTable = dset1.Tables(0)
+            Dim dc1 As System.Data.DataColumn
+            Dim dr3 As System.Data.DataRow
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim colIndex1 As Integer = 0
             Dim rowIndex1 As Integer = 0
             '========================================================================
@@ -1508,7 +1734,11 @@ Public Class FinaBalances2
                 End If
             End With
             Try
+<<<<<<< HEAD
                 Dim fileTemp As IO.FileStream = System.IO.File.OpenWrite(strFileName)
+=======
+                Dim fileTemp As System.IO.FileStream = System.IO.File.OpenWrite(strFileName)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 fileTemp.Close()
             Catch ex As Exception
                 blnFileOpen = False

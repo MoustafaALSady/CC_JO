@@ -306,7 +306,10 @@ Partial Class FormMeetings
         '
         'ComboApproval
         '
+<<<<<<< HEAD
         Me.ComboApproval.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboApproval.FormattingEnabled = True
         Me.ComboApproval.Items.AddRange(New Object() {"معتمد", "غير معتمد"})
         Me.ComboApproval.Location = New System.Drawing.Point(6, 98)
@@ -393,7 +396,10 @@ Partial Class FormMeetings
         '
         Me.ComboDeferred_notDeferred.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+<<<<<<< HEAD
         Me.ComboDeferred_notDeferred.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboDeferred_notDeferred.FormattingEnabled = True
         Me.ComboDeferred_notDeferred.Items.AddRange(New Object() {"مؤجل", "غير مؤجل"})
         Me.ComboDeferred_notDeferred.Location = New System.Drawing.Point(410, 79)
@@ -418,7 +424,10 @@ Partial Class FormMeetings
         '
         'ComboMeetingType
         '
+<<<<<<< HEAD
         Me.ComboMeetingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboMeetingType.FormattingEnabled = True
         Me.ComboMeetingType.Items.AddRange(New Object() {"عادي", "غير عادي"})
         Me.ComboMeetingType.Location = New System.Drawing.Point(6, 51)
@@ -624,7 +633,10 @@ Partial Class FormMeetings
         '
         Me.ComboAssociationName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+<<<<<<< HEAD
         Me.ComboAssociationName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboAssociationName.FormattingEnabled = True
         Me.ComboAssociationName.Location = New System.Drawing.Point(410, 6)
         Me.ComboAssociationName.Name = "ComboAssociationName"
@@ -673,7 +685,10 @@ Partial Class FormMeetings
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(900, 600)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormMeetings"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

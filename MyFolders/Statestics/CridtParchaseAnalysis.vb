@@ -2,9 +2,15 @@
 Imports System.Data.SqlClient
 Public Class CridtParchaseAnalysis
     Dim VTotal, VOther, VDiscount, VNet As Double
+<<<<<<< HEAD
     Dim Adp As New SqlDataAdapter
 
     Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Dim Adp As New SqlClient.SqlDataAdapter
+
+    Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             If Not IsDate(MTextBox1.Text) Then
                 MsgBox(" «—ÌŒ €Ì— ’«·Œ")
@@ -19,7 +25,11 @@ Public Class CridtParchaseAnalysis
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             FillGrid()
         End If
@@ -36,13 +46,21 @@ Public Class CridtParchaseAnalysis
         Dim ds As DataSet
         ds = New DataSet
         Dgrd.Rows.Clear()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Using strSQL As New SqlCommand("", Consum) With {
             .CommandText = "select BUY1, BUY3, BUY5, BUY14 from BUYS where deleted ='" & F & "' and TYPE_CASH ='" & F & "' and CUser='" & CUser & "' order by BUY1"
         }
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
+<<<<<<< HEAD
             Adp = New SqlDataAdapter(strSQL)
+=======
+            Adp = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         End Using
         Adp.Fill(ds, "BUYS")
         If Me.BindingContext(ds, "BUYS").Count = 0 Then
@@ -74,12 +92,20 @@ Public Class CridtParchaseAnalysis
         TEXTSalesTall.Text = VTotal
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdExit.Click
+=======
+    Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdExit.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dgrd.Rows.Clear()
         MTextBox1.Focus()
         Me.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CridtParchaseAnalysis_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub CridtParchaseAnalysis_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10

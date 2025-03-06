@@ -72,11 +72,19 @@ Partial Class FormPDFViewer
         'PdfViewer1
         '
         Me.PdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.PdfViewer1.Location = New System.Drawing.Point(0, 154)
         Me.PdfViewer1.MenuManager = Me.RibbonControl1
         Me.PdfViewer1.Name = "PdfViewer1"
         Me.PdfViewer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.PdfViewer1.Size = New System.Drawing.Size(819, 466)
+=======
+        Me.PdfViewer1.Location = New System.Drawing.Point(0, 161)
+        Me.PdfViewer1.MenuManager = Me.RibbonControl1
+        Me.PdfViewer1.Name = "PdfViewer1"
+        Me.PdfViewer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.PdfViewer1.Size = New System.Drawing.Size(819, 459)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PdfViewer1.TabIndex = 0
         '
         'RibbonControl1
@@ -89,7 +97,11 @@ Partial Class FormPDFViewer
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.PdfRibbonPage1, Me.PdfCommentRibbonPage1, Me.PdfFormDataRibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemPageNumberEdit1})
         Me.RibbonControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.RibbonControl1.Size = New System.Drawing.Size(819, 154)
+=======
+        Me.RibbonControl1.Size = New System.Drawing.Size(819, 161)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'PdfFileOpenBarItem1
         '
@@ -372,7 +384,10 @@ Partial Class FormPDFViewer
         Me.Controls.Add(Me.RibbonControl1)
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO5
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(800, 600)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormPDFViewer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "عارض ملفات _ PDF"

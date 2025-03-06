@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Imports System.ComponentModel
 Imports DevExpress.Utils.Win
 Imports DevExpress.XtraEditors
@@ -86,5 +87,11 @@ Public Class Calculatorform
         CalcEdit1.ShowPopup()
     End Sub
 
+=======
+﻿Public Class Calculatorform
+    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 End Class

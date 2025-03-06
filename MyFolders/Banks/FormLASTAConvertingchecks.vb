@@ -2,7 +2,11 @@
 
 Imports System.Data.SqlClient
 Public Class FormLASTAConvertingchecks
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Public SqlDataAdapter1 As SqlDataAdapter
     ReadOnly ds As New DataSet
@@ -20,7 +24,11 @@ Public Class FormLASTAConvertingchecks
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormLASTAConvertingchecks_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormLASTAConvertingchecks_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
@@ -28,7 +36,11 @@ Public Class FormLASTAConvertingchecks
             Me.Opacity = a / 10
         Next
         Me.DataGridView1.AutoGenerateColumns = False
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             Dim F As Boolean
@@ -93,16 +105,28 @@ Public Class FormLASTAConvertingchecks
             .AutoGenerateColumns = False
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim ds As New DataSet
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Dim ds As New DataSet
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmChecks
         Try
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT IDCH FROM Checks WHERE   CUser='" & CUser & "' and Year(CH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY IDCH", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+            Dim builder33 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "Checks")
             f.BS.DataMember = "Checks"

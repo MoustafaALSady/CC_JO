@@ -218,10 +218,17 @@ Partial Class FrmSendEMail
         Me.Panel1.Controls.Add(Me.LabelField11)
         Me.Panel1.Controls.Add(Me.LabelField10)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.Panel1.Location = New System.Drawing.Point(0, 162)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(891, 427)
+=======
+        Me.Panel1.Location = New System.Drawing.Point(0, 157)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(891, 432)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 1
         '
         'PanelRichEdit
@@ -235,7 +242,11 @@ Partial Class FrmSendEMail
         Me.PanelRichEdit.Location = New System.Drawing.Point(252, 88)
         Me.PanelRichEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelRichEdit.Name = "PanelRichEdit"
+<<<<<<< HEAD
         Me.PanelRichEdit.Size = New System.Drawing.Size(637, 180)
+=======
+        Me.PanelRichEdit.Size = New System.Drawing.Size(637, 185)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PanelRichEdit.TabIndex = 734
         '
         'RichEditControl1
@@ -247,7 +258,11 @@ Partial Class FrmSendEMail
         Me.RichEditControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.RichEditControl1.MenuManager = Me.RibbonControl1
         Me.RichEditControl1.Name = "RichEditControl1"
+<<<<<<< HEAD
         Me.RichEditControl1.Size = New System.Drawing.Size(635, 178)
+=======
+        Me.RichEditControl1.Size = New System.Drawing.Size(635, 183)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RichEditControl1.TabIndex = 730
         '
         'RibbonControl1
@@ -262,7 +277,11 @@ Partial Class FrmSendEMail
         Me.RibbonControl1.OptionsMenuMinWidth = 257
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.FileRibbonPage1, Me.HomeRibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemFontEdit1, Me.RepositoryItemRichEditFontSizeEdit1})
+<<<<<<< HEAD
         Me.RibbonControl1.Size = New System.Drawing.Size(891, 162)
+=======
+        Me.RibbonControl1.Size = New System.Drawing.Size(891, 157)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'UndoItem1
         '
@@ -817,7 +836,11 @@ Partial Class FrmSendEMail
         Me.PanelAttached.Controls.Add(Me.LinkLabelAttached1)
         Me.PanelAttached.Controls.Add(Me.LinkLabelAttached2)
         Me.PanelAttached.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.PanelAttached.Location = New System.Drawing.Point(252, 272)
+=======
+        Me.PanelAttached.Location = New System.Drawing.Point(252, 277)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PanelAttached.Margin = New System.Windows.Forms.Padding(2)
         Me.PanelAttached.Name = "PanelAttached"
         Me.PanelAttached.Size = New System.Drawing.Size(637, 74)
@@ -1229,7 +1252,11 @@ Partial Class FrmSendEMail
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
+<<<<<<< HEAD
         Me.Panel3.Size = New System.Drawing.Size(248, 346)
+=======
+        Me.Panel3.Size = New System.Drawing.Size(248, 351)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 729
         '
         'TextMovementHistory
@@ -1246,7 +1273,11 @@ Partial Class FrmSendEMail
         Me.TextMovementHistory.Location = New System.Drawing.Point(2, 225)
         Me.TextMovementHistory.Margin = New System.Windows.Forms.Padding(2)
         Me.TextMovementHistory.Name = "TextMovementHistory"
+<<<<<<< HEAD
         Me.TextMovementHistory.Size = New System.Drawing.Size(243, 117)
+=======
+        Me.TextMovementHistory.Size = New System.Drawing.Size(243, 122)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextMovementHistory.TabIndex = 534
         Me.TextMovementHistory.Text = ""
         '
@@ -1382,7 +1413,11 @@ Partial Class FrmSendEMail
         Me.Panel7.Controls.Add(Me.EDITBUTTON)
         Me.Panel7.Controls.Add(Me.SAVEBUTTON)
         Me.Panel7.Controls.Add(Me.ADDBUTTON)
+<<<<<<< HEAD
         Me.Panel7.Location = New System.Drawing.Point(3, 350)
+=======
+        Me.Panel7.Location = New System.Drawing.Point(3, 355)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel7.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(886, 72)
@@ -1795,7 +1830,10 @@ Partial Class FrmSendEMail
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO6
         Me.KeyPreview = True
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(893, 590)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmSendEMail"
         Me.Ribbon = Me.RibbonControl1
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes

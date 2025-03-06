@@ -46,7 +46,11 @@ Public Class Form_beea
     ReadOnly pagingAdapter As SqlDataAdapter
     ReadOnly pagingDS As DataSet
     ReadOnly scrollVal As Integer
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim Tax As Boolean
     Dim Tax1 As Boolean
     Dim Tax2 As String
@@ -68,6 +72,7 @@ Public Class Form_beea
     Dim Discount As Double = 0
     Dim ChkPD As Boolean = False
 
+<<<<<<< HEAD
 
     Dim ItemBalance As Double = 0.0
     Dim PreviousBalance As Double = 0.0
@@ -76,6 +81,9 @@ Public Class Form_beea
     Dim SellingPrice As Double = 0.0
 
     Private Sub Form_beea_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub Form_beea_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -110,6 +118,7 @@ Public Class Form_beea
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
 
     Private Sub Form_beea_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         On Error Resume Next
@@ -119,6 +128,16 @@ Public Class Form_beea
         '    Application.DoEvents()
         '    Me.Opacity = a / 10
         'Next
+=======
+    Private Sub Form_beea_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Me.BackgroundImage = ModuleGeneral.img
+        For a As Byte = 0 To 10
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+            Me.Opacity = a / 10
+        Next
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Call MangUsers()
         If LockAddRow = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية اضافة وتعديل السجلات من البرنامج", 16, "تنبيه")
@@ -134,7 +153,10 @@ Public Class Form_beea
             Me.ComboCB1.SelectedIndex = 0
         End If
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub SHOWBUTTON()
         On Error Resume Next
         Me.Bufind.Enabled = LockPrint
@@ -146,7 +168,11 @@ Public Class Form_beea
         Me.ButtonNew.Enabled = LockAddRow
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonSaveAndPrint_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSaveAndPrint.Click
+=======
+    Private Sub ButtonSaveAndPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSaveAndPrint.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
@@ -178,7 +204,11 @@ Public Class Form_beea
         GetAutoNumber("TS9", "TodaySales", "DataTS")
         Me.TEXTInvoiceNumber.Text = AutoNumber
         Me.TextMovementSymbol.Text = "QR" & TEXTInvoiceNumber.Text
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         Me.Temi.Text = dt1.ToString("hh:mm:ss tt")
         Me.Tedate.Text = MaxDate.ToString("yyyy-MM-dd")
@@ -303,10 +333,16 @@ Public Class Form_beea
             'Exit Sub
         End Try
     End Sub
+<<<<<<< HEAD
 
     Private Sub List0_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles List0.SelectedIndexChanged
         Try
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub List0_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles List0.SelectedIndexChanged
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -395,21 +431,35 @@ Public Class Form_beea
             MsgBox(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
 
     Public Function SearchBalancEitems() As Int64
         On Error Resume Next
         Dim Consum As New SqlConnection(constring)
         Dim idSTK As Double
         Dim cmd1 As New SqlCommand("SELECT MAX(STK1) FROM STOCKS", Consum)
+=======
+    Public Function SearchBalancEitems()
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim idSTK As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(STK1) FROM STOCKS", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then
             Consum.Close()
         End If
         Consum.Open()
         idSTK = cmd1.ExecuteScalar
         Consum.Close()
+<<<<<<< HEAD
         Dim strsq1 As New SqlCommand("SELECT Sum(STOCKS.STK11) AS SumIMPORTQUANTITY,Sum(STOCKS.STK12) AS SumEXPORTQUNATITY FROM STOCKS  WHERE  STK7 ='" & num.ToString.Trim & "'" & "or STK25 ='" & cod1.ToString.Trim & "'" & " and CUser='" & CUser & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(STOCKS.STK11) AS SumIMPORTQUANTITY,Sum(STOCKS.STK12) AS SumEXPORTQUNATITY FROM STOCKS  WHERE  STK7 ='" & num.ToString.Trim & "'" & "or STK25 ='" & cod1.ToString.Trim & "'" & " and CUser='" & CUser & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "STOCKS")
         Dim tota4 As Double
@@ -430,7 +480,11 @@ Public Class Form_beea
         Consum.Close()
     End Function
 
+<<<<<<< HEAD
     Private Sub Buadd_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAddCategory.Click
+=======
+    Private Sub Buadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAddCategory.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Textadd.Text.Trim = "" Or Me.Textadd.Text.Trim = "0" Then
             MsgBox("كم عدد الصنف  ", MsgBoxStyle.Critical, "تنبيه")
@@ -574,13 +628,21 @@ Public Class Form_beea
                             row1.Cells(6).Value = Val(rsum)
                             row1.Cells(7).Value = Val(wsum1)
                             row1.Cells(8).Value = Val(Discount)
+<<<<<<< HEAD
                             Dim Sound As Stream = My.Resources.BarCode
+=======
+                            Dim Sound As System.IO.Stream = My.Resources.BarCode
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             My.Computer.Audio.Play(Sound, AudioPlayMode.Background)
                         End If
                     Next
                 Else
                     Me.Datab.Rows.Add(New String() {Me.Tax2.ToString, naem, Me.Textadd.Text, Val(w1), Me.TextDiscountPercentageWhenSelling.Text, sum2.ToString, rsum.ToString, wsum1.ToString, Val(Discount)})
+<<<<<<< HEAD
                     Dim Sound As Stream = My.Resources.BarCode
+=======
+                    Dim Sound As System.IO.Stream = My.Resources.BarCode
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     My.Computer.Audio.Play(Sound, AudioPlayMode.Background)
                 End If
             Else
@@ -603,7 +665,11 @@ Public Class Form_beea
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Bude_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Buttondelete.Click
+=======
+    Private Sub Bude_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buttondelete.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If LockDelete = False Then
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
@@ -626,16 +692,27 @@ Public Class Form_beea
             MsgBox(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Bupl_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Bupl.Click
         Me.Textadd.Text += 1
     End Sub
     Private Sub Bum_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Bum.Click
+=======
+    Private Sub Bupl_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bupl.Click
+        Me.Textadd.Text += 1
+    End Sub
+    Private Sub Bum_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bum.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.Textadd.Text.Trim = 0 Then
             Exit Sub
         End If
         Me.Textadd.Text -= 1
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum.Tick
+=======
+    Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ButtonAddCategory.TabStop = False
         Dim total As Double
@@ -679,7 +756,11 @@ Public Class Form_beea
         Next
 
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum1.Tick
+=======
+    Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Datab.Rows(0).Selected = True
         Me.List0.ClearSelected()
@@ -723,10 +804,17 @@ Public Class Form_beea
     End Sub
     Private Sub SEARCHDATAITEMS1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql1 As New SqlCommand("SELECT DISTINCT STK1 FROM STOCKS WHERE STK7 = '" & Me.Datab.CurrentRow.Cells(0).Value & "'" & "AND STK16 = '" & Me.TextMovementSymbol.Text & "'", Consum)
         Dim ds1 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT STK1 FROM STOCKS WHERE STK7 = '" & Me.Datab.CurrentRow.Cells(0).Value & "'" & "AND STK16 = '" & Me.TextMovementSymbol.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1, "STOCKS")
         If ds1.Tables(0).Rows.Count > 0 Then
@@ -736,7 +824,11 @@ Public Class Form_beea
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub TextB1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub TextB1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Char.IsControl(e.KeyChar) = False Then
             If Char.IsDigit(e.KeyChar) Then
             Else
@@ -744,7 +836,11 @@ Public Class Form_beea
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub T1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TexTSellingPrice.KeyPress
+=======
+    Private Sub T1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TexTSellingPrice.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Char.IsControl(e.KeyChar) = False Then
             If Char.IsDigit(e.KeyChar) Then
             Else
@@ -752,14 +848,22 @@ Public Class Form_beea
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Textadd_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Textadd.KeyDown
+=======
+    Private Sub Textadd_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Textadd.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.KeyCode = Keys.Enter Then
             Me.Buadd_Click(sender, e)
         ElseIf e.KeyCode = Keys.End Then
             Me.ButtonSaveAndPrint_Click(sender, e)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Textadd_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Textadd.KeyPress
+=======
+    Private Sub Textadd_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Textadd.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Char.IsControl(e.KeyChar) = False Then
             If Char.IsDigit(e.KeyChar) Then
             Else
@@ -771,7 +875,11 @@ Public Class Form_beea
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Datab_CellMouseDoubleClick(ByVal sender As System.Object, ByVal e As DataGridViewCellMouseEventArgs) Handles Datab.CellMouseDoubleClick
+=======
+    Private Sub Datab_CellMouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles Datab.CellMouseDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Datab.SelectedRows.Count > 0 Then
                 For i As Integer = Datab.SelectedRows.Count - 1 To 0
@@ -785,7 +893,11 @@ Public Class Form_beea
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub Form_beea_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+=======
+    Private Sub Form_beea_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.KeyCode = Keys.F12 Then
             If TextpaidUp.Text.Trim = "0" Or TextpaidUp.Text.Trim = "" Then
                 MsgBox("لا يمكن الحفظ المدفوع لا شيء = 0" & Environment.NewLine, MsgBoxStyle.Critical, "تنبيه")
@@ -814,16 +926,27 @@ Public Class Form_beea
             Me.Close()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Buadd_KeyUp(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles ButtonAddCategory.KeyUp
+=======
+    Private Sub Buadd_KeyUp(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonAddCategory.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         TextItemCount.Focus()
         If e.KeyCode = Keys.Enter Then
             TextItemCount.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Buadd_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles ButtonAddCategory.KeyDown
         TextItemCount.Focus()
     End Sub
     Private Sub Buadd_Enter(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAddCategory.Enter
+=======
+    Private Sub Buadd_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ButtonAddCategory.KeyDown
+        TextItemCount.Focus()
+    End Sub
+    Private Sub Buadd_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAddCategory.Enter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         TextItemCount.Focus()
     End Sub
     Private Sub TextB1_TextChanged(ByVal sender As Object, ByVal e As EventArgs)
@@ -959,7 +1082,10 @@ Public Class Form_beea
         '    e.Cancel = True
         'End If
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub Ch1_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs)
         Me.ButtonAddCategory.Enabled = True
         Me.Datab.Show()
@@ -982,6 +1108,11 @@ Public Class Form_beea
         Me.TextItemBalanceA.Text = ""
     End Sub
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub Buttaleek_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ButtonInvoiceComment.Click
         If LockUpdate = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية تعديل السجلات من البرنامج", 16, "تنبيه")
@@ -989,7 +1120,11 @@ Public Class Form_beea
         End If
 
         Dim deleteok As String = MsgBox("هل ترغب بتعليق الفاتورة الحالية النشطه ", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "تأكيد عملية التعليق")
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If deleteok = vbYes Then
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
@@ -1070,7 +1205,11 @@ Public Class Form_beea
 
     Private Sub Timer_send_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer_send.Tick
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -1192,7 +1331,11 @@ Public Class Form_beea
     End Sub
     Private Sub Timer_sendmail_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer_sendmail.Tick
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -1291,7 +1434,11 @@ Public Class Form_beea
                     Dim SMTPServer As New SmtpClient("smtp.gmail.com") With {
                         .Port = 587,
                         .Host = "smtp.gmail.com",
+<<<<<<< HEAD
                         .Credentials = New NetworkCredential(SEN6, SEN7),
+=======
+                        .Credentials = New System.Net.NetworkCredential(SEN6, SEN7),
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .EnableSsl = True
                     }
                     SMTPServer.Send(MyMailMessage)
@@ -1362,7 +1509,11 @@ Public Class Form_beea
     Private Sub Timer_send2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer_send2.Tick
         Try
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -1499,7 +1650,11 @@ Public Class Form_beea
     End Sub
     Private Sub Timer_sendmail2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer_sendmail2.Tick
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -1593,7 +1748,11 @@ Public Class Form_beea
                     Dim SMTPServer As New SmtpClient("smtp.gmail.com") With {
                         .Port = 587,
                         .Host = "smtp.gmail.com",
+<<<<<<< HEAD
                         .Credentials = New NetworkCredential(SEN6, SEN7),
+=======
+                        .Credentials = New System.Net.NetworkCredential(SEN6, SEN7),
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .EnableSsl = True
                     }
                     SMTPServer.Send(MyMailMessage)
@@ -1640,6 +1799,7 @@ Public Class Form_beea
 
     Private Sub SaveStocks()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             GetAutoIDSTK()
             ItemBalance = Convert.ToDouble(Me.Datab.Item("Co4", Me.Datab.CurrentRow.Index).Value)
@@ -1650,6 +1810,12 @@ Public Class Form_beea
 
             Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
             Dim CMD As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            GetAutoIDSTK()
+            Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+            Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             CMD.Parameters.AddWithValue("@STK1", IDSTK)
             CMD.Parameters.AddWithValue("@WarehouseNumber", ComboStore.Text)
             CMD.Parameters.AddWithValue("@WarehouseName", TextWarehouseName.Text)
@@ -1660,10 +1826,17 @@ Public Class Form_beea
             CMD.Parameters.AddWithValue("@STK7", Datab.Item("Co0", Datab.CurrentRow.Index).Value)
             CMD.Parameters.AddWithValue("@STK8", TextSTK8.Text)
             CMD.Parameters.AddWithValue("@STK9", TextHashUnit.Text)
+<<<<<<< HEAD
             CMD.Parameters.AddWithValue("@STK10", PreviousBalance)
             CMD.Parameters.AddWithValue("@STK11", 0)
             CMD.Parameters.AddWithValue("@STK12", Datab.Item("Co4", Datab.CurrentRow.Index).Value)
             CMD.Parameters.AddWithValue("@STK13", CurrentBalance)
+=======
+            CMD.Parameters.AddWithValue("@STK10", Format(Val(SumAmounTOTALSTOCKS(Tax2.ToString.Trim, IDSTK)), "0.000"))
+            CMD.Parameters.AddWithValue("@STK11", 0)
+            CMD.Parameters.AddWithValue("@STK12", Datab.Item("Co4", Datab.CurrentRow.Index).Value)
+            CMD.Parameters.AddWithValue("@STK13", Format(Val(SumAmounTOTALSTOCKS(Tax2.ToString.Trim, IDSTK)), "0.000") - Datab.Item("Co4", Datab.CurrentRow.Index).Value)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             CMD.Parameters.AddWithValue("@STK14", TEXTOrderLimit.Text)
             CMD.Parameters.AddWithValue("@STK15", TextPurchasingPrice.Text)
             CMD.Parameters.AddWithValue("@STK16", TextMovementSymbol.Text)
@@ -1693,6 +1866,7 @@ Public Class Form_beea
         End Try
     End Sub
 
+<<<<<<< HEAD
 
     Private Sub SEARCHDATAITEMS()
         Try
@@ -1701,6 +1875,15 @@ Public Class Form_beea
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
                 Dim cmdDX As New SqlCommand("SELECT * FROM FIFOStocks WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+=======
+    Private Sub SEARCHDATAITEMS()
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If FIFO = True Then
+                If Consum.State = ConnectionState.Open Then Consum.Close()
+                Consum.Open()
+                Dim cmdDX As New SqlClient.SqlCommand("SELECT * FROM FIFOStocks WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim drDX As SqlDataReader = cmdDX.ExecuteReader
                 If drDX.Read = True Then
                     TextSTK8.Text = drDX.Item("STK8")
@@ -1729,7 +1912,11 @@ Public Class Form_beea
             If LIFO = True Then
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
+<<<<<<< HEAD
                 Dim cmdDX As New SqlCommand("SELECT * FROM LIFOStock WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+=======
+                Dim cmdDX As New SqlClient.SqlCommand("SELECT * FROM LIFOStock WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim drDX As SqlDataReader = cmdDX.ExecuteReader
                 If drDX.Read = True Then
                     TextSTK8.Text = drDX.Item("STK8")
@@ -1756,7 +1943,11 @@ Public Class Form_beea
             If AVG = True Then
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
+<<<<<<< HEAD
                 Dim cmdDX As New SqlCommand("SELECT * FROM AvgStocks WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+=======
+                Dim cmdDX As New SqlClient.SqlCommand("SELECT * FROM AvgStocks WHERE STK25='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim drDX As SqlDataReader = cmdDX.ExecuteReader
                 If drDX.Read = True Then
                     TextSTK8.Text = drDX.Item("STK8")
@@ -1786,7 +1977,10 @@ Public Class Form_beea
             MsgBox(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub Dgv2()
         On Error Resume Next
         DataGridView2.Columns(0).Visible = False
@@ -1852,7 +2046,11 @@ Public Class Form_beea
         ''''''''''''''''''''
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextBarCode_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextBarCode.KeyPress
+=======
+    Private Sub TextBarCode_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBarCode.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Char.IsControl(e.KeyChar) = False Then
             If Char.IsDigit(e.KeyChar) Then
             Else
@@ -1873,16 +2071,26 @@ Public Class Form_beea
 
         'End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBarCode_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextBarCode.TextChanged
         On Error Resume Next
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub TextBarCode_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBarCode.TextChanged
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim Total As Double
         If Trim(Me.TextBarCode.Text) <> "" Then
             If FIFO = True Then
                 List0.Items.Clear()
                 Dim ds As DataSet
                 ds = New DataSet
+<<<<<<< HEAD
                 Dim strSQL As New SqlCommand("", Consum)
+=======
+                Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With strSQL
                     If Trim(Me.TextBarCode.Text) = "*" Then
                         .CommandText = "select * from FIFOStocks  WHERE   CUser='" & CUser & "' and WarehouseNumber ='" & Trim(Me.ComboStore.Text) & "'"
@@ -1898,8 +2106,13 @@ Public Class Form_beea
                 Dim builder63 As New SqlCommandBuilder(adp)
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
+<<<<<<< HEAD
                 adp = New SqlDataAdapter(strSQL)
                 Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+                adp = New SqlClient.SqlDataAdapter(strSQL)
+                Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 adp.Fill(ds, "FIFOStocks")
                 If Me.BindingContext(ds, "FIFOStocks").Count > 0 Then
                     Me.DataGridView2.DataSource = ds
@@ -1934,7 +2147,11 @@ Public Class Form_beea
                 Me.List0.Items.Clear()
                 Dim ds As DataSet
                 ds = New DataSet
+<<<<<<< HEAD
                 Dim strSQL As New SqlCommand("", Consum)
+=======
+                Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With strSQL
                     If Trim(TextBarCode.Text) = "*" Then
                         .CommandText = "select * from LIFOStock1  WHERE   CUser='" & CUser & "' and WarehouseNumber ='" & Trim(Me.ComboStore.Text) & "'"
@@ -1949,8 +2166,13 @@ Public Class Form_beea
                 Dim builder63 As New SqlCommandBuilder(adp)
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
+<<<<<<< HEAD
                 adp = New SqlDataAdapter(strSQL)
                 Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+                adp = New SqlClient.SqlDataAdapter(strSQL)
+                Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 adp.Fill(ds, "LIFOStock1")
                 If Me.BindingContext(ds, "LIFOStock1").Count > 0 Then
                     Me.DataGridView2.DataSource = ds
@@ -1982,7 +2204,11 @@ Public Class Form_beea
                 Me.List0.Items.Clear()
                 Dim ds As DataSet
                 ds = New DataSet
+<<<<<<< HEAD
                 Dim strSQL As New SqlCommand("", Consum)
+=======
+                Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With strSQL
                     If Trim(TextBarCode.Text) = "*" Then
                         .CommandText = "select * from AvgStocks  WHERE   CUser='" & CUser & "' and WarehouseNumber ='" & Trim(Me.ComboStore.Text) & "'"
@@ -1997,8 +2223,13 @@ Public Class Form_beea
                 Dim builder63 As New SqlCommandBuilder(adp)
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
+<<<<<<< HEAD
                 adp = New SqlDataAdapter(strSQL)
                 Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+                adp = New SqlClient.SqlDataAdapter(strSQL)
+                Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 adp.Fill(ds, "AvgStocks")
                 If Me.BindingContext(ds, "AvgStocks").Count > 0 Then
                     Me.DataGridView2.DataSource = ds
@@ -2087,7 +2318,11 @@ Public Class Form_beea
             Next
         End If
     End Sub
+<<<<<<< HEAD
     Function GetGrdQuantities() As Double
+=======
+    Function GetGrdQuantities()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim Tot As Double
 
         For Each row As DataGridViewRow In Me.Datab.Rows
@@ -2099,6 +2334,7 @@ Public Class Form_beea
         Return Tot
 
     End Function
+<<<<<<< HEAD
 
     Private Sub ComboStore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboStore.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
@@ -2108,6 +2344,20 @@ Public Class Form_beea
         Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub Label11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label11.Click
+        'Me.Timer_sendmail.Start()
+    End Sub
+
+    Private Sub ComboStore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboStore.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -2120,12 +2370,21 @@ Public Class Form_beea
     End Sub
 
     Private Sub ComboCB1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboCB1.SelectedIndexChanged
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -2141,9 +2400,15 @@ Public Class Form_beea
     End Sub
     Private Sub FundBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim N As Double
         Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim N As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         N = cmd1.ExecuteScalar
@@ -2152,7 +2417,11 @@ Public Class Form_beea
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Cheprint_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Cheprint.CheckedChanged
+=======
+    Private Sub Cheprint_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cheprint.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Me.Timer_send.Start()
         'Me.Timer_send2.Start()

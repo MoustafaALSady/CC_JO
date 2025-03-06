@@ -58,7 +58,11 @@ Partial Class FrmStoreWornning
         Me.DGRD.ReadOnly = True
         Me.DGRD.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.DGRD.RowHeadersVisible = False
+<<<<<<< HEAD
         Me.DGRD.Size = New System.Drawing.Size(754, 330)
+=======
+        Me.DGRD.Size = New System.Drawing.Size(750, 327)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DGRD.TabIndex = 96
         '
         'Column4
@@ -112,7 +116,11 @@ Partial Class FrmStoreWornning
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label9.Location = New System.Drawing.Point(0, 0)
         Me.Label9.Name = "Label9"
+<<<<<<< HEAD
         Me.Label9.Size = New System.Drawing.Size(754, 30)
+=======
+        Me.Label9.Size = New System.Drawing.Size(750, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label9.TabIndex = 170
         Me.Label9.Text = "√’‰«›  Ã«Ê“  √Ê  ”«ÊÏ Õœ «·ÿ·»"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -132,7 +140,11 @@ Partial Class FrmStoreWornning
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(754, 360)
+=======
+        Me.ClientSize = New System.Drawing.Size(750, 357)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.DGRD)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox1)
@@ -141,7 +153,10 @@ Partial Class FrmStoreWornning
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(770, 399)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmStoreWornning"
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -2,10 +2,17 @@
 
 Public Class FormLASTchecks
     ReadOnly f As New FrmSuppliesA
+<<<<<<< HEAD
     Private Sub DataGridView1_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.DoubleClick
         Try
             'Dim resault As Integer
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub DataGridView1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.DoubleClick
+        Try
+            'Dim resault As Integer
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             'resault = MessageBox.Show("سبنم حذف السجلات المحددة", "حذف السجلات المحددة", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
             'If resault = vbYes Then
@@ -14,7 +21,11 @@ Public Class FormLASTchecks
                     Dim n As Integer
                     n = CInt(Me.DataGridView1.SelectedRows(i).Cells("CH1").Value)
                     Me.DataGridView1.Rows.RemoveAt(Me.DataGridView1.SelectedRows(i).Index)
+<<<<<<< HEAD
                     Dim CMD2 As New SqlCommand With {
+=======
+                    Dim CMD2 As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -65,7 +76,11 @@ Public Class FormLASTchecks
 
 
 
+<<<<<<< HEAD
     Public Sub FormLASTchecks_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Public Sub FormLASTchecks_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'DataGridView1.AllowUserToAddRows = False
         Me.TextBox1.Text = CStr(Val(f.CHA1))
         Me.TextBox2.Text = CStr(Val(f.CHA3))
@@ -73,6 +88,7 @@ Public Class FormLASTchecks
         Me.TextBox4.Text = CStr(Val(f.CHA8))
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP5.Click
         Dgv1()
     End Sub
@@ -81,6 +97,16 @@ Public Class FormLASTchecks
         Me.Close()
     End Sub
     Private Sub FormLASTchecks_Leave(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Leave
+=======
+    Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP5.Click
+        Dgv1()
+    End Sub
+
+    Private Sub FormLASTchecks_Deactivate(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Deactivate
+        Me.Close()
+    End Sub
+    Private Sub FormLASTchecks_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Leave
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Close()
     End Sub
 End Class

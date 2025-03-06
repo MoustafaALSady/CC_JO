@@ -22,6 +22,7 @@ Partial Class FrmDailyrestrictions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+<<<<<<< HEAD
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -33,6 +34,19 @@ Partial Class FrmDailyrestrictions
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+=======
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDailyrestrictions))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -438,6 +452,7 @@ Partial Class FrmDailyrestrictions
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+<<<<<<< HEAD
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.Chartreuse
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -472,6 +487,42 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle11
+=======
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.Chartreuse
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MOVD2, Me.MOVD3, Me.MOVD4, Me.MOVD8, Me.MOVD5, Me.MOVD6, Me.MOVD7, Me.MOVD9, Me.MOVD10, Me.MOV2, Me.MOVD1})
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle20.BackColor = System.Drawing.Color.Ivory
+        DataGridViewCellStyle20.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Honeydew
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle20
+        Me.DataGridView1.GridColor = System.Drawing.Color.SteelBlue
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 4)
+        Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle21
+        Me.DataGridView1.RowHeadersWidth = 25
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle22.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle22
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         Me.DataGridView1.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.DataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -483,6 +534,7 @@ Partial Class FrmDailyrestrictions
         'MOVD2
         '
         Me.MOVD2.DataPropertyName = "MOVD2"
+<<<<<<< HEAD
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -492,6 +544,17 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MOVD2.DefaultCellStyle = DataGridViewCellStyle2
+=======
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.Format = "N0"
+        DataGridViewCellStyle13.NullValue = "0"
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MOVD2.DefaultCellStyle = DataGridViewCellStyle13
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD2.FillWeight = 25.0!
         Me.MOVD2.HeaderText = "مسلسل"
         Me.MOVD2.Name = "MOVD2"
@@ -499,6 +562,7 @@ Partial Class FrmDailyrestrictions
         'MOVD3
         '
         Me.MOVD3.DataPropertyName = "MOVD3"
+<<<<<<< HEAD
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.AntiqueWhite
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -506,6 +570,15 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightYellow
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue
         Me.MOVD3.DefaultCellStyle = DataGridViewCellStyle3
+=======
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.AntiqueWhite
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightYellow
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Blue
+        Me.MOVD3.DefaultCellStyle = DataGridViewCellStyle14
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD3.FillWeight = 140.0!
         Me.MOVD3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.MOVD3.HeaderText = "اسم الحساب"
@@ -517,6 +590,7 @@ Partial Class FrmDailyrestrictions
         'MOVD4
         '
         Me.MOVD4.DataPropertyName = "MOVD4"
+<<<<<<< HEAD
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -524,6 +598,15 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MOVD4.DefaultCellStyle = DataGridViewCellStyle4
+=======
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MOVD4.DefaultCellStyle = DataGridViewCellStyle15
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD4.FillWeight = 80.0!
         Me.MOVD4.HeaderText = "رقم الحساب"
         Me.MOVD4.Name = "MOVD4"
@@ -531,6 +614,7 @@ Partial Class FrmDailyrestrictions
         'MOVD8
         '
         Me.MOVD8.DataPropertyName = "MOVD8"
+<<<<<<< HEAD
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -541,6 +625,18 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.MOVD8.DefaultCellStyle = DataGridViewCellStyle5
+=======
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle16.Format = "N0"
+        DataGridViewCellStyle16.NullValue = "0"
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MOVD8.DefaultCellStyle = DataGridViewCellStyle16
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD8.FillWeight = 60.0!
         Me.MOVD8.HeaderText = "كود الحساب"
         Me.MOVD8.Name = "MOVD8"
@@ -548,6 +644,7 @@ Partial Class FrmDailyrestrictions
         'MOVD5
         '
         Me.MOVD5.DataPropertyName = "MOVD5"
+<<<<<<< HEAD
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.Azure
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -557,6 +654,17 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MOVD5.DefaultCellStyle = DataGridViewCellStyle6
+=======
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.Color.Azure
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle17.Format = "N3"
+        DataGridViewCellStyle17.NullValue = "0.000"
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MOVD5.DefaultCellStyle = DataGridViewCellStyle17
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD5.FillWeight = 50.0!
         Me.MOVD5.HeaderText = "مدين"
         Me.MOVD5.Name = "MOVD5"
@@ -564,6 +672,7 @@ Partial Class FrmDailyrestrictions
         'MOVD6
         '
         Me.MOVD6.DataPropertyName = "MOVD6"
+<<<<<<< HEAD
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -573,6 +682,17 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MOVD6.DefaultCellStyle = DataGridViewCellStyle7
+=======
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle18.Format = "N3"
+        DataGridViewCellStyle18.NullValue = "0.000"
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MOVD6.DefaultCellStyle = DataGridViewCellStyle18
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD6.FillWeight = 50.0!
         Me.MOVD6.HeaderText = "دائن"
         Me.MOVD6.Name = "MOVD6"
@@ -580,6 +700,7 @@ Partial Class FrmDailyrestrictions
         'MOVD7
         '
         Me.MOVD7.DataPropertyName = "MOVD7"
+<<<<<<< HEAD
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -587,6 +708,15 @@ Partial Class FrmDailyrestrictions
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MOVD7.DefaultCellStyle = DataGridViewCellStyle8
+=======
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle19.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.MOVD7.DefaultCellStyle = DataGridViewCellStyle19
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOVD7.HeaderText = "بيان الحركة"
         Me.MOVD7.Name = "MOVD7"
         Me.MOVD7.ToolTipText = "شرح عن بيان الحركة"
@@ -1231,6 +1361,12 @@ Partial Class FrmDailyrestrictions
         Me.TextAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.TextAN.Visible = False
         '
+<<<<<<< HEAD
+=======
+        'BackWorker1
+        '
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Panel3
         '
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -1581,7 +1717,10 @@ Partial Class FrmDailyrestrictions
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(833, 484)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmDailyrestrictions"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1665,6 +1804,10 @@ Partial Class FrmDailyrestrictions
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents LabelLoadDataBase As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
+<<<<<<< HEAD
+=======
+    Friend WithEvents load1 As System.Windows.Forms.Button
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -1712,5 +1855,8 @@ Partial Class FrmDailyrestrictions
     Friend WithEvents MOVD1 As DataGridViewTextBoxColumn
     Private WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextTypy As Label
+<<<<<<< HEAD
     Public WithEvents load1 As Button
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

@@ -11,7 +11,11 @@ Public Class FormChart
         ' Get ChartTypes and Images
         Dim resourceStream = GetType(Chart).Assembly.GetManifestResourceStream("System.Windows.Forms.DataVisualization.Charting.Design.resources")
         'Dim resourceStream = System.Enum.GetValues(GetType(DataVisualization.Charting.SeriesChartType))
+<<<<<<< HEAD
         Using resReader As New Resources.ResourceReader(CType(resourceStream, IO.Stream))
+=======
+        Using resReader As New System.Resources.ResourceReader(CType(resourceStream, IO.Stream))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim dictEnumerator = resReader.GetEnumerator()
             While dictEnumerator.MoveNext()
                 Dim ent = dictEnumerator.Entry
@@ -80,10 +84,17 @@ Public Class FormChart
         Dim selectedChartType As String = ComboChartType.SelectedItem.ToString()
         Select Case selectedChartType
             Case "AreaChartType"
+<<<<<<< HEAD
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "SplineArea")
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "RadarChartType"
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Radar")
+=======
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "SplineArea")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "RadarChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Radar")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Chart1.Series(0).ChartType = SeriesChartType.Radar
                 With Chart1
                     .Series(0)("pieLabelStyle") = "outside"
@@ -94,6 +105,7 @@ Public Class FormChart
 
 
             Case "ErrorBarChartType"
+<<<<<<< HEAD
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "ErrorBar")
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "KagiChartType"
@@ -118,6 +130,32 @@ Public Class FormChart
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "PolarChartType"
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Polar")
+=======
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "ErrorBar")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "KagiChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Kagi")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "RangeColumnChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "RangeColumn")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "RangeChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Range")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "StockChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Stock")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "CandlestickChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Candlestick")
+            Case "StepLineChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StepLine")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "ThreeLineBreakChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "ThreeLineBreak")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "PolarChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Polar")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Chart1.Series(0).ChartType = SeriesChartType.Polar
                 With Chart1
                     .Series(0)("pieLabelStyle") = "outside"
@@ -127,6 +165,7 @@ Public Class FormChart
                 End With
 
             Case "PyramidChartType"
+<<<<<<< HEAD
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Pyramid")
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "BarChartType"
@@ -146,6 +185,27 @@ Public Class FormChart
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "DoughnutChartType"
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Doughnut")
+=======
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Pyramid")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "BarChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Bar")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "LineChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Line")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "BubbleChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Bubble")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "PointAndFigureChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "PointAndFigure")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "SplineChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Spline")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "DoughnutChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Doughnut")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Chart1.Series(0).ChartType = SeriesChartType.Doughnut
                 With Chart1
                     .Series(0)("pieLabelStyle") = "outside"
@@ -154,6 +214,7 @@ Public Class FormChart
                     .ChartAreas(0).Area3DStyle.Enable3D = True
                 End With
             Case "FastLineChartType"
+<<<<<<< HEAD
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "FastLine")
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "BoxPlotChartType"
@@ -176,6 +237,30 @@ Public Class FormChart
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "PieChartType"
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Pie")
+=======
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "FastLine")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "BoxPlotChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "BoxPlot")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "100%StackedColumnChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedColumn100")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "SplineAreaChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "SplineArea")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "SplineRangeChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "SplineRange")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "StackedColumnChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedColumn")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "100%StackedBarChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedBar100")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "PieChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Pie")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Chart1.Series(0).ChartType = SeriesChartType.Pie
                 With Chart1
                     .Series(0)("pieLabelStyle") = "outside"
@@ -184,6 +269,7 @@ Public Class FormChart
                     .ChartAreas(0).Area3DStyle.Enable3D = True
                 End With
             Case "StackedBarChartType"
+<<<<<<< HEAD
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "StackedBar")
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "StackedAreaChartType"
@@ -209,13 +295,44 @@ Public Class FormChart
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
             Case "FunnelChartType"
                 Chart1.Series(0).ChartType = System.Enum.Parse(GetType(SeriesChartType), "Funnel")
+=======
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedBar")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "StackedAreaChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedArea")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "FastPointChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "FastPoint")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "100%StackedAreaChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "StackedArea100")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "RenkoChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Renko")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "ColumnChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Column")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "RangeBarChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "RangeBar")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "PointChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Point")
+                Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
+            Case "FunnelChartType"
+                Chart1.Series(0).ChartType = System.Enum.Parse(GetType(System.Windows.Forms.DataVisualization.Charting.SeriesChartType), "Funnel")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Chart1.ChartAreas(0).Area3DStyle.Enable3D = False
         End Select
 
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Chart1_MouseMove(ByVal sender As System.Object, ByVal e As MouseEventArgs) Handles Chart1.MouseMove
+=======
+    Private Sub Chart1_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Chart1.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Dim ca As ChartArea = Chart1.ChartAreas(0)
         'Dim y As Double = ca.AxisY.PixelPositionToValue(e.Y)
         'Dim x As Double = ca.AxisX.PixelPositionToValue(e.X)
@@ -244,7 +361,11 @@ Public Class FormChart
         'Chart1.Annotations.Add(taY)
         'Dim h As Windows.Forms.DataVisualization.Charting.HitTestResult = Chart1.HitTest(e.X, e.Y)
         'Dim result As HitTestResult = Chart1.HitTest(e.X, e.Y)
+<<<<<<< HEAD
         Dim p As New Point(e.X, e.Y)
+=======
+        Dim p As New System.Drawing.Point(e.X, e.Y)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Chart1.ChartAreas(0).CursorX.Interval = 1
         Chart1.ChartAreas(0).CursorX.SetCursorPixelPosition(p, True)
         'Chart1.ChartAreas(0).CursorY.SetCursorPixelPosition(p, True)
@@ -253,7 +374,11 @@ Public Class FormChart
 
 
     End Sub
+<<<<<<< HEAD
     Private Sub Chart1_GetToolTipText(ByVal sender As System.Object, ByVal e As ToolTipEventArgs) Handles Chart1.GetToolTipText
+=======
+    Private Sub Chart1_GetToolTipText(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataVisualization.Charting.ToolTipEventArgs) Handles Chart1.GetToolTipText
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.HitTestResult.PointIndex >= 0 Then
             Select Case e.HitTestResult.ChartElementType
                 Case ChartElementType.DataPoint
@@ -273,7 +398,11 @@ Public Class FormChart
 
 
 
+<<<<<<< HEAD
     Private Sub Chart1_MouseClick(ByVal sender As System.Object, ByVal e As MouseEventArgs) Handles Chart1.MouseClick
+=======
+    Private Sub Chart1_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Chart1.MouseClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'If e.Button = MouseButtons.Left Then
         '    Dim xValue As Double = Chart1.ChartAreas(0).AxisX.PixelPositionToValue(e.X)
         '    Dim yValue As Double = Chart1.ChartAreas(0).AxisY.PixelPositionToValue(e.Y)

@@ -3924,9 +3924,12 @@
         N88p/9ZYmi8AAAAASUVORK5CYII=
 </value>
   </data>
+<<<<<<< HEAD
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 400</value>
   </data>
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>

@@ -4,12 +4,21 @@ Imports CrystalDecisions.CrystalReports.Engine
 
 
 Public Class FrmDailyrestrictions
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     ReadOnly rpt As New rptAccounts2
     ReadOnly ds1 As New DataSet
     Dim SqlDataAdapter1 As New SqlDataAdapter
     Dim SqlDataAdapter2 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    ReadOnly rpt As New rptAccounts2
+    ReadOnly ds1 As New DataSet
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly account_name As New DataTable
 
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -21,6 +30,7 @@ Public Class FrmDailyrestrictions
     Public TB2 As String
     Dim chk As Boolean
 
+<<<<<<< HEAD
     Private Sub FrmDailyrestrictions_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
         Try
             If Me.CheckLogReview.Checked Then
@@ -155,6 +165,93 @@ Public Class FrmDailyrestrictions
         Consum.Open()
         Me.SqlDataAdapter1 = New SqlDataAdapter(str1)
         Me.SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+    Private Sub FrmDailyrestrictions_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+        Try
+            If Me.CheckLogReview.Checked = True Then
+                Me.KeyPreview = False
+            Else
+                Me.KeyPreview = True
+                Select Case e.KeyCode
+                    Case Keys.F3
+                        Me.EDITBUTTON_Click(sender, e)
+                    Case Keys.F4
+                        Me.BUTTONCANCEL_Click(sender, e)
+                    Case Keys.F5
+                        Me.TabPage4.Show()
+                        Me.PRINTBUTTON_Click(sender, e)
+                    Case Keys.F6
+                        Me.DELETEBUTTON_Click(sender, e)
+                    Case Keys.F7
+                        Me.TabPage4.Show()
+                        Me.InternalAuditorERBUTTON_Click(sender, e)
+                    Case Keys.F8
+                        Me.TabPage4.Show()
+                        Me.ButtonCancellationAuditingAndACheckingAccounts_Click(sender, e)
+                    Case Keys.F12
+                        Me.BUTTONDELRECORD_Click(sender, e)
+                    Case Keys.PageDown
+                        Me.PREVIOUSBUTTON_Click(sender, e)
+                    Case Keys.PageUp
+                        Me.NEXTBUTTON_Click(sender, e)
+                    Case Keys.Escape
+                        Me.Close()
+                End Select
+            End If
+            e.Handled = True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub FrmDailyrestrictions_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+        On Error Resume Next
+        Me.Show()
+        Me.TabPage1.Show()
+        Me.TabPage4.Show()
+    End Sub
+
+    Private Sub FrmDailyrestrictions_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Me.BackgroundImage = img
+        Me.TabPage1.BackgroundImage = img
+        For a As Byte = 0 To 10
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+            Me.Opacity = a / 10
+        Next
+        Me.EDITBUTTON.Enabled = False
+        Me.BUTTONCANCEL.Enabled = False
+        Me.PRINTBUTTON.Enabled = False
+        Me.DELETEBUTTON.Enabled = False
+        Me.BUTTONDELRECORD.Enabled = False
+        Me.InternalAuditorERBUTTON.Enabled = False
+        'Me.ButtonXP1.Enabled = False
+        Me.PREVIOUSBUTTON.Enabled = False
+        Me.FIRSTBUTTON.Enabled = False
+        Me.NEXTBUTTON.Enabled = False
+        Me.LASTBUTTON.Enabled = False
+    End Sub
+
+    Public Sub Load_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles load1.Click
+        On Error Resume Next
+        Me.ds1.EnforceConstraints = False
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim str1 As New SqlClient.SqlCommand("", Consum)
+        With str1
+            .CommandText = "SELECT MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV10, MOV11, MOV12, USERNAME, Auditor, Realname, cuser, COUser, da, ne, da1, ne1 FROM MOVES  WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV1 ='" & Strings.Trim(Me.TB1) & "'or MOV2 ='" & Strings.Trim(Me.TB2) & "'ORDER BY MOV2"
+            Dim builder50 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+        End With
+        Dim str2 As New SqlClient.SqlCommand("", Consum)
+        With str2
+            .CommandText = "SELECT MOVD1, MOV2, MOVD2, MOVD3, MOVD4, MOVD5, MOVD6, MOVD7, MOVD8, MOVD9, MOVD10, MOV3 FROM MOVESDATA  ORDER BY MOV2"
+            Dim builder51 As New SqlClient.SqlCommandBuilder(SqlDataAdapter2)
+        End With
+        Me.ds1.EnforceConstraints = False
+        Consum.Open()
+        Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+        Me.SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds1.Clear()
         Me.SqlDataAdapter1.Fill(Me.ds1, "MOVES")
         Me.SqlDataAdapter2.Fill(Me.ds1, "MOVESDATA")
@@ -222,6 +319,7 @@ Public Class FrmDailyrestrictions
     End Sub
 
     Private Sub LoadData()
+<<<<<<< HEAD
         Try
             Using Consum As New SqlConnection(constring)
                 ' Optimize query by using NOT IN for better performance
@@ -247,6 +345,27 @@ Public Class FrmDailyrestrictions
     End Sub
 
     Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Using cmd As New SqlClient.SqlCommand("Select   acc1, account_no, account_name from ACCOUNTSTREE  WHERE  account_no<>'" & "1" & "'" & "AND account_no<>'" & "2" & "'" & "AND account_no<>'" & "3" & "'" & "AND account_no<>'" & "4" & "'" & "AND account_no<>'" & "11" & "'" & "AND account_no<>'" & "12" & "'" & "AND account_no<>'" & "211" & "'" & "AND account_no<>'" & "212" & "'" & "AND account_no<>'" & "311" & "'" & "AND account_no<>'" & "312" & "'" & "AND account_no<>'" & "411" & "'" & "AND account_no<>'" & "412" & "'ORDER BY account_no", Consum)
+            Consum.Open()
+            Using dreader As SqlClient.SqlDataReader = cmd.ExecuteReader
+                account_name.Clear()
+                account_name.Load(dreader)
+                For i As Integer = 0 To account_name.Rows.Count - 1
+                    MOVD3.Items.Add(account_name(i)(2))
+                Next
+            End Using
+        End Using
+        Consum.Close()
+    End Sub
+
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(Me.ComboEntryType, e, )
+    End Sub
+
+    Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AutoComplete(Me.ComboRegistrationNumber, e, )
     End Sub
 
@@ -327,7 +446,11 @@ Public Class FrmDailyrestrictions
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & Me.BS.Count - Me.RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -347,12 +470,21 @@ Public Class FrmDailyrestrictions
     End Sub
 
     Private Sub SumAmount()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT Sum(MOVD5) AS SUMDEBIT,Sum(MOVD6) AS SUMCREDIT FROM MOVESDATA WHERE MOV2 = " & Me.TEXTRegistrationNumber.EditValue & " GROUP BY MOV2", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT Sum(MOVD5) AS SUMDEBIT,Sum(MOVD6) AS SUMCREDIT FROM MOVESDATA WHERE MOV2 = " & Me.TEXTRegistrationNumber.EditValue & " GROUP BY MOV2", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -391,7 +523,11 @@ Public Class FrmDailyrestrictions
         ButtonViewAuditorsNotes.PerformClick()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Bmp_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub Bmp_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.RecordCount()
     End Sub
@@ -411,13 +547,21 @@ Public Class FrmDailyrestrictions
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXT2_LostFocus(ByVal sender As System.Object, ByVal e As EventArgs) Handles TEXTRegistrationNumber.LostFocus
+=======
+    Private Sub TEXT2_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TEXTRegistrationNumber.LostFocus
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Static Dim P As Integer
         P = Me.BS.Position
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXT2_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles TEXTRegistrationNumber.KeyDown, TEXT1.KeyDown, TEXTUserName.KeyDown, TEXTReferenceName.KeyDown, TEXTReviewDate.KeyDown, DATETIMEPICKER.KeyDown
+=======
+    Private Sub TEXT2_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTRegistrationNumber.KeyDown, TEXT1.KeyDown, TEXTUserName.KeyDown, TEXTReferenceName.KeyDown, TEXTReviewDate.KeyDown, DATETIMEPICKER.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -425,7 +569,11 @@ Public Class FrmDailyrestrictions
         End Select
     End Sub
 
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If BS.Count = 0 Then Beep() : Exit Sub
             If LockDelete = False Then
@@ -444,7 +592,11 @@ Public Class FrmDailyrestrictions
             MYDELETERECORD("MOVES", "MOV2", Me.TEXTRegistrationNumber, Me.BS, True)
             MYDELETERECORD("MOVESDATA", "MOV2", Me.TEXTRegistrationNumber, Me.BS, True)
             Me.Load_Click(sender, e)
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -456,7 +608,11 @@ Public Class FrmDailyrestrictions
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -474,8 +630,13 @@ Public Class FrmDailyrestrictions
         txtFROMDate = Format(Me.DateFrom.Value, "yyy, MM, dd, 00, 00, 000")
         txtToDate = Format(Me.DateTO.Value, "yyy, MM, dd, 00, 00, 00")
         On Error Resume Next
+<<<<<<< HEAD
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RBRegistrationNumber.Checked Then
             Dim rpt As New rptAccounts2
             If Len(Me.ComboRegistrationNumber.Text) = 0 Then
@@ -490,7 +651,11 @@ Public Class FrmDailyrestrictions
             Dim ds1 As New DataSet
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim str As New SqlCommand("SELECT * FROM MOVES  WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND MOV2='" & ComboRegistrationNumber.Text & "'", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter1.Fill(ds1, "MOVES")
             rpt.SetDataSource(ds1.Tables("MOVES"))
@@ -516,9 +681,15 @@ Public Class FrmDailyrestrictions
             End If
             Dim ds1 As New DataSet
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
+<<<<<<< HEAD
             Dim str1 As New SqlCommand("SELECT * FROM MOVES  WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
             Dim builder51 As New SqlCommandBuilder(SqlDataAdapter2)
             SqlDataAdapter2 = New SqlDataAdapter(str1)
+=======
+            Dim str1 As New SqlClient.SqlCommand("SELECT * FROM MOVES  WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+            Dim builder51 As New SqlCommandBuilder(SqlDataAdapter2)
+            SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter2.Fill(ds1, "MOVES")
             rpt.SetDataSource(ds1.Tables("MOVES"))
@@ -547,7 +718,11 @@ Public Class FrmDailyrestrictions
             GETSERVERNAMEANDDATABASENAME(rpt1, DBServer, "", "")
             Dim str2 As New SqlCommand("SELECT * FROM MOVES  WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND MOV12='" & False & "'", Consum)
             Dim builder51 As New SqlCommandBuilder(SqlDataAdapter2)
+<<<<<<< HEAD
             SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+            SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter2.Fill(ds1, "MOVES")
             rpt1.SetDataSource(ds1.Tables("MOVES"))
@@ -570,7 +745,11 @@ Public Class FrmDailyrestrictions
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles InternalAuditorERBUTTON.Click
+=======
+    Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InternalAuditorERBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -599,35 +778,55 @@ Public Class FrmDailyrestrictions
         MsgBox("تمت عملية المراجعة بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
     End Sub
 
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
         Me.TextTypy.Text = LSet(Me.TextMovementSymbol.EditValue, 2)
     End Sub
 
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
         Me.TextTypy.Text = LSet(Me.TextMovementSymbol.EditValue, 2)
     End Sub
 
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
         Me.TextTypy.Text = LSet(Me.TextMovementSymbol.EditValue, 2)
     End Sub
 
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
         Me.TextTypy.Text = LSet(Me.TextMovementSymbol.EditValue, 2)
     End Sub
 
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -678,7 +877,11 @@ Public Class FrmDailyrestrictions
         Me.PictureBox2.Visible = True
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -687,6 +890,7 @@ Public Class FrmDailyrestrictions
     End Sub
 
     Private Sub SaveMOVESDATA()
+<<<<<<< HEAD
         Try
             Using Consum As New SqlConnection(constring)
                 Dim sql As String = "INSERT INTO MOVESDATA (MOV2, MOVD2, MOVD3, MOVD4, MOVD5, MOVD6, MOVD7, MOVD8, MOVD9, MOVD10,  MOV3) " & _
@@ -716,14 +920,56 @@ Public Class FrmDailyrestrictions
         Catch ex As Exception
             MessageBox.Show("Error saving data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+=======
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlClient.SqlCommand("INSERT INTO MOVESDATA(MOV2, MOVD2, MOVD3, MOVD4, MOVD5, MOVD6, MOVD7, MOVD8, MOVD9, MOVD10, MOV3) VALUES     (@MOV2, @MOVD2, @MOVD3, @MOVD4, @MOVD5, @MOVD6, @MOVD7, @MOVD8, @MOVD9, @MOVD10, @MOV3)", Consum)
+        Dim CMD As New SqlClient.SqlCommand With {
+            .CommandType = CommandType.Text,
+            .Connection = Consum
+        }
+        With CMD
+            .CommandType = CommandType.Text
+            .Connection = Consum
+            .Parameters.Add("@MOVD1", SqlDbType.Int, 4, "MOVD1")
+            .Parameters.Add("@MOV2", SqlDbType.Int, 4, "MOV2").Value = Me.TEXTRegistrationNumber.EditValue
+            .Parameters.Add("@MOVD2", SqlDbType.BigInt, 8, "MOVD2")
+            .Parameters.Add("@MOVD3", SqlDbType.NVarChar, 100, "MOVD3")
+            .Parameters.Add("@MOVD4", SqlDbType.Int, 4, "MOVD4")
+            .Parameters.Add("@MOVD5", SqlDbType.Float, 8, "MOVD5")
+            .Parameters.Add("@MOVD6", SqlDbType.Float, 8, "MOVD6")
+            .Parameters.Add("@MOVD7", SqlDbType.NVarChar, 150, "MOVD7")
+            .Parameters.Add("@MOVD8", SqlDbType.Int, 4, "MOVD8")
+            .Parameters.Add("@MOVD9", SqlDbType.NVarChar, 25, "MOVD9").Value = Me.TextMovementSymbol.EditValue
+            .Parameters.Add("@MOVD10", SqlDbType.NVarChar, 25, "MOVD10").Value = Me.TEXT1.Text
+            .Parameters.Add("@MOV3", SqlDbType.Bit, 1, "MOV3").Value = 0
+            .CommandText = SQL.CommandText
+        End With
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        SqlDataAdapter2.TableMappings.AddRange(New DataTableMapping() {New DataTableMapping("Table", "MOVESDATA", New DataColumnMapping() {New DataColumnMapping("MOVD1", "MOVD1"), New DataColumnMapping("MOV2", "MOV2"), New DataColumnMapping("MOVD2", "MOVD2"), New DataColumnMapping("MOVD3", "MOVD3"), New DataColumnMapping("MOVD4", "MOVD4"), New DataColumnMapping("MOVD5", "MOVD5"), New DataColumnMapping("MOVD6", "MOVD6"), New DataColumnMapping("MOVD7", "MOVD7"), New DataColumnMapping("MOVD8", "MOVD8"), New DataColumnMapping("MOVD9", "MOVD9"), New DataColumnMapping("MOVD10", "MOVD10"), New DataColumnMapping("MOV3", "MOV3")})})
+        SqlDataAdapter2.InsertCommand = CMD
+        SqlDataAdapter2.Update(ds1, "MOVESDATA")
+        Consum.Close()
+
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message, "ErrorSaveMovesData", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        'End Try
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
     Private Sub UPDATEMOVES()
         'On Error Resume Next
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" UPDATE  MOVES SET   MOV3 = @MOV3, MOV4 = @MOV4, MOV6 = @MOV6, MOV7 = @MOV7, MOV8 = @MOV8, MOV9 = @MOV9, MOV10 = @MOV10, MOV11 = @MOV11, MOV12 = @MOV12, Realname = @Realname, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne, USERNAME = @USERNAME, Auditor = @Auditor, da1 = @da1, ne1 = @ne1 WHERE MOV2 = @MOV2", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" UPDATE  MOVES SET   MOV3 = @MOV3, MOV4 = @MOV4, MOV6 = @MOV6, MOV7 = @MOV7, MOV8 = @MOV8, MOV9 = @MOV9, MOV10 = @MOV10, MOV11 = @MOV11, MOV12 = @MOV12, Realname = @Realname, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne, USERNAME = @USERNAME, Auditor = @Auditor, da1 = @da1, ne1 = @ne1 WHERE MOV2 = @MOV2", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -774,9 +1020,15 @@ Public Class FrmDailyrestrictions
 
     Private Sub UPDATEMOVESDATA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" UPDATE MOVESDATA SET MOV2 = @MOV2, MOVD2 = @MOVD2, MOVD3 = @MOVD3, MOVD4 = @MOVD4, MOVD5 = @MOVD5, MOVD6 = @MOVD6, MOVD7 = @MOVD7, MOVD8 = @MOVD8, MOVD9 = @MOVD9, MOVD10 = @MOVD10,  MOV3 = @MOV3  WHERE MOVD1 = @MOVD1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand(" UPDATE MOVESDATA SET MOV2 = @MOV2, MOVD2 = @MOVD2, MOVD3 = @MOVD3, MOVD4 = @MOVD4, MOVD5 = @MOVD5, MOVD6 = @MOVD6, MOVD7 = @MOVD7, MOVD8 = @MOVD8, MOVD9 = @MOVD9, MOVD10 = @MOVD10,  MOV3 = @MOV3  WHERE MOVD1 = @MOVD1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -813,12 +1065,20 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RBRegistrationNumber.Click
+=======
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RBRegistrationNumber.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboRegistrationNumber.Enabled = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton2.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboRegistrationNumber.Enabled = False
     End Sub
@@ -830,6 +1090,7 @@ Public Class FrmDailyrestrictions
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -837,6 +1098,15 @@ Public Class FrmDailyrestrictions
         Dim strsql As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name FROM ACCOUNTSTREE WHERE account_name = '" & Me.DataGridView1.CurrentRow.Cells("MOVD3").Value & " '", Consum)
         Dim ds3 As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name FROM ACCOUNTSTREE WHERE account_name = '" & Me.DataGridView1.CurrentRow.Cells("MOVD3").Value & " '", Consum)
+        Dim ds3 As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds3.Clear()
         Consum.Open()
         Adp.Fill(ds3)
@@ -850,6 +1120,7 @@ Public Class FrmDailyrestrictions
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellEnter(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellEnter
         Try
             If Me.DataGridView1.SelectedRows.Count = 0 OrElse e.RowIndex < 0 Then
@@ -873,6 +1144,25 @@ Public Class FrmDailyrestrictions
     End Sub
 
     Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.CurrentCellChanged
+=======
+    Private Sub DataGridView1_CellEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellEnter
+        Try
+            If Me.DataGridView1.SelectedRows.Count = 0 Then
+                Me.DataGridView1.Item("MOVD2", e.RowIndex).Value = Me.DataGridView1.CurrentRow.Index + 1
+                If Me.DataGridView1.Item("MOVD5", e.RowIndex).Value Is DBNull.Value Then Me.DataGridView1.Item("MOVD5", e.RowIndex).Value = "0.000"
+                If Me.DataGridView1.Item("MOVD6", e.RowIndex).Value Is DBNull.Value Then Me.DataGridView1.Item("MOVD6", e.RowIndex).Value = "0.000"
+                Me.DataGridView1.Item("MOVD9", e.RowIndex).Value = Trim(Me.TextMovementSymbol.EditValue)
+                Me.DataGridView1.Item("MOVD10", e.RowIndex).Value = Trim(Me.TEXT1.Text)
+                Me.DataGridView1.Item("MOV3", e.RowIndex).Value = False
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error1", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.CurrentCellChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim total As Double = "0.000"
         Dim tota2 As Double = "0.000"
@@ -884,12 +1174,20 @@ Public Class FrmDailyrestrictions
         Me.TEXTCredit.Text = tota2.ToString("0.000")
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
+=======
+    Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Exit Sub
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellMouseEventArgs)
+=======
+    Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.DataGridView1.SelectedRows.Count > 0 Then
                 For i As Integer = Me.DataGridView1.SelectedRows.Count - 1 To 0
@@ -905,7 +1203,11 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BUTTONDELRECORD_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONDELRECORD.Click
+=======
+    Private Sub BUTTONDELRECORD_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONDELRECORD.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.BS.Count = 0 Then Beep() : Exit Sub
         If LockDelete = False Then
@@ -921,14 +1223,22 @@ Public Class FrmDailyrestrictions
             Exit Sub
         End If
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.BS.Count > 0 Then
             resault = MessageBox.Show("سبنم حذف السجلات المحددة", "حذف السجلات المحددة", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
             If resault = vbYes Then
                 For Each row As DataGridViewRow In Me.DataGridView1.SelectedRows
                     Dim n As Integer
                     n = Me.DataGridView1.Rows(row.Index).Cells("MOVD1").Value
+<<<<<<< HEAD
                     Dim CMD2 As New SqlCommand With {
+=======
+                    Dim CMD2 As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -955,7 +1265,11 @@ Public Class FrmDailyrestrictions
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BS.CancelEdit()
         Me.ds1.RejectChanges()
         Me.RecordCount()
@@ -975,7 +1289,11 @@ Public Class FrmDailyrestrictions
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonCancellationAuditingAndACheckingAccounts_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+=======
+    Private Sub ButtonCancellationAuditingAndACheckingAccounts_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1007,11 +1325,19 @@ Public Class FrmDailyrestrictions
 
     Private Sub Enquiry1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim Adp1 As SqlDataAdapter
             Dim strsql As New SqlCommand("SELECT  AN, AN4, AN6, AN7  FROM Auditorsnotes WHERE CUser ='" & CUser & "' and Year(AN3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and AN2 ='" & Me.TextMovementSymbol.EditValue & "'and AN7 ='" & True & "' ", Consum)
             Dim ds1 As New DataSet
             Adp1 = New SqlDataAdapter(strsql)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim Adp1 As SqlClient.SqlDataAdapter
+            Dim strsql As New SqlCommand("SELECT  AN, AN4, AN6, AN7  FROM Auditorsnotes WHERE CUser ='" & CUser & "' and Year(AN3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and AN2 ='" & Me.TextMovementSymbol.EditValue & "'and AN7 ='" & True & "' ", Consum)
+            Dim ds1 As New DataSet
+            Adp1 = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Consum.Open()
             Adp1.Fill(ds1)
@@ -1036,7 +1362,11 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonViewAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewAuditorsNotes.Click
+=======
+    Private Sub ButtonViewAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewAuditorsNotes.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Auditor("MOVES", "USERNAME", "MOV2", Me.TEXTRegistrationNumber.EditValue, "")
             Logentry = Uses
@@ -1049,7 +1379,11 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonRecordingAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonRecordingAuditorsNotes.Click
+=======
+    Private Sub ButtonRecordingAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonRecordingAuditorsNotes.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If InternalAuditor = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية تسجيل ملاحظات مدقق الحسابات", 16, "تنبيه")
             Exit Sub
@@ -1059,10 +1393,17 @@ Public Class FrmDailyrestrictions
             ButtonViewAuditorsNotes_Click(sender, e)
             Auditor("MOVES", "USERNAME", "MOV1", Me.TEXT1.Text, "")
             Logentry = Uses
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             If chk = False Then
                 Dim sql As String = "INSERT INTO Auditorsnotes(AN1, AN2, AN3, AN4, AN5, AN6, AN7, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1) VALUES     (@AN1, @AN2, @AN3, @AN4, @AN5, @AN6, @AN7, @USERNAME, @Auditor, @CUser, @COUser, @da, @ne, @da1, @ne1)"
                 Dim cmd As New SqlCommand(sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If chk = False Then
+                Dim sql As String = "INSERT INTO Auditorsnotes(AN1, AN2, AN3, AN4, AN5, AN6, AN7, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1) VALUES     (@AN1, @AN2, @AN3, @AN4, @AN5, @AN6, @AN7, @USERNAME, @Auditor, @CUser, @COUser, @da, @ne, @da1, @ne1)"
+                Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With cmd
                     .CommandType = CommandType.Text
                     .Connection = Consum
@@ -1099,8 +1440,13 @@ Public Class FrmDailyrestrictions
                 Insert_Actions(Me.TEXT1.Text.Trim, "تسجيل ملاحظات مدقق الحسابات", Me.Text)
 
             Else
+<<<<<<< HEAD
                 Dim SQL As New SqlCommand("Update Auditorsnotes SET   AN4 = @AN4, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser WHERE AN = @AN ")
                 Dim CMD As New SqlCommand With {
+=======
+                Dim SQL As New SqlClient.SqlCommand("Update Auditorsnotes SET   AN4 = @AN4, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser WHERE AN = @AN ")
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }
@@ -1134,7 +1480,11 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonCloseAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCloseAuditorsNotes.Click
+=======
+    Private Sub ButtonCloseAuditorsNotes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCloseAuditorsNotes.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If InternalAuditor = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية إغـلاق مـلاحـظات مدقـق الحسـابات", 16, "تنبيه")
             Exit Sub
@@ -1143,9 +1493,15 @@ Public Class FrmDailyrestrictions
             Auditor("Auditorsnotes", "USERNAME", "AN1", Me.TextSearchFrom.Text, "")
             Logentry = Uses
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("Update Auditorsnotes SET   AN7 = @AN7, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser WHERE AN = @AN ")
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand("Update Auditorsnotes SET   AN7 = @AN7, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser WHERE AN = @AN ")
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -1293,11 +1649,19 @@ Public Class FrmDailyrestrictions
             ElseIf Me.TextTypy.Text = "QR" Then
                 Dim Consum As New SqlConnection(constring)
                 Dim ds8 As New DataSet
+<<<<<<< HEAD
                 Dim SqlDataAdapter8 As New SqlDataAdapter
                 Dim f8 As New Form_mabeat
                 ds8.EnforceConstraints = False
                 Dim str As New SqlCommand("SELECT DataTS FROM TodaySales WHERE   CUser='" & CUser & "' and Year(DataTS) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY ID", Consum)
                 SqlDataAdapter8 = New SqlDataAdapter(str)
+=======
+                Dim SqlDataAdapter8 As New SqlClient.SqlDataAdapter
+                Dim f8 As New Form_mabeat
+                ds8.EnforceConstraints = False
+                Dim str As New SqlCommand("SELECT DataTS FROM TodaySales WHERE   CUser='" & CUser & "' and Year(DataTS) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY ID", Consum)
+                SqlDataAdapter8 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds8.Clear()
                 Consum.Open()
                 SqlDataAdapter8.Fill(ds8, "TodaySales")
@@ -1334,29 +1698,60 @@ Public Class FrmDailyrestrictions
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAttachDocument.Click
         Try
+=======
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAttachDocument.Click
+        Try
+            If TestNet = False Then
+                MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
+                Exit Sub
+            End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If BS.Count = 0 Then Beep() : Exit Sub
             If LockAddRow = False Then
                 MsgBox("ععفوا .. قام الأدمن بمنع خاصية إرفاق المستندات", 16, "تنبيه")
                 Exit Sub
             End If
+<<<<<<< HEAD
             GetAutoNumberMyDOCUMENTSFL(TextMovementSymbol.EditValue)
             Dim documentId As Object = SEARCHDATA.NumberMyDOCUMENTSFL
             Dim f As New FrmJPG0
             f.Show()
             f.ADDBUTTON.Enabled = False
             f.SAVEBUTTON.Enabled = True
+=======
+           Dim XLO As Int64
+            XLO = Me.TEXTRegistrationNumber.EditValue
+            Dim f As New FrmJPG0
+            f.ADDBUTTON.Enabled = False
+            f.SAVEBUTTON.Enabled = True
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             f.ButScan.Enabled = True
             f.ButSaveFile.Enabled = False
             f.ButLogq.Enabled = True
             f.ButEditImage.Enabled = False
+<<<<<<< HEAD
             f.BS.EndEdit()
             f.BS.AddNew()
             f.MAXRECORD()
             f.DateP1.Text = Me.DATETIMEPICKER.Value.ToString("yyyy-MM-dd")
             f.TextLO.Text = Me.TextMovementSymbol.EditValue
             f.TEXTFileNo.Text = documentId
+=======
+
+            f.Show()
+            f.ADDBUTTON_Click(sender, e)
+            f.BS.Position = BS.Count - 1
+            f.BS.EndEdit()
+            f.BS.AddNew()
+            CLEARDATA1(Me)
+            f.DateP1.Text = Me.DATETIMEPICKER.Value.ToString("yyyy-MM-dd")
+            f.TextLO.Text = Me.TextMovementSymbol.EditValue
+            f.TEXTFileNo.Text = Val(XLO)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             f.TEXTFileSubject.Text = "مستندات القيود"
             f.TextFileDescription.Text = "ارفاق مستندات القيود"
             f.PictureBox1.Image = Nothing
@@ -1368,16 +1763,28 @@ Public Class FrmDailyrestrictions
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub CMDBROWSE_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CMDBROWSE.Click
         Try
             Dim ds41 As New DataSet
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub CMDBROWSE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDBROWSE.Click
+        Try
+            Dim ds41 As New DataSet
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim f As New FrmJPG
             ds41.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand("SELECT DOC1, LO FROM MYDOCUMENTSHOME  WHERE  CUser='" & CUser & "'and  LO ='" & Trim(Me.TextMovementSymbol.EditValue) & "'ORDER BY DOC1", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds41.Clear()
             SqlDataAdapter1.Fill(ds41, "MYDOCUMENTSHOME")
             f.BS.DataMember = "MYDOCUMENTSHOME"

@@ -23,7 +23,11 @@ Imports DevExpress.XtraScheduler.Services
 Imports DevExpress.XtraScheduler.UI
 
 Partial Public Class OutlookAppointmentForm
+<<<<<<< HEAD
     Inherits Ribbon.RibbonForm
+=======
+    Inherits DevExpress.XtraBars.Ribbon.RibbonForm
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Implements IDXManagerPopupMenu
 #Region "Fields"
     Private m_openRecurrenceForm As Boolean
@@ -40,10 +44,17 @@ Partial Public Class OutlookAppointmentForm
     Public Sub New()
         InitializeComponent()
     End Sub
+<<<<<<< HEAD
     Public Sub New(ByVal control As SchedulerControl, ByVal apt As Appointment)
         Me.New(control, apt, False)
     End Sub
     Public Sub New(ByVal control As SchedulerControl, ByVal apt As Appointment, ByVal openRecurrenceForm As Boolean)
+=======
+    Public Sub New(ByVal control As DevExpress.XtraScheduler.SchedulerControl, ByVal apt As Appointment)
+        Me.New(control, apt, False)
+    End Sub
+    Public Sub New(ByVal control As DevExpress.XtraScheduler.SchedulerControl, ByVal apt As Appointment, ByVal openRecurrenceForm As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Guard.ArgumentNotNull(control, "control")
         Guard.ArgumentNotNull(control.DataStorage, "control.DataStorage")
         Guard.ArgumentNotNull(apt, "apt")
@@ -159,7 +170,11 @@ Partial Public Class OutlookAppointmentForm
     Public Overridable Function IsAppointmentChanged(ByVal appointment As Appointment) As Boolean
         Return False
     End Function
+<<<<<<< HEAD
     Public Overridable Sub SetMenuManager(ByVal menuManager As IDXMenuManager)
+=======
+    Public Overridable Sub SetMenuManager(ByVal menuManager As DevExpress.Utils.Menu.IDXMenuManager)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MenuManagerUtils.SetMenuManager(Controls, menuManager)
         Me.m_menuManager = menuManager
     End Sub
@@ -270,6 +285,7 @@ Partial Public Class OutlookAppointmentForm
         control.DataBindings.Add("ReadOnly", Controller, "ReadOnly", True, updateMode)
     End Sub
 
+<<<<<<< HEAD
     Protected Overridable Sub BindProperties(ByVal target As BarItem, ByVal targetProperty As String, ByVal sourceProperty As String)
         BindProperties(target, targetProperty, sourceProperty, DataSourceUpdateMode.OnPropertyChanged)
     End Sub
@@ -277,10 +293,20 @@ Partial Public Class OutlookAppointmentForm
         target.DataBindings.Add(targetProperty, Controller, sourceProperty, True, updateMode)
     End Sub
     Protected Overridable Sub BindProperties(ByVal target As BarItem, ByVal targetProperty As String, ByVal sourceProperty As String, ByVal objectToStringConverter As ConvertEventHandler)
+=======
+    Protected Overridable Sub BindProperties(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String)
+        BindProperties(target, targetProperty, sourceProperty, DataSourceUpdateMode.OnPropertyChanged)
+    End Sub
+    Protected Overridable Sub BindProperties(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String, ByVal updateMode As DataSourceUpdateMode)
+        target.DataBindings.Add(targetProperty, Controller, sourceProperty, True, updateMode)
+    End Sub
+    Protected Overridable Sub BindProperties(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String, ByVal objectToStringConverter As ConvertEventHandler)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim binding As New Binding(targetProperty, Controller, sourceProperty, True)
         AddHandler binding.Format, objectToStringConverter
         target.DataBindings.Add(binding)
     End Sub
+<<<<<<< HEAD
     Protected Overridable Sub BindToBoolPropertyAndInvert(ByVal target As BarItem, ByVal targetProperty As String, ByVal sourceProperty As String)
         target.DataBindings.Add(New BoolInvertBinding(targetProperty, Controller, sourceProperty))
     End Sub
@@ -288,6 +314,15 @@ Partial Public Class OutlookAppointmentForm
         target.DataBindings.Add(New BoolToVisibilityBinding(targetProperty, Controller, sourceProperty, False))
     End Sub
     Protected Overridable Sub BindBoolToVisibility(ByVal target As BarItem, ByVal targetProperty As String, ByVal sourceProperty As String, ByVal invert As Boolean)
+=======
+    Protected Overridable Sub BindToBoolPropertyAndInvert(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String)
+        target.DataBindings.Add(New BoolInvertBinding(targetProperty, Controller, sourceProperty))
+    End Sub
+    Protected Overridable Sub BindBoolToVisibility(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String)
+        target.DataBindings.Add(New BoolToVisibilityBinding(targetProperty, Controller, sourceProperty, False))
+    End Sub
+    Protected Overridable Sub BindBoolToVisibility(ByVal target As DevExpress.XtraBars.BarItem, ByVal targetProperty As String, ByVal sourceProperty As String, ByVal invert As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         target.DataBindings.Add(New BoolToVisibilityBinding(targetProperty, Controller, sourceProperty, invert))
     End Sub
 
@@ -303,7 +338,11 @@ Partial Public Class OutlookAppointmentForm
         Return New AppointmentFormController(control, apt)
     End Function
     Protected Friend Overridable Sub LoadIcons()
+<<<<<<< HEAD
         Dim asm As Assembly = GetType(Appointment).Assembly
+=======
+        Dim asm As System.Reflection.Assembly = GetType(Appointment).Assembly
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.m_recurringSvgImage = ResourceImageHelper.CreateSvgImageFromResources(SchedulerSvgImageNames.NewRecurringAppointment, asm)
         Me.m_normalSvgImage = ResourceImageHelper.CreateSvgImageFromResources(SchedulerSvgImageNames.NewAppointment, asm)
     End Sub
@@ -490,7 +529,11 @@ Partial Public Class OutlookAppointmentForm
     Protected Overridable Function ShowRecurrenceForm(ByVal form As Form) As DialogResult
         Return FormTouchUIAdapter.ShowDialog(form, Me)
     End Function
+<<<<<<< HEAD
     Protected Friend Overridable Function CreateAppointmentRecurrenceForm(ByVal patternCopy As Appointment, ByVal firstDayOfWeek As FirstDayOfWeek) As Form
+=======
+    Protected Friend Overridable Function CreateAppointmentRecurrenceForm(ByVal patternCopy As Appointment, ByVal firstDayOfWeek As DevExpress.XtraScheduler.FirstDayOfWeek) As Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim form As New AppointmentRecurrenceForm(patternCopy, firstDayOfWeek, Controller)
         form.SetMenuManager(MenuManager)
         form.LookAndFeel.ParentLookAndFeel = LookAndFeel
@@ -551,11 +594,19 @@ Partial Public Class OutlookAppointmentForm
         End Using
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnSaveAndClose_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs) Handles btnSaveAndClose.ItemClick
         OnOkButton()
     End Sub
 
     Private Sub BarButtonDelete_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs) Handles btnDelete.ItemClick
+=======
+    Private Sub BtnSaveAndClose_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSaveAndClose.ItemClick
+        OnOkButton()
+    End Sub
+
+    Private Sub BarButtonDelete_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnDelete.ItemClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         OnDeleteButton()
     End Sub
 
@@ -563,6 +614,7 @@ Partial Public Class OutlookAppointmentForm
         OnRecurrenceButton()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BvbSave_ItemClick(ByVal sender As Object, ByVal e As Ribbon.BackstageViewItemEventArgs) Handles bvbSave.ItemClick
         OnSaveButton()
     End Sub
@@ -572,6 +624,17 @@ Partial Public Class OutlookAppointmentForm
     End Sub
 
     Private Sub BvbClose_ItemClick(ByVal sender As Object, ByVal e As Ribbon.BackstageViewItemEventArgs) Handles bvbClose.ItemClick
+=======
+    Private Sub BvbSave_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs) Handles bvbSave.ItemClick
+        OnSaveButton()
+    End Sub
+
+    Private Sub BvbSaveAs_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs) Handles bvbSaveAs.ItemClick
+        OnSaveAsButton()
+    End Sub
+
+    Private Sub BvbClose_ItemClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs) Handles bvbClose.ItemClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         OnCloseButton()
     End Sub
 
@@ -600,11 +663,19 @@ Partial Public Class OutlookAppointmentForm
         OnApplicationButtonClick()
     End Sub
 
+<<<<<<< HEAD
     Private Sub SchedulerPrint_PrintOptionsClick(ByVal sender As Object, ByVal e As EventArgs) Handles appointmentBackstageControl.PrintOptionsClick
         OnPrintOptionsButton()
     End Sub
 
     Private Sub SchedulerPrint_PrintClick(ByVal sender As Object, ByVal e As EventArgs) Handles appointmentBackstageControl.PrintClick
+=======
+    Private Sub SchedulerPrint_PrintOptionsClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles appointmentBackstageControl.PrintOptionsClick
+        OnPrintOptionsButton()
+    End Sub
+
+    Private Sub SchedulerPrint_PrintClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles appointmentBackstageControl.PrintClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         OnPrintButton()
     End Sub
 

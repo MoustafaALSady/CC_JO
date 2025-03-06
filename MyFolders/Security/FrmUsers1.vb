@@ -1,10 +1,17 @@
 ﻿Option Explicit Off
 Imports System.Data.SqlClient
 Public Class FrmUsers1
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private WithEvents TimerTestNet As New Timer
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
@@ -22,7 +29,11 @@ Public Class FrmUsers1
     ReadOnly Cancel As Boolean = False
     Dim DelRow As Boolean = False
     ReadOnly RowCount As Integer = 0
+<<<<<<< HEAD
     Private Sub FrmUSERS_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmUSERS_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -38,7 +49,11 @@ Public Class FrmUsers1
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmUsers1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmUsers1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -111,7 +126,11 @@ Public Class FrmUsers1
         Try
             If DelRow = True Then
                 Me.PictureBox2.Visible = True
+<<<<<<< HEAD
                 Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+                Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .WorkerReportsProgress = True,
                     .WorkerSupportsCancellation = True
                 }
@@ -155,10 +174,17 @@ Public Class FrmUsers1
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As String = "INSERT INTO USERS( UserName, Pws, Realname, UserType, CUser, COUser, BlockUser, LockAddRow, LockDelete, LockSave, LockUpdate, Printpreview, TransferofAccounts, InternalAuditor, CollaborationManager, HeadofAuditingDepartment, ExternalAuditor, FileList, ListOFClients, CashAndMembers, ListOFAccounts, ListOFelectronicArchives, StaffMenu,Internet,RAdmin1) VALUES   ( @UserName, @Pws, @Realname, @UserType, @CUser, @COUser, @BlockUser, @LockAddRow, @LockDelete, @LockSave, @LockUpdate, @Printpreview, @TransferofAccounts, @InternalAuditor, @CollaborationManager, @HeadofAuditingDepartment, @ExternalAuditor, @FileList, @ListOFClients, @CashAndMembers, @ListOFAccounts, @ListOFelectronicArchives, @StaffMenu,@Internet,@RAdmin1)"
 
             Dim cmd As New SqlCommand(sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As String = "INSERT INTO USERS( UserName, Pws, Realname, UserType, CUser, COUser, BlockUser, LockAddRow, LockDelete, LockSave, LockUpdate, Printpreview, TransferofAccounts, InternalAuditor, CollaborationManager, HeadofAuditingDepartment, ExternalAuditor, FileList, ListOFClients, CashAndMembers, ListOFAccounts, ListOFelectronicArchives, StaffMenu,Internet,RAdmin1) VALUES   ( @UserName, @Pws, @Realname, @UserType, @CUser, @COUser, @BlockUser, @LockAddRow, @LockDelete, @LockSave, @LockUpdate, @Printpreview, @TransferofAccounts, @InternalAuditor, @CollaborationManager, @HeadofAuditingDepartment, @ExternalAuditor, @FileList, @ListOFClients, @CashAndMembers, @ListOFAccounts, @ListOFelectronicArchives, @StaffMenu,@Internet,@RAdmin1)"
+
+            Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -213,9 +239,15 @@ Public Class FrmUsers1
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(ID) FROM USERS", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(ID) FROM USERS", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -233,10 +265,17 @@ Public Class FrmUsers1
     End Sub
     Private Sub SEARCHUSERS()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT UserName  FROM USERS  WHERE (USERS.UserName)='" & Me.TEXTUserName.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT UserName  FROM USERS  WHERE (USERS.UserName)='" & Me.TEXTUserName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "USERS")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -250,10 +289,17 @@ Public Class FrmUsers1
     End Sub
     Private Sub SEARCHUSERS1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT Realname  FROM USERS  WHERE (USERS.Realname)='" & Me.TextUsersRealName.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT Realname  FROM USERS  WHERE (USERS.Realname)='" & Me.TextUsersRealName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "USERS")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -267,10 +313,17 @@ Public Class FrmUsers1
     End Sub
     Private Sub SEARCHUSERS2()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT CUser, COUser  FROM COMPANY  WHERE (COMPANY.CMP2)='" & FrmMAIN.ComboGetAssociationName.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT CUser, COUser  FROM COMPANY  WHERE (COMPANY.CMP2)='" & FrmMAIN.ComboGetAssociationName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "COMPANY")
         If ds.Tables(0).Rows.Count > 0 Then
@@ -283,7 +336,11 @@ Public Class FrmUsers1
         Adp1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
@@ -304,10 +361,17 @@ Public Class FrmUsers1
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+<<<<<<< HEAD
         Dim Sound As IO.Stream = My.Resources.addv
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+        Dim Sound As System.IO.Stream = My.Resources.addv
+        My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
+    End Sub
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -335,7 +399,11 @@ Public Class FrmUsers1
             Me.SAVERECORD()
             Me.PictureBox1.Visible = True
             Me.BS.EndEdit()
+<<<<<<< HEAD
             Me.SaveDataBase = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -344,7 +412,11 @@ Public Class FrmUsers1
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonSELALL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSELALL.Click
+=======
+    Private Sub ButtonSELALL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSELALL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.ButtonSELALL.Text = "تحديدالكل" Then
             For Each chk1 In PanelGB1.Controls

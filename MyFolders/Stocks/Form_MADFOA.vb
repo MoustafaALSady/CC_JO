@@ -6,7 +6,11 @@
         InitializeComponent()
         Me.f = Form_
     End Sub
+<<<<<<< HEAD
     Private Sub Form_MADFOA_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+=======
+    Private Sub Form_MADFOA_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim a As Integer = Form_beea.TextTotalPrice.Text
         Dim b As Integer = Me.TextpaidUp.Text
@@ -20,7 +24,11 @@
             Me.Close()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Form_MADFOA_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form_MADFOA_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()

@@ -1,7 +1,11 @@
 Imports System.ComponentModel
 
 Public Class FsButton
+<<<<<<< HEAD
     Inherits Control
+=======
+    Inherits System.Windows.Forms.Control
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Event ButtonThemeChanged(ByVal sender As Object, ByVal e As EventArgs)
     Event ThemeColorChanged(ByVal sender As Object, ByVal e As EventArgs)
@@ -34,13 +38,22 @@ Public Class FsButton
     End Sub
 
     'Required by the Windows Form Designer
+<<<<<<< HEAD
     Private components As IContainer
+=======
+    Private components As System.ComponentModel.IContainer
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
+<<<<<<< HEAD
     <Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         components = New Container
+=======
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        components = New System.ComponentModel.Container
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
 #End Region
@@ -101,7 +114,11 @@ Public Class FsButton
         End Set
     End Property
 
+<<<<<<< HEAD
     Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
+=======
+    Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnPaint(e)
 
         'Add all painting code here
@@ -167,7 +184,11 @@ Public Class FsButton
     End Sub
 
 
+<<<<<<< HEAD
     Protected Overrides Sub OnMouseMove(ByVal e As MouseEventArgs)
+=======
+    Protected Overrides Sub OnMouseMove(ByVal e As System.Windows.Forms.MouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnMouseMove(e)
 
         If e.Button = MouseButtons.None Or e.Button = MouseButtons.Left Then
@@ -193,7 +214,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnMouseLeave(ByVal e As EventArgs)
+=======
+    Protected Overrides Sub OnMouseLeave(ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnMouseLeave(e)
 
         isMouseOver = False
@@ -202,7 +227,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnMouseDown(ByVal e As MouseEventArgs)
+=======
+    Protected Overrides Sub OnMouseDown(ByVal e As System.Windows.Forms.MouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnMouseDown(e)
 
         If e.Button = MouseButtons.Left Then
@@ -218,7 +247,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnMouseUp(ByVal e As MouseEventArgs)
+=======
+    Protected Overrides Sub OnMouseUp(ByVal e As System.Windows.Forms.MouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         MyBase.OnMouseUp(e)
 
@@ -229,7 +262,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnEnter(ByVal e As EventArgs)
+=======
+    Protected Overrides Sub OnEnter(ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnEnter(e)
 
         isFocused = True
@@ -237,7 +274,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnLeave(ByVal e As EventArgs)
+=======
+    Protected Overrides Sub OnLeave(ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnLeave(e)
 
         isFocused = False
@@ -245,7 +286,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnKeyDown(ByVal e As KeyEventArgs)
+=======
+    Protected Overrides Sub OnKeyDown(ByVal e As System.Windows.Forms.KeyEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnKeyDown(e)
 
         If e.KeyCode = Keys.Space Then
@@ -255,7 +300,11 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnKeyUp(ByVal e As KeyEventArgs)
+=======
+    Protected Overrides Sub OnKeyUp(ByVal e As System.Windows.Forms.KeyEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnKeyUp(e)
 
         If e.KeyCode = 32 Then
@@ -266,12 +315,20 @@ Public Class FsButton
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnTextChanged(ByVal e As EventArgs)
+=======
+    Protected Overrides Sub OnTextChanged(ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnTextChanged(e)
         Me.Invalidate()
     End Sub
 
+<<<<<<< HEAD
     Protected Overrides Sub OnEnabledChanged(ByVal e As EventArgs)
+=======
+    Protected Overrides Sub OnEnabledChanged(ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MyBase.OnEnabledChanged(e)
         Me.Invalidate()
     End Sub

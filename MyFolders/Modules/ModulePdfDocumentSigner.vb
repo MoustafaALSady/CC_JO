@@ -36,7 +36,11 @@ Module ModulePdfDocumentSigner
         loadedDocument.SaveDocument(Document1, signatures)
         'Process.Start(Document1)
     End Sub
+<<<<<<< HEAD
     <Runtime.CompilerServices.Extension()>
+=======
+    <System.Runtime.CompilerServices.Extension()>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub WaitForWindowHandleToClose(ByVal p As Process, ByVal pollingInterval As Integer,
                                           ByVal waitForOpenTimeout As Integer, ByVal waitForCloseTimeout As Integer)
 

@@ -8,7 +8,11 @@ Imports WIA
 
 Public Class FrmJPG
     Public WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public ds As New DataSet
     Dim RowCount As Integer = 0
     Public ID As Integer
@@ -88,7 +92,11 @@ Public Class FrmJPG
         If String.IsNullOrWhiteSpace(MyFileInfo.Extension) Then Exit Sub
         Me.ShowMyFileInfo()
     End Sub
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Threading.Thread.Sleep(100)
         MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
         If Not IO.Directory.Exists(MYFOLDER & "\FailImag") Then Directory.CreateDirectory(MYFOLDER & "\FolderImageName")
@@ -105,7 +113,11 @@ Public Class FrmJPG
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim reader As SqlDataReader
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         cmd.Parameters.Add(New SqlParameter("@id3", Me.TEXTBOX1.Text))
         reader = cmd.ExecuteReader()
         reader.Read()
@@ -133,7 +145,11 @@ Public Class FrmJPG
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim reader As SqlDataReader
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         cmd.Parameters.Add(New SqlParameter("@id3", Me.TEXTBOX1.Text))
         reader = cmd.ExecuteReader()
         reader.Read()
@@ -162,7 +178,11 @@ Public Class FrmJPG
         On Error Resume Next
         Dim Consum As New SqlConnection(ModuleGeneral.constring)
         Dim SQL As String = "SELECT MAX(DOC1) FROM MYDOCUMENTSHOME"
+<<<<<<< HEAD
         Dim CMD As New SqlCommand
+=======
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -204,9 +224,15 @@ Public Class FrmJPG
     End Sub
     Private Sub UPDATERECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As String = " Update MYDOCUMENTSHOME SET   DOC2 = @DOC2, DOC3 = @DOC3, DOC4 = @DOC4, DOC5 = @DOC5, DOC7 = @DOC7 WHERE DOC1 = @DOC1"
         Dim CMD As New SqlCommand With {
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As String = " Update MYDOCUMENTSHOME SET   DOC2 = @DOC2, DOC3 = @DOC3, DOC4 = @DOC4, DOC5 = @DOC5, DOC7 = @DOC7 WHERE DOC1 = @DOC1"
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -226,12 +252,20 @@ Public Class FrmJPG
         CMD.ExecuteNonQuery()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmJPG_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
+=======
+    Private Sub FrmJPG_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Dispose()
         'Form_Scanner.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmJPG_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmJPG_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F3
@@ -263,7 +297,11 @@ Public Class FrmJPG
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PictureBox1.Click
+=======
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim current As Control
         If DockStyl = False Then
             DockStyl = True
@@ -311,12 +349,20 @@ Public Class FrmJPG
                 Directory.CreateDirectory(ModuleGeneral.MYFOLDER & "\Photos")
             End If
             Me.ds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT  DOC1, LO, DOC2, DOC3, DOC4, DOC5, DOC6, DOC7, DOC8, date_1, USERNAME, CUser, COUser, da, ne, da1, ne1  FROM MYDOCUMENTSHOME WHERE  CUser='" & ModuleGeneral.CUser & "'and DOC1 ='" & Me.TEXTBOX1.Text & "'OR LO ='" & Trim(Me.TextTransactionNumber.Text) & "'OR DOC2 ='" & Trim(Me.TEXTFileNo.Text) & "'ORDER BY DOC1"
             End With
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.ds = New DataSet
             Consum.Open()
             Me.SqlDataAdapter1.Fill(Me.ds, "MYDOCUMENTSHOME")
@@ -362,13 +408,21 @@ Public Class FrmJPG
     End Sub
     Public Sub DanLOd()
         On Error Resume Next
+<<<<<<< HEAD
         Me.BackWorker2 = New BackgroundWorker With {
+=======
+        Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
         Me.BackWorker2.RunWorkerAsync()
     End Sub
+<<<<<<< HEAD
     Public Sub FrmJPG_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Public Sub FrmJPG_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -450,7 +504,11 @@ Public Class FrmJPG
     Shared Function GetFileDescription(ByVal filePath As String) As String
         Dim regKey As RegistryKey = Nothing
         Try
+<<<<<<< HEAD
             regKey = Registry.ClassesRoot.OpenSubKey(New FileInfo(filePath).Extension)
+=======
+            regKey = Registry.ClassesRoot.OpenSubKey(New System.IO.FileInfo(filePath).Extension)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If regKey IsNot Nothing Then
                 Dim className As String = regKey.GetValue("")
                 If className.Length > 0 Then
@@ -471,7 +529,11 @@ Public Class FrmJPG
         End Try
         Return Nothing
     End Function
+<<<<<<< HEAD
     Private Sub ButLogq_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButLogq.Click
+=======
+    Private Sub ButLogq_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButLogq.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         'OpenFileDialog1.Filter = "Bitmap file (*.bmp)|*.bmp|TIFF file (*.tif)|*.tif|JPEG file (*.jpg)|*.jpg|PNG file (*.png)|*.png|GIF file (*.gif)|*.gif|All files (*.*)|*.*"
         'With Me.OpenFileDialog1
@@ -544,7 +606,11 @@ Public Class FrmJPG
         On Error Resume Next
         Dim Consum As New SqlConnection(ModuleGeneral.constring)
         Dim SQL As String = " Update MYDOCUMENTSHOME SET  DOC6 = @DOC6 WHERE DOC1 = @DOC1"
+<<<<<<< HEAD
         Dim CMD As New SqlCommand With {
+=======
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -565,27 +631,47 @@ Public Class FrmJPG
         Consum.Close()
         SCANFILE = ""
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             If Not TestNet Then
@@ -697,7 +783,11 @@ Public Class FrmJPG
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
 
         Me.DragDropA = False
@@ -709,14 +799,22 @@ Public Class FrmJPG
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         MYDELETERECORD("MYDOCUMENTSHOME", "DOC1", Me.TEXTBOX1, Me.BS, True)
         FrmJPG_Load(sender, e)
         CLEARDATA1(Me)
         Me.PictureBox1.Image = Nothing
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim F As New FrmPRINT
         If Len(Me.TextFileDescription.Text) = 0 Then
@@ -729,7 +827,11 @@ Public Class FrmJPG
         Dim sql As String = "SELECT DOC6 FROM MYDOCUMENTSHOME WHERE DOC1 = '" & Me.TEXTBOX1.Text & "'"
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim b() As Byte
         b = cmd.ExecuteScalar()
         If b.Length > 0 Then
@@ -756,7 +858,11 @@ Public Class FrmJPG
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTBOX1_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTBOX1.KeyDown, TEXTFileNo.KeyDown, TEXTFileSubject.KeyDown
+=======
+    Private Sub TEXTBOX1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTBOX1.KeyDown, TEXTFileNo.KeyDown, TEXTFileSubject.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -764,7 +870,11 @@ Public Class FrmJPG
         End Select
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButScan.Click
+=======
+    Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButScan.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Dim f As FormScan1 = New FormScan1(AddressOf ShowImage)
         'f.Show()
         Try
@@ -777,7 +887,11 @@ Public Class FrmJPG
     Private Sub ShowImage(ByVal image As Image)
         PictureBox1.Image = image
     End Sub
+<<<<<<< HEAD
     Public Sub ButEditImage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButEditImage.Click
+=======
+    Public Sub ButEditImage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButEditImage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Static P As Integer
         P = Me.BS.Position
@@ -787,7 +901,11 @@ Public Class FrmJPG
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Public Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP5.Click
+=======
+    Public Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP5.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Not Connection.TestNet Then
                 Interaction.MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", MsgBoxStyle.Critical, " ‰»ÌÂ")

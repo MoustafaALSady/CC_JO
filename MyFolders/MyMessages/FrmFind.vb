@@ -1,5 +1,9 @@
 Public Class FrmFind
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim StartPosition As Integer
         Dim SearchType As CompareMethod
         If ChkMatchCase.Checked = True Then
@@ -16,7 +20,11 @@ Public Class FrmFind
         FrmMyMessages.RichTextBoxEx1.ScrollToCaret()
         frmMAIN.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP1.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim StartPosition As Integer = FrmMyMessages.RichTextBoxEx1.SelectionStart + 2
         Dim SearchType As CompareMethod
         If ChkMatchCase.Checked = True Then
@@ -33,7 +41,11 @@ Public Class FrmFind
         FrmMyMessages.RichTextBoxEx1.ScrollToCaret()
         frmMAIN.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmFind_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmFind_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Enter
@@ -49,7 +61,11 @@ Public Class FrmFind
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmFind_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmFind_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()

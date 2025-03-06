@@ -291,7 +291,11 @@ Partial Class FinaBalances2
         Me.Panel4.Controls.Add(Me.DataGridView1)
         Me.Panel4.Location = New System.Drawing.Point(6, 3)
         Me.Panel4.Name = "Panel4"
+<<<<<<< HEAD
         Me.Panel4.Size = New System.Drawing.Size(895, 224)
+=======
+        Me.Panel4.Size = New System.Drawing.Size(895, 222)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.TabIndex = 113
         '
         'DataGridView1
@@ -311,7 +315,11 @@ Partial Class FinaBalances2
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+<<<<<<< HEAD
         Me.DataGridView1.Size = New System.Drawing.Size(886, 216)
+=======
+        Me.DataGridView1.Size = New System.Drawing.Size(886, 214)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView1.TabIndex = 86
         '
         'account_no
@@ -388,7 +396,11 @@ Partial Class FinaBalances2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel5.Controls.Add(Me.DataGridView2)
+<<<<<<< HEAD
         Me.Panel5.Location = New System.Drawing.Point(6, 229)
+=======
+        Me.Panel5.Location = New System.Drawing.Point(6, 227)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(895, 203)
         Me.Panel5.TabIndex = 114
@@ -490,7 +502,11 @@ Partial Class FinaBalances2
         Me.Panel3.Controls.Add(Me.TextTotalDebit)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Button3)
+<<<<<<< HEAD
         Me.Panel3.Location = New System.Drawing.Point(6, 436)
+=======
+        Me.Panel3.Location = New System.Drawing.Point(6, 434)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(896, 33)
         Me.Panel3.TabIndex = 112
@@ -1531,7 +1547,10 @@ Partial Class FinaBalances2
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(900, 600)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FinaBalances2"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

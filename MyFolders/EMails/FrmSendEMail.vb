@@ -15,12 +15,21 @@ Public Class FrmSendEMail
     Inherits DevExpress.XtraBars.Ribbon.RibbonForm
     Dim WithEvents BS As New BindingSource
     Dim ds As New DataSet
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
     Private currentFile As String
     Private WithEvents SmtpServer As New SmtpClient()
     Public cmd As New SqlCommand
     Dim FileStream As FileStream
     Dim Reader As BinaryReader = Nothing 'طريقة قرائة الملفات
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Private currentFile As String
+    Private WithEvents SmtpServer As New SmtpClient()
+    Public cmd As New SqlCommand
+    Dim FileStream As System.IO.FileStream
+    Dim Reader As System.IO.BinaryReader = Nothing 'طريقة قرائة الملفات
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim FileData As Byte() = Nothing           'لحفظ الملف
     Dim FileSize As Double = 0                 ' حجم الملف
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
@@ -36,7 +45,11 @@ Public Class FrmSendEMail
         InitializeComponent()
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmSendEMail_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FrmSendEMail_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -45,7 +58,11 @@ Public Class FrmSendEMail
                 Me.Close()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSendEMail_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmSendEMail_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -54,7 +71,11 @@ Public Class FrmSendEMail
                 Me.Opacity = a / 10
             Next
 
+<<<<<<< HEAD
             ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+            ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -69,7 +90,11 @@ Public Class FrmSendEMail
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT FIELD1,FIELD2,FIELD3,FIELD4,FIELD5,FIELD6,FIELD7,FIELD8,FIELD9,FIELD10,FIELD11,FIELD12,FIELD13,FIELD14,FIELD15,FIELD16,CUser,COUser,da,ne FROM TSendEMail  WHERE  CUser='" & CUser & "'  ORDER BY Field1"
@@ -85,13 +110,21 @@ Public Class FrmSendEMail
 
 
             Dim ds1 As New DataSet
+<<<<<<< HEAD
             Dim SqlDataAdapter2 As SqlDataAdapter
+=======
+            Dim SqlDataAdapter2 As SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL1 As New SqlCommand("SELECT * FROM TNewMail ORDER BY Field1", Consum)
             SqlDataAdapter2 = New SqlDataAdapter(strSQL1)
             ds1.Clear()
             SqlDataAdapter2.Fill(ds1, "TNewMail")
             Dim ds2 As New DataSet
+<<<<<<< HEAD
             Dim SqlDataAdapter3 As SqlDataAdapter
+=======
+            Dim SqlDataAdapter3 As SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL2 As New SqlCommand("SELECT * FROM TSettingEmail WHERE  CUser='" & CUser & "'ORDER BY FIELD1", Consum)
             SqlDataAdapter3 = New SqlDataAdapter(strSQL2)
             ds2.Clear()
@@ -181,7 +214,11 @@ Public Class FrmSendEMail
     End Sub
     Private Sub SurroundingSub()
         'Me.RichEditControl1.Document.DefaultParagraphProperties.Alignment = ParagraphAlignment.Right
+<<<<<<< HEAD
         Dim document As Document = RichEditControl1.Document
+=======
+        Dim document As DevExpress.XtraRichEdit.API.Native.Document = RichEditControl1.Document
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         document.DefaultParagraphProperties.RightToLeft = True
 
     End Sub
@@ -212,8 +249,13 @@ Public Class FrmSendEMail
     Private Sub SAVERECORD()
         Try
             Dim N As Double
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim cmd1 As New SqlCommand("SELECT MAX(Field1) FROM TSendEMail", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(Field1) FROM TSendEMail", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim resualt As Object = cmd1.ExecuteScalar()
@@ -227,7 +269,11 @@ Public Class FrmSendEMail
 
             Dim SQL As String = "INSERT INTO TSendEMail( Field2, Field3 , Field4, Field5, Field6 , Field7, Field8, Field9 , Field10, Field11, Field12 , Field13, Field14, Field15 , Field16, CUser, COUser) VALUES     ( @Field2, @Field3 , @Field4, @Field5, @Field6 , @Field7, @Field8, @Field9 , @Field10, @Field11, @Field12 , @Field13, @Field14, @Field15 , @Field16, @CUser, @COUser)"
 
+<<<<<<< HEAD
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -261,9 +307,15 @@ Public Class FrmSendEMail
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = " Update TSendEMail Set  Field2 = @Field2, Field3 = @Field3, Field4 = @Field4,Field5 = @Field5, Field6 = @Field6, Field7 = @Field7, Field8 = @Field8, Field9 = @Field9, Field10 = @Field10,Field11 = @Field11, Field12 = @Field12, Field13 = @Field13,Field14 = @Field14, Field15 = @Field15, Field16 = @Field16, CUser = @CUser  WHERE Field1 =" & Val(ID)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = " Update TSendEMail Set  Field2 = @Field2, Field3 = @Field3, Field4 = @Field4,Field5 = @Field5, Field6 = @Field6, Field7 = @Field7, Field8 = @Field8, Field9 = @Field9, Field10 = @Field10,Field11 = @Field11, Field12 = @Field12, Field13 = @Field13,Field14 = @Field14, Field15 = @Field15, Field16 = @Field16, CUser = @CUser  WHERE Field1 =" & Val(ID)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -348,7 +400,11 @@ Public Class FrmSendEMail
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -377,7 +433,11 @@ Public Class FrmSendEMail
     Private Sub FILLCOMBOBOXITEMS1(ByVal TABLE As String, ByVal FIELD As String, ByVal COMBO As Object)
         On Error Resume Next
         'constring = ("workstation id=coj.ddns.net;packet size=4096;user id=sa;pwd=2710/m;data source=coj.ddns.net;persist security info=False;initial catalog=co")
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim BS As New BindingSource
         Dim I As Integer
         Dim DS As New DataSet
@@ -391,7 +451,11 @@ Public Class FrmSendEMail
         Next I
         ADP.Dispose()
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         RecordCount()
     End Sub
@@ -425,27 +489,47 @@ Public Class FrmSendEMail
 
 
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ADDBUTTON.Enabled = False
         Me.EDITBUTTON.Enabled = False
         Me.SAVEBUTTON.Enabled = True
@@ -500,10 +584,17 @@ Public Class FrmSendEMail
         Me.LabelField12.Text = ""
         Me.TextCUser.Text = CUser.ToString.Trim
         Me.TextCOUser.Text = COUser.ToString.Trim
+<<<<<<< HEAD
         Dim Sound As Stream = My.Resources.addv
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+        Dim Sound As System.IO.Stream = My.Resources.addv
+        My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
+    End Sub
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -533,7 +624,11 @@ Public Class FrmSendEMail
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
             Me.SAVERECORD()
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -543,7 +638,11 @@ Public Class FrmSendEMail
             MessageBox.Show(ex.Message & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -573,7 +672,11 @@ Public Class FrmSendEMail
             Me.UPDATERECORD()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -583,7 +686,11 @@ Public Class FrmSendEMail
             MessageBox.Show(ex.Message & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ADDBUTTON.Enabled = True
         Me.SAVEBUTTON.Enabled = False
@@ -600,13 +707,21 @@ Public Class FrmSendEMail
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If LockDelete = True Then
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim resault As Integer
             If Me.BS.Count > 0 Then
                 resault = MessageBox.Show("سبنم حذف السجل الحالى", "حذف سجل ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
@@ -631,13 +746,21 @@ Public Class FrmSendEMail
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX2_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextSubject.SelectedIndexChanged
+=======
+    Private Sub TEXTBOX2_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextSubject.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.TextSubject.SelectedIndex
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Private Sub OpenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub OpenToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If RichEditControl1.Modified Then
             Dim answer As Integer
             answer = MessageBox.Show("لم يتم حفظ المستند الحالي، تريد أن تستمر دون حفظ?", "الوثيقة لم يتم حفظها", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -677,8 +800,13 @@ Public Class FrmSendEMail
         Try
             Dim strImagePath As String = OpenFileDialog1.FileName
             Me.LinkLabelAttached1.Text = strImagePath
+<<<<<<< HEAD
             FileStream = New FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Reader = New BinaryReader(FileStream) ' تعريف القارئ
+=======
+            FileStream = New System.IO.FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            Reader = New System.IO.BinaryReader(FileStream) ' تعريف القارئ
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FileData = Nothing
             FileData = Reader.ReadBytes(CType(FileStream.Length, Integer)) 'قراءة الملف
             FileSize = FileData.LongLength 'حجم الملف
@@ -698,8 +826,13 @@ Public Class FrmSendEMail
         Try
             Dim strImagePath As String = OpenFileDialog1.FileName
             Me.LinkLabelAttached2.Text = strImagePath
+<<<<<<< HEAD
             FileStream = New FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Reader = New BinaryReader(FileStream) ' تعريف القارئ
+=======
+            FileStream = New System.IO.FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            Reader = New System.IO.BinaryReader(FileStream) ' تعريف القارئ
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FileData = Nothing
             FileData = Reader.ReadBytes(CType(FileStream.Length, Integer)) 'قراءة الملف
             FileSize = FileData.LongLength 'حجم الملف
@@ -719,8 +852,13 @@ Public Class FrmSendEMail
         Try
             Dim strImagePath As String = OpenFileDialog1.FileName
             Me.LinkLabelAttached3.Text = strImagePath
+<<<<<<< HEAD
             FileStream = New FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Reader = New BinaryReader(FileStream) ' تعريف القارئ
+=======
+            FileStream = New System.IO.FileStream(strImagePath, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            Reader = New System.IO.BinaryReader(FileStream) ' تعريف القارئ
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FileData = Nothing
             FileData = Reader.ReadBytes(CType(FileStream.Length, Integer)) 'قراءة الملف
             FileSize = FileData.LongLength 'حجم الملف
@@ -779,7 +917,11 @@ Public Class FrmSendEMail
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonXP2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP2.Click
+=======
+    Private Sub ButtonXP2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim s As Integer
         Dim DS5 As New DataSet
 
@@ -790,7 +932,11 @@ Public Class FrmSendEMail
             Exit Sub
         End If
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.PictureBox1.Image = My.Resources.Resources.Doveofpeace
             Me.ButtonXP2.Enabled = False
             'ButtonXP5.Enabled = True
@@ -872,7 +1018,11 @@ Public Class FrmSendEMail
             Me.PictureBox2.Visible = True
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -901,6 +1051,7 @@ Public Class FrmSendEMail
         End Try
         Return n
     End Function
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP1.Click
         OpenFileD1()
     End Sub
@@ -911,6 +1062,18 @@ Public Class FrmSendEMail
         OpenFileD3()
     End Sub
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP1.Click
+        OpenFileD1()
+    End Sub
+    Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP3.Click
+        OpenFileD2()
+    End Sub
+    Private Sub ButtonXP4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP4.Click
+        OpenFileD3()
+    End Sub
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.RadioButton1.Checked = True Then
             Me.CheckedListEmails.Enabled = False
@@ -922,7 +1085,11 @@ Public Class FrmSendEMail
             Me.CBEmailSentToYou.Enabled = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton2.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.RadioButton2.Checked = True Then
             Me.CheckedListEmails.Enabled = True
@@ -934,7 +1101,11 @@ Public Class FrmSendEMail
             Me.CBEmailSentToYou.Enabled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXSETINGEMAIL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXSETINGEMAIL.Click
+=======
+    Private Sub ButtonXSETINGEMAIL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXSETINGEMAIL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -949,7 +1120,11 @@ Public Class FrmSendEMail
         F.Show()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonXNEWEMAIL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXNEWEMAIL.Click
+=======
+    Private Sub ButtonXNEWEMAIL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXNEWEMAIL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -962,10 +1137,17 @@ Public Class FrmSendEMail
         Dim F As New FrmewMail1
         F.Show()
     End Sub
+<<<<<<< HEAD
     Private Sub CBConsignee_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles CBConsignee.SelectedIndexChanged
         On Error Resume Next
         Dim I As Integer
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub CBConsignee_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CBConsignee.SelectedIndexChanged
+        On Error Resume Next
+        Dim I As Integer
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim DS As New DataSet
         Dim str As String = "SELECT DISTINCT FIELD3 FROM  TNewMail WHERE FIELD2='" & Me.CBConsignee.Text & "'"
         Dim ADP As New SqlDataAdapter(str, Consum)
@@ -977,11 +1159,19 @@ Public Class FrmSendEMail
         Next I
         ADP.Dispose()
     End Sub
+<<<<<<< HEAD
     Private Sub CBSender_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles CBSender.SelectedIndexChanged
         On Error Resume Next
         Dim I As Integer
         Dim DS As New DataSet
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub CBSender_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CBSender.SelectedIndexChanged
+        On Error Resume Next
+        Dim I As Integer
+        Dim DS As New DataSet
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str As String = "SELECT DISTINCT FIELD4 FROM  TSettingEmail WHERE FIELD6='" & Me.CBSender.Text & "'"
         Dim ADP As New SqlDataAdapter(str, Consum)
         DS.Clear()
@@ -992,6 +1182,7 @@ Public Class FrmSendEMail
         Next I
         ADP.Dispose()
     End Sub
+<<<<<<< HEAD
     Private Sub CBSender_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles CBSender.KeyPress
         AutoComplete(Me.CBSender, e, )
     End Sub
@@ -999,6 +1190,15 @@ Public Class FrmSendEMail
         AutoComplete(Me.CBConsignee, e, )
     End Sub
     Private Sub ButtonSELECTALL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSELECTALL.Click
+=======
+    Private Sub CBSender_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CBSender.KeyPress
+        AutoComplete(Me.CBSender, e, )
+    End Sub
+    Private Sub CBConsignee_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CBConsignee.KeyPress
+        AutoComplete(Me.CBConsignee, e, )
+    End Sub
+    Private Sub ButtonSELECTALL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSELECTALL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim s As Integer
         For s = 0 To Me.CheckedListEmails.Items.Count - 1
@@ -1007,7 +1207,11 @@ Public Class FrmSendEMail
             End If
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDESELECT_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDESELECT.Click
+=======
+    Private Sub ButtonDESELECT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDESELECT.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim s As Integer
         For s = 0 To Me.CheckedListEmails.Items.Count - 1
@@ -1016,10 +1220,17 @@ Public Class FrmSendEMail
             End If
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub MNUDELALL_Click(ByVal sender As System.Object, ByVal e As EventArgs)
         Try
             Dim resault As Integer
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub MNUDELALL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Try
+            Dim resault As Integer
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.BS.Count > 0 Then
                 resault = MessageBox.Show("سبنم مسح كل السجلات ", "مصح بيانات جدول ", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
                 If resault = vbYes Then
@@ -1053,7 +1264,11 @@ Public Class FrmSendEMail
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.ButtonXP2.Enabled = True
             Me.PictureBox1.Image = My.Resources.Resources.logCO2
@@ -1064,14 +1279,22 @@ Public Class FrmSendEMail
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDELALL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDELALL.Click
+=======
+    Private Sub ButtonDELALL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDELALL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If LockDelete = True Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
         Me.MNUDELALL_Click(sender, e)
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDELATTACHFILE_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDELATTACHFILE.Click
+=======
+    Private Sub ButtonDELATTACHFILE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDELATTACHFILE.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If LockDelete = True Then
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")

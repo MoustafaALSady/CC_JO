@@ -2,12 +2,20 @@
 Imports System.Data.SqlClient
 
 Public Class FormAuditorsnotes
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public SqlDataAdapter1 As SqlDataAdapter
     Dim dt As New DataTable
     Dim NOROWS As String
 
+<<<<<<< HEAD
     Private Sub FormAuditorsnotes_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormAuditorsnotes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -15,7 +23,11 @@ Public Class FormAuditorsnotes
             Application.DoEvents()
             Me.Opacity = a / 10
         Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "SELECT   AN, AN1, AN2, AN3, AN4, AN5, AN6, USERNAME, CUser  FROM Auditorsnotes  WHERE AN7 ='" & True & "' and CUser ='" & CUser & "'"
@@ -84,7 +96,11 @@ Public Class FormAuditorsnotes
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_SelectionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.SelectionChanged
+=======
+    Private Sub DataGridView1_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.SelectionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         If Me.DataGridView1.Rows.Count > 0 Then
             For Each r As DataGridViewRow In DataGridView1.Rows
@@ -123,7 +139,11 @@ Public Class FormAuditorsnotes
         'LisrBCount = Me.TextBox1.Lines.Count
         'MsgBox(LisrBCount)
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.CurrentCellChanged
+=======
+    Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.CurrentCellChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ''On Error Resume Next
         If Me.DataGridView1.Rows.Count > 0 Then
             For Each r As DataGridViewRow In DataGridView1.Rows
@@ -162,13 +182,21 @@ Public Class FormAuditorsnotes
         'LisrBCount = Me.TextBox1.Lines.Count
         'MsgBox(LisrBCount)
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+=======
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'If Me.TextBox2.Text = Nothing Then
         AudiSearchMoves()
         'End If
         'LisrBCount = Me.TextBox1.Lines.Count
         'MsgBox(LisrBCount)
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Connection.AN = Me.DataGridView1.CurrentRow.Cells("AN").Value
         If Me.DataGridView1.CurrentRow.Cells("AN5").Value = FrmDailyrestrictions.Text Then
             Dim f1 As New FrmDailyrestrictions With {
@@ -296,7 +324,11 @@ Public Class FormAuditorsnotes
             Dim f14 As New FormEmployees4
             ds14.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT SLY1 FROM SALARIES WHERE  CUser='" & CUser & "' and Year(SLY26) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  ORDER BY SLY1", Consum)
+<<<<<<< HEAD
             Dim SqlDataAdapter14 As New SqlDataAdapter
+=======
+            Dim SqlDataAdapter14 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds14.Clear()
             SqlDataAdapter14.Fill(ds14, "SALARIES")
             f14.BS.DataMember = "SALARIES"

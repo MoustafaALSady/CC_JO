@@ -3,10 +3,17 @@ Public Class FrmExpire
     ReadOnly InvDataset As New DataSet, Flt As String
     Dim adp As New SqlClient.SqlDataAdapter
 
+<<<<<<< HEAD
     Private Sub FrmExpire_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
         Timer1.Enabled = False
     End Sub
     Private Sub FrmExpire_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmExpire_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        Timer1.Enabled = False
+    End Sub
+    Private Sub FrmExpire_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'FinishedItems
         Me.BackgroundImage = img
@@ -77,7 +84,11 @@ Public Class FrmExpire
             End If
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+=======
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If xx >= 1 And xx <= Val(CategoriesIN - 10) Then
             For I As Integer = 0 To Me.DGRD.Rows.Count - 1
                 Dim row As DataGridViewRow = Me.DGRD.Rows(I)
@@ -88,7 +99,11 @@ Public Class FrmExpire
                     row.Cells("Col_Days").Style.BackColor = Color.SteelBlue
                 End If
             Next
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.MouseHover
+=======
+            Dim Sound As System.IO.Stream = My.Resources.MouseHover
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             If xx = 1 Then
                 My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
@@ -106,7 +121,11 @@ Public Class FrmExpire
                     row.Cells("Col_Days").Style.BackColor = Color.Red
                 End If
             Next
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.NoAccept
+=======
+            Dim Sound As System.IO.Stream = My.Resources.NoAccept
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If xx = 22 Then
                 My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             End If

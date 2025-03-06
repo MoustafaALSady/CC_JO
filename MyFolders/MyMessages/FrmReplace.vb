@@ -1,6 +1,10 @@
 
 Public Class FrmReplace
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim StartPosition As Integer
         Dim SearchType As CompareMethod
 
@@ -18,7 +22,11 @@ Public Class FrmReplace
         FrmMyMessages.RichTextBoxEx1.ScrollToCaret()
         FrmMyMessages.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP1.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim StartPosition As Integer = FrmMyMessages.RichTextBoxEx1.SelectionStart + 2
         Dim SearchType As CompareMethod
         If ChkMatchCase.Checked = True Then
@@ -35,7 +43,11 @@ Public Class FrmReplace
         FrmMyMessages.RichTextBoxEx1.ScrollToCaret()
         FrmMyMessages.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP2.Click
+=======
+    Private Sub ButtonXP2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If FrmMyMessages.RichTextBoxEx1.SelectedText.Length <> 0 Then
             FrmMyMessages.RichTextBoxEx1.SelectedText = TxtReplacementText.Text
         End If
@@ -55,7 +67,11 @@ Public Class FrmReplace
         FrmMyMessages.RichTextBoxEx1.ScrollToCaret()
         FrmMyMessages.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP3.Click
+=======
+    Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim currentPosition As Integer = FrmMyMessages.RichTextBoxEx1.SelectionStart
         Dim currentSelect As Integer = FrmMyMessages.RichTextBoxEx1.SelectionLength
         FrmMyMessages.RichTextBoxEx1.Rtf = Replace(FrmMyMessages.RichTextBoxEx1.Rtf, Trim(TxtSearchTerm.Text), Trim(TxtReplacementText.Text))
@@ -63,7 +79,11 @@ Public Class FrmReplace
         FrmMyMessages.RichTextBoxEx1.SelectionLength = currentSelect
         FrmMyMessages.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmReplace_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmReplace_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -83,7 +103,11 @@ Public Class FrmReplace
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmReplace_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmReplace_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()

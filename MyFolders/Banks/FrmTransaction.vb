@@ -6,6 +6,7 @@ Imports System.Diagnostics
 Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FrmTransaction
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
@@ -15,6 +16,17 @@ Public Class FrmTransaction
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
     Private WithEvents RefreshTab As BackgroundWorker
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
+    Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
+    Public Delegate Sub LoadDataBaseCallBack()
+    Public Delegate Sub CallLoadDataBase()
+    Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Delegate Sub PictureBox2Callback()
     Dim DelRow As Boolean = False
     Dim RowCount As Integer = 0
@@ -31,10 +43,17 @@ Public Class FrmTransaction
     Dim Deposit As Boolean = False
 
 
+<<<<<<< HEAD
     Private Sub FrmTransaction_Activated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Activated
         On Error Resume Next
     End Sub
     Private Sub FrmTransaction_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmTransaction_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        On Error Resume Next
+    End Sub
+    Private Sub FrmTransaction_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If CheckLogReview.Checked = True Then
                 Me.KeyPreview = False
@@ -193,14 +212,22 @@ Public Class FrmTransaction
             Me.PanelAccount.Enabled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub FrmDeposits_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Shown
+=======
+    Private Sub FrmDeposits_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Show()
         Me.TabPage1.Show()
         Me.TabPage3.Show()
         Me.TabPage4.Show()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmTransaction_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmTransaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         Me.TabPage1.BackgroundImage = img
@@ -235,9 +262,15 @@ Public Class FrmTransaction
         Me.BackWorker3.WorkerSupportsCancellation = True
 
     End Sub
+<<<<<<< HEAD
     Public Sub Load_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles load1.Click
         On Error Resume Next
         ConnectDataBase = New BackgroundWorker With {
+=======
+    Public Sub Load_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles load1.Click
+        On Error Resume Next
+        ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -245,12 +278,20 @@ Public Class FrmTransaction
         Me.load1.Enabled = False
         Me.CHK = False
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox5_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub ComboBox5_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AutoComplete(ComboDebitAccount, e, )
     End Sub
     Public Sub DanLOd()
         On Error Resume Next
+<<<<<<< HEAD
         BackWorker2 = New BackgroundWorker With {
+=======
+        BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -258,17 +299,29 @@ Public Class FrmTransaction
         Me.load1.Enabled = False
         Me.CHK = False
     End Sub
+<<<<<<< HEAD
     Private Sub BackWorker2_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackWorker2.DoWork
+=======
+    Private Sub BackWorker2_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackWorker2.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             myds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT  TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK21, TBNK22, TBNK23, TBNK24, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM PTRANSACTION  WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK1 ='" & Strings.Trim(Me.TB1) & "'or TBNK6 ='" & Strings.Trim(Me.TB2) & "'or TBNK22 ='" & Strings.Trim(Me.TB3) & "' or  TBNK23 ='" & Strings.Trim(Me.TB4) & "'ORDER BY TBNK1"
                 SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            With strSQL
+                .CommandText = "SELECT  TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK21, TBNK22, TBNK23, TBNK24, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM PTRANSACTION  WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK1 ='" & Strings.Trim(Me.TB1) & "'or TBNK6 ='" & Strings.Trim(Me.TB2) & "'or TBNK22 ='" & Strings.Trim(Me.TB3) & "' or  TBNK23 ='" & Strings.Trim(Me.TB4) & "'ORDER BY TBNK1"
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 myds = New DataSet
                 Consum.Open()
                 SqlDataAdapter1.Fill(myds, "PTRANSACTION")
@@ -291,7 +344,11 @@ Public Class FrmTransaction
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackWorker2_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackWorker2.RunWorkerCompleted
+=======
+    Private Sub BackWorker2_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackWorker2.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If e.Cancelled Then Exit Sub
             FILLCOMBOBOX1("CashBox", "CB1", "CUser", CUser, Me.ComboCB1)
@@ -435,17 +492,29 @@ Public Class FrmTransaction
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles ConnectDataBase.DoWork
+=======
+    Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ConnectDataBase.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             myds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT  TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK21, TBNK22, TBNK23, TBNK24, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM PTRANSACTION  WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1"
                 SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            With strSQL
+                .CommandText = "SELECT  TBNK1, TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK19, TBNK20, TBNK21, TBNK22, TBNK23, TBNK24, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM PTRANSACTION  WHERE CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1"
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 myds = New DataSet
                 Consum.Open()
                 SqlDataAdapter1.Fill(myds, "PTRANSACTION")
@@ -484,7 +553,11 @@ Public Class FrmTransaction
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+=======
+    Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If e.Cancelled Then Exit Sub
             FILLCOMBOBOX1("CashBox", "CB1", "CUser", CUser, Me.ComboCB1)
@@ -570,7 +643,11 @@ Public Class FrmTransaction
         On Error Resume Next
         RECORDSLABEL.Text = BS.Position + 1 & " من " & BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles RefreshTab.DoWork
+=======
+    Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles RefreshTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 1:
             myds = New DataSet
@@ -589,7 +666,11 @@ Public Class FrmTransaction
             End If
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub RefreshData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles RefreshTab.RunWorkerCompleted
+=======
+    Private Sub RefreshData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles RefreshTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If e.Cancelled Then Exit Sub
             BS.DataSource = myds.Tables("PTRANSACTION")
@@ -609,7 +690,11 @@ Public Class FrmTransaction
             MessageBox.Show(Ex.Message, "Error4", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles SaveTab.DoWork
+=======
+    Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles SaveTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
 1:
@@ -637,7 +722,11 @@ Public Class FrmTransaction
             Consum.Close()
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+=======
+    Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If DelRow = True Then
                 ButtonXP5_Click(sender, e)
@@ -658,7 +747,11 @@ Public Class FrmTransaction
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
 
             If Click1 = True Then
@@ -803,7 +896,11 @@ Public Class FrmTransaction
             PictureBox5.Visible = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         RecordCount()
     End Sub
@@ -856,9 +953,15 @@ Public Class FrmTransaction
 
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update PTRANSACTION SET  TBNK2 = @TBNK2, TBNK3 = @TBNK3, TBNK4 = @TBNK4, TBNK5 = @TBNK5, TBNK6 = @TBNK6, TBNK7 = @TBNK7, TBNK8 = @TBNK8, TBNK9 = @TBNK9, TBNK10 = @TBNK10, TBNK11 = @TBNK11, TBNK12 = @TBNK12, TBNK13 = @TBNK13, TBNK14 = @TBNK14, TBNK15 = @TBNK15, TBNK16 = @TBNK16, TBNK17 = @TBNK17, TBNK18 = @TBNK18, TBNK19 = @TBNK19, TBNK20 = @TBNK20, TBNK21 = @TBNK21, TBNK22 = @TBNK22, TBNK23 = @TBNK23, TBNK24 = @TBNK24, CB1 = @CB1, BN2 = @BN2, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE TBNK1 = @TBNK1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update PTRANSACTION SET  TBNK2 = @TBNK2, TBNK3 = @TBNK3, TBNK4 = @TBNK4, TBNK5 = @TBNK5, TBNK6 = @TBNK6, TBNK7 = @TBNK7, TBNK8 = @TBNK8, TBNK9 = @TBNK9, TBNK10 = @TBNK10, TBNK11 = @TBNK11, TBNK12 = @TBNK12, TBNK13 = @TBNK13, TBNK14 = @TBNK14, TBNK15 = @TBNK15, TBNK16 = @TBNK16, TBNK17 = @TBNK17, TBNK18 = @TBNK18, TBNK19 = @TBNK19, TBNK20 = @TBNK20, TBNK21 = @TBNK21, TBNK22 = @TBNK22, TBNK23 = @TBNK23, TBNK24 = @TBNK24, CB1 = @CB1, BN2 = @BN2, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE TBNK1 = @TBNK1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -935,27 +1038,47 @@ Public Class FrmTransaction
             Me.TEXTPreviousBalance.EditValue = F
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = 0
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position + 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Count - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1010,7 +1133,11 @@ Public Class FrmTransaction
         Me.Cursor = Cursors.WaitCursor
         Me.PictureBox2.Visible = True
         Me.UPDATERECORD()
+<<<<<<< HEAD
         Me.SaveTab = New BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -1024,12 +1151,20 @@ Public Class FrmTransaction
         'End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.CancelEdit()
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If LockDelete = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
@@ -1060,7 +1195,11 @@ Public Class FrmTransaction
         MYDELETERECORD("PTRANSACTION", "TBNK1", TEXTID, BS, True)
         Insert_Actions(Me.TEXTID.EditValue, "حذف", Me.Text) '6
     End Sub
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1075,8 +1214,13 @@ Public Class FrmTransaction
         Dim F As New FrmPRINT
         Dim txtFromDate As String
         Dim txtToDate As String
+<<<<<<< HEAD
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         txtFromDate = Format(Me.DateFrom.Value, "yyyy, MM, dd, 00, 00, 00")
         txtToDate = Format(Me.DateTO.Value, "yyyy, MM, dd, 00, 00, 00")
         If Me.DateFrom.Checked = False And Me.DateTO.Checked = False Then
@@ -1093,7 +1237,11 @@ Public Class FrmTransaction
             Dim DataSetTab30 As New DataSet
             Dim str As New SqlCommand("SELECT * FROM PTRANSACTION  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "' AND TBNK6 like '" & Me.ComboAccountNumber1.Text & "'", Consum)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DataSetTab30.Clear()
             SqlDataAdapter1.Fill(DataSetTab30, "PTRANSACTION")
             rpt.SetDataSource(DataSetTab30)
@@ -1119,7 +1267,11 @@ Public Class FrmTransaction
             Dim DataSetTab30 As New DataSet
             Dim str As New SqlCommand("SELECT * FROM PTRANSACTION  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DataSetTab30.Clear()
             SqlDataAdapter1.Fill(DataSetTab30, "PTRANSACTION")
             rpt.SetDataSource(DataSetTab30)
@@ -1145,7 +1297,11 @@ Public Class FrmTransaction
             Dim DataSetTab30 As New DataSet
             Dim str As New SqlCommand("SELECT * FROM PTRANSACTION  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and TBNK3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "' AND TBNK13 ='" & False & "'", Consum)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DataSetTab30.Clear()
             SqlDataAdapter1.Fill(DataSetTab30, "PTRANSACTION")
             rpt.SetDataSource(DataSetTab30)
@@ -1169,7 +1325,11 @@ Public Class FrmTransaction
             Consum.Close()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles InternalAuditorERBUTTON.Click
+=======
+    Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InternalAuditorERBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1198,7 +1358,11 @@ Public Class FrmTransaction
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -1206,7 +1370,11 @@ Public Class FrmTransaction
         Me.BS.Position = P
         Click13 = True
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1234,7 +1402,11 @@ Public Class FrmTransaction
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -1242,7 +1414,11 @@ Public Class FrmTransaction
         Me.BS.Position = P
         Click14 = True
     End Sub
+<<<<<<< HEAD
     Private Sub BALANCEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BALANCEBUTTON.Click
+=======
+    Private Sub BALANCEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BALANCEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ProgressBar1.Visible = True
         Me.PictureBox2.Visible = True
@@ -1253,12 +1429,20 @@ Public Class FrmTransaction
             Me.BackWorker3.RunWorkerAsync()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub StepBALANCE_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles stepBALANCE.Click
+=======
+    Private Sub StepBALANCE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles stepBALANCE.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.BackWorker3.IsBusy Then
             Me.BackWorker3.CancelAsync()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub BackWorker3_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackWorker3.DoWork
+=======
+    Private Sub BackWorker3_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackWorker3.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1283,7 +1467,11 @@ Public Class FrmTransaction
             MessageBox.Show(ex.Message, "ErrorDoWorkBALANCE", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BackWorker3_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles BackWorker3.ProgressChanged
+=======
+    Private Sub BackWorker3_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackWorker3.ProgressChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ProgressBar1.Value = e.ProgressPercentage
         Dim percent As Integer = CInt(CDbl(Me.ProgressBar1.Value - Me.ProgressBar1.Minimum) / CDbl(Me.ProgressBar1.Maximum - Me.ProgressBar1.Minimum) * 100)
@@ -1292,7 +1480,11 @@ Public Class FrmTransaction
         End Using
 
     End Sub
+<<<<<<< HEAD
     Private Sub BackWorker3_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackWorker3.RunWorkerCompleted
+=======
+    Private Sub BackWorker3_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackWorker3.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.Cancelled Then
             Me.BackWorker3.CancelAsync()
             Me.ProgressBar1.Visible = False
@@ -1314,10 +1506,17 @@ Public Class FrmTransaction
     End Sub
     Private Sub InternalAuditorBalance()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strsq1 As New SqlCommand("SELECT Sum(PTRANSACTION.TBNK4) AS SumDEBIT,Sum(PTRANSACTION.TBNK5) AS SumDEBIT1 FROM PTRANSACTION  WHERE (PTRANSACTION.TBNK6)='" & Me.ComboAccountNumber.Text.Trim & "' AND (PTRANSACTION.TBNK8)='" & Me.ComboAccountType.Text.Trim & "'AND PTRANSACTION.TBNK1 <'" & Me.TEXTID.EditValue & "'", Consum)
             Dim ds As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsq1 As New SqlCommand("SELECT Sum(PTRANSACTION.TBNK4) AS SumDEBIT,Sum(PTRANSACTION.TBNK5) AS SumDEBIT1 FROM PTRANSACTION  WHERE (PTRANSACTION.TBNK6)='" & Me.ComboAccountNumber.Text.Trim & "' AND (PTRANSACTION.TBNK8)='" & Me.ComboAccountType.Text.Trim & "'AND PTRANSACTION.TBNK1 <'" & Me.TEXTID.EditValue & "'", Consum)
+            Dim ds As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp1.Fill(ds, "PTRANSACTION")
             If ds.Tables(0).Rows.Count > 0 Then
@@ -1331,6 +1530,7 @@ Public Class FrmTransaction
             Me.TEXTPreviousBalance.EditValue = 0
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.Click
         On Error Resume Next
         Me.ComboAccountNumber1.Enabled = True
@@ -1344,22 +1544,46 @@ Public Class FrmTransaction
         Me.TEXTCredit.EditValue = Calculator()
     End Sub
     Private Sub TEXTBOX5_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
+        On Error Resume Next
+        Me.ComboAccountNumber1.Enabled = True
+    End Sub
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+        On Error Resume Next
+        Me.ComboAccountNumber1.Enabled = False
+    End Sub
+    Private Sub TEXTBOX5_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTCredit.DoubleClick
+        On Error Resume Next
+        Me.TEXTCredit.EditValue = Calculator()
+    End Sub
+    Private Sub TEXTBOX5_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If (e.KeyChar < "0" Or e.KeyChar > "9") And Asc(e.KeyChar) <> 8 And e.KeyChar <> "." Then
             e.Handled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX6_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboAccountNumber.SelectedIndexChanged
+=======
+    Private Sub TEXTBOX6_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboAccountNumber.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         SEARCHDATAITEMS10()
         InternalAuditorBalance()
 
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX6_SelectedValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboAccountNumber.SelectedValueChanged
+=======
+    Private Sub TEXTBOX6_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboAccountNumber.SelectedValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         SEARCHDATAITEMS10()
         InternalAuditorBalance()
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTBOX4_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTDebit.DoubleClick
         On Error Resume Next
         Me.TEXTDebit.EditValue = Calculator()
@@ -1369,6 +1593,17 @@ Public Class FrmTransaction
         Me.TextValueOfCheck.EditValue = Calculator()
     End Sub
     Private Sub TEXTBOX2_TextChanged1(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTPreviousBalance.EditValueChanged, TEXTCurrentBalance.EditValueChanged, ComboAccountNumber.TextChanged, TEXTDebit.EditValueChanged, TEXTCredit.EditValueChanged
+=======
+    Private Sub TEXTBOX4_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTDebit.DoubleClick
+        On Error Resume Next
+        Me.TEXTDebit.EditValue = Calculator()
+    End Sub
+    Private Sub TEXTBOX16_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextValueOfCheck.DoubleClick
+        On Error Resume Next
+        Me.TextValueOfCheck.EditValue = Calculator()
+    End Sub
+    Private Sub TEXTBOX2_TextChanged1(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTPreviousBalance.EditValueChanged, TEXTCurrentBalance.EditValueChanged, ComboAccountNumber.TextChanged, TEXTDebit.EditValueChanged, TEXTCredit.EditValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         InternalAuditorBalance()
         Select Case Me.ComboConstraintType.Text
@@ -1391,27 +1626,40 @@ Public Class FrmTransaction
         Me.TEXTTotal.Text = TEXTCurrentBalance.EditValue
         Me.TEXTTotaln.Text = CurrencyJO(Me.TEXTTotal.Text, "jO")
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX12_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles DateFrom.KeyUp
+=======
+    Private Sub TEXTBOX12_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DateFrom.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.DateTO.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX13_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles DateTO.KeyDown
+=======
+    Private Sub TEXTBOX13_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DateTO.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 SendKeys.SendWait("{TAB}")
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX13_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles DateTO.KeyUp
+=======
+    Private Sub TEXTBOX13_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DateTO.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.PRINTBUTTON_Click(sender, e)
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Buttoncalcluter.Click
         On Error Resume Next
         Process.Start("calc.exe")
@@ -1427,6 +1675,23 @@ Public Class FrmTransaction
         Dim str As New SqlCommand("SELECT TBNK1 FROM Deposits WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1", Consum)
         SqlDataAdapter1 = New SqlDataAdapter(str)
         Dim builder68 As New SqlCommandBuilder(SqlDataAdapter2)
+=======
+    Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buttoncalcluter.Click
+        On Error Resume Next
+        Process.Start("calc.exe")
+    End Sub
+    Private Sub ButtonCertifacate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSavingsCertificates.Click
+        On Error Resume Next
+        Me.Close()
+        Dim ds1 As New DataSet
+        Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim f1 As New FrmDeposits
+        ds1.EnforceConstraints = False
+        Dim str As New SqlCommand("SELECT TBNK1 FROM Deposits WHERE   CUser='" & CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY TBNK1", Consum)
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+        Dim builder68 As New SqlClient.SqlCommandBuilder(SqlDataAdapter2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         SqlDataAdapter2.Fill(ds1, "Deposits")
@@ -1442,7 +1707,11 @@ Public Class FrmTransaction
         Consum.Close()
 
     End Sub
+<<<<<<< HEAD
     Private Sub TextGoTo_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextGoTo.TextChanged
+=======
+    Private Sub TextGoTo_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextGoTo.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.TextGoTo.TextLength > 0 Then
                 Dim index As Integer
@@ -1456,7 +1725,11 @@ Public Class FrmTransaction
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEnquiry.Click
+=======
+    Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEnquiry.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1476,6 +1749,7 @@ Public Class FrmTransaction
 
 
 
+<<<<<<< HEAD
     Private Sub ComboBox5_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboDebitAccount.SelectedIndexChanged
         Dim Adp1 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -1483,6 +1757,15 @@ Public Class FrmTransaction
         Dim strsql2 As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name,ACC1 FROM ACCOUNTSTREE WHERE account_name = '" & Me.ComboDebitAccount.Text & " '", Consum)
         Dim ds2 As New DataSet
         Adp1 = New SqlDataAdapter(strsql2)
+=======
+    Private Sub ComboBox5_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboDebitAccount.SelectedIndexChanged
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name,ACC1 FROM ACCOUNTSTREE WHERE account_name = '" & Me.ComboDebitAccount.Text & " '", Consum)
+        Dim ds2 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Consum.Open()
         Adp1.Fill(ds2, "ACCOUNTSTREE")
@@ -1501,10 +1784,17 @@ Public Class FrmTransaction
 
 
     Private Sub SEARCHDATAITEMS10()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK20, TBNK21 FROM Deposits WHERE TBNK6 = '" & Me.ComboAccountNumber.Text & " '", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK20, TBNK21 FROM Deposits WHERE TBNK6 = '" & Me.ComboAccountNumber.Text & " '", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Consum.Open()
@@ -1521,9 +1811,15 @@ Public Class FrmTransaction
 
     Private Sub FundBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim N As Double
         Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim N As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         N = cmd1.ExecuteScalar
@@ -1829,7 +2125,11 @@ Public Class FrmTransaction
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonTRANSFER_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonTransferofAccounts.Click
+=======
+    Private Sub ButtonTRANSFER_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonTransferofAccounts.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -2060,7 +2360,11 @@ Public Class FrmTransaction
             Me.UPDATERECORD()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2071,7 +2375,11 @@ Public Class FrmTransaction
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboPaymentMethod1.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboPaymentMethod1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
          AccountsEnquiry()
     End Sub
@@ -2100,7 +2408,11 @@ Public Class FrmTransaction
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboConstraintType_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboConstraintType.SelectedIndexChanged
+=======
+    Private Sub ComboConstraintType_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboConstraintType.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Select Case Me.ComboConstraintType.Text
             Case "ايداع"
                 '188; 15
@@ -2126,22 +2438,38 @@ Public Class FrmTransaction
          AccountsEnquiry()
     End Sub
 
+<<<<<<< HEAD
     Private Sub PictureBox10_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PicAccountLevel.Click
+=======
+    Private Sub PictureBox10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PicAccountLevel.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         LS1 = True
         Me.PanelAccount_Name.Visible = True
         Me.List1.Visible = True
     End Sub
+<<<<<<< HEAD
     Private Sub List1_MouseDoubleClick(ByVal sender As Object, ByVal e As MouseEventArgs) Handles List1.MouseDoubleClick
+=======
+    Private Sub List1_MouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles List1.MouseDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         TextCreditAccount.Text = List1.SelectedItem(0).ToString
         LS1 = False
         Me.PanelAccount_Name.Visible = False
         Me.List1.Visible = False
     End Sub
+<<<<<<< HEAD
     Private Sub NumericUpDown5_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles NUpCreditAccount.ValueChanged
         Me.List1.DataSource = GetData(NUpCreditAccount.Value)
         Me.List1.DisplayMember = "account_name"
     End Sub
     Private Sub NumericUpDown4_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles NUpComboDebitAccount.ValueChanged
+=======
+    Private Sub NumericUpDown5_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NUpCreditAccount.ValueChanged
+        Me.List1.DataSource = GetData(NUpCreditAccount.Value)
+        Me.List1.DisplayMember = "account_name"
+    End Sub
+    Private Sub NumericUpDown4_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NUpComboDebitAccount.ValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboDebitAccount.DataSource = GetData(NUpComboDebitAccount.Value)
         Me.ComboDebitAccount.DisplayMember = "account_name"
     End Sub
@@ -2155,15 +2483,26 @@ Public Class FrmTransaction
         dvAccounts = dtAccounts.DefaultView
         dvAccounts.RowFilter = "account_name Like '%" + Trim(TextAccount_Name.Text) + "%'"
     End Sub
+<<<<<<< HEAD
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PicMovementRestrictions.Click
         Dim ds As New DataSet
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PicMovementRestrictions.Click
+        Dim ds As New DataSet
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmDailyrestrictions
         Try
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT MOV2 FROM MOVES WHERE   CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY MOV2", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "MOVES")
             f.BS.DataMember = "MOVES"
@@ -2181,6 +2520,7 @@ Public Class FrmTransaction
         SqlDataAdapter1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton7_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButton7.CheckedChanged
         Call Me.AddType1()
     End Sub
@@ -2191,6 +2531,18 @@ Public Class FrmTransaction
         Call Me.AddType1()
     End Sub
     Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButton4.CheckedChanged
+=======
+    Private Sub RadioButton7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton7.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton6.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton5.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton4.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Call Me.AddType1()
     End Sub
     Private Sub AddType1()
@@ -2207,6 +2559,7 @@ Public Class FrmTransaction
         End If
         Me.ComboCheckDrawerName.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox9_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
         If RadioButton7.Checked = True Then
             Dim Adp As SqlDataAdapter
@@ -2215,6 +2568,16 @@ Public Class FrmTransaction
             Dim strsql As New SqlCommand("SELECT IDcust,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
             Dim ds As New DataSet
             Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox9_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
+        If RadioButton7.Checked = True Then
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            On Error Resume Next
+            Dim strsql As New SqlCommand("SELECT IDcust,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+            Dim ds As New DataSet
+            Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp.Fill(ds)
             If ds.Tables(0).Rows.Count > 0 Then
@@ -2225,11 +2588,19 @@ Public Class FrmTransaction
             Adp.Dispose()
             Consum.Close()
         ElseIf RadioButton6.Checked = True Then
+<<<<<<< HEAD
             Dim Adp1 As SqlDataAdapter
             On Error Resume Next
             Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
             Dim ds1 As New DataSet
             Adp1 = New SqlDataAdapter(strsql)
+=======
+            Dim Adp1 As SqlClient.SqlDataAdapter
+            On Error Resume Next
+            Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+            Dim ds1 As New DataSet
+            Adp1 = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Adp1.Fill(ds1)
             If ds1.Tables(0).Rows.Count > 0 Then
@@ -2240,11 +2611,19 @@ Public Class FrmTransaction
             Adp1.Dispose()
             Consum.Close()
         ElseIf RadioButton5.Checked = True Then
+<<<<<<< HEAD
             Dim Adp2 As SqlDataAdapter
             On Error Resume Next
             Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
             Dim ds2 As New DataSet
             Adp2 = New SqlDataAdapter(strsq2)
+=======
+            Dim Adp2 As SqlClient.SqlDataAdapter
+            On Error Resume Next
+            Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+            Dim ds2 As New DataSet
+            Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds2.Clear()
             Adp2.Fill(ds2)
             If ds2.Tables(0).Rows.Count > 0 Then
@@ -2256,16 +2635,28 @@ Public Class FrmTransaction
             Consum.Close()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PicFundMovementNumber.Click
         Dim ds As New DataSet
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PicFundMovementNumber.Click
+        Dim ds As New DataSet
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmBanks5
         Try
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT CSH1 FROM CASHIER WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY CSH1", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+            Dim builder33 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "CASHIER")
             f.BS.DataMember = "CASHIER"
@@ -2283,16 +2674,28 @@ Public Class FrmTransaction
         SqlDataAdapter1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PicCheckMovementNumber.Click
         Dim ds As New DataSet
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PicCheckMovementNumber.Click
+        Dim ds As New DataSet
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmChecks
         Try
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT IDCH FROM Checks WHERE   CUser='" & CUser & "' and Year(CH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY IDCH", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+            Dim builder33 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "Checks")
             f.BS.DataMember = "Checks"
@@ -2310,7 +2713,11 @@ Public Class FrmTransaction
         SqlDataAdapter1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonUpdateA.Click
+=======
+    Private Sub ButtonXP5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonUpdateA.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -2318,7 +2725,11 @@ Public Class FrmTransaction
             End If
             Me.Cursor = Cursors.WaitCursor
             Me.PictureBox2.Visible = True
+<<<<<<< HEAD
             Me.RefreshTab = New BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2328,7 +2739,11 @@ Public Class FrmTransaction
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewrestrictions.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewrestrictions.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         SEARCHDATA.MAXIDMOVES()
 
         SEARCHDATA.SEARCHAccount_no(Me.ComboDebitAccount.Text)
@@ -2354,7 +2769,11 @@ Public Class FrmTransaction
         SEARCHDATA.SEARCHDIDChecks(Me.TextMovementSymbol.EditValue)
         Me.TextCheckMovementNumber.Text = SEARCHDATA.IDCH
     End Sub
+<<<<<<< HEAD
     Private Sub FrmTransaction_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+=======
+    Private Sub FrmTransaction_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         If Me.BackWorker3.IsBusy Then
             Me.BackWorker3.CancelAsync()
@@ -2362,6 +2781,7 @@ Public Class FrmTransaction
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAttachDocument.Click
         Try
             If BS.Count = 0 Then
@@ -2406,11 +2826,63 @@ Public Class FrmTransaction
             Dim ds41 As New DataSet
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAttachDocument.Click
+        Try
+            If TestNet = False Then
+                MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
+                Exit Sub
+            End If
+            If BS.Count = 0 Then Beep() : Exit Sub
+            If LockAddRow = False Then
+                MsgBox("ععفوا .. قام الأدمن بمنع خاصية إرفاق المستندات", 16, "تنبيه")
+                Exit Sub
+            End If
+            Dim XLO As Int64
+            XLO = Me.TEXTID.EditValue
+            Dim f As New FrmJPG0
+            f.ADDBUTTON.Enabled = False
+            f.SAVEBUTTON.Enabled = True
+            f.ButScan.Enabled = True
+            f.ButSaveFile.Enabled = False
+            f.ButLogq.Enabled = True
+            f.ButEditImage.Enabled = False
+            f.Show()
+            f.ADDBUTTON_Click(sender, e)
+            f.BS.Position = BS.Count - 1
+            f.BS.EndEdit()
+            f.BS.AddNew()
+            CLEARDATA1(Me)
+            f.DateP1.Text = Me.DateMovementHistory.Value.ToString("yyyy-MM-dd")
+            f.TextLO.Text = Me.TextMovementSymbol.EditValue
+            f.TEXTFileNo.Text = Val(XLO)
+            f.TEXTFileSubject.Text = "مستندات الاعضاء"
+            f.TextFileDescription.Text = "ارفاق مستندات الاعضاء"
+            f.PictureBox1.Image = Nothing
+            f.TEXTBOX1.Enabled = False
+            f.TextLO.Enabled = False
+            f.TEXTFileNo.Enabled = False
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CMDBROWSE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewDocuments.Click
+        Try
+            Dim ds41 As New DataSet
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim f As New FrmJPG
             ds41.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand("SELECT DOC1, LO FROM MYDOCUMENTSHOME  WHERE  CUser='" & CUser & "'and  LO ='" & Trim(Me.TextMovementSymbol.EditValue) & "'ORDER BY DOC1", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             ds41.Clear()
             SqlDataAdapter1.Fill(ds41, "MYDOCUMENTSHOME")
@@ -2454,6 +2926,7 @@ Public Class FrmTransaction
         Consum.Close()
 
     End Sub
+<<<<<<< HEAD
     Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCB1.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -2461,6 +2934,15 @@ Public Class FrmTransaction
         Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCB1.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -2474,6 +2956,7 @@ Public Class FrmTransaction
          AccountsEnquiry()
         FundBalance()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBN2.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -2481,6 +2964,15 @@ Public Class FrmTransaction
         Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBN2.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -2495,7 +2987,11 @@ Public Class FrmTransaction
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DateMovementHistory_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles DateMovementHistory.ValueChanged
+=======
+    Private Sub DateMovementHistory_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DateMovementHistory.ValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TextDateMovementHistory.Text = Me.DateMovementHistory.Value
     End Sub

@@ -122,10 +122,13 @@
     <Prefer32Bit>false</Prefer32Bit>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <Optimize>true</Optimize>
+<<<<<<< HEAD
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DefineTrace>true</DefineTrace>
@@ -296,7 +299,10 @@
     <Compile Include="MyFolders\Main\WaitForm.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="MyFolders\Modules\ModuleTransfer.vb" />
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="MyFolders\Modules\ModuleWhatsAppApi.vb" />
     <Compile Include="MyFolders\Modules\Pats_TempCls.vb" />
     <Compile Include="MyFolders\MsgSMS\FormWhatsAppApi.Designer.vb">
@@ -906,15 +912,35 @@
     <Compile Include="MyFolders\Main\Calculatorform.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="MyFolders\Modules\Connection.vb">
       <SubType>Code</SubType>
     </Compile>
+=======
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\ATCommand.vb" />
+    <Compile Include="MyFolders\Modules\Connection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\CommManager.vb" />
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\ConnSMS.vb" />
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="MyFolders\MsgSMS\FormSendSMS.Designer.vb">
       <DependentUpon>FormSendSMS.vb</DependentUpon>
     </Compile>
     <Compile Include="MyFolders\MsgSMS\FormSendSMS.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="MyFolders\MsgSMS\FormSMS.designer.vb">
+      <DependentUpon>FormSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyFolders\MsgSMS\FormSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\Program.vb" />
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\SMSclass.vb" />
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="MyFolders\Main\FormCC_JO.Designer.vb">
       <DependentUpon>FormCC_JO.vb</DependentUpon>
     </Compile>
@@ -969,6 +995,11 @@
     <Compile Include="MyFolders\Main\FrmRestore.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\ShortMessage.vb" />
+    <Compile Include="MyFolders\MsgSMS\ModulesSMS\ShrotMessageCollection.vb" />
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="MyFolders\MyDocuments\DS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1033,6 +1064,15 @@
     <Compile Include="MyFolders\Schedulervb\ResourceInterface.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="MyFolders\Security\Formsignature1.Designer.vb">
+      <DependentUpon>Formsignature1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyFolders\Security\Formsignature1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="MyFolders\Security\Formsignature.Designer.vb">
       <DependentUpon>Formsignature.vb</DependentUpon>
     </Compile>
@@ -2124,7 +2164,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+<<<<<<< HEAD
     <Compile Include="Subro\Controls.vb" />
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Compile Include="Web References\localhost\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2172,7 +2215,10 @@
     <None Include="Resources\addheader_16x16.png" />
     <None Include="Resources\article_32x32.png" />
     <None Include="Resources\article_16x16.png" />
+<<<<<<< HEAD
     <None Include="Resources\addcalculatedfield_16x16.png" />
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Content Include="Resources\AutoExpand_16x16.png" />
     <None Include="Resources\Barcode_Image.png" />
     <Content Include="Resources\BOChangeHistory_16x16.png" />
@@ -2309,10 +2355,13 @@
     <None Include="Resources\differentfirstpage.svg" />
     <Content Include="Resources\Refresh_16x16.png" />
     <None Include="Resources\sigblock.gif" />
+<<<<<<< HEAD
     <None Include="Resources\time_16x16.png" />
     <None Include="Resources\time_16x161.png" />
     <None Include="Resources\timelineview_16x16.png" />
     <None Include="Resources\timelineview_16x161.png" />
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <Content Include="Resources\UpdateTableOfContents_16x16.png" />
     <None Include="Resources\ssl_certificates.png" />
     <None Include="Resources\table_torn.png" />
@@ -2795,6 +2844,13 @@
       <DependentUpon>FrmRestore.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="MyFolders\MsgSMS\FormSMS.resx">
+      <DependentUpon>FormSMS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <EmbeddedResource Include="MyFolders\MsgSMS\FormWhatsAppApi.resx">
       <DependentUpon>FormWhatsAppApi.vb</DependentUpon>
     </EmbeddedResource>
@@ -2863,6 +2919,12 @@
     <EmbeddedResource Include="MyFolders\Schedulervb\ResourceInterface.resx">
       <DependentUpon>ResourceInterface.vb</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="MyFolders\Security\Formsignature1.resx">
+      <DependentUpon>Formsignature1.vb</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     <EmbeddedResource Include="MyFolders\Security\Formsignature.resx">
       <DependentUpon>Formsignature.vb</DependentUpon>
     </EmbeddedResource>

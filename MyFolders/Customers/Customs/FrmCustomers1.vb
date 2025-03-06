@@ -3,19 +3,33 @@ Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FrmCustomers1
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim SqlDataAdapter1 As New SqlDataAdapter
     Dim SqlDataAdapter2 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly ds As New DataSet
     ReadOnly ds1 As New DataSet
     ReadOnly rpt1 As New rptCustomers19
     ReadOnly rpt2 As New rptCustomers11
     ReadOnly rpt3 As New rptCustomers10
+<<<<<<< HEAD
     Friend WithEvents RadioButton6 As RadioButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Panel2 As Panel
+=======
+    Friend WithEvents RadioButton6 As System.Windows.Forms.RadioButton
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
@@ -34,6 +48,7 @@ Public Class FrmCustomers1
         MyBase.Dispose(disposing)
     End Sub
     Private ReadOnly components As System.ComponentModel.IContainer
+<<<<<<< HEAD
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents ComboPermissionNumber As ComboBox
@@ -83,6 +98,57 @@ Public Class FrmCustomers1
         Me.CheckBox1 = New CheckBox()
         Me.Panel4 = New Panel()
         Me.Label3 = New Label()
+=======
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ComboPermissionNumber As System.Windows.Forms.ComboBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents DateTO As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateFrom As System.Windows.Forms.DateTimePicker
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents SEARCHPRINTBUTTON As System.Windows.Forms.Button
+    Friend WithEvents ComboCustomerName As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboItem As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboInvoiceNumber As System.Windows.Forms.ComboBox
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCustomers1))
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboInvoiceNumber = New System.Windows.Forms.ComboBox()
+        Me.ComboPermissionNumber = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DateTO = New System.Windows.Forms.DateTimePicker()
+        Me.DateFrom = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.ComboCustomerName = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboItem = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.SEARCHPRINTBUTTON = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -94,11 +160,19 @@ Public Class FrmCustomers1
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label6.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New Point(219, 82)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New Size(45, 15)
+=======
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(219, 82)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(45, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label6.TabIndex = 73
         Me.Label6.Text = "—ﬁ„ «·√–‰"
         '
@@ -106,39 +180,69 @@ Public Class FrmCustomers1
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label5.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.Location = New Point(206, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New Size(58, 15)
+=======
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(206, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label5.TabIndex = 72
         Me.Label5.Text = "—ﬁ„ «·›« Ê—…"
         '
         'ComboInvoiceNumber
         '
+<<<<<<< HEAD
         Me.ComboInvoiceNumber.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ComboInvoiceNumber.Location = New Point(3, 4)
         Me.ComboInvoiceNumber.Name = "ComboInvoiceNumber"
         Me.ComboInvoiceNumber.Size = New Size(199, 23)
+=======
+        Me.ComboInvoiceNumber.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.ComboInvoiceNumber.Location = New System.Drawing.Point(3, 4)
+        Me.ComboInvoiceNumber.Name = "ComboInvoiceNumber"
+        Me.ComboInvoiceNumber.Size = New System.Drawing.Size(199, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboInvoiceNumber.TabIndex = 66
         '
         'ComboPermissionNumber
         '
+<<<<<<< HEAD
         Me.ComboPermissionNumber.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ComboPermissionNumber.Location = New Point(3, 77)
         Me.ComboPermissionNumber.Name = "ComboPermissionNumber"
         Me.ComboPermissionNumber.Size = New Size(199, 23)
+=======
+        Me.ComboPermissionNumber.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.ComboPermissionNumber.Location = New System.Drawing.Point(3, 77)
+        Me.ComboPermissionNumber.Name = "ComboPermissionNumber"
+        Me.ComboPermissionNumber.Size = New System.Drawing.Size(199, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboPermissionNumber.TabIndex = 65
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label2.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New Point(244, 129)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New Size(20, 15)
+=======
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(244, 129)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2.TabIndex = 64
         Me.Label2.Text = "«·Ï"
         '
@@ -146,11 +250,19 @@ Public Class FrmCustomers1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New Point(245, 106)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New Size(19, 15)
+=======
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(245, 106)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(19, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label1.TabIndex = 63
         Me.Label1.Text = "„‰"
         '
@@ -158,6 +270,7 @@ Public Class FrmCustomers1
         '
         Me.DateTO.Checked = False
         Me.DateTO.CustomFormat = "yyyy/MM/dd"
+<<<<<<< HEAD
         Me.DateTO.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.DateTO.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTO.Location = New Point(3, 126)
@@ -165,12 +278,22 @@ Public Class FrmCustomers1
         Me.DateTO.RightToLeftLayout = True
         Me.DateTO.ShowCheckBox = True
         Me.DateTO.Size = New Size(199, 22)
+=======
+        Me.DateTO.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.DateTO.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTO.Location = New System.Drawing.Point(3, 126)
+        Me.DateTO.Name = "DateTO"
+        Me.DateTO.RightToLeftLayout = True
+        Me.DateTO.ShowCheckBox = True
+        Me.DateTO.Size = New System.Drawing.Size(199, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateTO.TabIndex = 62
         '
         'DateFrom
         '
         Me.DateFrom.Checked = False
         Me.DateFrom.CustomFormat = "yyyy/MM/dd"
+<<<<<<< HEAD
         Me.DateFrom.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.DateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateFrom.Location = New Point(3, 101)
@@ -178,25 +301,48 @@ Public Class FrmCustomers1
         Me.DateFrom.RightToLeftLayout = True
         Me.DateFrom.ShowCheckBox = True
         Me.DateFrom.Size = New Size(199, 22)
+=======
+        Me.DateFrom.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.DateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateFrom.Location = New System.Drawing.Point(3, 101)
+        Me.DateFrom.Name = "DateFrom"
+        Me.DateFrom.RightToLeftLayout = True
+        Me.DateFrom.ShowCheckBox = True
+        Me.DateFrom.Size = New System.Drawing.Size(199, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateFrom.TabIndex = 61
         '
         'ComboBox10
         '
         Me.ComboBox10.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.ComboBox10.Location = New Point(24, -48)
         Me.ComboBox10.Name = "ComboBox10"
         Me.ComboBox10.Size = New Size(224, 23)
+=======
+        Me.ComboBox10.Location = New System.Drawing.Point(24, -48)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(224, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboBox10.TabIndex = 59
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.Panel3)
+<<<<<<< HEAD
         Me.GroupBox1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New Point(279, 8)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New Size(179, 203)
+=======
+        Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(279, 8)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(179, 203)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.TabIndex = 58
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "»ÕÀ »Ê«”ÿ…"
@@ -211,20 +357,34 @@ Public Class FrmCustomers1
         Me.Panel3.Controls.Add(Me.RadioButton4)
         Me.Panel3.Controls.Add(Me.RadioButton3)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.Panel3.Location = New Point(3, 18)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(173, 182)
+=======
+        Me.Panel3.Location = New System.Drawing.Point(3, 18)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(173, 182)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 763
         '
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
         Me.RadioButton6.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton6.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton6.ForeColor = System.Drawing.Color.Black
         Me.RadioButton6.Location = New Point(44, 148)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New Size(119, 19)
+=======
+        Me.RadioButton6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton6.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton6.Location = New System.Drawing.Point(44, 148)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(119, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton6.TabIndex = 733
         Me.RadioButton6.Text = "«·”Ã·«  «·€Ì— „—«Ã⁄…"
         Me.RadioButton6.UseVisualStyleBackColor = False
@@ -234,11 +394,19 @@ Public Class FrmCustomers1
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.BackColor = System.Drawing.Color.Transparent
         Me.RadioButton1.Checked = True
+<<<<<<< HEAD
         Me.RadioButton1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton1.ForeColor = System.Drawing.Color.Black
         Me.RadioButton1.Location = New Point(87, 13)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New Size(76, 19)
+=======
+        Me.RadioButton1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton1.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton1.Location = New System.Drawing.Point(87, 13)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(76, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "—ﬁ„ «·›« Ê—…"
@@ -248,11 +416,19 @@ Public Class FrmCustomers1
         '
         Me.RadioButton5.AutoSize = True
         Me.RadioButton5.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton5.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton5.ForeColor = System.Drawing.Color.Black
         Me.RadioButton5.Location = New Point(2, 121)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New Size(161, 19)
+=======
+        Me.RadioButton5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton5.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton5.Location = New System.Drawing.Point(2, 121)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(161, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton5.TabIndex = 4
         Me.RadioButton5.Text = "«Ã„«·Ï «·„»Ì⁄«  Œ·«· › —… „⁄Ì‰…"
         Me.RadioButton5.UseVisualStyleBackColor = False
@@ -261,11 +437,19 @@ Public Class FrmCustomers1
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton2.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton2.ForeColor = System.Drawing.Color.Black
         Me.RadioButton2.Location = New Point(19, 40)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New Size(144, 19)
+=======
+        Me.RadioButton2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton2.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton2.Location = New System.Drawing.Point(19, 40)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(144, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.Text = "«”„ «·’‰› Œ·«· › —… „⁄Ì‰…"
         Me.RadioButton2.UseVisualStyleBackColor = False
@@ -274,11 +458,19 @@ Public Class FrmCustomers1
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton4.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton4.ForeColor = System.Drawing.Color.Black
         Me.RadioButton4.Location = New Point(100, 94)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New Size(63, 19)
+=======
+        Me.RadioButton4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton4.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton4.Location = New System.Drawing.Point(100, 94)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(63, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton4.TabIndex = 3
         Me.RadioButton4.Text = "—ﬁ„ «·«–‰"
         Me.RadioButton4.UseVisualStyleBackColor = False
@@ -287,52 +479,90 @@ Public Class FrmCustomers1
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.RadioButton3.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioButton3.ForeColor = System.Drawing.Color.Black
         Me.RadioButton3.Location = New Point(23, 67)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New Size(140, 19)
+=======
+        Me.RadioButton3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.RadioButton3.ForeColor = System.Drawing.Color.Black
+        Me.RadioButton3.Location = New System.Drawing.Point(23, 67)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(140, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.Text = "«”„ «·⁄„Ì· Œ·«· › —… „⁄Ì‰…"
         Me.RadioButton3.UseVisualStyleBackColor = False
         '
         'ComboCustomerName
         '
+<<<<<<< HEAD
         Me.ComboCustomerName.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ComboCustomerName.Location = New Point(3, 53)
         Me.ComboCustomerName.Name = "ComboCustomerName"
         Me.ComboCustomerName.Size = New Size(199, 23)
+=======
+        Me.ComboCustomerName.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.ComboCustomerName.Location = New System.Drawing.Point(3, 53)
+        Me.ComboCustomerName.Name = "ComboCustomerName"
+        Me.ComboCustomerName.Size = New System.Drawing.Size(199, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboCustomerName.TabIndex = 74
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label7.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New Point(212, 58)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New Size(52, 15)
+=======
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(212, 58)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label7.TabIndex = 75
         Me.Label7.Text = "«”„ «·⁄„Ì·"
         '
         'ComboItem
         '
+<<<<<<< HEAD
         Me.ComboItem.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.ComboItem.Location = New Point(3, 29)
         Me.ComboItem.Name = "ComboItem"
         Me.ComboItem.Size = New Size(199, 23)
+=======
+        Me.ComboItem.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.ComboItem.Location = New System.Drawing.Point(3, 29)
+        Me.ComboItem.Name = "ComboItem"
+        Me.ComboItem.Size = New System.Drawing.Size(199, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboItem.TabIndex = 76
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.Label8.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New Point(208, 33)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New Size(56, 15)
+=======
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(208, 33)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(56, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label8.TabIndex = 77
         Me.Label8.Text = "«”„ «·’‰›"
         '
@@ -340,6 +570,7 @@ Public Class FrmCustomers1
         '
         Me.SEARCHPRINTBUTTON.BackColor = System.Drawing.Color.Transparent
         Me.SEARCHPRINTBUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+<<<<<<< HEAD
         Me.SEARCHPRINTBUTTON.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.SEARCHPRINTBUTTON.ForeColor = System.Drawing.Color.Black
         Me.SEARCHPRINTBUTTON.Image = Global.CC_JO.My.Resources.Resources.Print_Quick
@@ -347,6 +578,15 @@ Public Class FrmCustomers1
         Me.SEARCHPRINTBUTTON.Location = New Point(2, 253)
         Me.SEARCHPRINTBUTTON.Name = "SEARCHPRINTBUTTON"
         Me.SEARCHPRINTBUTTON.Size = New Size(463, 32)
+=======
+        Me.SEARCHPRINTBUTTON.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.SEARCHPRINTBUTTON.ForeColor = System.Drawing.Color.Black
+        Me.SEARCHPRINTBUTTON.Image = Global.CC_JO.My.Resources.Resources.Print_Quick
+        Me.SEARCHPRINTBUTTON.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.SEARCHPRINTBUTTON.Location = New System.Drawing.Point(2, 253)
+        Me.SEARCHPRINTBUTTON.Name = "SEARCHPRINTBUTTON"
+        Me.SEARCHPRINTBUTTON.Size = New System.Drawing.Size(463, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SEARCHPRINTBUTTON.TabIndex = 78
         Me.SEARCHPRINTBUTTON.Text = "»ÕÀ Ê ÿ»«⁄…"
         Me.SEARCHPRINTBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -358,9 +598,15 @@ Public Class FrmCustomers1
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
+<<<<<<< HEAD
         Me.Panel1.Location = New Point(2, 32)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New Size(463, 218)
+=======
+        Me.Panel1.Location = New System.Drawing.Point(2, 32)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(463, 218)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 79
         '
         'Panel2
@@ -379,18 +625,30 @@ Public Class FrmCustomers1
         Me.Panel2.Controls.Add(Me.ComboCustomerName)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.ComboInvoiceNumber)
+<<<<<<< HEAD
         Me.Panel2.Location = New Point(3, 25)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(270, 182)
+=======
+        Me.Panel2.Location = New System.Drawing.Point(3, 25)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(270, 182)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 762
         '
         'CheckBox1
         '
         Me.CheckBox1.BackColor = System.Drawing.Color.SteelBlue
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.CheckBox1.Location = New Point(3, 152)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New Size(199, 23)
+=======
+        Me.CheckBox1.Location = New System.Drawing.Point(3, 152)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(199, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CheckBox1.TabIndex = 761
         Me.CheckBox1.Text = "‰‹‹ﬁ‹œÌ"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -400,14 +658,21 @@ Public Class FrmCustomers1
         Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.Label3)
+<<<<<<< HEAD
         Me.Panel4.Location = New Point(2, 2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New Size(463, 29)
+=======
+        Me.Panel4.Location = New System.Drawing.Point(2, 2)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(463, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.TabIndex = 740
         '
         'Label3
         '
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Top
+<<<<<<< HEAD
         Me.Label3.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Image = Global.CC_JO.My.Resources.Resources.Print_Quick
@@ -415,24 +680,46 @@ Public Class FrmCustomers1
         Me.Label3.Location = New Point(0, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New Size(461, 27)
+=======
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.CC_JO.My.Resources.Resources.Print_Quick
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label3.Location = New System.Drawing.Point(0, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(461, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label3.TabIndex = 732
         Me.Label3.Text = "›Ê« Ì— «·„»Ì⁄«  »ÕÀ Ê ÿ»«⁄…"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmCustomers1
         '
+<<<<<<< HEAD
         Me.AutoScaleBaseSize = New Size(6, 15)
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New Size(467, 286)
+=======
+        Me.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(467, 286)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.SEARCHPRINTBUTTON)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ComboBox10)
         Me.DoubleBuffered = True
+<<<<<<< HEAD
         Me.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), Icon)
+=======
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -452,7 +739,11 @@ Public Class FrmCustomers1
     End Sub
 
 #End Region
+<<<<<<< HEAD
     Private Sub FrmCustomers1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmCustomers1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -466,8 +757,13 @@ Public Class FrmCustomers1
     Public Sub DanLOd()
         On Error Resume Next
         ds.EnforceConstraints = False
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim str As New SqlCommand("", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim str As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.CheckBox1.Checked = True Then
             Cash = True
             str.CommandText = "SELECT SLS1, SLS2, SLS3, SLS4, SLS5, SLS6, SLS7, SLS8, SLS9, SLS10, SLS11, SLS12, SLS13, SLS14, SLS15, SLS16, SLS17, SLS18, SLS19, SLS20, SLS21, SLS22, SLS23, SLS24, SLS25, SLS26, SLS27, SLS28, SLS29, SLS30, SLS31, TYPE_CASH, TYPE_CRDT, DELETED, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM SALES WHERE   CUser='" & CUser & "' and Year(SLS3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and deleted ='" & False & "' and type_cash ='" & True & "' ORDER BY SLS1"
@@ -475,16 +771,27 @@ Public Class FrmCustomers1
             Cash = False
             str.CommandText = "SELECT SLS1, SLS2, SLS3, SLS4, SLS5, SLS6, SLS7, SLS8, SLS9, SLS10, SLS11, SLS12, SLS13, SLS14, SLS15, SLS16, SLS17, SLS18, SLS19, SLS20, SLS21, SLS22, SLS23, SLS24, SLS25, SLS26, SLS27, SLS28, SLS29, SLS30, SLS31, TYPE_CASH, TYPE_CRDT, DELETED, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM SALES WHERE   CUser='" & CUser & "' and Year(SLS3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and deleted ='" & False & "' and type_cash ='" & False & "' ORDER BY SLS1"
         End If
+<<<<<<< HEAD
         SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         SqlDataAdapter1.Fill(ds, "SALES")
         BS.DataSource = ds
         BS.DataMember = "SALES"
+<<<<<<< HEAD
         Dim str1 As New SqlCommand("", Consum) With {
             .CommandText = "SELECT SITM1, SITM2, SITM3, SITM4, SITM5, SITM6, SITM7, (([SITM5] * [SITM6]) * (100 - [SITM7])) / 100 AS SITM8, SITM9, SITM10, SITM11, SLS2 FROM SALESITEMS ORDER BY SLS2"
         }
         Me.SqlDataAdapter2 = New SqlDataAdapter(str1)
+=======
+        Dim str1 As New SqlClient.SqlCommand("", Consum) With {
+            .CommandText = "SELECT SITM1, SITM2, SITM3, SITM4, SITM5, SITM6, SITM7, (([SITM5] * [SITM6]) * (100 - [SITM7])) / 100 AS SITM8, SITM9, SITM10, SITM11, SLS2 FROM SALESITEMS ORDER BY SLS2"
+        }
+        Me.SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds1.Clear()
         SqlDataAdapter2.Fill(ds1, "SALESITEMS")
         ds.EnforceConstraints = True
@@ -507,6 +814,7 @@ Public Class FrmCustomers1
         Loop
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles CheckBox1.CheckedChanged
         DanLOd()
     End Sub
@@ -523,41 +831,79 @@ Public Class FrmCustomers1
         AutoComplete(ComboPermissionNumber, e, )
     End Sub
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.Click
+=======
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+        DanLOd()
+    End Sub
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboInvoiceNumber.KeyPress
+        AutoComplete(ComboInvoiceNumber, e, )
+    End Sub
+    Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboItem.KeyPress
+        AutoComplete(ComboItem, e, )
+    End Sub
+    Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboCustomerName.KeyPress
+        AutoComplete(ComboCustomerName, e, )
+    End Sub
+    Private Sub ComboBox4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboPermissionNumber.KeyPress
+        AutoComplete(ComboPermissionNumber, e, )
+    End Sub
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboInvoiceNumber.Enabled = True
         Me.ComboItem.Enabled = False
         Me.ComboCustomerName.Enabled = False
         Me.ComboPermissionNumber.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton2.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboInvoiceNumber.Enabled = False
         Me.ComboItem.Enabled = True
         Me.ComboCustomerName.Enabled = False
         Me.ComboPermissionNumber.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton3_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton3.Click
+=======
+    Private Sub RadioButton3_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboInvoiceNumber.Enabled = False
         Me.ComboItem.Enabled = False
         Me.ComboCustomerName.Enabled = True
         Me.ComboPermissionNumber.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton4.Click
+=======
+    Private Sub RadioButton4_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton4.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboInvoiceNumber.Enabled = False
         Me.ComboItem.Enabled = False
         Me.ComboCustomerName.Enabled = False
         Me.ComboPermissionNumber.Enabled = True
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton5_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton5.Click
+=======
+    Private Sub RadioButton5_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton5.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ComboInvoiceNumber.Enabled = False
         Me.ComboItem.Enabled = False
         Me.ComboCustomerName.Enabled = False
         Me.ComboPermissionNumber.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub SEARCHPRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SEARCHPRINTBUTTON.Click
+=======
+    Private Sub SEARCHPRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SEARCHPRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -568,7 +914,11 @@ Public Class FrmCustomers1
             MsgBox("⁄›Ê« .. ﬁ«„ «·√œ„‰ »„‰⁄ Œ«’Ì… „⁄«Ì‰… «Ê ÿ»«⁄… «·”Ã·«  „‰ «·»—‰«„Ã", 16, " ‰»ÌÂ")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim txtFROMDate As String
         Dim txtToDate As String
         Dim f As New FrmPRINT
@@ -587,7 +937,11 @@ Public Class FrmCustomers1
 
 
                 ds1.EnforceConstraints = False
+<<<<<<< HEAD
                 Dim str1 As New SqlCommand("", Consum)
+=======
+                Dim str1 As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 If Me.CheckBox1.Checked = True Then
                     With str1
                         .CommandText = "SELECT SLS1, SLS2, SLS3, SLS4, SLS5, SLS6, SLS7, SLS8, SLS9, SLS10, SLS11, SLS12, SLS13, SLS14, SLS15, SLS16, SLS17, SLS18, SLS19, SLS20, SLS21, SLS22, SLS23, SLS24, SLS25, SLS26, SLS27, SLS28, SLS29, SLS30, SLS31, TYPE_CASH, TYPE_CRDT, DELETED, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM SALES WHERE   CUser='" & CUser & "' and Year(SLS3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and deleted ='" & False & "' and type_cash ='" & True & "' ORDER BY SLS1"
@@ -599,14 +953,23 @@ Public Class FrmCustomers1
                 End If
                 Me.ds.EnforceConstraints = False
                 Consum.Open()
+<<<<<<< HEAD
                 Dim str2 As New SqlCommand("", Consum)
+=======
+                Dim str2 As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With str2
                     .CommandText = "SELECT SITM1, SITM2, SITM3, SITM4, SITM5, SITM6, SITM7, (([SITM5] * [SITM6]) * (100 - [SITM7])) / 100 AS SITM8, SITM9, SITM10, SITM11, SLS2 FROM SALESITEMS "
                 End With
                 ds1.EnforceConstraints = False
 
+<<<<<<< HEAD
                 Me.SqlDataAdapter1 = New SqlDataAdapter(str1)
                 Me.SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+                Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+                Me.SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Me.ds1.Clear()
                 Me.SqlDataAdapter1.Fill(Me.ds1, "SALES")
                 Me.SqlDataAdapter2.Fill(Me.ds1, "SALESITEMS")
@@ -759,7 +1122,11 @@ Public Class FrmCustomers1
                 GETSERVERNAMEANDDATABASENAME(rpt2, DBServer, "", "")
                 Dim ds As New DataSet
                 Dim str As New SqlCommand("SELECT * FROM SALES  WHERE  CUser='" & CUser & "' and Year(SLS3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and   SLS3 BETWEEN '" & Me.DateFrom.Text.Trim & "'  AND  '" & Me.DateTO.Text.Trim & "'  AND SLS30 = '" & False & "'", Consum)
+<<<<<<< HEAD
                 SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds.Clear()
                 SqlDataAdapter1.Fill(ds, "SALES")
                 rpt2.SetDataSource(ds)

@@ -147,9 +147,15 @@ Partial Class FrmCustomersA2
         Me.RadioButton3.ForeColor = System.Drawing.Color.Blue
         Me.RadioButton3.Location = New System.Drawing.Point(3, 3)
         Me.RadioButton3.Name = "RadioButton3"
+<<<<<<< HEAD
         Me.RadioButton3.Size = New System.Drawing.Size(69, 19)
         Me.RadioButton3.TabIndex = 645
         Me.RadioButton3.Text = "رقم العميل"
+=======
+        Me.RadioButton3.Size = New System.Drawing.Size(70, 19)
+        Me.RadioButton3.TabIndex = 645
+        Me.RadioButton3.Text = "اسم العميل"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton3.UseVisualStyleBackColor = False
         '
         'FrmCustomersA2

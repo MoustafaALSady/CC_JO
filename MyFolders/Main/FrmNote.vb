@@ -23,7 +23,11 @@ Public Class FrmNote
     Dim DelRow As Boolean = False
     Dim RowCount As Integer = 0
     Dim dx, dy As Integer
+<<<<<<< HEAD
     Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseDown
+=======
+    Private Sub Form1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.Button = Windows.Forms.MouseButtons.Left Then
             dx = e.X
             dy = e.Y
@@ -31,24 +35,40 @@ Public Class FrmNote
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+=======
+    Private Sub Form1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If IsDown = True Then
             Me.Left = Control.MousePosition.X - dx
             Me.Top = Control.MousePosition.Y - dy
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
         IsDown = False
 
     End Sub
     Private Sub Form1_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub Form1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+        IsDown = False
+
+    End Sub
+    Private Sub Form1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.KeyCode = Keys.Escape Then 'Escape  اغلا ق البرنامج من خلال الزر
             Me.Close()
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmNote_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles Me.Paint
+=======
+    Private Sub FrmNote_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Me.Paint
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
         e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
         m_blend.Factors = m_Factors
@@ -164,11 +184,19 @@ Public Class FrmNote
         e.Graphics.DrawLine(secondPen, m_Point, secHand)
     End Sub
 
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer1.Tick
         Me.Refresh()
     End Sub
 
     Private Sub FrmNote_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub Timer1_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Me.Refresh()
+    End Sub
+
+    Private Sub FrmNote_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -177,7 +205,11 @@ Public Class FrmNote
             Me.Opacity = a / 10
         Next
 
+<<<<<<< HEAD
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -191,7 +223,11 @@ Public Class FrmNote
 
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT FIELD1 ,FIELD2 ,FIELD3 ,FIELD4 ,USERNAME ,CUser ,COUser  FROM TNote  WHERE  CUser='" & CUser & "'  ORDER BY Field1"
@@ -304,7 +340,11 @@ Public Class FrmNote
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -328,7 +368,11 @@ Public Class FrmNote
         Me.DELETEBUTTON.Enabled = LockDelete
     End Sub
 #Region "AddButton"
+<<<<<<< HEAD
     Private Sub AddButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub AddButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ADDBUTTON.Enabled = False
         EDITBUTTON.Enabled = False
         SAVEBUTTON.Enabled = True
@@ -360,7 +404,11 @@ Public Class FrmNote
     End Sub
 #End Region
 #Region "SaveButton"
+<<<<<<< HEAD
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Static Dim P As Integer
         P = BS.Position
         Try
@@ -379,7 +427,11 @@ Public Class FrmNote
             PictureBox2.Visible = True
             BS.EndEdit()
             RowCount = BS.Count
+<<<<<<< HEAD
             SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -393,7 +445,11 @@ Public Class FrmNote
     End Sub
 #End Region
 #Region "EditButton"
+<<<<<<< HEAD
     Private Sub EditButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EditButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Static n As Integer
         Try
             ADDBUTTON.Enabled = True
@@ -406,7 +462,11 @@ Public Class FrmNote
             PictureBox2.Visible = True
             BS.EndEdit()
             RowCount = BS.Count
+<<<<<<< HEAD
             SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -458,35 +518,55 @@ Public Class FrmNote
     End Sub
 #End Region
 #Region "FirstButton"
+<<<<<<< HEAD
     Private Sub FirstButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FirstButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = 0
         RecordCount()
     End Sub
 #End Region
 #Region "PreviousButton"
+<<<<<<< HEAD
     Private Sub PreviousButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PreviousButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position - 1
         RecordCount()
     End Sub
 #End Region
 #Region "NextButton"
+<<<<<<< HEAD
     Private Sub NextButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NextButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position + 1
         RecordCount()
     End Sub
 #End Region
 #Region "LastButton"
+<<<<<<< HEAD
     Private Sub LastButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LastButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Count - 1
         RecordCount()
     End Sub
 #End Region
 #Region "ButtonCancel"
+<<<<<<< HEAD
     Private Sub ButtonCancel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub ButtonCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ADDBUTTON.Enabled = True
         SAVEBUTTON.Enabled = False
@@ -498,7 +578,11 @@ Public Class FrmNote
     End Sub
 #End Region
 #Region "DeleteButton"
+<<<<<<< HEAD
     Private Sub DeleteButton_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DeleteButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             cmd.Connection = cnn
             cmd.CommandText = "delete from TNote where FIELD1=" & TEXT1.Text
@@ -514,7 +598,11 @@ Public Class FrmNote
     End Sub
 #End Region
 #Region "Text2_KeyUp"
+<<<<<<< HEAD
     Private Sub Text2_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub Text2_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -525,17 +613,29 @@ Public Class FrmNote
     End Sub
 #End Region
 
+<<<<<<< HEAD
     Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles InternalAuditorERBUTTON.Click
+=======
+    Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InternalAuditorERBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Timer3.Enabled = False
         Me.Timer3.Stop()
         My.Computer.Audio.Stop()
     End Sub
+<<<<<<< HEAD
     Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer2.Tick
         Try
             If Me.DateTimePicker4.Text < ServerDateTime.ToString("yyyy-MM-dd") Then
                 Me.Label5.Text = "أنقضى الوقت"
                 Dim Sound As IO.Stream = My.Resources.Windows_Pop_up_Blocked
+=======
+    Private Sub Timer2_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        Try
+            If Me.DateTimePicker4.Text < ServerDateTime.ToString("yyyy-MM-dd") Then
+                Me.Label5.Text = "أنقضى الوقت"
+                Dim Sound As System.IO.Stream = My.Resources.Windows_Pop_up_Blocked
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
 
             ElseIf Me.DateTimePicker4.Text >= ServerDateTime.ToString("yyyy-MM-dd") Then
@@ -550,7 +650,11 @@ Public Class FrmNote
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP1.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label4.Text = ""
         If Me.DateTimePicker2.Text >= Me.DateTimePicker3.Text Then
             MessageBox.Show("يجب انا تكون المدة الاولى اقل من الثانية", "اجندة المواعيد", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading)
@@ -560,9 +664,15 @@ Public Class FrmNote
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Timer3_Tick(ByVal sender As Object, ByVal e As EventArgs) Handles Timer3.Tick
         Try
             Dim Sound As IO.Stream = My.Resources.Windows_Pop_up_Blocked
+=======
+    Private Sub Timer3_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles Timer3.Tick
+        Try
+            Dim Sound As System.IO.Stream = My.Resources.Windows_Pop_up_Blocked
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             'My.Computer.Audio.Play(Application.StartupPath & "\Windows XP Notify.wav", AudioPlayMode.BackgroundLoop)
         Catch ex As Exception

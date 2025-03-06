@@ -20,13 +20,17 @@ Partial Class Calculatorform11
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Calculator1 = New DevComponents.Editors.Calculator()
+<<<<<<< HEAD
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SuspendLayout()
         '
         'Calculator1
         '
+<<<<<<< HEAD
         Me.Calculator1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Calculator1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Calculator1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -66,10 +70,19 @@ Partial Class Calculatorform11
         Me.Label3.TabIndex = 763
         Me.Label3.Text = "حــاســـــبـة"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+=======
+        Me.Calculator1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Calculator1.Location = New System.Drawing.Point(0, 0)
+        Me.Calculator1.Name = "Calculator1"
+        Me.Calculator1.Size = New System.Drawing.Size(190, 211)
+        Me.Calculator1.TabIndex = 0
+        Me.Calculator1.Text = "Calculator1"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Calculatorform11
         '
         Me.Appearance.Options.UseFont = True
+<<<<<<< HEAD
         Me.AutoScaleDimensions = New System.Drawing.SizeF(29.0!, 55.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(193, 239)
@@ -88,11 +101,33 @@ Partial Class Calculatorform11
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "حاسبة"
         Me.Panel4.ResumeLayout(False)
+=======
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(194, 216)
+        Me.Controls.Add(Me.Calculator1)
+        Me.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
+        Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "Calculatorform11"
+        Me.RightToLeftLayout = True
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "حاسبة"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Calculator1 As DevComponents.Editors.Calculator
+<<<<<<< HEAD
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

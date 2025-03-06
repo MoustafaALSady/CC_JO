@@ -5,10 +5,17 @@
 Imports System.Data.SqlClient
 Public Class FormAddStocks
 
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveDataBase As System.ComponentModel.BackgroundWorker
     Public Delegate Sub LoadDataBaseCallBack()
@@ -49,7 +56,11 @@ Public Class FormAddStocks
                 Me.Opacity = a / 10
             Next
             Me.BackgroundImage = img
+<<<<<<< HEAD
             Me.BackWorker2 = New ComponentModel.BackgroundWorker With {
+=======
+            Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -62,9 +73,15 @@ Public Class FormAddStocks
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(WarehouseNumber) FROM Warehouses  WHERE CUser='" & CUser & "'", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(WarehouseNumber) FROM Warehouses  WHERE CUser='" & CUser & "'", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -131,7 +148,11 @@ Public Class FormAddStocks
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & BS.Count - RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
 
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
@@ -175,7 +196,11 @@ Public Class FormAddStocks
         On Error Resume Next
         Me.RECORDSLABEL.Text = Me.BS.Position + 1 & " من " & Me.BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButAdd.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButAdd.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -192,13 +217,21 @@ Public Class FormAddStocks
 
             Me.ButAdd.Enabled = False
             Me.ButSave.Enabled = True
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButSave.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButSave.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -215,7 +248,11 @@ Public Class FormAddStocks
         Me.SAVERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -226,9 +263,15 @@ Public Class FormAddStocks
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO Warehouses(  WarehouseNumber, WarehouseName, Location,USERNAME, CUser, COUser) VALUES     ( @WarehouseNumber,  @WarehouseName, @Location,@USERNAME,  @CUser, @COUser)"
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO Warehouses(  WarehouseNumber, WarehouseName, Location,USERNAME, CUser, COUser) VALUES     ( @WarehouseNumber,  @WarehouseName, @Location,@USERNAME,  @CUser, @COUser)"
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -268,13 +311,22 @@ Public Class FormAddStocks
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum) With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandText = String.Concat(New String() {"SELECT  IDW,  WarehouseNumber , WarehouseName, Location,CUser, COUser FROM Warehouses  WHERE  CUser='", ModuleGeneral.CUser, "'ORDER BY IDW"})
             }
             'strSQL.CommandText = "SELECT  IDW, WarehouseName, Location, WarehouseNumber , CUser, COUser FROM Warehouses  WHERE  CUser='" & CUser & "'ORDER BY IDW"
 
+<<<<<<< HEAD
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
             Me.myds = New DataSet
             Consum.Open()
@@ -317,9 +369,15 @@ Public Class FormAddStocks
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update Warehouses SET  WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName, Location = @Location  WHERE IDW = @IDW", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update Warehouses SET  WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName, Location = @Location  WHERE IDW = @IDW", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -345,7 +403,11 @@ Public Class FormAddStocks
 
 
 
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButEdit.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButEdit.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -367,7 +429,11 @@ Public Class FormAddStocks
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -375,22 +441,38 @@ Public Class FormAddStocks
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()

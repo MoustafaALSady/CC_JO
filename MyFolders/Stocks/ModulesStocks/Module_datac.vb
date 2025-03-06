@@ -50,7 +50,11 @@ Module Module_datac
             Dim hijriDate As String = String.Empty
 
             'Start Date is 10-31-1883
+<<<<<<< HEAD
             Dim DaysPan As Integer = DateDiff(DateInterval.Day, New DateTime(1883, 10, 31), CDate(GregorianDate)) + 1
+=======
+            Dim DaysPan As Integer = DateDiff(DateInterval.Day, New System.DateTime(1883, 10, 31), CDate(GregorianDate)) + 1
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim i As Integer = 0
             Do While DaysPan > 29 + Val(UmmUlquraHijriMonths.Chars(i))
                 DaysPan = DaysPan - 29 - Val(UmmUlquraHijriMonths.Chars(i))
@@ -90,7 +94,11 @@ Module Module_datac
             End If
 
             'Start Date is 10-31-1883
+<<<<<<< HEAD
             gregorianDate = CStr(DateAdd(DateInterval.Day, TempDaysPan - 1, New DateTime(1883, 10, 31)))
+=======
+            gregorianDate = CStr(DateAdd(DateInterval.Day, TempDaysPan - 1, New System.DateTime(1883, 10, 31)))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             Return gregorianDate
 

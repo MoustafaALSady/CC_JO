@@ -4,7 +4,23 @@ Public Class FrmStoreWornning
     Dim WithEvents BS As New BindingSource
     Public Balance1 As Integer
 
+<<<<<<< HEAD
     Private Sub FrmStoreWornning_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Public Function SEARCHSTOCKS()
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim idSTK As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(STK1) FROM STOCKS", Consum)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        idSTK = cmd1.ExecuteScalar
+        Consum.Close()
+        Balance1 = Val(SumAmounTOTALSTOCKS(DGRD.Rows(DGRD.CurrentRow.Index).Cells("STK25").Value, idSTK))
+        Me.TextBox1.Text = Balance1
+    End Function
+    Private Sub FrmStoreWornning_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -12,6 +28,10 @@ Public Class FrmStoreWornning
             Application.DoEvents()
             Me.Opacity = a / 10
         Next
+<<<<<<< HEAD
+=======
+        SEARCHSTOCKS()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim N As Integer
         DGRD.Rows.Clear()
         N = 1
@@ -53,7 +73,11 @@ Public Class FrmStoreWornning
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Close()
     End Sub
 End Class

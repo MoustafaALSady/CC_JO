@@ -3,7 +3,11 @@
 
 Public Class BalanceSheet
     Dim WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly rpt1 As New rptStocks25
     ReadOnly rpt11 As New rptStocks26
     ReadOnly rpt12 As New rptStocks271
@@ -20,11 +24,19 @@ Public Class BalanceSheet
     ReadOnly rpt18 As New rptSuppliers12
 
 
+<<<<<<< HEAD
     Private Sub BalanceSheet_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Me.BackgroundImage = img
         Dim ds As New DataSet
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub BalanceSheet_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Me.BackgroundImage = img
+        Dim ds As New DataSet
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.EnforceConstraints = False
         Consum.Open()
         Dim str1 As New SqlCommand("", Consum)
@@ -33,7 +45,11 @@ Public Class BalanceSheet
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         SqlDataAdapter1 = New SqlDataAdapter(str1)
+=======
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         SqlDataAdapter1.Fill(ds, "COMPANY")
         BS.DataSource = ds
@@ -46,6 +62,7 @@ Public Class BalanceSheet
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -53,6 +70,15 @@ Public Class BalanceSheet
         Dim strsql As New SqlCommand("SELECT  CUser, COUser, cmp8, cmp5, cmp13 FROM COMPANY WHERE cmp2 ='" & AssociationName & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT  CUser, COUser, cmp8, cmp5, cmp13 FROM COMPANY WHERE cmp2 ='" & AssociationName & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -74,8 +100,13 @@ Public Class BalanceSheet
 
     End Sub
     Public Sub Load_CU1_CU2()
+<<<<<<< HEAD
         Dim str3 As New SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, MOV3, yearearlier, YEAR, ISNULL(CUser,CUser), ISNULL(CUser1,CUser) FROM Previouspost1  WHERE  CUser='" & ModuleGeneral.CUser & "'or  CUser1='" & ModuleGeneral.CUser & "'and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and yearearlier  ='" & (FiscalYear_currentDateMustBeInFiscalYear() - 1) & "'", Consum)
         SqlDataAdapter1 = New SqlDataAdapter(str3)
+=======
+        Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, MOV3, yearearlier, YEAR, ISNULL(CUser,CUser), ISNULL(CUser1,CUser) FROM Previouspost1  WHERE  CUser='" & ModuleGeneral.CUser & "'or  CUser1='" & ModuleGeneral.CUser & "'and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and yearearlier  ='" & (FiscalYear_currentDateMustBeInFiscalYear() - 1) & "'", Consum)
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim ds3 As New DataSet
         ds3.Clear()
         SqlDataAdapter1.Fill(ds3, "Previouspost1")
@@ -84,7 +115,11 @@ Public Class BalanceSheet
         End If
     End Sub
 
+<<<<<<< HEAD
     Public Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Public Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -95,8 +130,13 @@ Public Class BalanceSheet
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Closed Then Consum.Open()
             Dim txtFROMDate As String
             Dim txtToDate As String
@@ -120,7 +160,11 @@ Public Class BalanceSheet
             End If
 
             If Me.RadrptStocks.Checked Then
+<<<<<<< HEAD
                 Dim str As New SqlCommand("", Consum)
+=======
+                Dim str As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 If FIFO = True Then
                     str.CommandText = "SELECT * FROM FIFOStocks    WHERE  CUser='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and  STK4 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "' AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'"
                 ElseIf LIFO = True Then
@@ -129,7 +173,11 @@ Public Class BalanceSheet
                     str.CommandText = "SELECT * FROM AvgStocks     WHERE CUser ='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and  STK4 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "' AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'"
                 End If
 
+<<<<<<< HEAD
                 SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds1 As New DataSet
 
                 If FIFO = True Then
@@ -197,9 +245,15 @@ Public Class BalanceSheet
                 End If
                 Dim account_no1 As Integer = 23007 Or 23007001 Or 23007002
                 GETSERVERNAMEANDDATABASENAME(rpt2, DBServer, "", "")
+<<<<<<< HEAD
                 Dim str2 As New SqlCommand("SELECT account_no, account_name, ACC, SUMDEBIT, SUMCREDIT, CurrentBalance, CurrentBalance1, MOV3, YEAR, CUser, COUser FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and  MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'  and account_no  <>'" & account_no1 & "' ", Consum)
                 Dim builder5 As New SqlCommandBuilder(SqlDataAdapter1)
                 SqlDataAdapter1 = New SqlDataAdapter(str2)
+=======
+                Dim str2 As New SqlClient.SqlCommand("SELECT account_no, account_name, ACC, SUMDEBIT, SUMCREDIT, CurrentBalance, CurrentBalance1, MOV3, YEAR, CUser, COUser FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and  MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'  and account_no  <>'" & account_no1 & "' ", Consum)
+                Dim builder5 As New SqlCommandBuilder(SqlDataAdapter1)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds2 As New DataSet
                 ds2.Clear()
                 SqlDataAdapter1.Fill(ds2, "FINALBALANCE")
@@ -230,10 +284,17 @@ Public Class BalanceSheet
                 'Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, ISNULL(CUser,CUser) AS CUser, ISNULL(CUser1,CUser) AS CUser1 FROM Previouspost1  WHERE  CUser='" & Module1.CUser & "'and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' or  CUser  IS NULL or CUser1 ='" & CUser & "'  ", Consum)
                 GETSERVERNAMEANDDATABASENAME(rpt3, DBServer, "", "")
                 'Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, CUser, CUser1 FROM Previouspost1 WHERE  CUser='" & CUser & "'and  YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  ", Consum)
+<<<<<<< HEAD
                 Dim str3 As New SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, YEAR1, CUser, CUser1  FROM Previouspost1  WHERE  CUser='" & CUser & "' or CUser1 ='" & CUser & "'   or  CUser  IS NULL   and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
 
                 'ISNULL(YEAR,'" & FiscalYear_currentDateMustBeInFiscalYear() & "'),
                 SqlDataAdapter1 = New SqlDataAdapter(str3)
+=======
+                Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, YEAR1, CUser, CUser1  FROM Previouspost1  WHERE  CUser='" & CUser & "' or CUser1 ='" & CUser & "'   or  CUser  IS NULL   and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
+
+                'ISNULL(YEAR,'" & FiscalYear_currentDateMustBeInFiscalYear() & "'),
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds3 As New DataSet
                 ds3.Clear()
                 SqlDataAdapter1.Fill(ds3, "Previouspost1")
@@ -288,8 +349,13 @@ Public Class BalanceSheet
                 If Consum.State = ConnectionState.Closed Then Consum.Open()
                 GETSERVERNAMEANDDATABASENAME(rpt4, DBServer, "", "")
 
+<<<<<<< HEAD
                 Dim str4 As New SqlCommand("SELECT MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV10, MOV11, MOV12, USERNAME, Realname, Auditor, CUser, COUser, da, ne, da1, ne1 FROM MOVES   WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
                 SqlDataAdapter1 = New SqlDataAdapter(str4)
+=======
+                Dim str4 As New SqlClient.SqlCommand("SELECT MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV10, MOV11, MOV12, USERNAME, Realname, Auditor, CUser, COUser, da, ne, da1, ne1 FROM MOVES   WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str4)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds4 As New DataSet
                 ds4.Clear()
                 SqlDataAdapter1.Fill(ds4, "MOVES")
@@ -315,8 +381,13 @@ Public Class BalanceSheet
                     Exit Sub
                 End If
                 GETSERVERNAMEANDDATABASENAME(rpt5, DBServer, "", "")
+<<<<<<< HEAD
                 Dim str5 As New SqlCommand("SELECT MOVD4, MOVD3, AccountKind, SUMDEBIT, SUMCREDIT, CurrentBalance, CurrentBalance1, MOV2, MOV3, YEAR, CUser, COUser FROM BALANCE WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
                 SqlDataAdapter1 = New SqlDataAdapter(str5)
+=======
+                Dim str5 As New SqlClient.SqlCommand("SELECT MOVD4, MOVD3, AccountKind, SUMDEBIT, SUMCREDIT, CurrentBalance, CurrentBalance1, MOV2, MOV3, YEAR, CUser, COUser FROM BALANCE WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds5 As New DataSet
                 ds5.Clear()
                 SqlDataAdapter1.Fill(ds5, "BALANCE")
@@ -342,8 +413,13 @@ Public Class BalanceSheet
                     Exit Sub
                 End If
                 GETSERVERNAMEANDDATABASENAME(rpt6, DBServer, "", "")
+<<<<<<< HEAD
                 Dim str6 As New SqlCommand("SELECT MOVD4, MOVD3, SUMDEBIT, SUMCREDIT, AccountKind, MOV2, MOV3, CurrentBalance, CurrentBalance1, MOV9, CUser, COUser FROM BALANCE1  WHERE  CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "' AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
                 SqlDataAdapter1 = New SqlDataAdapter(str6)
+=======
+                Dim str6 As New SqlClient.SqlCommand("SELECT MOVD4, MOVD3, SUMDEBIT, SUMCREDIT, AccountKind, MOV2, MOV3, CurrentBalance, CurrentBalance1, MOV9, CUser, COUser FROM BALANCE1  WHERE  CUser='" & CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and MOV3 BETWEEN '" & Format(Me.DateTimePicker1.Value, "yyyy/MM/dd") & "' AND  '" & Format(Me.DateTimePicker2.Value, "yyyy/MM/dd") & "'", Consum)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds6 As New DataSet
                 ds6.Clear()
                 SqlDataAdapter1.Fill(ds6, "BALANCE1")
@@ -388,8 +464,13 @@ Public Class BalanceSheet
                 'dr.CS3 = b
                 'BK.Image = Image.FromStream(New System.IO.MemoryStream(CType(dr.Item(0), Byte())))
 
+<<<<<<< HEAD
                 Dim str7 As New SqlCommand("SELECT TBNK1, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK15, TBNK16, TBNK19, TBNK119, TBNK20, TBNK21, OpeningBalance, OpeningBalance1, OpeningBalance2, CUser FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
                 SqlDataAdapter1 = New SqlDataAdapter(str7)
+=======
+                Dim str7 As New SqlClient.SqlCommand("SELECT TBNK1, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK15, TBNK16, TBNK19, TBNK119, TBNK20, TBNK21, OpeningBalance, OpeningBalance1, OpeningBalance2, CUser FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str7)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds7 As New DataSet
                 ds7.Clear()
                 'ds7.Tables(0).Columns.Add("k2", System.Type.GetType("System.Byte[]"))
@@ -428,8 +509,13 @@ Public Class BalanceSheet
                     Exit Sub
                 End If
                 GETSERVERNAMEANDDATABASENAME(rpt8, DBServer, "", "")
+<<<<<<< HEAD
                 Dim str8 As New SqlCommand("SELECT LO, Lo2, Lo3, Lo4, Lo5, Lo6, Lo7, Lo8, Lo9, Lo10, Lo11, Lo12, Lo13, SUMcab5, lo15, lo19, Lo20, Lo21, Lo22, Lo23, Lo24, Lo25, Lo26, Lo30, SUMcab4, CAB7, OpeningBalance, OpeningBalance1, CUser FROM CustomersCABLES2   WHERE lo19 ='" & False & "' AND Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
                 SqlDataAdapter1 = New SqlDataAdapter(str8)
+=======
+                Dim str8 As New SqlClient.SqlCommand("SELECT LO, Lo2, Lo3, Lo4, Lo5, Lo6, Lo7, Lo8, Lo9, Lo10, Lo11, Lo12, Lo13, SUMcab5, lo15, lo19, Lo20, Lo21, Lo22, Lo23, Lo24, Lo25, Lo26, Lo30, SUMcab4, CAB7, OpeningBalance, OpeningBalance1, CUser FROM CustomersCABLES2   WHERE lo19 ='" & False & "' AND Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds8 As New DataSet
                 ds8.Clear()
                 SqlDataAdapter1.Fill(ds8, "CustomersCABLES2")
@@ -451,9 +537,15 @@ Public Class BalanceSheet
                     Exit Sub
                 End If
                 GETSERVERNAMEANDDATABASENAME(rpt18, DBServer, "", "")
+<<<<<<< HEAD
                 Dim str8 As New SqlCommand("SELECT IDCAB, CAB2, CAB3, CAB4, CAB5, CAB6, CAB7, CAB8, CAB9, CAB10, CAB11, CAB12, CAB13, CAB14, CAB15, CAB16, CAB17, CAB18, CAB19, CAB20, CAB21, CAB22, CAB23, CB1, BN2, USERNAME, Auditor, CUser,  COUser, da, ne, da1, ne1 FROM Suppliers1   WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CAB19 ='" & True & "'", Consum)
 
                 SqlDataAdapter1 = New SqlDataAdapter(str8)
+=======
+                Dim str8 As New SqlClient.SqlCommand("SELECT IDCAB, CAB2, CAB3, CAB4, CAB5, CAB6, CAB7, CAB8, CAB9, CAB10, CAB11, CAB12, CAB13, CAB14, CAB15, CAB16, CAB17, CAB18, CAB19, CAB20, CAB21, CAB22, CAB23, CB1, BN2, USERNAME, Auditor, CUser,  COUser, da, ne, da1, ne1 FROM Suppliers1   WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CAB19 ='" & True & "'", Consum)
+
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds8 As New DataSet
                 ds8.Clear()
                 SqlDataAdapter1.Fill(ds8, "Suppliers1")
@@ -493,7 +585,11 @@ Public Class BalanceSheet
                         .CommandText = "SELECT IDCH, CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11, CH12, CH13, CH14, CH15, CH16, CH17, CH18, CH19, CH20, CH21, CH22, CH23, CH24, CH25, CH26, CH27, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM Checks  WHERE  CUser='" & CUser & "' and CH15 ='" & False & "' ORDER BY CH2"
                     End If
                 End With
+<<<<<<< HEAD
                 SqlDataAdapter1 = New SqlDataAdapter(str9)
+=======
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds9 As New DataSet
                 ds9.Clear()
                 SqlDataAdapter1.Fill(ds9, "Checks")
@@ -527,7 +623,11 @@ Public Class BalanceSheet
                         .CommandText = "SELECT IDCH, CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11, CH12, CH13, CH14, CH15, CH16, CH17, CH18, CH19, CH20, CH21, CH22, CH23, CH24, CH25, CH26, CH27, CB1, BN2, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM Checks  WHERE  CUser='" & CUser & "' and CH15 ='" & True & "' ORDER BY CH2"
                     End If
                 End With
+<<<<<<< HEAD
                 SqlDataAdapter1 = New SqlDataAdapter(str10)
+=======
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str10)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim ds10 As New DataSet
                 ds10.Clear()
                 SqlDataAdapter1.Fill(ds10, "Checks")
@@ -548,7 +648,11 @@ Public Class BalanceSheet
                 Dim ds As New DataSet
                 Dim str As New SqlCommand("SELECT IDFA, FA1, FA2, FA3, FA4, FA5, FA6, FA7, FA8, FA9, FA10, FA11, FA12, USERNAME, Auditor, CUser, COUser, da, ne, da1, ne1 FROM FixedAssets   WHERE  CUser='" & ModuleGeneral.CUser & "'   ", Consum)
                 Dim builder19 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
                 SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds.Clear()
                 SqlDataAdapter1.Fill(ds, "FixedAssets")
                 rpt.SetDataSource(ds)
@@ -570,7 +674,11 @@ Public Class BalanceSheet
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadRepBlanceSheet.CheckedChanged
+=======
+    Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadRepBlanceSheet.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RadRepBlanceSheet.Checked = True Then
             Me.GroupBox3.Enabled = True
         Else
@@ -578,7 +686,11 @@ Public Class BalanceSheet
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub RadioButton9_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioChecks.CheckedChanged
+=======
+    Private Sub RadioButton9_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioChecks.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RadioChecks.Checked = True Then
             Me.GroupBox2.Enabled = True
             Me.RBWard.Checked = True
@@ -605,7 +717,11 @@ Public Class BalanceSheet
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub RadioButton10_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadChecks1.CheckedChanged
+=======
+    Private Sub RadioButton10_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadChecks1.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RadChecks1.Checked = True Then
             Me.GroupBox2.Enabled = True
             Me.RBWard.Checked = False

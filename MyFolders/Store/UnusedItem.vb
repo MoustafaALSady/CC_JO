@@ -2,8 +2,13 @@ Imports System.Data.SqlClient
 Public Class UnusedItem
     Public Pr, Pr2 As Double
     ReadOnly ItDataset As New DataSet, Flt As String
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
     Private Sub FrmStoreWornning_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+    Private Sub FrmStoreWornning_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -17,15 +22,24 @@ Public Class UnusedItem
         Dim ds As DataSet
         ds = New DataSet
         DGRD.Rows.Clear()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("select * from Stockwarehouse where Balance1 > 0 order by STK25 asc;", Consum)
         With strSQL
             .CommandText = "select * from Stockwarehouse  WHERE Balance1 >'" & 0 & "' and  CUser='" & CUser & "' order by STK25"
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         adp = New SqlDataAdapter(strSQL)
         Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+        adp = New SqlClient.SqlDataAdapter(strSQL)
+        Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         adp.Fill(ds, "Stockwarehouse")
         If Me.BindingContext(ds, "Stockwarehouse").Count = 0 Then
             MsgBox("·« ÌÊÃœ »Ì«‰«  ·⁄—÷Â«", 64 + 524288, "⁄—÷ «·»Ì«‰« ")
@@ -55,7 +69,11 @@ Public Class UnusedItem
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Close()
     End Sub
 End Class

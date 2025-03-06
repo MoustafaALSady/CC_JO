@@ -10,8 +10,13 @@ Imports WIA
 
 Public Class FormDOCUMENTS
     Public ID As Integer
+<<<<<<< HEAD
     Private FileStream As FileStream
     Private Reader As BinaryReader = Nothing 'طريقة قرائة الملفات
+=======
+    Private FileStream As System.IO.FileStream
+    Private Reader As System.IO.BinaryReader = Nothing 'طريقة قرائة الملفات
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private FileData As Byte() = Nothing           'لحفظ الملف
     Private FileType As String = ""               ' نوع الملف
     Private ReadOnly FileType1 As String
@@ -20,7 +25,11 @@ Public Class FormDOCUMENTS
     Private FileInfo As String = ""               ' نوعية الملف كما هو في مخزنRegistry
     Private Pathf As String                        'مسار الملف
     Private MyPath As String
+<<<<<<< HEAD
     ReadOnly op As New Windows.Forms.OpenFileDialog
+=======
+    ReadOnly op As New System.Windows.Forms.OpenFileDialog
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly Fol As String = mykey.GetValue("MYFOLDER", Application.StartupPath & "\CO_MAS\Folder pdf\")
     Public BUD As Boolean = False
     Public XU As String
@@ -113,7 +122,11 @@ Public Class FormDOCUMENTS
         Me.ShowMyFileInfo()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackWorker1.DoWork
+=======
+    Private Sub BackWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Threading.Thread.Sleep(100)
         MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
         If Not IO.Directory.Exists(MYFOLDER & "\FailImag") Then Directory.CreateDirectory(MYFOLDER & "\FolderImageName")
@@ -127,7 +140,11 @@ Public Class FormDOCUMENTS
 
     Private Sub INS_PDF()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             If Me.TEXTFileSubject.Text = "" Then MessageBox.Show("يجب تعبئة كافة الحقول قبل الحفظ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
@@ -135,8 +152,13 @@ Public Class FormDOCUMENTS
             If Me.TextFileDescription.Text = "" Then MessageBox.Show("يجب تعبئة كافة الحقول قبل الحفظ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information) : Exit Sub
             Dim sql As String = "INSERT INTO DOCUMENTS(LO, DOC2, DOC3, DOC4, DOC5, DOC6, DOC7, DOC8, date_1, USERNAME, CUser, COUser, da, ne) VALUES     (@LO, @DOC2, @DOC3, @DOC4, @DOC5, @DOC6, @DOC7, @DOC8, @date_1, @USERNAME, @CUser, @COUser, @da, @ne)"
             Dim cmd As New SqlCommand(sql, Consum)
+<<<<<<< HEAD
             FileStream = New FileStream(LabFileName.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Reader = New BinaryReader(FileStream) ' تعريف القارئ
+=======
+            FileStream = New System.IO.FileStream(LabFileName.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            Reader = New System.IO.BinaryReader(FileStream) ' تعريف القارئ
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FileData = Nothing 'تفريغ البيانات
             FileData = Reader.ReadBytes(CType(FileStream.Length, Integer)) 'قراءة الملف
             FileSize = FileData.Length 'حجم الملف
@@ -218,10 +240,17 @@ Public Class FormDOCUMENTS
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         If Me.BUD = False Then
             Try
                 Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub BackgroundWorker1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        If Me.BUD = False Then
+            Try
+                Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
                 'ds = New DataSet
@@ -239,11 +268,19 @@ Public Class FormDOCUMENTS
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
         'Me.CircularProgress1.Value = e.ProgressPercentage
     End Sub
 
     Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+=======
+    Private Sub BackgroundWorker1_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker1.ProgressChanged
+        'Me.CircularProgress1.Value = e.ProgressPercentage
+    End Sub
+
+    Private Sub BackgroundWorker1_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             'Me.BS.DataSource = dt.TableName("DOCUMENTS")
             'Me.RowCount = Me.BS.Count
@@ -305,14 +342,24 @@ Public Class FormDOCUMENTS
             End If
         End If
         Dim Year As Integer = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
+<<<<<<< HEAD
         GetAutoNumberMyDOCUMENTS()
         Dim NumberDOCUMENTS As Object = "DO" & Year & SEARCHDATA.NumberMyDocuments
         GetAutoNumberMyDOCUMENTSFL(NumberDOCUMENTS)
+=======
+        GetAutoNumberDOCUMENTS()
+        Dim NumberDOCUMENTS As Object = "DO" & NoDocuments
+        GetAutoNumberDOCUMENTSFL(NumberDOCUMENTS)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         Me.TEXTFileSubject.Text = "مرفقات الجمعية"
         Me.TextTransactionNumber.Text = NumberDOCUMENTS
         Me.TextFileDescription.Text = "ارفاق مستند جديد"
+<<<<<<< HEAD
         Me.TextFileNo.Text = SEARCHDATA.NumberMyDOCUMENTSFL
+=======
+        Me.TextFileNo.Text = SEARCHDATA.NumberDOCUMENTSFL
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextFileName.Text = "مستند جديد"
         Me.PictureBox1.Image = Nothing
 
@@ -326,7 +373,11 @@ Public Class FormDOCUMENTS
     End Sub
 
     Private Sub Button4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Using Consum
             If Me.dgv1.SelectedRows.Count = 0 Then MessageBox.Show("يجب أختيار أسم المعاملة أولاً ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Warning) : Exit Sub
             Dim msg As String = String.Format("{1}{0} هل أنت متأكد من حذف المعالمة بشكل نهائي ", Environment.NewLine, Me.dgv1(1, Me.dgv1.SelectedRows(0).Index).Value.ToString())
@@ -373,11 +424,19 @@ Public Class FormDOCUMENTS
                 Me.TextFileNo.Enabled = True
                 Return
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             If Me.TEXTFileSubject.Text = "" Or Me.TextTransactionNumber.Text = "" Or Me.TextFileNo.Text = "" Or Me.LabFileName.Text = "" Then MessageBox.Show("جميع الحقول مطلوبة ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Warning) : Exit Sub
             ID = Me.dgv1(0, Me.dgv1.SelectedRows(0).Index).Value.ToString()
             Dim SQL As String = "Update DOCUMENTS SET  lo = @lo, DOC2 = @DOC2, DOC3 = @DOC3, DOC4 = @DOC4, DOC5 = @DOC5, DOC6 = @DOC6, DOC7 = @DOC7, DOC8 = @DOC8, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser,da = @da, ne = @ne WHERE DOC1 =" & Val(ID)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If Me.TEXTFileSubject.Text = "" Or Me.TextTransactionNumber.Text = "" Or Me.TextFileNo.Text = "" Or Me.LabFileName.Text = "" Then MessageBox.Show("جميع الحقول مطلوبة ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Warning) : Exit Sub
+            ID = Me.dgv1(0, Me.dgv1.SelectedRows(0).Index).Value.ToString()
+            Dim SQL As String = "Update DOCUMENTS SET  lo = @lo, DOC2 = @DOC2, DOC3 = @DOC3, DOC4 = @DOC4, DOC5 = @DOC5, DOC6 = @DOC6, DOC7 = @DOC7, DOC8 = @DOC8, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser,da = @da, ne = @ne WHERE DOC1 =" & Val(ID)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -466,9 +525,15 @@ Public Class FormDOCUMENTS
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker5_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker5.DoWork
         Try
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub BackgroundWorker5_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker5.DoWork
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim sql As String = "SELECT DOC1 ,lo ,DOC2 ,DOC3 ,DOC4,DOC5,DOC6 FROM DOCUMENTS  WHERE DOC1 =" & Val(ID)
@@ -483,7 +548,11 @@ Public Class FormDOCUMENTS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker5_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker5.RunWorkerCompleted
+=======
+    Private Sub BackgroundWorker5_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker5.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.dgv1.DataSource = dt2
         Me.dgv1.Columns.Item(6).Visible = False
         Me.Cty()
@@ -507,9 +576,15 @@ Public Class FormDOCUMENTS
         Me.CircularProgress2.IsRunning = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker2_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker2.DoWork
         Try
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub BackgroundWorker2_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.BUD = True Then
                 Try
                     If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -531,11 +606,19 @@ Public Class FormDOCUMENTS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker2_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles BackgroundWorker2.ProgressChanged
         'Me.CircularProgress1.Value = e.ProgressPercentage
     End Sub
 
     Private Sub BackgroundWorker2_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+=======
+    Private Sub BackgroundWorker2_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker2.ProgressChanged
+        'Me.CircularProgress1.Value = e.ProgressPercentage
+    End Sub
+
+    Private Sub BackgroundWorker2_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker2.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.dgv1.DataSource = dt1
         Me.dgv1.Columns.Item(0).Visible = False
         Me.dgv1.Columns.Item(6).Visible = False
@@ -590,8 +673,13 @@ Public Class FormDOCUMENTS
             Return
         End If
         Try
+<<<<<<< HEAD
             FileStream = New FileStream(Me.LabFileName.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read)
             Reader = New BinaryReader(FileStream) ' تعريف القارئ
+=======
+            FileStream = New System.IO.FileStream(Me.LabFileName.Text, System.IO.FileMode.Open, System.IO.FileAccess.Read)
+            Reader = New System.IO.BinaryReader(FileStream) ' تعريف القارئ
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             FileData = Nothing 'تفريغ البيانات
             FileData = Reader.ReadBytes(CType(FileStream.Length, Integer)) 'قراءة الملف
             FileSize = FileData.LongLength 'حجم الملف
@@ -640,7 +728,11 @@ Public Class FormDOCUMENTS
         Me.CircularProgress4.IsRunning = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker4_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker4.DoWork
+=======
+    Private Sub BackgroundWorker4_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker4.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.dgv1.SelectedRows.Count = 0 Then MessageBox.Show("يجب أختيار المعاملة المطلوبة ", "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Warning) : Exit Sub
         Dim indx As Integer = dgv1.SelectedRows(0).Index
         Me.TEXTFileSubject.Text = Me.dgv1(4, indx).Value.ToString
@@ -651,7 +743,11 @@ Public Class FormDOCUMENTS
         LabFileType.Text = Me.dgv1(3, indx).Value.ToString
 
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.dgv1(3, indx).Value = ".png" Or dgv1(3, indx).Value = ".jpg" Or Me.dgv1(3, indx).Value = ".gif" Or Me.dgv1(3, indx).Value = ".bmp" Then
                 Me.ButShowFile.Image = Me.ImageList1.Images(0)
                 'Me.ButShowFile.BackColor = Color.Black
@@ -712,26 +808,46 @@ Public Class FormDOCUMENTS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker4_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles BackgroundWorker4.ProgressChanged
 
     End Sub
 
     Private Sub BackgroundWorker4_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker4.RunWorkerCompleted
+=======
+    Private Sub BackgroundWorker4_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker4.ProgressChanged
+
+    End Sub
+
+    Private Sub BackgroundWorker4_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker4.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.dgv1.Enabled = True
         Me.CircularProgress4.IsRunning = False
         Me.CircularProgress4.Visible = False
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker3_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackgroundWorker3.DoWork
         Me.dgv1.Enabled = False
         Me.ButShowFile.Enabled = False
         Dim indx As Integer = dgv1.SelectedRows(0).Index
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub BackgroundWorker3_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker3.DoWork
+        Me.dgv1.Enabled = False
+        Me.ButShowFile.Enabled = False
+        Dim indx As Integer = dgv1.SelectedRows(0).Index
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim sql As String = "select  DOC2 ,  DOC3 ,   DOC6  from DOCUMENTS where DOC1=" & dgv1.CurrentRow().Cells(0).Value
         'Dim cmd As SqlCommand = New SqlCommand(sql, Consum)
+<<<<<<< HEAD
         Dim da As New SqlDataAdapter(sql, Consum)
+=======
+        Dim da As New SqlClient.SqlDataAdapter(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim dt As New DataTable
         da.Fill(dt)
         Consum.Close()
@@ -762,11 +878,19 @@ Public Class FormDOCUMENTS
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker3_ProgressChanged(ByVal sender As Object, ByVal e As ProgressChangedEventArgs) Handles BackgroundWorker3.ProgressChanged
         '   
     End Sub
 
     Private Sub BackgroundWorker3_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
+=======
+    Private Sub BackgroundWorker3_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorker3.ProgressChanged
+        '   
+    End Sub
+
+    Private Sub BackgroundWorker3_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker3.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             File.Delete(FPath)
             lablCount.Text = 0 & " " & "%"
@@ -776,7 +900,11 @@ Public Class FormDOCUMENTS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PictureBox1.Click
+=======
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim y As Integer = 490
         Dim x As Integer = (Me.Width - y)
 
@@ -805,7 +933,11 @@ Public Class FormDOCUMENTS
     Shared Function GetFileDescription(ByVal filePath As String) As String
         Dim regKey As RegistryKey = Nothing
         Try
+<<<<<<< HEAD
             regKey = Registry.ClassesRoot.OpenSubKey(New FileInfo(filePath).Extension)
+=======
+            regKey = Registry.ClassesRoot.OpenSubKey(New System.IO.FileInfo(filePath).Extension)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If regKey IsNot Nothing Then
                 Dim className As String = regKey.GetValue("")
                 If className.Length > 0 Then
@@ -827,7 +959,11 @@ Public Class FormDOCUMENTS
         Return Nothing
     End Function
 
+<<<<<<< HEAD
     Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButScan.Click
+=======
+    Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButScan.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         'Dim f As FormScan2 = New FormScan2(AddressOf ShowImage)
 
@@ -880,7 +1016,11 @@ Public Class FormDOCUMENTS
         End If
     End Function
 
+<<<<<<< HEAD
     Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNextPage.Click
+=======
+    Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNextPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         currentPage -= 1
         If currentPage < 1 Then
@@ -893,7 +1033,11 @@ Public Class FormDOCUMENTS
         LoadPage()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnPreviousPage.Click
+=======
+    Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPreviousPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If pageSize = 0 Then
             MessageBox.Show("ضبط حجم الصفحة، ثم انقر فوق ""ملء الشبكة"" زر!")
@@ -910,7 +1054,11 @@ Public Class FormDOCUMENTS
         LoadPage()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFirstPage.Click
+=======
+    Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirstPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If recNo = maxRec Then
             MessageBox.Show("أنت في الصفحة الأخيرة!")
@@ -921,7 +1069,11 @@ Public Class FormDOCUMENTS
         LoadPage()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLastPage.Click
+=======
+    Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLastPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If currentPage = 1 Then
             MessageBox.Show("أنت في الصفحة الأولى!")

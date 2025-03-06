@@ -1,7 +1,11 @@
 ﻿Imports System.Diagnostics
 
 Public Class Freg
+<<<<<<< HEAD
     Private Sub Freg_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Freg_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Call URL_F()
             'Me.TextBox1.Text = URLI.ToString.Trim
@@ -18,7 +22,11 @@ Public Class Freg
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonOk_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonOk.Click
+=======
+    Private Sub ButtonOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonOk.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.TextBoxUser.Text.Trim = COManagement.Md5ha(COManagement.SECU().Trim + "muostafa.76") Then
                 mykey.SetValue("CORegCode", COManagement.Md5ha(COManagement.SECU().Trim + "muostafa.76"))

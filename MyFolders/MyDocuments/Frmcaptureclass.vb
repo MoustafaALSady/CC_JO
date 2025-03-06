@@ -1,5 +1,9 @@
 ﻿Public Class Frmcaptureclass
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 #Region "Variables"
     Private m_color As Color
     Private CaptureRectangle As New Rectangle(New Point(0, 0), New Size(0, 0))
@@ -31,10 +35,17 @@
         Threading.Thread.Sleep(250)
         ' get screen shot of the whole screen and set it as background for the current form
         Dim bounds As Rectangle
+<<<<<<< HEAD
         Dim screenshot As Bitmap
         Dim graph As Graphics
         bounds = Screen.PrimaryScreen.Bounds
         screenshot = New Bitmap(bounds.Width, bounds.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
+=======
+        Dim screenshot As System.Drawing.Bitmap
+        Dim graph As Graphics
+        bounds = Screen.PrimaryScreen.Bounds
+        screenshot = New System.Drawing.Bitmap(bounds.Width, bounds.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         graph = Graphics.FromImage(screenshot)
         graph.CopyFromScreen(bounds.X, bounds.Y, 0, 0, bounds.Size, CopyPixelOperation.SourceCopy)
         Me.BackgroundImage = screenshot
@@ -50,7 +61,11 @@
             Clipboard.SetImage(bmp)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ScreenCapturer_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseDown
+=======
+    Private Sub ScreenCapturer_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If e.Button = MouseButtons.Left Then
             isDrag = True
         End If
@@ -58,7 +73,11 @@
         ' Calculate the startPoint by using the PointToScreen method.
         startPoint = control.PointToScreen(New Point(e.X, e.Y))
     End Sub
+<<<<<<< HEAD
     Private Sub ScreenCapturer_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+=======
+    Private Sub ScreenCapturer_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If isDrag Then
             ControlPaint.DrawReversibleFrame(CaptureRectangle, Me.BackColor, FrameStyle.Dashed)
             Dim endPoint As Point = CType(sender, Control).PointToScreen(New Point(e.X, e.Y))
@@ -69,7 +88,11 @@
             Me.Invalidate()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ScreenCapturer_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
+=======
+    Private Sub ScreenCapturer_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         isDrag = False
         ControlPaint.DrawReversibleFrame(CaptureRectangle, Me.BackColor, FrameStyle.Dashed)
         Me.Hide()
@@ -80,7 +103,11 @@
         Me.Owner.Show()
         CaptureRectangle = New Rectangle(0, 0, 0, 0)
     End Sub
+<<<<<<< HEAD
     Private Sub ScreenCapturer_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles Me.Paint
+=======
+    Private Sub ScreenCapturer_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Me.Paint
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim rect As Rectangle = CaptureRectangle
         If rect.Width < 0 Then
             rect.X += rect.Width
@@ -94,7 +121,11 @@
         e.Graphics.DrawRectangle(SystemPens.Highlight, rect)
     End Sub
 
+<<<<<<< HEAD
     Private Sub Frmcaptureclass_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Frmcaptureclass_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()

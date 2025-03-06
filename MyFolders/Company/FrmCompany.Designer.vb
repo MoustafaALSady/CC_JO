@@ -680,6 +680,7 @@ Partial Class FrmCompany
         '
         'TEXTCMP1
         '
+<<<<<<< HEAD
         Me.TEXTCMP1.BackColor = System.Drawing.Color.White
         Me.TEXTCMP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TEXTCMP1.Cursor = System.Windows.Forms.Cursors.Default
@@ -688,6 +689,16 @@ Partial Class FrmCompany
         Me.TEXTCMP1.Margin = New System.Windows.Forms.Padding(2)
         Me.TEXTCMP1.Name = "TEXTCMP1"
         Me.TEXTCMP1.Size = New System.Drawing.Size(170, 23)
+=======
+        Me.TEXTCMP1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TEXTCMP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTCMP1.Enabled = False
+        Me.TEXTCMP1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTCMP1.Location = New System.Drawing.Point(173, -1)
+        Me.TEXTCMP1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTCMP1.Name = "TEXTCMP1"
+        Me.TEXTCMP1.Size = New System.Drawing.Size(170, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTCMP1.TabIndex = 60
         Me.TEXTCMP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -730,11 +741,17 @@ Partial Class FrmCompany
         '
         'TextCMP
         '
+<<<<<<< HEAD
         Me.TextCMP.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextCMP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextCMP.Enabled = False
         Me.TextCMP.Font = New System.Drawing.Font("Times New Roman", 9.85!, System.Drawing.FontStyle.Bold)
         Me.TextCMP.Location = New System.Drawing.Point(173, -2)
+=======
+        Me.TextCMP.BackColor = System.Drawing.Color.White
+        Me.TextCMP.Font = New System.Drawing.Font("Times New Roman", 9.85!, System.Drawing.FontStyle.Bold)
+        Me.TextCMP.Location = New System.Drawing.Point(2, 92)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextCMP.Margin = New System.Windows.Forms.Padding(2)
         Me.TextCMP.Name = "TextCMP"
         Me.TextCMP.Size = New System.Drawing.Size(170, 23)

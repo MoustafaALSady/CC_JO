@@ -8,13 +8,21 @@ Imports System.Security.AccessControl
 Imports System.Text
 
 Public Class FrmLOGIN
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private WithEvents TimerTestNet As New Timer
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
     Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim DataSetUsers As New DataSet
     Dim Attempt As Integer = 1
     Dim Drag As Boolean
@@ -25,7 +33,11 @@ Public Class FrmLOGIN
 
     Function Check_user() As Boolean
         Check_user = False
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim selectCommand As New SqlCommand("Select Pws FROM Users where UserName='" & Me.TxtUser.Text & "'", Consum)
         Dim Ds = New DataSet
         Dim Adp As New SqlDataAdapter(selectCommand)
@@ -36,7 +48,11 @@ Public Class FrmLOGIN
             If Trim(dr!pws) = Trim(Me.Txtpassword.Text) Then Check_user = True
         End If
     End Function
+<<<<<<< HEAD
     Private Sub FrmLOGIN_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmLOGIN_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Escape
@@ -48,7 +64,11 @@ Public Class FrmLOGIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmLOGIN_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmLOGIN_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
@@ -303,10 +323,17 @@ Public Class FrmLOGIN
             ' ''-------------------------------------------------------
             USERNAME = Trim(Me.TxtUser.Text)
             PASSWORD = Trim(Me.Txtpassword.Text)
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim ConUsers As New SqlConnection(constring1)
             Dim Users1 As New SqlCommand("SELECT  ID, UserName, Pws, TimeEnter, MacAddress, LoginName, Realname, UserType, CUser, COUser, BlockUser, LockAddRow, LockDelete, LockSave, LockUpdate, Printpreview, InternalAuditor, CollaborationManager, HeadofAuditingDepartment, ExternalAuditor, FileList, ListOFClients, CashAndMembers, ListOFAccounts, ListOFelectronicArchives, StaffMenu, internet, RAdmin1 FROM  USERS  WHERE  UserName like '" & Me.TxtUser.Text.Trim & "' and Pws like '" & Me.Txtpassword.Text.Trim & "' ", ConUsers)
             DataAdapterUsers = New SqlDataAdapter(Users1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim ConUsers As New SqlClient.SqlConnection(constring1)
+            Dim Users1 As New SqlCommand("SELECT  ID, UserName, Pws, TimeEnter, MacAddress, LoginName, Realname, UserType, CUser, COUser, BlockUser, LockAddRow, LockDelete, LockSave, LockUpdate, Printpreview, InternalAuditor, CollaborationManager, HeadofAuditingDepartment, ExternalAuditor, FileList, ListOFClients, CashAndMembers, ListOFAccounts, ListOFelectronicArchives, StaffMenu, internet, RAdmin1 FROM  USERS  WHERE  UserName like '" & Me.TxtUser.Text.Trim & "' and Pws like '" & Me.Txtpassword.Text.Trim & "' ", ConUsers)
+            DataAdapterUsers = New SqlClient.SqlDataAdapter(Users1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.DataSetUsers.Clear()
             Me.DataSetUsers = New DataSet
             If ConUsers.State = ConnectionState.Open Then ConUsers.Close()
@@ -319,7 +346,11 @@ Public Class FrmLOGIN
             Me.DataSetUsers.Clear()
             Me.DataSetUsers = New DataSet
             DataAdapterUsers.Fill(Me.DataSetUsers, "Users")
+<<<<<<< HEAD
             Dim str1 As New SqlCommand("", Consum) With {
+=======
+            Dim str1 As New SqlClient.SqlCommand("", Consum) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandText = "SELECT CMP, CMP1, CMP2, CMP3, CMP4, CMP5, CMP7, CMP8, CMP9, CMP11, CMP12, CMP13, CMP14, CUser, COUser from COMPANY  "
             }
             DataAdapterTab = New SqlDataAdapter(str1)
@@ -499,18 +530,30 @@ Public Class FrmLOGIN
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmLOGIN_Disposed(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Disposed
         On Error Resume Next
         Consum.Dispose()
     End Sub
     Private Sub Txtuser_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TxtUser.KeyPress
+=======
+    Private Sub FrmLOGIN_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Disposed
+        On Error Resume Next
+        Consum.Dispose()
+    End Sub
+    Private Sub Txtuser_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxtUser.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TxtUser.Text = "co-jo-co-jo-ms76" And Me.Txtpassword.Text = "co-jo-ms76" Then
             Me.Button1.Visible = True
         Else
             Me.Button1.Visible = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Txtuser_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TxtUser.KeyUp
+=======
+    Private Sub Txtuser_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TxtUser.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -521,14 +564,22 @@ Public Class FrmLOGIN
 
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub Txtpassword_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Txtpassword.KeyPress
+=======
+    Private Sub Txtpassword_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Txtpassword.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TxtUser.Text = "co-jo-ms76" And Me.Txtpassword.Text = "co-jo-ms76" Then
             Me.Button1.Visible = True
         Else
             Me.Button1.Visible = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Txtpassword_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Txtpassword.KeyUp
+=======
+    Private Sub Txtpassword_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Txtpassword.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -537,7 +588,11 @@ Public Class FrmLOGIN
                 Me.BackgroundWorker3.RunWorkerAsync()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub Txtpassword_LostFocus(ByVal sender As Object, ByVal e As EventArgs) Handles Txtpassword.LostFocus
+=======
+    Private Sub Txtpassword_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles Txtpassword.LostFocus
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TxtUser.Text = "co-jo-ms76" And Me.Txtpassword.Text = "co-jo-ms76" Then
             Me.Button1.Visible = True
         Else
@@ -545,7 +600,11 @@ Public Class FrmLOGIN
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Txtpassword_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Txtpassword.TextChanged
+=======
+    Private Sub Txtpassword_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Txtpassword.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TxtUser.Text = "co-jo-ms76" And Me.Txtpassword.Text = "co-jo-ms76" Then
             Me.Button1.Visible = True
         Else
@@ -603,7 +662,11 @@ Public Class FrmLOGIN
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TimerTestNet_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles TimerTestNet.Tick
+=======
+    Private Sub TimerTestNet_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerTestNet.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             'Me.LoadDataBase()
             If IsConnectedToInternet() = True Then
@@ -660,15 +723,26 @@ Public Class FrmLOGIN
             MessageBox.Show(ex.Message, "ErrorTestNet1", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub CmdLogin_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmdLogin.Click
+=======
+    Private Sub CmdLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogin.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not Me.BGWLOGIN.IsBusy Then
             Me.BGWLOGIN.RunWorkerAsync()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Cmdcancel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmdcancel.Click
         Me.Close()
     End Sub
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles CheckBox1.CheckedChanged
+=======
+    Private Sub Cmdcancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdcancel.Click
+        Me.Close()
+    End Sub
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.CheckBox1.Checked = True Then
             Me.Txtpassword.PasswordChar = ""
@@ -678,18 +752,30 @@ Public Class FrmLOGIN
             Me.CheckBox1.Image = My.Resources.Show_16x16
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Hide()
         Dim f As New FrmServerusrs
         f.ShowDialog()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmLOGIN_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
+=======
+    Private Sub FrmLOGIN_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Dim fs As FileSystemSecurity = File.GetAccessControl(Application.StartupPath & "\" & "ConStr.XML")
         'fs.AddAccessRule(New FileSystemAccessRule(Environment.UserName, FileSystemRights.FullControl, AccessControlType.Deny))
         'File.SetAccessControl(Application.StartupPath & "\" & "ConStr.XML", fs)
     End Sub
+<<<<<<< HEAD
     Private Sub Panel1_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Panel1.MouseDown, Panel2.MouseDown,
+=======
+    Private Sub Panel1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseDown, Panel2.MouseDown,
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          PanelUsers.MouseDown, Panel4.MouseDown, Panel5.MouseDown, Panel6.MouseDown, Panel7.MouseDown, Panel8.MouseDown, Panel9.MouseDown,
          Panel10.MouseDown, PictureBox1.MouseDown, PictureBox2.MouseDown, CircularProgress2.MouseDown
 
@@ -697,7 +783,11 @@ Public Class FrmLOGIN
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
+<<<<<<< HEAD
     Private Sub Panel1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Panel1.MouseMove, Panel2.MouseMove,
+=======
+    Private Sub Panel1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseMove, Panel2.MouseMove,
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          PanelUsers.MouseMove, Panel4.MouseMove, Panel5.MouseMove, Panel6.MouseMove, Panel7.MouseMove, Panel8.MouseMove, Panel9.MouseMove,
          Panel10.MouseMove, PictureBox1.MouseMove, PictureBox2.MouseMove, CircularProgress2.MouseMove
         If Drag = True Then
@@ -705,23 +795,39 @@ Public Class FrmLOGIN
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Panel1_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Panel1.MouseUp, Panel2.MouseUp,
+=======
+    Private Sub Panel1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.MouseUp, Panel2.MouseUp,
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          PanelUsers.MouseUp, Panel4.MouseUp, Panel5.MouseUp, Panel6.MouseUp, Panel7.MouseUp, Panel8.MouseUp, Panel9.MouseUp,
          Panel10.MouseUp, PictureBox1.MouseUp, PictureBox2.MouseUp, CircularProgress2.MouseUp
         Drag = False
     End Sub
+<<<<<<< HEAD
     Private Sub FrmLOGIN_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseDown
+=======
+    Private Sub FrmLOGIN_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = True
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
+<<<<<<< HEAD
     Private Sub FrmLOGIN_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+=======
+    Private Sub FrmLOGIN_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Drag = True Then
             Me.Left = Cursor.Position.X - MouseX
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub FrmLOGIN_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
+=======
+    Private Sub FrmLOGIN_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = False
     End Sub
 

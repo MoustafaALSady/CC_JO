@@ -48,7 +48,11 @@ Public Class Form_ASTRJAA
             MsgBox("حدد نوع العملية استرجاع أو استبدال ", MsgBoxStyle.Information, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -140,7 +144,11 @@ Public Class Form_ASTRJAA
     End Sub
     Private Sub SEARCHDATAITEMS()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             LID.Text = Me.Datab(0, Me.Datab.CurrentRow.Index).Value
             Me.Tedate.Text = Me.Datab(1, Me.Datab.CurrentRow.Index).Value
             Me.TexBAR.Text = Me.Datab(2, Me.Datab.CurrentRow.Index).Value
@@ -165,7 +173,11 @@ Public Class Form_ASTRJAA
             DiscountBB = Format(Val(TextUnitPrice.Text * Me.TextItemCount.Text) * Val(TEXTDiscountB.EditValue) / 100, "0.000")
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
+<<<<<<< HEAD
             Dim cmdDX As New SqlCommand("SELECT * FROM STOCKSITEMS WHERE SKITM4='" & Me.Datab.Item(2, Me.Datab.CurrentRow.Index).Value & "'", Consum)
+=======
+            Dim cmdDX As New SqlClient.SqlCommand("SELECT * FROM STOCKSITEMS WHERE SKITM4='" & Me.Datab.Item(2, Me.Datab.CurrentRow.Index).Value & "'", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim drDX As SqlDataReader = cmdDX.ExecuteReader
             If drDX.Read = True Then
                 Me.TEXTGROUPNAME.Text = drDX.Item("SKITM3")
@@ -243,7 +255,11 @@ Public Class Form_ASTRJAA
             Exit Sub
         End If
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim trakee As String
             If Me.RadiRecovery.Checked = True Then
                 Try
@@ -367,7 +383,11 @@ Public Class Form_ASTRJAA
     End Sub
     Private Sub ASTRGA_ASTRDA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim trakee As String
             If Me.RadiRecoveryALL.Checked = True Then
                 trakee = Me.RadiRecovery.Text.Trim
@@ -421,14 +441,22 @@ Public Class Form_ASTRJAA
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             Dim trakee As String
             If Me.RadiRecoveryALL.Checked = True Then
                 trakee = Me.RadiRecoveryALL.Text.Trim
                 GetAutoIDSTK()
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -475,7 +503,11 @@ Public Class Form_ASTRJAA
                 trakee = Me.RadiReplacingALL.Text.Trim
                 GetAutoIDSTK()
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -525,7 +557,11 @@ Public Class Form_ASTRJAA
     End Sub
     Private Sub SAVERECORD1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim trakee As String
             QUANTITY = TextQUANTITY.Text
             DiscountAA = Format(Val(TexTSellingPrice.Text * Me.TextItemCount.Text) * Val(TEXTDiscountA.EditValue) / 100, "0.000")
@@ -535,7 +571,11 @@ Public Class Form_ASTRJAA
                 trakee = Me.RadiRecovery.Text
                 GetAutoIDSTK()
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -582,7 +622,11 @@ Public Class Form_ASTRJAA
                 GetAutoIDSTK()
                 sumItemCount = Format(Val(SumAmounTOTALSTOCKS(TexBAR.Text, IDSTK)), "0.000")
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -655,13 +699,21 @@ Public Class Form_ASTRJAA
             'TotaiDiscount = Val(UnitPrice) * Val(Textadd.Text) * Val(Discount)
             'TotaiPurchasingPrice = Val(UnitPrice) * Val(Textadd.Text) - Val(Discount)
             QUANTITY = TextQUANTITY.Text
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim trakee As String
             If Me.RadiReplacing.Checked = True Then
                 trakee = Me.RadiReplacing.Text.Trim
                 GetAutoIDSTK()
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -673,10 +725,17 @@ Public Class Form_ASTRJAA
                     .AddWithValue("@STK7", Me.TextItemName.Text)
                     .AddWithValue("@STK8", Me.TEXTGROUPNAME.Text)
                     .AddWithValue("@STK9", Me.TextMeasruingUnit.Text)
+<<<<<<< HEAD
                     .AddWithValue("@STK10", Format(Val(SumAmounTOTALSTOCKS(TexBAR.Text, IDSTK)), "0.000"))
                     .AddWithValue("@STK11", "0")
                     .AddWithValue("@STK12", Me.TextItemCount.Text)
                     .AddWithValue("@STK13", Format(Val(SumAmounTOTALSTOCKS(TexBAR.Text, IDSTK)), "0.000") - Val(TextItemCount.Text))
+=======
+                    .AddWithValue("@STK10", Format(Val(SumAmounTOTALSTOCKS(Me.TexBAR.Text, IDSTK)), "0.000"))
+                    .AddWithValue("@STK11", "0")
+                    .AddWithValue("@STK12", Me.TextItemCount.Text)
+                    .AddWithValue("@STK13", Format(Val(SumAmounTOTALSTOCKS(Me.TexBAR.Text, IDSTK)), "0.000") - Val(TextItemCount.Text))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .AddWithValue("@STK14", Me.TextOrderLimit.Text)
                     .AddWithValue("@STK15", Me.TEXTTotaiPurchasingPrice.Text)
                     .AddWithValue("@STK16", Me.TextMovementSymbol.Text)
@@ -709,7 +768,11 @@ Public Class Form_ASTRJAA
                 trakee = RadiReplacingALL.Text.Trim
                 GetAutoIDSTK()
                 Dim SQL As String = "INSERT INTO STOCKS(  STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName, @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand(SQL, Consum)
+=======
+                Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 With CMD.Parameters
                     .AddWithValue("@STK1", IDSTK)
                     .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -758,13 +821,22 @@ Public Class Form_ASTRJAA
     End Sub
     Private Sub UPDATEBALANCEITEMS()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.Datab.Rows.Count > 0 Then
                 For i As Integer = 0 To Me.Datab.Rows.Count - 1
                     Dim row As DataGridViewRow = Me.Datab.Rows(i)
                     If row.IsNewRow Then Continue For 'حتى لا يتم السطر الجديد الفارغ
+<<<<<<< HEAD
                     Dim sql As New SqlCommand("UPDATE STOCKSITEMS SET SKITM7 = @QUANTITY WHERE STOCKSITEMS.SKITM4='" & Datab.Item(2, Datab.CurrentRow.Index).Value & "'", Consum)
                     Dim CMD As New SqlCommand With {
+=======
+                    Dim sql As New SqlClient.SqlCommand("UPDATE STOCKSITEMS SET SKITM7 = @QUANTITY WHERE STOCKSITEMS.SKITM4='" & Datab.Item(2, Datab.CurrentRow.Index).Value & "'", Consum)
+                    Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -793,7 +865,11 @@ Public Class Form_ASTRJAA
             ElseIf Me.RadiReplacingALL.Checked = True Then
                 trakee = Me.RadiReplacingALL.Text
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DiscountAA = Format(Val(TexTSellingPrice.Text * Me.TextItemCount.Text) * Val(TEXTDiscountA.EditValue) / 100, "0.000")
             DiscountBB = Format(Val(TextUnitPrice.Text * Me.TextItemCount.Text) * Val(TEXTDiscountB.EditValue) / 100, "0.000")
             If Me.Datab.Rows.Count > 0 Then
@@ -801,8 +877,13 @@ Public Class Form_ASTRJAA
 
                     Dim row As DataGridViewRow = Datab.Rows(i)
                     If row.IsNewRow Then Continue For 'حتى لا يتم السطر الجديد الفارغ
+<<<<<<< HEAD
                     Dim SQL As New SqlCommand(" Update TodaySales SET  BarCod = @BarCod, TS1 = @TS1, TS2 = @TS2, TS3 = @TS3, TS4 = @TS4, TS5 = @TS5, TS6 = @TS6, TS7 = @TS7, TS8 = @TS8,TS9 = @TS9, TS10 = @TS10, TS11 = @TS11, TS12 = @TS12, TS14 = @TS14, WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName,  USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne where TS9 = '" & TextB7.Text.Trim & "' and ID='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
                     Dim CMD As New SqlCommand(SQL.CommandText) With {
+=======
+                    Dim SQL As New SqlClient.SqlCommand(" Update TodaySales SET  BarCod = @BarCod, TS1 = @TS1, TS2 = @TS2, TS3 = @TS3, TS4 = @TS4, TS5 = @TS5, TS6 = @TS6, TS7 = @TS7, TS8 = @TS8,TS9 = @TS9, TS10 = @TS10, TS11 = @TS11, TS12 = @TS12, TS14 = @TS14, WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName,  USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne where TS9 = '" & TextB7.Text.Trim & "' and ID='" & Datab.Item(0, Datab.CurrentRow.Index).Value & "'", Consum)
+                    Dim CMD As New SqlClient.SqlCommand(SQL.CommandText) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -842,7 +923,11 @@ Public Class Form_ASTRJAA
             MessageBox.Show(ex.Message, "ErrorUPDATERECORD", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum1.Tick
+=======
+    Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.RadiRecoveryALL.Checked = True Then
             If Me.Chern.Checked = True Then
@@ -909,7 +994,11 @@ Public Class Form_ASTRJAA
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum.Tick
+=======
+    Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.RadiRecoveryALL.Checked = True Then
             If Me.Ch3.Checked = True Then
@@ -974,7 +1063,11 @@ Public Class Form_ASTRJAA
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum2_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum2.Tick
+=======
+    Private Sub Timsum2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum2.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch2.Checked = True Then
             Me.SEARCHDATAITEMS()
@@ -1021,7 +1114,11 @@ Public Class Form_ASTRJAA
             Me.ComboStore.SelectedIndex = 0
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Subtxtname_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles txtname.KeyPress
+=======
+    Private Sub Subtxtname_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtname.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Asc(e.KeyChar) = 13 Then
                 Me.CmdSearch_Click(sender, e)
@@ -1030,7 +1127,11 @@ Public Class Form_ASTRJAA
             MsgBox(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdSearch.Click
+=======
+    Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.Datab.Rows.Count > 0 Then
                 TaxBarCod = TexBAR.Text
@@ -1053,10 +1154,17 @@ Public Class Form_ASTRJAA
                 TotaiPurchasingPrice = Val(UnitPrice) * Val(Textadd.Text) - Val(Discount)
             End If
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim cmdDX As New SqlCommand("", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If Consum.State = ConnectionState.Open Then Consum.Close()
+            Consum.Open()
+            Dim cmdDX As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmdDX
                 If FIFO = True Then
                     .CommandText = "SELECT * FROM FIFOStocks WHERE CUser ='" & CUser & "'  and WarehouseNumber ='" & Trim(Me.ComboStore.Text) & "' And STK25 Like'" & Trim(Me.txtname.Text) & "%'" & "or STK7 like'" & Trim(Me.txtname.Text) & "%'"
@@ -1171,7 +1279,11 @@ Public Class Form_ASTRJAA
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub RadiReplacing_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadiReplacing.CheckedChanged
+=======
+    Private Sub RadiReplacing_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadiReplacing.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.grpCat.Visible = True
         Me.Buadd.Enabled = True
         Me.Buadd.BackColor = Color.White
@@ -1180,10 +1292,17 @@ Public Class Form_ASTRJAA
         Me.Button1.Enabled = False
         Me.Button1.BackColor = Color.Transparent
     End Sub
+<<<<<<< HEAD
     Private Sub Cmdcancel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles cmdcancel.Click
         Me.grpCat.Visible = False
     End Sub
     Private Sub Chern_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Chern.CheckedChanged
+=======
+    Private Sub Cmdcancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdcancel.Click
+        Me.grpCat.Visible = False
+    End Sub
+    Private Sub Chern_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Chern.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Chern.Checked = True Then
             Me.Datab.Focus()
@@ -1192,7 +1311,11 @@ Public Class Form_ASTRJAA
             Me.Timsum1.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Ch2_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch2.CheckedChanged
+=======
+    Private Sub Ch2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch2.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch2.Checked = True Then
             Me.Datab.Focus()
@@ -1201,7 +1324,11 @@ Public Class Form_ASTRJAA
             Me.Timsum2.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Ch3_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch3.CheckedChanged
+=======
+    Private Sub Ch3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch3.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch3.Checked = True Then
             Me.Datab.Focus()
@@ -1210,7 +1337,11 @@ Public Class Form_ASTRJAA
             Me.Timsum.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Buadd_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Buadd.Click
+=======
+    Private Sub Buadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buadd.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1245,7 +1376,11 @@ Public Class Form_ASTRJAA
                 End If
             End If
             SearchData_Chk = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.RadiReplacing.Checked = True Then
                 Try
                     If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -1296,7 +1431,11 @@ Public Class Form_ASTRJAA
             MsgBox(ex.Message, MsgBoxStyle.Critical, "تنبيه")
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1344,7 +1483,11 @@ Public Class Form_ASTRJAA
         Me.Busave.Enabled = True
         Me.Busave.BackColor = Color.White
     End Sub
+<<<<<<< HEAD
     Private Sub Radi1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadiRecovery.CheckedChanged
+=======
+    Private Sub Radi1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadiRecovery.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Busave.Enabled = True
         Me.Busave.BackColor = Color.White
 
@@ -1353,7 +1496,11 @@ Public Class Form_ASTRJAA
         Me.Button1.Enabled = False
         Me.Button1.BackColor = Color.Transparent
     End Sub
+<<<<<<< HEAD
     Private Sub Radi2_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadiRecoveryALL.CheckedChanged
+=======
+    Private Sub Radi2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadiRecoveryALL.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Busave.Enabled = True
         Me.Busave.BackColor = Color.White
 
@@ -1362,7 +1509,11 @@ Public Class Form_ASTRJAA
         Me.Button1.Enabled = False
         Me.Button1.BackColor = Color.Transparent
     End Sub
+<<<<<<< HEAD
     Private Sub Radi4_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadiReplacingALL.CheckedChanged, RadiReplacingALL.CheckedChanged
+=======
+    Private Sub Radi4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadiReplacingALL.CheckedChanged, RadiReplacingALL.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Buadd.Enabled = True
         Me.Buadd.BackColor = Color.White
 
@@ -1373,12 +1524,21 @@ Public Class Form_ASTRJAA
     End Sub
 
     Private Sub ComboStore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboStore.SelectedIndexChanged
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then

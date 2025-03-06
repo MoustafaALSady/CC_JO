@@ -1,10 +1,17 @@
 Option Explicit Off
 Imports System.Data.SqlClient
 Public Class FrmUSERS
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
     Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
@@ -18,6 +25,7 @@ Public Class FrmUSERS
     Public TB1 As String
     Public TB2 As String
     Public TB3 As String
+<<<<<<< HEAD
     Private Sub FrmUSERS_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
         Consum.Close()
     End Sub
@@ -25,6 +33,15 @@ Public Class FrmUSERS
         On Error Resume Next
     End Sub
     Private Sub FrmUSERS_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmUSERS_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        Consum.Close()
+    End Sub
+    Private Sub FrmUSERS_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        On Error Resume Next
+    End Sub
+    Private Sub FrmUSERS_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F3
@@ -49,19 +66,31 @@ Public Class FrmUSERS
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmUSERS_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Shown
+=======
+    Private Sub FrmUSERS_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Show()
     End Sub
     Public Sub DanLOd()
         On Error Resume Next
+<<<<<<< HEAD
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
         Me.ConnectDataBase.RunWorkerAsync()
     End Sub
+<<<<<<< HEAD
     Public Sub FrmUSERS_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Public Sub FrmUSERS_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -75,9 +104,15 @@ Public Class FrmUSERS
 
 1:
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             Dim strSQL As New SqlCommand("", Consum) With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+            Dim strSQL As New SqlClient.SqlCommand("", Consum) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandText = String.Concat(New String() {"SELECT ID ,UserName ,Pws  ,TimeEnter, MacAddress ,LoginName ,Realname ,UserType  ,CUser, COUser ,BlockUser,LockAddRow ,LockDelete,LockSave  ,LockUpdate,Printpreview ,TransferofAccounts,InternalAuditor ,CollaborationManager ,HeadofAuditingDepartment ,ExternalAuditor   ,FileList ,ListOFClients,CashAndMembers,ListOFAccounts,ListOFelectronicArchives,StaffMenu,Internet,RAdmin1  FROM USERS WHERE   ID ='", Strings.Trim(Me.TB1), "' or UserName ='", Strings.Trim(Me.TB2), "'or Realname ='", Strings.Trim(Me.TB3), "' ORDER BY ID"})
             }
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
@@ -268,16 +303,26 @@ Public Class FrmUSERS
         Me.LASTBUTTON.Enabled = Forward
 
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.RecordCount()
     End Sub
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(ID) FROM USERS", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(ID) FROM USERS", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -295,10 +340,17 @@ Public Class FrmUSERS
     End Sub
     Private Sub SEARCHUSERS()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT UserName  FROM USERS  WHERE (USERS.UserName)='" & Me.TEXTUserName.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT UserName  FROM USERS  WHERE (USERS.UserName)='" & Me.TEXTUserName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "USERS")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -320,7 +372,11 @@ Public Class FrmUSERS
             Me.PictureBox5.Visible = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox19_TextChanged(ByVal sender As Object, ByVal e As EventArgs)
+=======
+    Private Sub TextBox19_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             '  If Me.TextBox19.TextLength > 0 Then
             '  Dim index As Integer
@@ -339,27 +395,47 @@ Public Class FrmUSERS
         On Error Resume Next
         'Consum.Dispose()
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -384,7 +460,11 @@ Public Class FrmUSERS
             End If
             Me.PictureBox1.Visible = True
             Me.BS.EndEdit()
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -393,7 +473,11 @@ Public Class FrmUSERS
             MessageBox.Show(Ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.EDITBUTTON.Enabled = True
         Me.BUTTONCANCEL.Enabled = True
@@ -401,7 +485,11 @@ Public Class FrmUSERS
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -419,7 +507,11 @@ Public Class FrmUSERS
             Me.BS.RemoveCurrent()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -428,13 +520,21 @@ Public Class FrmUSERS
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX2_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTUserName.KeyDown
+=======
+    Private Sub TEXTBOX2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTUserName.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Select Case e.KeyCode
             Case Keys.Enter
                 SendKeys.SendWait("{TAB}")
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonSELALL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSELALL.Click
+=======
+    Private Sub ButtonSELALL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSELALL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.ButtonSELALL.Text = " ÕœÌœ«·ﬂ·" Then
             For Each chk1 In PanelGB1.Controls
@@ -475,7 +575,11 @@ Public Class FrmUSERS
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP11_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP11.Click
+=======
+    Private Sub ButtonXP11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP11.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -484,7 +588,11 @@ Public Class FrmUSERS
             Me.Cursor = Cursors.WaitCursor
             Me.TEXTBOX1.Clear()
             Me.PictureBox2.Visible = True
+<<<<<<< HEAD
             Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }

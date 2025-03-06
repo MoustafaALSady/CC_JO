@@ -201,7 +201,10 @@ Partial Public Class FormDocumentViewer
         'RepositoryItemPageNumberEdit2
         '
         Me.RepositoryItemPageNumberEdit2.AutoHeight = False
+<<<<<<< HEAD
         Me.RepositoryItemPageNumberEdit2.Mask.EditMask = "########;"
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RepositoryItemPageNumberEdit2.MaskSettings.Set("mask", "########;")
         Me.RepositoryItemPageNumberEdit2.Name = "RepositoryItemPageNumberEdit2"
         Me.RepositoryItemPageNumberEdit2.Orientation = DevExpress.XtraEditors.PagerOrientation.Horizontal
@@ -210,10 +213,17 @@ Partial Public Class FormDocumentViewer
         '
         Me.RichEditControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
         Me.RichEditControl1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.RichEditControl1.Location = New System.Drawing.Point(0, 50)
         Me.RichEditControl1.MenuManager = Me.BarManager1
         Me.RichEditControl1.Name = "RichEditControl1"
         Me.RichEditControl1.Size = New System.Drawing.Size(1384, 634)
+=======
+        Me.RichEditControl1.Location = New System.Drawing.Point(0, 53)
+        Me.RichEditControl1.MenuManager = Me.BarManager1
+        Me.RichEditControl1.Name = "RichEditControl1"
+        Me.RichEditControl1.Size = New System.Drawing.Size(1238, 540)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RichEditControl1.TabIndex = 1
         Me.RichEditControl1.Unit = DevExpress.Office.DocumentUnit.Centimeter
         '
@@ -245,10 +255,17 @@ Partial Public Class FormDocumentViewer
         'PdfViewer1
         '
         Me.PdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.PdfViewer1.Location = New System.Drawing.Point(0, 26)
         Me.PdfViewer1.MenuManager = Me.BarManager1
         Me.PdfViewer1.Name = "PdfViewer1"
         Me.PdfViewer1.Size = New System.Drawing.Size(1384, 658)
+=======
+        Me.PdfViewer1.Location = New System.Drawing.Point(0, 28)
+        Me.PdfViewer1.MenuManager = Me.BarManager1
+        Me.PdfViewer1.Name = "PdfViewer1"
+        Me.PdfViewer1.Size = New System.Drawing.Size(1238, 565)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PdfViewer1.TabIndex = 0
         '
         'PdfFileOpenBarItem1
@@ -401,7 +418,11 @@ Partial Public Class FormDocumentViewer
         Me.StandaloneBarDockControl2.Manager = Me.BarManager1
         Me.StandaloneBarDockControl2.Name = "StandaloneBarDockControl2"
         Me.StandaloneBarDockControl2.Padding = New System.Windows.Forms.Padding(1)
+<<<<<<< HEAD
         Me.StandaloneBarDockControl2.Size = New System.Drawing.Size(1384, 26)
+=======
+        Me.StandaloneBarDockControl2.Size = New System.Drawing.Size(1238, 28)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.StandaloneBarDockControl2.Text = "StandaloneBarDockControl2"
         '
         'PdfCommentBar1
@@ -504,7 +525,11 @@ Partial Public Class FormDocumentViewer
         Me.StandaloneBarDockControl3.Location = New System.Drawing.Point(0, 0)
         Me.StandaloneBarDockControl3.Manager = Me.BarManager1
         Me.StandaloneBarDockControl3.Name = "StandaloneBarDockControl3"
+<<<<<<< HEAD
         Me.StandaloneBarDockControl3.Size = New System.Drawing.Size(1384, 50)
+=======
+        Me.StandaloneBarDockControl3.Size = New System.Drawing.Size(1238, 53)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.StandaloneBarDockControl3.Text = "StandaloneBarDockControl3"
         '
         'FileInfoBar1
@@ -937,15 +962,25 @@ Partial Public Class FormDocumentViewer
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
+<<<<<<< HEAD
         Me.barDockControlTop.Size = New System.Drawing.Size(1384, 0)
+=======
+        Me.barDockControlTop.Size = New System.Drawing.Size(1238, 0)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+<<<<<<< HEAD
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 713)
         Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Size = New System.Drawing.Size(1384, 0)
+=======
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 618)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1238, 0)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'barDockControlLeft
         '
@@ -953,15 +988,25 @@ Partial Public Class FormDocumentViewer
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlLeft.Manager = Me.BarManager1
+<<<<<<< HEAD
         Me.barDockControlLeft.Size = New System.Drawing.Size(0, 713)
+=======
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 618)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+<<<<<<< HEAD
         Me.barDockControlRight.Location = New System.Drawing.Point(1384, 0)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 713)
+=======
+        Me.barDockControlRight.Location = New System.Drawing.Point(1238, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 618)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'RepositoryItemHyperLinkEdit1
         '
@@ -999,12 +1044,20 @@ Partial Public Class FormDocumentViewer
         Me.officeNavigationBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.officeNavigationBar.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.officeNavigationBar.Location = New System.Drawing.Point(0, 684)
+=======
+        Me.officeNavigationBar.Location = New System.Drawing.Point(0, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.officeNavigationBar.Name = "officeNavigationBar"
         Me.officeNavigationBar.NavigationClient = Me.navigationFrame
         Me.officeNavigationBar.OptionsNavigationClient.ItemImageVisibility = DevExpress.XtraBars.Navigation.ItemImageVisibility.Always
         Me.officeNavigationBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.officeNavigationBar.Size = New System.Drawing.Size(1384, 29)
+=======
+        Me.officeNavigationBar.Size = New System.Drawing.Size(1238, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.officeNavigationBar.TabIndex = 1
         Me.officeNavigationBar.Text = "officeNavigationBar"
         Me.officeNavigationBar.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Skinned
@@ -1023,7 +1076,11 @@ Partial Public Class FormDocumentViewer
         Me.navigationFrame.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.PageRichEdit, Me.PageImage, Me.Pagepdf, Me.Pageweb})
         Me.navigationFrame.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.navigationFrame.SelectedPage = Me.PageRichEdit
+<<<<<<< HEAD
         Me.navigationFrame.Size = New System.Drawing.Size(1384, 684)
+=======
+        Me.navigationFrame.Size = New System.Drawing.Size(1238, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.navigationFrame.TabIndex = 0
         '
         'PageRichEdit
@@ -1039,7 +1096,11 @@ Partial Public Class FormDocumentViewer
         Me.PageRichEdit.ImageOptions.Image = CType(resources.GetObject("PageRichEdit.ImageOptions.Image"), System.Drawing.Image)
         Me.PageRichEdit.InvertTouchScroll = True
         Me.PageRichEdit.Name = "PageRichEdit"
+<<<<<<< HEAD
         Me.PageRichEdit.Size = New System.Drawing.Size(1384, 684)
+=======
+        Me.PageRichEdit.Size = New System.Drawing.Size(1238, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'PageImage
         '
@@ -1051,13 +1112,21 @@ Partial Public Class FormDocumentViewer
         Me.PageImage.ImageOptions.Image = CType(resources.GetObject("PageImage.ImageOptions.Image"), System.Drawing.Image)
         Me.PageImage.InvertTouchScroll = True
         Me.PageImage.Name = "PageImage"
+<<<<<<< HEAD
         Me.PageImage.Size = New System.Drawing.Size(1384, 684)
+=======
+        Me.PageImage.Size = New System.Drawing.Size(1238, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'PictureEdit1
         '
         Me.PictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.PictureEdit1.Location = New System.Drawing.Point(0, 29)
+=======
+        Me.PictureEdit1.Location = New System.Drawing.Point(0, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.AllowZoom = DevExpress.Utils.DefaultBoolean.[True]
         Me.PictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Snow
@@ -1069,7 +1138,11 @@ Partial Public Class FormDocumentViewer
         Me.PictureEdit1.Properties.ShowZoomSubMenu = DevExpress.Utils.DefaultBoolean.[True]
         Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch
         Me.PictureEdit1.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel
+<<<<<<< HEAD
         Me.PictureEdit1.Size = New System.Drawing.Size(1384, 655)
+=======
+        Me.PictureEdit1.Size = New System.Drawing.Size(1238, 568)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureEdit1.TabIndex = 2
         '
         'Panel1
@@ -1079,7 +1152,11 @@ Partial Public Class FormDocumentViewer
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
+<<<<<<< HEAD
         Me.Panel1.Size = New System.Drawing.Size(1384, 29)
+=======
+        Me.Panel1.Size = New System.Drawing.Size(1238, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 3
         '
         'ToolStrip3
@@ -1090,7 +1167,11 @@ Partial Public Class FormDocumentViewer
         Me.ToolStrip3.Name = "ToolStrip3"
         Me.ToolStrip3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.ToolStrip3.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.ToolStrip3.Size = New System.Drawing.Size(1382, 23)
+=======
+        Me.ToolStrip3.Size = New System.Drawing.Size(1236, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ToolStrip3.TabIndex = 4
         Me.ToolStrip3.Text = "ToolStrip3"
         '
@@ -1132,7 +1213,11 @@ Partial Public Class FormDocumentViewer
         Me.ComboSizeimges.FlatStyle = System.Windows.Forms.FlatStyle.Standard
         Me.ComboSizeimges.Items.AddRange(New Object() {"Clip", "Stretch", "Zoom", "StretchHorizontal", "StretchVertical", "Squeeze"})
         Me.ComboSizeimges.Name = "ComboSizeimges"
+<<<<<<< HEAD
         Me.ComboSizeimges.Size = New System.Drawing.Size(163, 23)
+=======
+        Me.ComboSizeimges.Size = New System.Drawing.Size(140, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboSizeimges.ToolTipText = "حجم الصورة"
         '
         'Pagepdf
@@ -1143,7 +1228,11 @@ Partial Public Class FormDocumentViewer
         Me.Pagepdf.ImageOptions.Image = CType(resources.GetObject("Pagepdf.ImageOptions.Image"), System.Drawing.Image)
         Me.Pagepdf.InvertTouchScroll = True
         Me.Pagepdf.Name = "Pagepdf"
+<<<<<<< HEAD
         Me.Pagepdf.Size = New System.Drawing.Size(1384, 684)
+=======
+        Me.Pagepdf.Size = New System.Drawing.Size(1238, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Pageweb
         '
@@ -1151,7 +1240,11 @@ Partial Public Class FormDocumentViewer
         Me.Pageweb.Caption = "Web"
         Me.Pageweb.ImageOptions.Image = CType(resources.GetObject("Pageweb.ImageOptions.Image"), System.Drawing.Image)
         Me.Pageweb.Name = "Pageweb"
+<<<<<<< HEAD
         Me.Pageweb.Size = New System.Drawing.Size(1384, 684)
+=======
+        Me.Pageweb.Size = New System.Drawing.Size(1238, 593)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'RichEditBarController1
         '
@@ -1283,9 +1376,15 @@ Partial Public Class FormDocumentViewer
         '
         'FormDocumentViewer
         '
+<<<<<<< HEAD
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1384, 713)
+=======
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1238, 618)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.navigationFrame)
         Me.Controls.Add(Me.officeNavigationBar)
         Me.Controls.Add(Me.barDockControlLeft)
@@ -1294,7 +1393,10 @@ Partial Public Class FormDocumentViewer
         Me.Controls.Add(Me.barDockControlTop)
         Me.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO5
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1100, 550)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormDocumentViewer"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -6,10 +6,17 @@ Imports Microsoft.SqlServer.Management.Smo
 Public Class FrmBackup
     Dim Dt As String
     Dim Ext As String
+<<<<<<< HEAD
     ReadOnly Cnn As New SqlConnection
     Dim Rdr As SqlDataReader
 
     Private Sub BUTTONBACKUP_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP2.Click
+=======
+    ReadOnly Cnn As New SqlClient.SqlConnection
+    Dim Rdr As SqlDataReader
+
+    Private Sub BUTTONBACKUP_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If RAdmin = False Then
             MsgBox("عفوا .. هذا الامر للمشرف العام فقط", 16, "تنبيه")
             Exit Sub
@@ -45,8 +52,13 @@ Public Class FrmBackup
                 ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
                     Sqlconsar = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
                 End If
+<<<<<<< HEAD
                 Dim SqlConnection1 As New SqlConnection(Sqlconsar)
                 Dim CMD As New SqlCommand With {
+=======
+                Dim SqlConnection1 As New SqlClient.SqlConnection(Sqlconsar)
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = SqlConnection1
                 }
@@ -87,7 +99,11 @@ Public Class FrmBackup
                 ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
                     ServerConnectionString = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
                 End If
+<<<<<<< HEAD
                 Dim SqlConnection1 As New SqlConnection(ServerConnectionString)
+=======
+                Dim SqlConnection1 As New SqlClient.SqlConnection(ServerConnectionString)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim srvrConnection As New ServerConnection(SqlConnection1)
                 Dim MyServer As New Server(srvrConnection)
                 Dim MyBackup As New Backup()
@@ -160,10 +176,17 @@ Public Class FrmBackup
         ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
             Sqlconsar = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
         End If
+<<<<<<< HEAD
         Dim SqlConnection1 As New SqlConnection(Sqlconsar)
         Dim str As String = "Select DISTINCT name from master.dbo.sysdatabases where name not IN('master','msdb','tempdb' ,'model','ReportServer$SQLExpress','ReportServer$SQLExpressTempDB') and has_dbaccess(Name) = 1 order by name "
         Dim ADP As SqlDataAdapter
         ADP = New SqlDataAdapter(str, SqlConnection1)
+=======
+        Dim SqlConnection1 As New SqlClient.SqlConnection(Sqlconsar)
+        Dim str As String = "Select DISTINCT name from master.dbo.sysdatabases where name not IN('master','msdb','tempdb' ,'model','ReportServer$SQLExpress','ReportServer$SQLExpressTempDB') and has_dbaccess(Name) = 1 order by name "
+        Dim ADP As SqlClient.SqlDataAdapter
+        ADP = New SqlClient.SqlDataAdapter(str, SqlConnection1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         DS.Clear()
         ADP.Fill(DS)
         Me.ComboDBServer.Items.Clear()
@@ -174,7 +197,11 @@ Public Class FrmBackup
         ADP.Dispose()
         SqlConnection1.Dispose()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmBackup_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmBackup_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             Select Case e.KeyCode
@@ -189,7 +216,11 @@ Public Class FrmBackup
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmBackup_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmBackup_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -234,7 +265,11 @@ Public Class FrmBackup
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CheckBox1.Click
+=======
+    Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Len(Me.ComboDBServer.Text) = 0 Then
             MessageBox.Show("من فضلك حدد قاعدة البيانات  ", "حدد قاعدة البيانات", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
@@ -268,11 +303,19 @@ Public Class FrmBackup
         Dt = Now.ToString("yyyy-MM-dd-hh-mm")
         Me.TextBackupPath.Text = MYFOLDER & "\Backup\" + Me.ComboDBServer.Text.Trim + "_" + Dt + Ext
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         On Error Resume Next
         SelectExt()
     End Sub
     Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP3.Click
+=======
+    Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
+        On Error Resume Next
+        SelectExt()
+    End Sub
+    Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If RAdmin = False Then
             MsgBox("عفوا .. هذا الامر للمشرف العام فقط", 16, "تنبيه")
@@ -304,7 +347,11 @@ Public Class FrmBackup
             Exit Sub
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonLOGDATAVASE_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonLOGDATAVASE.Click
+=======
+    Private Sub ButtonLOGDATAVASE_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonLOGDATAVASE.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If RAdmin = False Then
             MsgBox("عفوا .. هذا الامر للمشرف العام فقط", 16, "تنبيه")
             Exit Sub
@@ -340,7 +387,11 @@ Public Class FrmBackup
     Public Function GETLOGODATABASE(ByVal MYDATABASE As String) As String
         Try
             If MYDATABASE.Length > 0 Then
+<<<<<<< HEAD
                 Dim cmd As SqlCommand
+=======
+                Dim cmd As SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 'Dim strConnection As String = "Initial Catalog =" + MYDATABASE + ";Server =" + ServerName + "," + PORT + ";User Id=" + userIDName + ";Password=" + BWS1 + ";"
                 Dim strConnection As String = Nothing
                 If AuthenicationSQLServer = True And LocalConnection = True Then
@@ -350,7 +401,11 @@ Public Class FrmBackup
                 ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
                     strConnection = "Initial Catalog =" + Me.ComboDBServer.Text.Trim + ",Server =" + ServerName + ";Integrated Security=True"
                 End If
+<<<<<<< HEAD
                 Dim cnn As New SqlConnection(strConnection)
+=======
+                Dim cnn As New SqlClient.SqlConnection(strConnection)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 Dim strSQL As String = "EXEC sp_helpfile"
                 cnn.Open()
                 cmd = New SqlCommand(strSQL, cnn)
@@ -383,7 +438,11 @@ Public Class FrmBackup
                 strConnection = "Initial Catalog =" + Me.ComboDBServer.Text.Trim + ",Server =" + ServerName + ";Integrated Security=True"
             End If
 
+<<<<<<< HEAD
             Dim cnn As New SqlConnection(strConnection)
+=======
+            Dim cnn As New SqlClient.SqlConnection(strConnection)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cnn.Open()
             Dim cmd1 As New SqlCommand(SQL, cnn)
             cmd1.ExecuteNonQuery()
@@ -409,7 +468,11 @@ Public Class FrmBackup
         End If
         NameDB = MYDBNAME
     End Function
+<<<<<<< HEAD
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioStandard.Click
+=======
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioStandard.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.RadioStandard.Checked = True Then
                 Me.GroupBox3.Enabled = False
@@ -422,7 +485,11 @@ Public Class FrmBackup
             MessageBox.Show(ex.Message & vbCrLf & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioCustom.Click
+=======
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioCustom.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.RadioCustom.Checked = True Then
                 Me.GroupBox3.Enabled = True
@@ -435,7 +502,11 @@ Public Class FrmBackup
             MessageBox.Show(ex.Message & vbCrLf & vbCrLf & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboDBServer.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboDBServer.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.Labelbacked.Text = ""
         Catch ex As Exception

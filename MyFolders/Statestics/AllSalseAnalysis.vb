@@ -2,8 +2,13 @@
 Imports System.Data.SqlClient
 Public Class AllSalseAnalysis
     Dim VTotal, VOther, VDiscount, VNet As Double
+<<<<<<< HEAD
     Dim Adp As New SqlDataAdapter
     Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Dim Adp As New SqlClient.SqlDataAdapter
+    Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             If Not IsDate(MTextBox1.Text) Then
                 MsgBox(" «—ÌŒ €Ì— ’«·Œ")
@@ -18,7 +23,11 @@ Public Class AllSalseAnalysis
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             FillGrid()
         End If
@@ -36,11 +45,19 @@ Public Class AllSalseAnalysis
         Dim ds As DataSet
         ds = New DataSet
         Dgrd.Rows.Clear()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strSQL As New SqlCommand("", Consum) With {
             .CommandText = "select SLS2, SLS3, SLS6, SLS8, SLS11,SLS13,SLS14, SLS16  from SALES  WHERE deleted ='" & False & "' and CUser='" & CUser & "'  ORDER BY SLS1"
         }
         Adp = New SqlDataAdapter(strSQL)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strSQL As New SqlCommand("", Consum) With {
+            .CommandText = "select SLS2, SLS3, SLS6, SLS8, SLS11,SLS13,SLS14, SLS16  from SALES  WHERE deleted ='" & False & "' and CUser='" & CUser & "'  ORDER BY SLS1"
+        }
+        Adp = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Adp.Fill(ds, "SALES")
@@ -93,7 +110,11 @@ Public Class AllSalseAnalysis
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dgrd.Rows.Clear()
         TextVTotal.Clear()
         TextVOther.Clear()
@@ -103,7 +124,11 @@ Public Class AllSalseAnalysis
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub AllSalseAnalysis_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub AllSalseAnalysis_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10

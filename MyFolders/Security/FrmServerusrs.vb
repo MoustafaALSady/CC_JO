@@ -6,7 +6,11 @@ Imports DevExpress.XtraSplashScreen
 
 Public Class FrmServerusrs
     Dim chek As Boolean = False
+<<<<<<< HEAD
     Private Sub FrmServerusrs_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
+=======
+    Private Sub FrmServerusrs_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim fs As FileSystemSecurity = File.GetAccessControl(Application.StartupPath & "\" & "ConStr.XML")
         'fs.AddAccessRule(New FileSystemAccessRule(Environment.UserName, FileSystemRights.FullControl, AccessControlType.Deny))
@@ -14,14 +18,22 @@ Public Class FrmServerusrs
         mykey.SetValue("tmpStr", Me.TextEncrypt.Text.Trim)
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmServerusrs_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
+=======
+    Private Sub FrmServerusrs_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim fs As FileSystemSecurity = File.GetAccessControl(Application.StartupPath & "\" & "ConStr.XML")
         'fs.AddAccessRule(New FileSystemAccessRule(Environment.UserName, FileSystemRights.FullControl, AccessControlType.Deny))
         File.SetAccessControl(Application.StartupPath & "\" & "ConStr.XML", fs)
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmServerusrs_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Me.KeyPress
+=======
+    Private Sub FrmServerusrs_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Char.IsControl(e.KeyChar) = False Then
 
@@ -31,7 +43,11 @@ Public Class FrmServerusrs
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmServerusrs_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FrmServerusrs_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -39,7 +55,11 @@ Public Class FrmServerusrs
         End Select
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmServerusrs_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmServerusrs_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -47,7 +67,11 @@ Public Class FrmServerusrs
         End Select
     End Sub
 
+<<<<<<< HEAD
     Private Sub RdoLocalConnection_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RdoLocalConnection.CheckedChanged
+=======
+    Private Sub RdoLocalConnection_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RdoLocalConnection.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RdoLocalConnection.Checked = True Then
             If chek = True Then
                 ComboServerName.Items.Clear()
@@ -67,7 +91,11 @@ Public Class FrmServerusrs
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub RdoServerConnection_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RdoServerConnection.CheckedChanged
+=======
+    Private Sub RdoServerConnection_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RdoServerConnection.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RdoLocalConnection.Checked = True Then
             If chek = True Then
                 ComboServerName.Items.Clear()
@@ -88,8 +116,13 @@ Public Class FrmServerusrs
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ButSave_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButSave.Click
         Dim SB As New Text.StringBuilder
+=======
+    Private Sub ButSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButSave.Click
+        Dim SB As New System.Text.StringBuilder
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Select Case Me.RdoLocalConnection.Checked
             Case True
                 LocalConnection = True
@@ -150,7 +183,11 @@ Public Class FrmServerusrs
         'File.SetAccessControl(Application.StartupPath & "\" & "ConStr.XML", fs)
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmServerusrs_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmServerusrs_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             For a As Byte = 0 To 10
                 System.Threading.Thread.Sleep(10)
@@ -226,16 +263,27 @@ Public Class FrmServerusrs
         f.ShowDialog()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             ToolStrip1.Enabled = False
             GroupBox1.Enabled = False
             Panel3.Enabled = False
             SplashScreenManager.ShowForm(Me, GetType(WaitForm), True, True, False)
+<<<<<<< HEAD
             Dim fs As FileStream
             Dim sr As StreamReader
             fs = New FileStream(Application.StartupPath & "\ConStr.XML", IO.FileMode.Open)
             sr = New StreamReader(fs)
+=======
+            Dim fs As IO.FileStream
+            Dim sr As IO.StreamReader
+            fs = New IO.FileStream(Application.StartupPath & "\ConStr.XML", IO.FileMode.Open)
+            sr = New IO.StreamReader(fs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             TextEncrypt.Text = sr.ReadToEnd
             sr.Close()
             fs.Close()
@@ -271,12 +319,16 @@ Public Class FrmServerusrs
         ToolStrip1.Enabled = True
         GroupBox1.Enabled = True
         Panel3.Enabled = True
+<<<<<<< HEAD
         If RdoLocalConnection.Checked Then
             chek = True
         Else
             chek = False
         End If
 
+=======
+        chek = True
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
 End Class

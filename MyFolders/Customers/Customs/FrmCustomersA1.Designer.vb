@@ -28,6 +28,10 @@ Partial Class FrmCustomersA1
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+<<<<<<< HEAD
+=======
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -107,10 +111,15 @@ Partial Class FrmCustomersA1
         Me.TextBcod = New System.Windows.Forms.TextBox()
         Me.TextSTK8 = New System.Windows.Forms.TextBox()
         Me.TextUnitPrice = New System.Windows.Forms.TextBox()
+<<<<<<< HEAD
         Me.TextSTK1A = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.SITM1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+=======
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SITM2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SITM3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SITM4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -122,6 +131,10 @@ Partial Class FrmCustomersA1
         Me.SITM10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SITM11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SLS2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+<<<<<<< HEAD
+=======
+        Me.SITM1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextCustomerNumber = New DevExpress.XtraEditors.TextEdit()
         Me.TextMovementSymbol = New DevExpress.XtraEditors.TextEdit()
@@ -169,6 +182,10 @@ Partial Class FrmCustomersA1
         Me.TextSalesTaxRateA = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.TextSalesTaxRate = New System.Windows.Forms.TextBox()
+<<<<<<< HEAD
+=======
+        Me.TextSTK1A = New System.Windows.Forms.TextBox()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTCurrentBalance = New System.Windows.Forms.TextBox()
         Me.TextInvoiceBalance = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -201,8 +218,11 @@ Partial Class FrmCustomersA1
         Me.TextFundBalance = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LablAA = New System.Windows.Forms.ToolStripStatusLabel()
         Me.LabStatus = New System.Windows.Forms.ToolStripStatusLabel()
+<<<<<<< HEAD
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Panel6 = New System.Windows.Forms.Panel()
         Panel6.SuspendLayout()
         Me.GroupCHKS1.SuspendLayout()
@@ -248,10 +268,17 @@ Partial Class FrmCustomersA1
         Panel6.Controls.Add(Me.GroupCHKS1)
         Panel6.Controls.Add(Me.GroupCHKS)
         Panel6.Controls.Add(Me.GroupPaymentMethod)
+<<<<<<< HEAD
         Panel6.Location = New System.Drawing.Point(2, 484)
         Panel6.Name = "Panel6"
         Panel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Panel6.Size = New System.Drawing.Size(913, 120)
+=======
+        Panel6.Location = New System.Drawing.Point(2, 398)
+        Panel6.Name = "Panel6"
+        Panel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Panel6.Size = New System.Drawing.Size(759, 120)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Panel6.TabIndex = 963
         '
         'GroupCHKS1
@@ -260,10 +287,17 @@ Partial Class FrmCustomersA1
         Me.GroupCHKS1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupCHKS1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupCHKS1.ForeColor = System.Drawing.Color.MidnightBlue
+<<<<<<< HEAD
         Me.GroupCHKS1.Location = New System.Drawing.Point(3, 0)
         Me.GroupCHKS1.Name = "GroupCHKS1"
         Me.GroupCHKS1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupCHKS1.Size = New System.Drawing.Size(389, 118)
+=======
+        Me.GroupCHKS1.Location = New System.Drawing.Point(-1, 0)
+        Me.GroupCHKS1.Name = "GroupCHKS1"
+        Me.GroupCHKS1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupCHKS1.Size = New System.Drawing.Size(339, 118)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupCHKS1.TabIndex = 961
         Me.GroupCHKS1.TabStop = False
         Me.GroupCHKS1.Text = "خيارات اسم  ساحب الشيك"
@@ -280,7 +314,11 @@ Partial Class FrmCustomersA1
         Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel9.Location = New System.Drawing.Point(3, 18)
         Me.Panel9.Name = "Panel9"
+<<<<<<< HEAD
         Me.Panel9.Size = New System.Drawing.Size(383, 97)
+=======
+        Me.Panel9.Size = New System.Drawing.Size(333, 97)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel9.TabIndex = 967
         '
         'RadioSUPPLIER
@@ -289,7 +327,11 @@ Partial Class FrmCustomersA1
         Me.RadioSUPPLIER.BackColor = System.Drawing.Color.Transparent
         Me.RadioSUPPLIER.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioSUPPLIER.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.RadioSUPPLIER.Location = New System.Drawing.Point(216, 60)
+=======
+        Me.RadioSUPPLIER.Location = New System.Drawing.Point(183, 60)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioSUPPLIER.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadioSUPPLIER.Name = "RadioSUPPLIER"
         Me.RadioSUPPLIER.Size = New System.Drawing.Size(44, 19)
@@ -308,7 +350,11 @@ Partial Class FrmCustomersA1
         Me.ComboCheckDrawerName.ForeColor = System.Drawing.Color.Black
         Me.ComboCheckDrawerName.Location = New System.Drawing.Point(1, 5)
         Me.ComboCheckDrawerName.Name = "ComboCheckDrawerName"
+<<<<<<< HEAD
         Me.ComboCheckDrawerName.Size = New System.Drawing.Size(376, 23)
+=======
+        Me.ComboCheckDrawerName.Size = New System.Drawing.Size(329, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboCheckDrawerName.TabIndex = 749
         '
         'RadioEMPLOYEES
@@ -317,7 +363,11 @@ Partial Class FrmCustomersA1
         Me.RadioEMPLOYEES.BackColor = System.Drawing.Color.Transparent
         Me.RadioEMPLOYEES.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioEMPLOYEES.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.RadioEMPLOYEES.Location = New System.Drawing.Point(111, 60)
+=======
+        Me.RadioEMPLOYEES.Location = New System.Drawing.Point(102, 60)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioEMPLOYEES.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadioEMPLOYEES.Name = "RadioEMPLOYEES"
         Me.RadioEMPLOYEES.Size = New System.Drawing.Size(50, 19)
@@ -333,7 +383,11 @@ Partial Class FrmCustomersA1
         Me.RadioResetText.BackColor = System.Drawing.Color.Transparent
         Me.RadioResetText.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioResetText.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.RadioResetText.Location = New System.Drawing.Point(4, 60)
+=======
+        Me.RadioResetText.Location = New System.Drawing.Point(13, 60)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioResetText.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadioResetText.Name = "RadioResetText"
         Me.RadioResetText.Size = New System.Drawing.Size(58, 19)
@@ -354,7 +408,11 @@ Partial Class FrmCustomersA1
         Me.TextCheckDrawerCode.Location = New System.Drawing.Point(1, 29)
         Me.TextCheckDrawerCode.Name = "TextCheckDrawerCode"
         Me.TextCheckDrawerCode.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TextCheckDrawerCode.Size = New System.Drawing.Size(376, 21)
+=======
+        Me.TextCheckDrawerCode.Size = New System.Drawing.Size(329, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextCheckDrawerCode.TabIndex = 750
         Me.TextCheckDrawerCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -364,7 +422,11 @@ Partial Class FrmCustomersA1
         Me.RadioAllCustomers.Checked = True
         Me.RadioAllCustomers.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadioAllCustomers.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.RadioAllCustomers.Location = New System.Drawing.Point(323, 60)
+=======
+        Me.RadioAllCustomers.Location = New System.Drawing.Point(270, 60)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioAllCustomers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadioAllCustomers.Name = "RadioAllCustomers"
         Me.RadioAllCustomers.Size = New System.Drawing.Size(50, 19)
@@ -379,10 +441,17 @@ Partial Class FrmCustomersA1
         Me.GroupCHKS.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupCHKS.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupCHKS.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.GroupCHKS.Location = New System.Drawing.Point(392, 0)
         Me.GroupCHKS.Name = "GroupCHKS"
         Me.GroupCHKS.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupCHKS.Size = New System.Drawing.Size(277, 118)
+=======
+        Me.GroupCHKS.Location = New System.Drawing.Point(338, 0)
+        Me.GroupCHKS.Name = "GroupCHKS"
+        Me.GroupCHKS.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupCHKS.Size = New System.Drawing.Size(214, 118)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupCHKS.TabIndex = 962
         Me.GroupCHKS.TabStop = False
         Me.GroupCHKS.Text = "الشيكات الواردة"
@@ -401,7 +470,11 @@ Partial Class FrmCustomersA1
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(3, 17)
         Me.Panel8.Name = "Panel8"
+<<<<<<< HEAD
         Me.Panel8.Size = New System.Drawing.Size(271, 98)
+=======
+        Me.Panel8.Size = New System.Drawing.Size(208, 98)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel8.TabIndex = 967
         '
         'Label44
@@ -410,7 +483,11 @@ Partial Class FrmCustomersA1
         Me.Label44.BackColor = System.Drawing.Color.Transparent
         Me.Label44.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label44.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label44.Location = New System.Drawing.Point(211, 77)
+=======
+        Me.Label44.Location = New System.Drawing.Point(148, 77)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label44.Name = "Label44"
         Me.Label44.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label44.Size = New System.Drawing.Size(29, 15)
@@ -424,7 +501,11 @@ Partial Class FrmCustomersA1
         Me.TextCheckNumber.Location = New System.Drawing.Point(5, 7)
         Me.TextCheckNumber.Name = "TextCheckNumber"
         Me.TextCheckNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TextCheckNumber.Size = New System.Drawing.Size(200, 21)
+=======
+        Me.TextCheckNumber.Size = New System.Drawing.Size(138, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextCheckNumber.TabIndex = 909
         Me.TextCheckNumber.Text = "0"
         Me.TextCheckNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -437,7 +518,11 @@ Partial Class FrmCustomersA1
         Me.TextBranch.Location = New System.Drawing.Point(5, 73)
         Me.TextBranch.Name = "TextBranch"
         Me.TextBranch.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.TextBranch.Size = New System.Drawing.Size(200, 21)
+=======
+        Me.TextBranch.Size = New System.Drawing.Size(138, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextBranch.TabIndex = 915
         '
         'CheckDate
@@ -449,7 +534,11 @@ Partial Class FrmCustomersA1
         Me.CheckDate.Location = New System.Drawing.Point(5, 29)
         Me.CheckDate.Name = "CheckDate"
         Me.CheckDate.RightToLeftLayout = True
+<<<<<<< HEAD
         Me.CheckDate.Size = New System.Drawing.Size(200, 21)
+=======
+        Me.CheckDate.Size = New System.Drawing.Size(138, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CheckDate.TabIndex = 911
         '
         'Label43
@@ -458,7 +547,11 @@ Partial Class FrmCustomersA1
         Me.Label43.BackColor = System.Drawing.Color.Transparent
         Me.Label43.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label43.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label43.Location = New System.Drawing.Point(212, 56)
+=======
+        Me.Label43.Location = New System.Drawing.Point(149, 56)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label43.Name = "Label43"
         Me.Label43.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label43.Size = New System.Drawing.Size(30, 15)
@@ -473,7 +566,11 @@ Partial Class FrmCustomersA1
         Me.TextBank.Location = New System.Drawing.Point(5, 51)
         Me.TextBank.Name = "TextBank"
         Me.TextBank.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.TextBank.Size = New System.Drawing.Size(200, 21)
+=======
+        Me.TextBank.Size = New System.Drawing.Size(138, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextBank.TabIndex = 913
         '
         'Label31
@@ -481,7 +578,11 @@ Partial Class FrmCustomersA1
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label31.Location = New System.Drawing.Point(211, 12)
+=======
+        Me.Label31.Location = New System.Drawing.Point(148, 12)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(46, 15)
         Me.Label31.TabIndex = 903
@@ -492,7 +593,11 @@ Partial Class FrmCustomersA1
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label32.Location = New System.Drawing.Point(211, 33)
+=======
+        Me.Label32.Location = New System.Drawing.Point(148, 33)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(54, 15)
         Me.Label32.TabIndex = 904
@@ -504,10 +609,17 @@ Partial Class FrmCustomersA1
         Me.GroupPaymentMethod.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupPaymentMethod.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupPaymentMethod.ForeColor = System.Drawing.Color.MidnightBlue
+<<<<<<< HEAD
         Me.GroupPaymentMethod.Location = New System.Drawing.Point(669, 0)
         Me.GroupPaymentMethod.Name = "GroupPaymentMethod"
         Me.GroupPaymentMethod.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupPaymentMethod.Size = New System.Drawing.Size(242, 118)
+=======
+        Me.GroupPaymentMethod.Location = New System.Drawing.Point(552, 0)
+        Me.GroupPaymentMethod.Name = "GroupPaymentMethod"
+        Me.GroupPaymentMethod.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupPaymentMethod.Size = New System.Drawing.Size(205, 118)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupPaymentMethod.TabIndex = 960
         Me.GroupPaymentMethod.TabStop = False
         Me.GroupPaymentMethod.Text = "طريقة الدفع"
@@ -526,7 +638,11 @@ Partial Class FrmCustomersA1
         Me.Panel28.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel28.Location = New System.Drawing.Point(3, 18)
         Me.Panel28.Name = "Panel28"
+<<<<<<< HEAD
         Me.Panel28.Size = New System.Drawing.Size(236, 97)
+=======
+        Me.Panel28.Size = New System.Drawing.Size(199, 97)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel28.TabIndex = 967
         '
         'TextValueOfCheck
@@ -544,7 +660,11 @@ Partial Class FrmCustomersA1
         Me.TextValueOfCheck.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
         Me.TextValueOfCheck.Properties.MaskSettings.Set("mask", "f3")
         Me.TextValueOfCheck.Properties.UseMaskAsDisplayFormat = True
+<<<<<<< HEAD
         Me.TextValueOfCheck.Size = New System.Drawing.Size(154, 22)
+=======
+        Me.TextValueOfCheck.Size = New System.Drawing.Size(126, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextValueOfCheck.TabIndex = 1001
         '
         'TextFundValue
@@ -562,7 +682,11 @@ Partial Class FrmCustomersA1
         Me.TextFundValue.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
         Me.TextFundValue.Properties.MaskSettings.Set("mask", "f3")
         Me.TextFundValue.Properties.UseMaskAsDisplayFormat = True
+<<<<<<< HEAD
         Me.TextFundValue.Size = New System.Drawing.Size(154, 22)
+=======
+        Me.TextFundValue.Size = New System.Drawing.Size(126, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextFundValue.TabIndex = 1000
         '
         'Label1
@@ -572,7 +696,11 @@ Partial Class FrmCustomersA1
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+<<<<<<< HEAD
         Me.Label1.Location = New System.Drawing.Point(180, 75)
+=======
+        Me.Label1.Location = New System.Drawing.Point(143, 75)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 15)
         Me.Label1.TabIndex = 977
@@ -586,7 +714,11 @@ Partial Class FrmCustomersA1
         Me.ComboPaymentMethod.Items.AddRange(New Object() {"نقدا", "شيك", "نقدا_شيك"})
         Me.ComboPaymentMethod.Location = New System.Drawing.Point(3, 3)
         Me.ComboPaymentMethod.Name = "ComboPaymentMethod"
+<<<<<<< HEAD
         Me.ComboPaymentMethod.Size = New System.Drawing.Size(154, 23)
+=======
+        Me.ComboPaymentMethod.Size = New System.Drawing.Size(126, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboPaymentMethod.TabIndex = 834
         '
         'Label52
@@ -596,7 +728,11 @@ Partial Class FrmCustomersA1
         Me.Label52.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label52.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Label52.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
+<<<<<<< HEAD
         Me.Label52.Location = New System.Drawing.Point(168, 54)
+=======
+        Me.Label52.Location = New System.Drawing.Point(131, 54)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(61, 15)
         Me.Label52.TabIndex = 976
@@ -608,7 +744,11 @@ Partial Class FrmCustomersA1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label2.Location = New System.Drawing.Point(176, 8)
+=======
+        Me.Label2.Location = New System.Drawing.Point(139, 8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 15)
         Me.Label2.TabIndex = 895
@@ -621,7 +761,11 @@ Partial Class FrmCustomersA1
         Me.LabelCB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LabelCB1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LabelCB1.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.LabelCB1.Location = New System.Drawing.Point(175, 31)
+=======
+        Me.LabelCB1.Location = New System.Drawing.Point(138, 31)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelCB1.Name = "LabelCB1"
         Me.LabelCB1.Size = New System.Drawing.Size(54, 13)
         Me.LabelCB1.TabIndex = 975
@@ -637,7 +781,11 @@ Partial Class FrmCustomersA1
         Me.ComboCB1.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.ComboCB1.Location = New System.Drawing.Point(3, 27)
         Me.ComboCB1.Name = "ComboCB1"
+<<<<<<< HEAD
         Me.ComboCB1.Size = New System.Drawing.Size(154, 21)
+=======
+        Me.ComboCB1.Size = New System.Drawing.Size(126, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboCB1.TabIndex = 974
         '
         'Text_TotalUnitPrice
@@ -662,14 +810,21 @@ Partial Class FrmCustomersA1
         Me.Ch1.Enabled = False
         Me.Ch1.Font = New System.Drawing.Font("Arial", 7.0!, System.Drawing.FontStyle.Bold)
         Me.Ch1.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Ch1.Location = New System.Drawing.Point(374, 10)
+=======
+        Me.Ch1.Location = New System.Drawing.Point(308, 6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Ch1.Name = "Ch1"
         Me.Ch1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Ch1.Size = New System.Drawing.Size(94, 16)
         Me.Ch1.TabIndex = 955
         Me.Ch1.Text = "تشغيل الترحيل الذاتية"
         Me.Ch1.UseVisualStyleBackColor = False
+<<<<<<< HEAD
         Me.Ch1.Visible = False
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'ImageList1
         '
@@ -694,11 +849,18 @@ Partial Class FrmCustomersA1
         Me.Panel14.Controls.Add(Me.TextSTK8)
         Me.Panel14.Controls.Add(Me.TextUnitPrice)
         Me.Panel14.Controls.Add(Me.Text_TotalUnitPrice)
+<<<<<<< HEAD
         Me.Panel14.Controls.Add(Me.TextSTK1A)
         Me.Panel14.Location = New System.Drawing.Point(3, 349)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Panel14.Size = New System.Drawing.Size(912, 131)
+=======
+        Me.Panel14.Location = New System.Drawing.Point(3, 264)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Panel14.Size = New System.Drawing.Size(758, 131)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel14.TabIndex = 969
         '
         'Panel3
@@ -710,9 +872,15 @@ Partial Class FrmCustomersA1
         Me.Panel3.Controls.Add(Me.DataGridView2)
         Me.Panel3.Controls.Add(Me.TextSITM11)
         Me.Panel3.Controls.Add(Me.TextTotalDiscount)
+<<<<<<< HEAD
         Me.Panel3.Location = New System.Drawing.Point(374, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(534, 127)
+=======
+        Me.Panel3.Location = New System.Drawing.Point(415, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(341, 127)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 958
         '
         'txtq
@@ -721,9 +889,15 @@ Partial Class FrmCustomersA1
         Me.txtq.CausesValidation = False
         Me.txtq.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtq.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.txtq.Location = New System.Drawing.Point(3, 1)
         Me.txtq.Name = "txtq"
         Me.txtq.Size = New System.Drawing.Size(130, 25)
+=======
+        Me.txtq.Location = New System.Drawing.Point(1, 1)
+        Me.txtq.Name = "txtq"
+        Me.txtq.Size = New System.Drawing.Size(112, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.txtq.TabIndex = 815
         Me.txtq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -732,10 +906,17 @@ Partial Class FrmCustomersA1
         Me.txtItem2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtItem2.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtItem2.ForeColor = System.Drawing.Color.Red
+<<<<<<< HEAD
         Me.txtItem2.Location = New System.Drawing.Point(134, 1)
         Me.txtItem2.Name = "txtItem2"
         Me.txtItem2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtItem2.Size = New System.Drawing.Size(396, 25)
+=======
+        Me.txtItem2.Location = New System.Drawing.Point(114, 1)
+        Me.txtItem2.Name = "txtItem2"
+        Me.txtItem2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtItem2.Size = New System.Drawing.Size(223, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.txtItem2.TabIndex = 962
         Me.txtItem2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -747,12 +928,20 @@ Partial Class FrmCustomersA1
         Me.DataGridView2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DataGridView2.Enabled = False
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.GrayText
+<<<<<<< HEAD
         Me.DataGridView2.Location = New System.Drawing.Point(3, 28)
+=======
+        Me.DataGridView2.Location = New System.Drawing.Point(1, 28)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.DataGridView2.RowHeadersWidth = 25
+<<<<<<< HEAD
         Me.DataGridView2.Size = New System.Drawing.Size(527, 95)
+=======
+        Me.DataGridView2.Size = New System.Drawing.Size(336, 95)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DataGridView2.TabIndex = 912
         '
         'TextSITM11
@@ -802,13 +991,21 @@ Partial Class FrmCustomersA1
         Me.Panel13.Controls.Add(Me.TextItemBalance)
         Me.Panel13.Location = New System.Drawing.Point(-1, 1)
         Me.Panel13.Name = "Panel13"
+<<<<<<< HEAD
         Me.Panel13.Size = New System.Drawing.Size(373, 126)
+=======
+        Me.Panel13.Size = New System.Drawing.Size(412, 126)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel13.TabIndex = 968
         '
         'TEXTTaxRate
         '
         Me.TEXTTaxRate.EditValue = "0"
+<<<<<<< HEAD
         Me.TEXTTaxRate.Location = New System.Drawing.Point(117, 75)
+=======
+        Me.TEXTTaxRate.Location = New System.Drawing.Point(90, 75)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTTaxRate.Name = "TEXTTaxRate"
         Me.TEXTTaxRate.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTTaxRate.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
@@ -822,13 +1019,21 @@ Partial Class FrmCustomersA1
         Me.TEXTTaxRate.Properties.MaskSettings.Set("mask", "P")
         Me.TEXTTaxRate.Properties.UseMaskAsDisplayFormat = True
         Me.TEXTTaxRate.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TEXTTaxRate.Size = New System.Drawing.Size(85, 22)
+=======
+        Me.TEXTTaxRate.Size = New System.Drawing.Size(70, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTTaxRate.TabIndex = 985
         '
         'TEXTDiscountPercentage
         '
         Me.TEXTDiscountPercentage.EditValue = "0"
+<<<<<<< HEAD
         Me.TEXTDiscountPercentage.Location = New System.Drawing.Point(117, 28)
+=======
+        Me.TEXTDiscountPercentage.Location = New System.Drawing.Point(90, 28)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTDiscountPercentage.Name = "TEXTDiscountPercentage"
         Me.TEXTDiscountPercentage.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTDiscountPercentage.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
@@ -842,7 +1047,11 @@ Partial Class FrmCustomersA1
         Me.TEXTDiscountPercentage.Properties.MaskSettings.Set("mask", "P")
         Me.TEXTDiscountPercentage.Properties.UseMaskAsDisplayFormat = True
         Me.TEXTDiscountPercentage.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TEXTDiscountPercentage.Size = New System.Drawing.Size(85, 22)
+=======
+        Me.TEXTDiscountPercentage.Size = New System.Drawing.Size(70, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTDiscountPercentage.TabIndex = 984
         '
         'Label47
@@ -851,7 +1060,11 @@ Partial Class FrmCustomersA1
         Me.Label47.BackColor = System.Drawing.Color.Transparent
         Me.Label47.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label47.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label47.Location = New System.Drawing.Point(238, 102)
+=======
+        Me.Label47.Location = New System.Drawing.Point(163, 101)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label47.Name = "Label47"
         Me.Label47.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label47.Size = New System.Drawing.Size(124, 15)
@@ -862,7 +1075,11 @@ Partial Class FrmCustomersA1
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.CC_JO.My.Resources.Resources.Indecator
+<<<<<<< HEAD
         Me.PictureBox2.Location = New System.Drawing.Point(219, 21)
+=======
+        Me.PictureBox2.Location = New System.Drawing.Point(391, 104)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(16, 16)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -874,7 +1091,11 @@ Partial Class FrmCustomersA1
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.Image = Global.CC_JO.My.Resources.Resources.Indecator
+<<<<<<< HEAD
         Me.PictureBox5.Location = New System.Drawing.Point(219, 20)
+=======
+        Me.PictureBox5.Location = New System.Drawing.Point(391, 103)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(16, 16)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -888,7 +1109,11 @@ Partial Class FrmCustomersA1
         Me.lblSUBTOTAL.BackColor = System.Drawing.Color.Transparent
         Me.lblSUBTOTAL.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblSUBTOTAL.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblSUBTOTAL.Location = New System.Drawing.Point(285, 10)
+=======
+        Me.lblSUBTOTAL.Location = New System.Drawing.Point(163, 9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblSUBTOTAL.Name = "lblSUBTOTAL"
         Me.lblSUBTOTAL.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblSUBTOTAL.Size = New System.Drawing.Size(77, 15)
@@ -904,7 +1129,11 @@ Partial Class FrmCustomersA1
         Me.TEXTItemsTotal.Location = New System.Drawing.Point(5, 5)
         Me.TEXTItemsTotal.Name = "TEXTItemsTotal"
         Me.TEXTItemsTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TEXTItemsTotal.Size = New System.Drawing.Size(197, 22)
+=======
+        Me.TEXTItemsTotal.Size = New System.Drawing.Size(155, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTItemsTotal.TabIndex = 6
         Me.TEXTItemsTotal.Text = "0.000"
         Me.TEXTItemsTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -918,7 +1147,11 @@ Partial Class FrmCustomersA1
         Me.TEXTTotalItemsWithTaxes.Location = New System.Drawing.Point(5, 98)
         Me.TEXTTotalItemsWithTaxes.Name = "TEXTTotalItemsWithTaxes"
         Me.TEXTTotalItemsWithTaxes.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TEXTTotalItemsWithTaxes.Size = New System.Drawing.Size(197, 22)
+=======
+        Me.TEXTTotalItemsWithTaxes.Size = New System.Drawing.Size(155, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTTotalItemsWithTaxes.TabIndex = 20
         Me.TEXTTotalItemsWithTaxes.Text = "0.000"
         Me.TEXTTotalItemsWithTaxes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -929,7 +1162,11 @@ Partial Class FrmCustomersA1
         Me.lblVPDISCOUNT.BackColor = System.Drawing.Color.Transparent
         Me.lblVPDISCOUNT.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblVPDISCOUNT.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblVPDISCOUNT.Location = New System.Drawing.Point(327, 33)
+=======
+        Me.lblVPDISCOUNT.Location = New System.Drawing.Point(163, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblVPDISCOUNT.Name = "lblVPDISCOUNT"
         Me.lblVPDISCOUNT.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblVPDISCOUNT.Size = New System.Drawing.Size(35, 15)
@@ -945,7 +1182,11 @@ Partial Class FrmCustomersA1
         Me.TEXTSalesTaxes.Location = New System.Drawing.Point(5, 75)
         Me.TEXTSalesTaxes.Name = "TEXTSalesTaxes"
         Me.TEXTSalesTaxes.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.TEXTSalesTaxes.Size = New System.Drawing.Size(111, 22)
+=======
+        Me.TEXTSalesTaxes.Size = New System.Drawing.Size(84, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTSalesTaxes.TabIndex = 13
         Me.TEXTSalesTaxes.Text = "0.000"
         Me.TEXTSalesTaxes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -953,14 +1194,21 @@ Partial Class FrmCustomersA1
         'TEXTDiscount
         '
         Me.TEXTDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.TEXTDiscount.Cursor = System.Windows.Forms.Cursors.Default
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTDiscount.Enabled = False
         Me.TEXTDiscount.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TEXTDiscount.ForeColor = System.Drawing.Color.Black
         Me.TEXTDiscount.Location = New System.Drawing.Point(5, 28)
         Me.TEXTDiscount.Name = "TEXTDiscount"
         Me.TEXTDiscount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.TEXTDiscount.Size = New System.Drawing.Size(111, 22)
+=======
+        Me.TEXTDiscount.Size = New System.Drawing.Size(84, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTDiscount.TabIndex = 8
         Me.TEXTDiscount.Text = "0.000"
         Me.TEXTDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -971,7 +1219,11 @@ Partial Class FrmCustomersA1
         Me.lblNETINVOICE.BackColor = System.Drawing.Color.Transparent
         Me.lblNETINVOICE.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblNETINVOICE.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblNETINVOICE.Location = New System.Drawing.Point(292, 56)
+=======
+        Me.lblNETINVOICE.Location = New System.Drawing.Point(163, 55)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblNETINVOICE.Name = "lblNETINVOICE"
         Me.lblNETINVOICE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblNETINVOICE.Size = New System.Drawing.Size(70, 15)
@@ -984,7 +1236,11 @@ Partial Class FrmCustomersA1
         Me.lblSALESTAX.BackColor = System.Drawing.Color.Transparent
         Me.lblSALESTAX.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblSALESTAX.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblSALESTAX.Location = New System.Drawing.Point(204, 79)
+=======
+        Me.lblSALESTAX.Location = New System.Drawing.Point(163, 78)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblSALESTAX.Name = "lblSALESTAX"
         Me.lblSALESTAX.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblSALESTAX.Size = New System.Drawing.Size(158, 15)
@@ -1000,7 +1256,11 @@ Partial Class FrmCustomersA1
         Me.TEXTNetItems.Location = New System.Drawing.Point(5, 52)
         Me.TEXTNetItems.Name = "TEXTNetItems"
         Me.TEXTNetItems.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TEXTNetItems.Size = New System.Drawing.Size(197, 22)
+=======
+        Me.TEXTNetItems.Size = New System.Drawing.Size(155, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTNetItems.TabIndex = 9
         Me.TEXTNetItems.Text = "0.000"
         Me.TEXTNetItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1016,7 +1276,11 @@ Partial Class FrmCustomersA1
         Me.TextItemBalance.Location = New System.Drawing.Point(55, 98)
         Me.TextItemBalance.Name = "TextItemBalance"
         Me.TextItemBalance.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.TextItemBalance.Size = New System.Drawing.Size(129, 21)
+=======
+        Me.TextItemBalance.Size = New System.Drawing.Size(87, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextItemBalance.TabIndex = 769
         Me.TextItemBalance.Text = "0.000"
         Me.TextItemBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1208,6 +1472,7 @@ Partial Class FrmCustomersA1
         Me.TextUnitPrice.Text = "0.000"
         Me.TextUnitPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+<<<<<<< HEAD
         'TextSTK1A
         '
         Me.TextSTK1A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1220,6 +1485,8 @@ Partial Class FrmCustomersA1
         Me.TextSTK1A.TabIndex = 767
         Me.TextSTK1A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
@@ -1227,11 +1494,16 @@ Partial Class FrmCustomersA1
         Me.Panel2.Controls.Add(Me.DataGridView1)
         Me.Panel2.Location = New System.Drawing.Point(3, 94)
         Me.Panel2.Name = "Panel2"
+<<<<<<< HEAD
         Me.Panel2.Size = New System.Drawing.Size(912, 252)
+=======
+        Me.Panel2.Size = New System.Drawing.Size(758, 168)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 967
         '
         'DataGridView1
         '
+<<<<<<< HEAD
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Azure
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -1243,6 +1515,18 @@ Partial Class FrmCustomersA1
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SITM1, Me.SITM2, Me.SITM3, Me.SITM4, Me.SITM5, Me.SITM6, Me.SITM7, Me.SITM8, Me.SITM9, Me.SITM10, Me.SITM11, Me.SLS2})
+=======
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Bisque
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SITM2, Me.SITM3, Me.SITM4, Me.SITM5, Me.SITM6, Me.SITM7, Me.SITM8, Me.SITM9, Me.SITM10, Me.SITM11, Me.SLS2, Me.SITM1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.ActiveCaption
         DataGridViewCellStyle13.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -1253,6 +1537,7 @@ Partial Class FrmCustomersA1
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView1.GridColor = System.Drawing.Color.Navy
         Me.DataGridView1.Location = New System.Drawing.Point(2, 3)
+<<<<<<< HEAD
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -1292,10 +1577,47 @@ Partial Class FrmCustomersA1
         Me.SITM2.FillWeight = 45.0!
         Me.SITM2.HeaderText = "مسلسل"
         Me.SITM2.Name = "SITM2"
+=======
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.DataGridView1.RowHeadersWidth = 25
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle15
+        Me.DataGridView1.Size = New System.Drawing.Size(752, 161)
+        Me.DataGridView1.TabIndex = 318
+        '
+        'SITM2
+        '
+        Me.SITM2.DataPropertyName = "SITM2"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = "0"
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM2.DefaultCellStyle = DataGridViewCellStyle2
+        Me.SITM2.FillWeight = 121.8274!
+        Me.SITM2.Frozen = True
+        Me.SITM2.HeaderText = "مسلسل"
+        Me.SITM2.Name = "SITM2"
+        Me.SITM2.Width = 60
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM3
         '
         Me.SITM3.DataPropertyName = "SITM3"
+<<<<<<< HEAD
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.Cornsilk
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1304,14 +1626,30 @@ Partial Class FrmCustomersA1
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.SITM3.DefaultCellStyle = DataGridViewCellStyle4
         Me.SITM3.FillWeight = 280.0!
+=======
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Cornsilk
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM3.DefaultCellStyle = DataGridViewCellStyle3
+        Me.SITM3.FillWeight = 96.8818!
+        Me.SITM3.Frozen = True
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SITM3.HeaderText = "الصنف"
         Me.SITM3.Name = "SITM3"
         Me.SITM3.ReadOnly = True
         Me.SITM3.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+<<<<<<< HEAD
+=======
+        Me.SITM3.Width = 190
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM4
         '
         Me.SITM4.DataPropertyName = "SITM4"
+<<<<<<< HEAD
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonHighlight
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1323,10 +1661,26 @@ Partial Class FrmCustomersA1
         Me.SITM4.HeaderText = "كود الصنف"
         Me.SITM4.Name = "SITM4"
         Me.SITM4.ReadOnly = True
+=======
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM4.DefaultCellStyle = DataGridViewCellStyle4
+        Me.SITM4.FillWeight = 96.8818!
+        Me.SITM4.Frozen = True
+        Me.SITM4.HeaderText = "كود الصنف"
+        Me.SITM4.Name = "SITM4"
+        Me.SITM4.ReadOnly = True
+        Me.SITM4.Width = 80
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM5
         '
         Me.SITM5.DataPropertyName = "SITM5"
+<<<<<<< HEAD
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1340,10 +1694,28 @@ Partial Class FrmCustomersA1
         Me.SITM5.HeaderText = "سعر الإفرادي"
         Me.SITM5.Name = "SITM5"
         Me.SITM5.ReadOnly = True
+=======
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.Format = "N3"
+        DataGridViewCellStyle5.NullValue = "0.000"
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM5.DefaultCellStyle = DataGridViewCellStyle5
+        Me.SITM5.FillWeight = 96.8818!
+        Me.SITM5.Frozen = True
+        Me.SITM5.HeaderText = "سعر الإفرادي"
+        Me.SITM5.Name = "SITM5"
+        Me.SITM5.ReadOnly = True
+        Me.SITM5.Width = 82
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM6
         '
         Me.SITM6.DataPropertyName = "SITM6"
+<<<<<<< HEAD
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle7.BackColor = System.Drawing.Color.Cyan
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1357,10 +1729,28 @@ Partial Class FrmCustomersA1
         Me.SITM6.HeaderText = "الكمية"
         Me.SITM6.Name = "SITM6"
         Me.SITM6.ReadOnly = True
+=======
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.Cyan
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.Format = "N0"
+        DataGridViewCellStyle6.NullValue = "0"
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM6.DefaultCellStyle = DataGridViewCellStyle6
+        Me.SITM6.FillWeight = 96.8818!
+        Me.SITM6.Frozen = True
+        Me.SITM6.HeaderText = "الكمية"
+        Me.SITM6.Name = "SITM6"
+        Me.SITM6.ReadOnly = True
+        Me.SITM6.Width = 60
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM7
         '
         Me.SITM7.DataPropertyName = "SITM7"
+<<<<<<< HEAD
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1374,10 +1764,28 @@ Partial Class FrmCustomersA1
         Me.SITM7.HeaderText = "الخصم"
         Me.SITM7.Name = "SITM7"
         Me.SITM7.ReadOnly = True
+=======
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.Format = "N3"
+        DataGridViewCellStyle7.NullValue = "0.000"
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM7.DefaultCellStyle = DataGridViewCellStyle7
+        Me.SITM7.FillWeight = 96.8818!
+        Me.SITM7.Frozen = True
+        Me.SITM7.HeaderText = "الخصم"
+        Me.SITM7.Name = "SITM7"
+        Me.SITM7.ReadOnly = True
+        Me.SITM7.Width = 55
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM8
         '
         Me.SITM8.DataPropertyName = "SITM8"
+<<<<<<< HEAD
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1391,10 +1799,28 @@ Partial Class FrmCustomersA1
         Me.SITM8.HeaderText = "سـعر الإجمالي"
         Me.SITM8.Name = "SITM8"
         Me.SITM8.ReadOnly = True
+=======
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.Format = "N3"
+        DataGridViewCellStyle8.NullValue = "0.000"
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Goldenrod
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.SITM8.DefaultCellStyle = DataGridViewCellStyle8
+        Me.SITM8.FillWeight = 96.8818!
+        Me.SITM8.Frozen = True
+        Me.SITM8.HeaderText = "سـعر الإجمالي"
+        Me.SITM8.Name = "SITM8"
+        Me.SITM8.ReadOnly = True
+        Me.SITM8.Width = 90
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM9
         '
         Me.SITM9.DataPropertyName = "SITM9"
+<<<<<<< HEAD
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle10.Format = "N3"
         DataGridViewCellStyle10.NullValue = "0.000"
@@ -1402,10 +1828,21 @@ Partial Class FrmCustomersA1
         Me.SITM9.HeaderText = "SITM9"
         Me.SITM9.Name = "SITM9"
         Me.SITM9.Visible = False
+=======
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "N3"
+        DataGridViewCellStyle9.NullValue = "0.000"
+        Me.SITM9.DefaultCellStyle = DataGridViewCellStyle9
+        Me.SITM9.HeaderText = "SITM9"
+        Me.SITM9.Name = "SITM9"
+        Me.SITM9.Visible = False
+        Me.SITM9.Width = 70
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM10
         '
         Me.SITM10.DataPropertyName = "SITM10"
+<<<<<<< HEAD
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle11.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
@@ -1418,16 +1855,42 @@ Partial Class FrmCustomersA1
         Me.SITM10.HeaderText = "سعر الشراء"
         Me.SITM10.Name = "SITM10"
         Me.SITM10.ReadOnly = True
+=======
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.Format = "N3"
+        DataGridViewCellStyle10.NullValue = "0.000"
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Navy
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.SITM10.DefaultCellStyle = DataGridViewCellStyle10
+        Me.SITM10.FillWeight = 80.0!
+        Me.SITM10.Frozen = True
+        Me.SITM10.HeaderText = "سعر الشراء"
+        Me.SITM10.Name = "SITM10"
+        Me.SITM10.ReadOnly = True
+        Me.SITM10.Width = 70
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SITM11
         '
         Me.SITM11.DataPropertyName = "SITM11"
+<<<<<<< HEAD
         DataGridViewCellStyle12.Format = "N3"
         DataGridViewCellStyle12.NullValue = "0.000"
         Me.SITM11.DefaultCellStyle = DataGridViewCellStyle12
         Me.SITM11.HeaderText = " SITM11"
         Me.SITM11.Name = "SITM11"
         Me.SITM11.Visible = False
+=======
+        DataGridViewCellStyle11.Format = "N3"
+        DataGridViewCellStyle11.NullValue = "0.000"
+        Me.SITM11.DefaultCellStyle = DataGridViewCellStyle11
+        Me.SITM11.HeaderText = " SITM11"
+        Me.SITM11.Name = "SITM11"
+        Me.SITM11.Visible = False
+        Me.SITM11.Width = 55
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'SLS2
         '
@@ -1437,6 +1900,20 @@ Partial Class FrmCustomersA1
         Me.SLS2.ReadOnly = True
         Me.SLS2.Visible = False
         '
+<<<<<<< HEAD
+=======
+        'SITM1
+        '
+        Me.SITM1.DataPropertyName = "SITM1"
+        DataGridViewCellStyle12.Format = "N0"
+        DataGridViewCellStyle12.NullValue = "0"
+        Me.SITM1.DefaultCellStyle = DataGridViewCellStyle12
+        Me.SITM1.HeaderText = "SITM1"
+        Me.SITM1.Name = "SITM1"
+        Me.SITM1.ReadOnly = True
+        Me.SITM1.Visible = False
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -1462,17 +1939,28 @@ Partial Class FrmCustomersA1
         Me.Panel1.ForeColor = System.Drawing.Color.Transparent
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
+<<<<<<< HEAD
         Me.Panel1.Size = New System.Drawing.Size(912, 89)
+=======
+        Me.Panel1.Size = New System.Drawing.Size(758, 89)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 909
         '
         'TextCustomerNumber
         '
         Me.TextCustomerNumber.EditValue = "00000-99999"
         Me.TextCustomerNumber.Enabled = False
+<<<<<<< HEAD
         Me.TextCustomerNumber.Location = New System.Drawing.Point(253, 62)
         Me.TextCustomerNumber.Name = "TextCustomerNumber"
         Me.TextCustomerNumber.Properties.Appearance.BackColor = System.Drawing.Color.SteelBlue
         Me.TextCustomerNumber.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.TextCustomerNumber.Location = New System.Drawing.Point(217, 62)
+        Me.TextCustomerNumber.Name = "TextCustomerNumber"
+        Me.TextCustomerNumber.Properties.Appearance.BackColor = System.Drawing.Color.SteelBlue
+        Me.TextCustomerNumber.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextCustomerNumber.Properties.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.TextCustomerNumber.Properties.Appearance.ForeColor = System.Drawing.Color.White
         Me.TextCustomerNumber.Properties.Appearance.Options.UseBackColor = True
@@ -1488,14 +1976,22 @@ Partial Class FrmCustomersA1
         Me.TextCustomerNumber.Properties.MaskSettings.Set("mask", "00000-99999")
         Me.TextCustomerNumber.Properties.MaskSettings.Set("placeholder", Global.Microsoft.VisualBasic.ChrW(0))
         Me.TextCustomerNumber.Properties.UseMaskAsDisplayFormat = True
+<<<<<<< HEAD
         Me.TextCustomerNumber.Size = New System.Drawing.Size(100, 22)
+=======
+        Me.TextCustomerNumber.Size = New System.Drawing.Size(100, 20)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextCustomerNumber.TabIndex = 1007
         '
         'TextMovementSymbol
         '
         Me.TextMovementSymbol.EditValue = "0"
         Me.TextMovementSymbol.Enabled = False
+<<<<<<< HEAD
         Me.TextMovementSymbol.Location = New System.Drawing.Point(712, 63)
+=======
+        Me.TextMovementSymbol.Location = New System.Drawing.Point(562, 63)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextMovementSymbol.Name = "TextMovementSymbol"
         Me.TextMovementSymbol.Properties.Appearance.BackColor = System.Drawing.Color.SteelBlue
         Me.TextMovementSymbol.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -1519,7 +2015,11 @@ Partial Class FrmCustomersA1
         'TEXTInvoiceNumber
         '
         Me.TEXTInvoiceNumber.EditValue = "0"
+<<<<<<< HEAD
         Me.TEXTInvoiceNumber.Location = New System.Drawing.Point(712, 40)
+=======
+        Me.TEXTInvoiceNumber.Location = New System.Drawing.Point(562, 40)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTInvoiceNumber.Name = "TEXTInvoiceNumber"
         Me.TEXTInvoiceNumber.Properties.Appearance.BackColor = System.Drawing.Color.SteelBlue
         Me.TEXTInvoiceNumber.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -1549,10 +2049,17 @@ Partial Class FrmCustomersA1
         Me.GroupBox4.Controls.Add(Me.RdCus)
         Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox4.ForeColor = System.Drawing.Color.DarkSlateGray
+<<<<<<< HEAD
         Me.GroupBox4.Location = New System.Drawing.Point(142, 0)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox4.Size = New System.Drawing.Size(96, 87)
+=======
+        Me.GroupBox4.Location = New System.Drawing.Point(133, 0)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupBox4.Size = New System.Drawing.Size(78, 87)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox4.TabIndex = 818
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "نوع البيع"
@@ -1563,7 +2070,11 @@ Partial Class FrmCustomersA1
         Me.RdRes.Checked = True
         Me.RdRes.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RdRes.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.RdRes.Location = New System.Drawing.Point(32, 20)
+=======
+        Me.RdRes.Location = New System.Drawing.Point(13, 20)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RdRes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdRes.Name = "RdRes"
         Me.RdRes.Size = New System.Drawing.Size(53, 19)
@@ -1578,7 +2089,11 @@ Partial Class FrmCustomersA1
         Me.Radio1.BackColor = System.Drawing.Color.Transparent
         Me.Radio1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Radio1.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.Radio1.Location = New System.Drawing.Point(26, 66)
+=======
+        Me.Radio1.Location = New System.Drawing.Point(7, 66)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Radio1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Radio1.Name = "Radio1"
         Me.Radio1.Size = New System.Drawing.Size(59, 19)
@@ -1594,7 +2109,11 @@ Partial Class FrmCustomersA1
         Me.RdCus.BackColor = System.Drawing.Color.Transparent
         Me.RdCus.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RdCus.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.RdCus.Location = New System.Drawing.Point(40, 43)
+=======
+        Me.RdCus.Location = New System.Drawing.Point(21, 43)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RdCus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RdCus.Name = "RdCus"
         Me.RdCus.Size = New System.Drawing.Size(45, 19)
@@ -1612,10 +2131,17 @@ Partial Class FrmCustomersA1
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.GroupBox1.Location = New System.Drawing.Point(250, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox1.Size = New System.Drawing.Size(249, 57)
+=======
+        Me.GroupBox1.Location = New System.Drawing.Point(214, 4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupBox1.Size = New System.Drawing.Size(195, 57)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.TabIndex = 978
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "اختيار المستودع"
@@ -1628,7 +2154,11 @@ Partial Class FrmCustomersA1
         Me.TextWarehouseName.ForeColor = System.Drawing.Color.Yellow
         Me.TextWarehouseName.Location = New System.Drawing.Point(3, 31)
         Me.TextWarehouseName.Name = "TextWarehouseName"
+<<<<<<< HEAD
         Me.TextWarehouseName.Size = New System.Drawing.Size(243, 23)
+=======
+        Me.TextWarehouseName.Size = New System.Drawing.Size(189, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextWarehouseName.TabIndex = 980
         Me.TextWarehouseName.Text = "....."
         Me.TextWarehouseName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1658,7 +2188,11 @@ Partial Class FrmCustomersA1
         Me.GroupBox5.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.GroupBox5.Size = New System.Drawing.Size(142, 87)
+=======
+        Me.GroupBox5.Size = New System.Drawing.Size(133, 87)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox5.TabIndex = 852
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "نوع الخصم"
@@ -1669,7 +2203,11 @@ Partial Class FrmCustomersA1
         Me.RadS.Checked = True
         Me.RadS.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadS.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.RadS.Location = New System.Drawing.Point(54, 17)
+=======
+        Me.RadS.Location = New System.Drawing.Point(47, 17)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadS.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadS.Name = "RadS"
         Me.RadS.Size = New System.Drawing.Size(82, 19)
@@ -1684,7 +2222,11 @@ Partial Class FrmCustomersA1
         Me.RadS2.BackColor = System.Drawing.Color.Transparent
         Me.RadS2.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadS2.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.RadS2.Location = New System.Drawing.Point(5, 65)
+=======
+        Me.RadS2.Location = New System.Drawing.Point(-2, 65)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadS2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadS2.Name = "RadS2"
         Me.RadS2.Size = New System.Drawing.Size(132, 19)
@@ -1700,7 +2242,11 @@ Partial Class FrmCustomersA1
         Me.RadS1.BackColor = System.Drawing.Color.Transparent
         Me.RadS1.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.RadS1.ForeColor = System.Drawing.Color.Navy
+<<<<<<< HEAD
         Me.RadS1.Location = New System.Drawing.Point(12, 41)
+=======
+        Me.RadS1.Location = New System.Drawing.Point(5, 41)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadS1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RadS1.Name = "RadS1"
         Me.RadS1.Size = New System.Drawing.Size(124, 19)
@@ -1716,7 +2262,11 @@ Partial Class FrmCustomersA1
         Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label17.Location = New System.Drawing.Point(843, 64)
+=======
+        Me.Label17.Location = New System.Drawing.Point(693, 64)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(60, 15)
         Me.Label17.TabIndex = 813
@@ -1729,7 +2279,11 @@ Partial Class FrmCustomersA1
         Me.lblORDERNUMBER.BackColor = System.Drawing.Color.Transparent
         Me.lblORDERNUMBER.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblORDERNUMBER.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblORDERNUMBER.Location = New System.Drawing.Point(648, 40)
+=======
+        Me.lblORDERNUMBER.Location = New System.Drawing.Point(508, 40)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblORDERNUMBER.Name = "lblORDERNUMBER"
         Me.lblORDERNUMBER.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblORDERNUMBER.Size = New System.Drawing.Size(45, 15)
@@ -1741,10 +2295,17 @@ Partial Class FrmCustomersA1
         Me.TEXTPermissionNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TEXTPermissionNumber.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTPermissionNumber.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.TEXTPermissionNumber.Location = New System.Drawing.Point(505, 37)
         Me.TEXTPermissionNumber.Name = "TEXTPermissionNumber"
         Me.TEXTPermissionNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TEXTPermissionNumber.Size = New System.Drawing.Size(137, 22)
+=======
+        Me.TEXTPermissionNumber.Location = New System.Drawing.Point(412, 37)
+        Me.TEXTPermissionNumber.Name = "TEXTPermissionNumber"
+        Me.TEXTPermissionNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TEXTPermissionNumber.Size = New System.Drawing.Size(92, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTPermissionNumber.TabIndex = 3
         Me.TEXTPermissionNumber.Text = "0"
         Me.TEXTPermissionNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1755,7 +2316,11 @@ Partial Class FrmCustomersA1
         Me.lblVENDERNAME.BackColor = System.Drawing.Color.Transparent
         Me.lblVENDERNAME.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblVENDERNAME.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblVENDERNAME.Location = New System.Drawing.Point(644, 67)
+=======
+        Me.lblVENDERNAME.Location = New System.Drawing.Point(504, 67)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblVENDERNAME.Name = "lblVENDERNAME"
         Me.lblVENDERNAME.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblVENDERNAME.Size = New System.Drawing.Size(52, 15)
@@ -1768,7 +2333,11 @@ Partial Class FrmCustomersA1
         Me.TEXTID.Enabled = False
         Me.TEXTID.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TEXTID.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.TEXTID.Location = New System.Drawing.Point(712, 16)
+=======
+        Me.TEXTID.Location = New System.Drawing.Point(562, 16)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTID.Name = "TEXTID"
         Me.TEXTID.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TEXTID.Size = New System.Drawing.Size(128, 22)
@@ -1781,10 +2350,17 @@ Partial Class FrmCustomersA1
         Me.ComboCustomerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboCustomerName.BackColor = System.Drawing.Color.White
         Me.ComboCustomerName.Font = New System.Drawing.Font("Times New Roman", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.ComboCustomerName.Location = New System.Drawing.Point(354, 62)
         Me.ComboCustomerName.Name = "ComboCustomerName"
         Me.ComboCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.ComboCustomerName.Size = New System.Drawing.Size(288, 23)
+=======
+        Me.ComboCustomerName.Location = New System.Drawing.Point(318, 62)
+        Me.ComboCustomerName.Name = "ComboCustomerName"
+        Me.ComboCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ComboCustomerName.Size = New System.Drawing.Size(186, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboCustomerName.TabIndex = 4
         Me.ComboCustomerName.Tag = ""
         Me.ComboCustomerName.Text = "عميل عام"
@@ -1795,7 +2371,11 @@ Partial Class FrmCustomersA1
         Me.lblCODE.BackColor = System.Drawing.Color.Transparent
         Me.lblCODE.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblCODE.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblCODE.Location = New System.Drawing.Point(875, 18)
+=======
+        Me.lblCODE.Location = New System.Drawing.Point(725, 18)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblCODE.Name = "lblCODE"
         Me.lblCODE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblCODE.Size = New System.Drawing.Size(28, 15)
@@ -1809,11 +2389,19 @@ Partial Class FrmCustomersA1
         Me.DateMovementHistory.CustomFormat = "yyyy/MM/dd"
         Me.DateMovementHistory.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.DateMovementHistory.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+<<<<<<< HEAD
         Me.DateMovementHistory.Location = New System.Drawing.Point(505, 13)
         Me.DateMovementHistory.Name = "DateMovementHistory"
         Me.DateMovementHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.DateMovementHistory.RightToLeftLayout = True
         Me.DateMovementHistory.Size = New System.Drawing.Size(137, 22)
+=======
+        Me.DateMovementHistory.Location = New System.Drawing.Point(412, 13)
+        Me.DateMovementHistory.Name = "DateMovementHistory"
+        Me.DateMovementHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.DateMovementHistory.RightToLeftLayout = True
+        Me.DateMovementHistory.Size = New System.Drawing.Size(92, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateMovementHistory.TabIndex = 2
         '
         'lblPINVOICENUMBER
@@ -1822,7 +2410,11 @@ Partial Class FrmCustomersA1
         Me.lblPINVOICENUMBER.BackColor = System.Drawing.Color.Transparent
         Me.lblPINVOICENUMBER.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblPINVOICENUMBER.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblPINVOICENUMBER.Location = New System.Drawing.Point(845, 40)
+=======
+        Me.lblPINVOICENUMBER.Location = New System.Drawing.Point(695, 40)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblPINVOICENUMBER.Name = "lblPINVOICENUMBER"
         Me.lblPINVOICENUMBER.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblPINVOICENUMBER.Size = New System.Drawing.Size(58, 15)
@@ -1835,7 +2427,11 @@ Partial Class FrmCustomersA1
         Me.lblINVOICEDATE.BackColor = System.Drawing.Color.Transparent
         Me.lblINVOICEDATE.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.lblINVOICEDATE.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.lblINVOICEDATE.Location = New System.Drawing.Point(650, 17)
+=======
+        Me.lblINVOICEDATE.Location = New System.Drawing.Point(510, 17)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.lblINVOICEDATE.Name = "lblINVOICEDATE"
         Me.lblINVOICEDATE.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblINVOICEDATE.Size = New System.Drawing.Size(37, 15)
@@ -1848,7 +2444,11 @@ Partial Class FrmCustomersA1
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Maroon
+<<<<<<< HEAD
         Me.Label9.Location = New System.Drawing.Point(827, -2)
+=======
+        Me.Label9.Location = New System.Drawing.Point(677, -2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label9.Name = "Label9"
         Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label9.Size = New System.Drawing.Size(54, 15)
@@ -2131,6 +2731,22 @@ Partial Class FrmCustomersA1
         Me.TextSalesTaxRate.Size = New System.Drawing.Size(50, 20)
         Me.TextSalesTaxRate.TabIndex = 359
         '
+<<<<<<< HEAD
+=======
+        'TextSTK1A
+        '
+        Me.TextSTK1A.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextSTK1A.Enabled = False
+        Me.TextSTK1A.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextSTK1A.ForeColor = System.Drawing.Color.Black
+        Me.TextSTK1A.Location = New System.Drawing.Point(304, 3)
+        Me.TextSTK1A.Name = "TextSTK1A"
+        Me.TextSTK1A.Size = New System.Drawing.Size(83, 22)
+        Me.TextSTK1A.TabIndex = 767
+        Me.TextSTK1A.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextSTK1A.Visible = False
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TEXTCurrentBalance
         '
         Me.TEXTCurrentBalance.BackColor = System.Drawing.Color.White
@@ -2152,7 +2768,11 @@ Partial Class FrmCustomersA1
         Me.TextInvoiceBalance.Enabled = False
         Me.TextInvoiceBalance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TextInvoiceBalance.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.TextInvoiceBalance.Location = New System.Drawing.Point(336, 2)
+=======
+        Me.TextInvoiceBalance.Location = New System.Drawing.Point(295, 2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextInvoiceBalance.Name = "TextInvoiceBalance"
         Me.TextInvoiceBalance.ReadOnly = True
         Me.TextInvoiceBalance.Size = New System.Drawing.Size(89, 22)
@@ -2371,7 +2991,11 @@ Partial Class FrmCustomersA1
         Me.Panel15.Controls.Add(Me.Label12)
         Me.Panel15.Controls.Add(Me.GroupBox2)
         Me.Panel15.Enabled = False
+<<<<<<< HEAD
         Me.Panel15.Location = New System.Drawing.Point(39, 356)
+=======
+        Me.Panel15.Location = New System.Drawing.Point(39, 329)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(266, 32)
         Me.Panel15.TabIndex = 929
@@ -2384,16 +3008,26 @@ Partial Class FrmCustomersA1
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.TEXTTotal)
         Me.Panel4.Controls.Add(Me.TEXTTotalN)
+<<<<<<< HEAD
         Me.Panel4.Location = New System.Drawing.Point(2, 607)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(913, 27)
+=======
+        Me.Panel4.Location = New System.Drawing.Point(2, 519)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(759, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.TabIndex = 959
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.Label4.Location = New System.Drawing.Point(834, 7)
+=======
+        Me.Label4.Location = New System.Drawing.Point(683, 5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 15)
         Me.Label4.TabIndex = 979
@@ -2404,10 +3038,17 @@ Partial Class FrmCustomersA1
         Me.TEXTTotal.BackColor = System.Drawing.Color.SteelBlue
         Me.TEXTTotal.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTTotal.ForeColor = System.Drawing.Color.Yellow
+<<<<<<< HEAD
         Me.TEXTTotal.Location = New System.Drawing.Point(676, 2)
         Me.TEXTTotal.Name = "TEXTTotal"
         Me.TEXTTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TEXTTotal.Size = New System.Drawing.Size(154, 22)
+=======
+        Me.TEXTTotal.Location = New System.Drawing.Point(559, 2)
+        Me.TEXTTotal.Name = "TEXTTotal"
+        Me.TEXTTotal.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TEXTTotal.Size = New System.Drawing.Size(121, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTTotal.TabIndex = 978
         Me.TEXTTotal.Text = "0.000"
         Me.TEXTTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2421,7 +3062,11 @@ Partial Class FrmCustomersA1
         Me.TEXTTotalN.Location = New System.Drawing.Point(1, 2)
         Me.TEXTTotalN.Name = "TEXTTotalN"
         Me.TEXTTotalN.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.TEXTTotalN.Size = New System.Drawing.Size(673, 22)
+=======
+        Me.TEXTTotalN.Size = New System.Drawing.Size(557, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTTotalN.TabIndex = 953
         '
         'Panel5
@@ -2432,10 +3077,18 @@ Partial Class FrmCustomersA1
         Me.Panel5.Controls.Add(Me.CmdCust)
         Me.Panel5.Controls.Add(Me.SAVEBUTTON)
         Me.Panel5.Controls.Add(Me.ADDBUTTON)
+<<<<<<< HEAD
         Me.Panel5.Controls.Add(Me.TextInvoiceBalance)
         Me.Panel5.Location = New System.Drawing.Point(2, 636)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(913, 37)
+=======
+        Me.Panel5.Controls.Add(Me.TextSTK1A)
+        Me.Panel5.Controls.Add(Me.TextInvoiceBalance)
+        Me.Panel5.Location = New System.Drawing.Point(2, 548)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(759, 37)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel5.TabIndex = 960
         '
         'CmdItems
@@ -2445,12 +3098,20 @@ Partial Class FrmCustomersA1
         Me.CmdItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmdItems.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmdItems.ForeColor = System.Drawing.SystemColors.ControlText
+<<<<<<< HEAD
         Me.CmdItems.Image = Global.CC_JO.My.Resources.Resources.BOProductGroup_32x32
+=======
+        Me.CmdItems.Image = Global.CC_JO.My.Resources.Resources.BO_Order
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CmdItems.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CmdItems.Location = New System.Drawing.Point(1, 2)
         Me.CmdItems.Name = "CmdItems"
         Me.CmdItems.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.CmdItems.Size = New System.Drawing.Size(225, 29)
+=======
+        Me.CmdItems.Size = New System.Drawing.Size(175, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CmdItems.TabIndex = 908
         Me.CmdItems.Text = "&الأصناف Alt + V"
         Me.CmdItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2463,12 +3124,21 @@ Partial Class FrmCustomersA1
         Me.CmdCust.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmdCust.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmdCust.ForeColor = System.Drawing.SystemColors.ControlText
+<<<<<<< HEAD
         Me.CmdCust.Image = Global.CC_JO.My.Resources.Resources.Clien_list
         Me.CmdCust.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CmdCust.Location = New System.Drawing.Point(227, 2)
         Me.CmdCust.Name = "CmdCust"
         Me.CmdCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CmdCust.Size = New System.Drawing.Size(225, 29)
+=======
+        Me.CmdCust.Image = Global.CC_JO.My.Resources.Resources._3DClusteredColumn_16x16
+        Me.CmdCust.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CmdCust.Location = New System.Drawing.Point(177, 2)
+        Me.CmdCust.Name = "CmdCust"
+        Me.CmdCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.CmdCust.Size = New System.Drawing.Size(178, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CmdCust.TabIndex = 907
         Me.CmdCust.Text = "عملاء Alt + C"
         Me.CmdCust.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -2483,9 +3153,15 @@ Partial Class FrmCustomersA1
         Me.SAVEBUTTON.ForeColor = System.Drawing.SystemColors.ControlText
         Me.SAVEBUTTON.Image = Global.CC_JO.My.Resources.Resources.Save_16x16
         Me.SAVEBUTTON.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.SAVEBUTTON.Location = New System.Drawing.Point(453, 2)
         Me.SAVEBUTTON.Name = "SAVEBUTTON"
         Me.SAVEBUTTON.Size = New System.Drawing.Size(225, 29)
+=======
+        Me.SAVEBUTTON.Location = New System.Drawing.Point(356, 2)
+        Me.SAVEBUTTON.Name = "SAVEBUTTON"
+        Me.SAVEBUTTON.Size = New System.Drawing.Size(203, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SAVEBUTTON.TabIndex = 761
         Me.SAVEBUTTON.Text = "حفظ F2"
         Me.SAVEBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2500,9 +3176,15 @@ Partial Class FrmCustomersA1
         Me.ADDBUTTON.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ADDBUTTON.Image = Global.CC_JO.My.Resources.Resources.add1
         Me.ADDBUTTON.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.ADDBUTTON.Location = New System.Drawing.Point(679, 2)
         Me.ADDBUTTON.Name = "ADDBUTTON"
         Me.ADDBUTTON.Size = New System.Drawing.Size(230, 29)
+=======
+        Me.ADDBUTTON.Location = New System.Drawing.Point(560, 2)
+        Me.ADDBUTTON.Name = "ADDBUTTON"
+        Me.ADDBUTTON.Size = New System.Drawing.Size(195, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ADDBUTTON.TabIndex = 760
         Me.ADDBUTTON.Text = "إضـافة F1"
         Me.ADDBUTTON.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -2514,11 +3196,19 @@ Partial Class FrmCustomersA1
         Me.StatusStrip1.BackColor = System.Drawing.Color.SteelBlue
         Me.StatusStrip1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LabelFundBalance, Me.TextFundBalance, Me.LablAA, Me.LabStatus})
+<<<<<<< HEAD
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 676)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.StatusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StatusStrip1.Size = New System.Drawing.Size(921, 22)
+=======
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 586)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.StatusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.StatusStrip1.Size = New System.Drawing.Size(764, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.StatusStrip1.TabIndex = 974
         '
         'LabelFundBalance
@@ -2560,16 +3250,23 @@ Partial Class FrmCustomersA1
         Me.LabStatus.Text = "Status"
         Me.LabStatus.Visible = False
         '
+<<<<<<< HEAD
         'BackgroundWorker1
         '
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'FrmCustomersA1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(921, 698)
+=======
+        Me.ClientSize = New System.Drawing.Size(764, 608)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
@@ -2793,10 +3490,13 @@ Partial Class FrmCustomersA1
     Friend WithEvents LablAA As ToolStripStatusLabel
     Friend WithEvents LabStatus As ToolStripStatusLabel
     Friend WithEvents Label4 As Label
+<<<<<<< HEAD
     Friend WithEvents TextCustomerNumber As DevExpress.XtraEditors.TextEdit
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents SITM1 As DataGridViewTextBoxColumn
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents SITM2 As DataGridViewTextBoxColumn
     Friend WithEvents SITM3 As DataGridViewTextBoxColumn
     Friend WithEvents SITM4 As DataGridViewTextBoxColumn
@@ -2808,4 +3508,9 @@ Partial Class FrmCustomersA1
     Friend WithEvents SITM10 As DataGridViewTextBoxColumn
     Friend WithEvents SITM11 As DataGridViewTextBoxColumn
     Friend WithEvents SLS2 As DataGridViewTextBoxColumn
+<<<<<<< HEAD
+=======
+    Friend WithEvents SITM1 As DataGridViewTextBoxColumn
+    Friend WithEvents TextCustomerNumber As DevExpress.XtraEditors.TextEdit
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

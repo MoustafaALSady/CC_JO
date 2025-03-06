@@ -8,13 +8,21 @@ Public Class Form_scaner
     Dim pagingDS As DataSet
     ReadOnly scrollVal As Integer
     Dim WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public haj As String
     Public mel As String
     Private Sub BuakrT_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BuakrT.Click
         Try
             Dascan.Columns.Clear()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -28,7 +36,11 @@ Public Class Form_scaner
                     .CommandText = "SELECT  Op1,Op2,Op3,Op4,Op8,Op5,Op6 FROM Operationsuser  WHERE Op4 BETWEEN '" & Format(Me.dat1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.dat2.Value, "yyyy/MM/dd") & "'  AND Op6='" & Me.ComboBox1.Text & "'"
                 End If
             End With
+<<<<<<< HEAD
             pagingAdapter = New SqlDataAdapter(SQL)
+=======
+            pagingAdapter = New SqlClient.SqlDataAdapter(SQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             pagingDS = New DataSet()
 
             pagingAdapter.Fill(pagingDS, scrollVal, 10000000, "Operationsuser")
@@ -76,7 +88,11 @@ Public Class Form_scaner
         Textdaee.Text = ServerDateTime.ToString
         Me.Textdaee.Text = ServerDateTime.ToString("yyyy-MM-dd")
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim str1 As New SqlCommand("", Consum)
             Dim ds1 As New DataSet
             With str1
@@ -84,7 +100,11 @@ Public Class Form_scaner
                 If Consum.State = ConnectionState.Open Then Consum.Close()
                 Consum.Open()
             End With
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter1.Fill(ds1, "Users")
             BS.DataSource = ds1
@@ -125,7 +145,11 @@ Public Class Form_scaner
             txtFromDate = Format(Me.dat1.Value, "yyyy, MM, dd, 00, 00, 00")
             txtToDate = Format(Me.dat2.Value, "yyyy, MM, dd, 00, 00, 00")
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -138,7 +162,11 @@ Public Class Form_scaner
                     .CommandText = "SELECT  Op1,Op2,Op3,Op4,Op8,Op5,Op6 FROM Operationsuser  WHERE Op4 BETWEEN '" & Format(Me.dat1.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.dat2.Value, "yyyy/MM/dd") & "'  AND Op6='" & Me.ComboBox1.Text & "' "
                 End If
             End With
+<<<<<<< HEAD
             pagingAdapter = New SqlDataAdapter(SQL)
+=======
+            pagingAdapter = New SqlClient.SqlDataAdapter(SQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             pagingDS = New DataSet()
 
             pagingAdapter.Fill(pagingDS, scrollVal, 10000000, "Operationsuser")
@@ -181,6 +209,7 @@ Public Class Form_scaner
             Dascan.MultiSelect = False
             Dascan.SelectionMode = DataGridViewSelectionMode.FullRowSelect
 
+<<<<<<< HEAD
             Dim oWord As Application = DirectCast(CreateObject("Word.Application"), Application)
             oWord.Caption = "المؤسسة التعاونية الأردنية"
             Dim oDoc As Document = oWord.Documents.Add()
@@ -190,6 +219,17 @@ Public Class Form_scaner
             'Dim oRng As Word.Range
             'Dim Pos As Double
             Dim oSec As Section
+=======
+            Dim oWord As Word.Application = DirectCast(CreateObject("Word.Application"), Word.Application)
+            oWord.Caption = "المؤسسة التعاونية الأردنية"
+            Dim oDoc As Word.Document = oWord.Documents.Add()
+            Dim oPara1 As Word.Paragraph, oPara2 As Word.Paragraph
+            Dim oPara3 As Word.Paragraph, oPara4 As Word.Paragraph
+            Dim oPara5 As Word.Paragraph
+            'Dim oRng As Word.Range
+            'Dim Pos As Double
+            Dim oSec As Word.Section
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             oWord.Visible = True
             Dim headers = (From ch In Dascan.Columns
@@ -393,12 +433,21 @@ Public Class Form_scaner
 
         ExportToWord()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
         AutoComplete(ComboBox1, e, )
     End Sub
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboBox1, e, )
+    End Sub
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT  Op1,Op2,Op3,Op4,Op8,Op5,Op6 FROM  Operationsuser WHERE Op6 ='" & Me.ComboBox1.Text & "'", Consum)
         pagingDS = New DataSet()
@@ -422,11 +471,19 @@ Public Class Form_scaner
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButton1.CheckedChanged
         Call Me.AddType1()
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioButton2.CheckedChanged
+=======
+    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton2.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Call Me.AddType1()
     End Sub
 

@@ -22,6 +22,7 @@ Partial Class FrmDailyrestrictions2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+<<<<<<< HEAD
         Dim GridFormatRule1 As DevExpress.XtraGrid.GridFormatRule = New DevExpress.XtraGrid.GridFormatRule()
         Dim FormatConditionRuleIconSet1 As DevExpress.XtraEditors.FormatConditionRuleIconSet = New DevExpress.XtraEditors.FormatConditionRuleIconSet()
         Dim FormatConditionIconSet1 As DevExpress.XtraEditors.FormatConditionIconSet = New DevExpress.XtraEditors.FormatConditionIconSet()
@@ -38,6 +39,8 @@ Partial Class FrmDailyrestrictions2
         Dim FormatConditionIconSetIcon8 As DevExpress.XtraEditors.FormatConditionIconSetIcon = New DevExpress.XtraEditors.FormatConditionIconSetIcon()
         Dim FormatConditionIconSetIcon9 As DevExpress.XtraEditors.FormatConditionIconSetIcon = New DevExpress.XtraEditors.FormatConditionIconSetIcon()
         Dim FormatConditionIconSetIcon10 As DevExpress.XtraEditors.FormatConditionIconSetIcon = New DevExpress.XtraEditors.FormatConditionIconSetIcon()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
@@ -48,10 +51,22 @@ Partial Class FrmDailyrestrictions2
         Dim SerializableAppearanceObject6 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject7 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject8 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
+<<<<<<< HEAD
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDailyrestrictions2))
         Me.MOVD5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.MOVD6 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RadInvoiceStatus = New System.Windows.Forms.RadioButton()
+=======
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.RadInvoiceStatus = New System.Windows.Forms.RadioButton()
+        Me.TotalCred = New System.Windows.Forms.Label()
+        Me.TotalDebit = New System.Windows.Forms.Label()
+        Me.TextRowsCount = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.DateTO = New System.Windows.Forms.DateTimePicker()
         Me.DateFrom = New System.Windows.Forms.DateTimePicker()
@@ -82,21 +97,44 @@ Partial Class FrmDailyrestrictions2
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
+=======
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.MOV2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.MOV3 = New DevExpress.XtraGrid.Columns.GridColumn()
+<<<<<<< HEAD
         Me.MOV10 = New DevExpress.XtraGrid.Columns.GridColumn()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MOV11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.CUser = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.MOVD4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.MOVD3 = New DevExpress.XtraGrid.Columns.GridColumn()
+<<<<<<< HEAD
         Me.MOVD10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.Dailyrestrictions = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+=======
+        Me.MOVD5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.MOVD6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.MOVD10 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.MOV10 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.Dailyrestrictions = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemButtonEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl1.SuspendLayout()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.SuspendLayout()
         CType(Me.NUpDownAccountLevel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -106,6 +144,7 @@ Partial Class FrmDailyrestrictions2
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
+<<<<<<< HEAD
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,6 +202,48 @@ Partial Class FrmDailyrestrictions2
         Me.MOVD6.Visible = True
         Me.MOVD6.VisibleIndex = 6
         Me.MOVD6.Width = 120
+=======
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.GroupControl1)
+        Me.Panel1.Controls.Add(Me.TotalCred)
+        Me.Panel1.Controls.Add(Me.TotalDebit)
+        Me.Panel1.Controls.Add(Me.TextRowsCount)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 505)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1205, 28)
+        Me.Panel1.TabIndex = 787
+        '
+        'GroupControl1
+        '
+        Me.GroupControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupControl1.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.GroupControl1.Appearance.BorderColor = System.Drawing.Color.SteelBlue
+        Me.GroupControl1.Appearance.Options.UseBackColor = True
+        Me.GroupControl1.Appearance.Options.UseBorderColor = True
+        Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GroupControl1.AppearanceCaption.Options.UseFont = True
+        Me.GroupControl1.AutoSize = True
+        Me.GroupControl1.Controls.Add(Me.RadInvoiceStatus)
+        Me.GroupControl1.Enabled = False
+        Me.GroupControl1.Location = New System.Drawing.Point(2, 2)
+        Me.GroupControl1.Name = "GroupControl1"
+        Me.GroupControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupControl1.Size = New System.Drawing.Size(166, 25)
+        Me.GroupControl1.TabIndex = 990
+        Me.GroupControl1.Text = "حالة الفاتورة نقدا / اجل"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'RadInvoiceStatus
         '
@@ -171,6 +252,7 @@ Partial Class FrmDailyrestrictions2
         Me.RadInvoiceStatus.BackColor = System.Drawing.Color.Transparent
         Me.RadInvoiceStatus.Enabled = False
         Me.RadInvoiceStatus.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.RadInvoiceStatus.ForeColor = System.Drawing.Color.White
         Me.RadInvoiceStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.RadInvoiceStatus.Location = New System.Drawing.Point(15, 70)
@@ -182,6 +264,90 @@ Partial Class FrmDailyrestrictions2
         Me.RadInvoiceStatus.Text = "حالة الفاتورة نقدا / اجل"
         Me.RadInvoiceStatus.UseVisualStyleBackColor = False
         '
+=======
+        Me.RadInvoiceStatus.ForeColor = System.Drawing.Color.LightGoldenrodYellow
+        Me.RadInvoiceStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadInvoiceStatus.Location = New System.Drawing.Point(9, 5)
+        Me.RadInvoiceStatus.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.RadInvoiceStatus.Name = "RadInvoiceStatus"
+        Me.RadInvoiceStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.RadInvoiceStatus.Size = New System.Drawing.Size(14, 13)
+        Me.RadInvoiceStatus.TabIndex = 981
+        Me.RadInvoiceStatus.UseVisualStyleBackColor = False
+        '
+        'TotalCred
+        '
+        Me.TotalCred.BackColor = System.Drawing.Color.SteelBlue
+        Me.TotalCred.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TotalCred.ForeColor = System.Drawing.Color.Yellow
+        Me.TotalCred.Location = New System.Drawing.Point(262, 3)
+        Me.TotalCred.Name = "TotalCred"
+        Me.TotalCred.Size = New System.Drawing.Size(153, 22)
+        Me.TotalCred.TabIndex = 985
+        Me.TotalCred.Text = "0.000"
+        Me.TotalCred.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TotalDebit
+        '
+        Me.TotalDebit.BackColor = System.Drawing.Color.SteelBlue
+        Me.TotalDebit.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TotalDebit.ForeColor = System.Drawing.Color.Yellow
+        Me.TotalDebit.Location = New System.Drawing.Point(543, 3)
+        Me.TotalDebit.Name = "TotalDebit"
+        Me.TotalDebit.Size = New System.Drawing.Size(153, 22)
+        Me.TotalDebit.TabIndex = 984
+        Me.TotalDebit.Text = "0.000"
+        Me.TotalDebit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextRowsCount
+        '
+        Me.TextRowsCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextRowsCount.BackColor = System.Drawing.Color.SteelBlue
+        Me.TextRowsCount.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextRowsCount.ForeColor = System.Drawing.Color.White
+        Me.TextRowsCount.Location = New System.Drawing.Point(1029, 4)
+        Me.TextRowsCount.Name = "TextRowsCount"
+        Me.TextRowsCount.Size = New System.Drawing.Size(101, 21)
+        Me.TextRowsCount.TabIndex = 983
+        Me.TextRowsCount.Text = "0"
+        Me.TextRowsCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Yellow
+        Me.Label6.Location = New System.Drawing.Point(416, 3)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(74, 22)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "اجمالي دائن"
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Yellow
+        Me.Label5.Location = New System.Drawing.Point(697, 3)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 22)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "اجمالي مدين"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(1131, 4)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 21)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "عدد السجلات"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'RadioButton2
         '
         Me.RadioButton2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -203,7 +369,11 @@ Partial Class FrmDailyrestrictions2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateTO.CustomFormat = "yyyy/MM/dd"
         Me.DateTO.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+<<<<<<< HEAD
         Me.DateTO.Location = New System.Drawing.Point(2, 33)
+=======
+        Me.DateTO.Location = New System.Drawing.Point(2, 50)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateTO.Name = "DateTO"
         Me.DateTO.RightToLeftLayout = True
         Me.DateTO.Size = New System.Drawing.Size(125, 22)
@@ -215,7 +385,11 @@ Partial Class FrmDailyrestrictions2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateFrom.CustomFormat = "yyyy/MM/dd"
         Me.DateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+<<<<<<< HEAD
         Me.DateFrom.Location = New System.Drawing.Point(2, 8)
+=======
+        Me.DateFrom.Location = New System.Drawing.Point(2, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateFrom.Name = "DateFrom"
         Me.DateFrom.RightToLeftLayout = True
         Me.DateFrom.Size = New System.Drawing.Size(125, 22)
@@ -228,7 +402,11 @@ Partial Class FrmDailyrestrictions2
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.Label3.Location = New System.Drawing.Point(129, 36)
+=======
+        Me.Label3.Location = New System.Drawing.Point(129, 53)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(20, 15)
         Me.Label3.TabIndex = 3
@@ -241,7 +419,11 @@ Partial Class FrmDailyrestrictions2
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.Label2.Location = New System.Drawing.Point(130, 12)
+=======
+        Me.Label2.Location = New System.Drawing.Point(130, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(19, 15)
         Me.Label2.TabIndex = 2
@@ -266,10 +448,17 @@ Partial Class FrmDailyrestrictions2
         '
         Me.ButtonSearchWithinNetwork.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+<<<<<<< HEAD
         Me.ButtonSearchWithinNetwork.Appearance.BackColor = System.Drawing.Color.DodgerBlue
         Me.ButtonSearchWithinNetwork.Appearance.BackColor2 = System.Drawing.Color.LightGray
         Me.ButtonSearchWithinNetwork.Appearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonSearchWithinNetwork.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.ButtonSearchWithinNetwork.Appearance.BackColor = System.Drawing.Color.YellowGreen
+        Me.ButtonSearchWithinNetwork.Appearance.BackColor2 = System.Drawing.Color.LightGray
+        Me.ButtonSearchWithinNetwork.Appearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonSearchWithinNetwork.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonSearchWithinNetwork.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.ButtonSearchWithinNetwork.Appearance.ForeColor = System.Drawing.Color.White
         Me.ButtonSearchWithinNetwork.Appearance.Options.UseBackColor = True
@@ -279,7 +468,10 @@ Partial Class FrmDailyrestrictions2
         Me.ButtonSearchWithinNetwork.Appearance.Options.UseTextOptions = True
         Me.ButtonSearchWithinNetwork.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.ButtonSearchWithinNetwork.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ButtonSearchWithinNetwork.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.FindByID_16x16
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonSearchWithinNetwork.Location = New System.Drawing.Point(4, 61)
         Me.ButtonSearchWithinNetwork.Name = "ButtonSearchWithinNetwork"
         Me.ButtonSearchWithinNetwork.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -525,10 +717,17 @@ Partial Class FrmDailyrestrictions2
         '
         'ButtonEnquiry
         '
+<<<<<<< HEAD
         Me.ButtonEnquiry.Appearance.BackColor = System.Drawing.Color.DodgerBlue
         Me.ButtonEnquiry.Appearance.BackColor2 = System.Drawing.Color.LightGreen
         Me.ButtonEnquiry.Appearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonEnquiry.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.ButtonEnquiry.Appearance.BackColor = System.Drawing.Color.YellowGreen
+        Me.ButtonEnquiry.Appearance.BackColor2 = System.Drawing.Color.LightGreen
+        Me.ButtonEnquiry.Appearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonEnquiry.Appearance.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonEnquiry.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.ButtonEnquiry.Appearance.ForeColor = System.Drawing.Color.White
         Me.ButtonEnquiry.Appearance.Options.UseBackColor = True
@@ -538,7 +737,10 @@ Partial Class FrmDailyrestrictions2
         Me.ButtonEnquiry.Appearance.Options.UseTextOptions = True
         Me.ButtonEnquiry.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.ButtonEnquiry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ButtonEnquiry.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.hight_16x16
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonEnquiry.Location = New System.Drawing.Point(3, 14)
         Me.ButtonEnquiry.Name = "ButtonEnquiry"
         Me.ButtonEnquiry.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -548,10 +750,17 @@ Partial Class FrmDailyrestrictions2
         '
         'ButtonReloading
         '
+<<<<<<< HEAD
         Me.ButtonReloading.Appearance.BackColor = System.Drawing.Color.DodgerBlue
         Me.ButtonReloading.Appearance.BackColor2 = System.Drawing.Color.LightGray
         Me.ButtonReloading.Appearance.BorderColor = System.Drawing.Color.Red
         Me.ButtonReloading.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.ButtonReloading.Appearance.BackColor = System.Drawing.Color.YellowGreen
+        Me.ButtonReloading.Appearance.BackColor2 = System.Drawing.Color.LightGray
+        Me.ButtonReloading.Appearance.BorderColor = System.Drawing.Color.Red
+        Me.ButtonReloading.Appearance.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonReloading.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.ButtonReloading.Appearance.ForeColor = System.Drawing.Color.White
         Me.ButtonReloading.Appearance.Options.UseBackColor = True
@@ -561,7 +770,10 @@ Partial Class FrmDailyrestrictions2
         Me.ButtonReloading.Appearance.Options.UseTextOptions = True
         Me.ButtonReloading.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.ButtonReloading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
         Me.ButtonReloading.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.refreshpivottable_16x16
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonReloading.Location = New System.Drawing.Point(3, 50)
         Me.ButtonReloading.Name = "ButtonReloading"
         Me.ButtonReloading.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -619,7 +831,10 @@ Partial Class FrmDailyrestrictions2
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel6.BackColor = System.Drawing.Color.Transparent
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.Panel6.Controls.Add(Me.RadInvoiceStatus)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel6.Controls.Add(Me.DateFrom)
         Me.Panel6.Controls.Add(Me.Label2)
         Me.Panel6.Controls.Add(Me.DateTO)
@@ -629,6 +844,28 @@ Partial Class FrmDailyrestrictions2
         Me.Panel6.Size = New System.Drawing.Size(154, 101)
         Me.Panel6.TabIndex = 999
         '
+<<<<<<< HEAD
+=======
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
+        Me.DataGridView1.Location = New System.Drawing.Point(91, 256)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(250, 66)
+        Me.DataGridView1.TabIndex = 797
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Column3"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Column4"
+        Me.Column2.Name = "Column2"
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'GridColumn1
         '
         Me.GridColumn1.AppearanceCell.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -655,7 +892,11 @@ Partial Class FrmDailyrestrictions2
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1, Me.RepositoryItemButtonEdit2})
+<<<<<<< HEAD
         Me.GridControl1.Size = New System.Drawing.Size(1205, 523)
+=======
+        Me.GridControl1.Size = New System.Drawing.Size(1205, 387)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridControl1.TabIndex = 968
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -680,7 +921,10 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black
         Me.GridView1.Appearance.EvenRow.Options.UseBackColor = True
         Me.GridView1.Appearance.EvenRow.Options.UseForeColor = True
+<<<<<<< HEAD
         Me.GridView1.Appearance.EvenRow.Options.UseImage = True
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.GridView1.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.GridView1.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(220, Byte), Integer))
@@ -702,6 +946,7 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White
         Me.GridView1.Appearance.FocusedRow.Options.UseBackColor = True
         Me.GridView1.Appearance.FocusedRow.Options.UseForeColor = True
+<<<<<<< HEAD
         Me.GridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.SteelBlue
         Me.GridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.SteelBlue
         Me.GridView1.Appearance.FooterPanel.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -709,6 +954,13 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.FooterPanel.Options.UseBackColor = True
         Me.GridView1.Appearance.FooterPanel.Options.UseBorderColor = True
         Me.GridView1.Appearance.FooterPanel.Options.UseFont = True
+=======
+        Me.GridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.GridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.GridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(220, Byte), Integer))
+        Me.GridView1.Appearance.FooterPanel.Options.UseBackColor = True
+        Me.GridView1.Appearance.FooterPanel.Options.UseBorderColor = True
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridView1.Appearance.FooterPanel.Options.UseForeColor = True
         Me.GridView1.Appearance.GroupButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.GridView1.Appearance.GroupButton.BorderColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(87, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -716,10 +968,16 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.GroupButton.Options.UseBackColor = True
         Me.GridView1.Appearance.GroupButton.Options.UseBorderColor = True
         Me.GridView1.Appearance.GroupButton.Options.UseForeColor = True
+<<<<<<< HEAD
         Me.GridView1.Appearance.GroupFooter.BackColor = System.Drawing.Color.SlateBlue
         Me.GridView1.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(158, Byte), Integer))
         Me.GridView1.Appearance.GroupFooter.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GridView1.Appearance.GroupFooter.FontStyleDelta = System.Drawing.FontStyle.Bold
+=======
+        Me.GridView1.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.GridView1.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.GridView1.Appearance.GroupFooter.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridView1.Appearance.GroupFooter.ForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.GridView1.Appearance.GroupFooter.Options.UseBackColor = True
         Me.GridView1.Appearance.GroupFooter.Options.UseBorderColor = True
@@ -732,9 +990,15 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.GroupPanel.Options.UseBackColor = True
         Me.GridView1.Appearance.GroupPanel.Options.UseFont = True
         Me.GridView1.Appearance.GroupPanel.Options.UseForeColor = True
+<<<<<<< HEAD
         Me.GridView1.Appearance.GroupRow.BackColor = System.Drawing.Color.SteelBlue
         Me.GridView1.Appearance.GroupRow.BorderColor = System.Drawing.Color.SteelBlue
         Me.GridView1.Appearance.GroupRow.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.GridView1.Appearance.GroupRow.BackColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.GridView1.Appearance.GroupRow.BorderColor = System.Drawing.Color.FromArgb(CType(CType(81, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.GridView1.Appearance.GroupRow.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridView1.Appearance.GroupRow.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.GridView1.Appearance.GroupRow.ForeColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(220, Byte), Integer))
         Me.GridView1.Appearance.GroupRow.Options.UseBackColor = True
@@ -787,6 +1051,7 @@ Partial Class FrmDailyrestrictions2
         Me.GridView1.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(CType(CType(167, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(185, Byte), Integer))
         Me.GridView1.Appearance.VertLine.Options.UseBackColor = True
         Me.GridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+<<<<<<< HEAD
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.MOV2, Me.MOV3, Me.MOV10, Me.MOV11, Me.CUser, Me.MOVD4, Me.MOVD3, Me.MOVD5, Me.MOVD6, Me.MOVD10, Me.GridColumn2, Me.Dailyrestrictions})
         GridFormatRule1.Column = Me.MOVD5
         GridFormatRule1.Name = "Format0"
@@ -840,6 +1105,9 @@ Partial Class FrmDailyrestrictions2
         GridFormatRule2.Rule = FormatConditionRuleIconSet2
         Me.GridView1.FormatRules.Add(GridFormatRule1)
         Me.GridView1.FormatRules.Add(GridFormatRule2)
+=======
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.MOV2, Me.MOV3, Me.MOV11, Me.CUser, Me.MOVD4, Me.MOVD3, Me.MOVD5, Me.MOVD6, Me.MOVD10, Me.MOV10, Me.Dailyrestrictions, Me.GridColumn2})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupCount = 1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "", Nothing, "(العدد ={0})")})
@@ -876,7 +1144,11 @@ Partial Class FrmDailyrestrictions2
         Me.MOV2.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
         Me.MOV2.Visible = True
         Me.MOV2.VisibleIndex = 1
+<<<<<<< HEAD
         Me.MOV2.Width = 143
+=======
+        Me.MOV2.Width = 138
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'MOV3
         '
@@ -899,6 +1171,7 @@ Partial Class FrmDailyrestrictions2
         Me.MOV3.UnboundType = DevExpress.Data.UnboundColumnType.DateTime
         Me.MOV3.Visible = True
         Me.MOV3.VisibleIndex = 2
+<<<<<<< HEAD
         Me.MOV3.Width = 136
         '
         'MOV10
@@ -926,6 +1199,9 @@ Partial Class FrmDailyrestrictions2
         Me.MOV10.Visible = True
         Me.MOV10.VisibleIndex = 0
         Me.MOV10.Width = 97
+=======
+        Me.MOV3.Width = 131
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'MOV11
         '
@@ -963,7 +1239,11 @@ Partial Class FrmDailyrestrictions2
         Me.MOVD4.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
         Me.MOVD4.Visible = True
         Me.MOVD4.VisibleIndex = 3
+<<<<<<< HEAD
         Me.MOVD4.Width = 130
+=======
+        Me.MOVD4.Width = 125
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'MOVD3
         '
@@ -986,7 +1266,54 @@ Partial Class FrmDailyrestrictions2
         Me.MOVD3.UnboundType = DevExpress.Data.UnboundColumnType.[String]
         Me.MOVD3.Visible = True
         Me.MOVD3.VisibleIndex = 4
+<<<<<<< HEAD
         Me.MOVD3.Width = 304
+=======
+        Me.MOVD3.Width = 292
+        '
+        'MOVD5
+        '
+        Me.MOVD5.AppearanceCell.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.MOVD5.AppearanceCell.Options.UseFont = True
+        Me.MOVD5.AppearanceCell.Options.UseTextOptions = True
+        Me.MOVD5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOVD5.AppearanceHeader.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.MOVD5.AppearanceHeader.Options.UseFont = True
+        Me.MOVD5.AppearanceHeader.Options.UseTextOptions = True
+        Me.MOVD5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOVD5.Caption = "مدين"
+        Me.MOVD5.FieldName = "MOVD5"
+        Me.MOVD5.Name = "MOVD5"
+        Me.MOVD5.OptionsColumn.AllowEdit = False
+        Me.MOVD5.OptionsColumn.AllowFocus = False
+        Me.MOVD5.OptionsColumn.ReadOnly = True
+        Me.MOVD5.UnboundType = DevExpress.Data.UnboundColumnType.[Decimal]
+        Me.MOVD5.Visible = True
+        Me.MOVD5.VisibleIndex = 5
+        Me.MOVD5.Width = 106
+        '
+        'MOVD6
+        '
+        Me.MOVD6.AppearanceCell.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.MOVD6.AppearanceCell.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.MOVD6.AppearanceCell.Options.UseFont = True
+        Me.MOVD6.AppearanceCell.Options.UseTextOptions = True
+        Me.MOVD6.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOVD6.AppearanceHeader.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.MOVD6.AppearanceHeader.Options.UseFont = True
+        Me.MOVD6.AppearanceHeader.Options.UseTextOptions = True
+        Me.MOVD6.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOVD6.Caption = "دائن"
+        Me.MOVD6.FieldName = "MOVD6"
+        Me.MOVD6.Name = "MOVD6"
+        Me.MOVD6.OptionsColumn.AllowEdit = False
+        Me.MOVD6.OptionsColumn.AllowFocus = False
+        Me.MOVD6.OptionsColumn.ReadOnly = True
+        Me.MOVD6.UnboundType = DevExpress.Data.UnboundColumnType.[Decimal]
+        Me.MOVD6.Visible = True
+        Me.MOVD6.VisibleIndex = 6
+        Me.MOVD6.Width = 90
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'MOVD10
         '
@@ -1006,6 +1333,7 @@ Partial Class FrmDailyrestrictions2
         Me.MOVD10.OptionsColumn.AllowFocus = False
         Me.MOVD10.OptionsColumn.ReadOnly = True
         Me.MOVD10.UnboundType = DevExpress.Data.UnboundColumnType.[Integer]
+<<<<<<< HEAD
         Me.MOVD10.Width = 101
         '
         'GridColumn2
@@ -1046,6 +1374,37 @@ Partial Class FrmDailyrestrictions2
         Me.RepositoryItemButtonEdit2.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.RepositoryItemButtonEdit2.Name = "RepositoryItemButtonEdit2"
         Me.RepositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+=======
+        Me.MOVD10.Visible = True
+        Me.MOVD10.VisibleIndex = 7
+        Me.MOVD10.Width = 101
+        '
+        'MOV10
+        '
+        Me.MOV10.AppearanceCell.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.MOV10.AppearanceCell.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.MOV10.AppearanceCell.Options.UseFont = True
+        Me.MOV10.AppearanceCell.Options.UseTextOptions = True
+        Me.MOV10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOV10.AppearanceHeader.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.MOV10.AppearanceHeader.Options.UseFont = True
+        Me.MOV10.AppearanceHeader.Options.UseTextOptions = True
+        Me.MOV10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.MOV10.Caption = "رمز القيد"
+        Me.MOV10.FieldName = "MOV10"
+        Me.MOV10.MaxWidth = 80
+        Me.MOV10.MinWidth = 80
+        Me.MOV10.Name = "MOV10"
+        Me.MOV10.OptionsColumn.AllowEdit = False
+        Me.MOV10.OptionsColumn.AllowFocus = False
+        Me.MOV10.OptionsColumn.AllowSize = False
+        Me.MOV10.OptionsColumn.ReadOnly = True
+        Me.MOV10.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "MOV10", "{0}")})
+        Me.MOV10.UnboundType = DevExpress.Data.UnboundColumnType.[String]
+        Me.MOV10.Visible = True
+        Me.MOV10.VisibleIndex = 0
+        Me.MOV10.Width = 97
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Dailyrestrictions
         '
@@ -1079,27 +1438,91 @@ Partial Class FrmDailyrestrictions2
         '
         Me.RepositoryItemButtonEdit1.BeepOnError = False
         Me.RepositoryItemButtonEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+<<<<<<< HEAD
         EditorButtonImageOptions2.Image = Global.CC_JO.My.Resources.Resources.differentfirstpage_16x16
         Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions2, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+=======
+        EditorButtonImageOptions1.Image = Global.CC_JO.My.Resources.Resources.differentfirstpage_16x16
+        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions1, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, SerializableAppearanceObject2, SerializableAppearanceObject3, SerializableAppearanceObject4, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RepositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
         Me.RepositoryItemButtonEdit1.Name = "RepositoryItemButtonEdit1"
         Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
         '
+<<<<<<< HEAD
+=======
+        'GridColumn2
+        '
+        Me.GridColumn2.AppearanceCell.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GridColumn2.AppearanceCell.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.GridColumn2.AppearanceCell.Options.UseFont = True
+        Me.GridColumn2.AppearanceCell.Options.UseTextOptions = True
+        Me.GridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn2.AppearanceHeader.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.GridColumn2.AppearanceHeader.Options.UseFont = True
+        Me.GridColumn2.AppearanceHeader.Options.UseTextOptions = True
+        Me.GridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.GridColumn2.Caption = "مصدر الحركة"
+        Me.GridColumn2.ColumnEdit = Me.RepositoryItemButtonEdit2
+        Me.GridColumn2.MaxWidth = 80
+        Me.GridColumn2.MinWidth = 80
+        Me.GridColumn2.Name = "GridColumn2"
+        Me.GridColumn2.OptionsColumn.AllowShowHide = False
+        Me.GridColumn2.OptionsColumn.AllowSize = False
+        Me.GridColumn2.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridColumn2.OptionsFilter.AllowAutoFilter = False
+        Me.GridColumn2.OptionsFilter.AllowFilter = False
+        Me.GridColumn2.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridColumn2.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridColumn2.ToolTip = "مصدر الحركة"
+        Me.GridColumn2.Visible = True
+        Me.GridColumn2.VisibleIndex = 9
+        Me.GridColumn2.Width = 80
+        '
+        'RepositoryItemButtonEdit2
+        '
+        Me.RepositoryItemButtonEdit2.AutoHeight = False
+        Me.RepositoryItemButtonEdit2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        EditorButtonImageOptions2.Image = Global.CC_JO.My.Resources.Resources.differentoddevenpages_16x16
+        Me.RepositoryItemButtonEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, EditorButtonImageOptions2, New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject5, SerializableAppearanceObject6, SerializableAppearanceObject7, SerializableAppearanceObject8, "", Nothing, Nothing, DevExpress.Utils.ToolTipAnchor.[Default])})
+        Me.RepositoryItemButtonEdit2.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.RepositoryItemButtonEdit2.Name = "RepositoryItemButtonEdit2"
+        Me.RepositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'FrmDailyrestrictions2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(1205, 641)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1221, 600)
+=======
+        Me.ClientSize = New System.Drawing.Size(1205, 533)
+        Me.Controls.Add(Me.GridControl1)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmDailyrestrictions2"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "الحسابات"
+<<<<<<< HEAD
+=======
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl1.ResumeLayout(False)
+        Me.GroupControl1.PerformLayout()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.NUpDownAccountLevel, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1113,17 +1536,33 @@ Partial Class FrmDailyrestrictions2
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+<<<<<<< HEAD
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+<<<<<<< HEAD
     Friend WithEvents DateTO As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateFrom As System.Windows.Forms.DateTimePicker
+=======
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents DateTO As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DateFrom As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents TextSEARCHFROM As System.Windows.Forms.TextBox
     Friend WithEvents TextFormText As System.Windows.Forms.TextBox
@@ -1133,15 +1572,33 @@ Partial Class FrmDailyrestrictions2
     Friend WithEvents RadioB1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioB3 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioB2 As System.Windows.Forms.RadioButton
+<<<<<<< HEAD
+=======
+    Friend WithEvents TotalCred As Label
+    Friend WithEvents TotalDebit As Label
+    Friend WithEvents TextRowsCount As Label
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents TextTypy As Label
     Private WithEvents Label27 As Label
     Friend WithEvents ButtonEnquiry As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents ButtonReloading As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents RadioButton3 As RadioButton
+<<<<<<< HEAD
     Friend WithEvents RadInvoiceStatus As RadioButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents ButtonSearchWithinNetwork As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Panel2 As Panel
+=======
+    Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents RadInvoiceStatus As RadioButton
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents ButtonSearchWithinNetwork As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label7 As Label

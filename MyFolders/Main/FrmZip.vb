@@ -78,7 +78,11 @@ Public Class FrmZip
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmZip_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmZip_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10

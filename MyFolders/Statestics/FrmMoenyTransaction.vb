@@ -2,7 +2,11 @@
 Imports System.Data.SqlClient
 Public Class FrmMoenyTransaction
     ReadOnly ds1 As New DataSet, Con As String, F As Boolean = False, T As Boolean = True
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub INCOME()
         Dim Vcash, Vcrdt As Double
         Dim Tcash, Tcrdt As Double
@@ -16,15 +20,24 @@ Public Class FrmMoenyTransaction
         Application.DoEvents()
         Dim ds As DataSet
         ds = New DataSet
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "select * from SALES  WHERE deleted ='" & False & "' and CUser='" & CUser & "'  ORDER BY SLS1"
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         adp = New SqlDataAdapter(strSQL)
         Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+        adp = New SqlClient.SqlDataAdapter(strSQL)
+        Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         adp.Fill(ds, "SALES")
 
         If Me.BindingContext(ds, "SALES").Count = 0 Then
@@ -60,15 +73,24 @@ Public Class FrmMoenyTransaction
         Application.DoEvents()
         Dim ds2 As DataSet
         ds2 = New DataSet
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "select *from BUYS  WHERE deleted ='" & False & "' and CUser='" & CUser & "'order by BUY1"
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         adp = New SqlDataAdapter(strSQL)
         Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+        adp = New SqlClient.SqlDataAdapter(strSQL)
+        Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         adp.Fill(ds2, "BUYS")
         If Me.BindingContext(ds2, "BUYS").Count = 0 Then
             MsgBox("·« ÌÊÃœ »Ì«‰«  ·⁄—÷Â«", 64 + 524288, "⁄—÷ «·»Ì«‰« ")
@@ -90,10 +112,17 @@ Public Class FrmMoenyTransaction
         Next
         TextBox5.Text = Tcash : TextBox8.Text = Tcrdt
     End Sub
+<<<<<<< HEAD
     Private Sub FrmMoenyTransaction_Activated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Activated
         Dt1.Focus()
     End Sub
     Private Sub FrmMoenyTransaction_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmMoenyTransaction_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        Dt1.Focus()
+    End Sub
+    Private Sub FrmMoenyTransaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -107,13 +136,21 @@ Public Class FrmMoenyTransaction
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Dt1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Dt1.KeyPress
+=======
+    Private Sub Dt1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Dt1.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim ASCI As Short = Asc(e.KeyChar)
         If ASCI = 13 Then
             Dt2.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Dt2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Dt2.KeyPress
+=======
+    Private Sub Dt2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Dt2.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim ASCI As Short = Asc(e.KeyChar)
         If ASCI = 13 Then
             INCOME()
@@ -128,7 +165,11 @@ Public Class FrmMoenyTransaction
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Close()
     End Sub
 End Class

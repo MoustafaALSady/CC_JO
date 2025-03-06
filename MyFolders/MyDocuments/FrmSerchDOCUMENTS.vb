@@ -2,7 +2,11 @@
 
 Public Class FrmSerchDOCUMENTS
 
+<<<<<<< HEAD
     Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SearchBUTTON.Click
+=======
+    Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim f As New FormDOCUMENTS
             If Me.RadioLO_NO.Checked Then
@@ -23,7 +27,11 @@ Public Class FrmSerchDOCUMENTS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmSerchDOCUMENTS_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmSerchDOCUMENTS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
     End Sub

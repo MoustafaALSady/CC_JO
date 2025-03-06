@@ -3,7 +3,11 @@
 Imports System.Data.SqlClient
 
 Public Class FormFiscalYear
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
@@ -13,6 +17,7 @@ Public Class FormFiscalYear
     Dim DelRow As Boolean = False
     Dim RowCount As Integer = 0
 
+<<<<<<< HEAD
     Private Sub FormFiscalYear_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         On Error Resume Next
         Me.BackgroundImage = img
@@ -23,6 +28,18 @@ Public Class FormFiscalYear
         'Next
 
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Private Sub FormFiscalYear_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        On Error Resume Next
+        Me.BackgroundImage = img
+        For a As Byte = 0 To 10
+            System.Threading.Thread.Sleep(10)
+            Application.DoEvents()
+            Me.Opacity = a / 10
+        Next
+
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -35,7 +52,11 @@ Public Class FormFiscalYear
 1:
             TestNet = True
             Me.LoadDataBase()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -103,7 +124,11 @@ Public Class FormFiscalYear
             Else
                 Me.label5.ForeColor = Color.Red
                 Me.label5.Text = "الاتصال بالانترنت غير متوفر"
+<<<<<<< HEAD
                 Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+                Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .WorkerReportsProgress = True,
                     .WorkerSupportsCancellation = True
                 }
@@ -114,9 +139,15 @@ Public Class FormFiscalYear
 
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO FiscalYear(   Year2, Year3, Year4, YE1,  CUser, COUser) VALUES     ( @Year2, @Year3, @Year4, @YE1 , @CUser, @COUser)"
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO FiscalYear(   Year2, Year3, Year4, YE1,  CUser, COUser) VALUES     ( @Year2, @Year3, @Year4, @YE1 , @CUser, @COUser)"
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -140,9 +171,15 @@ Public Class FormFiscalYear
 
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update FiscalYear SET   Year2 = @Year2, Year3 = @Year3, Year4 = @Year4, YE1 = @YE1 WHERE Year1 = @Year1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update FiscalYear SET   Year2 = @Year2, Year3 = @Year3, Year4 = @Year4, YE1 = @YE1 WHERE Year1 = @Year1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -168,10 +205,17 @@ Public Class FormFiscalYear
 
     Private Sub MAXRECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim V As Integer
         Dim SQL As New SqlCommand("SELECT MAX(Year1) FROM FiscalYear", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(Year1) FROM FiscalYear", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -184,7 +228,11 @@ Public Class FormFiscalYear
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim StartDateTime As DateTime
         Dim EndDateTime As DateTime
@@ -227,7 +275,11 @@ Public Class FormFiscalYear
         Me.PictureBox2.Visible = True
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -258,7 +310,11 @@ Public Class FormFiscalYear
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.RecordCount()
     End Sub
@@ -313,7 +369,11 @@ Public Class FormFiscalYear
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & Me.BS.Count - Me.RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -331,11 +391,19 @@ Public Class FormFiscalYear
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FiscalYearStart_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs)
         FiscalYear_currentDateMustBeInFiscalYear()
     End Sub
 
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub FiscalYearStart_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        FiscalYear_currentDateMustBeInFiscalYear()
+    End Sub
+
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -368,34 +436,58 @@ Public Class FormFiscalYear
             'Me.CheckInactiveFiscalYear.Checked = False
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLastPage.Click
+=======
+    Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLastPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNextPage.Click
+=======
+    Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNextPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnPreviousPage.Click
+=======
+    Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPreviousPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFirstPage.Click
+=======
+    Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirstPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
     End Sub
 
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -416,7 +508,11 @@ Public Class FormFiscalYear
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }

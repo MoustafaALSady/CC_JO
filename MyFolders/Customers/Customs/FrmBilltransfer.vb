@@ -1,10 +1,17 @@
 ﻿Option Explicit Off
 Imports System.Data.SqlClient
 Public Class FrmBilltransfer
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     ReadOnly ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    ReadOnly ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
     Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
@@ -16,10 +23,17 @@ Public Class FrmBilltransfer
     Dim TypeCustomer As String
 
 
+<<<<<<< HEAD
     Private Sub FrmTRANSPORT_Activated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Activated
         On Error Resume Next
     End Sub
     Private Sub FrmTRANSPORT_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmTRANSPORT_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        On Error Resume Next
+    End Sub
+    Private Sub FrmTRANSPORT_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -40,7 +54,11 @@ Public Class FrmBilltransfer
         Me.ADDBUTTON.Enabled = LockAddRow
         Me.SAVEBUTTON.Enabled = LockSave
     End Sub
+<<<<<<< HEAD
     Private Sub FrmBilltransfer_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmBilltransfer_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -66,6 +84,7 @@ Public Class FrmBilltransfer
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboCustomerName.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -73,6 +92,15 @@ Public Class FrmBilltransfer
         Dim strsql As New SqlCommand("SELECT IDcust, cust22 FROM AllCustomers WHERE cust2 ='" & Me.ComboCustomerName.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboCustomerName.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT IDcust, cust22 FROM AllCustomers WHERE cust2 ='" & Me.ComboCustomerName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         Adp.Fill(ds, "AllCustomers")
@@ -138,7 +166,11 @@ Public Class FrmBilltransfer
                 Exit Sub
             End If
             If Consum.State = ConnectionState.Open Then Consum.Close()
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
             Consum.Close()
@@ -158,10 +190,17 @@ Public Class FrmBilltransfer
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
 
             Dim sql As String = "INSERT INTO PETRO(PTRO1, PTRO2, PTRO3, PTRO4, PTRO5, PTRO6, PTRO7, PTRO8, PTRO9, PTRO10, PTRO11, PTRO12, PTRO13, PTRO14, PTRO15, PTRO16, PTRO17, PTRO18, PTRO19, PTRO20, PTRO21, PTRO22, PTRO23, PTRO24, PTRO25, PTRO26, PTRO27, PTRO28, PTRO29, PTRO30, PTRO31, CB1, BN2,WarehouseNumber, WarehouseName, USERNAME, Cuser, COUSER, da, ne) VALUES  (@PTRO1, @PTRO2, @PTRO3, @PTRO4, @PTRO5, @PTRO6, @PTRO7, @PTRO8, @PTRO9, @PTRO10, @PTRO11, @PTRO12, @PTRO13, @PTRO14, @PTRO15, @PTRO16, @PTRO17, @PTRO18, @PTRO19, @PTRO20, @PTRO21, @PTRO22, @PTRO23, @PTRO24, @PTRO25, @PTRO26, @PTRO27, @PTRO28, @PTRO29, @PTRO30, @PTRO31, @CB1, @BN2,@WarehouseNumber, @WarehouseName, @USERNAME, @Cuser, @COUSER, @da, @ne)"
             Dim cmd As New SqlCommand(sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+
+            Dim sql As String = "INSERT INTO PETRO(PTRO1, PTRO2, PTRO3, PTRO4, PTRO5, PTRO6, PTRO7, PTRO8, PTRO9, PTRO10, PTRO11, PTRO12, PTRO13, PTRO14, PTRO15, PTRO16, PTRO17, PTRO18, PTRO19, PTRO20, PTRO21, PTRO22, PTRO23, PTRO24, PTRO25, PTRO26, PTRO27, PTRO28, PTRO29, PTRO30, PTRO31, CB1, BN2,WarehouseNumber, WarehouseName, USERNAME, Cuser, COUSER, da, ne) VALUES  (@PTRO1, @PTRO2, @PTRO3, @PTRO4, @PTRO5, @PTRO6, @PTRO7, @PTRO8, @PTRO9, @PTRO10, @PTRO11, @PTRO12, @PTRO13, @PTRO14, @PTRO15, @PTRO16, @PTRO17, @PTRO18, @PTRO19, @PTRO20, @PTRO21, @PTRO22, @PTRO23, @PTRO24, @PTRO25, @PTRO26, @PTRO27, @PTRO28, @PTRO29, @PTRO30, @PTRO31, @CB1, @BN2,@WarehouseNumber, @WarehouseName, @USERNAME, @Cuser, @COUSER, @da, @ne)"
+            Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -219,7 +258,11 @@ Public Class FrmBilltransfer
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -277,10 +320,17 @@ Public Class FrmBilltransfer
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+<<<<<<< HEAD
         Dim Sound As IO.Stream = My.Resources.addv
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+        Dim Sound As System.IO.Stream = My.Resources.addv
+        My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
+    End Sub
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -365,7 +415,11 @@ Public Class FrmBilltransfer
                 TransferToAccounts_Check = False
             End If
 
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -379,11 +433,19 @@ Public Class FrmBilltransfer
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX3_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTQuantity.EditValueChanged
         On Error Resume Next
         Me.TEXTLetteringQuantity.Text = CurrencyJO(Me.TEXTQuantity.EditValue, "WEIGHT")
     End Sub
     Private Sub TEXTBOX2_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTNetValue.TextChanged, TEXTTotalN.TextChanged, TEXTTotalValue.TextChanged, TEXTTaxRate.TextChanged, TextTaxes.EditValueChanged, TEXTLoadingExpenses.EditValueChanged, TEXTTransfers.EditValueChanged
+=======
+    Private Sub TEXTBOX3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTQuantity.EditValueChanged
+        On Error Resume Next
+        Me.TEXTLetteringQuantity.Text = CurrencyJO(Me.TEXTQuantity.EditValue, "WEIGHT")
+    End Sub
+    Private Sub TEXTBOX2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTNetValue.TextChanged, TEXTTotalN.TextChanged, TEXTTotalValue.TextChanged, TEXTTaxRate.TextChanged, TextTaxes.EditValueChanged, TEXTLoadingExpenses.EditValueChanged, TEXTTransfers.EditValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TEXTTotalValue.Text = Format(Val(TEXTQuantity.EditValue) * Val(TEXTUnitPrice.EditValue), "0.000")
         Me.TEXTTaxRate.Text = Format(Val(TEXTTotalValue.Text) * Val(TextTaxes.EditValue), "0.000")
@@ -502,22 +564,33 @@ Public Class FrmBilltransfer
                 LabelFundBalance.Text = "رصيد" & " " & FundAccount_Name & " " & ":"
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox17_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboPaymentMethod.SelectedIndexChanged
+=======
+    Private Sub ComboBox17_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboPaymentMethod.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
          AccountsEnquiry()
 
     End Sub
     Private Sub FundBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim N As Double
         Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim N As Double
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         N = cmd1.ExecuteScalar
         Consum.Close()
         Me.TextFundBalance.Text = Format(Val(SumAmounTOTALBALANCECASHIER11(CUser, Me.ComboCB1.Text, N)), "0.000")
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox16_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
         Try
             Dim Consum As New SqlConnection(constring)
@@ -526,6 +599,16 @@ Public Class FrmBilltransfer
                 Dim strsql As New SqlCommand("SELECT IDcust,cust22,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds As New DataSet
                 Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox16_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If RadioAllCustomers.Checked = True Then
+                Dim Adp As SqlClient.SqlDataAdapter
+                Dim strsql As New SqlCommand("SELECT IDcust,cust22,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds As New DataSet
+                Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds.Clear()
                 Adp.Fill(ds)
                 If ds.Tables(0).Rows.Count > 0 Then
@@ -538,10 +621,17 @@ Public Class FrmBilltransfer
                 Adp.Dispose()
                 Consum.Close()
             ElseIf RadioSUPPLIER.Checked = True Then
+<<<<<<< HEAD
                 Dim Adp1 As SqlDataAdapter
                 Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds1 As New DataSet
                 Adp1 = New SqlDataAdapter(strsql)
+=======
+                Dim Adp1 As SqlClient.SqlDataAdapter
+                Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds1 As New DataSet
+                Adp1 = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds1.Clear()
                 Adp1.Fill(ds1)
                 If ds1.Tables(0).Rows.Count > 0 Then
@@ -552,10 +642,17 @@ Public Class FrmBilltransfer
                 Adp1.Dispose()
                 Consum.Close()
             ElseIf RadioEMPLOYEES.Checked = True Then
+<<<<<<< HEAD
                 Dim Adp2 As SqlDataAdapter
                 Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds2 As New DataSet
                 Adp2 = New SqlDataAdapter(strsq2)
+=======
+                Dim Adp2 As SqlClient.SqlDataAdapter
+                Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds2 As New DataSet
+                Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds2.Clear()
                 Adp2.Fill(ds2)
                 If ds2.Tables(0).Rows.Count > 0 Then
@@ -570,6 +667,7 @@ Public Class FrmBilltransfer
             MessageBox.Show(ex.Message, "ErrorComboCheckDrawerName", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton7_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioAllCustomers.CheckedChanged
         Call Me.AddType1()
     End Sub
@@ -580,6 +678,18 @@ Public Class FrmBilltransfer
         Call Me.AddType1()
     End Sub
     Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioResetText.CheckedChanged
+=======
+    Private Sub RadioButton7_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioAllCustomers.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioSUPPLIER.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioEMPLOYEES.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioResetText.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Call Me.AddType1()
     End Sub
     Private Sub AddType1()
@@ -599,6 +709,7 @@ Public Class FrmBilltransfer
 
 
 
+<<<<<<< HEAD
     Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCB1.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -606,6 +717,15 @@ Public Class FrmBilltransfer
         Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCB1.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -620,6 +740,7 @@ Public Class FrmBilltransfer
         FundBalance()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBN2.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -627,6 +748,15 @@ Public Class FrmBilltransfer
         Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBN2.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -642,6 +772,7 @@ Public Class FrmBilltransfer
     End Sub
 
     Private Sub ComboStore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboStore.SelectedIndexChanged
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
 
         Dim Adp As SqlDataAdapter
@@ -649,6 +780,15 @@ Public Class FrmBilltransfer
         Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then

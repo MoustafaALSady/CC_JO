@@ -2,7 +2,11 @@
 
 Public Class SearchCash
 
+<<<<<<< HEAD
     Private Sub SEARCHCASH_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Me.KeyPress
+=======
+    Private Sub SEARCHCASH_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'If Char.IsControl(e.KeyChar) = False Then
         '    If Char.IsDigit(e.KeyChar) Then
@@ -14,14 +18,22 @@ Public Class SearchCash
         '    SearchBUTTON_Click(sender, e)
         'End If
     End Sub
+<<<<<<< HEAD
     Private Sub Texser_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Texser.KeyPress
+=======
+    Private Sub Texser_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Texser.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             SearchBUTTON_Click(sender, e)
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SearchBUTTON.Click
+=======
+    Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim ds As New DataSet
         Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
         Try
@@ -189,6 +201,7 @@ Public Class SearchCash
             Me.RB6.Enabled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub RadioB1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioB1.CheckedChanged
         Call Me.AddType1()
     End Sub
@@ -209,6 +222,28 @@ Public Class SearchCash
     End Sub
 
     Private Sub SEARCHCASH_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub RadioB1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB1.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioB2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB2.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioB3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB3.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioB4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB4.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioB5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB5.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioB6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioB6.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+
+    Private Sub SEARCHCASH_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10

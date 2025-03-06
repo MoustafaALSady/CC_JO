@@ -4,10 +4,17 @@ Imports System.Data.SqlClient
 Imports System.IO
 
 Public Class FrmCompany
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveDataBase As System.ComponentModel.BackgroundWorker
     Public Delegate Sub LoadDataBaseCallBack()
@@ -19,7 +26,11 @@ Public Class FrmCompany
     Public TB1 As String
     Public TB2 As String
     Public TB3 As String
+<<<<<<< HEAD
     Private Sub FrmCompany_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmCompany_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F3
@@ -41,7 +52,11 @@ Public Class FrmCompany
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmCompany_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmCompany_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.EDITBUTTON.Enabled = False
         Me.BUTTONCANCEL.Enabled = False
         Me.DELETEBUTTON.Enabled = False
@@ -54,9 +69,15 @@ Public Class FrmCompany
         Me.NEXTBUTTON.Enabled = False
         Me.LASTBUTTON.Enabled = False
     End Sub
+<<<<<<< HEAD
     Public Sub ButtonXP4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonXP4.Click
         Try
             Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Public Sub ButtonXP4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonXP4.Click
+        Try
+            Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -73,7 +94,11 @@ Public Class FrmCompany
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("SELECT CMP, CMP1, CMP2, CMP3, CMP4, CMP5, CMP6, CMP7, CMP8, CMP9, CMP10, CMP11, CMP12, CMP13, CMP14, CMP15, CMP16, USERNAME, CUser, COUser FROM COMPANY where CUser ='" & Strings.Trim(Me.TB1) & "'or CMP ='" & Strings.Trim(Me.TB2) & "'or CMP2 ='" & Strings.Trim(Me.TB3) & "' ORDER BY CMP1", Consum)
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -203,7 +228,11 @@ Public Class FrmCompany
                 MsgBox(" „  ⁄„·Ì… «·Õ›Ÿ ›Ì ﬁ«⁄œ… «·»Ì«‰«  »‰Ã«Õ" & vbCrLf & "  ‰»ÌÂ : ﬁ«„ «Õœ «·„” Œœ„Ì‰ »«÷«›… ”Ã·«  ⁄œœ " & Me.BS.Count - Me.RowCount, 64 + 524288, " ‰Ã«Õ «·Õ›Ÿ Ê«· €ÌÌ—« ")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox(" „  ⁄„·Ì… «·Õ›Ÿ ›Ì ﬁ«⁄œ… «·»Ì«‰«  »‰Ã«Õ", 64 + 524288, "‰Ã«Õ «·Õ›Ÿ Ê«· €ÌÌ—«  Ê«· ÕœÌÀ")
         Catch Ex As Exception
@@ -222,11 +251,19 @@ Public Class FrmCompany
     End Sub
     Private Sub SHOWPHOTO()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim sql As String = "SELECT CMP7 FROM COMPANY WHERE cuser = '" & Me.TEXTCMP1.Text & "'"
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim sql As String = "SELECT CMP7 FROM COMPANY WHERE cuser = '" & Me.TEXTCMP1.Text & "'"
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim b() As Byte
         b = cmd.ExecuteScalar()
         If b.Length > 0 Then
@@ -239,7 +276,11 @@ Public Class FrmCompany
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX1_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles TEXTCMP1.KeyDown
+=======
+    Private Sub TEXTBOX1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTCMP1.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -248,10 +289,17 @@ Public Class FrmCompany
     End Sub
     Private Sub MAXRECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim V As Integer
         Dim SQL As New SqlCommand("SELECT MAX(cuser) FROM COMPANY", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(cuser) FROM COMPANY", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -281,9 +329,15 @@ Public Class FrmCompany
     End Sub
     Private Sub UPDATERECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As String = " Update COMPANY SET    CMP = @CMP, CMP2 = @CMP2, CMP3 = @CMP3, CMP4 = @CMP4, CMP5 = @CMP5, CMP6 = @CMP6, CMP7 = @CMP7, CMP8 = @CMP8, CMP9 = @CMP9, CMP11 = @CMP11, CMP12 = @CMP12, CMP13 = @CMP13, CMP14 = @CMP14, CMP15 = @CMP15, CMP16 = @CMP16, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser WHERE CMP1 = @CMP1"
         Dim CMD As New SqlCommand With {
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As String = " Update COMPANY SET    CMP = @CMP, CMP2 = @CMP2, CMP3 = @CMP3, CMP4 = @CMP4, CMP5 = @CMP5, CMP6 = @CMP6, CMP7 = @CMP7, CMP8 = @CMP8, CMP9 = @CMP9, CMP11 = @CMP11, CMP12 = @CMP12, CMP13 = @CMP13, CMP14 = @CMP14, CMP15 = @CMP15, CMP16 = @CMP16, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser WHERE CMP1 = @CMP1"
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -316,7 +370,11 @@ Public Class FrmCompany
         CMD.ExecuteNonQuery()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub LOGOBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LOGOBUTTON.Click
+=======
+    Private Sub LOGOBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LOGOBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         OpenFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|AllFiles (*.*)|*.*"
         With Me.OpenFileDialog1
@@ -328,11 +386,19 @@ Public Class FrmCompany
             End If
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub PHOTOEDIT_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PHOTOEDIT.Click
         On Error Resume Next
         Dim Consum As New SqlConnection(constring)
         Dim SQL As String = " Update COMPANY SET  CMP10 = @CMP10 WHERE cuser = @cuser"
         Dim CMD As New SqlCommand With {
+=======
+    Private Sub PHOTOEDIT_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PHOTOEDIT.Click
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As String = " Update COMPANY SET  CMP10 = @CMP10 WHERE cuser = @cuser"
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -354,10 +420,17 @@ Public Class FrmCompany
     End Sub
     Private Sub SEARCHUSERS()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT CMP2  FROM COMPANY  WHERE (COMPANY. CMP2)='" & Me.TEXTCMP2.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT CMP2  FROM COMPANY  WHERE (COMPANY. CMP2)='" & Me.TEXTCMP2.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "COMPANY")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -371,10 +444,17 @@ Public Class FrmCompany
     End Sub
     Private Sub SEARCHUSERS1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT CMP  FROM COMPANY  WHERE (COMPANY. CMP)='" & Me.TextCMP.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT CMP  FROM COMPANY  WHERE (COMPANY. CMP)='" & Me.TextCMP.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "COMPANY")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -386,7 +466,11 @@ Public Class FrmCompany
         Adp1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -400,18 +484,30 @@ Public Class FrmCompany
         Me.PictureBox2.Visible = True
         Me.BS.EndEdit()
         Me.UPDATERECORD()
+<<<<<<< HEAD
         Me.SaveDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
         Me.SaveDataBase.RunWorkerAsync()
     End Sub
+<<<<<<< HEAD
     Private Sub List1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles List1.SelectedIndexChanged
+=======
+    Private Sub List1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles List1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = Me.List1.SelectedIndex
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -425,7 +521,11 @@ Public Class FrmCompany
         FrmCompany_Load(sender, e)
         CLEARDATA1(Me)
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.CancelEdit()
         ds.RejectChanges()
@@ -451,27 +551,47 @@ Public Class FrmCompany
         LASTBUTTON.Enabled = Forward
         SHOWPHOTO()
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = 0
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position + 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Count - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSearch.Click
+=======
+    Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TextSearch.Text = "" Then
             MessageBox.Show("«·—Ã«¡ Ê÷⁄ ﬁÌ„… ··»ÕÀ ⁄‰Â«", " «·»ÕÀ ›Ì œ« « Ã—Ìœ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -529,7 +649,11 @@ Public Class FrmCompany
             ListBox3.SelectedIndex = ListBox3.Items.Count - 1
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDisplyAll.Click
+=======
+    Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDisplyAll.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             ds = New DataSet
             SqlDataAdapter1.Fill(ds, "COMPANY")
@@ -541,7 +665,11 @@ Public Class FrmCompany
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox3.SelectedIndexChanged
+=======
+    Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBox3.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim Str As String = ListBox3.Text
             Dim strArr() As String
@@ -555,14 +683,22 @@ Public Class FrmCompany
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX2_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTCMP2.KeyDown
+=======
+    Private Sub TEXTBOX2_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTCMP2.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 SendKeys.SendWait("{TAB}")
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTCMP2.KeyPress
+=======
+    Private Sub TEXTBOX2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTCMP2.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -576,11 +712,19 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTBOX2_LostFocus(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTCMP2.LostFocus
         On Error Resume Next
         ComboCMP7.Focus()
     End Sub
     Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles ComboCMP7.KeyPress
+=======
+    Private Sub TEXTBOX2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTCMP2.LostFocus
+        On Error Resume Next
+        ComboCMP7.Focus()
+    End Sub
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboCMP7.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -594,7 +738,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles ComboGovernorateName.KeyPress
+=======
+    Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboGovernorateName.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -607,7 +755,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox11_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextCMP.KeyPress
+=======
+    Private Sub TextBox11_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextCMP.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -621,7 +773,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox3_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTCMP3.KeyPress
+=======
+    Private Sub TextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTCMP3.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -634,7 +790,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox4_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTCMP4.KeyPress
+=======
+    Private Sub TextBox4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTCMP4.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -647,7 +807,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox7_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextCMP9.KeyPress
+=======
+    Private Sub TextBox7_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextCMP9.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -660,7 +824,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox5_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTCMP5.KeyPress
+=======
+    Private Sub TextBox5_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTCMP5.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -673,7 +841,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox6_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTCMP6.KeyPress
+=======
+    Private Sub TextBox6_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTCMP6.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -686,7 +858,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox13_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextCMP12.KeyPress
+=======
+    Private Sub TextBox13_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextCMP12.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -699,7 +875,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox15_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextCMP14.KeyPress
+=======
+    Private Sub TextBox15_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextCMP14.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -712,7 +892,11 @@ Public Class FrmCompany
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox14_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextCMP13.KeyPress
+=======
+    Private Sub TextBox14_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextCMP13.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             If Asc(e.KeyChar) = 13 Then
@@ -738,6 +922,7 @@ Public Class FrmCompany
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboGovernorateName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboGovernorateName.SelectedIndexChanged
         Try
             Dim Adp As SqlDataAdapter
@@ -745,6 +930,15 @@ Public Class FrmCompany
             Dim strsql As New SqlCommand("SELECT ID_Governorate  FROM Governorates WHERE GovernorateName ='" & Me.ComboGovernorateName.Text & "'", Consum)
             Dim ds As New DataSet
             Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboGovernorateName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboGovernorateName.SelectedIndexChanged
+        Try
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsql As New SqlCommand("SELECT ID_Governorate  FROM Governorates WHERE GovernorateName ='" & Me.ComboGovernorateName.Text & "'", Consum)
+            Dim ds As New DataSet
+            Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Consum.Open()
             Adp.Fill(ds)

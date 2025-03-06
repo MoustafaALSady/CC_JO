@@ -861,14 +861,22 @@ Partial Class FrmJO
         '
         'ComboConstraintType
         '
+<<<<<<< HEAD
         Me.ComboConstraintType.Cursor = System.Windows.Forms.Cursors.Default
         Me.ComboConstraintType.FlatStyle = System.Windows.Forms.FlatStyle.System
+=======
+        Me.ComboConstraintType.Cursor = System.Windows.Forms.Cursors.Hand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboConstraintType.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboConstraintType.ForeColor = System.Drawing.Color.Black
         Me.ComboConstraintType.Items.AddRange(New Object() {"ÇíÏÇÚ", "ÓÍÈ"})
         Me.ComboConstraintType.Location = New System.Drawing.Point(4, 102)
         Me.ComboConstraintType.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ComboConstraintType.Name = "ComboConstraintType"
+<<<<<<< HEAD
+=======
+        Me.ComboConstraintType.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ComboConstraintType.Size = New System.Drawing.Size(228, 23)
         Me.ComboConstraintType.TabIndex = 422
         '

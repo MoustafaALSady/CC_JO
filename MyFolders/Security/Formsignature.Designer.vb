@@ -41,11 +41,15 @@ Partial Class Formsignature
         Me.TextRight = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
         Me.Label9 = New System.Windows.Forms.Label()
         Me.colorPickEdit1 = New DevExpress.XtraEditors.ColorPickEdit()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CBFontSize1 = New DevExpress.XtraEditors.ComboBoxEdit()
+=======
+        Me.Label3 = New System.Windows.Forms.Label()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.btnClearSignature = New DevExpress.XtraEditors.SimpleButton()
         Me.btnSaveSignature = New DevExpress.XtraEditors.SimpleButton()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -66,8 +70,11 @@ Partial Class Formsignature
         Me.Panel3.SuspendLayout()
         CType(Me.CBFontSize.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+<<<<<<< HEAD
         CType(Me.colorPickEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CBFontSize1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.pBoxSavedSignature, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pBoxSignature, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -81,7 +88,11 @@ Partial Class Formsignature
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel6.Location = New System.Drawing.Point(0, 0)
         Me.Panel6.Name = "Panel6"
+<<<<<<< HEAD
         Me.Panel6.Size = New System.Drawing.Size(779, 37)
+=======
+        Me.Panel6.Size = New System.Drawing.Size(756, 37)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel6.TabIndex = 1035
         '
         'Label8
@@ -92,10 +103,17 @@ Partial Class Formsignature
         Me.Label8.Font = New System.Drawing.Font("Traditional Arabic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Image = Global.CC_JO.My.Resources.Resources.text_signature
+<<<<<<< HEAD
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label8.Location = New System.Drawing.Point(0, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(777, 35)
+=======
+        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label8.Location = New System.Drawing.Point(0, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(754, 35)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label8.TabIndex = 1008
         Me.Label8.Text = "منشئى التوقيــــع الرقمي"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -111,7 +129,11 @@ Partial Class Formsignature
         Me.Panel2.Location = New System.Drawing.Point(0, 40)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
+<<<<<<< HEAD
         Me.Panel2.Size = New System.Drawing.Size(776, 282)
+=======
+        Me.Panel2.Size = New System.Drawing.Size(753, 282)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 1036
         '
         'Panel5
@@ -133,7 +155,11 @@ Partial Class Formsignature
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
+<<<<<<< HEAD
         Me.PictureBox1.Properties.Appearance.BackColor = System.Drawing.Color.White
+=======
+        Me.PictureBox1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.PictureBox1.Properties.Appearance.Options.UseBackColor = True
         Me.PictureBox1.Properties.Appearance.Options.UseFont = True
@@ -195,7 +221,11 @@ Partial Class Formsignature
         Me.Panel3.Controls.Add(Me.TextRight)
         Me.Panel3.Location = New System.Drawing.Point(293, 239)
         Me.Panel3.Name = "Panel3"
+<<<<<<< HEAD
         Me.Panel3.Size = New System.Drawing.Size(478, 38)
+=======
+        Me.Panel3.Size = New System.Drawing.Size(454, 38)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 29
         '
         'TextUP
@@ -293,11 +323,15 @@ Partial Class Formsignature
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.colorPickEdit1)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Controls.Add(Me.CBFontSize1)
+=======
+        Me.Panel4.Controls.Add(Me.Label3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.Controls.Add(Me.btnClearSignature)
         Me.Panel4.Controls.Add(Me.btnSaveSignature)
         Me.Panel4.Controls.Add(Me.Label4)
@@ -308,6 +342,7 @@ Partial Class Formsignature
         Me.Panel4.Controls.Add(Me.pBoxSignature)
         Me.Panel4.Location = New System.Drawing.Point(293, 3)
         Me.Panel4.Name = "Panel4"
+<<<<<<< HEAD
         Me.Panel4.Size = New System.Drawing.Size(478, 235)
         Me.Panel4.TabIndex = 759
         '
@@ -356,6 +391,11 @@ Partial Class Formsignature
         Me.Label6.TabIndex = 1039
         Me.Label6.Text = "حجم الرسم :"
         '
+=======
+        Me.Panel4.Size = New System.Drawing.Size(454, 235)
+        Me.Panel4.TabIndex = 759
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -369,6 +409,7 @@ Partial Class Formsignature
         Me.Label3.TabIndex = 763
         Me.Label3.Text = "مـعـاينــة التـوقــــع :"
         '
+<<<<<<< HEAD
         'CBFontSize1
         '
         Me.CBFontSize1.Location = New System.Drawing.Point(355, 143)
@@ -383,6 +424,8 @@ Partial Class Formsignature
         Me.CBFontSize1.Size = New System.Drawing.Size(54, 22)
         Me.CBFontSize1.TabIndex = 1040
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'btnClearSignature
         '
         Me.btnClearSignature.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -407,10 +450,17 @@ Partial Class Formsignature
         Me.btnSaveSignature.Appearance.Options.UseTextOptions = True
         Me.btnSaveSignature.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.btnSaveSignature.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.EditName_16x16
+<<<<<<< HEAD
         Me.btnSaveSignature.Location = New System.Drawing.Point(240, 199)
         Me.btnSaveSignature.Name = "btnSaveSignature"
         Me.btnSaveSignature.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSaveSignature.Size = New System.Drawing.Size(234, 32)
+=======
+        Me.btnSaveSignature.Location = New System.Drawing.Point(223, 199)
+        Me.btnSaveSignature.Name = "btnSaveSignature"
+        Me.btnSaveSignature.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnSaveSignature.Size = New System.Drawing.Size(227, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.btnSaveSignature.TabIndex = 760
         Me.btnSaveSignature.Text = "اضافة رســم التوقيع"
         '
@@ -421,6 +471,7 @@ Partial Class Formsignature
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+<<<<<<< HEAD
         Me.Label4.Location = New System.Drawing.Point(355, 118)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
@@ -428,6 +479,15 @@ Partial Class Formsignature
         Me.Label4.Size = New System.Drawing.Size(120, 19)
         Me.Label4.TabIndex = 762
         Me.Label4.Text = "وقع هنا  ======>"
+=======
+        Me.Label4.Location = New System.Drawing.Point(357, 118)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label4.Size = New System.Drawing.Size(93, 19)
+        Me.Label4.TabIndex = 762
+        Me.Label4.Text = "وقع هنا  ===>"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label5
@@ -468,7 +528,11 @@ Partial Class Formsignature
         Me.ButtonAddNaem.Location = New System.Drawing.Point(4, 199)
         Me.ButtonAddNaem.Name = "ButtonAddNaem"
         Me.ButtonAddNaem.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.ButtonAddNaem.Size = New System.Drawing.Size(234, 32)
+=======
+        Me.ButtonAddNaem.Size = New System.Drawing.Size(217, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ButtonAddNaem.TabIndex = 761
         Me.ButtonAddNaem.Text = "إضافة الاسم الى التوقيع مع الاعتماد"
         '
@@ -487,8 +551,13 @@ Partial Class Formsignature
         '
         'pBoxSignature
         '
+<<<<<<< HEAD
         Me.pBoxSignature.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.pBoxSignature.BackgroundImage = Global.CC_JO.My.Resources.Resources.sigblock
+=======
+        Me.pBoxSignature.BackColor = System.Drawing.Color.White
+        Me.pBoxSignature.BackgroundImage = CType(resources.GetObject("pBoxSignature.BackgroundImage"), System.Drawing.Image)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.pBoxSignature.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pBoxSignature.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pBoxSignature.Location = New System.Drawing.Point(4, 115)
@@ -505,10 +574,17 @@ Partial Class Formsignature
         Me.Panel1.Controls.Add(Me.ADDBUTTON)
         Me.Panel1.Controls.Add(Me.EDITBUTTON)
         Me.Panel1.Controls.Add(Me.SAVEBUTTON)
+<<<<<<< HEAD
         Me.Panel1.Location = New System.Drawing.Point(0, 326)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 37)
+=======
+        Me.Panel1.Location = New System.Drawing.Point(0, 324)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(753, 37)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 1037
         '
         'ADDBUTTON
@@ -521,10 +597,17 @@ Partial Class Formsignature
         Me.ADDBUTTON.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.ADDBUTTON.Enabled = False
         Me.ADDBUTTON.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.add1
+<<<<<<< HEAD
         Me.ADDBUTTON.Location = New System.Drawing.Point(517, 2)
         Me.ADDBUTTON.Name = "ADDBUTTON"
         Me.ADDBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.ADDBUTTON.Size = New System.Drawing.Size(255, 32)
+=======
+        Me.ADDBUTTON.Location = New System.Drawing.Point(501, 2)
+        Me.ADDBUTTON.Name = "ADDBUTTON"
+        Me.ADDBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ADDBUTTON.Size = New System.Drawing.Size(247, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ADDBUTTON.TabIndex = 764
         Me.ADDBUTTON.TabStop = False
         Me.ADDBUTTON.Text = "إضافة تـــوقيــــع جـديـد"
@@ -541,7 +624,11 @@ Partial Class Formsignature
         Me.EDITBUTTON.Location = New System.Drawing.Point(3, 2)
         Me.EDITBUTTON.Name = "EDITBUTTON"
         Me.EDITBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.No
+<<<<<<< HEAD
         Me.EDITBUTTON.Size = New System.Drawing.Size(255, 32)
+=======
+        Me.EDITBUTTON.Size = New System.Drawing.Size(247, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.EDITBUTTON.TabIndex = 763
         Me.EDITBUTTON.Text = "تعديل التوقيع"
         '
@@ -555,10 +642,17 @@ Partial Class Formsignature
         Me.SAVEBUTTON.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.SAVEBUTTON.Enabled = False
         Me.SAVEBUTTON.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.Save_16x16
+<<<<<<< HEAD
         Me.SAVEBUTTON.Location = New System.Drawing.Point(260, 2)
         Me.SAVEBUTTON.Name = "SAVEBUTTON"
         Me.SAVEBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.SAVEBUTTON.Size = New System.Drawing.Size(255, 32)
+=======
+        Me.SAVEBUTTON.Location = New System.Drawing.Point(252, 2)
+        Me.SAVEBUTTON.Name = "SAVEBUTTON"
+        Me.SAVEBUTTON.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.SAVEBUTTON.Size = New System.Drawing.Size(247, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SAVEBUTTON.TabIndex = 762
         Me.SAVEBUTTON.Text = "حفظ التوقيع"
         '
@@ -569,8 +663,12 @@ Partial Class Formsignature
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
         Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(779, 368)
+=======
+        Me.ClientSize = New System.Drawing.Size(756, 362)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel6)
@@ -593,8 +691,11 @@ Partial Class Formsignature
         CType(Me.CBFontSize.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+<<<<<<< HEAD
         CType(Me.colorPickEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CBFontSize1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.pBoxSavedSignature, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pBoxSignature, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -633,8 +734,11 @@ Partial Class Formsignature
     Friend WithEvents BackWorker2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents txtSignatureFileName As TextBox
     Friend WithEvents ADDBUTTON As DevExpress.XtraEditors.SimpleButton
+<<<<<<< HEAD
     Friend WithEvents Label6 As Label
     Friend WithEvents CBFontSize1 As DevExpress.XtraEditors.ComboBoxEdit
     Private WithEvents colorPickEdit1 As DevExpress.XtraEditors.ColorPickEdit
     Friend WithEvents Label9 As Label
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

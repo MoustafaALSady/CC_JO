@@ -23,6 +23,7 @@ Partial Class FormCollaborationManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+<<<<<<< HEAD
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCollaborationManager))
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -36,6 +37,17 @@ Partial Class FormCollaborationManager
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ButtonAttachDocument = New DevExpress.XtraEditors.SimpleButton()
+=======
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCollaborationManager))
+        Me.DGV1 = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextNumberOfCompletedAssociations = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextFiscalYear = New System.Windows.Forms.TextBox()
         Me.TextAssociationNationalNumber = New System.Windows.Forms.TextBox()
         Me.TextAssociationName = New System.Windows.Forms.TextBox()
@@ -65,6 +77,13 @@ Partial Class FormCollaborationManager
         Me.CircularProgress2 = New DevComponents.DotNetBar.Controls.CircularProgress()
         Me.GalleryContainer1 = New DevComponents.DotNetBar.GalleryContainer()
         Me.PanelBottom = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
+=======
+        Me.ButtonViewDocuments = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonApproval = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonRefusal = New DevExpress.XtraEditors.SimpleButton()
+        Me.ButtonAttachDocument = New DevExpress.XtraEditors.SimpleButton()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4 = New System.Windows.Forms.Panel()
         CType(Me.DGV1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -118,6 +137,7 @@ Partial Class FormCollaborationManager
         Me.Panel1.Size = New System.Drawing.Size(168, 350)
         Me.Panel1.TabIndex = 793
         '
+<<<<<<< HEAD
         'ButtonRefusal
         '
         Me.ButtonRefusal.Appearance.BackColor = System.Drawing.Color.SteelBlue
@@ -175,6 +195,8 @@ Partial Class FormCollaborationManager
         Me.ButtonViewDocuments.TabIndex = 825
         Me.ButtonViewDocuments.Text = "عرض مستندات "
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TextNumberOfCompletedAssociations
         '
         Me.TextNumberOfCompletedAssociations.BackColor = System.Drawing.Color.Gainsboro
@@ -212,6 +234,7 @@ Partial Class FormCollaborationManager
         Me.Label8.TabIndex = 798
         Me.Label8.Text = "عدد الجمعيات المرسلة"
         '
+<<<<<<< HEAD
         'ButtonAttachDocument
         '
         Me.ButtonAttachDocument.Appearance.BackColor = System.Drawing.Color.SteelBlue
@@ -231,6 +254,8 @@ Partial Class FormCollaborationManager
         Me.ButtonAttachDocument.TabIndex = 824
         Me.ButtonAttachDocument.Text = "إضافة مرفق جديد"
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TextFiscalYear
         '
         Me.TextFiscalYear.BackColor = System.Drawing.Color.White
@@ -621,6 +646,85 @@ Partial Class FormCollaborationManager
         Me.PanelBottom.Size = New System.Drawing.Size(1067, 352)
         Me.PanelBottom.TabIndex = 822
         '
+<<<<<<< HEAD
+=======
+        'ButtonViewDocuments
+        '
+        Me.ButtonViewDocuments.Appearance.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonViewDocuments.Appearance.BackColor2 = System.Drawing.Color.SkyBlue
+        Me.ButtonViewDocuments.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ButtonViewDocuments.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.ButtonViewDocuments.Appearance.Options.UseBackColor = True
+        Me.ButtonViewDocuments.Appearance.Options.UseFont = True
+        Me.ButtonViewDocuments.Appearance.Options.UseTextOptions = True
+        Me.ButtonViewDocuments.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.ButtonViewDocuments.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.[False]
+        Me.ButtonViewDocuments.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.PInternalAuditor_16x16
+        Me.ButtonViewDocuments.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.ButtonViewDocuments.Location = New System.Drawing.Point(4, 37)
+        Me.ButtonViewDocuments.Name = "ButtonViewDocuments"
+        Me.ButtonViewDocuments.Size = New System.Drawing.Size(159, 32)
+        Me.ButtonViewDocuments.TabIndex = 825
+        Me.ButtonViewDocuments.Text = "عرض مستندات "
+        '
+        'ButtonApproval
+        '
+        Me.ButtonApproval.Appearance.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonApproval.Appearance.BackColor2 = System.Drawing.Color.SkyBlue
+        Me.ButtonApproval.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ButtonApproval.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.ButtonApproval.Appearance.Options.UseBackColor = True
+        Me.ButtonApproval.Appearance.Options.UseFont = True
+        Me.ButtonApproval.Appearance.Options.UseTextOptions = True
+        Me.ButtonApproval.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.ButtonApproval.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.[False]
+        Me.ButtonApproval.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.accept
+        Me.ButtonApproval.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.ButtonApproval.Location = New System.Drawing.Point(4, 71)
+        Me.ButtonApproval.Name = "ButtonApproval"
+        Me.ButtonApproval.Size = New System.Drawing.Size(159, 32)
+        Me.ButtonApproval.TabIndex = 827
+        Me.ButtonApproval.Text = "اعتماد مدير  التعاون"
+        '
+        'ButtonRefusal
+        '
+        Me.ButtonRefusal.Appearance.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonRefusal.Appearance.BackColor2 = System.Drawing.Color.SkyBlue
+        Me.ButtonRefusal.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ButtonRefusal.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.ButtonRefusal.Appearance.Options.UseBackColor = True
+        Me.ButtonRefusal.Appearance.Options.UseFont = True
+        Me.ButtonRefusal.Appearance.Options.UseTextOptions = True
+        Me.ButtonRefusal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.ButtonRefusal.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.[False]
+        Me.ButtonRefusal.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.Reset2_16x16
+        Me.ButtonRefusal.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.ButtonRefusal.Location = New System.Drawing.Point(4, 104)
+        Me.ButtonRefusal.Name = "ButtonRefusal"
+        Me.ButtonRefusal.Size = New System.Drawing.Size(159, 32)
+        Me.ButtonRefusal.TabIndex = 826
+        Me.ButtonRefusal.Text = "رفض مدير  التعاون"
+        '
+        'ButtonAttachDocument
+        '
+        Me.ButtonAttachDocument.Appearance.BackColor = System.Drawing.Color.SteelBlue
+        Me.ButtonAttachDocument.Appearance.BackColor2 = System.Drawing.Color.SkyBlue
+        Me.ButtonAttachDocument.Appearance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ButtonAttachDocument.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.ButtonAttachDocument.Appearance.Options.UseBackColor = True
+        Me.ButtonAttachDocument.Appearance.Options.UseFont = True
+        Me.ButtonAttachDocument.Appearance.Options.UseTextOptions = True
+        Me.ButtonAttachDocument.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.ButtonAttachDocument.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.[False]
+        Me.ButtonAttachDocument.ImageOptions.Image = CType(resources.GetObject("ButtonAttachDocument.ImageOptions.Image"), System.Drawing.Image)
+        Me.ButtonAttachDocument.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight
+        Me.ButtonAttachDocument.Location = New System.Drawing.Point(4, 3)
+        Me.ButtonAttachDocument.Name = "ButtonAttachDocument"
+        Me.ButtonAttachDocument.Size = New System.Drawing.Size(159, 32)
+        Me.ButtonAttachDocument.TabIndex = 824
+        Me.ButtonAttachDocument.Text = "إضافة مرفق جديد"
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -652,7 +756,10 @@ Partial Class FormCollaborationManager
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1000, 550)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormCollaborationManager"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -22,6 +22,7 @@ Partial Class Calculatorform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+<<<<<<< HEAD
         Dim EditorButtonImageOptions1 As DevExpress.XtraEditors.Controls.EditorButtonImageOptions = New DevExpress.XtraEditors.Controls.EditorButtonImageOptions()
         Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Dim SerializableAppearanceObject2 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
@@ -122,4 +123,42 @@ Partial Class Calculatorform
     Friend WithEvents CalcEdit1 As DevExpress.XtraEditors.CalcEdit
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label3 As Label
+=======
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Calculatorform))
+        Me.Calculator1 = New DevComponents.Editors.Calculator()
+        Me.SuspendLayout()
+        '
+        'Calculator1
+        '
+        Me.Calculator1.AutoSize = True
+        Me.Calculator1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Calculator1.Location = New System.Drawing.Point(0, 0)
+        Me.Calculator1.Name = "Calculator1"
+        Me.Calculator1.Size = New System.Drawing.Size(190, 211)
+        Me.Calculator1.Text = "Calculator1"
+        '
+        'calculatorform
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SteelBlue
+        Me.ClientSize = New System.Drawing.Size(191, 216)
+        Me.Controls.Add(Me.Calculator1)
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "calculatorform"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "حاسبة"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents Calculator1 As DevComponents.Editors.Calculator
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

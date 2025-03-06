@@ -18,12 +18,21 @@ Imports DevExpress.XtraEditors.Repository
 
 Public Class FrmMAIN
     ''Inherits DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+<<<<<<< HEAD
     Private WithEvents ConnectDataBase As BackgroundWorker
     Private WithEvents TestUserLogin As BackgroundWorker
     Private WithEvents DelUsersLogin As BackgroundWorker
     Private WithEvents SaveTab As BackgroundWorker
     Private WithEvents RefreshTab As BackgroundWorker
     Private WithEvents SearchTab As BackgroundWorker
+=======
+    Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
+    Private WithEvents TestUserLogin As System.ComponentModel.BackgroundWorker
+    Private WithEvents DelUsersLogin As System.ComponentModel.BackgroundWorker
+    Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
+    Private WithEvents RefreshTab As System.ComponentModel.BackgroundWorker
+    Private WithEvents SearchTab As System.ComponentModel.BackgroundWorker
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents TimerTestNet As New Timer
     Private Delegate Sub LoadDataBaseCallBack()
     Private Delegate Sub CallLoadDataBase()
@@ -31,7 +40,11 @@ Public Class FrmMAIN
     Private WithEvents BS As New BindingSource
     Private WithEvents BS1 As New BindingSource
 
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim DataSetUsers As New DataSet
     Dim myds As New DataSet
     Dim Cancel As Boolean = False
@@ -68,41 +81,69 @@ Public Class FrmMAIN
     '    R.ResizeControls()
     'End Sub
 
+<<<<<<< HEAD
     Private Sub FrmMAIN_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseDown
+=======
+    Private Sub FrmMAIN_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = True
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmMAIN_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+=======
+    Private Sub FrmMAIN_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Drag = True Then
             Me.Left = Cursor.Position.X - MouseX
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FrmMAIN_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
         Drag = False
     End Sub
 
     Private Sub Panel8_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs)
+=======
+    Private Sub FrmMAIN_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+        Drag = False
+    End Sub
+
+    Private Sub Panel8_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = True
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
 
+<<<<<<< HEAD
     Private Sub Panel8_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs)
+=======
+    Private Sub Panel8_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Drag = True Then
             Me.Left = Cursor.Position.X - MouseX
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub Panel8_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs)
         Drag = False
     End Sub
 
     Private Sub FrmMAIN_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub Panel8_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
+        Drag = False
+    End Sub
+
+    Private Sub FrmMAIN_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.F5
@@ -348,19 +389,31 @@ Public Class FrmMAIN
 
             CultureInfo.CurrentUICulture = New CultureInfo("ar")
 
+<<<<<<< HEAD
             Me.BackW3 = New BackgroundWorker With {
+=======
+            Me.BackW3 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
             Me.BackW3.RunWorkerAsync()
 
+<<<<<<< HEAD
             Me.ConnectDataBase = New BackgroundWorker With {
+=======
+            Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
             Me.ConnectDataBase.RunWorkerAsync()
 
+<<<<<<< HEAD
             Me.BackW1 = New BackgroundWorker With {
+=======
+            Me.BackW1 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -384,16 +437,28 @@ Public Class FrmMAIN
     Private Sub GatAppointments()
         Try
             'Dim connectionString As String = "Data Source=CC;Initial Catalog=CC_JO;Integrated Security=True"
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             'SqlDependency.Start(Consum.ConnectionString)
             Consum = New SqlConnection(constring)
             If Consum.State = ConnectionState.Closed Then Consum.Open()
             Dim strsql_Appointments As New SqlCommand("", Consum) With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            'SqlDependency.Start(Consum.ConnectionString)
+            Consum = New SqlConnection(constring)
+            If Consum.State = ConnectionState.Closed Then Consum.Open()
+            Dim strsql_Appointments As New SqlClient.SqlCommand("", Consum) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandText = "SELECT StartDate, EndDate, Subject,Description FROM  dbo.Appointments WHERE  CUser ='" & CUser & "'"
             }
 
             Dim ds_Appointments As New DataSet
+<<<<<<< HEAD
             Dim Adp_Appointments As New SqlDataAdapter(strsql_Appointments)
+=======
+            Dim Adp_Appointments As New SqlClient.SqlDataAdapter(strsql_Appointments)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds_Appointments.Clear()
             Adp_Appointments.Fill(ds_Appointments)
 
@@ -440,6 +505,7 @@ Public Class FrmMAIN
     Private Sub GatChecks()
         Try
             'Dim connectionString As String = "Data Source=CC;Initial Catalog=CC_JO;Integrated Security=True"
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             'SqlDependency.Start(Consum.ConnectionString)
             Consum = New SqlConnection(constring)
@@ -449,6 +515,17 @@ Public Class FrmMAIN
                 }
             Dim ds_Checks As New DataSet
             Dim Adp_Checks As New SqlDataAdapter(strsql_Checks)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            'SqlDependency.Start(Consum.ConnectionString)
+            Consum = New SqlConnection(constring)
+            If Consum.State = ConnectionState.Closed Then Consum.Open()
+            Dim strsql_Checks As New SqlClient.SqlCommand("", Consum) With {
+                   .CommandText = "select  IDCH, CH3, CH7  from Checks  WHERE  CUser='" & CUser & "' and CH17 ='" & False & "' and IDCH>'" & 0 & "' ORDER BY IDCH"
+                }
+            Dim ds_Checks As New DataSet
+            Dim Adp_Checks As New SqlClient.SqlDataAdapter(strsql_Checks)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds_Checks.Clear()
             Adp_Checks.Fill(ds_Checks)
             Dim Num As Integer = 0
@@ -485,6 +562,7 @@ Public Class FrmMAIN
 
     Private Sub GatFinishedItems()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             'SqlDependency.Start(Consum.ConnectionString)
             Consum = New SqlConnection(constring)
@@ -494,6 +572,17 @@ Public Class FrmMAIN
             }
             Dim ds_FinishedItems As New DataSet
             Dim Adp_FinishedItems As New SqlDataAdapter(strsql_FinishedItems)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            'SqlDependency.Start(Consum.ConnectionString)
+            Consum = New SqlConnection(constring)
+            If Consum.State = ConnectionState.Closed Then Consum.Open()
+            Dim strsql_FinishedItems As New SqlClient.SqlCommand("", Consum) With {
+               .CommandText = "SELECT STK1, STK7, STK25, IT_DATEP, IT_DATEEX, CUser FROM STOCKS  WHERE  CUser='" & CUser & "' and STK13>'" & 0 & "'"
+            }
+            Dim ds_FinishedItems As New DataSet
+            Dim Adp_FinishedItems As New SqlClient.SqlDataAdapter(strsql_FinishedItems)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds_FinishedItems.Clear()
             Adp_FinishedItems.Fill(ds_FinishedItems)
             Dim StarDateNow As DateTime = Date.Now.ToString("yyyy-MM-dd hh:mm:ss tt")
@@ -583,14 +672,22 @@ Public Class FrmMAIN
     '    ' e.Entity will contain the changed data.
     'End Sub
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles ConnectDataBase.DoWork
+=======
+    Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ConnectDataBase.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 1:
 
             TestNet = True
             Me.LoadDataBase()
             Me.Invoke(New LoadDataBaseCallBack(AddressOf Me.LoadDataBase), Array.Empty(Of Object)())
+<<<<<<< HEAD
             Me.TestUserLogin = New BackgroundWorker With {
+=======
+            Me.TestUserLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -609,7 +706,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+=======
+    Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             '=================================================================================
@@ -638,7 +739,11 @@ Public Class FrmMAIN
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackW3_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackW3.DoWork
+=======
+    Private Sub BackW3_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackW3.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CircularProgress2.IsRunning = True
         Me.CircularProgress2.ProgressTextVisible = True
         Me.RibbonControl2.Enabled = False
@@ -655,7 +760,11 @@ Public Class FrmMAIN
         'Me.LabelSearch.Visible = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackW3_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackW3.RunWorkerCompleted
+=======
+    Private Sub BackW3_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackW3.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CircularProgress2.IsRunning = False
         Me.CircularProgress2.ProgressTextVisible = False
         Me.CircularProgress2.Visible = False
@@ -696,7 +805,11 @@ Public Class FrmMAIN
                     Me.LabelConnectedToInternet.Image = Me.ImageList1.Images(2)
                 End If
                 If Not TestUserLogin.IsBusy Then
+<<<<<<< HEAD
                     Me.TestUserLogin = New BackgroundWorker With {
+=======
+                    Me.TestUserLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .WorkerReportsProgress = True,
                         .WorkerSupportsCancellation = True
                     }
@@ -712,7 +825,11 @@ Public Class FrmMAIN
                 Me.LabelTast.Visible = False
                 Me.PictureSearchServer.Visible = False
                 If Not TestUserLogin.IsBusy Then
+<<<<<<< HEAD
                     Me.TestUserLogin = New BackgroundWorker With {
+=======
+                    Me.TestUserLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             .WorkerReportsProgress = True,
                             .WorkerSupportsCancellation = True
                         }
@@ -724,18 +841,31 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackW1_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackW1.DoWork
+=======
+    Private Sub BackW1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackW1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf Me.LoadDataBase), Array.Empty(Of Object)())
             Me.myds.EnforceConstraints = False
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim News As New SqlCommand("", Consum)
             With News
                 .CommandText = "SELECT Ne1, Ne2, Ne3 from News order by Ne1"
             End With
             Me.SqlDataAdapter1 = New SqlDataAdapter(News)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim News As New SqlClient.SqlCommand("", Consum)
+            With News
+                .CommandText = "SELECT Ne1, Ne2, Ne3 from News order by Ne1"
+            End With
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(News)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.myds = New DataSet
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -756,7 +886,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackW1_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackW1.RunWorkerCompleted
+=======
+    Private Sub BackW1_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackW1.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.TextID.DataBindings.Clear()
             Me.TextNewsNumber.DataBindings.Clear()
@@ -778,7 +912,11 @@ Public Class FrmMAIN
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub SearchData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles SearchTab.DoWork
+=======
+    Private Sub SearchData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles SearchTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 1:
             Me.myds = New DataSet
@@ -798,7 +936,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub SearchData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles SearchTab.RunWorkerCompleted
+=======
+    Private Sub SearchData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles SearchTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If e.Cancelled Then Exit Sub
             Me.BS1.DataSource = Me.myds.Tables("News")
@@ -837,7 +979,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles RefreshTab.DoWork
+=======
+    Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles RefreshTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 1:          Me.myds = New DataSet
             Me.SqlDataAdapter1.Fill(Me.myds, "News")
@@ -856,7 +1002,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub RefreshData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles RefreshTab.RunWorkerCompleted
+=======
+    Private Sub RefreshData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles RefreshTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim resault13 As String
             Dim resault14 As String
@@ -954,9 +1104,15 @@ Public Class FrmMAIN
 
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO News( Ne2,Ne3) VALUES ( @Ne2, @Ne3)"
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO News( Ne2,Ne3) VALUES ( @Ne2, @Ne3)"
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -977,9 +1133,15 @@ Public Class FrmMAIN
 
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("Update News SET  Ne2 = @Ne2, Ne3 = @Ne3   WHERE Ne1 = @Ne1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand("Update News SET  Ne2 = @Ne2, Ne3 = @Ne3   WHERE Ne1 = @Ne1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -1000,7 +1162,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles SaveTab.DoWork
+=======
+    Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles SaveTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 1:
             'Me.SqlDataAdapter1.Update(Me.myds, "News")
@@ -1029,7 +1195,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+=======
+    Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If DelRow = True Then
                 Me.Button5.PerformClick()
@@ -1069,6 +1239,7 @@ Public Class FrmMAIN
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TestUserLogin_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles TestUserLogin.DoWork
         Try
             Using ConUsers As New SqlConnection(constring)
@@ -1110,6 +1281,52 @@ Public Class FrmMAIN
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  BlockUser =1").ToString) > 0 Then
                 'عند حظر المستخدم يتم طرده مباشرة من البرنامج في حال كان داخل
                 Me.DelUsersLogin = New BackgroundWorker With {
+=======
+    Private Sub TestUserLogin_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles TestUserLogin.DoWork
+        Try
+
+1:
+
+            Dim ConUsers As New SqlClient.SqlConnection(constring1)
+            Dim Users1 As New SqlCommand("SELECT ID ,UserName ,Pws  ,TimeEnter, MacAddress ,LoginName ,Realname ,UserType  ,CUser, COUser ,BlockUser,LockAddRow ,LockDelete,LockSave  ,LockUpdate,Printpreview, TransferofAccounts ,InternalAuditor ,CollaborationManager ,HeadofAuditingDepartment ,ExternalAuditor   ,FileList ,ListOFClients,CashAndMembers,ListOFAccounts,ListOFelectronicArchives,StaffMenu,Internet,RAdmin1 from Users", ConUsers)
+            DataAdapterUsers = New SqlClient.SqlDataAdapter(Users1)
+            Me.DataSetUsers.Clear()
+            Me.DataSetUsers = New DataSet
+            If ConUsers.State = ConnectionState.Open Then ConUsers.Close()
+            ConUsers.Open()
+            DataAdapterUsers.Fill(Me.DataSetUsers, "Users")
+            If ConUsers.State = ConnectionState.Open Then
+                ConUsers.Close()
+            End If
+        Catch ex As Exception
+            If ex.Message.GetHashCode = -1968342016 Or ex.Message.GetHashCode = -932284142 Or ex.Message.GetHashCode = -1053942103 Then
+                'TestNet = False
+                Me.PictureBox2False()
+                e.Cancel = True
+            ElseIf ex.Message.GetHashCode = 1718601380 Then
+                GoTo 1
+            Else
+                e.Cancel = True
+                MessageBox.Show(ex.Message, "يوجد مشكلة في فحص الصلاحيات", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Finally
+            Call CloseConUsers()
+        End Try
+    End Sub
+
+    Private Sub TestUserLogin_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles TestUserLogin.RunWorkerCompleted
+        Try
+            If e.Cancelled Then Exit Sub
+            If DataSetUsers.Tables.Count = 0 Then Exit Sub
+            TestNet = True
+            Me.PictureSearchConnection.Visible = False
+            Me.LabelTast.Visible = False
+            Me.LabelSearchServer.Visible = False
+            Me.PictureSearchServer.Visible = False
+            If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  BlockUser =1").ToString) > 0 Then
+                'عند حظر المستخدم يتم طرده مباشرة من البرنامج في حال كان داخل
+                Me.DelUsersLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             .WorkerReportsProgress = True,
                             .WorkerSupportsCancellation = True
                         }
@@ -1151,7 +1368,10 @@ Public Class FrmMAIN
                 Me.TBUTTON5.Enabled = False
                 Me.men56.Enabled = False
             End If
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  ListOFClients=1").ToString) > 0 Then
                 'عملاء
                 ModuleGeneral.Lists1 = True
@@ -1168,7 +1388,10 @@ Public Class FrmMAIN
             Else
                 ModuleGeneral.Lists1 = False
             End If
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  CashAndMembers=1").ToString) > 0 Then
                 'البنوك
                 ModuleGeneral.Lists2 = True
@@ -1279,7 +1502,10 @@ Public Class FrmMAIN
             Else
                 ModuleGeneral.Lists6 = False
             End If
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  TransferofAccounts=1").ToString) > 0 Then
                 ModuleGeneral.Lists7 = True
                 Me.men121.Enabled = True
@@ -1327,7 +1553,10 @@ Public Class FrmMAIN
             Else
                 Me.men602.Enabled = False
             End If
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  CollaborationManager=1").ToString) > 0 Then
                 Me.men601.Enabled = False
                 Me.men603.Enabled = True
@@ -1409,7 +1638,10 @@ Public Class FrmMAIN
                 Me.men604.Enabled = False
                 'Me.men77.Enabled = False
             End If
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If CInt(DataSetUsers.Tables("Users").Compute("Count(UserName)", "UserName like '" & USERNAME & "' and  ExternalAuditor=1").ToString) > 0 Then
                 Me.men601.Enabled = False
                 Me.men605.Enabled = True
@@ -1469,7 +1701,32 @@ Public Class FrmMAIN
                 Me.men152.Enabled = False
                 'Me.men77.Enabled = False
             End If
+<<<<<<< HEAD
 
+=======
+            If Me.Timer2.Enabled = True Then
+                Me.Timer2.Start()
+            End If
+
+            'IsConnectedToInternet()
+
+            If OnLine = True Then
+                'OnLine = True
+                'ImageList1.ImageSize = New Size(24, 24)
+                Me.LabelConnectedToInternet.BackColor = Color.Transparent
+                Me.LabelSearchConnection.Visible = False
+                Me.LabelConnectedToInternet.Text = "  OnLine"
+                Me.LabelConnectedToInternet.ForeColor = Color.Black
+            ElseIf OnLine = False Then
+                'OnLine = False
+                'ImageList1.ImageSize = New Size(32, 32)
+                Me.LabelConnectedToInternet.Image = ImageList1.Images(4)
+                Me.LabelConnectedToInternet.BackColor = Color.IndianRed
+                Me.LabelConnectedToInternet.Text = "  OffLine"
+                Me.LabelConnectedToInternet.ForeColor = Color.White
+                Me.LabelSearchConnection.Visible = False
+            End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         Catch ex As Exception
             'MessageBox.Show(ex.Message, "يوجد مشكلة في اتصال المستخدمين ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1477,6 +1734,7 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub HideConnectionLabels()
         Me.PictureSearchConnection.Visible = False
         Me.LabelTast.Visible = False
@@ -1643,6 +1901,8 @@ Public Class FrmMAIN
     End Sub
 
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub REGDATAIN_REGISTERY()
         On Error Resume Next
         MdlConnection.DBServer = MdlConnection.DBServer
@@ -1655,11 +1915,19 @@ Public Class FrmMAIN
 
     Public Sub ComboGovernorateName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboGovernorateName.SelectedIndexChanged
         Try
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
             Dim SQL_Governorat As New SqlCommand("Select  ID_Governorate FROM Governorates where GovernorateName = '" & Me.ComboGovernorateName.Text & "'", Consum)
             Dim dt As New DataTable
             Adp = New SqlDataAdapter(SQL_Governorat)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL_Governorat As New SqlCommand("Select  ID_Governorate FROM Governorates where GovernorateName = '" & Me.ComboGovernorateName.Text & "'", Consum)
+            Dim dt As New DataTable
+            Adp = New SqlClient.SqlDataAdapter(SQL_Governorat)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             dt.Clear()
             Consum.Open()
             Adp.Fill(dt)
@@ -1676,11 +1944,19 @@ Public Class FrmMAIN
 
     Public Sub ComboGetAssociationName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboGetAssociationName.EditValueChanged
         Try
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
             Dim SQL_COMPANY As New SqlCommand("select cmp3, cmp4, cmp5, cmp8, cmp9, cmp13, CUser, COUser from COMPANY where Trim(cmp2) = '" & Me.ComboGetAssociationName.Text.Trim & "'", Consum)
             Dim dt1 As New DataTable
             Adp = New SqlDataAdapter(SQL_COMPANY)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL_COMPANY As New SqlCommand("select cmp3, cmp4, cmp5, cmp8, cmp9, cmp13, CUser, COUser from COMPANY where Trim(cmp2) = '" & Me.ComboGetAssociationName.Text.Trim & "'", Consum)
+            Dim dt1 As New DataTable
+            Adp = New SqlClient.SqlDataAdapter(SQL_COMPANY)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             dt1.Clear()
             Consum.Open()
             Adp.Fill(dt1)
@@ -1705,12 +1981,21 @@ Public Class FrmMAIN
 
     Sub GetAssociationName(ByVal GovernorateName As String)
         Try
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             'On Error Resume Next
             Dim Consum As New SqlConnection(constring)
             Dim AssociationName1 As New SqlCommand("select CMP,cmp2 from COMPANY where cmp8 = '" & GovernorateName & "'", Consum)
             DsCOMPANY = New DataSet
             Adp = New SqlDataAdapter(AssociationName1)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            'On Error Resume Next
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim AssociationName1 As New SqlCommand("select CMP,cmp2 from COMPANY where cmp8 = '" & GovernorateName & "'", Consum)
+            DsCOMPANY = New DataSet
+            Adp = New SqlClient.SqlDataAdapter(AssociationName1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DsCOMPANY.Clear()
             Consum.Open()
             Adp.Fill(DsCOMPANY, "COMPANY")
@@ -1840,9 +2125,15 @@ Public Class FrmMAIN
         Me.men122.Enabled = False
     End Sub
 
+<<<<<<< HEAD
     Private Sub DelUsersLogin_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles DelUsersLogin.DoWork
         Try
             Dim DelUsers As New SqlConnection(constring)
+=======
+    Private Sub DelUsersLogin_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles DelUsersLogin.DoWork
+        Try
+            Dim DelUsers As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim DEL As New SqlCommand("UPDATE Users SET LoginName = null, MacAddress = null WHERE LoginName =N'" & USERNAME & "'", DelUsers)
             If DelUsers.State = ConnectionState.Closed Then
                 DelUsers.Open()
@@ -1862,7 +2153,11 @@ Public Class FrmMAIN
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub DelUsersLogin_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles DelUsersLogin.RunWorkerCompleted
+=======
+    Private Sub DelUsersLogin_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles DelUsersLogin.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Insert_Actions(BS.Position + 1, "وقت الخروج", AssociationName)
         'Catch ex As Exception
         '    MessageBox.Show(ex.Message, "ErrorDelUsersLogin", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1882,7 +2177,11 @@ Public Class FrmMAIN
         mykey.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextSearch_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TextSearch.KeyPress
+=======
+    Private Sub TextSearch_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextSearch.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             Button4.PerformClick()
@@ -2088,13 +2387,22 @@ Public Class FrmMAIN
             m = 0
         End If
         Me.LabelFiscalYear.Text = CStr(FiscalYear_currentDateMustBeInFiscalYear())
+<<<<<<< HEAD
         Dim HCal As New HijriCalendar
+=======
+        Dim HCal As New System.Globalization.HijriCalendar
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         Dim dt As DateTime = ServerDateTime()
         Dim dt1 As DateTime = CDate(ServerDateTime.ToString("yyyy-MM-dd"))
         Dim dt2 As DateTime = CDate(ServerDateTime.ToString)
+<<<<<<< HEAD
         System.Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo("ar-EG")
         Dim ci As New CultureInfo("ar-SA")
+=======
+        System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("ar-EG")
+        Dim ci As New System.Globalization.CultureInfo("ar-SA")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TS7.Caption = dt2.ToString("hh:mm:ss tt")
         Me.TS8.Caption = dt.ToString("yyyy-MM-dd")
         MYDATABASE1 = CStr(mykey.GetValue("MYDATABASE1", ""))
@@ -2147,7 +2455,11 @@ Public Class FrmMAIN
                     Me.SHOWMAIN5()
                     Application.DoEvents()
                     Me.PictureDovePeace.Visible = True
+<<<<<<< HEAD
                     Me.DelUsersLogin = New BackgroundWorker With {
+=======
+                    Me.DelUsersLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .WorkerReportsProgress = True,
                         .WorkerSupportsCancellation = True
                     }
@@ -2191,7 +2503,11 @@ Public Class FrmMAIN
 
 
 
+<<<<<<< HEAD
             Me.RefreshTab = New BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2201,7 +2517,11 @@ Public Class FrmMAIN
             MessageBox.Show(Ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmMAIN_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles MyBase.Paint
+=======
+    Private Sub FrmMAIN_Paint(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles MyBase.Paint
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.WindowState = FormWindowState.Minimized Then
                 Me.ShowInTaskbar = False
@@ -2318,7 +2638,11 @@ Public Class FrmMAIN
             Dim secondDate As Date
             Dim cmd As New SqlCommand
             Dim adapt As New SqlDataAdapter
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim ds As New DataSet With {
                 .EnforceConstraints = False
             }
@@ -2395,7 +2719,11 @@ Public Class FrmMAIN
                 UPDATERECORD()
             End If
 
+<<<<<<< HEAD
             Me.SaveTab = New BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2413,7 +2741,11 @@ Public Class FrmMAIN
             Me.Cursor = Cursors.WaitCursor
             Me.TextNewsText.Clear()
             Me.PictureDovePeace.Visible = True
+<<<<<<< HEAD
             Me.RefreshTab = New BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2435,7 +2767,11 @@ Public Class FrmMAIN
             End If
             Me.Cursor = Cursors.WaitCursor
             Me.PictureDovePeace.Visible = True
+<<<<<<< HEAD
             Me.SearchTab = New BackgroundWorker With {
+=======
+            Me.SearchTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -2471,7 +2807,11 @@ Public Class FrmMAIN
     End Sub
     Private Sub Men14_Click(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles men14.ItemClick
         On Error Resume Next
+<<<<<<< HEAD
         Me.BackW1 = New BackgroundWorker With {
+=======
+        Me.BackW1 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -2531,7 +2871,11 @@ Public Class FrmMAIN
                     Me.SHOWMAIN5()
                     Application.DoEvents()
                     Me.PictureDovePeace.Visible = True
+<<<<<<< HEAD
                     Me.DelUsersLogin = New BackgroundWorker With {
+=======
+                    Me.DelUsersLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .WorkerReportsProgress = True,
                         .WorkerSupportsCancellation = True
                     }
@@ -3010,7 +3354,11 @@ Public Class FrmMAIN
                     SHOWMAIN5()
                     Application.DoEvents()
                     PictureDovePeace.Visible = True
+<<<<<<< HEAD
                     DelUsersLogin = New BackgroundWorker With {
+=======
+                    DelUsersLogin = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .WorkerReportsProgress = True,
                         .WorkerSupportsCancellation = True
                     }
@@ -3049,7 +3397,11 @@ Public Class FrmMAIN
     End Sub
     Private Sub Men532_Click(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles men532.ItemClick
         On Error Resume Next
+<<<<<<< HEAD
         Dim F As New Calculatorform
+=======
+        Dim F As New Calculatorform11
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         F.Show()
     End Sub
     Private Sub Men54_Click(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles men54.ItemClick
@@ -3331,11 +3683,19 @@ Public Class FrmMAIN
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BackW2_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BackW2.DoWork
 
     End Sub
 
     Private Sub BackW2_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles BackW2.RunWorkerCompleted
+=======
+    Private Sub BackW2_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackW2.DoWork
+
+    End Sub
+
+    Private Sub BackW2_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackW2.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Me.Cursor = Cursors.Default
 
         Me.PictureDovePeace.Visible = False
@@ -3497,7 +3857,11 @@ Public Class FrmMAIN
     'End Sub
 
     Private Sub FrmMAIN_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         SqlDependency.Stop(Consum.ConnectionString)
     End Sub
 

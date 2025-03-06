@@ -5,11 +5,16 @@ Imports System.Text.RegularExpressions
 Imports EAGetMail
 
 Public Class FrmEgyMail
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Implements IComparer
     Private ReadOnly m_arUidl As New ArrayList
     Private m_bcancel As Boolean = False
     Private ReadOnly m_uidlfile As String = "uidl.txt"
+<<<<<<< HEAD
     Friend WithEvents WebMail As WebBrowser
     Friend WithEvents Textserver As TextBox
     Friend WithEvents Label10 As Label
@@ -26,6 +31,24 @@ Public Class FrmEgyMail
     Private m_curpath As String = ""
 
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Friend WithEvents WebMail As System.Windows.Forms.WebBrowser
+    Friend WithEvents Textserver As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents TextUser As System.Windows.Forms.ComboBox
+    Friend WithEvents BtnStart As System.Windows.Forms.Button
+    Friend WithEvents BtnCancel As System.Windows.Forms.Button
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents GlassButton1 As System.Windows.Forms.Button
+    Friend WithEvents LblTotal As System.Windows.Forms.Label
+    Friend WithEvents Delete As System.Windows.Forms.Button
+    Friend WithEvents AddMail As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Private m_curpath As String = ""
+
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 #Region "EAGetMail Event Handler"
     Private Sub OnConnected(ByVal sender As Object, ByRef cancel As Boolean)
@@ -202,7 +225,11 @@ Public Class FrmEgyMail
             Dim htmlName As String = mainName + ".htm"
             If Not File.Exists(htmlName) Then
                 ' this email is unread, we set the font style to bold.
+<<<<<<< HEAD
                 item.Font = New Font(item.Font, FontStyle.Bold)
+=======
+                item.Font = New System.Drawing.Font(item.Font, FontStyle.Bold)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             End If
             oMail.Clear()
         Next
@@ -240,7 +267,11 @@ Public Class FrmEgyMail
         If oMail.IsSigned Then
             Try
                 'this email is digital signed.
+<<<<<<< HEAD
                 Dim cert As Certificate = oMail.VerifySignature()
+=======
+                Dim cert As EAGetMail.Certificate = oMail.VerifySignature()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 MessageBox.Show("This email contains a valid digital signature.")
                 'you can add the certificate to your certificate storage like this
                 'cert.AddToStore( Certificate.CertificateStoreLocation.CERT_SYSTEM_STORE_CURRENT_USER,"addressbook" );
@@ -378,6 +409,7 @@ Public Class FrmEgyMail
 
     'Required by the Windows Form Designer
     Private ReadOnly components As System.ComponentModel.IContainer
+<<<<<<< HEAD
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -431,6 +463,61 @@ Public Class FrmEgyMail
         Me.Delete = New Button
         Me.AddMail = New Button
         Me.Panel1 = New Panel
+=======
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextPassword As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents LstAuthType As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents LstProtocol As System.Windows.Forms.ComboBox
+    Friend WithEvents ChkLeaveCopy As System.Windows.Forms.CheckBox
+    Friend WithEvents LblStatus As System.Windows.Forms.Label
+    Friend WithEvents PgBar As System.Windows.Forms.ProgressBar
+    Friend WithEvents ChkSSL As System.Windows.Forms.CheckBox
+
+    Friend WithEvents LstMail As System.Windows.Forms.ListView
+    Friend WithEvents ColFrom As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColSubject As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColDate As System.Windows.Forms.ColumnHeader
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(FrmEgyMail))
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Panel4 = New System.Windows.Forms.Panel
+        Me.BtnCancel = New System.Windows.Forms.Button
+        Me.BtnStart = New System.Windows.Forms.Button
+        Me.PgBar = New System.Windows.Forms.ProgressBar
+        Me.TextUser = New System.Windows.Forms.ComboBox
+        Me.Panel2 = New System.Windows.Forms.Panel
+        Me.LblStatus = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Textserver = New System.Windows.Forms.TextBox
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.ChkLeaveCopy = New System.Windows.Forms.CheckBox
+        Me.LstProtocol = New System.Windows.Forms.ComboBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.LstAuthType = New System.Windows.Forms.ComboBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.ChkSSL = New System.Windows.Forms.CheckBox
+        Me.TextPassword = New System.Windows.Forms.TextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.LstMail = New System.Windows.Forms.ListView
+        Me.ColFrom = New System.Windows.Forms.ColumnHeader
+        Me.ColSubject = New System.Windows.Forms.ColumnHeader
+        Me.ColDate = New System.Windows.Forms.ColumnHeader
+        Me.WebMail = New System.Windows.Forms.WebBrowser
+        Me.GlassButton1 = New System.Windows.Forms.Button
+        Me.LblTotal = New System.Windows.Forms.Label
+        Me.Delete = New System.Windows.Forms.Button
+        Me.AddMail = New System.Windows.Forms.Button
+        Me.Panel1 = New System.Windows.Forms.Panel
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -456,11 +543,19 @@ Public Class FrmEgyMail
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Left
+<<<<<<< HEAD
         Me.GroupBox1.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New Point(0, 0)
         Me.GroupBox1.Name = "groupBox1"
         Me.GroupBox1.Size = New Size(232, 413)
+=======
+        Me.GroupBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Name = "groupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(232, 413)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "„⁄·Ê„«  «·Õ”«»"
@@ -471,18 +566,30 @@ Public Class FrmEgyMail
         Me.Panel4.Controls.Add(Me.BtnCancel)
         Me.Panel4.Controls.Add(Me.BtnStart)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+<<<<<<< HEAD
         Me.Panel4.Location = New Point(3, 218)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New Size(226, 32)
+=======
+        Me.Panel4.Location = New System.Drawing.Point(3, 218)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(226, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel4.TabIndex = 553
         '
         'btnCancel
         '
         Me.BtnCancel.Dock = System.Windows.Forms.DockStyle.Right
         Me.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+<<<<<<< HEAD
         Me.BtnCancel.Location = New Point(-1, 0)
         Me.BtnCancel.Name = "btnCancel"
         Me.BtnCancel.Size = New Size(110, 30)
+=======
+        Me.BtnCancel.Location = New System.Drawing.Point(-1, 0)
+        Me.BtnCancel.Name = "btnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(110, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BtnCancel.TabIndex = 552
         Me.BtnCancel.Text = "≈·€«¡"
         Me.BtnCancel.UseVisualStyleBackColor = True
@@ -491,9 +598,15 @@ Public Class FrmEgyMail
         '
         Me.BtnStart.Dock = System.Windows.Forms.DockStyle.Right
         Me.BtnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+<<<<<<< HEAD
         Me.BtnStart.Location = New Point(109, 0)
         Me.BtnStart.Name = "btnStart"
         Me.BtnStart.Size = New Size(115, 30)
+=======
+        Me.BtnStart.Location = New System.Drawing.Point(109, 0)
+        Me.BtnStart.Name = "btnStart"
+        Me.BtnStart.Size = New System.Drawing.Size(115, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BtnStart.TabIndex = 555
         Me.BtnStart.Text = "œŒÊ·"
         Me.BtnStart.UseVisualStyleBackColor = True
@@ -501,18 +614,30 @@ Public Class FrmEgyMail
         'pgBar
         '
         Me.PgBar.Dock = System.Windows.Forms.DockStyle.Bottom
+<<<<<<< HEAD
         Me.PgBar.Location = New Point(3, 250)
         Me.PgBar.Name = "pgBar"
         Me.PgBar.Size = New Size(226, 32)
+=======
+        Me.PgBar.Location = New System.Drawing.Point(3, 250)
+        Me.PgBar.Name = "pgBar"
+        Me.PgBar.Size = New System.Drawing.Size(226, 32)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PgBar.TabIndex = 15
         Me.PgBar.Visible = False
         '
         'textUser
         '
         Me.TextUser.FormattingEnabled = True
+<<<<<<< HEAD
         Me.TextUser.Location = New Point(9, 21)
         Me.TextUser.Name = "textUser"
         Me.TextUser.Size = New Size(148, 23)
+=======
+        Me.TextUser.Location = New System.Drawing.Point(9, 21)
+        Me.TextUser.Name = "textUser"
+        Me.TextUser.Size = New System.Drawing.Size(148, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextUser.TabIndex = 554
         '
         'Panel2
@@ -521,27 +646,45 @@ Public Class FrmEgyMail
         Me.Panel2.Controls.Add(Me.LblStatus)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+<<<<<<< HEAD
         Me.Panel2.Location = New Point(3, 282)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(226, 128)
+=======
+        Me.Panel2.Location = New System.Drawing.Point(3, 282)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(226, 128)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 553
         '
         'lblStatus
         '
         Me.LblStatus.AutoSize = True
         Me.LblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+<<<<<<< HEAD
         Me.LblStatus.Location = New Point(3, 9)
         Me.LblStatus.Name = "lblStatus"
         Me.LblStatus.Size = New Size(0, 15)
+=======
+        Me.LblStatus.Location = New System.Drawing.Point(3, 9)
+        Me.LblStatus.Name = "lblStatus"
+        Me.LblStatus.Size = New System.Drawing.Size(0, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LblStatus.TabIndex = 14
         '
         'label6
         '
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label6.Location = New Point(2, 31)
         Me.Label6.Name = "label6"
         Me.Label6.Size = New Size(216, 69)
+=======
+        Me.Label6.Location = New System.Drawing.Point(2, 31)
+        Me.Label6.Name = "label6"
+        Me.Label6.Size = New System.Drawing.Size(216, 69)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label6.TabIndex = 5
         Me.Label6.Text = " Õ–Ì—: ≈–« ·„ Ì „  ÕœÌœ "" —ﬂ ‰”Œ… „‰ «·—”«·… ⁄·Ï «·Œ«œ„"" ° ›”Ì „ Õ–› —”«∆· «·»—Ìœ" &
             " «·≈·ﬂ —Ê‰Ì «·„ÊÃÊœ… ⁄·Ï «·Œ«œ„!"
@@ -550,18 +693,30 @@ Public Class FrmEgyMail
         '
         Me.Textserver.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Textserver.Enabled = False
+<<<<<<< HEAD
         Me.Textserver.Location = New Point(9, 69)
         Me.Textserver.Name = "textserver"
         Me.Textserver.Size = New Size(148, 22)
+=======
+        Me.Textserver.Location = New System.Drawing.Point(9, 69)
+        Me.Textserver.Name = "textserver"
+        Me.Textserver.Size = New System.Drawing.Size(148, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Textserver.TabIndex = 551
         '
         'label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label10.Location = New Point(194, 76)
         Me.Label10.Name = "label10"
         Me.Label10.Size = New Size(32, 15)
+=======
+        Me.Label10.Location = New System.Drawing.Point(194, 76)
+        Me.Label10.Name = "label10"
+        Me.Label10.Size = New System.Drawing.Size(32, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label10.TabIndex = 550
         Me.Label10.Text = "«·Œ«œ„"
         '
@@ -569,44 +724,75 @@ Public Class FrmEgyMail
         '
         Me.ChkLeaveCopy.AutoSize = True
         Me.ChkLeaveCopy.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.ChkLeaveCopy.Location = New Point(59, 178)
         Me.ChkLeaveCopy.Name = "chkLeaveCopy"
         Me.ChkLeaveCopy.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.ChkLeaveCopy.Size = New Size(167, 19)
+=======
+        Me.ChkLeaveCopy.Location = New System.Drawing.Point(59, 178)
+        Me.ChkLeaveCopy.Name = "chkLeaveCopy"
+        Me.ChkLeaveCopy.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ChkLeaveCopy.Size = New System.Drawing.Size(167, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ChkLeaveCopy.TabIndex = 11
         Me.ChkLeaveCopy.Text = " —ﬂ ‰”Œ… „‰ «·—”«·… ⁄·Ï «·Œ«œ„"
         '
         'lstProtocol
         '
+<<<<<<< HEAD
         Me.LstProtocol.Location = New Point(9, 145)
         Me.LstProtocol.Name = "lstProtocol"
         Me.LstProtocol.Size = New Size(148, 23)
+=======
+        Me.LstProtocol.Location = New System.Drawing.Point(9, 145)
+        Me.LstProtocol.Name = "lstProtocol"
+        Me.LstProtocol.Size = New System.Drawing.Size(148, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LstProtocol.TabIndex = 10
         '
         'label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label5.Location = New Point(176, 153)
         Me.Label5.Name = "label5"
         Me.Label5.Size = New Size(50, 15)
+=======
+        Me.Label5.Location = New System.Drawing.Point(176, 153)
+        Me.Label5.Name = "label5"
+        Me.Label5.Size = New System.Drawing.Size(50, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "»—Ê ÊﬂÊ·"
         '
         'lstAuthType
         '
+<<<<<<< HEAD
         Me.LstAuthType.Location = New Point(9, 119)
         Me.LstAuthType.Name = "lstAuthType"
         Me.LstAuthType.Size = New Size(148, 23)
+=======
+        Me.LstAuthType.Location = New System.Drawing.Point(9, 119)
+        Me.LstAuthType.Name = "lstAuthType"
+        Me.LstAuthType.Size = New System.Drawing.Size(148, 23)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LstAuthType.TabIndex = 8
         '
         'label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label4.Location = New Point(162, 127)
         Me.Label4.Name = "label4"
         Me.Label4.Size = New Size(64, 15)
+=======
+        Me.Label4.Location = New System.Drawing.Point(162, 127)
+        Me.Label4.Name = "label4"
+        Me.Label4.Size = New System.Drawing.Size(64, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "‰Ê⁄ «·„’«œﬁ…"
         '
@@ -614,29 +800,49 @@ Public Class FrmEgyMail
         '
         Me.ChkSSL.AutoSize = True
         Me.ChkSSL.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.ChkSSL.Location = New Point(139, 97)
         Me.ChkSSL.Name = "chkSSL"
         Me.ChkSSL.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.ChkSSL.Size = New Size(87, 19)
+=======
+        Me.ChkSSL.Location = New System.Drawing.Point(139, 97)
+        Me.ChkSSL.Name = "chkSSL"
+        Me.ChkSSL.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ChkSSL.Size = New System.Drawing.Size(87, 19)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ChkSSL.TabIndex = 6
         Me.ChkSSL.Text = "« ’«· (SSL)"
         '
         'textPassword
         '
         Me.TextPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.TextPassword.Location = New Point(9, 46)
         Me.TextPassword.Name = "textPassword"
         Me.TextPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextPassword.Size = New Size(148, 22)
+=======
+        Me.TextPassword.Location = New System.Drawing.Point(9, 46)
+        Me.TextPassword.Name = "textPassword"
+        Me.TextPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextPassword.Size = New System.Drawing.Size(148, 22)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextPassword.TabIndex = 5
         '
         'label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label3.Location = New Point(178, 54)
         Me.Label3.Name = "label3"
         Me.Label3.Size = New Size(48, 15)
+=======
+        Me.Label3.Location = New System.Drawing.Point(178, 54)
+        Me.Label3.Name = "label3"
+        Me.Label3.Size = New System.Drawing.Size(48, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "ﬂ·„Â «·”—"
         '
@@ -644,9 +850,15 @@ Public Class FrmEgyMail
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label2.Location = New Point(156, 29)
         Me.Label2.Name = "label2"
         Me.Label2.Size = New Size(70, 15)
+=======
+        Me.Label2.Location = New System.Drawing.Point(156, 29)
+        Me.Label2.Name = "label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2.TabIndex = 1
         Me.Label2.Text = " »—Ìœ «·ﬂ —Ê‰Ì"
         '
@@ -655,6 +867,7 @@ Public Class FrmEgyMail
         Me.LstMail.Activation = System.Windows.Forms.ItemActivation.OneClick
         Me.LstMail.BackColor = System.Drawing.SystemColors.Window
         Me.LstMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.LstMail.Columns.AddRange(New ColumnHeader() {Me.ColFrom, Me.ColSubject, Me.ColDate})
         Me.LstMail.Dock = System.Windows.Forms.DockStyle.Top
         Me.LstMail.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
@@ -665,6 +878,18 @@ Public Class FrmEgyMail
         Me.LstMail.Name = "lstMail"
         Me.LstMail.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.LstMail.Size = New Size(492, 170)
+=======
+        Me.LstMail.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColFrom, Me.ColSubject, Me.ColDate})
+        Me.LstMail.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LstMail.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.LstMail.FullRowSelect = True
+        Me.LstMail.HideSelection = False
+        Me.LstMail.HoverSelection = True
+        Me.LstMail.Location = New System.Drawing.Point(232, 0)
+        Me.LstMail.Name = "lstMail"
+        Me.LstMail.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.LstMail.Size = New System.Drawing.Size(492, 170)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LstMail.TabIndex = 1
         Me.LstMail.UseCompatibleStateImageBehavior = False
         Me.LstMail.View = System.Windows.Forms.View.Details
@@ -689,10 +914,17 @@ Public Class FrmEgyMail
         'webMail
         '
         Me.WebMail.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.WebMail.Location = New Point(232, 199)
         Me.WebMail.MinimumSize = New Size(20, 20)
         Me.WebMail.Name = "webMail"
         Me.WebMail.Size = New Size(492, 214)
+=======
+        Me.WebMail.Location = New System.Drawing.Point(232, 199)
+        Me.WebMail.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebMail.Name = "webMail"
+        Me.WebMail.Size = New System.Drawing.Size(492, 214)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.WebMail.TabIndex = 6
         '
         'GlassButton1
@@ -701,11 +933,19 @@ Public Class FrmEgyMail
         Me.GlassButton1.BackgroundImage = Global.CC_JO.My.Resources.Resources.btn2
         Me.GlassButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.GlassButton1.Dock = System.Windows.Forms.DockStyle.Right
+<<<<<<< HEAD
         Me.GlassButton1.Font = New Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GlassButton1.ForeColor = System.Drawing.Color.DarkMagenta
         Me.GlassButton1.Location = New Point(459, 0)
         Me.GlassButton1.Name = "GlassButton1"
         Me.GlassButton1.Size = New Size(31, 27)
+=======
+        Me.GlassButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GlassButton1.ForeColor = System.Drawing.Color.DarkMagenta
+        Me.GlassButton1.Location = New System.Drawing.Point(459, 0)
+        Me.GlassButton1.Name = "GlassButton1"
+        Me.GlassButton1.Size = New System.Drawing.Size(31, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GlassButton1.TabIndex = 7
         Me.GlassButton1.Text = "+"
         Me.GlassButton1.UseVisualStyleBackColor = True
@@ -714,22 +954,38 @@ Public Class FrmEgyMail
         '
         Me.LblTotal.AutoSize = True
         Me.LblTotal.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.LblTotal.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LblTotal.ForeColor = System.Drawing.Color.Black
         Me.LblTotal.Location = New Point(5, 10)
         Me.LblTotal.Name = "lblTotal"
         Me.LblTotal.Size = New Size(0, 15)
+=======
+        Me.LblTotal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.LblTotal.ForeColor = System.Drawing.Color.Black
+        Me.LblTotal.Location = New System.Drawing.Point(5, 10)
+        Me.LblTotal.Name = "lblTotal"
+        Me.LblTotal.Size = New System.Drawing.Size(0, 15)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LblTotal.TabIndex = 4
         '
         'Delete
         '
         Me.Delete.Dock = System.Windows.Forms.DockStyle.Right
         Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+<<<<<<< HEAD
         Me.Delete.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Delete.ForeColor = System.Drawing.Color.Black
         Me.Delete.Location = New Point(384, 0)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New Size(75, 27)
+=======
+        Me.Delete.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Delete.ForeColor = System.Drawing.Color.Black
+        Me.Delete.Location = New System.Drawing.Point(384, 0)
+        Me.Delete.Name = "Delete"
+        Me.Delete.Size = New System.Drawing.Size(75, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Delete.TabIndex = 552
         Me.Delete.Text = "Delete"
         Me.Delete.UseVisualStyleBackColor = True
@@ -738,11 +994,19 @@ Public Class FrmEgyMail
         '
         Me.AddMail.Dock = System.Windows.Forms.DockStyle.Right
         Me.AddMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+<<<<<<< HEAD
         Me.AddMail.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.AddMail.ForeColor = System.Drawing.Color.Black
         Me.AddMail.Location = New Point(309, 0)
         Me.AddMail.Name = "AddMail"
         Me.AddMail.Size = New Size(75, 27)
+=======
+        Me.AddMail.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.AddMail.ForeColor = System.Drawing.Color.Black
+        Me.AddMail.Location = New System.Drawing.Point(309, 0)
+        Me.AddMail.Name = "AddMail"
+        Me.AddMail.Size = New System.Drawing.Size(75, 27)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.AddMail.TabIndex = 551
         Me.AddMail.Text = "AddMail"
         Me.AddMail.UseVisualStyleBackColor = True
@@ -756,17 +1020,30 @@ Public Class FrmEgyMail
         Me.Panel1.Controls.Add(Me.LblTotal)
         Me.Panel1.Controls.Add(Me.GlassButton1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+<<<<<<< HEAD
         Me.Panel1.Location = New Point(232, 170)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New Size(492, 29)
+=======
+        Me.Panel1.Location = New System.Drawing.Point(232, 170)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(492, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 552
         '
         'frmEgyMail
         '
+<<<<<<< HEAD
         Me.AutoScaleBaseSize = New Size(5, 13)
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New Size(724, 413)
+=======
+        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(724, 413)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.WebMail)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LstMail)
@@ -774,7 +1051,11 @@ Public Class FrmEgyMail
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.Icon = CType(resources.GetObject("$this.Icon"), Icon)
+=======
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.KeyPreview = True
         Me.Name = "frmEgyMail"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -791,7 +1072,11 @@ Public Class FrmEgyMail
     End Sub
 
 #End Region
+<<<<<<< HEAD
     Private Sub FrmEgyMail_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmEgyMail_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Escape
@@ -802,7 +1087,11 @@ Public Class FrmEgyMail
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         'Me.BackgroundImage = My.Resources.Seven_6
@@ -864,7 +1153,11 @@ Public Class FrmEgyMail
     End Function
 
 #End Region
+<<<<<<< HEAD
     Private Sub BtnDel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Delete.Click
+=======
+    Private Sub BtnDel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim items As ListView.SelectedListViewItemCollection = LstMail.SelectedItems
         If items.Count = 0 Then
             Exit Sub
@@ -897,7 +1190,11 @@ Public Class FrmEgyMail
         LblTotal.Text = String.Format("Total {0} email(s)", LstMail.Items.Count)
         WebMail.Navigate("about:blank")
     End Sub
+<<<<<<< HEAD
     Private Sub BtnStart_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnStart.Click
+=======
+    Private Sub BtnStart_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnStart.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         LstMail.Items.Clear()
         Dim server, user, password As String
         server = ""
@@ -978,7 +1275,11 @@ Public Class FrmEgyMail
                     LblStatus.Text = String.Format("Retrieving {0}/{1}...", info.Index, count)
                     Dim oMail As Mail = oClient.GetMail(info)
                     Dim d As System.DateTime = System.DateTime.Now
+<<<<<<< HEAD
                     Dim cur As New Globalization.CultureInfo("en-US")
+=======
+                    Dim cur As New System.Globalization.CultureInfo("en-US")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim sdate As String = d.ToString("yyyyMMddHHmmss", cur)
                     Dim fileName As String = String.Format("{0}\{1}{2}{3}.eml", mailFolder, sdate, d.Millisecond.ToString("d3"), i)
                     oMail.SaveAs(fileName, True)
@@ -986,7 +1287,11 @@ Public Class FrmEgyMail
                     Dim item As New ListViewItem(oMail.From.ToString())
                     item.SubItems.Add(oMail.Subject)
                     item.SubItems.Add(oMail.ReceivedDate.ToString("yyyy-MM-dd HH:mm:ss"))
+<<<<<<< HEAD
                     item.Font = New Font(item.Font, FontStyle.Bold)
+=======
+                    item.Font = New System.Drawing.Font(item.Font, FontStyle.Bold)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     item.Tag = fileName
                     LstMail.Items.Insert(0, item)
                     oMail.Clear()
@@ -1023,19 +1328,32 @@ Public Class FrmEgyMail
         BtnStart.Enabled = True
         BtnCancel.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub LstMail_Click(ByVal sender As Object, ByVal e As EventArgs) Handles LstMail.Click
+=======
+    Private Sub LstMail_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles LstMail.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim items As ListView.SelectedListViewItemCollection = LstMail.SelectedItems
         If items.Count = 0 Then
             Exit Sub
         End If
         Dim item As ListViewItem = items(0)
         ShowMail(item.Tag)
+<<<<<<< HEAD
         item.Font = New Font(item.Font, FontStyle.Regular)
     End Sub
     Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnCancel.Click
         m_bcancel = True
     End Sub
     Private Sub TextUser_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextUser.TextChanged
+=======
+        item.Font = New System.Drawing.Font(item.Font, FontStyle.Regular)
+    End Sub
+    Private Sub BtnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancel.Click
+        m_bcancel = True
+    End Sub
+    Private Sub TextUser_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextUser.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim server, user, password As String
             server = ""
@@ -1070,7 +1388,11 @@ Public Class FrmEgyMail
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub AddMail_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles AddMail.Click
+=======
+    Private Sub AddMail_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddMail.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -1087,10 +1409,17 @@ Public Class FrmEgyMail
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TextUser_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextUser.SelectedIndexChanged
         Try
             'textserver.Enabled = True
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub TextUser_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextUser.SelectedIndexChanged
+        Try
+            'textserver.Enabled = True
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
 
             If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -1115,7 +1444,11 @@ Public Class FrmEgyMail
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub GlassButton1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles GlassButton1.Click
+=======
+    Private Sub GlassButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GlassButton1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim txt As Control
         If Me.LstMail.Visible = True Then
             For Each txt In Me.Controls

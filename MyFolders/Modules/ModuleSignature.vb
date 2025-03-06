@@ -95,7 +95,11 @@ Module ModuleSignature
             dc = DocumentCore.Load(loadPath)
         End If
 
+<<<<<<< HEAD
         Dim signatureShape = New Shape(dc, Layout.Floating(New HorizontalPosition(0F, LengthUnit.Millimeter, HorizontalPositionAnchor.LeftMargin), New VerticalPosition(0F, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), New Size(1, 1)))
+=======
+        Dim signatureShape = New Shape(dc, Layout.Floating(New HorizontalPosition(0F, LengthUnit.Millimeter, HorizontalPositionAnchor.LeftMargin), New VerticalPosition(0F, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), New SautinSoft.Document.Drawing.Size(1, 1)))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(signatureShape.Layout, FloatingLayout).WrappingStyle = WrappingStyle.InFrontOfText
         signatureShape.Outline.Fill.SetEmpty()
         Dim firstPar As Paragraph = dc.GetChildElements(True).OfType(Of Paragraph)().FirstOrDefault()
@@ -104,7 +108,11 @@ Module ModuleSignature
         Dim layouts As New List(Of Layout)() From {FloatingLayout.Floating(
             New HorizontalPosition(20, LengthUnit.Millimeter, HorizontalPositionAnchor.Page),
             New VerticalPosition(263, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin),
+<<<<<<< HEAD
             New Size(LengthUnitConverter.Convert(5, LengthUnit.Centimeter, LengthUnit.Point),
+=======
+            New SautinSoft.Document.Drawing.Size(LengthUnitConverter.Convert(5, LengthUnit.Centimeter, LengthUnit.Point),
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             LengthUnitConverter.Convert(2, LengthUnit.Centimeter, LengthUnit.Point)))}
         firstPar.Inlines.Add(signatureShape)
         'signaturePict.Layout = Layout.Floating(New HorizontalPosition(1.5, LengthUnit.Centimeter, HorizontalPositionAnchor.Page), New VerticalPosition(27.5, LengthUnit.Centimeter, VerticalPositionAnchor.Page), New SautinSoft.Document.Drawing.Size(57, 15.5, LengthUnit.Millimeter))
@@ -127,7 +135,11 @@ Module ModuleSignature
             Next
         Next
         dc.Save(loadPath, options)
+<<<<<<< HEAD
         System.Diagnostics.Process.Start(New ProcessStartInfo(loadPath) With {.UseShellExecute = True})
+=======
+        System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(loadPath) With {.UseShellExecute = True})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
     Public Sub OfficialSealTOPDF(ByVal Document1 As String)
         Dim loadPath As String = Document1
@@ -142,7 +154,11 @@ Module ModuleSignature
         Dim layouts As New List(Of Layout)() From {FloatingLayout.Floating(
             New HorizontalPosition(20, LengthUnit.Millimeter, HorizontalPositionAnchor.Page),
             New VerticalPosition(235, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin),
+<<<<<<< HEAD
             New Size(LengthUnitConverter.Convert(5, LengthUnit.Centimeter, LengthUnit.Point),
+=======
+            New SautinSoft.Document.Drawing.Size(LengthUnitConverter.Convert(5, LengthUnit.Centimeter, LengthUnit.Point),
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             LengthUnitConverter.Convert(2.5, LengthUnit.Centimeter, LengthUnit.Point)))}
         For Each s As Section In dc.Sections
             For Each fl As FloatingLayout In layouts
@@ -152,7 +168,11 @@ Module ModuleSignature
             Next fl
         Next s
         dc.Save(loadPath, New PdfSaveOptions())
+<<<<<<< HEAD
         System.Diagnostics.Process.Start(New ProcessStartInfo(loadPath) With {.UseShellExecute = True})
+=======
+        System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(loadPath) With {.UseShellExecute = True})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
     Public Sub AddSignatureToDocxInMemory(ByVal Document1 As String)
@@ -173,7 +193,11 @@ Module ModuleSignature
         Dim pict As Picture = Nothing
         Dim width As Integer = 50.7
         Dim height As Integer = 20
+<<<<<<< HEAD
         Dim size As New Size(LengthUnitConverter.Convert(width, LengthUnit.Millimeter, LengthUnit.Point), LengthUnitConverter.Convert(height, LengthUnit.Millimeter, LengthUnit.Point))
+=======
+        Dim size As New SautinSoft.Document.Drawing.Size(LengthUnitConverter.Convert(width, LengthUnit.Millimeter, LengthUnit.Point), LengthUnitConverter.Convert(height, LengthUnit.Millimeter, LengthUnit.Point))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim fromLeftMm As Integer = 20
         Dim fromTopMm As Integer = 260
         Dim fl As New FloatingLayout(New HorizontalPosition(fromLeftMm, LengthUnit.Millimeter, HorizontalPositionAnchor.Page), New VerticalPosition(fromTopMm, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), size)
@@ -186,7 +210,11 @@ Module ModuleSignature
         Using msDocxResult As New MemoryStream()
             dc.Save(msDocxResult, New DocxSaveOptions())
             File.WriteAllBytes(Document1, msDocxResult.ToArray())
+<<<<<<< HEAD
             System.Diagnostics.Process.Start(New ProcessStartInfo(Document1) With {.UseShellExecute = True})
+=======
+            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(Document1) With {.UseShellExecute = True})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         End Using
 
     End Sub
@@ -208,7 +236,11 @@ Module ModuleSignature
         Dim pict As Picture = Nothing
         Dim width As Integer = 40.9
         Dim height As Integer = 20.3
+<<<<<<< HEAD
         Dim size As New Size(LengthUnitConverter.Convert(width, LengthUnit.Millimeter, LengthUnit.Point), LengthUnitConverter.Convert(height, LengthUnit.Millimeter, LengthUnit.Point))
+=======
+        Dim size As New SautinSoft.Document.Drawing.Size(LengthUnitConverter.Convert(width, LengthUnit.Millimeter, LengthUnit.Point), LengthUnitConverter.Convert(height, LengthUnit.Millimeter, LengthUnit.Point))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim fromLeftMm As Integer = 20
         Dim fromTopMm As Integer = 237
         Dim fl As New FloatingLayout(New HorizontalPosition(fromLeftMm, LengthUnit.Millimeter, HorizontalPositionAnchor.Page), New VerticalPosition(fromTopMm, LengthUnit.Millimeter, VerticalPositionAnchor.TopMargin), size)
@@ -221,7 +253,11 @@ Module ModuleSignature
         Using msDocxResult As New MemoryStream()
             dc.Save(msDocxResult, New DocxSaveOptions())
             File.WriteAllBytes(Document1, msDocxResult.ToArray())
+<<<<<<< HEAD
             System.Diagnostics.Process.Start(New ProcessStartInfo(Document1) With {.UseShellExecute = True})
+=======
+            System.Diagnostics.Process.Start(New System.Diagnostics.ProcessStartInfo(Document1) With {.UseShellExecute = True})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         End Using
     End Sub
 
@@ -373,7 +409,11 @@ Module ModuleSignature
 
         If TheIcon IsNot Nothing Then
             ''#Save it to disk, or do whatever you want with it.
+<<<<<<< HEAD
             Using stream As New FileStream("c:\myfile.ico", IO.FileMode.CreateNew)
+=======
+            Using stream As New System.IO.FileStream("c:\myfile.ico", IO.FileMode.CreateNew)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 TheIcon.Save(stream)
             End Using
         End If

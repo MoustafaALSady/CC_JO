@@ -1,5 +1,10 @@
 ﻿Option Strict Off
+<<<<<<< HEAD
 Imports System.Data.SqlClient
+=======
+
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 Module MigrateRestrictions
     Public dtAccounts As DataTable
@@ -99,6 +104,11 @@ Module MigrateRestrictions
     Public ExitSub_Check As Boolean = False
     Public TestkeyAccounts_Check As Boolean = False
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Function GetDataCheck() As DataTable
         dtAccounts = New DataTable
         dtAccounts.Columns.Add("account_name", GetType(String))
@@ -106,6 +116,10 @@ Module MigrateRestrictions
         Return dtAccounts
     End Function
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Function GetData(ByVal NUpAccount As Integer) As DataTable
         dtAccounts = New DataTable
         dtAccounts.Columns.Add("account_name", GetType(String))
@@ -113,6 +127,13 @@ Module MigrateRestrictions
         Return dtAccounts
     End Function
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub SetDetailsAccounts(ByVal MovementNumber As Integer, ByVal Number As Integer, ByVal TEXT As String)
         nem = Number & "_" & " " & "رقم " & " " & TEXT & " فاتورة "
         nem1 = MovementNumber & "_" & " " & "نقدي رقم" & " " & TEXT & " فاتورة "
@@ -280,7 +301,11 @@ Module MigrateRestrictions
         CredAccount_Cod = Nothing
 
         FundAccount_Name = Nothing
+<<<<<<< HEAD
         Accounts_NO = Nothing
+=======
+        Accounts_no = Nothing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CodAccount = Nothing
 
         ChecksAccount_Name = Nothing
@@ -326,7 +351,11 @@ Module MigrateRestrictions
                 GetNoRecord("ACCOUNTSTREE", "Account_Name", "Account_No", FundAccount_No, 1)
                 FundAccount_Name = ID_Nam
                 GetNoRecord("ACCOUNTSTREE", "Account_no", "Account_Name", FundAccount_Name, 1)
+<<<<<<< HEAD
                 Accounts_NO = ID_Nam
+=======
+                Accounts_no = ID_Nam
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 GetNoRecord("ACCOUNTSTREE", "ACC", "Account_No", keyAccounts.GetValue("FundAccount_No", FundAccount_No), 1)
                 CodAccount = ID_Nam
                 If keyAccounts.GetValue("FundAccount_No", FundAccount_No) = Nothing Then
@@ -353,7 +382,11 @@ Module MigrateRestrictions
                 GetNoRecord("ACCOUNTSTREE", "Account_Name", "Account_No", FundAccount_No, 1)
                 FundAccount_Name = ID_Nam
                 GetNoRecord("ACCOUNTSTREE", "Account_no", "Account_Name", FundAccount_Name, 1)
+<<<<<<< HEAD
                 Accounts_NO = ID_Nam
+=======
+                Accounts_no = ID_Nam
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 GetNoRecord("ACCOUNTSTREE", "ACC", "Account_No", keyAccounts.GetValue("FundAccount_No", FundAccount_No), 1)
                 CodAccount = ID_Nam
 
@@ -392,7 +425,11 @@ Module MigrateRestrictions
                 GetNoRecord("ACCOUNTSTREE", "Account_Name", "Account_No", FundAccount_No, 1)
                 FundAccount_Name = ID_Nam
                 GetNoRecord("ACCOUNTSTREE", "Account_no", "Account_Name", FundAccount_Name, 1)
+<<<<<<< HEAD
                 Accounts_NO = ID_Nam
+=======
+                Accounts_no = ID_Nam
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 GetNoRecord("ACCOUNTSTREE", "ACC", "Account_No", keyAccounts.GetValue("FundAccount_No", FundAccount_No), 1)
                 CodAccount = ID_Nam
                 If keyAccounts.GetValue("FundAccount_No", FundAccount_No) = Nothing Then
@@ -442,7 +479,11 @@ Module MigrateRestrictions
                 GetNoRecord("ACCOUNTSTREE", "Account_Name", "Account_No", FundAccount_No, 1)
                 FundAccount_Name = ID_Nam
                 GetNoRecord("ACCOUNTSTREE", "Account_no", "Account_Name", FundAccount_Name, 1)
+<<<<<<< HEAD
                 Accounts_NO = ID_Nam
+=======
+                Accounts_no = ID_Nam
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 GetNoRecord("ACCOUNTSTREE", "ACC", "Account_No", keyAccounts.GetValue("FundAccount_No", FundAccount_No), 1)
                 CodAccount = ID_Nam
                 If keyAccounts.GetValue("FundAccount_No", FundAccount_No) = Nothing Then
@@ -651,8 +692,16 @@ Module MigrateRestrictions
             cmd.Parameters.AddWithValue("@COUser", COUser)
             cmd.Parameters.AddWithValue("@da", ServerDateTime.ToString("yyyy-MM-dd"))
             cmd.Parameters.AddWithValue("@ne", ServerDateTime.ToString("hh:mm:ss tt"))
+<<<<<<< HEAD
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
+=======
+            If Consum.State = ConnectionState.Open Then
+                Consum.Close()
+            Else
+                Consum.Open()
+            End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cmd.ExecuteNonQuery()
             Consum.Close()
             'MsgBox("تم اضافة حساب الصندوق ", MsgBoxStyle.Information, "معلومات")
@@ -660,7 +709,10 @@ Module MigrateRestrictions
             MessageBox.Show(ex.Message, "فشل اضافة حساب الصندوق ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub Insert_Checks(ByVal CheckNumber As String, ByVal DateMovementHistory As String, ByVal CheckDate As Date, ByVal sta_CH As Double,
                              ByVal end_CH As Double, ByVal nem_N As String, ByVal no_N As String, ByVal ConstraintType As String, ByVal T2 As String, ByVal BANK As String _
                              , ByVal BN4 As String, ByVal CheckEW As Boolean, ByVal MovementSymbol As String, ByVal LogReview As Boolean, ByVal ComboCB1 As String, ByVal ComboBN2 As String)
@@ -724,7 +776,11 @@ Module MigrateRestrictions
 
             Dim Consum As New SqlClient.SqlConnection(constring)
 
+<<<<<<< HEAD
             Dim TEXTID As Int64
+=======
+            Dim TEXTID As Integer
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             GetAutoNumber("EBNK1", "BANKJO", "EBNK3")
             TEXTID = AutoNumber
 
@@ -762,15 +818,23 @@ Module MigrateRestrictions
             MessageBox.Show(ex.Message, "فشل اضافة حساب البنك ", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
 
     Public Sub Insert_EMPSOLF(ByVal T1 As String, ByVal result As String, ByVal PreviousBalance As Double, ByVal start_CASH As Double, ByVal end_CASH As Double, CurrentBalance As Double, ByVal Combo_N As String, ByVal Combo1_N As String, ByVal Chec As Byte, ByVal nem_N As String, ByVal no_N As String, ByVal result1 As String, ByVal Chec1 As Byte, ByVal CB_1 As String, ByVal BN_2 As String)
+=======
+    Public Sub Insert_EMPSOLF(ByVal T1 As String, ByVal result As String, ByVal start_CASH As Double, ByVal end_CASH As Double, ByVal Combo_N As String, ByVal Combo1_N As String, ByVal Chec As Byte, ByVal nem_N As String, ByVal no_N As String, ByVal result1 As String, ByVal Chec1 As Byte, ByVal CB_1 As String, ByVal BN_2 As String)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
 
         Try
 
             Dim Consum As New SqlClient.SqlConnection(constring)
 
+<<<<<<< HEAD
             Dim TEXTID As Int64
+=======
+            Dim TEXTID As Integer
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             GetAutoNumber("CSH1", "EMPSOLF", "CSH2")
             TEXTID = AutoNumber
             Dim cmd As New SqlClient.SqlCommand("INSERT INTO EMPSOLF(  CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH13, CSH14, CSH15, CSH16, CSH17, CSH18, CB1, BN2, USERNAME, CUser, COUser, da, ne) VALUES     (@CSH1, @CSH2, @CSH3, @CSH4, @CSH5, @CSH6, @CSH7, @CSH8, @CSH9, @CSH10, @CSH11, @CSH12, @CSH13, @CSH14, @CSH15, @CSH16, @CSH17, @CSH18, @CB1, @BN2, @USERNAME, @CUser, @COUser, @da, @ne)", Consum)
@@ -780,10 +844,17 @@ Module MigrateRestrictions
             cmd.Parameters.AddWithValue("@CSH3", T1)
             cmd.Parameters.AddWithValue("@CSH4", result)
             cmd.Parameters.AddWithValue("@CSH5", "نقدا")
+<<<<<<< HEAD
             cmd.Parameters.AddWithValue("@CSH6", PreviousBalance)
             cmd.Parameters.AddWithValue("@CSH7", start_CASH)
             cmd.Parameters.AddWithValue("@CSH8", end_CASH)
             cmd.Parameters.AddWithValue("@CSH9", CurrentBalance)
+=======
+            cmd.Parameters.AddWithValue("@CSH6", Format(Val(SumAmounTOTALBALANCEEMPSOLF(CUser, TEXTID)), "0.000"))
+            cmd.Parameters.AddWithValue("@CSH7", start_CASH)
+            cmd.Parameters.AddWithValue("@CSH8", end_CASH)
+            cmd.Parameters.AddWithValue("@CSH9", Format(Val(SumAmounTOTALBALANCEEMPSOLF(CUser, TEXTID)), "0.000"))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cmd.Parameters.AddWithValue("@CSH10", Combo_N)
             cmd.Parameters.AddWithValue("@CSH11", Combo1_N)
             cmd.Parameters.AddWithValue("@CSH12", "من حساب حركة" & " _ " & nem_N & " _ " & result)
@@ -820,7 +891,11 @@ Module MigrateRestrictions
         Try
             Dim Consum As New SqlClient.SqlConnection(constring)
 
+<<<<<<< HEAD
             Dim TEXTID As Int64
+=======
+            Dim TEXTID As Integer
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             GetAutoNumber("IDCAB", "Suppliers1", "CAB3")
             TEXTID = AutoNumber
 
@@ -870,7 +945,10 @@ Module MigrateRestrictions
             MessageBox.Show(ex.Message, "Errorinsert_Suppliers1", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub Insert_CABLES(ByVal IDCAB As Integer, ByVal dat As String, ByVal TEXTDebit As Double, ByVal TEXTCredit As Double, ByVal TEXTType As String, ByVal TEXTDocumentNumber As String,
                              ByVal TEXTStatement As String, ByVal nem_N As String, ByVal no_N As String, ByVal TextCondition As String, ByVal TextCustomerType As String,
                              ByVal TextFundValue As Double, ByVal PaymentMethod As String, ByVal CheckNumber As String, ByVal Source As String,
@@ -931,6 +1009,7 @@ Module MigrateRestrictions
 
     End Sub
 
+<<<<<<< HEAD
     Public Function ExecuteScalarLoadData(ByVal connection As SqlConnection, ByVal query As String, ByVal CUser As String, ByVal Year As String, Optional ByVal invoiceNumber As String = "", Optional ByVal TB1 As String = "", Optional ByVal TB2 As String = "", Optional ByVal TB3 As String = "") As Object
         Try
             Using cmd As New SqlCommand(query, connection)
@@ -948,5 +1027,7 @@ Module MigrateRestrictions
         End Try
     End Function
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 End Module

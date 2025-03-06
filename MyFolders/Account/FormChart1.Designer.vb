@@ -20,6 +20,7 @@ Partial Class FormChart1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+<<<<<<< HEAD
         Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
         Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SideBySideBarSeriesLabel3 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel()
@@ -144,6 +145,132 @@ Partial Class FormChart1
         Dim ChartIntervalItem10 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
         Dim ChartIntervalItem11 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
         Dim ChartIntervalItem12 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+=======
+        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesLabel1 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel()
+        Dim SideBySideBarSeriesLabel2 As DevExpress.XtraCharts.SideBySideBarSeriesLabel = New DevExpress.XtraCharts.SideBySideBarSeriesLabel()
+        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim ChartControlCommandGalleryItemGroup2DColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn()
+        Dim CreateBarChartItem1 As DevExpress.XtraCharts.UI.CreateBarChartItem = New DevExpress.XtraCharts.UI.CreateBarChartItem()
+        Dim CreateFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem()
+        Dim CreateSideBySideFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem()
+        Dim CreateSideBySideStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem()
+        Dim CreateStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateStackedBarChartItem()
+        Dim CreateWaterfallChartItem1 As DevExpress.XtraCharts.UI.CreateWaterfallChartItem = New DevExpress.XtraCharts.UI.CreateWaterfallChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn()
+        Dim CreateBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateBar3DChartItem = New DevExpress.XtraCharts.UI.CreateBar3DChartItem()
+        Dim CreateFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem()
+        Dim CreateManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateManhattanBarChartItem()
+        Dim CreateSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem()
+        Dim CreateSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem()
+        Dim CreateStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupCylinderColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn()
+        Dim CreateCylinderBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem()
+        Dim CreateCylinderFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem()
+        Dim CreateCylinderManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem()
+        Dim CreateCylinderSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem()
+        Dim CreateCylinderSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem()
+        Dim CreateCylinderStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupConeColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn()
+        Dim CreateConeBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeBar3DChartItem()
+        Dim CreateConeFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem()
+        Dim CreateConeManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem()
+        Dim CreateConeSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem()
+        Dim CreateConeSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem()
+        Dim CreateConeStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupPyramidColumn1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn()
+        Dim CreatePyramidBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem()
+        Dim CreatePyramidFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem()
+        Dim CreatePyramidManhattanBarChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem = New DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem()
+        Dim CreatePyramidSideBySideFullStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem()
+        Dim CreatePyramidSideBySideStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem()
+        Dim CreatePyramidStackedBar3DChartItem1 As DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem = New DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DLine1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine()
+        Dim CreateLineChartItem1 As DevExpress.XtraCharts.UI.CreateLineChartItem = New DevExpress.XtraCharts.UI.CreateLineChartItem()
+        Dim CreateFullStackedLineChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem()
+        Dim CreateScatterLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterLineChartItem()
+        Dim CreateSplineChartItem1 As DevExpress.XtraCharts.UI.CreateSplineChartItem = New DevExpress.XtraCharts.UI.CreateSplineChartItem()
+        Dim CreateStackedLineChartItem1 As DevExpress.XtraCharts.UI.CreateStackedLineChartItem = New DevExpress.XtraCharts.UI.CreateStackedLineChartItem()
+        Dim CreateStepLineChartItem1 As DevExpress.XtraCharts.UI.CreateStepLineChartItem = New DevExpress.XtraCharts.UI.CreateStepLineChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DLine1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine()
+        Dim CreateLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateLine3DChartItem = New DevExpress.XtraCharts.UI.CreateLine3DChartItem()
+        Dim CreateFullStackedLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem()
+        Dim CreateSpline3DChartItem1 As DevExpress.XtraCharts.UI.CreateSpline3DChartItem = New DevExpress.XtraCharts.UI.CreateSpline3DChartItem()
+        Dim CreateStackedLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem()
+        Dim CreateStepLine3DChartItem1 As DevExpress.XtraCharts.UI.CreateStepLine3DChartItem = New DevExpress.XtraCharts.UI.CreateStepLine3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DPie1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie()
+        Dim CreatePieChartItem1 As DevExpress.XtraCharts.UI.CreatePieChartItem = New DevExpress.XtraCharts.UI.CreatePieChartItem()
+        Dim CreateDoughnutChartItem1 As DevExpress.XtraCharts.UI.CreateDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateDoughnutChartItem()
+        Dim CreateNestedDoughnutChartItem1 As DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem = New DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DPie1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie()
+        Dim CreatePie3DChartItem1 As DevExpress.XtraCharts.UI.CreatePie3DChartItem = New DevExpress.XtraCharts.UI.CreatePie3DChartItem()
+        Dim CreateDoughnut3DChartItem1 As DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem = New DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DBar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar()
+        Dim CreateRotatedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedBarChartItem()
+        Dim CreateRotatedFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem()
+        Dim CreateRotatedSideBySideFullStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem()
+        Dim CreateRotatedSideBySideStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem()
+        Dim CreateRotatedStackedBarChartItem1 As DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem = New DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem()
+        Dim ChartControlCommandGalleryItemGroup2DArea1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea()
+        Dim CreateAreaChartItem1 As DevExpress.XtraCharts.UI.CreateAreaChartItem = New DevExpress.XtraCharts.UI.CreateAreaChartItem()
+        Dim CreateFullStackedAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem()
+        Dim CreateFullStackedSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem()
+        Dim CreateFullStackedStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedStepAreaChartItem()
+        Dim CreateSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateSplineAreaChartItem()
+        Dim CreateStackedAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedAreaChartItem()
+        Dim CreateStackedStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedStepAreaChartItem()
+        Dim CreateStackedSplineAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem()
+        Dim CreateStepAreaChartItem1 As DevExpress.XtraCharts.UI.CreateStepAreaChartItem = New DevExpress.XtraCharts.UI.CreateStepAreaChartItem()
+        Dim ChartControlCommandGalleryItemGroup3DArea1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea()
+        Dim CreateArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateArea3DChartItem = New DevExpress.XtraCharts.UI.CreateArea3DChartItem()
+        Dim CreateFullStackedArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem()
+        Dim CreateFullStackedSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem()
+        Dim CreateSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem()
+        Dim CreateStackedArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem()
+        Dim CreateStackedSplineArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem()
+        Dim CreateStepArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateStepArea3DChartItem = New DevExpress.XtraCharts.UI.CreateStepArea3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupPoint1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint()
+        Dim CreatePointChartItem1 As DevExpress.XtraCharts.UI.CreatePointChartItem = New DevExpress.XtraCharts.UI.CreatePointChartItem()
+        Dim CreateBubbleChartItem1 As DevExpress.XtraCharts.UI.CreateBubbleChartItem = New DevExpress.XtraCharts.UI.CreateBubbleChartItem()
+        Dim ChartControlCommandGalleryItemGroupFunnel1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel()
+        Dim CreateFunnelChartItem1 As DevExpress.XtraCharts.UI.CreateFunnelChartItem = New DevExpress.XtraCharts.UI.CreateFunnelChartItem()
+        Dim CreateFunnel3DChartItem1 As DevExpress.XtraCharts.UI.CreateFunnel3DChartItem = New DevExpress.XtraCharts.UI.CreateFunnel3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupFinancial1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial()
+        Dim CreateStockChartItem1 As DevExpress.XtraCharts.UI.CreateStockChartItem = New DevExpress.XtraCharts.UI.CreateStockChartItem()
+        Dim CreateCandleStickChartItem1 As DevExpress.XtraCharts.UI.CreateCandleStickChartItem = New DevExpress.XtraCharts.UI.CreateCandleStickChartItem()
+        Dim ChartControlCommandGalleryItemGroupRadar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar()
+        Dim CreateRadarPointChartItem1 As DevExpress.XtraCharts.UI.CreateRadarPointChartItem = New DevExpress.XtraCharts.UI.CreateRadarPointChartItem()
+        Dim CreateRadarLineChartItem1 As DevExpress.XtraCharts.UI.CreateRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateRadarLineChartItem()
+        Dim CreateRadarAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRadarAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarAreaChartItem()
+        Dim CreateRadarRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRadarRangeAreaChartItem()
+        Dim CreateScatterRadarLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem()
+        Dim ChartControlCommandGalleryItemGroupPolar1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar()
+        Dim CreatePolarPointChartItem1 As DevExpress.XtraCharts.UI.CreatePolarPointChartItem = New DevExpress.XtraCharts.UI.CreatePolarPointChartItem()
+        Dim CreatePolarLineChartItem1 As DevExpress.XtraCharts.UI.CreatePolarLineChartItem = New DevExpress.XtraCharts.UI.CreatePolarLineChartItem()
+        Dim CreatePolarAreaChartItem1 As DevExpress.XtraCharts.UI.CreatePolarAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarAreaChartItem()
+        Dim CreatePolarRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreatePolarRangeAreaChartItem()
+        Dim CreateScatterPolarLineChartItem1 As DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem = New DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem()
+        Dim ChartControlCommandGalleryItemGroupRange1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange()
+        Dim CreateRangeBarChartItem1 As DevExpress.XtraCharts.UI.CreateRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateRangeBarChartItem()
+        Dim CreateSideBySideRangeBarChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem()
+        Dim CreateRangeAreaChartItem1 As DevExpress.XtraCharts.UI.CreateRangeAreaChartItem = New DevExpress.XtraCharts.UI.CreateRangeAreaChartItem()
+        Dim CreateRangeArea3DChartItem1 As DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem = New DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem()
+        Dim ChartControlCommandGalleryItemGroupGantt1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt()
+        Dim CreateGanttChartItem1 As DevExpress.XtraCharts.UI.CreateGanttChartItem = New DevExpress.XtraCharts.UI.CreateGanttChartItem()
+        Dim CreateSideBySideGanttChartItem1 As DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem = New DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem()
+        Dim ChartControlCommandGalleryItemGroupBoxPlot1 As DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot = New DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupBoxPlot()
+        Dim CreateBoxPlotChartItem1 As DevExpress.XtraCharts.UI.CreateBoxPlotChartItem = New DevExpress.XtraCharts.UI.CreateBoxPlotChartItem()
+        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim SkinPaddingEdges2 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim ChartIntervalItem1 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+        Dim ChartIntervalItem2 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+        Dim ChartIntervalItem3 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+        Dim ChartIntervalItem4 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+        Dim ChartIntervalItem5 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+        Dim ChartIntervalItem6 As DevExpress.XtraCharts.ChartIntervalItem = New DevExpress.XtraCharts.ChartIntervalItem()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.CreateBarBaseItem1 = New DevExpress.XtraCharts.UI.CreateBarBaseItem()
@@ -218,11 +345,19 @@ Partial Class FormChart1
         Me.ComboAccountLevel = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+<<<<<<< HEAD
         CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SideBySideBarSeriesLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SideBySideBarSeriesLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,9 +377,15 @@ Partial Class FormChart1
         '
         'ChartControl1
         '
+<<<<<<< HEAD
         XyDiagram2.AxisX.VisibleInPanesSerializable = "-1"
         XyDiagram2.AxisY.VisibleInPanesSerializable = "-1"
         Me.ChartControl1.Diagram = XyDiagram2
+=======
+        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl1.Diagram = XyDiagram1
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ChartControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChartControl1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty
         Me.ChartControl1.IndicatorsPaletteName = "Office"
@@ -259,6 +400,7 @@ Partial Class FormChart1
         Me.ChartControl1.Name = "ChartControl1"
         Me.ChartControl1.PaletteName = "Office 2013"
         Me.ChartControl1.SelectionMode = DevExpress.XtraCharts.ElementSelectionMode.[Single]
+<<<<<<< HEAD
         Series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative
         SideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top
         Series2.Label = SideBySideBarSeriesLabel3
@@ -281,6 +423,30 @@ Partial Class FormChart1
         ChartTitle2.Text = "الـحســابــات الـعـامـلـة"
         ChartTitle2.TextColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle2})
+=======
+        Series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative
+        SideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top
+        Series1.Label = SideBySideBarSeriesLabel1
+        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series1.LegendTextPattern = "{A} : {V}"
+        Series1.Name = "الحسابات المالية"
+        Series1.SeriesPointsSorting = DevExpress.XtraCharts.SortingMode.Ascending
+        Series1.ToolTipEnabled = DevExpress.Utils.DefaultBoolean.[False]
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        SideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty
+        SideBySideBarSeriesLabel2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        SideBySideBarSeriesLabel2.Shadow.Visible = True
+        Me.ChartControl1.SeriesTemplate.Label = SideBySideBarSeriesLabel2
+        Me.ChartControl1.SeriesTemplate.LegendTextPattern = "{VP:G2}"
+        SideBySideBarSeriesView1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Solid
+        Me.ChartControl1.SeriesTemplate.View = SideBySideBarSeriesView1
+        Me.ChartControl1.Size = New System.Drawing.Size(945, 280)
+        Me.ChartControl1.TabIndex = 0
+        ChartTitle1.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        ChartTitle1.Text = "الـحســابــات الـعـامـلـة"
+        ChartTitle1.TextColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(96, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'RibbonControl1
         '
@@ -307,12 +473,21 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown1.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown1.Gallery.ColumnCount = 4
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroup2DColumn2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBarChartItem2, CreateFullStackedBarChartItem2, CreateSideBySideFullStackedBarChartItem2, CreateSideBySideStackedBarChartItem2, CreateStackedBarChartItem2, CreateWaterfallChartItem2})
         ChartControlCommandGalleryItemGroup3DColumn2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBar3DChartItem2, CreateFullStackedBar3DChartItem2, CreateManhattanBarChartItem2, CreateSideBySideFullStackedBar3DChartItem2, CreateSideBySideStackedBar3DChartItem2, CreateStackedBar3DChartItem2})
         ChartControlCommandGalleryItemGroupCylinderColumn2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateCylinderBar3DChartItem2, CreateCylinderFullStackedBar3DChartItem2, CreateCylinderManhattanBarChartItem2, CreateCylinderSideBySideFullStackedBar3DChartItem2, CreateCylinderSideBySideStackedBar3DChartItem2, CreateCylinderStackedBar3DChartItem2})
         ChartControlCommandGalleryItemGroupConeColumn2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateConeBar3DChartItem2, CreateConeFullStackedBar3DChartItem2, CreateConeManhattanBarChartItem2, CreateConeSideBySideFullStackedBar3DChartItem2, CreateConeSideBySideStackedBar3DChartItem2, CreateConeStackedBar3DChartItem2})
         ChartControlCommandGalleryItemGroupPyramidColumn2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePyramidBar3DChartItem2, CreatePyramidFullStackedBar3DChartItem2, CreatePyramidManhattanBarChartItem2, CreatePyramidSideBySideFullStackedBar3DChartItem2, CreatePyramidSideBySideStackedBar3DChartItem2, CreatePyramidStackedBar3DChartItem2})
         Me.CommandBarGalleryDropDown1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DColumn2, ChartControlCommandGalleryItemGroup3DColumn2, ChartControlCommandGalleryItemGroupCylinderColumn2, ChartControlCommandGalleryItemGroupConeColumn2, ChartControlCommandGalleryItemGroupPyramidColumn2})
+=======
+        ChartControlCommandGalleryItemGroup2DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBarChartItem1, CreateFullStackedBarChartItem1, CreateSideBySideFullStackedBarChartItem1, CreateSideBySideStackedBarChartItem1, CreateStackedBarChartItem1, CreateWaterfallChartItem1})
+        ChartControlCommandGalleryItemGroup3DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBar3DChartItem1, CreateFullStackedBar3DChartItem1, CreateManhattanBarChartItem1, CreateSideBySideFullStackedBar3DChartItem1, CreateSideBySideStackedBar3DChartItem1, CreateStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupCylinderColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateCylinderBar3DChartItem1, CreateCylinderFullStackedBar3DChartItem1, CreateCylinderManhattanBarChartItem1, CreateCylinderSideBySideFullStackedBar3DChartItem1, CreateCylinderSideBySideStackedBar3DChartItem1, CreateCylinderStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupConeColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateConeBar3DChartItem1, CreateConeFullStackedBar3DChartItem1, CreateConeManhattanBarChartItem1, CreateConeSideBySideFullStackedBar3DChartItem1, CreateConeSideBySideStackedBar3DChartItem1, CreateConeStackedBar3DChartItem1})
+        ChartControlCommandGalleryItemGroupPyramidColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePyramidBar3DChartItem1, CreatePyramidFullStackedBar3DChartItem1, CreatePyramidManhattanBarChartItem1, CreatePyramidSideBySideFullStackedBar3DChartItem1, CreatePyramidSideBySideStackedBar3DChartItem1, CreatePyramidStackedBar3DChartItem1})
+        Me.CommandBarGalleryDropDown1.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DColumn1, ChartControlCommandGalleryItemGroup3DColumn1, ChartControlCommandGalleryItemGroupCylinderColumn1, ChartControlCommandGalleryItemGroupConeColumn1, ChartControlCommandGalleryItemGroupPyramidColumn1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown1.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown1.Gallery.RowCount = 10
         Me.CommandBarGalleryDropDown1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -332,9 +507,15 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown2.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown2.Gallery.ColumnCount = 3
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroup2DLine2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLineChartItem2, CreateFullStackedLineChartItem2, CreateScatterLineChartItem2, CreateSplineChartItem2, CreateStackedLineChartItem2, CreateStepLineChartItem2})
         ChartControlCommandGalleryItemGroup3DLine2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLine3DChartItem2, CreateFullStackedLine3DChartItem2, CreateSpline3DChartItem2, CreateStackedLine3DChartItem2, CreateStepLine3DChartItem2})
         Me.CommandBarGalleryDropDown2.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DLine2, ChartControlCommandGalleryItemGroup3DLine2})
+=======
+        ChartControlCommandGalleryItemGroup2DLine1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLineChartItem1, CreateFullStackedLineChartItem1, CreateScatterLineChartItem1, CreateSplineChartItem1, CreateStackedLineChartItem1, CreateStepLineChartItem1})
+        ChartControlCommandGalleryItemGroup3DLine1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateLine3DChartItem1, CreateFullStackedLine3DChartItem1, CreateSpline3DChartItem1, CreateStackedLine3DChartItem1, CreateStepLine3DChartItem1})
+        Me.CommandBarGalleryDropDown2.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DLine1, ChartControlCommandGalleryItemGroup3DLine1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown2.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown2.Gallery.RowCount = 4
         Me.CommandBarGalleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -354,9 +535,15 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown3.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown3.Gallery.ColumnCount = 3
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroup2DPie2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePieChartItem2, CreateDoughnutChartItem2, CreateNestedDoughnutChartItem2})
         ChartControlCommandGalleryItemGroup3DPie2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePie3DChartItem2, CreateDoughnut3DChartItem2})
         Me.CommandBarGalleryDropDown3.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DPie2, ChartControlCommandGalleryItemGroup3DPie2})
+=======
+        ChartControlCommandGalleryItemGroup2DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePieChartItem1, CreateDoughnutChartItem1, CreateNestedDoughnutChartItem1})
+        ChartControlCommandGalleryItemGroup3DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePie3DChartItem1, CreateDoughnut3DChartItem1})
+        Me.CommandBarGalleryDropDown3.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DPie1, ChartControlCommandGalleryItemGroup3DPie1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown3.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown3.Gallery.RowCount = 2
         Me.CommandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -376,8 +563,13 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown4.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown4.Gallery.ColumnCount = 3
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroup2DBar2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRotatedBarChartItem2, CreateRotatedFullStackedBarChartItem2, CreateRotatedSideBySideFullStackedBarChartItem2, CreateRotatedSideBySideStackedBarChartItem2, CreateRotatedStackedBarChartItem2})
         Me.CommandBarGalleryDropDown4.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DBar2})
+=======
+        ChartControlCommandGalleryItemGroup2DBar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRotatedBarChartItem1, CreateRotatedFullStackedBarChartItem1, CreateRotatedSideBySideFullStackedBarChartItem1, CreateRotatedSideBySideStackedBarChartItem1, CreateRotatedStackedBarChartItem1})
+        Me.CommandBarGalleryDropDown4.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DBar1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown4.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown4.Gallery.RowCount = 2
         Me.CommandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -397,9 +589,15 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown5.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown5.Gallery.ColumnCount = 4
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroup2DArea2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateAreaChartItem2, CreateFullStackedAreaChartItem2, CreateFullStackedSplineAreaChartItem2, CreateFullStackedStepAreaChartItem2, CreateSplineAreaChartItem2, CreateStackedAreaChartItem2, CreateStackedStepAreaChartItem2, CreateStackedSplineAreaChartItem2, CreateStepAreaChartItem2})
         ChartControlCommandGalleryItemGroup3DArea2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateArea3DChartItem2, CreateFullStackedArea3DChartItem2, CreateFullStackedSplineArea3DChartItem2, CreateSplineArea3DChartItem2, CreateStackedArea3DChartItem2, CreateStackedSplineArea3DChartItem2, CreateStepArea3DChartItem2})
         Me.CommandBarGalleryDropDown5.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DArea2, ChartControlCommandGalleryItemGroup3DArea2})
+=======
+        ChartControlCommandGalleryItemGroup2DArea1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateAreaChartItem1, CreateFullStackedAreaChartItem1, CreateFullStackedSplineAreaChartItem1, CreateFullStackedStepAreaChartItem1, CreateSplineAreaChartItem1, CreateStackedAreaChartItem1, CreateStackedStepAreaChartItem1, CreateStackedSplineAreaChartItem1, CreateStepAreaChartItem1})
+        ChartControlCommandGalleryItemGroup3DArea1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateArea3DChartItem1, CreateFullStackedArea3DChartItem1, CreateFullStackedSplineArea3DChartItem1, CreateSplineArea3DChartItem1, CreateStackedArea3DChartItem1, CreateStackedSplineArea3DChartItem1, CreateStepArea3DChartItem1})
+        Me.CommandBarGalleryDropDown5.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DArea1, ChartControlCommandGalleryItemGroup3DArea1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown5.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown5.Gallery.RowCount = 5
         Me.CommandBarGalleryDropDown5.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -419,6 +617,7 @@ Partial Class FormChart1
         '
         Me.CommandBarGalleryDropDown6.Gallery.AllowFilter = False
         Me.CommandBarGalleryDropDown6.Gallery.ColumnCount = 4
+<<<<<<< HEAD
         ChartControlCommandGalleryItemGroupPoint2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePointChartItem2, CreateBubbleChartItem2})
         ChartControlCommandGalleryItemGroupFunnel2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateFunnelChartItem2, CreateFunnel3DChartItem2})
         ChartControlCommandGalleryItemGroupFinancial2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateStockChartItem2, CreateCandleStickChartItem2})
@@ -428,6 +627,17 @@ Partial Class FormChart1
         ChartControlCommandGalleryItemGroupGantt2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateGanttChartItem2, CreateSideBySideGanttChartItem2})
         ChartControlCommandGalleryItemGroupBoxPlot2.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBoxPlotChartItem2})
         Me.CommandBarGalleryDropDown6.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroupPoint2, ChartControlCommandGalleryItemGroupFunnel2, ChartControlCommandGalleryItemGroupFinancial2, ChartControlCommandGalleryItemGroupRadar2, ChartControlCommandGalleryItemGroupPolar2, ChartControlCommandGalleryItemGroupRange2, ChartControlCommandGalleryItemGroupGantt2, ChartControlCommandGalleryItemGroupBoxPlot2})
+=======
+        ChartControlCommandGalleryItemGroupPoint1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePointChartItem1, CreateBubbleChartItem1})
+        ChartControlCommandGalleryItemGroupFunnel1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateFunnelChartItem1, CreateFunnel3DChartItem1})
+        ChartControlCommandGalleryItemGroupFinancial1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateStockChartItem1, CreateCandleStickChartItem1})
+        ChartControlCommandGalleryItemGroupRadar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRadarPointChartItem1, CreateRadarLineChartItem1, CreateRadarAreaChartItem1, CreateRadarRangeAreaChartItem1, CreateScatterRadarLineChartItem1})
+        ChartControlCommandGalleryItemGroupPolar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePolarPointChartItem1, CreatePolarLineChartItem1, CreatePolarAreaChartItem1, CreatePolarRangeAreaChartItem1, CreateScatterPolarLineChartItem1})
+        ChartControlCommandGalleryItemGroupRange1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRangeBarChartItem1, CreateSideBySideRangeBarChartItem1, CreateRangeAreaChartItem1, CreateRangeArea3DChartItem1})
+        ChartControlCommandGalleryItemGroupGantt1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateGanttChartItem1, CreateSideBySideGanttChartItem1})
+        ChartControlCommandGalleryItemGroupBoxPlot1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBoxPlotChartItem1})
+        Me.CommandBarGalleryDropDown6.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroupPoint1, ChartControlCommandGalleryItemGroupFunnel1, ChartControlCommandGalleryItemGroupFinancial1, ChartControlCommandGalleryItemGroupRadar1, ChartControlCommandGalleryItemGroupPolar1, ChartControlCommandGalleryItemGroupRange1, ChartControlCommandGalleryItemGroupGantt1, ChartControlCommandGalleryItemGroupBoxPlot1})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown6.Gallery.ImageSize = New System.Drawing.Size(32, 32)
         Me.CommandBarGalleryDropDown6.Gallery.RowCount = 9
         Me.CommandBarGalleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.[Auto]
@@ -468,12 +678,21 @@ Partial Class FormChart1
         Me.CommandBarGalleryDropDown7.Gallery.ImageSize = New System.Drawing.Size(160, 10)
         Me.CommandBarGalleryDropDown7.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft
         Me.CommandBarGalleryDropDown7.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right
+<<<<<<< HEAD
         SkinPaddingEdges3.Bottom = -3
         SkinPaddingEdges3.Top = -3
         Me.CommandBarGalleryDropDown7.Gallery.ItemImagePadding = SkinPaddingEdges3
         SkinPaddingEdges4.Bottom = -3
         SkinPaddingEdges4.Top = -3
         Me.CommandBarGalleryDropDown7.Gallery.ItemTextPadding = SkinPaddingEdges4
+=======
+        SkinPaddingEdges1.Bottom = -3
+        SkinPaddingEdges1.Top = -3
+        Me.CommandBarGalleryDropDown7.Gallery.ItemImagePadding = SkinPaddingEdges1
+        SkinPaddingEdges2.Bottom = -3
+        SkinPaddingEdges2.Top = -3
+        Me.CommandBarGalleryDropDown7.Gallery.ItemTextPadding = SkinPaddingEdges2
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CommandBarGalleryDropDown7.Gallery.RowCount = 10
         Me.CommandBarGalleryDropDown7.Gallery.ShowGroupCaption = False
         Me.CommandBarGalleryDropDown7.Gallery.ShowItemText = True
@@ -695,7 +914,11 @@ Partial Class FormChart1
         'SelectAxisMeasureUnitBarItem1
         '
         Me.SelectAxisMeasureUnitBarItem1.Edit = Me.SelectAxisMeasureUnitRepositoryItemComboBox1
+<<<<<<< HEAD
         Me.SelectAxisMeasureUnitBarItem1.EditValue = ChartIntervalItem7
+=======
+        Me.SelectAxisMeasureUnitBarItem1.EditValue = ChartIntervalItem1
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SelectAxisMeasureUnitBarItem1.Id = 37
         Me.SelectAxisMeasureUnitBarItem1.Name = "SelectAxisMeasureUnitBarItem1"
         Me.SelectAxisMeasureUnitBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption
@@ -705,6 +928,7 @@ Partial Class FormChart1
         '
         Me.SelectAxisMeasureUnitRepositoryItemComboBox1.AutoHeight = False
         Me.SelectAxisMeasureUnitRepositoryItemComboBox1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+<<<<<<< HEAD
         ChartIntervalItem7.Caption = "1 day"
         ChartIntervalItem7.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Day
         ChartIntervalItem8.Caption = "1 week"
@@ -712,13 +936,26 @@ Partial Class FormChart1
         ChartIntervalItem9.Caption = "1 month"
         ChartIntervalItem9.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Month
         Me.SelectAxisMeasureUnitRepositoryItemComboBox1.Items.AddRange(New Object() {ChartIntervalItem7, ChartIntervalItem8, ChartIntervalItem9})
+=======
+        ChartIntervalItem1.Caption = "1 day"
+        ChartIntervalItem1.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Day
+        ChartIntervalItem2.Caption = "1 week"
+        ChartIntervalItem2.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Week
+        ChartIntervalItem3.Caption = "1 month"
+        ChartIntervalItem3.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Month
+        Me.SelectAxisMeasureUnitRepositoryItemComboBox1.Items.AddRange(New Object() {ChartIntervalItem1, ChartIntervalItem2, ChartIntervalItem3})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SelectAxisMeasureUnitRepositoryItemComboBox1.Name = "SelectAxisMeasureUnitRepositoryItemComboBox1"
         Me.SelectAxisMeasureUnitRepositoryItemComboBox1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         '
         'SelectPeriodBarItem1
         '
         Me.SelectPeriodBarItem1.Edit = Me.SelectPeriodRepositoryItemComboBox1
+<<<<<<< HEAD
         Me.SelectPeriodBarItem1.EditValue = ChartIntervalItem10
+=======
+        Me.SelectPeriodBarItem1.EditValue = ChartIntervalItem4
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SelectPeriodBarItem1.Id = 38
         Me.SelectPeriodBarItem1.Name = "SelectPeriodBarItem1"
         Me.SelectPeriodBarItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption
@@ -728,6 +965,7 @@ Partial Class FormChart1
         '
         Me.SelectPeriodRepositoryItemComboBox1.AutoHeight = False
         Me.SelectPeriodRepositoryItemComboBox1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+<<<<<<< HEAD
         ChartIntervalItem10.Caption = "6 month"
         ChartIntervalItem10.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Month
         ChartIntervalItem10.MeasureUnitMultiplier = 6
@@ -737,6 +975,17 @@ Partial Class FormChart1
         ChartIntervalItem12.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Year
         ChartIntervalItem12.MeasureUnitMultiplier = 2
         Me.SelectPeriodRepositoryItemComboBox1.Items.AddRange(New Object() {ChartIntervalItem10, ChartIntervalItem11, ChartIntervalItem12})
+=======
+        ChartIntervalItem4.Caption = "6 month"
+        ChartIntervalItem4.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Month
+        ChartIntervalItem4.MeasureUnitMultiplier = 6
+        ChartIntervalItem5.Caption = "1 year"
+        ChartIntervalItem5.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Year
+        ChartIntervalItem6.Caption = "2 years"
+        ChartIntervalItem6.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Year
+        ChartIntervalItem6.MeasureUnitMultiplier = 2
+        Me.SelectPeriodRepositoryItemComboBox1.Items.AddRange(New Object() {ChartIntervalItem4, ChartIntervalItem5, ChartIntervalItem6})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SelectPeriodRepositoryItemComboBox1.Name = "SelectPeriodRepositoryItemComboBox1"
         Me.SelectPeriodRepositoryItemComboBox1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         '
@@ -957,6 +1206,7 @@ Partial Class FormChart1
         Me.Controls.Add(Me.RibbonControl1)
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(947, 496)
         Me.Name = "FormChart1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -966,6 +1216,16 @@ Partial Class FormChart1
         CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SideBySideBarSeriesLabel4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+        Me.Name = "FormChart1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "رسم بياني للحسابات"
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesLabel2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CommandBarGalleryDropDown1, System.ComponentModel.ISupportInitialize).EndInit()

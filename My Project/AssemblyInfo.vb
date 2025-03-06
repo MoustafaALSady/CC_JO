@@ -13,7 +13,11 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyCompany("المـؤسســـة التـعـاونيــة الإردنيــة")>
 <Assembly: AssemblyProduct("CC_JO")>
 <Assembly: AssemblyCopyright("المـؤسســـة التـعـاونيــة الإردنيــة")>
+<<<<<<< HEAD
 <Assembly: AssemblyTrademark("Moustafa AL-Sady")>
+=======
+<Assembly: AssemblyTrademark("Moustafa ALSady")>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 <Assembly: ComVisible(False)>
 
@@ -30,6 +34,11 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 
+<<<<<<< HEAD
 <Assembly: AssemblyVersion("1.0.0.4")>
 <Assembly: AssemblyFileVersion("1.0.0.4")>
+=======
+<Assembly: AssemblyVersion("1.0.0.2")>
+<Assembly: AssemblyFileVersion("1.0.0.2")>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 <Assembly: NeutralResourcesLanguage("ar-JO")>

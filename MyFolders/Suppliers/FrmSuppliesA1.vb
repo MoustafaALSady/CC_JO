@@ -2,13 +2,22 @@
 Imports System.Data.Common
 Imports System.Data.SqlClient
 Public Class FrmSuppliesA1
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
     Public Delegate Sub PictureBox2Callback()
     Public WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
     Dim SqlDataAdapter2 As New SqlDataAdapter
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     ReadOnly ds As New DataSet
     ReadOnly dt As DataTable
     Dim test As Integer
@@ -22,10 +31,17 @@ Public Class FrmSuppliesA1
     ReadOnly DiscountB As Double = 0
 
 
+<<<<<<< HEAD
     Private Sub FrmSuppliesA_Activated(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Activated
         On Error Resume Next
     End Sub
     Private Sub FrmSuppliesA_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmSuppliesA_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+        On Error Resume Next
+    End Sub
+    Private Sub FrmSuppliesA_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -40,12 +56,20 @@ Public Class FrmSuppliesA1
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSuppliesA_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Shown
+=======
+    Private Sub FrmSuppliesA_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Show()
         Call MangUsers()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSuppliesA1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmSuppliesA1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -73,8 +97,13 @@ Public Class FrmSuppliesA1
         Dim T As Boolean
         F = False
         T = True
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim str1 As New SqlCommand("", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim str1 As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Cash = True Then
             Me.Label9.Text = "فاتورة شـراء نقدى"
             With str1
@@ -89,14 +118,23 @@ Public Class FrmSuppliesA1
         End If
         Me.ds.EnforceConstraints = False
         Consum.Open()
+<<<<<<< HEAD
         Dim str2 As New SqlCommand("", Consum)
+=======
+        Dim str2 As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With str2
             '.CommandText = "SELECT  BITM1, BITM2, BITM3, BITM4, BITM5, BITM6, BITM7, BITM9, BITM10, ([BITM5] * [BITM6]) * (100 - [BITM7]) / 100 AS BITM8, BUY2 FROM BUYSITEMS ORDER BY BUY2"
             .CommandText = "SELECT  BITM1, BITM2, BITM3, BITM4, BITM5, BITM6, BITM7, BITM8, BITM9, BITM10, BUY2 From BUYSITEMS"
 
         End With
+<<<<<<< HEAD
         Me.SqlDataAdapter1 = New SqlDataAdapter(str1)
         Me.SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+        Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+        Me.SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds.Clear()
         Me.SqlDataAdapter1.Fill(Me.ds, "BUYS")
         Me.SqlDataAdapter2.Fill(Me.ds, "BUYSITEMS")
@@ -119,6 +157,7 @@ Public Class FrmSuppliesA1
             AccountNoAktevd = keyAccounts.GetValue("MerchandiseStockAccount_No", MerchandiseStockAccount_No)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
         AutoComplete(Me.ComboSupplierName, e, )
     End Sub
@@ -129,17 +168,37 @@ Public Class FrmSuppliesA1
         AutoComplete(Me.ComboCheckDrawerName, e, )
     End Sub
     Private Sub TEXT19_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(Me.ComboSupplierName, e, )
+    End Sub
+    Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(Me.ComboITEMNAME, e, )
+    End Sub
+    Private Sub ComboBox6_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(Me.ComboCheckDrawerName, e, )
+    End Sub
+    Private Sub TEXT19_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TEXTTotalN.Text = CurrencyJO(Val(Me.TEXTTotal.Text), "jO")
     End Sub
 
     Private Sub MAXRECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim Year As String
         Year = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
         Dim SQL As New SqlCommand("SELECT MAX(BUYS.BUY1) FROM BUYS WHERE  Year(BUY3) = '" & Val(FiscalYear_currentDateMustBeInFiscalYear()) & " '", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Year As String
+        Year = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
+        Dim SQL As New SqlCommand("SELECT MAX(BUYS.BUY1) FROM BUYS WHERE  Year(BUY3) = '" & Val(FiscalYear_currentDateMustBeInFiscalYear()) & " '", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -200,7 +259,11 @@ Public Class FrmSuppliesA1
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & Me.BS.Count - Me.RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             Me.ADDBUTTON.Enabled = True
             Me.SAVEBUTTON.Enabled = False
@@ -225,9 +288,15 @@ Public Class FrmSuppliesA1
     Private Sub SaveBuys()
         'On Error Resume Next
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("INSERT INTO BUYS( BUY1, BUY2, BUY3, BUY4, BUY5, BUY6, BUY7, BUY8, BUY9, BUY10, BUY11, BUY13, BUY14, BUY15, BUY16, BUY17, BUY18, BUY19, BUY20, BUY21, BUY22, BUY23, BUY24, BUY25, BUY26, BUY27, BUY28,WarehouseNumber, WarehouseName,  CB1, BN2, USERNAME, CUser, COUser, TYPE_CASH, TYPE_CRDT, Deleted, da, ne ) VALUES (@BUY1, @BUY2, @BUY3, @BUY4, @BUY5, @BUY6, @BUY7, @BUY8, @BUY9, @BUY10, @BUY11, @BUY13, @BUY14, @BUY15, @BUY16, @BUY17, @BUY18, @BUY19, @BUY20, @BUY21, @BUY22, @BUY23, @BUY24, @BUY25, @BUY26, @BUY27, @BUY28,@WarehouseNumber, @WarehouseName,  @CB1, @BN2, @USERNAME, @CUser, @COUser, @TYPE_CASH, @TYPE_CRDT, @Deleted, @da, @ne)", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO BUYS( BUY1, BUY2, BUY3, BUY4, BUY5, BUY6, BUY7, BUY8, BUY9, BUY10, BUY11, BUY13, BUY14, BUY15, BUY16, BUY17, BUY18, BUY19, BUY20, BUY21, BUY22, BUY23, BUY24, BUY25, BUY26, BUY27, BUY28,WarehouseNumber, WarehouseName,  CB1, BN2, USERNAME, CUser, COUser, TYPE_CASH, TYPE_CRDT, Deleted, da, ne ) VALUES (@BUY1, @BUY2, @BUY3, @BUY4, @BUY5, @BUY6, @BUY7, @BUY8, @BUY9, @BUY10, @BUY11, @BUY13, @BUY14, @BUY15, @BUY16, @BUY17, @BUY18, @BUY19, @BUY20, @BUY21, @BUY22, @BUY23, @BUY24, @BUY25, @BUY26, @BUY27, @BUY28,@WarehouseNumber, @WarehouseName,  @CB1, @BN2, @USERNAME, @CUser, @COUser, @TYPE_CASH, @TYPE_CRDT, @Deleted, @da, @ne)", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -291,10 +360,17 @@ Public Class FrmSuppliesA1
         On Error Resume Next
         'Me.danLOd()
         'Try
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
 
         Dim SQL As New SqlCommand("INSERT INTO BUYSITEMS (BITM2, BITM3, BITM4, BITM5, BITM6, BITM7, BITM8, BITM9, BITM10, BUY2) VALUES     (@BITM2, @BITM3, @BITM4, @BITM5, @BITM6, @BITM7, @BITM8, @BITM9, @BITM10, @BUY2)", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+
+        Dim SQL As New SqlClient.SqlCommand("INSERT INTO BUYSITEMS (BITM2, BITM3, BITM4, BITM5, BITM6, BITM7, BITM8, BITM9, BITM10, BUY2) VALUES     (@BITM2, @BITM3, @BITM4, @BITM5, @BITM6, @BITM7, @BITM8, @BITM9, @BITM10, @BUY2)", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -324,9 +400,15 @@ Public Class FrmSuppliesA1
     Private Sub UpdateBuys()
         'On Error Resume Next
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update BUYS SET   BUY3 = @BUY3, BUY4 = @BUY4, BUY5 = @BUY5, BUY6 = @BUY6, BUY7 = @BUY7, BUY8 = @BUY8, BUY9 = @BUY9, BUY10 = @BUY10, BUY11 = @BUY11, BUY13 = @BUY13, BUY14 = @BUY14, BUY15 = @BUY15, BUY17 = @BUY17, BUY18 = @BUY18, BUY19 = @BUY19, BUY20 = @BUY20, BUY21 = @BUY21, BUY22 = @BUY22, BUY23 = @BUY23, BUY24 = @BUY24, BUY25 = @BUY25, BUY26 = @BUY26, BUY27 = @BUY27, BUY28 = @BUY28,WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName,  CB1 = @CB1, BN2 = @BN2, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, Deleted = @Deleted, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1, BUY16 = @BUY16, TYPE_CASH = @TYPE_CASH, TYPE_CRDT = @TYPE_CRDT WHERE  BUY2 = @BUY2", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand(" Update BUYS SET   BUY3 = @BUY3, BUY4 = @BUY4, BUY5 = @BUY5, BUY6 = @BUY6, BUY7 = @BUY7, BUY8 = @BUY8, BUY9 = @BUY9, BUY10 = @BUY10, BUY11 = @BUY11, BUY13 = @BUY13, BUY14 = @BUY14, BUY15 = @BUY15, BUY17 = @BUY17, BUY18 = @BUY18, BUY19 = @BUY19, BUY20 = @BUY20, BUY21 = @BUY21, BUY22 = @BUY22, BUY23 = @BUY23, BUY24 = @BUY24, BUY25 = @BUY25, BUY26 = @BUY26, BUY27 = @BUY27, BUY28 = @BUY28,WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName,  CB1 = @CB1, BN2 = @BN2, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, Deleted = @Deleted, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1, BUY16 = @BUY16, TYPE_CASH = @TYPE_CASH, TYPE_CRDT = @TYPE_CRDT WHERE  BUY2 = @BUY2", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -394,9 +476,15 @@ Public Class FrmSuppliesA1
     Private Sub UpdateBuysItems()
         'On Error Resume Next
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("Update BUYSITEMS SET BITM2 = @BITM2, BITM3 = @BITM3, BITM4 = @BITM4, BITM5 = @BITM5, BITM6 = @BITM6, BITM7 = @BITM7, BITM8 = @BITM8, BITM9 = @BITM9, BITM10 = @BITM10, BUY2 = @BUY2  WHERE   BITM1 = @BITM1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand("Update BUYSITEMS SET BITM2 = @BITM2, BITM3 = @BITM3, BITM4 = @BITM4, BITM5 = @BITM5, BITM6 = @BITM6, BITM7 = @BITM7, BITM8 = @BITM8, BITM9 = @BITM9, BITM10 = @BITM10, BUY2 = @BUY2  WHERE   BITM1 = @BITM1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -426,7 +514,11 @@ Public Class FrmSuppliesA1
             MessageBox.Show(ex.Message, "ErrorUpdateBuysItems", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles DataGridView1.SelectionChanged
+=======
+    Private Sub DataGridView1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataGridView1.SelectionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.TextBalance.Text = Format(Val(Me.DataGridView1.CurrentRow.Cells("BITM6").Value), "0.000")
         'Me.TextBox13.Text = Format(Val(Me.TextBalance.Text) + Val(Me.TextBox11.Text), "0.000")
@@ -435,9 +527,15 @@ Public Class FrmSuppliesA1
     Private Sub SaveStocks()
         Try
             GetAutoIDSTK()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO STOCKS(STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName,  @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
             Dim CMD As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO STOCKS(STK1, WarehouseNumber, WarehouseName,  STK3, STK4, STK5, STK6, STK7, STK8, STK9, STK10, STK11, STK12, STK13, STK14, STK15, STK16, STK17, STK18, STK19, STK20, STK21, STK22, STK23, STK25, STK24, STK26, USERNAME, CUser, COUser, da, ne, IT_DATEP, IT_DATEEX) VALUES     (@STK1, @WarehouseNumber, @WarehouseName,  @STK3, @STK4, @STK5, @STK6, @STK7, @STK8, @STK9, @STK10, @STK11, @STK12, @STK13, @STK14, @STK15, @STK16, @STK17, @STK18, @STK19, @STK20, @STK21, @STK22, @STK23, @STK25, @STK24, @STK26, @USERNAME, @CUser, @COUser, @da, @ne, @IT_DATEP, @IT_DATEEX)"
+            Dim CMD As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD.Parameters
                 .AddWithValue("@STK1", IDSTK)
                 .AddWithValue("@WarehouseNumber", Me.ComboStore.Text)
@@ -486,13 +584,22 @@ Public Class FrmSuppliesA1
     End Sub
     Private Sub UPDATEBALANCEITEMS()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Me.DataGridView1.Rows.Count > 0 Then
                 For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
                     Dim row As DataGridViewRow = Me.DataGridView1.Rows(i)
                     If row.IsNewRow Then Continue For
+<<<<<<< HEAD
                     Dim sql As New SqlCommand("UPDATE STOCKSITEMS SET SKITM7 = @SKITM7  WHERE STOCKSITEMS.SKITM4='" & Me.DataGridView1.Item("BITM4", Me.DataGridView1.CurrentRow.Index).Value() & "'", Consum)
                     Dim CMD As New SqlCommand With {
+=======
+                    Dim sql As New SqlClient.SqlCommand("UPDATE STOCKSITEMS SET SKITM7 = @SKITM7  WHERE STOCKSITEMS.SKITM4='" & Me.DataGridView1.Item("BITM4", Me.DataGridView1.CurrentRow.Index).Value() & "'", Consum)
+                    Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -515,7 +622,11 @@ Public Class FrmSuppliesA1
     End Sub
     Private Sub UpdatStocks()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim idSTK As Int64
             GetAutoNumber("STK1", "STOCKS", "STK4")
             idSTK = AutoNumber
@@ -523,8 +634,13 @@ Public Class FrmSuppliesA1
                 For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
                     Dim row As DataGridViewRow = Me.DataGridView1.Rows(i)
                     If row.IsNewRow Then Continue For
+<<<<<<< HEAD
                     Dim SQL As New SqlCommand(" Update STOCKS SET WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName, STK3 = @STK3, STK7 = @STK7, STK8 = @STK8, STK9 = @STK9, STK10 = @STK10, STK11 = @STK11, STK12 = @STK12, STK13 = @STK13, STK14 = @STK14, STK15 = @STK15, STK17 = @STK17, STK18 = @STK18, STK19 = @STK19, STK20 = @STK20, STK21 = @STK21, STK22 = @STK22, STK23 = @STK23, STK25 = @STK25, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser WHERE STK1 ='" & Me.TextSTK1A.Text & "'" & "AND STK7= '" & Me.DataGridView1.CurrentRow.Cells("BITM3").Value & "'", Consum)
                     Dim CMD As New SqlCommand(SQL.CommandText) With {
+=======
+                    Dim SQL As New SqlClient.SqlCommand(" Update STOCKS SET WarehouseNumber = @WarehouseNumber, WarehouseName = @WarehouseName, STK3 = @STK3, STK7 = @STK7, STK8 = @STK8, STK9 = @STK9, STK10 = @STK10, STK11 = @STK11, STK12 = @STK12, STK13 = @STK13, STK14 = @STK14, STK15 = @STK15, STK17 = @STK17, STK18 = @STK18, STK19 = @STK19, STK20 = @STK20, STK21 = @STK21, STK22 = @STK22, STK23 = @STK23, STK25 = @STK25, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser WHERE STK1 ='" & Me.TextSTK1A.Text & "'" & "AND STK7= '" & Me.DataGridView1.CurrentRow.Cells("BITM3").Value & "'", Consum)
+                    Dim CMD As New SqlClient.SqlCommand(SQL.CommandText) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .CommandType = CommandType.Text,
                         .Connection = Consum
                     }
@@ -569,14 +685,22 @@ Public Class FrmSuppliesA1
         Me.ADDBUTTON.Enabled = LockAddRow
         Me.SAVEBUTTON.Enabled = LockSave
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTInvoiceNumberA_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles TEXTInvoiceNumber.KeyDown
+=======
+    Private Sub TEXTInvoiceNumberA_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTInvoiceNumber.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTPermissionNumber.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTInvoiceNumber_LostFocus(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTInvoiceNumberA.LostFocus
+=======
+    Private Sub TEXTInvoiceNumber_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTInvoiceNumberA.LostFocus
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Static Dim P As Integer
         P = Me.BS.Position
@@ -590,31 +714,51 @@ Public Class FrmSuppliesA1
         Me.SaveBuys()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTInvoiceNumberA_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTInvoiceNumberA.KeyPress
+=======
+    Private Sub TEXTInvoiceNumberA_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTInvoiceNumberA.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             Me.ComboSupplierName.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboSupplierName_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles ComboSupplierName.KeyPress
+=======
+    Private Sub ComboSupplierName_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboSupplierName.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             Me.TEXTPermissionNumber.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TEXTPermissionNumber_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles TEXTPermissionNumber.KeyPress
+=======
+    Private Sub TEXTPermissionNumber_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TEXTPermissionNumber.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             Me.DateMovementHistory.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub DATETIMEPICKER_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles DateMovementHistory.KeyPress
+=======
+    Private Sub DATETIMEPICKER_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DateMovementHistory.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             Me.txtItem2.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
@@ -660,7 +804,11 @@ Public Class FrmSuppliesA1
         Me.ADDBUTTON.Enabled = False
         Me.SAVEBUTTON.Enabled = True
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim ch As Double
             Dim ch11 As Double
@@ -768,7 +916,11 @@ Public Class FrmSuppliesA1
             'Me.SaveBuys()
             Me.UpdateBuys()
             Me.SaveBuysItems()
+<<<<<<< HEAD
             'SaveStocks()
+=======
+            SaveStocks()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             'UpdatStocks()
 
             Me.PictureBox2.Visible = True
@@ -781,7 +933,11 @@ Public Class FrmSuppliesA1
                 TransferToAccounts_Check = False
             End If
 
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -791,7 +947,11 @@ Public Class FrmSuppliesA1
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
+=======
+    Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.DataGridView1.SelectedRows.Count > 0 Then
                 For i As Integer = Me.DataGridView1.SelectedRows.Count - 1 To 0
@@ -806,6 +966,7 @@ Public Class FrmSuppliesA1
             MsgBox(ex.Message, MsgBoxStyle.Critical, "تنبيه")
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -814,6 +975,16 @@ Public Class FrmSuppliesA1
         Consum = New SqlConnection(constring)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub DataGridView1_CellValueChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT DISTINCT SKITM4,SKITM5,SKITM8,SKITM14,SKITM5 FROM STOCKSITEMS WHERE CUser ='" & CUser & "'  and SKITM4 = '" & DataGridView1.Item("BITM4", DataGridView1.CurrentRow.Index).Value & " '", Consum)
+        Consum = New SqlClient.SqlConnection(constring)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -841,7 +1012,11 @@ Public Class FrmSuppliesA1
         Adp.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.CurrentCellChanged
+=======
+    Private Sub DataGridView1_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.CurrentCellChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim total As Double
         Dim tota2 As Double
@@ -854,11 +1029,19 @@ Public Class FrmSuppliesA1
         'Me.txtDiscount.Text = tota2.ToString("0.00")
         'Me.TEXT4_TextChanged(sender, e)
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_SelectionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.SelectionChanged
         On Error Resume Next
         Me.SEARCHSTOCKSITEMS()
     End Sub
     Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
+=======
+    Private Sub DataGridView1_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView1.SelectionChanged
+        On Error Resume Next
+        Me.SEARCHSTOCKSITEMS()
+    End Sub
+    Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Exit Sub
     End Sub
@@ -866,15 +1049,25 @@ Public Class FrmSuppliesA1
         Dim Tax As Boolean
         Dim Tax1 As Boolean
         Dim Tax2 As String
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.DataGridView1.Rows.Count > 0 Then
             For i As Integer = 0 To Me.DataGridView1.Rows.Count - 1
                 Dim row As DataGridViewRow = Me.DataGridView1.Rows(i)
                 If row.IsNewRow Then Continue For
 
+<<<<<<< HEAD
                 Dim strsql1 As New SqlCommand("SELECT SKITM3,SKITM4,SKITM5,SKITM6,SKITM8,SKITM9,SKITM11,SKITM12,SKITM14,SKITM15,SKITM16,SKITM17,SKITM18,SKITM19,SKITM20,SKITM21,SKITM22,SKITM23,SKITM24,SKITM25,SKITM26,IT_DATEP,IT_DATEEX FROM STOCKSITEMS WHERE CUser ='" & CUser & "'  and SKITM4='" & DataGridView1.Item("BITM4", DataGridView1.CurrentRow.Index).Value() & "'", Consum)
                 Dim ds As New DataSet
                 Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+                Dim strsql1 As New SqlClient.SqlCommand("SELECT SKITM3,SKITM4,SKITM5,SKITM6,SKITM8,SKITM9,SKITM11,SKITM12,SKITM14,SKITM15,SKITM16,SKITM17,SKITM18,SKITM19,SKITM20,SKITM21,SKITM22,SKITM23,SKITM24,SKITM25,SKITM26,IT_DATEP,IT_DATEEX FROM STOCKSITEMS WHERE CUser ='" & CUser & "'  and SKITM4='" & DataGridView1.Item("BITM4", DataGridView1.CurrentRow.Index).Value() & "'", Consum)
+                Dim ds As New DataSet
+                Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 On Error Resume Next
                 ds.Clear()
                 Adp1.Fill(ds, "STOCKSITEMS")
@@ -964,7 +1157,11 @@ Public Class FrmSuppliesA1
         End If
 
         Dim ch As Double
+<<<<<<< HEAD
         ch = Format(Convert.ToDouble(Me.TEXTNetItems.Text) + Convert.ToDouble(Discount_B), "0.000")
+=======
+        ch = Format(Val(Me.TEXTNetItems.Text) + Val(Discount_B), "0.000")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         AccountingEntries(T1, T2, DateMovementHistory.Value.ToString("yyyy-MM-dd"), nem, False, TEXTTotal.Text, TEXTTotal.Text, T3, "قيد", "PR", TextMovementSymbol.EditValue, False)
 
@@ -1194,12 +1391,20 @@ Public Class FrmSuppliesA1
                 LabelFundBalance.Text = "رصيد" & " " & FundAccount_Name & " " & ":"
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboPaymentMethod.SelectedIndexChanged
+=======
+    Private Sub ComboBox4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboPaymentMethod.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         DataGridView1.Rows(0).Selected = True
         DataGridView1.CurrentCell = DataGridView1("BITM2", DataGridView1.Rows(0).Index)
         Me. AccountsEnquiry()
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT4_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TEXTItemsTotal.TextChanged, TEXTDiscountPercentage.EditValueChanged, TEXTTaxRate.EditValueChanged, TEXTDiscount.TextChanged, TEXTNetItems.TextChanged, TEXTSalesTaxes.TextChanged, TextValueOfCheck.EditValueChanged, TextFundValue.EditValueChanged, TextValueAccountsPayable.EditValueChanged, txtDiscount.TextChanged
+=======
+    Private Sub TEXT4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TEXTItemsTotal.TextChanged, TEXTDiscountPercentage.EditValueChanged, TEXTTaxRate.EditValueChanged, TEXTDiscount.TextChanged, TEXTNetItems.TextChanged, TEXTSalesTaxes.TextChanged, TextValueOfCheck.EditValueChanged, TextFundValue.EditValueChanged, TextValueAccountsPayable.EditValueChanged, txtDiscount.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         On Error Resume Next
         Dim totl1 As Double
@@ -1209,7 +1414,11 @@ Public Class FrmSuppliesA1
         Me.TEXTItemsTotal.Text = Val(Me.DataGridView1.Rows.Cast(Of DataGridViewRow).Sum(Function(t) Val(t.Cells("BITM8").Value)) + Val(DiscountA)).ToString("0.000")
         totl1 = Me.DataGridView1.Rows.Cast(Of DataGridViewRow).Sum(Function(t) Val(t.Cells("BITM8").Value))
         Me.TEXTDiscount.Text = Format(Val(totl1) * Val(Me.TEXTDiscountPercentage.EditValue) / 100, "0.000") + Val(DiscountA)
+<<<<<<< HEAD
         Discount_B = Format(Convert.ToDouble(Me.TEXTDiscount.Text), "0.000")
+=======
+        Discount_B = Format(Val(Me.TEXTDiscount.Text), "0.000")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Me.TEXTNetItems.Text = Format(Val(Me.TEXTItemsTotal.Text) - Val(DiscountB), "0.000")
         Me.TEXTNetItems.Text = Format(Val(Me.TEXTItemsTotal.Text) - Val(Discount_B), "0.000")
         Me.TEXTSalesTaxes.Text = Format(Val(Me.TEXTItemsTotal.Text) * Val(Me.TEXTTaxRate.EditValue) / 100, "0.000")
@@ -1222,6 +1431,7 @@ Public Class FrmSuppliesA1
 
          AccountsEnquiry()
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioEMPLOYEES.CheckedChanged
         Call Me.AddType1()
     End Sub
@@ -1232,6 +1442,18 @@ Public Class FrmSuppliesA1
         Call Me.AddType1()
     End Sub
     Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RadioResetText.CheckedChanged
+=======
+    Private Sub RadioButton3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioEMPLOYEES.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton6_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioAllCustomers.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton5_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioSUPPLIER.CheckedChanged
+        Call Me.AddType1()
+    End Sub
+    Private Sub RadioButton4_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioResetText.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Call Me.AddType1()
     End Sub
     Private Sub AddType1()
@@ -1247,6 +1469,7 @@ Public Class FrmSuppliesA1
         End If
         Me.ComboCheckDrawerName.Focus()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox6_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
         Try
             Dim Consum As New SqlConnection(constring)
@@ -1255,6 +1478,16 @@ Public Class FrmSuppliesA1
                 Dim strsql As New SqlCommand("SELECT IDcust,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds As New DataSet
                 Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox6_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCheckDrawerName.SelectedIndexChanged
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If RadioAllCustomers.Checked = True Then
+                Dim Adp As SqlClient.SqlDataAdapter
+                Dim strsql As New SqlCommand("SELECT IDcust,cust25,cuser,couser  FROM AllCustomers WHERE cust2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds As New DataSet
+                Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds.Clear()
                 Adp.Fill(ds)
                 If ds.Tables(0).Rows.Count > 0 Then
@@ -1265,10 +1498,17 @@ Public Class FrmSuppliesA1
                 Adp.Dispose()
                 Consum.Close()
             ElseIf Me.RadioSUPPLIER.Checked = True Then
+<<<<<<< HEAD
                 Dim Adp1 As SqlDataAdapter
                 Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds1 As New DataSet
                 Adp1 = New SqlDataAdapter(strsql)
+=======
+                Dim Adp1 As SqlClient.SqlDataAdapter
+                Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds1 As New DataSet
+                Adp1 = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds1.Clear()
                 Adp1.Fill(ds1)
                 If ds1.Tables(0).Rows.Count > 0 Then
@@ -1279,10 +1519,17 @@ Public Class FrmSuppliesA1
                 Adp1.Dispose()
                 Consum.Close()
             ElseIf Me.RadioEMPLOYEES.Checked = True Then
+<<<<<<< HEAD
                 Dim Adp2 As SqlDataAdapter
                 Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
                 Dim ds2 As New DataSet
                 Adp2 = New SqlDataAdapter(strsq2)
+=======
+                Dim Adp2 As SqlClient.SqlDataAdapter
+                Dim strsq2 As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboCheckDrawerName.Text & "'", Consum)
+                Dim ds2 As New DataSet
+                Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds2.Clear()
                 Adp2.Fill(ds2)
                 If ds2.Tables(0).Rows.Count > 0 Then
@@ -1297,7 +1544,11 @@ Public Class FrmSuppliesA1
             MessageBox.Show(ex.Message, "ErrorComboCheckDrawerName", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub TxtItem2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles txtItem2.KeyPress
+=======
+    Private Sub TxtItem2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtItem2.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             Me.txtq.Focus()
 
@@ -1306,9 +1557,15 @@ Public Class FrmSuppliesA1
             Me.txtq.SelectAll()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TxtItem2_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtItem2.TextChanged
         On Error Resume Next
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub TxtItem2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtItem2.TextChanged
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str As New SqlCommand("", Consum)
         With str
             If Trim(txtItem2.Text) <> "" Then
@@ -1318,7 +1575,11 @@ Public Class FrmSuppliesA1
                 Consum.Open()
                 Dim ds As New DataSet
                 Dim dt As New DataTable
+<<<<<<< HEAD
                 Dim Adp1 As New SqlDataAdapter(str)
+=======
+                Dim Adp1 As New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 ds.Clear()
                 Adp1.Fill(ds, "STOCKSITEMS")
                 Adp1.Fill(dt)
@@ -1358,7 +1619,11 @@ Public Class FrmSuppliesA1
         Next
         Return rec
     End Function
+<<<<<<< HEAD
     Private Sub Txtq_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles txtq.KeyPress
+=======
+    Private Sub Txtq_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtq.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = 13 Then
             Me.DataGridView1.Rows(Me.DataGridView1.Rows.Count - 1).Selected = True
@@ -1371,7 +1636,11 @@ Public Class FrmSuppliesA1
             Me.txtItem2.Focus()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Txtq_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles txtq.TextChanged
+=======
+    Private Sub Txtq_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtq.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
 
     End Sub
@@ -1470,7 +1739,11 @@ Public Class FrmSuppliesA1
                 Me.DataGridView1.CurrentRow.Cells("BITM8").Value = sum2
                 Me.DataGridView1.CurrentRow.Cells("BITM9").Value = Me.TexTSellingPrice.Text
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.BarCode
+=======
+            Dim Sound As System.IO.Stream = My.Resources.BarCode
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.Background)
             If DataGridView1.Rows.Count <= 2 Then
                 Me.DataGridView1.CurrentCell = DataGridView1("BITM2", DataGridView1.NewRowIndex)
@@ -1541,10 +1814,17 @@ Public Class FrmSuppliesA1
             .AlternatingRowsDefaultCellStyle.BackColor = Color.White
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView2_CellContentClick(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
         Me.DataGridView1.CurrentRow.Cells("BITM3").Value = Me.num.ToString.Trim
     End Sub
     Private Sub DataGridView1_CellEnter(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellEnter
+=======
+    Private Sub DataGridView2_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+        Me.DataGridView1.CurrentRow.Cells("BITM3").Value = Me.num.ToString.Trim
+    End Sub
+    Private Sub DataGridView1_CellEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellEnter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.DataGridView1.SelectedRows.Count = 0 Then
             Me.DataGridView1.Item("BITM2", e.RowIndex).Value = Me.DataGridView1.CurrentRow.Index + 1
@@ -1553,6 +1833,7 @@ Public Class FrmSuppliesA1
             Exit Sub
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboSupplierName.SelectedIndexChanged
         Dim Adp1 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -1560,6 +1841,15 @@ Public Class FrmSuppliesA1
         Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboSupplierName.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboSupplierName.SelectedIndexChanged
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT sup1  FROM SUPPLIER WHERE sup2 ='" & Me.ComboSupplierName.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1)
         If ds1.Tables(0).Rows.Count > 0 Then
@@ -1570,7 +1860,11 @@ Public Class FrmSuppliesA1
         Adp1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum.Tick
+=======
+    Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch1.Checked = True Then
             Dim dgvRow As New DataGridViewRow
@@ -1623,14 +1917,22 @@ Public Class FrmSuppliesA1
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub TextBox46_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextCheckNumber.KeyUp
+=======
+    Private Sub TextBox46_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextCheckNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.CheckDate.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub Ch1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch1.CheckedChanged
+=======
+    Private Sub Ch1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch1.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch1.Checked = True Then
             Me.DataGridView1.Focus()
@@ -1644,8 +1946,13 @@ Public Class FrmSuppliesA1
     Private Sub SEARCHDMAXCASHIER()
         On Error Resume Next
         Dim N As Double
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         N = cmd1.ExecuteScalar
@@ -1655,6 +1962,7 @@ Public Class FrmSuppliesA1
     End Sub
 
     Private Sub ComboStore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboStore.SelectedIndexChanged
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
 
         Dim Adp As SqlDataAdapter
@@ -1662,6 +1970,15 @@ Public Class FrmSuppliesA1
         Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT WarehouseName  FROM Warehouses WHERE WarehouseNumber ='" & Me.ComboStore.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -1684,6 +2001,7 @@ Public Class FrmSuppliesA1
         Dim F As New FrmStocksA1
         F.Show()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboCB1.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -1691,6 +2009,15 @@ Public Class FrmSuppliesA1
         Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboCB1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboCB1.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CB2    FROM CashBox WHERE CB1 ='" & Me.ComboCB1.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)
@@ -1705,6 +2032,7 @@ Public Class FrmSuppliesA1
         GetFundAccount_No(ModuleGeneral.CB2)
          AccountsEnquiry()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBN2.SelectedIndexChanged
         Dim Consum As New SqlConnection(constring)
         Dim Adp As SqlDataAdapter
@@ -1712,6 +2040,15 @@ Public Class FrmSuppliesA1
         Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBN2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBN2.SelectedIndexChanged
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Adp As SqlClient.SqlDataAdapter
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT BN3,BN4    FROM BankNames WHERE BN2 ='" & Me.ComboBN2.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp.Fill(ds)

@@ -2,8 +2,13 @@
 Imports DevExpress.XtraEditors
 
 Public Class FormInternalAuditor
+<<<<<<< HEAD
     Inherits Form
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim dt As New DataTable
     ReadOnly rpt1 As New rptStocks25
     ReadOnly rpt11 As New rptStocks26
@@ -28,7 +33,11 @@ Public Class FormInternalAuditor
                 Me.Close()
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             dt = New DataTable
             Me.SqlDataAdapter1 = New SqlDataAdapter("select  IDFL, FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15  from FinancialList   WHERE      FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and    FL5='" & True & "'  ", Consum)
             Me.SqlDataAdapter1.Fill(dt)
@@ -142,7 +151,11 @@ Public Class FormInternalAuditor
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormInternalAuditor_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormInternalAuditor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CircularProgress1.Value = 0
         Me.BackgroundWorker1.WorkerSupportsCancellation = True
         Me.BackgroundWorker1.WorkerReportsProgress = True
@@ -150,7 +163,11 @@ Public Class FormInternalAuditor
     End Sub
     Private Sub LoadFormInternalAuditor()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             dt = New DataTable
             Me.SqlDataAdapter1 = New SqlDataAdapter("select  IDFL, FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15  from FinancialList   WHERE       FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and     FL5='" & True & "'", Consum)
             Me.SqlDataAdapter1.Fill(dt)
@@ -226,16 +243,27 @@ Public Class FormInternalAuditor
     End Sub
     Private Sub CountDATAITEMS1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
 
 
+<<<<<<< HEAD
         Dim MC1 As SqlDataAdapter
         Dim strSQLmc1 As New SqlCommand("SELECT COUNT(IDFL)  FROM FinancialList  WHERE   FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and FL6='" & True & "' ", Consum)
         Dim dsMC1 As New DataSet
         MC1 = New SqlDataAdapter(strSQLmc1)
+=======
+        Dim MC1 As SqlClient.SqlDataAdapter
+        Dim strSQLmc1 As New SqlCommand("SELECT COUNT(IDFL)  FROM FinancialList  WHERE   FL3 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and FL6='" & True & "' ", Consum)
+        Dim dsMC1 As New DataSet
+        MC1 = New SqlClient.SqlDataAdapter(strSQLmc1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC1.Clear()
         MC1.Fill(dsMC1)
         If dsMC1.Tables(0).Rows.Count > 0 Then
@@ -254,6 +282,7 @@ Public Class FormInternalAuditor
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim ds1 As New DataSet
         Dim SqlDataAdapter1 As New SqlDataAdapter
@@ -261,16 +290,33 @@ Public Class FormInternalAuditor
         If FIFO = True Then
             str.CommandText = "SELECT * FROM FIFOStocks    WHERE  CUser='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim ds1 As New DataSet
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim str As New SqlClient.SqlCommand("", Consum)
+        If FIFO = True Then
+            str.CommandText = "SELECT * FROM FIFOStocks    WHERE  CUser='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter1.Fill(ds1, "FIFOStocks")
         ElseIf LIFO = True Then
             str.CommandText = "SELECT * FROM LIFOStock1    WHERE CUser ='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter1.Fill(ds1, "LIFOStock1")
         ElseIf AVG = True Then
             str.CommandText = "SELECT * FROM AvgStocks     WHERE CUser ='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             SqlDataAdapter1.Fill(ds1, "AvgStocks")
         End If
@@ -284,9 +330,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds10 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter10 As New SqlDataAdapter
         Dim str10 As New SqlCommand("SELECT * FROM FixedAssets  WHERE  CUser='" & ModuleGeneral.CUser & "' ", Consum)
         SqlDataAdapter10 = New SqlDataAdapter(str10)
+=======
+        Dim SqlDataAdapter10 As New SqlClient.SqlDataAdapter
+        Dim str10 As New SqlClient.SqlCommand("SELECT * FROM FixedAssets  WHERE  CUser='" & ModuleGeneral.CUser & "' ", Consum)
+        SqlDataAdapter10 = New SqlClient.SqlDataAdapter(str10)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds10.Clear()
         SqlDataAdapter10.Fill(ds10, "FixedAssets")
         If ds10.Tables(0).Rows.Count > 0 Then
@@ -300,10 +352,17 @@ Public Class FormInternalAuditor
 
 
         Dim ds2 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter2 As New SqlDataAdapter
         Dim str2 As New SqlCommand("SELECT * FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim builder5 As New SqlCommandBuilder(SqlDataAdapter1)
         SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+        Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+        Dim str2 As New SqlClient.SqlCommand("SELECT * FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim builder5 As New SqlCommandBuilder(SqlDataAdapter1)
+        SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         SqlDataAdapter2.Fill(ds2, "FINALBALANCE")
         If ds2.Tables(0).Rows.Count > 0 Then
@@ -317,9 +376,15 @@ Public Class FormInternalAuditor
 
 
         Dim ds3 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter3 As New SqlDataAdapter
         Dim str3 As New SqlCommand("SELECT * FROM Previouspost1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter3 = New SqlDataAdapter(str3)
+=======
+        Dim SqlDataAdapter3 As New SqlClient.SqlDataAdapter
+        Dim str3 As New SqlClient.SqlCommand("SELECT * FROM Previouspost1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter3 = New SqlClient.SqlDataAdapter(str3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds3.Clear()
         SqlDataAdapter3.Fill(ds3, "Previouspost1")
         If ds3.Tables(0).Rows.Count > 0 Then
@@ -334,9 +399,15 @@ Public Class FormInternalAuditor
 
 
         Dim ds4 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter4 As New SqlDataAdapter
         Dim str4 As New SqlCommand("SELECT * FROM BALANCE1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter4 = New SqlDataAdapter(str4)
+=======
+        Dim SqlDataAdapter4 As New SqlClient.SqlDataAdapter
+        Dim str4 As New SqlClient.SqlCommand("SELECT * FROM BALANCE1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter4 = New SqlClient.SqlDataAdapter(str4)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds4.Clear()
         SqlDataAdapter4.Fill(ds4, "BALANCE1")
         If ds4.Tables(0).Rows.Count > 0 Then
@@ -349,9 +420,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds5 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter5 As New SqlDataAdapter
         Dim str5 As New SqlCommand("SELECT * FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter5 = New SqlDataAdapter(str5)
+=======
+        Dim SqlDataAdapter5 As New SqlClient.SqlDataAdapter
+        Dim str5 As New SqlClient.SqlCommand("SELECT * FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter5 = New SqlClient.SqlDataAdapter(str5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds5.Clear()
         SqlDataAdapter5.Fill(ds5, "ALLShares")
         If ds5.Tables(0).Rows.Count > 0 Then
@@ -364,9 +441,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds6 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter6 As New SqlDataAdapter
         Dim str6 As New SqlCommand("SELECT * FROM CustomersCABLES2  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter6 = New SqlDataAdapter(str6)
+=======
+        Dim SqlDataAdapter6 As New SqlClient.SqlDataAdapter
+        Dim str6 As New SqlClient.SqlCommand("SELECT * FROM CustomersCABLES2  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter6 = New SqlClient.SqlDataAdapter(str6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds6.Clear()
         SqlDataAdapter6.Fill(ds6, "CustomersCABLES2")
         If ds6.Tables(0).Rows.Count > 0 Then
@@ -379,9 +462,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds7 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter7 As New SqlDataAdapter
         Dim str7 As New SqlCommand("SELECT * FROM Suppliers1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter7 = New SqlDataAdapter(str7)
+=======
+        Dim SqlDataAdapter7 As New SqlClient.SqlDataAdapter
+        Dim str7 As New SqlClient.SqlCommand("SELECT * FROM Suppliers1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter7 = New SqlClient.SqlDataAdapter(str7)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds7.Clear()
         SqlDataAdapter7.Fill(ds7, "Suppliers1")
         If ds7.Tables(0).Rows.Count > 0 Then
@@ -394,9 +483,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds8 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter8 As New SqlDataAdapter
         Dim str8 As New SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & False & "' ", Consum)
         SqlDataAdapter8 = New SqlDataAdapter(str8)
+=======
+        Dim SqlDataAdapter8 As New SqlClient.SqlDataAdapter
+        Dim str8 As New SqlClient.SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & False & "' ", Consum)
+        SqlDataAdapter8 = New SqlClient.SqlDataAdapter(str8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds8.Clear()
         SqlDataAdapter8.Fill(ds8, "Checks")
         If ds8.Tables(0).Rows.Count > 0 Then
@@ -409,9 +504,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds9 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter9 As New SqlDataAdapter
         Dim str9 As New SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & True & "'", Consum)
         SqlDataAdapter9 = New SqlDataAdapter(str9)
+=======
+        Dim SqlDataAdapter9 As New SqlClient.SqlDataAdapter
+        Dim str9 As New SqlClient.SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & True & "'", Consum)
+        SqlDataAdapter9 = New SqlClient.SqlDataAdapter(str9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds9.Clear()
         SqlDataAdapter9.Fill(ds9, "Checks")
         If ds9.Tables(0).Rows.Count > 0 Then
@@ -424,9 +525,15 @@ Public Class FormInternalAuditor
         End If
 
         Dim ds11 As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter11 As New SqlDataAdapter
         Dim str11 As New SqlCommand("SELECT * FROM InventoryBox  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(LOBOX) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         SqlDataAdapter11 = New SqlDataAdapter(str11)
+=======
+        Dim SqlDataAdapter11 As New SqlClient.SqlDataAdapter
+        Dim str11 As New SqlClient.SqlCommand("SELECT * FROM InventoryBox  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(LOBOX) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        SqlDataAdapter11 = New SqlClient.SqlDataAdapter(str11)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds11.Clear()
         SqlDataAdapter11.Fill(ds11, "InventoryBox")
         If ds11.Tables(0).Rows.Count > 0 Then
@@ -442,12 +549,20 @@ Public Class FormInternalAuditor
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+=======
+    Private Sub DataGridView1_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.DataGridView1.Rows(Me.DataGridView1.Rows.Count).Selected = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellContentClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+=======
+    Private Sub DataGridView1_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             Dim Asu As String
@@ -462,6 +577,7 @@ Public Class FormInternalAuditor
 
                 If VX = "1" Then
                     If RB1 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds1 As New DataSet
                         Dim SqlDataAdapter1 As New SqlDataAdapter
@@ -469,16 +585,33 @@ Public Class FormInternalAuditor
                         If FIFO = True Then
                             str.CommandText = "SELECT * FROM FIFOStocks    WHERE  CUser='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
                             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds1 As New DataSet
+                        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+                        Dim str As New SqlClient.SqlCommand("", Consum)
+                        If FIFO = True Then
+                            str.CommandText = "SELECT * FROM FIFOStocks    WHERE  CUser='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+                            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             ds1.Clear()
                             SqlDataAdapter1.Fill(ds1, "FIFOStocks")
                         ElseIf LIFO = True Then
                             str.CommandText = "SELECT * FROM LIFOStock1    WHERE CUser ='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+<<<<<<< HEAD
                             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             ds1.Clear()
                             SqlDataAdapter1.Fill(ds1, "LIFOStock1")
                         ElseIf AVG = True Then
                             str.CommandText = "SELECT * FROM AvgStocks     WHERE CUser ='" & CUser & "' and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+<<<<<<< HEAD
                             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             ds1.Clear()
                             SqlDataAdapter1.Fill(ds1, "AvgStocks")
                         End If
@@ -544,12 +677,20 @@ Public Class FormInternalAuditor
 
                 If VX = "2" Then
                     If RB2 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         Dim rpt As New CrystalFixedAssets
                         GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
                         Dim ds As New DataSet
                         Dim str1 As New SqlCommand("SELECT * FROM FixedAssets   WHERE  CUser='" & ModuleGeneral.CUser & "'   ", Consum)
+<<<<<<< HEAD
                         SqlDataAdapter1 = New SqlDataAdapter(str1)
+=======
+                        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds.Clear()
                         SqlDataAdapter1.Fill(ds, "FixedAssets")
                         rpt.SetDataSource(ds)
@@ -568,21 +709,34 @@ Public Class FormInternalAuditor
                 End If
                 If VX = "3" Then
                     If RB3 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         Dim account_no1 As Integer = 23007 Or 23007001 Or 23007002
                         Dim account_no2 As Integer = 42007
                         'Dim account_no3 As Integer = 23007002
 
                         Dim ds2 As New DataSet
+<<<<<<< HEAD
                         Dim SqlDataAdapter2 As New SqlDataAdapter
+=======
+                        Dim SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         'If CHKCI = False Then
                         '    Dim str2 As New SqlClient.SqlCommand("SELECT * FROM FINALBALANCE  WHERE  CUser='" & Module1.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  and account_no  <>'" & account_no1 & "'  and account_no  <>'" & account_no2 & "'ORDER BY ACC ASC , account_no ASC ", Consum)
                         '    SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
                         '    ds2.Clear()
                         '    SqlDataAdapter2.Fill(ds2, "FINALBALANCE")
                         'ElseIf CHKCI = True Then
+<<<<<<< HEAD
                         Dim str2 As New SqlCommand("SELECT * FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  and account_no  <>'" & account_no1 & "' ORDER BY ACC ASC , account_no ASC ", Consum)
                         SqlDataAdapter2 = New SqlDataAdapter(str2)
+=======
+                        Dim str2 As New SqlClient.SqlCommand("SELECT * FROM FINALBALANCE  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  and account_no  <>'" & account_no1 & "' ORDER BY ACC ASC , account_no ASC ", Consum)
+                        SqlDataAdapter2 = New SqlClient.SqlDataAdapter(str2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds2.Clear()
                         SqlDataAdapter2.Fill(ds2, "FINALBALANCE")
                         'End If
@@ -607,12 +761,21 @@ Public Class FormInternalAuditor
                 End If
                 If VX = "4" Then
                     If RB4 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds3 As New DataSet
                         Dim SqlDataAdapter3 As New SqlDataAdapter
                         'Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, ISNULL(CUser,CUser) AS CUser, ISNULL(CUser1,CUser) AS CUser1 FROM Previouspost1   WHERE  CUser='" & Module1.CUser & "'and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' or  CUser  IS NULL and CUser1 ='" & CUser & "'  ", Consum)
                         GETSERVERNAMEANDDATABASENAME(rpt3, DBServer, "", "")
                         Dim str3 As New SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, YEAR1, CUser, CUser1  FROM Previouspost1  WHERE  CUser='" & CUser & "'  or CUser1 ='" & CUser & "'   or  CUser  IS NULL   and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds3 As New DataSet
+                        Dim SqlDataAdapter3 As New SqlClient.SqlDataAdapter
+                        'Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, ISNULL(CUser,CUser) AS CUser, ISNULL(CUser1,CUser) AS CUser1 FROM Previouspost1   WHERE  CUser='" & Module1.CUser & "'and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' or  CUser  IS NULL and CUser1 ='" & CUser & "'  ", Consum)
+                        GETSERVERNAMEANDDATABASENAME(rpt3, DBServer, "", "")
+                        Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, YEAR1, CUser, CUser1  FROM Previouspost1  WHERE  CUser='" & CUser & "'  or CUser1 ='" & CUser & "'   or  CUser  IS NULL   and YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' ", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
                         'Dim str3 As New SqlClient.SqlCommand("SELECT MOVD4, account_no, MOVD3, account_name, SUMDEBIT1, SUMCREDIT1, SUMDEBIT, SUMCREDIT, AccountKind, ACC, yearearlier, YEAR, YEAR1, CUser, CUser1  FROM Previouspost1   WHERE (CUser='" & CUser & "') And (YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "') And (yearearlier ='" & FiscalYear_currentDateMustBeInFiscalYear() - 1 & "') Or(CUser ='" & CUser & "') And (YEAR ='" & FiscalYear_currentDateMustBeInFiscalYear() & "') And (yearearlier Is NULL) ", Consum)
 
@@ -621,7 +784,11 @@ Public Class FormInternalAuditor
 
 
 
+<<<<<<< HEAD
                         SqlDataAdapter3 = New SqlDataAdapter(str3)
+=======
+                        SqlDataAdapter3 = New SqlClient.SqlDataAdapter(str3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds3.Clear()
                         SqlDataAdapter3.Fill(ds3, "Previouspost1")
 
@@ -653,11 +820,19 @@ Public Class FormInternalAuditor
                 End If
                 If VX = "5" Then
                     If RB5 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds4 As New DataSet
                         Dim SqlDataAdapter4 As New SqlDataAdapter
                         Dim str4 As New SqlCommand("SELECT * FROM BALANCE1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
                         SqlDataAdapter4 = New SqlDataAdapter(str4)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds4 As New DataSet
+                        Dim SqlDataAdapter4 As New SqlClient.SqlDataAdapter
+                        Dim str4 As New SqlClient.SqlCommand("SELECT * FROM BALANCE1  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(MOV3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+                        SqlDataAdapter4 = New SqlClient.SqlDataAdapter(str4)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds4.Clear()
                         SqlDataAdapter4.Fill(ds4, "BALANCE1")
 
@@ -681,11 +856,19 @@ Public Class FormInternalAuditor
 
                 If VX = "6" Then
                     If RB6 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds5 As New DataSet
                         Dim SqlDataAdapter5 As New SqlDataAdapter
                         Dim str5 As New SqlCommand("SELECT * FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
                         SqlDataAdapter5 = New SqlDataAdapter(str5)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds5 As New DataSet
+                        Dim SqlDataAdapter5 As New SqlClient.SqlDataAdapter
+                        Dim str5 As New SqlClient.SqlCommand("SELECT * FROM ALLShares  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(TBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+                        SqlDataAdapter5 = New SqlClient.SqlDataAdapter(str5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds5.Clear()
                         SqlDataAdapter5.Fill(ds5, "ALLShares")
                         rpt7.SetDataSource(ds5)
@@ -709,11 +892,19 @@ Public Class FormInternalAuditor
 
                 If VX = "7" Then
                     If RB7 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds6 As New DataSet
                         Dim SqlDataAdapter6 As New SqlDataAdapter
                         Dim str6 As New SqlCommand("SELECT * FROM CustomersCABLES2  WHERE lo19 ='" & False & "' AND Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
                         SqlDataAdapter6 = New SqlDataAdapter(str6)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds6 As New DataSet
+                        Dim SqlDataAdapter6 As New SqlClient.SqlDataAdapter
+                        Dim str6 As New SqlClient.SqlCommand("SELECT * FROM CustomersCABLES2  WHERE lo19 ='" & False & "' AND Year(Lo2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
+                        SqlDataAdapter6 = New SqlClient.SqlDataAdapter(str6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds6.Clear()
                         SqlDataAdapter6.Fill(ds6, "CustomersCABLES2")
                         rpt8.SetDataSource(ds6)
@@ -733,11 +924,19 @@ Public Class FormInternalAuditor
 
                 If VX = "8" Then
                     If RB8 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds7 As New DataSet
                         Dim SqlDataAdapter7 As New SqlDataAdapter
                         Dim str7 As New SqlCommand("SELECT * FROM Suppliers1  WHERE CAB19 ='" & True & "' AND Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
                         SqlDataAdapter7 = New SqlDataAdapter(str7)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds7 As New DataSet
+                        Dim SqlDataAdapter7 As New SqlClient.SqlDataAdapter
+                        Dim str7 As New SqlClient.SqlCommand("SELECT * FROM Suppliers1  WHERE CAB19 ='" & True & "' AND Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' AND CUser ='" & CUser & "'", Consum)
+                        SqlDataAdapter7 = New SqlClient.SqlDataAdapter(str7)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds7.Clear()
                         SqlDataAdapter7.Fill(ds7, "Suppliers1")
                         rpt8.SetDataSource(ds7)
@@ -756,11 +955,19 @@ Public Class FormInternalAuditor
 
                 If VX = "9" Then
                     If RB9 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds8 As New DataSet
                         Dim SqlDataAdapter8 As New SqlDataAdapter
                         Dim str8 As New SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & False & "' ", Consum)
                         SqlDataAdapter8 = New SqlDataAdapter(str8)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds8 As New DataSet
+                        Dim SqlDataAdapter8 As New SqlClient.SqlDataAdapter
+                        Dim str8 As New SqlClient.SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & False & "' ", Consum)
+                        SqlDataAdapter8 = New SqlClient.SqlDataAdapter(str8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds8.Clear()
                         SqlDataAdapter8.Fill(ds8, "Checks")
                         rpt9.SetDataSource(ds8)
@@ -779,11 +986,19 @@ Public Class FormInternalAuditor
 
                 If VX = "10" Then
                     If RB10 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds9 As New DataSet
                         Dim SqlDataAdapter9 As New SqlDataAdapter
                         Dim str9 As New SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & True & "'", Consum)
                         SqlDataAdapter9 = New SqlDataAdapter(str9)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds9 As New DataSet
+                        Dim SqlDataAdapter9 As New SqlClient.SqlDataAdapter
+                        Dim str9 As New SqlClient.SqlCommand("SELECT * FROM Checks  WHERE  CUser='" & ModuleGeneral.CUser & "' and CH15 ='" & True & "'", Consum)
+                        SqlDataAdapter9 = New SqlClient.SqlDataAdapter(str9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds9.Clear()
                         SqlDataAdapter9.Fill(ds9, "Checks")
 
@@ -802,11 +1017,19 @@ Public Class FormInternalAuditor
                 End If
                 If VX = "11" Then
                     If RB11 = True Then
+<<<<<<< HEAD
                         Dim Consum As New SqlConnection(constring)
                         Dim ds11 As New DataSet
                         Dim SqlDataAdapter11 As New SqlDataAdapter
                         Dim str11 As New SqlCommand("SELECT * FROM InventoryBox  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(LOBOX) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
                         SqlDataAdapter11 = New SqlDataAdapter(str11)
+=======
+                        Dim Consum As New SqlClient.SqlConnection(constring)
+                        Dim ds11 As New DataSet
+                        Dim SqlDataAdapter11 As New SqlClient.SqlDataAdapter
+                        Dim str11 As New SqlClient.SqlCommand("SELECT * FROM InventoryBox  WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(LOBOX) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+                        SqlDataAdapter11 = New SqlClient.SqlDataAdapter(str11)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         ds11.Clear()
                         SqlDataAdapter11.Fill(ds11, "InventoryBox")
                         Dim rpt As New CrystalInventoryBox
@@ -863,7 +1086,11 @@ Public Class FormInternalAuditor
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonEnquiry_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEnquiry.Click
+=======
+    Private Sub ButtonEnquiry_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEnquiry.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Call SearchDataView()
         Catch ex As Exception
@@ -875,12 +1102,21 @@ Public Class FormInternalAuditor
     Private Sub BackgroundWorker2_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker2.DoWork
         Me.CircularProgress2.Visible = True
         Me.CircularProgress2.IsRunning = True
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT  CUser, COUser    FROM COMPANY WHERE CMP2 ='" & Me.ComboAssociationName.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT  CUser, COUser    FROM COMPANY WHERE CMP2 ='" & Me.ComboAssociationName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -925,7 +1161,11 @@ Public Class FormInternalAuditor
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ComboAssociationName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboAssociationName.SelectedIndexChanged
+=======
+    Private Sub ComboAssociationName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboAssociationName.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.CircularProgress2.Value = 0
         Me.BackgroundWorker2.WorkerSupportsCancellation = True
@@ -933,22 +1173,38 @@ Public Class FormInternalAuditor
         Me.BackgroundWorker2.RunWorkerAsync()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewDocuments.Click
         Try
             Dim ds41 As New DataSet
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewDocuments.Click
+        Try
+            Dim ds41 As New DataSet
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim f As New FormDOCUMENTS
             ds41.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand("SELECT DOC1, LO FROM DOCUMENTS  WHERE   LO ='" & "BU" & Me.TextAssociationNationalNumber.Text & "'ORDER BY DOC1", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds41.Clear()
             SqlDataAdapter1.Fill(ds41, "DOCUMENTS")
             Consum.Close()
             If ds41.Tables(0).Rows.Count > 0 Then
+<<<<<<< HEAD
                 Dim Year As Integer = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
                 f.XU = "BU" & Year & Me.TextAssociationNationalNumber.Text
+=======
+                f.XU = "BU" & Me.TextAssociationNationalNumber.Text
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 f.BUD = True
                 f.Show()
                 f.Ts_TextChanged()
@@ -963,7 +1219,11 @@ Public Class FormInternalAuditor
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAttachDocument.Click
+=======
+    Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAttachDocument.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1004,7 +1264,11 @@ Public Class FormInternalAuditor
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonApproval_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonApproval.Click
+=======
+    Private Sub ButtonApproval_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonApproval.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         'AccountantA = False
         'FinanceAuditA = True
@@ -1028,10 +1292,17 @@ Public Class FormInternalAuditor
                 MsgBox("الرجاء تحديد الجمعية والنقر على امر استعلام ... ", 16, "تنبيه")
                 Exit Sub
             Else
+<<<<<<< HEAD
                 Dim Consum As New SqlConnection(constring)
                 'MAXIDBudget()
                 Dim SQL As New SqlCommand(" Update FinancialList SET    FL6 = @FL6, FL10 = @FL10, FL11 = @FL11, FL12 = @FL12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
                 Dim CMD As New SqlCommand With {
+=======
+                Dim Consum As New SqlClient.SqlConnection(constring)
+                'MAXIDBudget()
+                Dim SQL As New SqlCommand(" Update FinancialList SET    FL6 = @FL6, FL10 = @FL10, FL11 = @FL11, FL12 = @FL12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }
@@ -1073,16 +1344,27 @@ Public Class FormInternalAuditor
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ButtonRefusal_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonRefusal.Click
+=======
+    Private Sub ButtonRefusal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonRefusal.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.IDFL1.Text = Nothing Then
                 MsgBox("الرجاء تحديد الجمعية والنقر على امر استعلام ... ", 16, "تنبيه")
                 Exit Sub
             Else
+<<<<<<< HEAD
                 Dim Consum As New SqlConnection(constring)
                 'MAXIDBudget()
                 Dim SQL As New SqlCommand(" Update FinancialList SET    FL6 = @FL6, FL10 = @FL10, FL11 = @FL11, FL12 = @FL12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
                 Dim CMD As New SqlCommand With {
+=======
+                Dim Consum As New SqlClient.SqlConnection(constring)
+                'MAXIDBudget()
+                Dim SQL As New SqlCommand(" Update FinancialList SET    FL6 = @FL6, FL10 = @FL10, FL11 = @FL11, FL12 = @FL12, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDFL = @IDFL", Consum)
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }

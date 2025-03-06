@@ -1,6 +1,10 @@
 ﻿Imports System.Diagnostics
 Public Class FormUpdate
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+=======
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For OP As Integer = 100 To 10 Step -1
             Me.Opacity = OP / 100
             Me.Refresh()
@@ -9,7 +13,11 @@ Public Class FormUpdate
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Update_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Click
+=======
+    Private Sub Update_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Timer1.Enabled = False
         Me.Close()
@@ -24,7 +32,11 @@ Public Class FormUpdate
         Me.Timer1.Enabled = True
         Me.Left = My.Computer.Screen.WorkingArea.Width - Me.Width
         Me.Top = My.Computer.Screen.WorkingArea.Height - Me.Height
+<<<<<<< HEAD
         Dim Sound As IO.Stream = My.Resources.Right_Anser1
+=======
+        Dim Sound As System.IO.Stream = My.Resources.Right_Anser1
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
 

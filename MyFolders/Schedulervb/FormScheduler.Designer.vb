@@ -27,7 +27,11 @@ Partial Class FormScheduler
         Me.SchedulerControl1 = New DevExpress.XtraScheduler.SchedulerControl()
         Me.SchedulerDataStorage1 = New DevExpress.XtraScheduler.SchedulerDataStorage(Me.components)
         Me.AppointmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+<<<<<<< HEAD
         Me.DataSetScheduler = New CC_JO.DataSetScheduler()
+=======
+        Me.DataSetScheduler = New DataSetScheduler()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ResourcesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.OpenScheduleItem1 = New DevExpress.XtraScheduler.UI.OpenScheduleItem()
@@ -98,8 +102,13 @@ Partial Class FormScheduler
         Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.SchedulerBarController1 = New DevExpress.XtraScheduler.UI.SchedulerBarController(Me.components)
+<<<<<<< HEAD
         Me.AppointmentsTableAdapter = New CC_JO.DataSetSchedulerTableAdapters.AppointmentsTableAdapter()
         Me.ResourcesTableAdapter = New CC_JO.DataSetSchedulerTableAdapters.ResourcesTableAdapter()
+=======
+        Me.AppointmentsTableAdapter = New DataSetSchedulerTableAdapters.AppointmentsTableAdapter()
+        Me.ResourcesTableAdapter = New DataSetSchedulerTableAdapters.ResourcesTableAdapter()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.AppointmentRibbonPage1 = New DevExpress.XtraScheduler.UI.AppointmentRibbonPage()
         Me.OptionsRibbonPageGroup1 = New DevExpress.XtraScheduler.UI.OptionsRibbonPageGroup()
         Me.ActionsRibbonPageGroup1 = New DevExpress.XtraScheduler.UI.ActionsRibbonPageGroup()
@@ -144,7 +153,11 @@ Partial Class FormScheduler
         Me.DateNavigator1.Name = "DateNavigator1"
         Me.DateNavigator1.RightToLeftLayout = DevExpress.Utils.DefaultBoolean.[True]
         Me.DateNavigator1.SchedulerControl = Me.SchedulerControl1
+<<<<<<< HEAD
         Me.DateNavigator1.Size = New System.Drawing.Size(383, 353)
+=======
+        Me.DateNavigator1.Size = New System.Drawing.Size(383, 340)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateNavigator1.TabIndex = 0
         Me.DateNavigator1.TodayDate = New Date(2023, 11, 2, 17, 14, 41, 0)
         Me.DateNavigator1.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.MonthView
@@ -759,22 +772,36 @@ Partial Class FormScheduler
         Me.DockPanel1.Controls.Add(Me.DockPanel1_Container)
         Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.DockPanel1.ID = New System.Guid("9bbc49cc-c09c-4123-991a-d0524b996db9")
+<<<<<<< HEAD
         Me.DockPanel1.Location = New System.Drawing.Point(668, 162)
+=======
+        Me.DockPanel1.Location = New System.Drawing.Point(664, 157)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DockPanel1.Name = "DockPanel1"
         Me.DockPanel1.OriginalSize = New System.Drawing.Size(390, 200)
         Me.DockPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.DockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.DockPanel1.SavedIndex = 0
+<<<<<<< HEAD
         Me.DockPanel1.Size = New System.Drawing.Size(390, 382)
+=======
+        Me.DockPanel1.Size = New System.Drawing.Size(390, 389)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DockPanel1.Text = "التقويــم"
         Me.DockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide
         '
         'DockPanel1_Container
         '
         Me.DockPanel1_Container.Controls.Add(Me.DateNavigator1)
+<<<<<<< HEAD
         Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 26)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
         Me.DockPanel1_Container.Size = New System.Drawing.Size(383, 353)
+=======
+        Me.DockPanel1_Container.Location = New System.Drawing.Point(3, 46)
+        Me.DockPanel1_Container.Name = "DockPanel1_Container"
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(383, 340)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DockPanel1_Container.TabIndex = 0
         '
         'SchedulerBarController1
@@ -874,6 +901,10 @@ Partial Class FormScheduler
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
         Me.Name = "FormScheduler"
         Me.Ribbon = Me.RibbonControl1
+<<<<<<< HEAD
+=======
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.StatusBar = Me.RibbonStatusBar1

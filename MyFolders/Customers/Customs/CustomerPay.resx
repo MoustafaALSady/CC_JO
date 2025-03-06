@@ -1656,13 +1656,21 @@
     <value>False</value>
   </data>
   <data name="StatusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+<<<<<<< HEAD
     <value>0, 310</value>
+=======
+    <value>0, 307</value>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   </data>
   <data name="StatusStrip1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
   <data name="StatusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+<<<<<<< HEAD
     <value>478, 22</value>
+=======
+    <value>477, 22</value>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   </data>
   <data name="StatusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>983</value>
@@ -1692,7 +1700,11 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+<<<<<<< HEAD
     <value>478, 332</value>
+=======
+    <value>477, 329</value>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 8.25pt</value>

@@ -157,7 +157,10 @@ Partial Class FormLASTAConvertingchecks
         Me.ClientSize = New System.Drawing.Size(1081, 342)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(600, 250)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormLASTAConvertingchecks"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "الاستعلام عن الشيكات"

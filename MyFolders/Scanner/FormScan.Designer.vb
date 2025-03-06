@@ -469,7 +469,10 @@ Partial Class FormScan
         Me.LabFileName.ForeColor = System.Drawing.Color.Black
         Me.LabFileName.Location = New System.Drawing.Point(233, 29)
         Me.LabFileName.Name = "LabFileName"
+<<<<<<< HEAD
         Me.LabFileName.RightToLeft = System.Windows.Forms.RightToLeft.No
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabFileName.Size = New System.Drawing.Size(11, 15)
         Me.LabFileName.TabIndex = 441
         Me.LabFileName.Text = "-"
@@ -483,7 +486,10 @@ Partial Class FormScan
         Me.LablImagespath.ForeColor = System.Drawing.Color.Black
         Me.LablImagespath.Location = New System.Drawing.Point(233, 6)
         Me.LablImagespath.Name = "LablImagespath"
+<<<<<<< HEAD
         Me.LablImagespath.RightToLeft = System.Windows.Forms.RightToLeft.No
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LablImagespath.Size = New System.Drawing.Size(11, 15)
         Me.LablImagespath.TabIndex = 2
         Me.LablImagespath.Text = "-"
@@ -570,7 +576,10 @@ Partial Class FormScan
         Me.Controls.Add(Me.Panel3)
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.HCO3
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(900, 500)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FormScan"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

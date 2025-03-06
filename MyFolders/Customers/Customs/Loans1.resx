@@ -151,6 +151,7 @@
   <data name="ButtonTransferOfInstallmentsReceived.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+<<<<<<< HEAD
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALNSURBVDhPhVJrSJNRGFZTK838ob/6Kf3wT1BZf4LyR3YB
         S0YgkimkGHltUhOVMkkrjBQjUyl1ps6Zlzm3dEMTLzQNmTqRvEzFBZK3OXdx2zc/zadzvk+sSOqFh/Oe
         9zzPc3jPe9z+E57CigGklPZKwiIz/cnegy//O9wJKNGTwJcadEys4F7VgD46t/rkbp1y9g2PcxHxfvGF
@@ -164,6 +165,21 @@
         PGQjqCGolfG5qlePBFEdNThMDWh4BZ6IDgkKLzF4Bpw9s7hshsW2CeM6g5qWEaySleJ9yzBZXTCTs7j0
         amrgw8v5D0FHQgtH29Q6jrRCRNXNVMTs5XSliEmt+sPg9/BuVAz2xKaJEZsq5oi3UigqOUQnV+JmUgWi
         Esp6CPevL02DflF64LuLI/uA1gnHzeMnDSr0XOt+ps4AAAAASUVORK5CYII=
+=======
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALNSURBVDhPhVJdSJNRGNalVpp5oVddShfeBJV1E5QX2Q9Y
+        MgKRTCHFSJ2m1ESlTNIKI0XJVMrpUqfmz5zzZ0ORTckZMt1E8mcqLpD8n5tz2zen+XTO94kVSr3wcN7z
+        nud5Du95j9t/wiO1QgNBqVoSGpHhR/Y8rvzvcCegRA8CH2rQNb6MR5UaQ1SO+OxenXIODd6l8DjfuIJO
+        4cMSlUZQ3OsSlH+BdhMYWrIjWzzsuP+mPYnwqMmB4N1OKjwdW9TzrUgxiY6JFehNW5hhgF4LoLbsYnRj
+        Bw/e9YFwj3KS3+EeGBzqF53fPSnqN0L1w4HUj4PgP5MjTayF0gRIDBvgZzc5z0cWpBL+MQLa5n4rHuEZ
+        DZmvpGOQTVsQlt6M0sZBjE9/R+TLbuR2ToEvrIdu3Ai7nUH/11n0Dkz1Ed0RTk4cb2VKtVVDC4grVuP9
+        5wE4HA7YbDaEZ3ch5bUUi8tr2LCSGrMNq82FnEIFbcWTFRME3EiXuZqMDEISJJgwzLFil8tFbrSDYRgw
+        ThdalGMwWZyw2l3Iym+nBl5ulxObZq8kSxFCIDI4cO2xHHQfk6fE4ooZDe2jLOrb9aiXc3nPwAyEua3c
+        YwbdfHo94kXHtsa0g+r5XfSvbuNqQg0GtJNwklvr5HqsWRj25ro2mjuxsbmF1OdN+9PwDuIXvo39oEPZ
+        3E/cyetGfrmCfYN1qxMSmR6rZieLWpkOq9SAvEFiVj01oO2Tcfie8g/il2qFynn4n3syZDabyQSWUNOq
+        4yAdQTVBjZTLFWoD4oW11OA4NaDhGXAmKjgwrMTo4X/xwsKSGRbrFlbXGVS3jGCFrBSfWobJ6oSZnMWm
+        iamBNyfnPgQdCS2cbFPqWdIyEYmbqYjZz+lKEZ1c+ZfBn+HVKB9UxaRUISa5iiXeE1CIWEQliXA3sQKR
+        8WUqwj3wpWnQL0oPfPZw4hDQOuG48X4BHAb0YR6UcaQAAAAASUVORK5CYII=
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 </value>
   </data>
   <data name="ToolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

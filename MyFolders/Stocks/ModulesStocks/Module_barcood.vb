@@ -468,7 +468,11 @@ Module Module_barcood
         Dim GraphZ As Graphics = Graphics.FromImage(bmp)
         Dim RectZ As New Rectangle(0, 0, bmp.Width, bmp.Height) ' مستطيل بحجم الصورة لاعطاء الخلفية باللون الابيض
         ' فرشاه لدهان المستطيل السابق باللون الابيض
+<<<<<<< HEAD
         Dim myBrush As Brush = New Drawing2D.LinearGradientBrush(RectZ, Color.White, Color.White, Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal)
+=======
+        Dim myBrush As Brush = New Drawing.Drawing2D.LinearGradientBrush(RectZ, Color.White, Color.White, Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ' دهان المستطيل السابق باللون الابيض
         GraphZ.FillRectangle(myBrush, RectZ)
         '  رسم خطوط الباركود

@@ -132,6 +132,7 @@
   <metadata name="LO11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<<<<<<< HEAD
   <metadata name="DOC1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -177,6 +178,8 @@
   <metadata name="LO25.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   <metadata name="Lo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -234,6 +237,7 @@
   <metadata name="loa14.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<<<<<<< HEAD
   <metadata name="InstallmentID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -285,6 +289,8 @@
   <metadata name="LOK1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   <metadata name="lokA.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -317,7 +323,11 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABg
+<<<<<<< HEAD
         EQAAAk1TRnQBSQFMAgEBBgEAAXgBDAF4AQwBEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+=======
+        EQAAAk1TRnQBSQFMAgEBBgEAAUgBDAFIAQwBEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AwABIAMAAQEBAAEQBgABECQAAd4BewHRATEB7AEQARMBOgH/AX8QAAF7AW8BOQFnAVoBa14AAbEBKQHX
         AR0BGgEiATsBJgHXASEBLwEVAXQBRggAAf8BfwH2AV4BeQEuAVwBHgEzAToBOQFnATEBRloAAjYBXAEm
         ATsBXwYAAT4BSwFRARUB3gF7AgAB/wF/AZQBUgHdATYBvQEuAZwBKgG8ATYB0wElARgBYwEYAWMBUgFK

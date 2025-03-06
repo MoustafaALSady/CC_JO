@@ -1584,7 +1584,10 @@ Partial Class Form_ASTRJAA
         Me.ForeColor = System.Drawing.Color.Black
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1100, 550)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "Form_ASTRJAA"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "عملية استرجاع"

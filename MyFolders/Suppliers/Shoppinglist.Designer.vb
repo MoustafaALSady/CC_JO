@@ -85,12 +85,20 @@ Partial Class Shoppinglist
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
+=======
+        Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CheckBox1.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.White
         Me.CheckBox1.Location = New System.Drawing.Point(1, 3)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+<<<<<<< HEAD
         Me.CheckBox1.Size = New System.Drawing.Size(63, 21)
+=======
+        Me.CheckBox1.Size = New System.Drawing.Size(61, 21)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CheckBox1.TabIndex = 738
         Me.CheckBox1.Text = "‰‹‹‹ﬁ‹œÌ"
         Me.CheckBox1.UseVisualStyleBackColor = False

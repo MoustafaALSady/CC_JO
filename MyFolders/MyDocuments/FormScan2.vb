@@ -29,10 +29,17 @@ Public Class FormScan2
         Next
         If Me.ComboScanners.Items.Count > 0 Then Me.ComboScanners.SelectedIndex = 0
     End Sub
+<<<<<<< HEAD
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As EventArgs)
         EZTwain.SelectTwainsource(0)
     End Sub
     Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButScan.Click
+=======
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        EZTwain.SelectTwainsource(0)
+    End Sub
+    Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButScan.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'If My.Computer.FileSystem.FileExists(Application.StartupPath & "MyImage.Bmp") = True Then
         '    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "MyImage.Bmp")
         'End If
@@ -46,7 +53,11 @@ Public Class FormScan2
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButSave_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButSave.Click
+=======
+    Private Sub ButSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButSave.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If OFD.FileName = "" Then
             MsgBox("لم يتم تحديد صورة")
             'Button1.Select()
@@ -79,7 +90,11 @@ Public Class FormScan2
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormScan2_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormScan2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
             Application.DoEvents()
@@ -131,7 +146,11 @@ Public Class FormScan2
             Exit Sub
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Threading.Thread.Sleep(100)
         MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
         If Not IO.Directory.Exists(MYFOLDER & "\FailImag") Then Directory.CreateDirectory(MYFOLDER & "\FolderImageName")
@@ -153,7 +172,11 @@ Public Class FormScan2
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub Panel_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles _
+=======
+    Private Sub Panel_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          Panel5.MouseDown, Panel6.MouseDown, Panel7.MouseDown, Panel8.MouseDown, Panel9.MouseDown,
         Panel10.MouseDown, PictureBox1.MouseDown, PictureBox2.MouseDown
 
@@ -161,7 +184,11 @@ Public Class FormScan2
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
+<<<<<<< HEAD
     Private Sub Panel_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles _
+=======
+    Private Sub Panel_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          Panel5.MouseMove, Panel6.MouseMove, Panel7.MouseMove, Panel8.MouseMove, Panel9.MouseMove,
         Panel10.MouseMove, PictureBox1.MouseMove, PictureBox2.MouseMove
         If Drag = True Then
@@ -169,23 +196,39 @@ Public Class FormScan2
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Panel_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles _
+=======
+    Private Sub Panel_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
          Panel5.MouseUp, Panel6.MouseUp, Panel7.MouseUp, Panel8.MouseUp, Panel9.MouseUp,
          Panel10.MouseUp, PictureBox1.MouseUp, PictureBox2.MouseUp
         Drag = False
     End Sub
+<<<<<<< HEAD
     Private Sub FormScan2_MouseDown(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseDown
+=======
+    Private Sub FormScan2_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = True
         MouseX = Cursor.Position.X - Me.Left
         MouseY = Cursor.Position.Y - Me.Top
     End Sub
+<<<<<<< HEAD
     Private Sub FormScan2_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseMove
+=======
+    Private Sub FormScan2_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Drag = True Then
             Me.Left = Cursor.Position.X - MouseX
             Me.Top = Cursor.Position.Y - MouseY
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub FormScan2_MouseUp(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Me.MouseUp
+=======
+    Private Sub FormScan2_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Drag = False
     End Sub
 

@@ -10,8 +10,13 @@ Public Class FrmJPG0
 
     Public ID As Integer
 
+<<<<<<< HEAD
     Dim FileStream As FileStream
     Dim Reader As BinaryReader = Nothing 'طريقة قرائة الملفات
+=======
+    Dim FileStream As System.IO.FileStream
+    Dim Reader As System.IO.BinaryReader = Nothing 'طريقة قرائة الملفات
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim FileData As Byte() = Nothing           'لحفظ الملف
     Dim FileType As String = ""               ' نوع الملف
     Private ReadOnly FileType1 As String
@@ -88,7 +93,11 @@ Public Class FrmJPG0
         If String.IsNullOrWhiteSpace(MyFileInfo.Extension) Then Exit Sub
         Me.ShowMyFileInfo()
     End Sub
+<<<<<<< HEAD
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+=======
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Threading.Thread.Sleep(100)
         MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
         If Not IO.Directory.Exists(MYFOLDER & "\FailImag") Then Directory.CreateDirectory(MYFOLDER & "\FolderImageName")
@@ -101,14 +110,22 @@ Public Class FrmJPG0
 
 
 
+<<<<<<< HEAD
     Private Sub FrmJPG0_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
+=======
+    Private Sub FrmJPG0_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.Dispose()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmJPG0_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmJPG0_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -143,7 +160,11 @@ Public Class FrmJPG0
         Me.ADDBUTTON.Enabled = LockAddRow
         Me.SAVEBUTTON.Enabled = LockSave
     End Sub
+<<<<<<< HEAD
     Private Sub FrmJPG0_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmJPG0_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -158,7 +179,11 @@ Public Class FrmJPG0
         FillcombByScanners()
         DockStyl = True
     End Sub
+<<<<<<< HEAD
     Public Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Public Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Not Connection.TestNet Then
                 Interaction.MsgBox("الاتصال بالانترنت غير متوفر", MsgBoxStyle.Critical, "تنبيه")
@@ -170,8 +195,12 @@ Public Class FrmJPG0
                 Exit Sub
             End If
             GetAutoNumberMyDOCUMENTS()
+<<<<<<< HEAD
             Dim Year As Integer = Mid(Val(FiscalYear_currentDateMustBeInFiscalYear()), 3, 2)
             Dim NumberDOCUMENTS As Object = "DO" & Year & SEARCHDATA.NumberMyDocuments
+=======
+            Dim NumberDOCUMENTS As Object = "DO" & NoMyDocuments
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             GetAutoNumberMyDOCUMENTSFL(NumberDOCUMENTS)
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
@@ -191,13 +220,21 @@ Public Class FrmJPG0
             Me.TEXTFileNo.Text = SEARCHDATA.NumberMyDOCUMENTSFL
             Me.DateP1.Text = ServerDateTime.ToString("yyyy-MM-dd")
             Me.TEXTFileNo.Focus()
+<<<<<<< HEAD
             Dim Sound As Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error96", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -216,7 +253,11 @@ Public Class FrmJPG0
             MessageBox.Show(ex.Message, "Error96", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButScan.Click
+=======
+    Private Sub ButScan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButScan.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Dim scan As New FormScan1
         'Dim f As FormScan1 = New FormScan1(AddressOf ShowImage)
         'f.Show()
@@ -231,7 +272,11 @@ Public Class FrmJPG0
         PictureBox1.Image = image
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButSaveFile_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButSaveFile.Click
+=======
+    Private Sub ButSaveFile_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButSaveFile.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim bmap As Image
         Clipboard.SetImage(Me.PictureBox1.Image)
@@ -263,7 +308,11 @@ Public Class FrmJPG0
     Shared Function GetFileDescription(ByVal filePath As String) As String
         Dim regKey As RegistryKey = Nothing
         Try
+<<<<<<< HEAD
             regKey = Registry.ClassesRoot.OpenSubKey(New FileInfo(filePath).Extension)
+=======
+            regKey = Registry.ClassesRoot.OpenSubKey(New System.IO.FileInfo(filePath).Extension)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If regKey IsNot Nothing Then
                 Dim className As String = regKey.GetValue("")
                 If className.Length > 0 Then
@@ -288,7 +337,11 @@ Public Class FrmJPG0
         On Error Resume Next
         Dim Consum As New SqlConnection(ModuleGeneral.constring)
         Dim SQL As String = " Update DOCUMENTS SET  DOC5 = @DOC5 WHERE DOC1 = @DOC1"
+<<<<<<< HEAD
         Dim CMD As New SqlCommand With {
+=======
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -313,7 +366,11 @@ Public Class FrmJPG0
         Dim V As Integer
         Dim Consum As New SqlConnection(ModuleGeneral.constring)
         Dim SQL As New SqlCommand("SELECT MAX(DOC1) FROM MYDOCUMENTSHOME", Consum)
+<<<<<<< HEAD
         Dim CMD As New SqlCommand
+=======
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -329,7 +386,11 @@ Public Class FrmJPG0
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ButLogq_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButLogq.Click
+=======
+    Private Sub ButLogq_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButLogq.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.op.Title = "اضافة الملفات"
         Me.op.Filter = "All Files|*.*"
         If Me.op.ShowDialog <> DialogResult.Cancel Then
@@ -384,7 +445,11 @@ Public Class FrmJPG0
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub ButEditImage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButEditImage.Click
+=======
+    Private Sub ButEditImage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButEditImage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Static P As Integer
         P = Me.BS.Position
@@ -392,7 +457,11 @@ Public Class FrmJPG0
         Me.FrmJPG0_Load(sender, e)
         Me.BS.Position = P
     End Sub
+<<<<<<< HEAD
     Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.PictureBox1.Dock = DockStyle.None Then
             Me.PictureBox1.BringToFront()
             Me.PictureBox1.Dock = DockStyle.Fill
@@ -430,7 +499,11 @@ Public Class FrmJPG0
                 command2.Connection = Consum
                 command2.Parameters.Add("@DOC1", SqlDbType.Int).Value = Me.TEXTBOX1.Text
                 command2.Parameters.Add("@LO", SqlDbType.NVarChar).Value = Me.TextLO.Text
+<<<<<<< HEAD
                 command2.Parameters.Add("@DOC2", SqlDbType.NVarChar).Value = Me.TEXTFileNo.Text
+=======
+                command2.Parameters.Add("@DOC2", SqlDbType.Int).Value = Me.TEXTFileNo.Text
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 command2.Parameters.Add("@DOC3", SqlDbType.NVarChar).Value = Me.FileType
                 command2.Parameters.Add("@DOC4", SqlDbType.NVarChar).Value = Me.TEXTFileSubject.Text
                 command2.Parameters.Add("@DOC5", SqlDbType.NVarChar).Value = Me.TextFileDescription.Text

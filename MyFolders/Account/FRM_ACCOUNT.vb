@@ -1,10 +1,17 @@
 Imports System.Data.SqlClient
 Imports System.Guid
 Public Class FRM_ACCOUNT
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Public Delegate Sub LoadDataBaseCallBack()
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -25,7 +32,11 @@ Public Class FRM_ACCOUNT
     Dim ACCA As Integer
 
 
+<<<<<<< HEAD
     Private Sub FRM_ACCOUNT_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FRM_ACCOUNT_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         'Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -53,7 +64,11 @@ Public Class FRM_ACCOUNT
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("SELECT    ACC1, GUID, END_ACCOUNT, PARTENT_ACCOUNT, COUINT_ACCOUNT, ACC, account_no, account_name, ACC4, account_belong, ACC6, ACC7, ACC8, ACC9, ACC10, ACC11, ACC12 FROM ACCOUNTSTREE WHERE account_no='" & TB1 & "'", Consum)
 
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
@@ -207,7 +222,11 @@ Public Class FRM_ACCOUNT
             MessageBox.Show(ex.ToString, "Œÿ«¡", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button3.Click
+=======
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TextACC1.Text = 0 Then
             MsgBox("ÌÃ»  ÕœÌœ Õ”«» «·«»", 16, " ‰»ÌÂ")
             Exit Sub
@@ -220,7 +239,11 @@ Public Class FRM_ACCOUNT
 
     Sub UPDATE_CODEAA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim selectCommand As New SqlCommand("SELECT DISTINCT acc1 FROM ACCOUNTSTREE WHERE PARTENT_ACCOUNT = '" & TXT_PARENT_GUID.Text & " '", Consum)
             Dim dataSet As New DataSet
             Dim adapter As New SqlDataAdapter(selectCommand)
@@ -262,8 +285,13 @@ Public Class FRM_ACCOUNT
                 End If
                 row(0) = Me.TextACC1.Text & Me.TXT_Account_NO1.Text & r1 + 1
                 row.EndEdit()
+<<<<<<< HEAD
                 Dim SQL As New SqlCommand(" UPDATE ACCOUNTSTREE SET  account_no=@account_no  WHERE ACC1  = '" & ACCA & "'", Consum)
                 Dim CMD As New SqlCommand With {
+=======
+                Dim SQL As New SqlClient.SqlCommand(" UPDATE ACCOUNTSTREE SET  account_no=@account_no  WHERE ACC1  = '" & ACCA & "'", Consum)
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }
@@ -291,7 +319,11 @@ Public Class FRM_ACCOUNT
     Sub UPDATE_CODE()
 
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim UPDATE_STRING As String = "UPDATE [ACCOUNTSTREE] SET [account_no]=@account_no WHERE GUID= '" & TXT_GUID.Text & "'"
             Dim CMD As New SqlCommand(UPDATE_STRING, Consum)
             CMD.Parameters.Add(New SqlParameter("@account_no", SqlDbType.VarChar)).Value = CODE1
@@ -320,7 +352,11 @@ Public Class FRM_ACCOUNT
             Else
                 COUNT_ = 1
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim UPDATE_STRING As String = "UPDATE ACCOUNTSTREE SET COUINT_ACCOUNT=@COUINT_ACCOUNT WHERE GUID= '" & GUID & "'"
             Dim CMD As New SqlCommand(UPDATE_STRING, Consum)
             CMD.Parameters.Add(New SqlParameter("@COUINT_ACCOUNT", SqlDbType.Int)).Value = COUNT_
@@ -341,9 +377,15 @@ Public Class FRM_ACCOUNT
             GENRAT()
             Dim PARENTGUID_OLD As String = CLS_ACCOUNTS.SHOW_PARENTGUID(TXT_GUID.Text).Rows(0)(0).ToString
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As New SqlCommand("UPDATE ACCOUNTSTREE SET  ACC = @ACC, GUID = @GUID, END_ACCOUNT = @END_ACCOUNT, PARTENT_ACCOUNT = @PARTENT_ACCOUNT, COUINT_ACCOUNT = @COUINT_ACCOUNT, account_no = @account_no, account_name = @account_name, ACC4 = @ACC4, account_belong = @account_belong, ACC7 = @ACC7, ACC8 = @ACC8, ACC9 = @ACC9, ACC10 = @ACC10, ACC11 = @ACC11, ACC12 = @ACC12 WHERE ACC1 ='" & Me.TextACC11.Text & "'", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As New SqlCommand("UPDATE ACCOUNTSTREE SET  ACC = @ACC, GUID = @GUID, END_ACCOUNT = @END_ACCOUNT, PARTENT_ACCOUNT = @PARTENT_ACCOUNT, COUINT_ACCOUNT = @COUINT_ACCOUNT, account_no = @account_no, account_name = @account_name, ACC4 = @ACC4, account_belong = @account_belong, ACC7 = @ACC7, ACC8 = @ACC8, ACC9 = @ACC9, ACC10 = @ACC10, ACC11 = @ACC11, ACC12 = @ACC12 WHERE ACC1 ='" & Me.TextACC11.Text & "'", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -390,7 +432,11 @@ Public Class FRM_ACCOUNT
     Public Sub ConnectData()
         On Error Resume Next
         If TestNet = True Then
+<<<<<<< HEAD
             Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+            Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -441,7 +487,11 @@ Public Class FRM_ACCOUNT
                     Me.Cursor = Cursors.WaitCursor
                     'Me.TextACC11.Clear()
                     Me.PictureBox2.Visible = True
+<<<<<<< HEAD
                     Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+                    Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                         .WorkerReportsProgress = True,
                         .WorkerSupportsCancellation = True
                     }
@@ -469,7 +519,11 @@ Public Class FRM_ACCOUNT
             End If
             'Dim f As New FormTreeView
             'Call f.Refsh()
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox(" „  ⁄„·Ì… «·Õ›Ÿ ›Ì ﬁ«⁄œ… «·»Ì«‰«  »‰Ã«Õ", 64 + 524288, "‰Ã«Õ «·Õ›Ÿ Ê«· €ÌÌ—«  Ê«· ÕœÌÀ")
         Catch Ex As Exception
@@ -486,7 +540,11 @@ Public Class FRM_ACCOUNT
             Me.PictureBox5.Visible = False
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
     End Sub
     Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles RefreshTab.DoWork
@@ -528,7 +586,11 @@ Public Class FRM_ACCOUNT
             MessageBox.Show(Ex.Message, "ErrorRefreshData_RunWorkerCompleted", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -539,10 +601,17 @@ Public Class FRM_ACCOUNT
                 MsgBox("⁄›Ê« .. ﬁ«„ «·√œ„‰ »„‰⁄ Œ«’Ì… «÷«›… Ê ⁄œÌ· «·”Ã·«  „‰ «·»—‰«„Ã", 16, " ‰»ÌÂ")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strsql1 As New SqlCommand("SELECT DISTINCT MOVD4 FROM MOVESDATA WHERE MOVD4 = '" & Me.TXT_Account_NO.Text.Trim & "'", Consum)
             Dim ds1 As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT MOVD4 FROM MOVESDATA WHERE MOVD4 = '" & Me.TXT_Account_NO.Text.Trim & "'", Consum)
+            Dim ds1 As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Adp1.Fill(ds1, "MOVESDATA")
             If ds1.Tables(0).Rows.Count > 0 Then
@@ -559,7 +628,11 @@ Public Class FRM_ACCOUNT
             Me.SaveRECORD()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -578,10 +651,17 @@ Public Class FRM_ACCOUNT
     End Sub
     Private Sub SEARCHUSERS()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT account_name  FROM ACCOUNTSTREE  WHERE (ACCOUNTSTREE.account_name)='" & Me.TXT_Account_Name.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT account_name  FROM ACCOUNTSTREE  WHERE (ACCOUNTSTREE.account_name)='" & Me.TXT_Account_Name.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "ACCOUNTSTREE")
         If ds.Tables(0).Rows.Count >= 1 Then
@@ -594,7 +674,11 @@ Public Class FRM_ACCOUNT
         Adp1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox3_LostFocus(ByVal sender As Object, ByVal e As EventArgs) Handles TXT_Account_Name.LostFocus
+=======
+    Private Sub TextBox3_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TXT_Account_Name.LostFocus
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
 
     End Sub
@@ -603,9 +687,15 @@ Public Class FRM_ACCOUNT
             GENRAT()
             Dim GUID_ As Guid = NewGuid()
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("INSERT INTO ACCOUNTSTREE( acc,GUID, COUINT_ACCOUNT, account_no, account_name, acc4, account_belong, acc6, acc7, acc8, acc9, acc12) VALUES     ( @acc,@GUID, @COUINT_ACCOUNT, @account_no, @account_name, @acc4, @account_belong, @acc6, @acc7, @acc8, @acc9, @acc12)", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO ACCOUNTSTREE( acc,GUID, COUINT_ACCOUNT, account_no, account_name, acc4, account_belong, acc6, acc7, acc8, acc9, acc12) VALUES     ( @acc,@GUID, @COUINT_ACCOUNT, @account_no, @account_name, @acc4, @account_belong, @acc6, @acc7, @acc8, @acc9, @acc12)", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -639,9 +729,15 @@ Public Class FRM_ACCOUNT
     End Sub
     Private Sub UPDATEMOVESDATA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" UPDATE MOVESDATA SET  MOVD3 = @MOVD3,  MOVD4 = @MOVD4,  MOVD8 = @MOVD8  WHERE MOVD4 = '" & Me.TXT_Account_NO.Text.Trim & "'", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand(" UPDATE MOVESDATA SET  MOVD3 = @MOVD3,  MOVD4 = @MOVD4,  MOVD8 = @MOVD8  WHERE MOVD4 = '" & Me.TXT_Account_NO.Text.Trim & "'", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -664,7 +760,11 @@ Public Class FRM_ACCOUNT
             Consum.Close()
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -699,10 +799,17 @@ Public Class FRM_ACCOUNT
             End If
 
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strsql1 As New SqlCommand("SELECT DISTINCT MOVD4 FROM MOVESDATA WHERE MOVD4 = '" & Me.TXT_Account_NO.Text & "'", Consum)
             Dim ds1 As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT MOVD4 FROM MOVESDATA WHERE MOVD4 = '" & Me.TXT_Account_NO.Text & "'", Consum)
+            Dim ds1 As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Adp1.Fill(ds1, "MOVESDATA")
             If ds1.Tables(0).Rows.Count > 0 Then
@@ -721,7 +828,11 @@ Public Class FRM_ACCOUNT
             Me.UPDATERECORD()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -736,7 +847,11 @@ Public Class FRM_ACCOUNT
             MessageBox.Show(ex.Message, "ErrorEDITBUTTON", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BtnSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnSearch.Click
+=======
+    Private Sub BtnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             Dim F As New FRM_ALL_ACC
@@ -752,7 +867,11 @@ Public Class FRM_ACCOUNT
             MessageBox.Show(ex.ToString)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Text_ACC_FATHER_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Text_ACC_FATHER.TextChanged
+=======
+    Private Sub Text_ACC_FATHER_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Text_ACC_FATHER.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         'Dim PARENTGUID_OLD1 As String = CLS_ACC.SHOW_PARENTGUID1(Me.TXT_GUID.Text).Rows(0)(0).ToString
         'MsgBox(PARENTGUID_OLD1.ToString)
@@ -763,21 +882,33 @@ Public Class FRM_ACCOUNT
         'TXT_Account_NO.Text = CODE_
     End Sub
 
+<<<<<<< HEAD
     Private Sub TXT_PARENT_GUID_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TXT_PARENT_GUID.TextChanged
+=======
+    Private Sub TXT_PARENT_GUID_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXT_PARENT_GUID.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TXT_PARENT_GUID.Text <> Nothing Then
             SHOW_FATHER()
         End If
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub TXT_GUID_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TXT_GUID.TextChanged
+=======
+    Private Sub TXT_GUID_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXT_GUID.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.TXT_GUID.Text <> Nothing Then
             SHOW_ACCOUNT()
         End If
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub BtnSearch1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnSearch1.Click
+=======
+    Private Sub BtnSearch1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSearch1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             Dim F As New FRM_ALL_ACC

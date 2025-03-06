@@ -1,12 +1,20 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form_finddd
+<<<<<<< HEAD
     Private Sub Form_finddd_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Me.KeyPress
+=======
+    Private Sub Form_finddd_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             SearchBUTTON_Click(sender, e)
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Texser_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Texser.KeyPress
+=======
+    Private Sub Texser_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Texser.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Asc(e.KeyChar) = Keys.Enter Then
             SearchBUTTON_Click(sender, e)
@@ -20,10 +28,17 @@ Public Class Form_finddd
             Me.Close()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SearchBUTTON.Click
         Try
             Dim f As New FrmStocks1
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub SearchBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBUTTON.Click
+        Try
+            Dim f As New FrmStocks1
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -55,7 +70,11 @@ Public Class Form_finddd
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub Form_finddd_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form_finddd_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)

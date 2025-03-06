@@ -38,10 +38,17 @@ Partial Class FormEmployees3
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
         Me.TimeAttendance = New DevExpress.XtraEditors.TimeEdit()
         Me.TEXTOvertimeHours = New DevExpress.XtraEditors.TextEdit()
         Me.TimeToLeave = New DevExpress.XtraEditors.TimeEdit()
         Me.TEXTBasicWorkingHours = New DevExpress.XtraEditors.TextEdit()
+=======
+        Me.TEXTOvertimeHours = New DevExpress.XtraEditors.TextEdit()
+        Me.TEXTBasicWorkingHours = New DevExpress.XtraEditors.TextEdit()
+        Me.TimeToLeave = New System.Windows.Forms.DateTimePicker()
+        Me.TimeAttendance = New System.Windows.Forms.DateTimePicker()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXT1 = New System.Windows.Forms.Label()
         Me.TextOvertimeHourValue = New DevExpress.XtraEditors.TextEdit()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -88,9 +95,13 @@ Partial Class FormEmployees3
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+<<<<<<< HEAD
         CType(Me.TimeAttendance.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TEXTOvertimeHours.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TimeToLeave.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+        CType(Me.TEXTOvertimeHours.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.TEXTBasicWorkingHours.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextOvertimeHourValue.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -379,10 +390,17 @@ Partial Class FormEmployees3
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+<<<<<<< HEAD
         Me.Panel1.Controls.Add(Me.TimeAttendance)
         Me.Panel1.Controls.Add(Me.TEXTOvertimeHours)
         Me.Panel1.Controls.Add(Me.TimeToLeave)
         Me.Panel1.Controls.Add(Me.TEXTBasicWorkingHours)
+=======
+        Me.Panel1.Controls.Add(Me.TEXTOvertimeHours)
+        Me.Panel1.Controls.Add(Me.TEXTBasicWorkingHours)
+        Me.Panel1.Controls.Add(Me.TimeToLeave)
+        Me.Panel1.Controls.Add(Me.TimeAttendance)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.Controls.Add(Me.TEXT1)
         Me.Panel1.Controls.Add(Me.TextOvertimeHourValue)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -406,6 +424,7 @@ Partial Class FormEmployees3
         Me.Panel1.Size = New System.Drawing.Size(483, 174)
         Me.Panel1.TabIndex = 958
         '
+<<<<<<< HEAD
         'TimeAttendance
         '
         Me.TimeAttendance.EditValue = New Date(2025, 2, 4, 8, 0, 0, 0)
@@ -426,6 +445,11 @@ Partial Class FormEmployees3
         'TEXTOvertimeHours
         '
         Me.TEXTOvertimeHours.EditValue = ""
+=======
+        'TEXTOvertimeHours
+        '
+        Me.TEXTOvertimeHours.EditValue = "_:__"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTOvertimeHours.Enabled = False
         Me.TEXTOvertimeHours.Location = New System.Drawing.Point(5, 99)
         Me.TEXTOvertimeHours.Name = "TEXTOvertimeHours"
@@ -440,7 +464,10 @@ Partial Class FormEmployees3
         Me.TEXTOvertimeHours.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TEXTOvertimeHours.Properties.BeepOnError = False
         Me.TEXTOvertimeHours.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+<<<<<<< HEAD
         Me.TEXTOvertimeHours.Properties.ContextImageOptions.Image = Global.CC_JO.My.Resources.Resources.timelineview_16x16
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTOvertimeHours.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
         Me.TEXTOvertimeHours.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False")
         Me.TEXTOvertimeHours.Properties.MaskSettings.Set("mask", "f")
@@ -449,6 +476,7 @@ Partial Class FormEmployees3
         Me.TEXTOvertimeHours.Size = New System.Drawing.Size(145, 22)
         Me.TEXTOvertimeHours.TabIndex = 1002
         '
+<<<<<<< HEAD
         'TimeToLeave
         '
         Me.TimeToLeave.EditValue = New Date(2025, 2, 4, 16, 0, 0, 0)
@@ -466,6 +494,8 @@ Partial Class FormEmployees3
         Me.TimeToLeave.Size = New System.Drawing.Size(145, 22)
         Me.TimeToLeave.TabIndex = 967
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TEXTBasicWorkingHours
         '
         Me.TEXTBasicWorkingHours.EditValue = ""
@@ -482,14 +512,47 @@ Partial Class FormEmployees3
         Me.TEXTBasicWorkingHours.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TEXTBasicWorkingHours.Properties.BeepOnError = False
         Me.TEXTBasicWorkingHours.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+<<<<<<< HEAD
         Me.TEXTBasicWorkingHours.Properties.ContextImageOptions.Image = Global.CC_JO.My.Resources.Resources.timelineview_16x161
         Me.TEXTBasicWorkingHours.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
         Me.TEXTBasicWorkingHours.Properties.MaskSettings.Set("mask", "f")
+=======
+        Me.TEXTBasicWorkingHours.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
+        Me.TEXTBasicWorkingHours.Properties.MaskSettings.Set("mask", "f")
+        Me.TEXTBasicWorkingHours.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False")
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTBasicWorkingHours.Properties.UseMaskAsDisplayFormat = True
         Me.TEXTBasicWorkingHours.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TEXTBasicWorkingHours.Size = New System.Drawing.Size(145, 22)
         Me.TEXTBasicWorkingHours.TabIndex = 1001
         '
+<<<<<<< HEAD
+=======
+        'TimeToLeave
+        '
+        Me.TimeToLeave.CustomFormat = "mm:hh  tt"
+        Me.TimeToLeave.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.TimeToLeave.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TimeToLeave.Location = New System.Drawing.Point(5, 123)
+        Me.TimeToLeave.Name = "TimeToLeave"
+        Me.TimeToLeave.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TimeToLeave.ShowUpDown = True
+        Me.TimeToLeave.Size = New System.Drawing.Size(145, 22)
+        Me.TimeToLeave.TabIndex = 727
+        '
+        'TimeAttendance
+        '
+        Me.TimeAttendance.CustomFormat = "mm:hh  tt"
+        Me.TimeAttendance.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.TimeAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.TimeAttendance.Location = New System.Drawing.Point(230, 123)
+        Me.TimeAttendance.Name = "TimeAttendance"
+        Me.TimeAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TimeAttendance.ShowUpDown = True
+        Me.TimeAttendance.Size = New System.Drawing.Size(145, 22)
+        Me.TimeAttendance.TabIndex = 726
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TEXT1
         '
         Me.TEXT1.BackColor = System.Drawing.Color.SteelBlue
@@ -506,7 +569,11 @@ Partial Class FormEmployees3
         '
         'TextOvertimeHourValue
         '
+<<<<<<< HEAD
         Me.TextOvertimeHourValue.EditValue = "0:0"
+=======
+        Me.TextOvertimeHourValue.EditValue = "0"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextOvertimeHourValue.Enabled = False
         Me.TextOvertimeHourValue.Location = New System.Drawing.Point(5, 147)
         Me.TextOvertimeHourValue.Name = "TextOvertimeHourValue"
@@ -522,10 +589,15 @@ Partial Class FormEmployees3
         Me.TextOvertimeHourValue.Properties.BeepOnError = False
         Me.TextOvertimeHourValue.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat
         Me.TextOvertimeHourValue.Properties.MaskSettings.Set("MaskManagerType", GetType(DevExpress.Data.Mask.NumericMaskManager))
+<<<<<<< HEAD
         Me.TextOvertimeHourValue.Properties.MaskSettings.Set("mask", "f")
         Me.TextOvertimeHourValue.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False")
         Me.TextOvertimeHourValue.Properties.UseMaskAsDisplayFormat = True
         Me.TextOvertimeHourValue.RightToLeft = System.Windows.Forms.RightToLeft.No
+=======
+        Me.TextOvertimeHourValue.Properties.MaskSettings.Set("mask", "f3")
+        Me.TextOvertimeHourValue.Properties.UseMaskAsDisplayFormat = True
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TextOvertimeHourValue.Size = New System.Drawing.Size(224, 22)
         Me.TextOvertimeHourValue.TabIndex = 1000
         '
@@ -648,7 +720,11 @@ Partial Class FormEmployees3
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.Label5.Location = New System.Drawing.Point(151, 99)
+=======
+        Me.Label5.Location = New System.Drawing.Point(151, 100)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(78, 22)
         Me.Label5.TabIndex = 159
@@ -1119,7 +1195,11 @@ Partial Class FormEmployees3
         Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(786, 363)
+=======
+        Me.ClientSize = New System.Drawing.Size(783, 363)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -1138,9 +1218,13 @@ Partial Class FormEmployees3
         Me.Panel2.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+<<<<<<< HEAD
         CType(Me.TimeAttendance.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TEXTOvertimeHours.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TimeToLeave.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+        CType(Me.TEXTOvertimeHours.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         CType(Me.TEXTBasicWorkingHours.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextOvertimeHourValue.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -1212,11 +1296,19 @@ Partial Class FormEmployees3
     Friend WithEvents EDITBUTTON As Button
     Friend WithEvents SAVEBUTTON As Button
     Friend WithEvents ADDBUTTON As Button
+<<<<<<< HEAD
+=======
+    Friend WithEvents TimeToLeave As DateTimePicker
+    Friend WithEvents TimeAttendance As DateTimePicker
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents TEXTOvertimeHours As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TEXTBasicWorkingHours As DevExpress.XtraEditors.TextEdit
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents SeparatorControl1 As DevExpress.XtraEditors.SeparatorControl
+<<<<<<< HEAD
     Friend WithEvents TimeToLeave As DevExpress.XtraEditors.TimeEdit
     Friend WithEvents TimeAttendance As DevExpress.XtraEditors.TimeEdit
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

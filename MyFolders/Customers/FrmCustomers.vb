@@ -3,7 +3,11 @@ Public Class FrmCustomers
 
 
 
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         OFD1.Filter = "Excel Files (*.xlsx)|*.xls"
         If OFD1.ShowDialog = Windows.Forms.DialogResult.OK Then
             DataGridView1.DataSource = Nothing

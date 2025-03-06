@@ -276,7 +276,10 @@ Partial Class FRM_ALL_ACC
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(391, 500)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FRM_ALL_ACC"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel2.ResumeLayout(False)

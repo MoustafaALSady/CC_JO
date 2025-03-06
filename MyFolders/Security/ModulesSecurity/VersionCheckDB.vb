@@ -16,6 +16,7 @@ Module VersionCheckDB
 
 #Region "Server Consumnection Settings"
 
+<<<<<<< HEAD
     Private Function Is64BitOperatingSystem() As Boolean
         Return Environment.Is64BitProcess
     End Function
@@ -64,10 +65,34 @@ Module VersionCheckDB
         End If
     End Function
 
+=======
+    Public Sub LoadInstalledServer(ByVal Comb As ComboBox)
+        Try
+            Dim RegKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64)
+            Dim SubRegKey = RegKey.OpenSubKey("SOFTWARE\Microsoft\Microsoft SQL Server")
+            Dim InstalledIns = CType(SubRegKey.GetValue("InstalledInstances"), String())
+            If InstalledIns.Length > 0 Then
+                For Each element As String In InstalledIns
+                    If element = "MSSQLSERVER" Then
+                        Comb.Items.Add(Environment.MachineName)
+                    Else
+                        Comb.Items.Add(Environment.MachineName + "\" + element)
+                    End If
+                Next element
+            End If
+        Catch ex As SqlException
+            MessageBox.Show(ex.Number.ToString() & " " & ex.Message.ToString())
+
+        End Try
+
+    End Sub
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub FollCombByDataBases(ByVal CombServer As ComboBox, ByVal CombDBs As ComboBox)
         Try
             If CombServer.Text.Trim <> String.Empty Then
                 CombDBs.Items.Clear()
+<<<<<<< HEAD
                 Dim connectionString As String = BuildConnectionString(CombServer.Text, "master", userIDName, BWS1, Not AuthenicationSQLServer)
                 Using con As New SqlConnection(connectionString)
                     Using da As New SqlDataAdapter("SELECT name FROM sys.databases", con)
@@ -84,10 +109,33 @@ Module VersionCheckDB
         Catch ex As Exception
             ShowMessage(ex.Message, "Error")
         End Try
+=======
+                Dim Sqlconsar As String = Nothing
+                    If AuthenicationSQLServer = True And LocalConnection = True Then
+                        Sqlconsar = "Data Source=" & CombServer.Text & ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+                    ElseIf AuthenicationSQLServer = True And ServerConnection = True Then
+                        Sqlconsar = "Data Source=" & CombServer.Text & "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+                    ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
+                        Sqlconsar = "Data Source = " & CombServer.Text & ";Initial Catalog=master;Integrated Security=True"
+                    End If
+                Dim con As New SqlConnection(Sqlconsar)
+                Dim da As New SqlDataAdapter("SELECT name FROM sys.databases", con)
+                Dim dt As New DataTable
+                    da.Fill(dt)
+                    For i As Short = 0 To dt.Rows.Count - 1
+                        CombDBs.Items.Add(dt.Rows(i).Item("name").ToString())
+                    Next
+                End If
+        Catch ex As SqlException
+            MessageBox.Show(ex.Number.ToString() & " " & ex.Message.ToString())
+        End Try
+
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
     Public Sub FollCombByDataBases1(ByVal StringServer As String, ByVal CombDBs As ComboBox)
         Try
+<<<<<<< HEAD
             If StringServer.Trim() <> String.Empty Then
                 CombDBs.Items.Clear()
                 Dim Sqlconsar As String = GetConnectionString(StringServer, "master")
@@ -116,6 +164,31 @@ Module VersionCheckDB
         End If
         Return String.Empty
     End Function
+=======
+            If StringServer.ToString.Trim <> String.Empty Then
+                CombDBs.Items.Clear()
+                Dim Sqlconsar As String = Nothing
+                If AuthenicationSQLServer = True And LocalConnection = True Then
+                    Sqlconsar = "Data Source=" & StringServer.ToString & ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+                ElseIf AuthenicationSQLServer = True And ServerConnection = True Then
+                    Sqlconsar = "Data Source=" & StringServer.ToString & "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+                ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
+                    Sqlconsar = "Data Source = " & StringServer.ToString & ";Initial Catalog=master;Integrated Security=True"
+                End If
+                Dim con As New SqlConnection(Sqlconsar)
+                Dim da As New SqlDataAdapter("SELECT name FROM sys.databases", con)
+                Dim dt As New DataTable
+                da.Fill(dt)
+                For i As Short = 0 To dt.Rows.Count - 1
+                    CombDBs.Items.Add(dt.Rows(i).Item("name").ToString())
+                Next
+            End If
+        Catch ex As SqlException
+            MessageBox.Show(ex.Number.ToString() & " " & ex.Message.ToString())
+        End Try
+
+    End Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Public Sub ShowSaveSettings(ByVal XX As FrmServerusrs)
         Try

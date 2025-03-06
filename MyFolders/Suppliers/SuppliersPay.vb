@@ -3,7 +3,11 @@ Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class SuppliersPay
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As SqlDataAdapter
@@ -75,7 +79,11 @@ Public Class SuppliersPay
             Exit Sub
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub SuppliersPay_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub SuppliersPay_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -83,7 +91,11 @@ Public Class SuppliersPay
                 Application.DoEvents()
                 Me.Opacity = a / 10
             Next
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT * FROM SupplierPay  WHERE  CUser='" & CUser & "'  ORDER BY lo1"
@@ -97,7 +109,11 @@ Public Class SuppliersPay
                 BS.DataMember = "SupplierPay"
             End With
 
+<<<<<<< HEAD
             ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+            ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -117,6 +133,7 @@ Public Class SuppliersPay
         End Try
     End Sub
     Private Sub SumAmounBALANCE()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
@@ -124,6 +141,15 @@ Public Class SuppliersPay
         Consum = New SqlConnection(constring)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT Sum(Loa6)  FROM SupplierPay WHERE Lo1 ='" & Me.TextBox5.Text & "'", Consum)
+        Consum = New SqlClient.SqlConnection(constring)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -230,7 +256,11 @@ Public Class SuppliersPay
             ''Me.TextBox9.Text = CurrencyJO(Me.TextBox3.Text, "jO")
             ''Me.TextBox10.Text = CurrencyJO(Me.TextBox12.Text, "jO")
             PictureBox2.Visible = False
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox(" „  ⁄„·Ì… «·Õ›Ÿ ›Ì ﬁ«⁄œ… «·»Ì«‰«  »‰Ã«Õ", 64 + 524288, "‰Ã«Õ «·Õ›Ÿ Ê«· €ÌÌ—«  Ê«· ÕœÌÀ")
             PictureBox2.Visible = False
@@ -238,7 +268,11 @@ Public Class SuppliersPay
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles MTextBox1.KeyPress
+=======
+    Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles MTextBox1.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             If IsDate(MTextBox1.Text) = True Then
                 CmdSave.Enabled = True
@@ -249,7 +283,11 @@ Public Class SuppliersPay
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextBox3.TextChanged, TextBox12.TextChanged
+=======
+    Private Sub TextBox12_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged, TextBox12.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         '   TextBox7.Text = TextBox12.Text
         ' Me.TextBox10.Text = CurrencyJO(Me.TextBox7.Text, "jO")
@@ -284,13 +322,22 @@ Public Class SuppliersPay
         End If
     End Sub
     Private Sub SumAmount()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim SUM1 As Double
         On Error Resume Next
         Dim strsql As New SqlCommand("SELECT Sum(Loa6) FROM SupplierPay WHERE Lo1 ='" & Me.TextBox5.Text & "'", Consum)
         Dim ds2 As New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(strsql)
+=======
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Adp.Fill(ds2)
         If ds2.Tables(0).Rows.Count > 0 Then
@@ -304,10 +351,17 @@ Public Class SuppliersPay
     End Sub
     Private Sub InternalAuditorBalance()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsq1 As New SqlCommand("SELECT sum(Loa6)  FROM SupplierPay  WHERE SupplierPay.Lo1='" & Me.TextBox5.Text & "'AND SupplierPay.Loa1 <'" & Me.TextBox11.Text & "'", Consum)
         Dim ds As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlCommand("SELECT sum(Loa6)  FROM SupplierPay  WHERE SupplierPay.Lo1='" & Me.TextBox5.Text & "'AND SupplierPay.Loa1 <'" & Me.TextBox11.Text & "'", Consum)
+        Dim ds As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp1.Fill(ds, "SupplierPay")
         If ds.Tables(0).Rows.Count > 0 Then
@@ -322,7 +376,11 @@ Public Class SuppliersPay
         '  End Try
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CmdSave_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdSave.Click
+=======
+    Private Sub CmdSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdSave.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
             Exit Sub
@@ -351,12 +409,17 @@ Public Class SuppliersPay
         Me.Cursor = Cursors.WaitCursor
         PictureBox2.Visible = True
         BS.EndEdit()
+<<<<<<< HEAD
         SaveDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        SaveDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
         SaveDataBase.RunWorkerAsync()
     End Sub
+<<<<<<< HEAD
     Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdExit.Click
         Me.Close()
     End Sub
@@ -365,6 +428,16 @@ Public Class SuppliersPay
         BS.CancelEdit()
     End Sub
     Private Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox3.TextChanged
+=======
+    Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdExit.Click
+        Me.Close()
+    End Sub
+    Private Sub CmdCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdCancel.Click
+        On Error Resume Next
+        BS.CancelEdit()
+    End Sub
+    Private Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox3.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         TextBox8.Text = Format(Val(TextBox12.Text) - Val(TextBox7.Text), "0.000")
         ' TextBox12.Text = Format(Val(TextBox7.Text), "0.000")
@@ -372,7 +445,11 @@ Public Class SuppliersPay
         Me.TextBox10.Text = CurrencyJO(Me.TextBox8.Text, "jO")
         InternalAuditorBalance()
     End Sub
+<<<<<<< HEAD
     Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles CmdSearch.Click
+=======
+    Private Sub CmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmdSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim HeightInInch As Double
             HeightInInch = (phieght * 0.24096) + 0.90921
@@ -388,6 +465,7 @@ Public Class SuppliersPay
             Dim F As New FrmPRINT
             Dim txt As TextObject
             Dim rpt As New rptcash
+<<<<<<< HEAD
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
@@ -396,6 +474,16 @@ Public Class SuppliersPay
             Dim str As New SqlCommand("SELECT * FROM SupplierPay  WHERE LO1 ='" & Me.TextBox5.Text & "' AND Loa=" & TextBox6.Text, Consum)
             '  Dim builder68 As New SqlCommandBuilder(DataAdapterTab65)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
+            ' rpt.SetDatabaseLogon("sa", "2710/m") '·ﬂÌ ·« Ìÿ·» »«”Ê—œ «À‰«¡ «· ‰›Ì–
+            Dim ds As New DataSet
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM SupplierPay  WHERE LO1 ='" & Me.TextBox5.Text & "' AND Loa=" & TextBox6.Text, Consum)
+            '  Dim builder68 As New SqlCommandBuilder(DataAdapterTab65)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "SupplierPay")
             rpt.SetDataSource(ds)
@@ -445,21 +533,36 @@ Public Class SuppliersPay
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub CustomerPay_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
+=======
+    Private Sub CustomerPay_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Consum.Close()
     End Sub
     Private Sub INSERTRECORDempsolf()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim N As Double
             Dim cmd1 As New SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim N As Double
+            Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(CSH1) FROM CASHIER", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             N = cmd1.ExecuteScalar
             Consum.Close()
+<<<<<<< HEAD
             Dim SQL As New SqlCommand("INSERT INTO CASHIER( CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17, USERNAME, CUser, COUser, da, ne) VALUES     ( @CSH2, @CSH3, @CSH4, @CSH5, @CSH6, @CSH7, @CSH8, @CSH10, @CSH11, @CSH12, @CSH14, @CSH15, @CSH16, @CSH17, @USERNAME, @CUser, @COUser, @da, @ne)", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO CASHIER( CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17, USERNAME, CUser, COUser, da, ne) VALUES     ( @CSH2, @CSH3, @CSH4, @CSH5, @CSH6, @CSH7, @CSH8, @CSH10, @CSH11, @CSH12, @CSH14, @CSH15, @CSH16, @CSH17, @USERNAME, @CUser, @COUser, @da, @ne)", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -494,9 +597,15 @@ Public Class SuppliersPay
     End Sub
     Private Sub UPDATERECORDempsolf()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As String = " Update CASHIER SET  CSH2 = @CSH2, CSH3 = @CSH3, CSH4 = @CSH4, CSH5 = @CSH5, CSH7 = @CSH7, CSH8 = @CSH8, CSH10 = @CSH10, CSH11 = @CSH11, CSH12 = @CSH12, CSH15 = @CSH15, CSH17 = @CSH17, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, da = @da WHERE CSH4 = '" & Me.TextBox1.Text.ToString & "'" & "AND CSH10='«·–„„ «·„œÌ‰…'"
         Dim CMD As New SqlCommand With {
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As String = " Update CASHIER SET  CSH2 = @CSH2, CSH3 = @CSH3, CSH4 = @CSH4, CSH5 = @CSH5, CSH7 = @CSH7, CSH8 = @CSH8, CSH10 = @CSH10, CSH11 = @CSH11, CSH12 = @CSH12, CSH15 = @CSH15, CSH17 = @CSH17, USERNAME = @USERNAME, CUser = @CUser, COUser = @COUser, da = @da WHERE CSH4 = '" & Me.TextBox1.Text.ToString & "'" & "AND CSH10='«·–„„ «·„œÌ‰…'"
+        Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .CommandType = CommandType.Text,
             .Connection = Consum
         }
@@ -532,9 +641,15 @@ Public Class SuppliersPay
 
     Private Sub DELETEDATAempsolf()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As String = "DELETE FROM CASHIER  WHERE CSH4 = '" & Me.TextBox5.Text.ToString & "'"
             Dim cmd As New SqlCommand(sql, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As String = "DELETE FROM CASHIER  WHERE CSH4 = '" & Me.TextBox5.Text.ToString & "'"
+            Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             cmd.ExecuteNonQuery()
@@ -545,15 +660,26 @@ Public Class SuppliersPay
     End Sub
     Private Sub INSERTDATACO1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim N As Double
             Dim cmd2 As New SqlCommand("SELECT MAX(IDCAB) FROM Suppliers1", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim N As Double
+            Dim cmd2 As New SqlClient.SqlCommand("SELECT MAX(IDCAB) FROM Suppliers1", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             N = cmd2.ExecuteScalar
             Consum.Close()
+<<<<<<< HEAD
             Dim SQL As New SqlCommand("INSERT INTO Suppliers1(CAB2, CAB3, CAB4, CAB5, CAB6, CAB8, CAB9, CAB10, CAB11, CAB12, CAB17, CAB21, USERNAME, Cuser, COUser, da, ne) VALUES  ( @CAB2, @CAB3, @CAB4, @CAB5, @CAB6, @CAB8, @CAB9, @CAB10, @CAB11, @CAB12, @CAB17, @CAB21, @USERNAME, @Cuser, @COUser, @da, @ne)", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO Suppliers1(CAB2, CAB3, CAB4, CAB5, CAB6, CAB8, CAB9, CAB10, CAB11, CAB12, CAB17, CAB21, USERNAME, Cuser, COUser, da, ne) VALUES  ( @CAB2, @CAB3, @CAB4, @CAB5, @CAB6, @CAB8, @CAB9, @CAB10, @CAB11, @CAB12, @CAB17, @CAB21, @USERNAME, @Cuser, @COUser, @da, @ne)", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -592,9 +718,15 @@ Public Class SuppliersPay
     End Sub
     Private Sub UPDATEDATACO1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As String = "UPDATE Suppliers1 SET CAB3 = @CAB3, CAB4 = @CAB4, CAB5 = @CAB5, CAB6 = @CAB6, CAB8 = @CAB8, CAB9 = @CAB9, CAB10 = @CAB10, CAB11 = @CAB11, CAB12 = @CAB12, CAB17 = @CAB17, USERNAME = @USERNAME, Cuser = @Cuser, COUser = @COUser, da = @da, ne = @ne WHERE CAB8 = '" & Me.TextBox4.Text & "'" & "AND CAB6 ='‰ﬁœ«'" & " AND CAB21='" & Me.TextBox37.Text & "'"
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As String = "UPDATE Suppliers1 SET CAB3 = @CAB3, CAB4 = @CAB4, CAB5 = @CAB5, CAB6 = @CAB6, CAB8 = @CAB8, CAB9 = @CAB9, CAB10 = @CAB10, CAB11 = @CAB11, CAB12 = @CAB12, CAB17 = @CAB17, USERNAME = @USERNAME, Cuser = @Cuser, COUser = @COUser, da = @da, ne = @ne WHERE CAB8 = '" & Me.TextBox4.Text & "'" & "AND CAB6 ='‰ﬁœ«'" & " AND CAB21='" & Me.TextBox37.Text & "'"
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -635,19 +767,32 @@ Public Class SuppliersPay
 
     Private Sub DELETEDATACUSTOMER1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim sql As String = "DELETE FROM Suppliers1  WHERE CAB8 = '" & Me.TextBox5.Text.ToString & "'" & "AND  CAB21='" & Me.TextBox37.Text & "'"
         Dim cmd As New SqlCommand(sql, Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim sql As String = "DELETE FROM Suppliers1  WHERE CAB8 = '" & Me.TextBox5.Text.ToString & "'" & "AND  CAB21='" & Me.TextBox37.Text & "'"
+        Dim cmd As New SqlClient.SqlCommand(sql, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         cmd.ExecuteNonQuery()
         Consum.Close()
     End Sub
     Private Sub SEARCHDATAITEMS4()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name,ACC1 FROM ACCOUNTSTREE WHERE account_name = '" & Me.ComboBox7.Text & " '", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name,ACC1 FROM ACCOUNTSTREE WHERE account_name = '" & Me.ComboBox7.Text & " '", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Adp1.Fill(ds2, "ACCOUNTSTREE")
@@ -662,6 +807,7 @@ Public Class SuppliersPay
         End If
         Me.TextBox4.Text = T3.Trim.ToLower
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox7_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboBox7.SelectedIndexChanged
         Dim Adp1 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -670,6 +816,16 @@ Public Class SuppliersPay
         Consum = New SqlConnection(constring)
         Dim ds2 As New DataSet
         Adp1 = New SqlDataAdapter(strsql2)
+=======
+    Private Sub ComboBox7_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox7.SelectedIndexChanged
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT account_no,ACC,account_name,ACC1 FROM ACCOUNTSTREE WHERE account_name = '" & Me.ComboBox7.Text & " '", Consum)
+        Consum = New SqlClient.SqlConnection(constring)
+        Dim ds2 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Adp1.Fill(ds2, "ACCOUNTSTREE")
         If ds.Tables(0).Rows.Count > 0 Then
@@ -689,10 +845,17 @@ Public Class SuppliersPay
         SEARCHDATAITEMS4()
     End Sub
     Private Sub SEARCHDATAITEMS6()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT MOV1 FROM MOVES WHERE MOV2='" & TextBox31.Text & "'", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT MOV1 FROM MOVES WHERE MOV2='" & TextBox31.Text & "'", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Adp1.Fill(ds2, "MOVES")
@@ -704,10 +867,17 @@ Public Class SuppliersPay
         Me.TextBox32.Text = T9.Trim.ToLower
     End Sub
     Private Sub SEARCHDATAITEMS7()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT MOVD1,MOV2,MOVD7 FROM MOVESDATA WHERE MOVD9 = '" & TextBox37.Text & " '" & "AND MOVD10 = '" & TextBox15.Text & "'", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT MOVD1,MOV2,MOVD7 FROM MOVESDATA WHERE MOVD9 = '" & TextBox37.Text & " '" & "AND MOVD10 = '" & TextBox15.Text & "'", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Adp1.Fill(ds2, "MOVESDATA")
@@ -723,6 +893,7 @@ Public Class SuppliersPay
         Me.TextBox32.Text = T7.Trim.ToLower
     End Sub
     Private Sub MAXRECORD2()
+<<<<<<< HEAD
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         On Error Resume Next
@@ -731,6 +902,16 @@ Public Class SuppliersPay
         Dim CMD As New SqlCommand
         Dim ds1 As New DataSet
         Adp = New SqlDataAdapter(SQL)
+=======
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(MOVES.MOV1) ,MAX(MOVES.MOV2),MAX(MOVES.MOV8)  FROM MOVES", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+        Dim ds1 As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(SQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp.Fill(ds1)
         If ds1.Tables(0).Rows.Count > 0 Then
@@ -772,10 +953,17 @@ Public Class SuppliersPay
             A = TextBox12.Text
             s = Label9.Text
             C = "0.00"
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strsq1 As New SqlCommand("SELECT MOV2  FROM MOVESDATA  WHERE (MOVESDATA.MOV2)='" & TextBox31.Text & "'", Consum)
             Dim ds As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsq1 As New SqlClient.SqlCommand("SELECT MOV2  FROM MOVESDATA  WHERE (MOVESDATA.MOV2)='" & TextBox31.Text & "'", Consum)
+            Dim ds As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp1.Fill(ds, "MOVESDATA")
             If ds.Tables(0).Rows.Count > 0 Then
@@ -795,8 +983,13 @@ Public Class SuppliersPay
             GetNoRecord("ACCOUNTSTREE", "ACC", "account_name", ComboBox7.Text, 1)
             Box3 = ID_Nam
 
+<<<<<<< HEAD
             Dim strSQL As New SqlCommand("", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             TextBox34.Text = Box.ToString.Trim
             TextBox33.Text = T10.ToString.Trim
@@ -843,9 +1036,15 @@ Public Class SuppliersPay
             C = ID_Nam
             GetNoRecord("ACCOUNTSTREE", "account_no", "account_name", ComboBox7.Text, 1)
             AA = ID_Nam
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 
             If T10 = 1 Or T10 = 4 Then
@@ -905,9 +1104,15 @@ Public Class SuppliersPay
     End Sub
     Private Sub SaveMOVES()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand("INSERT INTO MOVES ( MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV11, USERNAME, Realname, cuser, COUser) VALUES     ( @MOV1, @MOV2, @MOV3, @MOV4, @MOV5, @MOV6, @MOV7, @MOV8, @MOV9, @MOV11, @USERNAME, @Realname, @cuser, @COUser)", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO MOVES ( MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV11, USERNAME, Realname, cuser, COUser) VALUES     ( @MOV1, @MOV2, @MOV3, @MOV4, @MOV5, @MOV6, @MOV7, @MOV8, @MOV9, @MOV11, @USERNAME, @Realname, @cuser, @COUser)", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -939,9 +1144,15 @@ Public Class SuppliersPay
     End Sub
     Private Sub UPDATEMOVES()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" UPDATE  MOVES SET  MOV3 = @MOV3, MOV4 = @MOV4, MOV5 = @MOV5, MOV6 = @MOV6, MOV7 = @MOV7, MOV8 = @MOV8, MOV9 = @MOV9, MOV10 = @MOV10, da = @da, ne = @ne, USERNAME = @USERNAME, Realname = @Realname, cuser = @cuser, COUser = @COUser WHERE MOV1=" & T9.Trim.ToLower, Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" UPDATE  MOVES SET  MOV3 = @MOV3, MOV4 = @MOV4, MOV5 = @MOV5, MOV6 = @MOV6, MOV7 = @MOV7, MOV8 = @MOV8, MOV9 = @MOV9, MOV10 = @MOV10, da = @da, ne = @ne, USERNAME = @USERNAME, Realname = @Realname, cuser = @cuser, COUser = @COUser WHERE MOV1=" & T9.Trim.ToLower, Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -975,7 +1186,11 @@ Public Class SuppliersPay
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonCUSTOMER1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCUSTOMER1.Click
+=======
+    Private Sub ButtonCUSTOMER1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCUSTOMER1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -1025,7 +1240,11 @@ Public Class SuppliersPay
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button1.Click
+=======
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -1054,7 +1273,11 @@ Public Class SuppliersPay
         Me.Cursor = Cursors.Default
         Insert_Actions(Me.TextBox5.Text.Trim, "«·«—’œ…", Me.Text)
     End Sub
+<<<<<<< HEAD
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Button2.Click
+=======
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("«·« ’«· »«·«‰ —‰  €Ì— „ Ê›—", 16, " ‰»ÌÂ")
@@ -1095,11 +1318,19 @@ Public Class SuppliersPay
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         Consum.Close()
+<<<<<<< HEAD
         Dim Sound As IO.Stream = My.Resources.addv
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
 
     Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Label9.Click
+=======
+        Dim Sound As System.IO.Stream = My.Resources.addv
+        My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
+    End Sub
+
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     End Sub
 End Class

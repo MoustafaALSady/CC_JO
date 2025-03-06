@@ -1,5 +1,9 @@
 Public Class FrmCustoms
+<<<<<<< HEAD
     Private Sub FrmCustoms_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmCustoms_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Escape
@@ -10,7 +14,11 @@ Public Class FrmCustoms
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmCALACCUSTOMS_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmCALACCUSTOMS_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         For a As Byte = 0 To 10
             System.Threading.Thread.Sleep(10)
@@ -29,7 +37,11 @@ Public Class FrmCustoms
         Me.TEXT17.Enabled = False
         Me.ComboBox1.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT1_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TEXT1.TextChanged, TEXT10.TextChanged, TEXT11.TextChanged, TEXT12.TextChanged, TEXT13.TextChanged, TEXT14.TextChanged, TEXT15.TextChanged, TEXT16.TextChanged, TEXT17.TextChanged, TEXT2.TextChanged, TEXT3.TextChanged, TEXT4.TextChanged, TEXT5.TextChanged, TEXT6.TextChanged, TEXT7.TextChanged, TEXT8.TextChanged, TEXT9.TextChanged, TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox5.TextChanged
+=======
+    Private Sub TEXT1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXT1.TextChanged, TEXT10.TextChanged, TEXT11.TextChanged, TEXT12.TextChanged, TEXT13.TextChanged, TEXT14.TextChanged, TEXT15.TextChanged, TEXT16.TextChanged, TEXT17.TextChanged, TEXT2.TextChanged, TEXT3.TextChanged, TEXT4.TextChanged, TEXT5.TextChanged, TEXT6.TextChanged, TEXT7.TextChanged, TEXT8.TextChanged, TEXT9.TextChanged, TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged, TextBox5.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         TEXT7.Text = Format(Val(TEXT3.Text) + Val(TEXT4.Text) + Val(TEXT5.Text) + Val(TEXT6.Text), "0.000")
         If Me.CheckBox2.Checked = True Then
@@ -68,7 +80,11 @@ Public Class FrmCustoms
         End If
         Me.TEXT16.Text = CurrencyJO(Me.TEXT15.Text, "jO")
     End Sub
+<<<<<<< HEAD
     Private Sub COMBO1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles COMBO1.SelectedIndexChanged
+=======
+    Private Sub COMBO1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles COMBO1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         TEXT1_TextChanged(sender, e)
         Select Case Me.COMBO1.Text
@@ -104,7 +120,11 @@ Public Class FrmCustoms
                 Me.TextBox5.Enabled = True
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub COMBO2_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles COMBO2.SelectedIndexChanged
+=======
+    Private Sub COMBO2_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles COMBO2.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         TEXT1_TextChanged(sender, e)
         Select Case Me.COMBO2.Text
@@ -120,7 +140,11 @@ Public Class FrmCustoms
                 Me.TEXT2.Text = 4.5
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub COMBO3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles COMBO3.SelectedIndexChanged
+=======
+    Private Sub COMBO3_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles COMBO3.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim Consum As New SqlClient.SqlConnection(constring)
         Dim strsq1 As String = "SELECT cust4 ,cust6 FROM CUSTOMSTABLE WHERE cust2='" & Me.COMBO3.Text & "'"
@@ -146,11 +170,19 @@ Public Class FrmCustoms
         Consum.Close()
         ComboBox1_SelectedIndexChanged(sender, e)
     End Sub
+<<<<<<< HEAD
     Private Sub COMBO4_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles COMBO4.SelectedIndexChanged
         On Error Resume Next
         TEXT1_TextChanged(sender, e)
     End Sub
     Private Sub CheckBox1_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles CheckBox1.CheckedChanged
+=======
+    Private Sub COMBO4_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles COMBO4.SelectedIndexChanged
+        On Error Resume Next
+        TEXT1_TextChanged(sender, e)
+    End Sub
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.CheckBox1.Checked = False Then
             TEXT13.Text = Format(Val(TEXT7.Text) * Val(TEXT12.Text) / 100, "0.000")
         Else
@@ -158,7 +190,11 @@ Public Class FrmCustoms
             TEXT13.Text = 0
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub CheckBox2_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles CheckBox2.CheckedChanged
+=======
+    Private Sub CheckBox2_CheckedChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox2.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.CheckBox2.Checked = True Then
             Me.TEXT17.Enabled = True
             Me.ComboBox1.Enabled = True
@@ -172,7 +208,11 @@ Public Class FrmCustoms
             TEXT9.Text = Format(Val(TEXT7.Text) * Val(TEXT8.Text) / 100, "0.000")
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim Consum As New SqlClient.SqlConnection(constring)
         Dim strsq1 As String = "SELECT cust7 ,cust8 FROM CUSTOMSTABLE WHERE cust2='" & Me.COMBO3.Text & "'"
@@ -201,7 +241,11 @@ Public Class FrmCustoms
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As PaintEventArgs) Handles Panel1.Paint
+=======
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     End Sub
 End Class

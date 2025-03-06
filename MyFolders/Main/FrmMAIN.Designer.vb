@@ -426,7 +426,10 @@ Partial Class FrmMAIN
         Me.TS2 = New DevExpress.XtraBars.BarStaticItem()
         Me.TS3 = New DevExpress.XtraBars.BarStaticItem()
         Me.TS4 = New DevExpress.XtraBars.BarStaticItem()
+<<<<<<< HEAD
         Me.TS5 = New DevExpress.XtraBars.BarStaticItem()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TS7 = New DevExpress.XtraBars.BarStaticItem()
         Me.TS8 = New DevExpress.XtraBars.BarStaticItem()
         Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
@@ -504,6 +507,10 @@ Partial Class FrmMAIN
         Me.BarButtonItem141 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
+<<<<<<< HEAD
+=======
+        Me.TS5 = New DevExpress.XtraBars.BarStaticItem()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MAIN5.SuspendLayout()
         CType(Me.PictureNews, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelNEWEVENTS.SuspendLayout()
@@ -1806,11 +1813,19 @@ Partial Class FrmMAIN
         Me.LabelStockStatus.Image = Global.CC_JO.My.Resources.Resources.BOChangeHistory_16x16
         Me.LabelStockStatus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelStockStatus.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.LabelStockStatus.Location = New System.Drawing.Point(1, 1)
         Me.LabelStockStatus.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelStockStatus.Name = "LabelStockStatus"
         Me.LabelStockStatus.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.LabelStockStatus.Size = New System.Drawing.Size(75, 22)
+=======
+        Me.LabelStockStatus.Location = New System.Drawing.Point(1, 0)
+        Me.LabelStockStatus.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelStockStatus.Name = "LabelStockStatus"
+        Me.LabelStockStatus.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LabelStockStatus.Size = New System.Drawing.Size(74, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelStockStatus.TabIndex = 622
         Me.LabelStockStatus.Tag = "حالة المخزون"
         Me.LabelStockStatus.Text = "F"
@@ -1827,11 +1842,19 @@ Partial Class FrmMAIN
         Me.Label_Cuser.ForeColor = System.Drawing.Color.Black
         Me.Label_Cuser.Image = Global.CC_JO.My.Resources.Resources.DecreaseDecimal_16x16
         Me.Label_Cuser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.Label_Cuser.Location = New System.Drawing.Point(77, 1)
         Me.Label_Cuser.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label_Cuser.Name = "Label_Cuser"
         Me.Label_Cuser.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label_Cuser.Size = New System.Drawing.Size(90, 22)
+=======
+        Me.Label_Cuser.Location = New System.Drawing.Point(76, 0)
+        Me.Label_Cuser.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.Label_Cuser.Name = "Label_Cuser"
+        Me.Label_Cuser.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label_Cuser.Size = New System.Drawing.Size(90, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label_Cuser.TabIndex = 621
         Me.Label_Cuser.Tag = "رقم الجمعية"
         Me.Label_Cuser.Text = "80011"
@@ -1848,10 +1871,17 @@ Partial Class FrmMAIN
         Me.LabelBANSL.ForeColor = System.Drawing.Color.Black
         Me.LabelBANSL.Image = Global.CC_JO.My.Resources.Resources.Currency2_16x16
         Me.LabelBANSL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.LabelBANSL.Location = New System.Drawing.Point(168, 1)
         Me.LabelBANSL.Name = "LabelBANSL"
         Me.LabelBANSL.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.LabelBANSL.Size = New System.Drawing.Size(90, 22)
+=======
+        Me.LabelBANSL.Location = New System.Drawing.Point(167, 0)
+        Me.LabelBANSL.Name = "LabelBANSL"
+        Me.LabelBANSL.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LabelBANSL.Size = New System.Drawing.Size(90, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelBANSL.TabIndex = 620
         Me.LabelBANSL.Tag = "الاسهم المكتتبة"
         Me.LabelBANSL.Text = "10000"
@@ -1869,11 +1899,19 @@ Partial Class FrmMAIN
         Me.LabelFiscalYear.ForeColor = System.Drawing.Color.Black
         Me.LabelFiscalYear.Image = Global.CC_JO.My.Resources.Resources.ShortDate_16x16
         Me.LabelFiscalYear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.LabelFiscalYear.Location = New System.Drawing.Point(259, 1)
         Me.LabelFiscalYear.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelFiscalYear.Name = "LabelFiscalYear"
         Me.LabelFiscalYear.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.LabelFiscalYear.Size = New System.Drawing.Size(62, 22)
+=======
+        Me.LabelFiscalYear.Location = New System.Drawing.Point(258, 0)
+        Me.LabelFiscalYear.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelFiscalYear.Name = "LabelFiscalYear"
+        Me.LabelFiscalYear.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LabelFiscalYear.Size = New System.Drawing.Size(62, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelFiscalYear.TabIndex = 620
         Me.LabelFiscalYear.Text = "2020"
         Me.LabelFiscalYear.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1889,10 +1927,17 @@ Partial Class FrmMAIN
         Me.LabelRealname.ForeColor = System.Drawing.Color.Black
         Me.LabelRealname.Image = Global.CC_JO.My.Resources.Resources.EditName_16x16
         Me.LabelRealname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+<<<<<<< HEAD
         Me.LabelRealname.Location = New System.Drawing.Point(322, 1)
         Me.LabelRealname.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelRealname.Name = "LabelRealname"
         Me.LabelRealname.Size = New System.Drawing.Size(407, 22)
+=======
+        Me.LabelRealname.Location = New System.Drawing.Point(321, 0)
+        Me.LabelRealname.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelRealname.Name = "LabelRealname"
+        Me.LabelRealname.Size = New System.Drawing.Size(407, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelRealname.TabIndex = 619
         Me.LabelRealname.Text = "الاسم الحقيقي للمستخدم"
         Me.LabelRealname.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1926,11 +1971,19 @@ Partial Class FrmMAIN
         Me.LabelConnectedToInternet.ForeColor = System.Drawing.Color.Black
         Me.LabelConnectedToInternet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelConnectedToInternet.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.LabelConnectedToInternet.Location = New System.Drawing.Point(730, 1)
         Me.LabelConnectedToInternet.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelConnectedToInternet.Name = "LabelConnectedToInternet"
         Me.LabelConnectedToInternet.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.LabelConnectedToInternet.Size = New System.Drawing.Size(161, 22)
+=======
+        Me.LabelConnectedToInternet.Location = New System.Drawing.Point(729, 0)
+        Me.LabelConnectedToInternet.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelConnectedToInternet.Name = "LabelConnectedToInternet"
+        Me.LabelConnectedToInternet.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.LabelConnectedToInternet.Size = New System.Drawing.Size(161, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelConnectedToInternet.TabIndex = 170
         Me.LabelConnectedToInternet.Text = "OnLine"
         Me.LabelConnectedToInternet.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1947,10 +2000,17 @@ Partial Class FrmMAIN
         Me.LabelUsersNumber.Image = Global.CC_JO.My.Resources.Resources.Pivot_16x16
         Me.LabelUsersNumber.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelUsersNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.LabelUsersNumber.Location = New System.Drawing.Point(892, 1)
         Me.LabelUsersNumber.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelUsersNumber.Name = "LabelUsersNumber"
         Me.LabelUsersNumber.Size = New System.Drawing.Size(142, 22)
+=======
+        Me.LabelUsersNumber.Location = New System.Drawing.Point(891, 0)
+        Me.LabelUsersNumber.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelUsersNumber.Name = "LabelUsersNumber"
+        Me.LabelUsersNumber.Size = New System.Drawing.Size(142, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelUsersNumber.TabIndex = 193
         Me.LabelUsersNumber.Text = "0"
         Me.LabelUsersNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1967,10 +2027,17 @@ Partial Class FrmMAIN
         Me.LabelUsersType.Image = Global.CC_JO.My.Resources.Resources.iconsettrafficlightsrimmed3_16x16
         Me.LabelUsersType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.LabelUsersType.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.LabelUsersType.Location = New System.Drawing.Point(1035, 1)
         Me.LabelUsersType.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelUsersType.Name = "LabelUsersType"
         Me.LabelUsersType.Size = New System.Drawing.Size(260, 22)
+=======
+        Me.LabelUsersType.Location = New System.Drawing.Point(1034, 0)
+        Me.LabelUsersType.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.LabelUsersType.Name = "LabelUsersType"
+        Me.LabelUsersType.Size = New System.Drawing.Size(260, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelUsersType.TabIndex = 200
         Me.LabelUsersType.Tag = ""
         Me.LabelUsersType.Text = "صفة المستخدم"
@@ -2012,7 +2079,11 @@ Partial Class FrmMAIN
         '
         '
         Me.CircularProgress2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+<<<<<<< HEAD
         Me.CircularProgress2.Location = New System.Drawing.Point(617, 262)
+=======
+        Me.CircularProgress2.Location = New System.Drawing.Point(591, 262)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.CircularProgress2.Name = "CircularProgress2"
         Me.CircularProgress2.ProgressColor = System.Drawing.Color.Sienna
         Me.CircularProgress2.ProgressText = "ارجو الانتظار"
@@ -2027,7 +2098,11 @@ Partial Class FrmMAIN
         Me.LabelSearch.BackColor = System.Drawing.Color.Transparent
         Me.LabelSearch.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LabelSearch.ForeColor = System.Drawing.Color.Green
+<<<<<<< HEAD
         Me.LabelSearch.Location = New System.Drawing.Point(626, 240)
+=======
+        Me.LabelSearch.Location = New System.Drawing.Point(600, 240)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelSearch.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelSearch.Name = "LabelSearch"
         Me.LabelSearch.Size = New System.Drawing.Size(46, 15)
@@ -2119,7 +2194,11 @@ Partial Class FrmMAIN
         Me.LabelTast.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LabelTast.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LabelTast.ForeColor = System.Drawing.Color.MidnightBlue
+<<<<<<< HEAD
         Me.LabelTast.Location = New System.Drawing.Point(587, 240)
+=======
+        Me.LabelTast.Location = New System.Drawing.Point(562, 240)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelTast.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelTast.Name = "LabelTast"
         Me.LabelTast.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -2133,7 +2212,11 @@ Partial Class FrmMAIN
         '
         Me.PictureSearchConnection.BackColor = System.Drawing.Color.Transparent
         Me.PictureSearchConnection.Image = Global.CC_JO.My.Resources.Resources.indecator1
+<<<<<<< HEAD
         Me.PictureSearchConnection.Location = New System.Drawing.Point(634, 279)
+=======
+        Me.PictureSearchConnection.Location = New System.Drawing.Point(609, 279)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureSearchConnection.Name = "PictureSearchConnection"
         Me.PictureSearchConnection.Size = New System.Drawing.Size(31, 31)
         Me.PictureSearchConnection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -2166,7 +2249,11 @@ Partial Class FrmMAIN
         '
         Me.PictureSearchServer.BackColor = System.Drawing.Color.Transparent
         Me.PictureSearchServer.Image = Global.CC_JO.My.Resources.Resources.spinner3_greenie
+<<<<<<< HEAD
         Me.PictureSearchServer.Location = New System.Drawing.Point(631, 267)
+=======
+        Me.PictureSearchServer.Location = New System.Drawing.Point(606, 267)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureSearchServer.Margin = New System.Windows.Forms.Padding(1, 5, 1, 5)
         Me.PictureSearchServer.Name = "PictureSearchServer"
         Me.PictureSearchServer.Size = New System.Drawing.Size(36, 36)
@@ -2522,7 +2609,11 @@ Partial Class FrmMAIN
         Me.LabelSearchServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LabelSearchServer.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LabelSearchServer.ForeColor = System.Drawing.Color.Purple
+<<<<<<< HEAD
         Me.LabelSearchServer.Location = New System.Drawing.Point(606, 240)
+=======
+        Me.LabelSearchServer.Location = New System.Drawing.Point(581, 240)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelSearchServer.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelSearchServer.Name = "LabelSearchServer"
         Me.LabelSearchServer.Size = New System.Drawing.Size(86, 15)
@@ -2535,7 +2626,11 @@ Partial Class FrmMAIN
         Me.PictureTestNet.BackColor = System.Drawing.Color.Transparent
         Me.PictureTestNet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureTestNet.Image = Global.CC_JO.My.Resources.Resources.Indecator
+<<<<<<< HEAD
         Me.PictureTestNet.Location = New System.Drawing.Point(641, 270)
+=======
+        Me.PictureTestNet.Location = New System.Drawing.Point(616, 270)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureTestNet.Margin = New System.Windows.Forms.Padding(1, 5, 1, 5)
         Me.PictureTestNet.Name = "PictureTestNet"
         Me.PictureTestNet.Size = New System.Drawing.Size(16, 16)
@@ -2551,7 +2646,11 @@ Partial Class FrmMAIN
         Me.LabelSearchConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LabelSearchConnection.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.LabelSearchConnection.ForeColor = System.Drawing.Color.Purple
+<<<<<<< HEAD
         Me.LabelSearchConnection.Location = New System.Drawing.Point(589, 240)
+=======
+        Me.LabelSearchConnection.Location = New System.Drawing.Point(564, 240)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelSearchConnection.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.LabelSearchConnection.Name = "LabelSearchConnection"
         Me.LabelSearchConnection.Size = New System.Drawing.Size(120, 15)
@@ -2667,7 +2766,11 @@ Partial Class FrmMAIN
         '
         Me.RibbonControl2.ExpandCollapseItem.Id = 203
         Me.RibbonControl2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.RibbonControl2.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl2.ExpandCollapseItem, Me.RibbonControl2.SearchEditItem, Me.men121, Me.men124, Me.men12, Me.men13, Me.men14, Me.men122, Me.men16, Me.men17, Me.men120, Me.men111, Me.men112, Me.men1231, Me.men1232, Me.men211, Me.men212, Me.men22, Me.men23, Me.men24, Me.men26, Me.men271, Me.men277, Me.men272, Me.men274, Me.men275, Me.men28, Me.men213, Me.men216, Me.men33, Me.men32, Me.men31, Me.men34, Me.men361, Me.men362, Me.men351, Me.men352, Me.men353, Me.men38, Me.men37, Me.men41, Me.men52, Me.men50, Me.men49, Me.men46, Me.men45, Me.men42, Me.men67, Me.men43, Me.men433, Me.men442, Me.men441, Me.men47A, Me.men601, Me.men602, Me.men603, Me.men604, Me.men605, Me.men53, Me.men54, Me.men59, Me.men514, Me.men55, Me.men56, Me.men517, Me.men510, Me.men57, Me.men511, Me.men515, Me.men513, Me.men151, Me.men152, Me.ComboAppearance, Me.men61, Me.men62, Me.men63, Me.men68, Me.men64, Me.men65, Me.men66, Me.men71, Me.men73, Me.men72, Me.men74, Me.men75, Me.men76, Me.men78, Me.men79, Me.men77, Me.men91, Me.men92, Me.men93, Me.men94, Me.men221, Me.men222, Me.men215, Me.men231, Me.men232, Me.men241, Me.men242, Me.men251, Me.men252, Me.men261, Me.men262, Me.men2711, Me.men2712, Me.men2723, Me.men2721, Me.men2722, Me.Men273, Me.Men2724, Me.men2741, Me.men2742, Me.men2751, Me.men2752, Me.men276, Me.men333, Me.men332, Me.men331, Me.men325, Me.men324, Me.men321, Me.men322, Me.men323, Me.men311, Me.men312, Me.men313, Me.men341, Me.men342, Me.men48, Me.men421, Me.men423, Me.men431, Me.men422, Me.men434, Me.men4424, Me.men4421, Me.men4422, Me.men4423, Me.men4425, Me.men4414, Me.men4411, Me.men4412, Me.men4413, Me.men44141, Me.men44142, Me.men44143, Me.men472, Me.men471, Me.men473, Me.men474, Me.men531, Me.men532, Me.men3221, Me.men3222, Me.men3223, Me.men3231, Me.men3232, Me.men3233, Me.men3235, Me.men3236, Me.men4311, Me.men4312, Me.men4313, Me.men4314, Me.men4221, Me.men4222, Me.men4223, Me.men4341, Me.men4342, Me.men4343, Me.men4344, Me.TS1, Me.TS2, Me.TS3, Me.TS4, Me.TS5, Me.TS7, Me.TS8, Me.SkinDropDownButtonItem1, Me.men88, Me.men87, Me.BarEditItemAdornerAppointments, Me.BarEditItemChecks, Me.BarEditItemFinishedItems, Me.ButAdornerAppointments, Me.ButChecks, Me.ButFinishedItems, Me.ButExcel, Me.ButWhatsApp, Me.men516})
+=======
+        Me.RibbonControl2.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl2.ExpandCollapseItem, Me.RibbonControl2.SearchEditItem, Me.men121, Me.men124, Me.men12, Me.men13, Me.men14, Me.men122, Me.men16, Me.men17, Me.men120, Me.men111, Me.men112, Me.men1231, Me.men1232, Me.men211, Me.men212, Me.men22, Me.men23, Me.men24, Me.men26, Me.men271, Me.men277, Me.men272, Me.men274, Me.men275, Me.men28, Me.men213, Me.men216, Me.men33, Me.men32, Me.men31, Me.men34, Me.men361, Me.men362, Me.men351, Me.men352, Me.men353, Me.men38, Me.men37, Me.men41, Me.men52, Me.men50, Me.men49, Me.men46, Me.men45, Me.men42, Me.men67, Me.men43, Me.men433, Me.men442, Me.men441, Me.men47A, Me.men601, Me.men602, Me.men603, Me.men604, Me.men605, Me.men53, Me.men54, Me.men59, Me.men514, Me.men55, Me.men56, Me.men517, Me.men510, Me.men57, Me.men511, Me.men515, Me.men513, Me.men151, Me.men152, Me.ComboAppearance, Me.men61, Me.men62, Me.men63, Me.men68, Me.men64, Me.men65, Me.men66, Me.men71, Me.men73, Me.men72, Me.men74, Me.men75, Me.men76, Me.men78, Me.men79, Me.men77, Me.men91, Me.men92, Me.men93, Me.men94, Me.men221, Me.men222, Me.men215, Me.men231, Me.men232, Me.men241, Me.men242, Me.men251, Me.men252, Me.men261, Me.men262, Me.men2711, Me.men2712, Me.men2723, Me.men2721, Me.men2722, Me.Men273, Me.Men2724, Me.men2741, Me.men2742, Me.men2751, Me.men2752, Me.men276, Me.men333, Me.men332, Me.men331, Me.men325, Me.men324, Me.men321, Me.men322, Me.men323, Me.men311, Me.men312, Me.men313, Me.men341, Me.men342, Me.men48, Me.men421, Me.men423, Me.men431, Me.men422, Me.men434, Me.men4424, Me.men4421, Me.men4422, Me.men4423, Me.men4425, Me.men4414, Me.men4411, Me.men4412, Me.men4413, Me.men44141, Me.men44142, Me.men44143, Me.men472, Me.men471, Me.men473, Me.men474, Me.men531, Me.men532, Me.men3221, Me.men3222, Me.men3223, Me.men3231, Me.men3232, Me.men3233, Me.men3235, Me.men3236, Me.men4311, Me.men4312, Me.men4313, Me.men4314, Me.men4221, Me.men4222, Me.men4223, Me.men4341, Me.men4342, Me.men4343, Me.men4344, Me.TS1, Me.TS2, Me.TS3, Me.TS4, Me.TS7, Me.TS8, Me.SkinDropDownButtonItem1, Me.men88, Me.men87, Me.BarEditItemAdornerAppointments, Me.BarEditItemChecks, Me.BarEditItemFinishedItems, Me.ButAdornerAppointments, Me.ButChecks, Me.ButFinishedItems, Me.ButExcel, Me.ButWhatsApp, Me.men516})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RibbonControl2.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl2.MaxItemId = 227
         Me.RibbonControl2.Name = "RibbonControl2"
@@ -4260,6 +4363,7 @@ Partial Class FrmMAIN
         Me.TS4.Name = "TS4"
         Me.TS4.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
+<<<<<<< HEAD
         'TS5
         '
         Me.TS5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
@@ -4279,6 +4383,8 @@ Partial Class FrmMAIN
         Me.TS5.Name = "TS5"
         Me.TS5.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'TS7
         '
         Me.TS7.Caption = "Time"
@@ -4510,7 +4616,10 @@ Partial Class FrmMAIN
         Me.RGroupMen28.ItemLinks.Add(Me.men516, True)
         Me.RGroupMen28.Name = "RGroupMen28"
         Me.RGroupMen28.Text = "التواصل "
+<<<<<<< HEAD
         Me.RGroupMen28.Visible = False
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'men3
         '
@@ -4800,7 +4909,10 @@ Partial Class FrmMAIN
         '
         Me.RibbonStatusBar2.BackColor = System.Drawing.Color.FromArgb(CType(CType(78, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(156, Byte), Integer))
         Me.RibbonStatusBar2.HideWhenMerging = DevExpress.Utils.DefaultBoolean.[False]
+<<<<<<< HEAD
         Me.RibbonStatusBar2.ItemLinks.Add(Me.TS5, True)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RibbonStatusBar2.ItemLinks.Add(Me.TS3, True)
         Me.RibbonStatusBar2.ItemLinks.Add(Me.TS4, True)
         Me.RibbonStatusBar2.ItemLinks.Add(Me.TS2, True)
@@ -4933,6 +5045,28 @@ Partial Class FrmMAIN
         Me.BarButtonItem1.Name = "BarButtonItem1"
         Me.BarButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+<<<<<<< HEAD
+=======
+        'TS5
+        '
+        Me.TS5.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.TS5.Caption = "Adrss"
+        Me.TS5.Hint = "عنوان الجمعية"
+        Me.TS5.Id = 179
+        Me.TS5.ItemAppearance.Disabled.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TS5.ItemAppearance.Disabled.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.TS5.ItemAppearance.Disabled.ForeColor = System.Drawing.Color.White
+        Me.TS5.ItemAppearance.Disabled.Options.UseFont = True
+        Me.TS5.ItemAppearance.Disabled.Options.UseForeColor = True
+        Me.TS5.ItemAppearance.Normal.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TS5.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold
+        Me.TS5.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.TS5.ItemAppearance.Normal.Options.UseFont = True
+        Me.TS5.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.TS5.Name = "TS5"
+        Me.TS5.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'FrmMAIN
         '
         Me.Appearance.Options.UseFont = True
@@ -4963,7 +5097,10 @@ Partial Class FrmMAIN
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
         Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1300, 500)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmMAIN"
         Me.Ribbon = Me.RibbonControl2
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -5438,6 +5575,7 @@ Partial Class FrmMAIN
     Friend WithEvents men94 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonStatusBar2 As DevExpress.XtraBars.Ribbon.RibbonStatusBar
     Friend WithEvents BarButtonItem140 As DevExpress.XtraBars.BarButtonItem
+<<<<<<< HEAD
 
     Friend WithEvents TS1 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents TS2 As DevExpress.XtraBars.BarStaticItem
@@ -5447,6 +5585,14 @@ Partial Class FrmMAIN
     Friend WithEvents TS7 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents TS8 As DevExpress.XtraBars.BarStaticItem
 
+=======
+    Friend WithEvents TS3 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents TS4 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents TS2 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents TS1 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents TS7 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents TS8 As DevExpress.XtraBars.BarStaticItem
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents BarStaticItem9 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents men13 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents men151 As DevExpress.XtraBars.BarButtonItem
@@ -5503,5 +5649,9 @@ Partial Class FrmMAIN
     Friend WithEvents men516 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup18 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+<<<<<<< HEAD
 
+=======
+    Friend WithEvents TS5 As DevExpress.XtraBars.BarStaticItem
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

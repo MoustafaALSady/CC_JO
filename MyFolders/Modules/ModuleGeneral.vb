@@ -72,6 +72,7 @@ Module ModuleGeneral
     Public FY As Integer '   ”‰… „«·Ì….
     Public STarDat As Date
 
+<<<<<<< HEAD
     Public LockAddRow As Boolean = False
     Public LockSave As Boolean = False
     Public LockUpdate As Boolean = False
@@ -84,11 +85,29 @@ Module ModuleGeneral
     Public CollaborationManager As Boolean = False
     Public HeadofAuditingDepartment As Boolean = False
     Public ExternalAuditor As Boolean = False
+=======
+    Public LockAddRow As Boolean
+    Public LockSave As Boolean
+    Public LockUpdate As Boolean
+    Public LockDelete As Boolean
+    Public LockPrint As Boolean
+
+    Public TransferofAccounts As Boolean
+    Public InternalAuditor As Boolean
+    Public Managers As Boolean
+    Public CollaborationManager As Boolean
+    Public HeadofAuditingDepartment As Boolean
+    Public ExternalAuditor As Boolean
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     'Public InternalAuditor1 As Boolean = False
     'Public CollaborationManager1 As Boolean = False
     'Public HeadofAuditingDepartment1 As Boolean = False
+<<<<<<< HEAD
     Public SumPreviousBalanceStocks As Decimal = 0.0
+=======
+    'Public ExternalAuditor1 As Boolean = False
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Public Issued As Boolean
     Public Ward As Boolean
@@ -297,7 +316,11 @@ Module ModuleGeneral
         Next
     End Sub
 
+<<<<<<< HEAD
     Public Sub AutoComplete(ByRef cb As ComboBox, ByVal e As KeyPressEventArgs, Optional ByVal blnLimitToList As Boolean = False)
+=======
+    Public Sub AutoComplete(ByRef cb As ComboBox, ByVal e As System.Windows.Forms.KeyPressEventArgs, Optional ByVal blnLimitToList As Boolean = False)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strFindStr As String
         If e.KeyChar = Chr(8) Then
             If cb.SelectionStart <= 1 Then
@@ -405,12 +428,23 @@ Module ModuleGeneral
 
     Public Sub LoadMyDatabase2()
         Try
+<<<<<<< HEAD
             If ServerConnection Then
                 constring = $"Data Source={ServerName},{PORT};Initial Catalog={DBServer};User Id={userIDName};Password={BWS1};"
             ElseIf AuthenicationSQLServer Then
                 constring = $"Data Source={ServerName};Initial Catalog={DBServer};User Id={userIDName};Password={BWS1};"
             Else
                 constring = $"Data Source={ServerName};Initial Catalog={DBServer};Integrated Security=True"
+=======
+            If ServerConnection = True Then
+                constring = "Data Source=" + ServerName + "," + PORT + ";Initial Catalog= " + DBServer + ";User Id=" + userIDName + ";Password=" + BWS1 + ";"
+            Else
+                If AuthenicationSQLServer = True Then
+                    constring = "Data Source=" + ServerName + ";Initial Catalog=" + DBServer + ";User Id=" + userIDName + ";Password=" + BWS1 + ";"
+                Else
+                    constring = "Data Source =" + ServerName + ";Initial Catalog=" + DBServer + ";Integrated Security=True"
+                End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
@@ -419,6 +453,7 @@ Module ModuleGeneral
 
     Public Function GetSql(ByVal Name As String, ByVal TypeFileIncludeexe As Boolean) As String
         Try
+<<<<<<< HEAD
             If TypeFileIncludeexe Then
                 Dim Asm As [Assembly] = [Assembly].GetExecutingAssembly()
                 Using strm As Stream = Asm.GetManifestResourceStream(Asm.GetName().Name + "." + Name)
@@ -470,10 +505,60 @@ Module ModuleGeneral
         Catch ex As Exception
             MessageBox.Show($"In exception handler: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Throw New ApplicationException($"Failed to add database table for {strDBName} using file {NameFile}", ex)
+=======
+            If TypeFileIncludeexe = True Then
+                Dim Asm As [Assembly] = [Assembly].GetExecutingAssembly()
+                Dim strm As Stream = Asm.GetManifestResourceStream(Asm.GetName().Name + "." + Name)
+                Dim reader As New StreamReader(strm)
+                Return reader.ReadToEnd()
+            Else
+                Dim reader As New StreamReader(Name)
+                Return reader.ReadToEnd()
+            End If
+        Catch ex As Exception
+            MessageBox.Show("In GetSQL: " & ex.Message)
+            Throw
+        End Try
+    End Function
+
+    Public Sub ExecuteSql(ByVal DatabaseName As String, ByVal Sql As String)
+        Dim ServerConnectionString As String = Nothing
+        If AuthenicationSQLServer = True And LocalConnection = True Then
+            ServerConnectionString = "Data Source=" & ServerName & ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+        ElseIf AuthenicationSQLServer = True And ServerConnection = True Then
+            ServerConnectionString = "Data Source=" & ServerName & "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+        ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
+            ServerConnectionString = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
+        End If
+        Dim SqlConnection1 As New SqlClient.SqlConnection(ServerConnectionString)
+        Dim Command As New SqlClient.SqlCommand(Sql, SqlConnection1) With {
+            .CommandType = CommandType.Text
+        }
+        Command.Connection.Open()
+        Command.Connection.ChangeDatabase(DatabaseName)
+        Try
+            Command.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("In GetSQL: " & ex.Message & ex.Source)
+            Throw
+        Finally
+            Command.Connection.Close()
+        End Try
+    End Sub
+
+    Public Sub AddDBTable(ByVal strDBName As String, ByVal NameFile As String)
+        Try
+            ExecuteSql("master", "CREATE DATABASE " + strDBName)
+            ExecuteSql(strDBName, GetSql(NameFile, True))
+        Catch ex As Exception
+            MessageBox.Show("In exception handler: " & ex.Message)
+            Throw
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         End Try
     End Sub
 
     Public Function GETATTACHDATABASENAME(ByVal db As String) As Boolean
+<<<<<<< HEAD
         Dim DS As New DataSet
         Dim MYFILE As String = mykey.GetValue("PrimaryFile")
 
@@ -502,6 +587,30 @@ Module ModuleGeneral
         End Try
     End Function
 
+=======
+        On Error Resume Next
+        Dim DS As New DataSet
+        Dim MYFILE As String = mykey.GetValue("PrimaryFile")
+        If Consum.State <> ConnectionState.Open Then
+            'GeneralConnection()
+            Dim ConUsers = New SqlClient.SqlConnection(Consum.ConnectionString)
+        End If
+        Dim str As String = "Select DISTINCT name from master.dbo.sysdatabases where name Like '" & db & "'"
+        Dim ADP As SqlClient.SqlDataAdapter
+        ADP = New SqlClient.SqlDataAdapter(str, ConUsers)
+        DS.Clear()
+        ADP.Fill(DS)
+        Dim i As Integer
+        If DS.Tables(0).Rows.Count = 0 Then
+            GETATTACHDATABASENAME = False
+            MessageBox.Show(" ﬁ«⁄œ… «·»Ì«‰«  " & db & "€Ì— „ ’·… »«·”—›— Ã«—Ï ⁄„· «·« ’«·" & vbCrLf & vbCrLf & " „‰ ›÷·ﬂ «‰ Ÿ— ﬁ·Ì·«Û                                 ", My.Computer.Name, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RtlReading)
+        Else
+            GETATTACHDATABASENAME = True
+        End If
+        ADP.Dispose()
+        ConUsers.Dispose()
+    End Function
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Function MyCompTextEmpte(ByVal Comb As ComboBox, ByVal CombCaption As String) As Boolean
         If Comb.Text = String.Empty Then
             MsgBox("Ì—ÃÏ «Œ Ì«—" & Space(1) & "'" & CombCaption & "'", MsgBoxStyle.Information, " «ﬂÌœ «·«Œ Ì«—")
@@ -551,6 +660,7 @@ Module ModuleGeneral
         Return -1
     End Function
 
+<<<<<<< HEAD
     Public Sub FILLCOMBOBOX(ByVal TABLE As String, ByVal FIELD As String, ByVal COMBO As Object)
         Using Consum As New SqlConnection(constring)
             COMBO.Items.Clear()
@@ -783,6 +893,224 @@ Module ModuleGeneral
         End Try
     End Sub
 
+=======
+
+    Public Sub FILLCOMBOBOX(ByVal TABLE As String, ByVal FIELD As String, ByVal COMBO As Object)
+        Dim Consum As New SqlConnection(constring)
+        COMBO.Items.Clear()
+        Try
+            Dim strSQL1 As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE, Consum)
+            Consum.Open()
+            DR = strSQL1.ExecuteReader(CommandBehavior.CloseConnection)
+            Do While DR.Read()
+                COMBO.Items.Add(DR(0))
+            Loop
+            DR.Close()
+        Catch ex As Exception
+        Finally
+            Consum.Close()
+        End Try
+    End Sub
+
+    Public Sub FILLCOMBOBOX1(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal COMBO As Object)
+        Dim Consum As New SqlConnection(constring)
+        COMBO.Items.Clear()
+        On Error Resume Next
+        Dim strSQL1 As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE & " WHERE " & FIELD1 & "=" & FIELD2, Consum)
+        Consum.Open()
+        DR = strSQL1.ExecuteReader(CommandBehavior.CloseConnection)
+        Do While DR.Read()
+            COMBO.Items.Add(DR(0))
+        Loop
+        DR.Close()
+        'Catch ex As Exception WHERE  CUser='" & CUser & "' and Year(CST7) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+        '    Consum.Close()
+        '    MsgBox("Error:" & ex.ToString)
+        'Finally
+        '    'Consum.Close()
+        'End Try
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOX10(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal FIELD3 As String, ByVal FIELD4 As String, ByVal COMBO As Object)
+        Dim Consum As New SqlConnection(constring)
+        COMBO.Items.Clear()
+        On Error Resume Next
+        Dim strSQL2 As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE & " WHERE " & FIELD1 & "='" & FIELD2 & "'" & "AND " & FIELD3 & " = '" & FIELD4 & "0" & "'", Consum)
+        Consum.Open()
+        DR = strSQL2.ExecuteReader(CommandBehavior.CloseConnection)
+        Do While DR.Read()
+            COMBO.Items.Add(DR(0))
+        Loop
+        DR.Close()
+        'Catch ex As Exception WHERE " & FIELD1 & "='" & TXT & "'" & "AND " & FIELD2 & " = '" & TXT1 & "0" & "'"
+        '    Consum.Close() "SELECT max(" & FIELD & ") FROM " & TABLE & " WHERE " & FIELD1 & "='" & TXT & "'" & "AND " & FIELD2 & " = '" & TXT1 & "0" & "'"
+        '    MsgBox("Error:" & ex.ToString)
+        'Finally
+        '    'Consum.Close()
+        'End Try
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOX2(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim BS As New BindingSource
+        Dim DS As New DataSet
+        Dim str As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE & " WHERE " & FIELD1 & "=" & FIELD2, Consum)
+        Dim ADP As New SqlClient.SqlDataAdapter(str)
+        If Consum.State = ConnectionState.Open Then
+            Consum.Close()
+        End If
+        Consum.Open()
+        ADP.Fill(DS, "TBL")
+        BS.DataSource = DS
+        BS.DataMember = "TBL"
+        COMBO.Items.Clear()
+        COMBO.DataSource = BS
+        COMBO.DisplayMember = FIELD
+        COMBO.ValueMember = FIELD
+        'COMBO.SelectedIndex = 0 WHERE  CUser='" & CUser & "' and Year(CST7) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'"
+        ADP.Dispose()
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOX3(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal FIELD3 As String, ByVal FIELD4 As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        COMBO.Items.Clear()
+        'Dim BS As New BindingSource
+        'Dim DS As New DataSet
+        Dim str As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE & " WHERE [" & FIELD1 & "]='" & FIELD2 & "'" & "AND [" & FIELD3 & "] = '" & FIELD4 & "'", Consum)
+        'Dim ADP As New SqlClient.SqlDataAdapter(str)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        DR = str.ExecuteReader(CommandBehavior.CloseConnection)
+        Do While DR.Read()
+            COMBO.Items.Add(DR(0))
+        Loop
+        DR.Close()
+        Consum.Close()
+
+
+
+        'ADP.Fill(DS, "TBL")
+        'BS.DataSource = DS
+        'BS.DataMember = "TBL"
+        'COMBO.Items.Clear()
+        'COMBO.DataSource = BS
+        'COMBO.DisplayMember = FIELD
+        'COMBO.ValueMember = FIELD
+        ''COMBO.SelectedIndex = 0 
+        'ADP.Dispose()
+
+    End Sub
+
+    Public Sub FILLCOMBOBOXDISTINCT(ByVal TABLE As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal FIELD3 As String, ByVal FIELD4 As String, ByVal COMBO As Object)
+        COMBO.Items.Clear()
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Try
+            Dim strSQL1 As New SqlCommand("SELECT  " & FIELD1 & "," & FIELD2 & " FROM " & TABLE & " WHERE " & FIELD3 & "=" & FIELD4, Consum)
+            Consum.Open()
+            DR = strSQL1.ExecuteReader(CommandBehavior.CloseConnection)
+            Do While DR.Read()
+                COMBO.Items.Add(DR(1) & "-" & DR(0))
+
+            Loop
+            Consum.Close()
+        Catch ex As Exception
+        Finally
+        End Try
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOXValueMember(ByVal TABLE As String, ByVal FIELDDisplayMember As String, ByVal FIELDValueMember As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim BS As New BindingSource
+        Dim DSCO As New DataSet
+        Dim str As New SqlCommand("SELECT DISTINCT " & FIELDDisplayMember & "," & FIELDValueMember & " FROM " & TABLE, Consum)
+        Dim ADP As New SqlClient.SqlDataAdapter(str)
+        If Consum.State = ConnectionState.Open Then
+            Consum.Close()
+        End If
+        Consum.Open()
+        ADP.Fill(DSCO, "TBL")
+        BS.DataSource = DSCO
+        BS.DataMember = "TBL"
+        COMBO.Items.Clear()
+        COMBO.DataSource = BS
+        COMBO.DisplayMember = FIELDDisplayMember
+        COMBO.ValueMember = FIELDValueMember
+        ADP.Dispose()
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOXITEMS(ByVal TABLE As String, ByVal FIELD As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim I As Integer
+        Dim DSCO As New DataSet
+        Dim str As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE, Consum)
+        Dim ADP As New SqlClient.SqlDataAdapter(str)
+        DSCO.Clear()
+        If Consum.State = ConnectionState.Open Then
+            Consum.Close()
+        End If
+        Consum.Open()
+        ADP.Fill(DSCO, "TBL")
+        COMBO.Items.Clear()
+        For I = 0 To ds.Tables("TBL").Rows.Count - 1
+            If DSCO.Tables("TBL").Rows(I).Item(0) Is DBNull.Value Then
+            Else
+                COMBO.Items.Add(DSCO.Tables("TBL").Rows(I).Item(0))
+            End If
+        Next I
+        ADP.Dispose()
+        Consum.Close()
+    End Sub
+
+    Public Sub FILLCOMBOBOXITEMSAccess(ByVal TABLE As String, ByVal FIELD As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim I As Integer
+        Dim DS As New DataSet
+        Dim str As New SqlCommand("SELECT DISTINCT " & FIELD & " FROM " & TABLE, Consum)
+        Dim adapt As New SqlClient.SqlDataAdapter(str)
+        DS.Clear()
+        Consum.Open()
+        adapt.Fill(DS, "TBL")
+        COMBO.Items.Clear()
+        For I = 0 To DS.Tables("TBL").Rows.Count - 1
+            If DS.Tables("TBL").Rows(I).Item(0) Is DBNull.Value Then
+            Else
+                COMBO.Items.Add(DS.Tables("TBL").Rows(I).Item(0))
+            End If
+        Next I
+        adapt.Dispose()
+    End Sub
+
+    Public Sub FILLCOMBOBOXITEMSTWOFIELDS(ByVal TABLE As String, ByVal FIELD1 As String, ByVal FIELD2 As String, ByVal COMBO As Object)
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim I As Integer
+        Dim DSCO As New DataSet
+        Dim str As New SqlCommand("SELECT  " & FIELD1 & "," & FIELD2 & "FROM " & TABLE, Consum)
+        Dim ADP As New SqlClient.SqlDataAdapter(str)
+        DSCO.Clear()
+        If Consum.State = ConnectionState.Open Then
+            Consum.Close()
+        End If
+        Consum.Open()
+        ADP.Fill(DSCO, "TBL")
+        COMBO.Items.Clear()
+        For I = 0 To DSCO.Tables("TBL").Rows.Count - 1
+            COMBO.Items.Add(DSCO.Tables("TBL").Rows(I).Item(0) & " - " & DSCO.Tables("TBL").Rows(I).Item(1))
+        Next I
+        ADP.Dispose()
+        Consum.Close()
+    End Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Public Sub MYSHUTDOWN(ByVal OPERATION As Byte)
         On Error Resume Next
@@ -812,6 +1140,7 @@ Module ModuleGeneral
         End Select
     End Sub
 
+<<<<<<< HEAD
     Public Sub Auditor(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal chk As String, USERLogentry As String)
         If USERLogentry Is Nothing Then
             Throw New ArgumentNullException(NameOf(USERLogentry))
@@ -833,11 +1162,37 @@ Module ModuleGeneral
                 End Using
             End Using
         End Using
+=======
+    Public Sub Auditor(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal chk As String, ByVal USERLogentry As String)
+        Dim SavInto As New SqlCommand
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim DR As SqlDataReader
+        SavInto.Connection = Consum
+        SavInto.CommandType = CommandType.Text
+        'If USERLogentry = 0 Then SavInto.CommandText = "SELECT [" & FIELD & "] FROM [" & TABLE & "] WHERE [" & FIELD1 & "]=" & chk
+        If USERLogentry = "" Then SavInto.CommandText = "SELECT [" & FIELD & "] FROM [" & TABLE & "] WHERE [" & FIELD1 & "]='" & chk & "'"
+        'If USERLogentry = 2 Then SavInto.CommandText = "SELECT [" & FIELD & "] FROM [" & TABLE & "]"
+        ID_Nam = ""
+        If Consum.State <> ConnectionState.Open Then Consum.Open()
+        DR = SavInto.ExecuteReader()
+        Do While DR.Read
+            If TypeOf DR.Item(0) Is DBNull Then
+                Uses = DR.Item(0).ToString
+            Else
+                Uses = DR.Item(0).ToString
+            End If
+        Loop
+        Consum.Close()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Sub
 
     Public Sub GetNoRecord(ByVal TABLE As String, ByVal FIELD As String, ByVal FIELD1 As String, ByVal TXT As String, ByVal TXT1 As Integer)
         Dim SavInto As New SqlCommand
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim DR As SqlDataReader
         SavInto.Connection = Consum
         SavInto.CommandType = CommandType.Text
@@ -857,6 +1212,7 @@ Module ModuleGeneral
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Public Sub MYDELETERECORD(ByVal tableName As String, ByVal fieldName As String, ByVal txt As Object, ByVal bindingSource As BindingSource, Optional ByVal isFieldNumeric As Boolean = True)
         Try
             If bindingSource.Count > 0 Then
@@ -901,6 +1257,39 @@ Module ModuleGeneral
                 End Using
             Else
                 MessageBox.Show("No current record to delete", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+=======
+    Public Sub MYDELETERECORD(ByVal TABLE As String, ByVal FIELD As String, ByVal TXT As Object, ByVal BS As BindingSource, Optional ByVal FIELDtextornumer As Boolean = True)
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            'Dim resault As Integer
+            Dim SQL As New SqlClient.SqlCommand("", Consum)
+            'Dim FRM As Form
+            If FIELDtextornumer = True Then
+                SQL.CommandText = "DELETE FROM " & TABLE & " WHERE " & FIELD & "=" & TXT.Text.Trim
+            Else
+                SQL.CommandText = "DELETE FROM " & TABLE & " WHERE " & FIELD & "='" & TXT.Text.Trim & "'"
+            End If
+
+            If BS.Count > 0 Then
+                'resault = MessageBox.Show("”»‰„ Õ–› «·”Ã· «·Õ«·Ï", "Õ–› ”Ã· " & TABLE, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
+                'If resault = vbYes Then
+                Dim CMD As New SqlClient.SqlCommand With {
+                    .CommandType = CommandType.Text,
+                    .Connection = Consum
+                }
+                If Consum.State = ConnectionState.Open Then Consum.Close()
+                Consum.Open()
+                CMD.CommandText = SQL.CommandText
+                CMD.ExecuteNonQuery()
+                Consum.Close()
+                'Else
+                '    MessageBox.Show(" „ «Ìﬁ«› ⁄„·Ì… «·Õ–›", "Õ–› ”Ã·", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
+                '    Exit Sub
+                'End If
+            Else
+                MessageBox.Show(" ·«ÌÊÃœ ”Ã· Õ«·Ï ·« „«„ ⁄„·Ì… «·Õ–›", "Õ–› ”Ã·", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
+                Exit Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -1264,6 +1653,7 @@ Module ModuleGeneral
     End Function
 
     Public Sub AddCloseAllConnection()
+<<<<<<< HEAD
         Try
             ExecuteSql("master", GetSql("dropproc.txt", True))
             ExecuteSql("master", GetSql("CloseAllConnection.sql", True))
@@ -1608,6 +1998,285 @@ Module ModuleGeneral
         End Try
 
         Return Math.Round(result, 3)
+=======
+        On Error Resume Next
+        ExecuteSql("master", GetSql("dropproc.txt", True))
+        ExecuteSql("master", GetSql("CloseAllConnection.sql", True))
+    End Sub
+    Public Sub CloseAllConnection(ByVal DBName As String, ByVal frm As Form)
+        On Error Resume Next
+        AddCloseAllConnection()
+        Dim ServerConnectionString As String = Nothing
+        If AuthenicationSQLServer = True And LocalConnection = True Then
+            ServerConnectionString = "Data Source=" & ServerName & ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+        ElseIf AuthenicationSQLServer = True And ServerConnection = True Then
+            ServerConnectionString = "Data Source=" & ServerName & "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+        ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
+            ServerConnectionString = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
+        End If
+
+        Dim SqlConnection1 As New SqlClient.SqlConnection(ServerConnectionString)
+        Dim CMD As New SqlClient.SqlCommand With {
+            .CommandType = CommandType.StoredProcedure,
+            .CommandText = "CloseAllConnection",
+            .Connection = SqlConnection1
+        }
+        If SqlConnection1.State = ConnectionState.Open Then SqlConnection1.Close()
+        SqlConnection1.Open()
+        frm.Cursor = Cursors.WaitCursor
+        CMD.Parameters.Add("@DB", SqlDbType.NVarChar, 500).Value = DBName
+        CMD.ExecuteNonQuery()
+        SqlConnection1.Dispose()
+        frm.Cursor = Cursors.Default
+        SqlConnection1.Dispose()
+    End Sub
+
+    Public Sub Backup_database(ByVal DBName As String)
+        Try
+            Dim dt As String = ""
+            Dim tm As String = ""
+            'Dim ConUsers As New SqlClient.SqlConnection("Data Source=" + ServerName + "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";")
+            Dim ServerConnectionString As String = Nothing
+            If AuthenicationSQLServer = True And LocalConnection = True Then
+                ServerConnectionString = "Data Source=" & ServerName & ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+            ElseIf AuthenicationSQLServer = True And ServerConnection = True Then
+                ServerConnectionString = "Data Source=" & ServerName & "," + PORT + ";Initial Catalog=master;User Id=" + userIDName + ";Password=" + BWS1 + ";"
+            ElseIf AuthenicationSQLServer = False And LocalConnection = True Then
+                ServerConnectionString = "Data Source = " & ServerName & ";Initial Catalog=master;Integrated Security=True"
+            End If
+            Dim ConUsers As New SqlClient.SqlConnection(ServerConnectionString)
+            Dim CMD As New SqlClient.SqlCommand With {
+                .CommandType = CommandType.Text,
+                .Connection = ConUsers
+            }
+            If ConUsers.State = ConnectionState.Open Then ConUsers.Close()
+            ConUsers.Open()
+            CMD.CommandText = "backup database " + DBName + " to disk=@PATHFILE with init"
+            MYFOLDER = mykey.GetValue("MYFOLDER", "D:\CO_MAS\MyDATA")
+            If File.Exists(MYFOLDER & "\Backup" & Now.ToString("yyyy-MM")) = False Then
+                Directory.CreateDirectory(MYFOLDER & "\Backup" & Now.ToString("yyyy-MM"))
+            End If
+            dt = Now.ToString("yyyy-MM-dd-mm-tt")
+            CMD.Parameters.AddWithValue("@PATHFILE", SqlDbType.NVarChar).Value = MYFOLDER & "\Backup" & Now.ToString("yyyy-MM") & "\" + DBName + "_" + dt + ".dmp"
+            CMD.ExecuteNonQuery()
+            MessageBox.Show(" „ «‰‘«¡ ‰”ŒÂ «Õ Ì«ÿÌ… „‰ ﬁ«⁄œ… «·»Ì«‰«  «·Õ«·Ì…" & " ›Ï «·„”«— «· «·Ï  " & vbCrLf & vbCrLf & MYFOLDER & "\Backup" & ServerDateTime.ToString("yyyy-MM") & "\" + DBName + dt + ".dmp", "«‰‘«¡ ‰”ŒÂ «Õ Ì«ÿÌÂ", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading)
+            ConUsers.Dispose()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message & ex.Source)
+        End Try
+    End Sub
+
+    Public Function SumAmounTOTALCASHANDCHEQUES(ByVal cust As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        'On Error Resume Next
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CAB4-CAB5)  FROM CABLES WHERE CABLES.CUser = '" & CUser & "'" & "AND  Year(CAB3)='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & " and  CAB11='" & cust & "'" & "AND CABLES.IDCAB <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALCASHANDCHEQUES = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALCASHANDCHEQUES = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALCASHANDCHEQUES
+    End Function
+
+    Public Function SumAmounTOTALCASHANDCHEQUES1(ByVal cust As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        'On Error Resume Next
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CAB5-CAB4)  FROM Suppliers1 WHERE Suppliers1.CUser = '" & CUser & "'" & "AND Year(CAB3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & " and CAB11 ='" & cust & "'" & "AND Suppliers1.IDCAB <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALCASHANDCHEQUES1 = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALCASHANDCHEQUES1 = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALCASHANDCHEQUES1
+    End Function
+
+    Public Function SumAmounTOTALCASHANDCHEQUES2(ByVal cust As String, ByVal cust1 As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(TBNK5-TBNK4)  FROM PTRANSACTION WHERE PTRANSACTION.CUser = '" & CUser & "'" & "AND  Year(TBNK3)='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & " and TBNK6 ='" & cust & "'" & "AND PTRANSACTION.TBNK1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALCASHANDCHEQUES2 = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALCASHANDCHEQUES2 = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALCASHANDCHEQUES2
+    End Function
+
+    Public Function SumAmounTOTALBALANCECASHIER(ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        'On Error Resume Next
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CSH7-CSH8)  FROM CASHIER WHERE CUser = '" & CUser & "'" & "and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND CASHIER.CSH1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1, "CASHIER")
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALBALANCECASHIER = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALBALANCECASHIER = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALBALANCECASHIER
+    End Function
+
+    Public Function SumAmounTOTALBALANCECASHIER11(ByVal CUserA As Integer, ByVal ComboCB As Integer, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        'On Error Resume Next
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CSH7-CSH8)  FROM CASHIER WHERE CUser = '" & CUserA & "'" & "and (CASHIER.CSH18)='" & ComboCB & "'" & "AND CASHIER.CSH1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1, "CASHIER")
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALBALANCECASHIER11 = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALBALANCECASHIER11 = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALBALANCECASHIER11
+    End Function
+
+    Public Function SumAmounTOTALBALANCE(ByVal BN2 As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(BANKJO.EBNK2) AS CurrentBalance, Sum(EBNK4-EBNK5)  FROM BANKJO WHERE CUser = '" & CUser & "'" & "and Year(EBNK3) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND  EBNK10 ='" & BN2 & "'" & "AND BANKJO.EBNK1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1, "BANKJO")
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALBALANCE = Format(Val(ds1.Tables(0).Rows(0).Item(0) + ds1.Tables(0).Rows(0).Item(1)), "0.000")
+        Else
+            SumAmounTOTALBALANCE = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALBALANCE
+    End Function
+
+    Public Function SumAmounTOTALSTOCKS(ByVal cod As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(STK11-STK12) FROM STOCKS WHERE CUser ='" & CUser & "'" & "and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND  STK25 ='" & cod & "'" & " AND STOCKS.STK1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALSTOCKS = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALSTOCKS = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALSTOCKS
+    End Function
+
+    Public Function SumAmounTOTALSTOCKS1(ByVal cod As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT  STK13, STK15 FROM STOCKS WHERE CUser ='" & CUser & "'" & "and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND STK25 ='" & cod & "'" & " AND STOCKS.STK1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALSTOCKS1 = Format(Val(ds1.Tables(0).Rows(0).Item(0)) * Val(ds1.Tables(0).Rows(0).Item(1)), "0.000")
+        Else
+            SumAmounTOTALSTOCKS1 = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALSTOCKS1
+    End Function
+
+    Public Function SumAmounTOTALSTOCKS2(ByVal cod As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT STK13, STK19 FROM STOCKS WHERE CUser ='" & CUser & "'" & "and Year(STK4) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND STK25 ='" & cod & "'" & " AND STOCKS.STK1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALSTOCKS2 = Format(Val(ds1.Tables(0).Rows(0).Item(0)) * Val(ds1.Tables(0).Rows(0).Item(1)), "0.000")
+        Else
+            SumAmounTOTALSTOCKS2 = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALSTOCKS2
+    End Function
+
+    Public Function SumAmounTOTALBALANCEEMPSOLF(ByVal cust As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CSH7-CSH8)  FROM EMPSOLF WHERE EMPSOLF.CUser = '" & CUser & "'" & "and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'" & "AND CSH15 ='" & cust & "'" & " AND EMPSOLF.CSH1 <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALBALANCEEMPSOLF = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALBALANCEEMPSOLF = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALBALANCEEMPSOLF
+    End Function
+
+    Public Function SumAmounTOTALChecks(ByVal cust As String, ByVal num As Integer) As Double
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT Sum(CH5-CH6)  FROM Checks WHERE Checks.CUser = '" & CUser & "'" & "AND CH8 ='" & cust & "'" & " AND Checks.IDCH <='" & num & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1)
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            SumAmounTOTALChecks = Format(Val(ds1.Tables(0).Rows(0).Item(0)), "0.000")
+        Else
+            SumAmounTOTALChecks = "0"
+        End If
+        Consum.Close()
+        Return SumAmounTOTALChecks
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Function
 
     Public Function MaxDate() As Date
@@ -1616,6 +2285,7 @@ Module ModuleGeneral
        Return MaxDate
     End Function
 
+<<<<<<< HEAD
     Public Function FiscalYear_currentDateMustBeInFiscalYear() As Integer
         Dim result As Integer = 0
         Dim fiscalYearSetting As String = mykey.GetValue("FiscalYear", "False")
@@ -1648,6 +2318,31 @@ Module ModuleGeneral
             MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
         Return result
+=======
+    Public Function FiscalYear_currentDateMustBeInFiscalYear()
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim resault16 As String
+        resault16 = mykey.GetValue("FiscalYear", "False")
+        FY = mykey.GetValue("FiscalYearCOMBO", "0")
+        On Error Resume Next
+        Dim strsq1 As New SqlClient.SqlCommand("SELECT  Year2, Year3  FROM FiscalYear WHERE CUser='" & CUser & "' and YE1 ='" & True & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        ds1.Clear()
+        Consum.Open()
+        Adp1.Fill(ds1, "FiscalYear")
+        Adp1.Dispose()
+        If ds1.Tables(0).Rows.Count > 0 Then
+            STarDat = ds1.Tables(0).Rows(0).Item(0)
+            If resault16 = "True" Then
+                FiscalYear_currentDateMustBeInFiscalYear = Year(STarDat) - FY
+            Else
+                FiscalYear_currentDateMustBeInFiscalYear = Year(STarDat)
+            End If
+        End If
+        Consum.Close()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     End Function
 
     Public Function MyResultDate(ByVal mydate1 As Date, ByVal mydate2 As Date) As String
@@ -1776,7 +2471,10 @@ Module ModuleGeneral
         x.SetValue("", "c:\windows\system32\CC_JO.exe")
         x.Close()
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub DelValueStar()
         On Error Resume Next
         Dim x As RegistryKey
@@ -1785,7 +2483,10 @@ Module ModuleGeneral
         x.DeleteSubKeyTree("*\shell\CC_JO")
         x.Close()
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub DelValueFolder()
         On Error Resume Next
         Dim x As RegistryKey
@@ -1794,7 +2495,10 @@ Module ModuleGeneral
         x.DeleteSubKeyTree("Folder\shell\CC_JO")
         x.Close()
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub DelValueDirectory()
         On Error Resume Next
         Dim x As RegistryKey
@@ -1817,7 +2521,11 @@ Module ModuleGeneral
     End Function
 
     Public Structure DevMode
+<<<<<<< HEAD
         <VBFixedString(32), Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst:=32)> Public dmDeviceName As String
+=======
+        <VBFixedString(32), System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst:=32)> Public dmDeviceName As String
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim dmSpecVersion As Short
         Dim dmDriverVersion As Short
         Dim dmSize As Short
@@ -1836,7 +2544,11 @@ Module ModuleGeneral
         Dim dmYResolution As Short
         Dim dmTTOption As Short
         Dim dmCollate As Short
+<<<<<<< HEAD
         <VBFixedString(32), Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst:=32)> Public dmFormName As String
+=======
+        <VBFixedString(32), System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.ByValTStr, SizeConst:=32)> Public dmFormName As String
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim dmLogPixels As Short
         Dim dmBitsPerPel As Integer
         Dim dmPelsWidth As Integer

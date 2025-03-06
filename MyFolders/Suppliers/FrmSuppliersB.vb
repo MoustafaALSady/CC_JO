@@ -2,10 +2,17 @@
 
 Imports System.Data.SqlClient
 Public Class FrmSuppliersB
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     ReadOnly myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    ReadOnly myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -15,7 +22,11 @@ Public Class FrmSuppliersB
     Public Delegate Sub PictureBox2Callback()
     Dim DelRow As Boolean = False
     Dim RowCount As Integer = 0
+<<<<<<< HEAD
     Private Sub FrmSuppliers_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmSuppliers_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -30,7 +41,11 @@ Public Class FrmSuppliersB
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmSuppliersB_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmSuppliersB_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -42,6 +57,7 @@ Public Class FrmSuppliersB
         Me.ADDBUTTON.Enabled = True
         Me.SAVEBUTTON.Enabled = False
     End Sub
+<<<<<<< HEAD
 
     Private Sub SAVERECORD()
         Try
@@ -72,6 +88,38 @@ Public Class FrmSuppliersB
         End Try
     End Sub
 
+=======
+    Private Sub SAVERECORD()
+        ''On Error Resume Next
+        Try
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO SUPPLIER( sup2, sup3, sup4, sup5, sup7, USERNAME, Cuser, COUser, da, ne) VALUES     ( @sup2, @sup3, @sup4, @sup5, @sup7, @USERNAME, @Cuser, @COUser, @da, @ne)"
+            Dim CMD As New SqlClient.SqlCommand
+            With CMD
+                .CommandType = CommandType.Text
+                .Connection = Consum
+                .Parameters.Add("@sup1", SqlDbType.Int).Value = Me.TEXTBOX1.Text
+                .Parameters.Add("@sup2", SqlDbType.NVarChar).Value = Me.TEXTAgentName.Text
+                .Parameters.Add("@sup3", SqlDbType.NVarChar).Value = Me.TEXTSupplierName.Text
+                .Parameters.Add("@sup4", SqlDbType.NVarChar).Value = Me.TEXTPHONE.EditValue
+                .Parameters.Add("@sup5", SqlDbType.NVarChar).Value = Me.TextE_mail.EditValue
+                .Parameters.Add("@sup7", SqlDbType.NVarChar).Value = Me.TextITEMNAME.Text
+                .Parameters.Add("@USERNAME", SqlDbType.NVarChar).Value = USERNAME
+                .Parameters.Add("@CUser", SqlDbType.NVarChar).Value = CUser
+                .Parameters.Add("@COUser", SqlDbType.NVarChar).Value = COUser
+                .Parameters.Add("@da", SqlDbType.NVarChar).Value = ServerDateTime.ToString("yyyy-MM-dd")
+                .Parameters.Add("@ne", SqlDbType.NVarChar).Value = ServerDateTime.ToString("hh:mm:ss tt")
+                .CommandText = SQL
+            End With
+            If Consum.State = ConnectionState.Open Then Consum.Close()
+            Consum.Open()
+            CMD.ExecuteNonQuery()
+            Consum.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles SaveTab.DoWork
         Try
 1:
@@ -123,7 +171,11 @@ Public Class FrmSuppliersB
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             If Click1 = True Then
                 Try
@@ -166,10 +218,17 @@ Public Class FrmSuppliersB
     End Sub
     Private Sub MAXRECORD1()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim V As Integer
         Dim SQL As New SqlCommand("SELECT MAX(SUPPLIER.sup1) FROM SUPPLIER", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(SUPPLIER.sup1) FROM SUPPLIER", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -185,7 +244,11 @@ Public Class FrmSuppliersB
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -203,14 +266,22 @@ Public Class FrmSuppliersB
             Me.TEXTAgentName.Focus()
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -228,7 +299,11 @@ Public Class FrmSuppliersB
         Me.SAVERECORD()
         Me.BS.EndEdit()
         Me.RowCount = BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }

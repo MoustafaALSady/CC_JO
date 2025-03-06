@@ -84,8 +84,13 @@ Namespace Theme
         Private Sub DrawFocusButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(CRGB(153, 214, 255))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -100,7 +105,11 @@ Namespace Theme
             c2 = CRGB(206, 209, 214)
             c3 = Color.White
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0, 0.75, 1}
             lgb.InterpolationColors = cb
@@ -112,7 +121,11 @@ Namespace Theme
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(CRGB(137, 141, 146))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -124,7 +137,11 @@ Namespace Theme
             c1 = CRGB(170, 175, 185)
             c2 = CRGB(230, 232, 234)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .GammaCorrection = True
             }
 
@@ -135,8 +152,13 @@ Namespace Theme
         Private Sub DrawOverButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(CRGB(255, 214, 153))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -151,7 +173,11 @@ Namespace Theme
             c2 = CRGB(218, 221, 224)
             c3 = Color.White
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0, 0.75, 1}
             lgb.InterpolationColors = cb
@@ -164,8 +190,13 @@ Namespace Theme
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(Color.White)
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -177,7 +208,11 @@ Namespace Theme
             c2 = CRGB(206, 209, 214)
             c3 = Color.White
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.75, 1.0}
             lgb.InterpolationColors = cb
@@ -186,7 +221,11 @@ Namespace Theme
             FillRoundedRectangle(lgb, 2, New Rectangle(2, 2, My.Width - 4, My.Height - 4), e)
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DrawBase(e, state)
             TextEffects = textfx
             If state = Theme.States.Normal Then
@@ -295,8 +334,13 @@ Namespace Theme
         Private Sub DrawFocusButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(SoftLightMix(SoftLightMix(SoftLightMix(ThemeColor, Color.Black, 60), Color.White, 100), Color.White, 60))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -311,7 +355,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.25, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb,
                 .GammaCorrection = True
             }
@@ -322,8 +370,13 @@ Namespace Theme
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(SoftLightMix(SoftLightMix(SoftLightMix(ThemeColor, Color.White, 40), Color.Black, 100), Color.Black, 50))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -338,7 +391,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.25, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb,
                 .GammaCorrection = True
             }
@@ -349,8 +406,13 @@ Namespace Theme
         Private Sub DrawOverButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(SoftLightMix(SoftLightMix(SoftLightMix(SoftLightMix(ThemeColor, Color.White, 50), Color.Black, 60), Color.White, 100), Color.White, 60))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -365,7 +427,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.25, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb,
                 .GammaCorrection = True
             }
@@ -376,8 +442,13 @@ Namespace Theme
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
             Dim b As SolidBrush
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             b = New SolidBrush(SoftLightMix(SoftLightMix(SoftLightMix(ThemeColor, Color.Black, 60), Color.White, 100), Color.White, 60))
             FillRoundedRectangle(b, 3, New Rectangle(1, 1, My.Width - 2, My.Height - 2), e)
@@ -392,7 +463,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.25, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb,
                 .GammaCorrection = True
             }
@@ -400,7 +475,11 @@ Namespace Theme
             FillRoundedRectangle(lgb, 2, New Rectangle(2, 2, My.Width - 4, My.Height - 4), e)
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal tcolor As Color, ByVal TextFx As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal tcolor As Color, ByVal TextFx As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ThemeColor = tcolor
 
             TextEffects = TextFx
@@ -511,13 +590,22 @@ Namespace Theme
 
         Private Sub DrawFocusButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = CRGB(194, 219, 255)
             c2 = CRGB(140, 180, 242)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .GammaCorrection = True
             }
 
@@ -530,7 +618,11 @@ Namespace Theme
             c2 = CRGB(244, 242, 232)
             c3 = CRGB(220, 215, 203)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left, My.Top + 1), New Point(My.Left, My.Height - 1), c1, c3)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left, My.Top + 1), New Point(My.Left, My.Height - 1), c1, c3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, (My.Height - 5) / My.Height, 1.0}
@@ -543,14 +635,23 @@ Namespace Theme
 
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = CRGB(209, 204, 193)
             c2 = CRGB(227, 226, 218)
             c3 = CRGB(239, 238, 234)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top + 1), New Point(0, My.Height - 1), c1, c3)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top + 1), New Point(0, My.Height - 1), c1, c3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             cb.Colors = New Color() {c1, c2, c2, c3}
             cb.Positions = New Single() {0.0, 4 / My.Height, (My.Height - 5) / My.Height, 1.0}
@@ -565,13 +666,22 @@ Namespace Theme
 
         Private Sub DrawOverButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = CRGB(255, 218, 140)
             c2 = CRGB(255, 184, 52)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c2) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .GammaCorrection = True
             }
 
@@ -584,7 +694,11 @@ Namespace Theme
             c2 = CRGB(244, 242, 232)
             c3 = CRGB(220, 215, 203)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, (My.Height - 5) / My.Height, 1.0}
@@ -597,14 +711,23 @@ Namespace Theme
 
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = CRGB(255, 255, 255)
             c2 = CRGB(244, 242, 232)
             c3 = CRGB(220, 215, 203)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, 1), New Point(0, My.Height - 1), c1, c3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, (My.Height - 5) / My.Height, 1.0}
@@ -617,7 +740,11 @@ Namespace Theme
             e.Graphics.DrawLine(New Pen(c3), My.Width - 2, 2, My.Width - 2, My.Height - 3)
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal TextFX As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal TextFX As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DrawBase(e, state)
 
             TextEffects = TextFX
@@ -686,7 +813,11 @@ Namespace Theme
             My = Owner
         End Sub
 
+<<<<<<< HEAD
         Private Sub DrawBase(ByVal e As PaintEventArgs, ByVal state As States, Backcolor As Color)
+=======
+        Private Sub DrawBase(ByVal e As PaintEventArgs, ByVal state As States, ByVal Backcolor As Color)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim b As Brush
             Dim c As Color
 
@@ -739,9 +870,15 @@ Namespace Theme
 
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim sb As SolidBrush
             Dim unused As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim sb As SolidBrush
+            Dim unused As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim x, y, z As Single
 
             sb = New SolidBrush(CRGB(123, 140, 196))
@@ -753,7 +890,11 @@ Namespace Theme
             c1 = Color.White
             c2 = CRGB(218, 225, 252)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top + 3), New Point(0, My.Top + My.Height - 2), c1, c2)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top + 3), New Point(0, My.Top + My.Height - 2), c1, c2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim cb As New Drawing2D.ColorBlend With {
                 .Colors = New Color() {c1, c1, c2},
                 .Positions = New Single() {0, 2 / (My.Height - 3), 1}
@@ -795,9 +936,15 @@ Namespace Theme
 
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim sb As SolidBrush
             Dim unused As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim sb As SolidBrush
+            Dim unused As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim x, y, z As Single
 
             sb = New SolidBrush(CRGB(238, 163, 53))
@@ -809,8 +956,13 @@ Namespace Theme
             c1 = Color.White
             c2 = CRGB(218, 225, 252)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top + 2), New Point(0, My.Top + My.Height - 3), c1, c2)
             Dim cb As New Drawing2D.ColorBlend With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top + 2), New Point(0, My.Top + My.Height - 3), c1, c2)
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .Colors = New Color() {c1, c1, c2},
                 .Positions = New Single() {0, 2 / (My.Height - 3), 1}
             }
@@ -846,7 +998,11 @@ Namespace Theme
 
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal backcolor As Color)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal backcolor As Color)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DrawBase(e, state, backcolor)
             TextEffects = textfx
             If state = Theme.States.Normal Then
@@ -963,13 +1119,22 @@ Namespace Theme
         End Sub
 
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend With {
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .Colors = New Color() {OpacityMix(Color.Black, tc, 25), tc, OpacityMix(Color.Black, tc, 25)},
                 .Positions = New Single() {0.0, 0.5, 1.0}
             }
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), OpacityMix(Color.Black, tc, 25), OpacityMix(Color.Black, tc, 25)) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), OpacityMix(Color.Black, tc, 25), OpacityMix(Color.Black, tc, 25)) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -978,8 +1143,13 @@ Namespace Theme
 
         Private Sub DrawOverButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3, c4, c5 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim bc As Color
 
             bc = SoftLightMix(tc, Color.White, 60)
@@ -993,7 +1163,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3, c4, c5}
             cb.Positions = New Single() {0.0, 0.25, 0.5, 0.75, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c1, c5) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c1, c5) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1004,7 +1178,11 @@ Namespace Theme
             cb.Colors = New Color() {c2, c3, c4, c5}
             cb.Positions = New Single() {0.0, 0.5, 0.75, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c2, c5) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c2, c5) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1014,8 +1192,13 @@ Namespace Theme
 
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3, c4, c5 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = OpacityMix(Color.White, SoftLightMix(tc, Color.Black, 100), 40)
             c2 = OpacityMix(Color.White, SoftLightMix(tc, CRGB(64, 64, 64), 100), 20)
@@ -1026,7 +1209,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3, c4, c5}
             cb.Positions = New Single() {0.0, 0.25, 0.5, 0.75, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c1, c5) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c1, c5) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1037,7 +1224,11 @@ Namespace Theme
             cb.Colors = New Color() {c2, c3, c4, c5}
             cb.Positions = New Single() {0.0, 0.5, 0.75, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c2, c5) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(My.Left + 1, My.Top), New Point(My.Left + 1, My.Top + My.Height - 1), c2, c5) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1045,7 +1236,11 @@ Namespace Theme
 
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal themecolor As Color)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal themecolor As Color)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             tc = themecolor
 
             DrawBase(e, state)
@@ -1156,7 +1351,11 @@ Namespace Theme
         End Sub
 
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal focused As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal focused As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             TextEffects = textfx
             isFocused = focused
             If state = Theme.States.MouseOver Then
@@ -1260,7 +1459,11 @@ Namespace Theme
         End Sub
 
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal themecolor As Color, ByVal focused As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal themecolor As Color, ByVal focused As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             TextEffects = textfx
             isFocused = focused
             tc = themecolor
@@ -1325,8 +1528,13 @@ Namespace Theme
         Private Sub DrawFocusButtonBody(ByVal e As PaintEventArgs)
 
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = OverlayMix(OpacityMix(Color.White, tc, 55), Color.White, 60)
             c2 = OpacityMix(Color.White, tc, 55)
@@ -1335,7 +1543,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.5, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1355,7 +1567,11 @@ Namespace Theme
 
         Private Sub DrawDownButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim bc As Color
 
             bc = OpacityMix(Color.White, OverlayMix(InvertColor(tc), Color.White, 10), 50)
@@ -1363,7 +1579,11 @@ Namespace Theme
             c1 = OverlayMix(bc, Color.Black, 35)
             c2 = OverlayMix(bc, Color.White, 25)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c2)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             e.Graphics.FillRectangle(lgb, My.Left, My.Top, My.Width, My.Height)
 
@@ -1380,7 +1600,11 @@ Namespace Theme
 
         Private Sub DrawOverButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim bc As Color
 
             bc = OpacityMix(Color.White, OverlayMix(InvertColor(tc), Color.White, 25), 50)
@@ -1388,7 +1612,11 @@ Namespace Theme
             c1 = OverlayMix(bc, Color.White, 50)
             c2 = OverlayMix(bc, Color.Black, 15)
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c2)
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             e.Graphics.FillRectangle(lgb, My.Left, My.Top, My.Width, My.Height)
 
@@ -1405,8 +1633,13 @@ Namespace Theme
 
         Private Sub DrawButtonBody(ByVal e As PaintEventArgs)
             Dim c1, c2, c3 As Color
+<<<<<<< HEAD
             Dim lgb As Drawing2D.LinearGradientBrush
             Dim cb As New Drawing2D.ColorBlend
+=======
+            Dim lgb As System.Drawing.Drawing2D.LinearGradientBrush
+            Dim cb As New System.Drawing.Drawing2D.ColorBlend
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             c1 = OverlayMix(OpacityMix(Color.White, tc, 55), Color.White, 60)
             c2 = OpacityMix(Color.White, tc, 55)
@@ -1415,7 +1648,11 @@ Namespace Theme
             cb.Colors = New Color() {c1, c2, c3}
             cb.Positions = New Single() {0.0, 0.5, 1.0}
 
+<<<<<<< HEAD
             lgb = New Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c3) With {
+=======
+            lgb = New System.Drawing.Drawing2D.LinearGradientBrush(New Point(0, My.Top), New Point(0, My.Top + My.Height), c1, c3) With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .InterpolationColors = cb
             }
 
@@ -1427,7 +1664,11 @@ Namespace Theme
             e.Graphics.DrawLine(New Pen(Color.FromArgb(0.1 * 255, Color.Black)), My.Left + My.Width - 1, My.Top, My.Left + My.Width - 1, My.Top + My.Height)
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal themecolor As Color, ByVal focused As Boolean)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal themecolor As Color, ByVal focused As Boolean)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             TextEffects = textfx
             isFocused = focused
             tc = themecolor
@@ -1548,7 +1789,11 @@ Namespace Theme
             e.Graphics.DrawLine(New Pen(c), My.Left + My.Width - 3, My.Top + 1, My.Left + My.Width - 3, My.Top + My.Height - 4)
         End Sub
 
+<<<<<<< HEAD
         Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As States, ByVal textfx As Boolean, ByVal themecolor As Color)
+=======
+        Public Sub DrawTheme(ByVal e As PaintEventArgs, ByVal state As Theme.States, ByVal textfx As Boolean, ByVal themecolor As Color)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             TextEffects = textfx
             tc = themecolor
 

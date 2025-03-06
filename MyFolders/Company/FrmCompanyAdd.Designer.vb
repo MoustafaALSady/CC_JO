@@ -25,6 +25,7 @@ Partial Class FrmCompanyAdd
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCompanyAdd))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.DateCMP16 = New System.Windows.Forms.DateTimePicker()
         Me.TextCMP15 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -36,11 +37,25 @@ Partial Class FrmCompanyAdd
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextCMP11 = New System.Windows.Forms.TextBox()
         Me.TEXTCMP2 = New System.Windows.Forms.TextBox()
+=======
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TEXTBOX2 = New System.Windows.Forms.TextBox()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TEXTCMP1 = New System.Windows.Forms.TextBox()
         Me.ComboGovernorateName = New System.Windows.Forms.ComboBox()
         Me.TextCOUser = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.TextCMP = New System.Windows.Forms.TextBox()
         Me.TextCUser = New System.Windows.Forms.TextBox()
         Me.TextCMP13 = New System.Windows.Forms.TextBox()
@@ -57,6 +72,24 @@ Partial Class FrmCompanyAdd
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TEXTCMP5 = New System.Windows.Forms.TextBox()
+=======
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextCUser = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TEXTBOX3 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TEXTBOX4 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TEXTBOX6 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TEXTBOX5 = New System.Windows.Forms.TextBox()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SAVEBUTTON = New System.Windows.Forms.Button()
         Me.ADDBUTTON = New System.Windows.Forms.Button()
@@ -80,6 +113,7 @@ Partial Class FrmCompanyAdd
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label10)
+<<<<<<< HEAD
         Me.Panel2.Controls.Add(Me.DateCMP16)
         Me.Panel2.Controls.Add(Me.TextCMP15)
         Me.Panel2.Controls.Add(Me.TEXTCMP1)
@@ -112,6 +146,40 @@ Partial Class FrmCompanyAdd
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.TEXTCMP5)
+=======
+        Me.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.Panel2.Controls.Add(Me.TextBox10)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.Label18)
+        Me.Panel2.Controls.Add(Me.TextBox16)
+        Me.Panel2.Controls.Add(Me.Label17)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.TextBox8)
+        Me.Panel2.Controls.Add(Me.TEXTBOX2)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.TEXTCMP1)
+        Me.Panel2.Controls.Add(Me.ComboGovernorateName)
+        Me.Panel2.Controls.Add(Me.TextCOUser)
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.TextBox11)
+        Me.Panel2.Controls.Add(Me.TextCUser)
+        Me.Panel2.Controls.Add(Me.TextBox14)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label16)
+        Me.Panel2.Controls.Add(Me.TEXTBOX3)
+        Me.Panel2.Controls.Add(Me.TextBox15)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.TextBox13)
+        Me.Panel2.Controls.Add(Me.TEXTBOX4)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.TextBox7)
+        Me.Panel2.Controls.Add(Me.TEXTBOX6)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.TEXTBOX5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.Location = New System.Drawing.Point(150, 4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -131,6 +199,7 @@ Partial Class FrmCompanyAdd
         Me.Label10.TabIndex = 756
         Me.Label10.Text = "تـــاريــخ  التـســـجـيـل"
         '
+<<<<<<< HEAD
         'DateCMP16
         '
         Me.DateCMP16.CalendarForeColor = System.Drawing.Color.Black
@@ -161,6 +230,38 @@ Partial Class FrmCompanyAdd
         Me.TextCMP15.Size = New System.Drawing.Size(170, 22)
         Me.TextCMP15.TabIndex = 754
         Me.TextCMP15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+=======
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarForeColor = System.Drawing.Color.Black
+        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Pink
+        Me.DateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Pink
+        Me.DateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Black
+        Me.DateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Black
+        Me.DateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(5, 279)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.DateTimePicker1.RightToLeftLayout = True
+        Me.DateTimePicker1.Size = New System.Drawing.Size(341, 22)
+        Me.DateTimePicker1.TabIndex = 755
+        '
+        'TextBox10
+        '
+        Me.TextBox10.BackColor = System.Drawing.Color.White
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox10.Location = New System.Drawing.Point(176, 255)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(170, 22)
+        Me.TextBox10.TabIndex = 754
+        Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label7
         '
@@ -188,6 +289,7 @@ Partial Class FrmCompanyAdd
         Me.Label2.TabIndex = 67
         Me.Label2.Text = "الاسم"
         '
+<<<<<<< HEAD
         'ComboCMP7
         '
         Me.ComboCMP7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -199,6 +301,19 @@ Partial Class FrmCompanyAdd
         Me.ComboCMP7.Name = "ComboCMP7"
         Me.ComboCMP7.Size = New System.Drawing.Size(341, 23)
         Me.ComboCMP7.TabIndex = 734
+=======
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"زراعية", "متعددة الأغراض", "للمنفعة المتبادلة", "اسكان", "نسائية", "استهلاكية", "توفير وتسليف", "سياحية", "نقل", "ثقافية", "انتاجية"})
+        Me.ComboBox1.Location = New System.Drawing.Point(5, 46)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(341, 23)
+        Me.ComboBox1.TabIndex = 734
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label18
         '
@@ -213,6 +328,7 @@ Partial Class FrmCompanyAdd
         Me.Label18.TabIndex = 748
         Me.Label18.Text = "اسـم المستخدم"
         '
+<<<<<<< HEAD
         'TextUSERNAME
         '
         Me.TextUSERNAME.BackColor = System.Drawing.Color.WhiteSmoke
@@ -224,6 +340,19 @@ Partial Class FrmCompanyAdd
         Me.TextUSERNAME.Size = New System.Drawing.Size(341, 22)
         Me.TextUSERNAME.TabIndex = 743
         Me.TextUSERNAME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+=======
+        'TextBox16
+        '
+        Me.TextBox16.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox16.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox16.Location = New System.Drawing.Point(5, 303)
+        Me.TextBox16.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(341, 22)
+        Me.TextBox16.TabIndex = 743
+        Me.TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label17
         '
@@ -251,6 +380,7 @@ Partial Class FrmCompanyAdd
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "م_تعريف الجمعية"
         '
+<<<<<<< HEAD
         'TextCMP11
         '
         Me.TextCMP11.BackColor = System.Drawing.Color.White
@@ -274,6 +404,31 @@ Partial Class FrmCompanyAdd
         Me.TEXTCMP2.Name = "TEXTCMP2"
         Me.TEXTCMP2.Size = New System.Drawing.Size(341, 20)
         Me.TEXTCMP2.TabIndex = 61
+=======
+        'TextBox8
+        '
+        Me.TextBox8.BackColor = System.Drawing.Color.White
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextBox8.Location = New System.Drawing.Point(5, 70)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(341, 22)
+        Me.TextBox8.TabIndex = 730
+        '
+        'TEXTBOX2
+        '
+        Me.TEXTBOX2.BackColor = System.Drawing.Color.White
+        Me.TEXTBOX2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTBOX2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.TEXTBOX2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTBOX2.Location = New System.Drawing.Point(5, 25)
+        Me.TEXTBOX2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTBOX2.Multiline = True
+        Me.TEXTBOX2.Name = "TEXTBOX2"
+        Me.TEXTBOX2.Size = New System.Drawing.Size(341, 20)
+        Me.TEXTBOX2.TabIndex = 61
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label8
         '
@@ -290,10 +445,18 @@ Partial Class FrmCompanyAdd
         '
         'TEXTCMP1
         '
+<<<<<<< HEAD
         Me.TEXTCMP1.BackColor = System.Drawing.Color.White
         Me.TEXTCMP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TEXTCMP1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTCMP1.Location = New System.Drawing.Point(5, 93)
+=======
+        Me.TEXTCMP1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TEXTCMP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTCMP1.Enabled = False
+        Me.TEXTCMP1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTCMP1.Location = New System.Drawing.Point(176, 2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTCMP1.Margin = New System.Windows.Forms.Padding(2)
         Me.TEXTCMP1.Name = "TEXTCMP1"
         Me.TEXTCMP1.Size = New System.Drawing.Size(170, 22)
@@ -337,6 +500,7 @@ Partial Class FrmCompanyAdd
         Me.Label15.TabIndex = 742
         Me.Label15.Text = "رقم  ضريبي/تعريف جمعية"
         '
+<<<<<<< HEAD
         'TextCMP
         '
         Me.TextCMP.BackColor = System.Drawing.Color.WhiteSmoke
@@ -349,6 +513,17 @@ Partial Class FrmCompanyAdd
         Me.TextCMP.ReadOnly = True
         Me.TextCMP.Size = New System.Drawing.Size(170, 23)
         Me.TextCMP.TabIndex = 740
+=======
+        'TextBox11
+        '
+        Me.TextBox11.BackColor = System.Drawing.Color.White
+        Me.TextBox11.Font = New System.Drawing.Font("Times New Roman", 9.85!, System.Drawing.FontStyle.Bold)
+        Me.TextBox11.Location = New System.Drawing.Point(5, 93)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(170, 23)
+        Me.TextBox11.TabIndex = 740
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'TextCUser
         '
@@ -363,6 +538,7 @@ Partial Class FrmCompanyAdd
         Me.TextCUser.TabIndex = 741
         Me.TextCUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+<<<<<<< HEAD
         'TextCMP13
         '
         Me.TextCMP13.BackColor = System.Drawing.Color.White
@@ -373,6 +549,18 @@ Partial Class FrmCompanyAdd
         Me.TextCMP13.Name = "TextCMP13"
         Me.TextCMP13.Size = New System.Drawing.Size(341, 22)
         Me.TextCMP13.TabIndex = 744
+=======
+        'TextBox14
+        '
+        Me.TextBox14.BackColor = System.Drawing.Color.White
+        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox14.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextBox14.Location = New System.Drawing.Point(5, 232)
+        Me.TextBox14.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(341, 22)
+        Me.TextBox14.TabIndex = 744
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label3
         '
@@ -400,6 +588,7 @@ Partial Class FrmCompanyAdd
         Me.Label16.TabIndex = 745
         Me.Label16.Text = "الاسهم المكتتب بها"
         '
+<<<<<<< HEAD
         'TEXTCMP3
         '
         Me.TEXTCMP3.BackColor = System.Drawing.Color.White
@@ -421,6 +610,29 @@ Partial Class FrmCompanyAdd
         Me.TextCMP14.Name = "TextCMP14"
         Me.TextCMP14.Size = New System.Drawing.Size(170, 22)
         Me.TextCMP14.TabIndex = 746
+=======
+        'TEXTBOX3
+        '
+        Me.TEXTBOX3.BackColor = System.Drawing.Color.White
+        Me.TEXTBOX3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTBOX3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTBOX3.Location = New System.Drawing.Point(5, 117)
+        Me.TEXTBOX3.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTBOX3.Name = "TEXTBOX3"
+        Me.TEXTBOX3.Size = New System.Drawing.Size(341, 22)
+        Me.TEXTBOX3.TabIndex = 62
+        '
+        'TextBox15
+        '
+        Me.TextBox15.BackColor = System.Drawing.Color.White
+        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox15.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextBox15.Location = New System.Drawing.Point(5, 209)
+        Me.TextBox15.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(170, 22)
+        Me.TextBox15.TabIndex = 746
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label4
         '
@@ -436,6 +648,7 @@ Partial Class FrmCompanyAdd
         Me.Label4.Text = "تليفون / خلوي"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+<<<<<<< HEAD
         'TextCMP12
         '
         Me.TextCMP12.BackColor = System.Drawing.Color.White
@@ -457,6 +670,29 @@ Partial Class FrmCompanyAdd
         Me.TEXTCMP4.Name = "TEXTCMP4"
         Me.TEXTCMP4.Size = New System.Drawing.Size(170, 22)
         Me.TEXTCMP4.TabIndex = 63
+=======
+        'TextBox13
+        '
+        Me.TextBox13.BackColor = System.Drawing.Color.White
+        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox13.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextBox13.Location = New System.Drawing.Point(176, 209)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(170, 22)
+        Me.TextBox13.TabIndex = 743
+        '
+        'TEXTBOX4
+        '
+        Me.TEXTBOX4.BackColor = System.Drawing.Color.White
+        Me.TEXTBOX4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTBOX4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTBOX4.Location = New System.Drawing.Point(176, 140)
+        Me.TEXTBOX4.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTBOX4.Name = "TEXTBOX4"
+        Me.TEXTBOX4.Size = New System.Drawing.Size(170, 22)
+        Me.TEXTBOX4.TabIndex = 63
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label9
         '
@@ -471,6 +707,7 @@ Partial Class FrmCompanyAdd
         Me.Label9.TabIndex = 736
         Me.Label9.Text = "البنــك / رقم الحساب"
         '
+<<<<<<< HEAD
         'TextCMP9
         '
         Me.TextCMP9.BackColor = System.Drawing.Color.White
@@ -493,6 +730,30 @@ Partial Class FrmCompanyAdd
         Me.TEXTCMP6.Size = New System.Drawing.Size(341, 22)
         Me.TEXTCMP6.TabIndex = 65
         Me.TEXTCMP6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+=======
+        'TextBox7
+        '
+        Me.TextBox7.BackColor = System.Drawing.Color.White
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TextBox7.Location = New System.Drawing.Point(5, 140)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(170, 22)
+        Me.TextBox7.TabIndex = 729
+        '
+        'TEXTBOX6
+        '
+        Me.TEXTBOX6.BackColor = System.Drawing.Color.White
+        Me.TEXTBOX6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTBOX6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTBOX6.Location = New System.Drawing.Point(5, 186)
+        Me.TEXTBOX6.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTBOX6.Name = "TEXTBOX6"
+        Me.TEXTBOX6.Size = New System.Drawing.Size(341, 22)
+        Me.TEXTBOX6.TabIndex = 65
+        Me.TEXTBOX6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Label5
         '
@@ -520,6 +781,7 @@ Partial Class FrmCompanyAdd
         Me.Label6.TabIndex = 71
         Me.Label6.Text = "البريد الالكترونى"
         '
+<<<<<<< HEAD
         'TEXTCMP5
         '
         Me.TEXTCMP5.BackColor = System.Drawing.Color.White
@@ -531,6 +793,18 @@ Partial Class FrmCompanyAdd
         Me.TEXTCMP5.Name = "TEXTCMP5"
         Me.TEXTCMP5.Size = New System.Drawing.Size(341, 22)
         Me.TEXTCMP5.TabIndex = 64
+=======
+        'TEXTBOX5
+        '
+        Me.TEXTBOX5.BackColor = System.Drawing.Color.White
+        Me.TEXTBOX5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TEXTBOX5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.TEXTBOX5.Location = New System.Drawing.Point(5, 163)
+        Me.TEXTBOX5.Margin = New System.Windows.Forms.Padding(2)
+        Me.TEXTBOX5.Name = "TEXTBOX5"
+        Me.TEXTBOX5.Size = New System.Drawing.Size(341, 22)
+        Me.TEXTBOX5.TabIndex = 64
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'Panel1
         '
@@ -691,6 +965,7 @@ Partial Class FrmCompanyAdd
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+<<<<<<< HEAD
     Friend WithEvents ComboCMP7 As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
@@ -700,11 +975,23 @@ Partial Class FrmCompanyAdd
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents TextCMP11 As System.Windows.Forms.TextBox
     Friend WithEvents TEXTCMP2 As System.Windows.Forms.TextBox
+=======
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents TEXTBOX2 As System.Windows.Forms.TextBox
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TEXTCMP1 As System.Windows.Forms.TextBox
     Friend WithEvents ComboGovernorateName As System.Windows.Forms.ComboBox
     Friend WithEvents TextCOUser As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
+<<<<<<< HEAD
     Friend WithEvents TextCMP As System.Windows.Forms.TextBox
     Friend WithEvents TextCUser As System.Windows.Forms.TextBox
     Friend WithEvents TextCMP13 As System.Windows.Forms.TextBox
@@ -721,6 +1008,24 @@ Partial Class FrmCompanyAdd
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TEXTCMP5 As System.Windows.Forms.TextBox
+=======
+    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents TextCUser As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents TEXTBOX3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
+    Friend WithEvents TEXTBOX4 As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents TEXTBOX6 As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TEXTBOX5 As System.Windows.Forms.TextBox
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
@@ -729,7 +1034,13 @@ Partial Class FrmCompanyAdd
     Friend WithEvents LOGOBUTTON As System.Windows.Forms.Button
     Friend WithEvents SAVEBUTTON As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+<<<<<<< HEAD
     Friend WithEvents TextCMP15 As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents DateCMP16 As System.Windows.Forms.DateTimePicker
+=======
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

@@ -1,11 +1,19 @@
 Imports System.Data.SqlClient
 Public Class Invontry
     ReadOnly ItDataset As New DataSet, Flt As String
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
     Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As EventArgs)
         Me.Close()
     End Sub
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextBox1.TextChanged
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+    Private Sub ToolStripButton2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Close()
+    End Sub
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'On Error Resume Next
         'Try
         If Trim(TextBox1.Text) <> "" Then
@@ -13,8 +21,13 @@ Public Class Invontry
             Dim ds As DataSet
             ds = New DataSet
             DGRD.Rows.Clear()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With strSQL
 
                 If Trim(TextBox1.Text) = "*" Then
@@ -30,8 +43,13 @@ Public Class Invontry
             Dim builder63 As New SqlCommandBuilder(adp)
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
+<<<<<<< HEAD
             adp = New SqlDataAdapter(strSQL)
             Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+            adp = New SqlClient.SqlDataAdapter(strSQL)
+            Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             adp.Fill(ds, "Stockwarehouse")
             If Me.BindingContext(ds, "Stockwarehouse").Count = 0 Then
                 MsgBox("·« ÌÊÃœ »Ì«‰«  ·⁄—÷Â«", 64 + 524288, "⁄—÷ «·»Ì«‰« ")
@@ -65,7 +83,11 @@ Public Class Invontry
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Invontry_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Invontry_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10

@@ -6,7 +6,11 @@ Imports DevExpress.XtraPrinting.Drawing
 Imports System.Threading
 
 Public Class Form_barcode
+<<<<<<< HEAD
     Inherits XtraForm
+=======
+    Inherits DevExpress.XtraEditors.XtraForm
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Sub New()
         InitializeComponent()
@@ -15,7 +19,11 @@ Public Class Form_barcode
         'DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2013 Light Gray"
     End Sub
 
+<<<<<<< HEAD
     Private Sub Form_barcode_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form_barcode_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'SetWindowPos(Handle, HWND_TOPMOST, Left / 15, Top / 15, Width / 15, Height / 15, SWP_NOACTIVATE Or SWP_SHOWWINDOW Or SWP_NOMOVE Or SWP_NOSIZE)
 
         ''Position form
@@ -43,7 +51,11 @@ Public Class Form_barcode
     Private Sub POPULATE_SEARCHLOOKUPEDIT_FROM_TABLE_ITEMS(ByVal Lookup_Repository As SearchLookUpEdit)
         BeginInvoke(Function()
                         Try
+<<<<<<< HEAD
                             Dim Consum As New SqlConnection(constring)
+=======
+                            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                             Dim DT As New DataTable
                             Dim DA As New SqlDataAdapter
                             DT.Clear()
@@ -113,10 +125,17 @@ Public Class Form_barcode
 
         DT.Clear()
 
+<<<<<<< HEAD
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Company", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Barcode", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Product", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Prix_Vente", .DataType = GetType(Decimal)})
+=======
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Company", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Barcode", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Product", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Prix_Vente", .DataType = GetType(Decimal)})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         For I As Integer = 1 To Convert.ToInt32(Me.TxtNumberStickers.Text.Trim)
             Dim New_Data As DataRow = DT.NewRow
@@ -160,10 +179,17 @@ Public Class Form_barcode
 
         DT.Clear()
 
+<<<<<<< HEAD
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Company", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Barcode", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Product", .DataType = GetType(String)})
         DT.Columns.Add(New DataColumn With {.ColumnName = "Template_Prix_Vente", .DataType = GetType(Decimal)})
+=======
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Company", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Barcode", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Product", .DataType = GetType(String)})
+        DT.Columns.Add(New System.Data.DataColumn With {.ColumnName = "Template_Prix_Vente", .DataType = GetType(Decimal)})
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
 
         Dim New_Data As DataRow = DT.NewRow
@@ -199,15 +225,26 @@ Public Class Form_barcode
     End Sub
 
     Private Sub RETRIEVE_INFORMATION_SETTINGS()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         If Consum.State = ConnectionState.Closed Then Consum.Open()
         Dim Sql As String = "SELECT * From STOCKSITEMS"
         Using Cmd As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        If Consum.State = ConnectionState.Closed Then Consum.Open()
+        Dim Sql As String = "SELECT * From STOCKSITEMS"
+        Using Cmd As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With Cmd
                 Cmd.CommandType = CommandType.Text
                 Cmd.Connection = Consum
                 Cmd.CommandText = Sql
+<<<<<<< HEAD
                 Dim Dr As SqlDataReader = Cmd.ExecuteReader
+=======
+                Dim Dr As SqlClient.SqlDataReader = Cmd.ExecuteReader
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 If Dr.HasRows Then
                     Dr.Read()
                     Me.TxtSettingsEntreprise.Text = Dr("SETTINGS_Company").ToString
@@ -218,17 +255,28 @@ Public Class Form_barcode
         End Using
     End Sub
 
+<<<<<<< HEAD
     Private Sub TxtNumberStickers_KeyPress(sender As System.Object, e As KeyPressEventArgs) Handles TxtNumberStickers.KeyPress
+=======
+    Private Sub TxtNumberStickers_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles TxtNumberStickers.KeyPress
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If (e.KeyChar < Chr(48) Or e.KeyChar > Chr(57)) And e.KeyChar <> Chr(8) Then
             e.Handled = True
         End If
     End Sub
 
     Public Sub GLOBAL_RECORD_COUNT(ByVal TxtEdit As LabelControl, ByVal TableName As String)
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim Sql As String = "SELECT  COUNT(*)   From  " & TableName
         If Consum.State = ConnectionState.Closed Then Consum.Open()
         Using Cmd As New SqlCommand()
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim Sql As String = "SELECT  COUNT(*)   From  " & TableName
+        If Consum.State = ConnectionState.Closed Then Consum.Open()
+        Using Cmd As New SqlClient.SqlCommand()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With Cmd
                 Cmd.Connection = Consum
                 Cmd.CommandText = Sql
@@ -288,6 +336,7 @@ Public Class Form_barcode
 
 
     Friend WithEvents Panel2 As Panel
+<<<<<<< HEAD
     Friend WithEvents LabelControl5 As LabelControl
     Friend WithEvents LabelControl3 As LabelControl
     Friend WithEvents PictureBox3 As PictureBox
@@ -305,11 +354,31 @@ Public Class Form_barcode
     Friend WithEvents TxtNumberStickers As TextEdit
     Friend WithEvents Button1 As SimpleButton
     Friend WithEvents GroupControl1 As GroupControl
+=======
+    Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents LabelControl10 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents GroupControl4 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents TxtItemsPrixVente As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtItemsName As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtItemsBarcode As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents SearchLookUpEdit1 As DevExpress.XtraEditors.SearchLookUpEdit
+    Friend WithEvents SearchLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents TxtNumberStickers As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Button1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Private components As System.ComponentModel.IContainer
 
     Private Sub InitializeComponent()
+<<<<<<< HEAD
         Me.components = New ComponentModel.Container()
         Dim resources As New ComponentModel.ComponentResourceManager(GetType(Form_barcode))
         Me.Panel2 = New Panel()
@@ -335,11 +404,55 @@ Public Class Form_barcode
         Me.Panel1 = New Panel()
         Me.DocumentViewer1 = New DevExpress.XtraPrinting.Preview.DocumentViewer()
         Me.Panel3 = New Panel()
+=======
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form_barcode))
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
+        Me.TxtSettingsEntreprise = New DevExpress.XtraEditors.TextEdit()
+        Me.GroupControl4 = New DevExpress.XtraEditors.GroupControl()
+        Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.TxtItemsPrixVente = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtItemsName = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtItemsBarcode = New DevExpress.XtraEditors.TextEdit()
+        Me.SearchLookUpEdit1 = New DevExpress.XtraEditors.SearchLookUpEdit()
+        Me.SearchLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
+        Me.TxtNumberStickers = New DevExpress.XtraEditors.TextEdit()
+        Me.Button1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DocumentViewer1 = New DevExpress.XtraPrinting.Preview.DocumentViewer()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPage3 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPage4 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.DocumentViewerBarManager1 = New DevExpress.XtraPrinting.Preview.DocumentViewerBarManager(Me.components)
+<<<<<<< HEAD
         Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
+=======
+        Me.BarDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.PreviewBar1 = New DevExpress.XtraPrinting.Preview.PreviewBar()
+        Me.PreviewBar2 = New DevExpress.XtraPrinting.Preview.PreviewBar()
+        Me.PreviewBar3 = New DevExpress.XtraPrinting.Preview.PreviewBar()
+        Me.PrintPreviewStaticItem1 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
+        Me.RepositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
+        Me.ProgressBarEditItem1 = New DevExpress.XtraPrinting.Preview.ProgressBarEditItem()
+        Me.PrintPreviewBarItem1 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
+        Me.PrintPreviewStaticItem2 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
+        Me.RepositoryItemZoomTrackBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar()
+        Me.ZoomTrackBarEditItem1 = New DevExpress.XtraPrinting.Preview.ZoomTrackBarEditItem()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.BbiDocumentMap = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.BbiParameters = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.BbiThumbnails = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
@@ -369,6 +482,7 @@ Public Class Form_barcode
         Me.BbiExportFile = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.BbiSendFile = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.BbiClosePreview = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
+<<<<<<< HEAD
         Me.PreviewBar2 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.PrintPreviewStaticItem1 = New DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem()
         Me.ProgressBarEditItem1 = New DevExpress.XtraPrinting.Preview.ProgressBarEditItem()
@@ -380,15 +494,23 @@ Public Class Form_barcode
         Me.PreviewBar3 = New DevExpress.XtraPrinting.Preview.PreviewBar()
         Me.MiFile = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.MiView = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
+=======
+        Me.MiFile = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
+        Me.MiView = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
+        Me.MiBackground = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.MiPageLayout = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.MiPageLayoutFacing = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.MiPageLayoutContinuous = New DevExpress.XtraPrinting.Preview.PrintPreviewBarItem()
         Me.MiToolbars = New DevExpress.XtraBars.BarToolbarsListItem()
+<<<<<<< HEAD
         Me.MiBackground = New DevExpress.XtraPrinting.Preview.PrintPreviewSubItem()
         Me.BarDockControlTop = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControlRight = New DevExpress.XtraBars.BarDockControl()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PrintPreviewBarCheckItem1 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem2 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem3 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
@@ -409,6 +531,7 @@ Public Class Form_barcode
         Me.PrintPreviewBarCheckItem18 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.PrintPreviewBarCheckItem19 = New DevExpress.XtraPrinting.Preview.PrintPreviewBarCheckItem()
         Me.Panel2.SuspendLayout()
+<<<<<<< HEAD
         CType(Me.PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtSettingsEntreprise.Properties, ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl4, ComponentModel.ISupportInitialize).BeginInit()
@@ -430,6 +553,29 @@ Public Class Form_barcode
         CType(Me.PrintPreviewRepositoryItemComboBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemZoomTrackBar1, ComponentModel.ISupportInitialize).BeginInit()
+=======
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtSettingsEntreprise.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl4.SuspendLayout()
+        CType(Me.TxtItemsPrixVente.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtItemsName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtItemsBarcode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl2.SuspendLayout()
+        CType(Me.TxtNumberStickers.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DocumentViewerBarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SuspendLayout()
         '
         'Panel2
@@ -440,15 +586,26 @@ Public Class Form_barcode
         Me.Panel2.Controls.Add(Me.PictureBox3)
         Me.Panel2.Controls.Add(Me.LabelControl10)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+<<<<<<< HEAD
         Me.Panel2.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Panel2.Location = New Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New Size(1105, 34)
+=======
+        Me.Panel2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1105, 34)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.TabIndex = 1545
         '
         'LabelControl5
         '
+<<<<<<< HEAD
         Me.LabelControl5.Appearance.Font = New Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.LabelControl5.Appearance.Font = New System.Drawing.Font("Agency FB", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl5.Appearance.ForeColor = System.Drawing.Color.Orange
         Me.LabelControl5.Appearance.Options.UseFont = True
         Me.LabelControl5.Appearance.Options.UseForeColor = True
@@ -456,16 +613,28 @@ Public Class Form_barcode
         Me.LabelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LabelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+<<<<<<< HEAD
         Me.LabelControl5.Location = New Point(53, 2)
         Me.LabelControl5.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl5.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New Size(81, 29)
+=======
+        Me.LabelControl5.Location = New System.Drawing.Point(53, 2)
+        Me.LabelControl5.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl5.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl5.Name = "LabelControl5"
+        Me.LabelControl5.Size = New System.Drawing.Size(81, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl5.TabIndex = 1461
         '
         'LabelControl3
         '
+<<<<<<< HEAD
         Me.LabelControl3.Appearance.Font = New Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl3.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelControl3.Appearance.Options.UseFont = True
         Me.LabelControl3.Appearance.Options.UseForeColor = True
@@ -473,11 +642,19 @@ Public Class Form_barcode
         Me.LabelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LabelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+<<<<<<< HEAD
         Me.LabelControl3.Location = New Point(136, 2)
         Me.LabelControl3.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl3.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New Size(145, 29)
+=======
+        Me.LabelControl3.Location = New System.Drawing.Point(136, 2)
+        Me.LabelControl3.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl3.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl3.Name = "LabelControl3"
+        Me.LabelControl3.Size = New System.Drawing.Size(145, 29)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl3.TabIndex = 1460
         Me.LabelControl3.Text = "عدد المنتجات"
         '
@@ -485,16 +662,26 @@ Public Class Form_barcode
         '
         Me.PictureBox3.Image = Global.CC_JO.My.Resources.Resources.Panier
         Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+<<<<<<< HEAD
         Me.PictureBox3.Location = New Point(4, 3)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New Size(43, 25)
+=======
+        Me.PictureBox3.Location = New System.Drawing.Point(4, 3)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(43, 25)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 1459
         Me.PictureBox3.TabStop = False
         '
         'LabelControl10
         '
+<<<<<<< HEAD
         Me.LabelControl10.Appearance.Font = New Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.LabelControl10.Appearance.Font = New System.Drawing.Font("Times New Roman", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl10.Appearance.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LabelControl10.Appearance.Options.UseFont = True
         Me.LabelControl10.Appearance.Options.UseForeColor = True
@@ -502,19 +689,33 @@ Public Class Form_barcode
         Me.LabelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal
         Me.LabelControl10.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+<<<<<<< HEAD
         Me.LabelControl10.Location = New Point(832, 8)
         Me.LabelControl10.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl10.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl10.Name = "LabelControl10"
         Me.LabelControl10.Size = New Size(263, 24)
+=======
+        Me.LabelControl10.Location = New System.Drawing.Point(832, 8)
+        Me.LabelControl10.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl10.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl10.Name = "LabelControl10"
+        Me.LabelControl10.Size = New System.Drawing.Size(263, 24)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl10.TabIndex = 4
         Me.LabelControl10.Text = "شاشة طباعة ملصقات باركود المنتجات"
         '
         'TxtSettingsEntreprise
         '
+<<<<<<< HEAD
         Me.TxtSettingsEntreprise.Location = New Point(90, 59)
         Me.TxtSettingsEntreprise.Name = "TxtSettingsEntreprise"
         Me.TxtSettingsEntreprise.Size = New Size(100, 22)
+=======
+        Me.TxtSettingsEntreprise.Location = New System.Drawing.Point(90, 59)
+        Me.TxtSettingsEntreprise.Name = "TxtSettingsEntreprise"
+        Me.TxtSettingsEntreprise.Size = New System.Drawing.Size(100, 20)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TxtSettingsEntreprise.TabIndex = 1462
         '
         'GroupControl4
@@ -526,64 +727,109 @@ Public Class Form_barcode
         Me.GroupControl4.Controls.Add(Me.TxtItemsName)
         Me.GroupControl4.Controls.Add(Me.TxtItemsBarcode)
         Me.GroupControl4.Controls.Add(Me.SearchLookUpEdit1)
+<<<<<<< HEAD
         Me.GroupControl4.Location = New Point(477, 2)
         Me.GroupControl4.LookAndFeel.SkinName = "Office 2019 White"
         Me.GroupControl4.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl4.Name = "GroupControl4"
         Me.GroupControl4.Size = New Size(624, 129)
+=======
+        Me.GroupControl4.Location = New System.Drawing.Point(477, 2)
+        Me.GroupControl4.LookAndFeel.SkinName = "Office 2019 White"
+        Me.GroupControl4.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.GroupControl4.Name = "GroupControl4"
+        Me.GroupControl4.Size = New System.Drawing.Size(624, 129)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupControl4.TabIndex = 1546
         '
         'LabelControl4
         '
+<<<<<<< HEAD
         Me.LabelControl4.Appearance.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.LabelControl4.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl4.Appearance.Options.UseFont = True
         Me.LabelControl4.Appearance.Options.UseTextOptions = True
         Me.LabelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LabelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+<<<<<<< HEAD
         Me.LabelControl4.Location = New Point(5, 62)
         Me.LabelControl4.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl4.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New Size(152, 30)
+=======
+        Me.LabelControl4.Location = New System.Drawing.Point(5, 62)
+        Me.LabelControl4.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl4.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl4.Name = "LabelControl4"
+        Me.LabelControl4.Size = New System.Drawing.Size(152, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl4.TabIndex = 1492
         Me.LabelControl4.Text = "سعر المنتج"
         '
         'LabelControl2
         '
+<<<<<<< HEAD
         Me.LabelControl2.Appearance.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl2.Appearance.Options.UseFont = True
         Me.LabelControl2.Appearance.Options.UseTextOptions = True
         Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LabelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+<<<<<<< HEAD
         Me.LabelControl2.Location = New Point(163, 62)
         Me.LabelControl2.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl2.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New Size(310, 30)
+=======
+        Me.LabelControl2.Location = New System.Drawing.Point(163, 62)
+        Me.LabelControl2.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl2.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl2.Name = "LabelControl2"
+        Me.LabelControl2.Size = New System.Drawing.Size(310, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl2.TabIndex = 1490
         Me.LabelControl2.Text = "اسم المنتج"
         '
         'LabelControl1
         '
+<<<<<<< HEAD
         Me.LabelControl1.Appearance.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl1.Appearance.Options.UseFont = True
         Me.LabelControl1.Appearance.Options.UseTextOptions = True
         Me.LabelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
         Me.LabelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple
+<<<<<<< HEAD
         Me.LabelControl1.Location = New Point(479, 62)
         Me.LabelControl1.LookAndFeel.SkinName = "Office 2019 White"
         Me.LabelControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New Size(137, 30)
+=======
+        Me.LabelControl1.Location = New System.Drawing.Point(479, 62)
+        Me.LabelControl1.LookAndFeel.SkinName = "Office 2019 White"
+        Me.LabelControl1.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(137, 30)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.LabelControl1.TabIndex = 1489
         Me.LabelControl1.Text = "باركود المنتج"
         '
         'TxtItemsPrixVente
         '
         Me.TxtItemsPrixVente.EditValue = ""
+<<<<<<< HEAD
         Me.TxtItemsPrixVente.Location = New Point(5, 98)
         Me.TxtItemsPrixVente.Name = "TxtItemsPrixVente"
         Me.TxtItemsPrixVente.Properties.Appearance.Font = New Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -591,11 +837,21 @@ Public Class Form_barcode
         Me.TxtItemsPrixVente.Properties.Appearance.Options.UseTextOptions = True
         Me.TxtItemsPrixVente.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TxtItemsPrixVente.Size = New Size(152, 24)
+=======
+        Me.TxtItemsPrixVente.Location = New System.Drawing.Point(5, 98)
+        Me.TxtItemsPrixVente.Name = "TxtItemsPrixVente"
+        Me.TxtItemsPrixVente.Properties.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtItemsPrixVente.Properties.Appearance.Options.UseFont = True
+        Me.TxtItemsPrixVente.Properties.Appearance.Options.UseTextOptions = True
+        Me.TxtItemsPrixVente.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TxtItemsPrixVente.Size = New System.Drawing.Size(152, 24)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TxtItemsPrixVente.TabIndex = 1488
         '
         'TxtItemsName
         '
         Me.TxtItemsName.EditValue = ""
+<<<<<<< HEAD
         Me.TxtItemsName.Location = New Point(163, 98)
         Me.TxtItemsName.Name = "TxtItemsName"
         Me.TxtItemsName.Properties.Appearance.Font = New Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -603,11 +859,21 @@ Public Class Form_barcode
         Me.TxtItemsName.Properties.Appearance.Options.UseTextOptions = True
         Me.TxtItemsName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TxtItemsName.Size = New Size(310, 24)
+=======
+        Me.TxtItemsName.Location = New System.Drawing.Point(163, 98)
+        Me.TxtItemsName.Name = "TxtItemsName"
+        Me.TxtItemsName.Properties.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtItemsName.Properties.Appearance.Options.UseFont = True
+        Me.TxtItemsName.Properties.Appearance.Options.UseTextOptions = True
+        Me.TxtItemsName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TxtItemsName.Size = New System.Drawing.Size(310, 24)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TxtItemsName.TabIndex = 1486
         '
         'TxtItemsBarcode
         '
         Me.TxtItemsBarcode.EditValue = ""
+<<<<<<< HEAD
         Me.TxtItemsBarcode.Location = New Point(479, 98)
         Me.TxtItemsBarcode.Name = "TxtItemsBarcode"
         Me.TxtItemsBarcode.Properties.Appearance.Font = New Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -615,30 +881,56 @@ Public Class Form_barcode
         Me.TxtItemsBarcode.Properties.Appearance.Options.UseTextOptions = True
         Me.TxtItemsBarcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TxtItemsBarcode.Size = New Size(137, 24)
+=======
+        Me.TxtItemsBarcode.Location = New System.Drawing.Point(479, 98)
+        Me.TxtItemsBarcode.Name = "TxtItemsBarcode"
+        Me.TxtItemsBarcode.Properties.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtItemsBarcode.Properties.Appearance.Options.UseFont = True
+        Me.TxtItemsBarcode.Properties.Appearance.Options.UseTextOptions = True
+        Me.TxtItemsBarcode.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TxtItemsBarcode.Size = New System.Drawing.Size(137, 24)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TxtItemsBarcode.TabIndex = 1485
         '
         'SearchLookUpEdit1
         '
         Me.SearchLookUpEdit1.EditValue = ""
+<<<<<<< HEAD
         Me.SearchLookUpEdit1.Location = New Point(5, 26)
         Me.SearchLookUpEdit1.Name = "SearchLookUpEdit1"
         Me.SearchLookUpEdit1.Properties.Appearance.Font = New Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.SearchLookUpEdit1.Location = New System.Drawing.Point(5, 26)
+        Me.SearchLookUpEdit1.Name = "SearchLookUpEdit1"
+        Me.SearchLookUpEdit1.Properties.Appearance.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SearchLookUpEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black
         Me.SearchLookUpEdit1.Properties.Appearance.Options.UseFont = True
         Me.SearchLookUpEdit1.Properties.Appearance.Options.UseForeColor = True
         Me.SearchLookUpEdit1.Properties.Appearance.Options.UseTextOptions = True
         Me.SearchLookUpEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+<<<<<<< HEAD
         Me.SearchLookUpEdit1.Properties.Buttons.AddRange(New Controls.EditorButton() {New Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.SearchLookUpEdit1.Properties.NullText = "[  ... الرجاء إختيار اسم المنتج من القائمة المنسدلة  ]"
         Me.SearchLookUpEdit1.Properties.PopupView = Me.SearchLookUpEdit1View
         Me.SearchLookUpEdit1.Size = New Size(611, 28)
+=======
+        Me.SearchLookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SearchLookUpEdit1.Properties.NullText = "[  ... الرجاء إختيار اسم المنتج من القائمة المنسدلة  ]"
+        Me.SearchLookUpEdit1.Properties.PopupView = Me.SearchLookUpEdit1View
+        Me.SearchLookUpEdit1.Size = New System.Drawing.Size(611, 28)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SearchLookUpEdit1.TabIndex = 1484
         '
         'SearchLookUpEdit1View
         '
         Me.SearchLookUpEdit1View.Appearance.FocusedRow.BackColor = System.Drawing.Color.Yellow
         Me.SearchLookUpEdit1View.Appearance.FocusedRow.Options.UseBackColor = True
+<<<<<<< HEAD
         Me.SearchLookUpEdit1View.Appearance.Row.Font = New Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+=======
+        Me.SearchLookUpEdit1View.Appearance.Row.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.SearchLookUpEdit1View.Appearance.Row.Options.UseFont = True
         Me.SearchLookUpEdit1View.Appearance.Row.Options.UseTextOptions = True
         Me.SearchLookUpEdit1View.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
@@ -651,16 +943,25 @@ Public Class Form_barcode
         '
         Me.GroupControl2.Controls.Add(Me.TxtNumberStickers)
         Me.GroupControl2.Controls.Add(Me.Button1)
+<<<<<<< HEAD
         Me.GroupControl2.Location = New Point(3, 5)
         Me.GroupControl2.LookAndFeel.SkinName = "Office 2019 White"
         Me.GroupControl2.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New Size(231, 129)
+=======
+        Me.GroupControl2.Location = New System.Drawing.Point(3, 5)
+        Me.GroupControl2.LookAndFeel.SkinName = "Office 2019 White"
+        Me.GroupControl2.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.GroupControl2.Name = "GroupControl2"
+        Me.GroupControl2.Size = New System.Drawing.Size(231, 129)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupControl2.TabIndex = 1550
         '
         'TxtNumberStickers
         '
         Me.TxtNumberStickers.EditValue = "10"
+<<<<<<< HEAD
         Me.TxtNumberStickers.Location = New Point(5, 84)
         Me.TxtNumberStickers.Name = "TxtNumberStickers"
         Me.TxtNumberStickers.Properties.Appearance.Font = New Font("Consolas", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -668,20 +969,41 @@ Public Class Form_barcode
         Me.TxtNumberStickers.Properties.Appearance.Options.UseTextOptions = True
         Me.TxtNumberStickers.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.TxtNumberStickers.Size = New Size(220, 40)
+=======
+        Me.TxtNumberStickers.Location = New System.Drawing.Point(5, 84)
+        Me.TxtNumberStickers.Name = "TxtNumberStickers"
+        Me.TxtNumberStickers.Properties.Appearance.Font = New System.Drawing.Font("Consolas", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumberStickers.Properties.Appearance.Options.UseFont = True
+        Me.TxtNumberStickers.Properties.Appearance.Options.UseTextOptions = True
+        Me.TxtNumberStickers.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.TxtNumberStickers.Size = New System.Drawing.Size(220, 40)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TxtNumberStickers.TabIndex = 1494
         '
         'Button1
         '
+<<<<<<< HEAD
         Me.Button1.Appearance.Font = New Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+=======
+        Me.Button1.Appearance.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Button1.Appearance.ForeColor = System.Drawing.Color.Black
         Me.Button1.Appearance.Options.UseFont = True
         Me.Button1.Appearance.Options.UseForeColor = True
         Me.Button1.ImageOptions.Image = Global.CC_JO.My.Resources.Resources.printarea_32x32
+<<<<<<< HEAD
         Me.Button1.Location = New Point(6, 26)
         Me.Button1.LookAndFeel.SkinName = "Office 2019 White"
         Me.Button1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New Size(220, 52)
+=======
+        Me.Button1.Location = New System.Drawing.Point(6, 26)
+        Me.Button1.LookAndFeel.SkinName = "Office 2019 White"
+        Me.Button1.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(220, 52)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Button1.TabIndex = 1493
         Me.Button1.Text = " طباعة ملصقات الباركود"
         '
@@ -689,19 +1011,33 @@ Public Class Form_barcode
         '
         Me.GroupControl1.Controls.Add(Me.PictureBox1)
         Me.GroupControl1.Controls.Add(Me.TxtSettingsEntreprise)
+<<<<<<< HEAD
         Me.GroupControl1.Location = New Point(240, 2)
         Me.GroupControl1.LookAndFeel.SkinName = "Office 2019 White"
         Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New Size(231, 129)
+=======
+        Me.GroupControl1.Location = New System.Drawing.Point(240, 2)
+        Me.GroupControl1.LookAndFeel.SkinName = "Office 2019 White"
+        Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.GroupControl1.Name = "GroupControl1"
+        Me.GroupControl1.Size = New System.Drawing.Size(231, 129)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.GroupControl1.TabIndex = 1549
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CC_JO.My.Resources.Resources.Barcode_Image
+<<<<<<< HEAD
         Me.PictureBox1.Location = New Point(5, 26)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New Size(221, 98)
+=======
+        Me.PictureBox1.Location = New System.Drawing.Point(5, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(221, 98)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1544
         Me.PictureBox1.TabStop = False
@@ -712,17 +1048,30 @@ Public Class Form_barcode
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.Panel1.Location = New Point(0, 47)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New Size(1105, 488)
+=======
+        Me.Panel1.Location = New System.Drawing.Point(0, 45)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1105, 492)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.TabIndex = 1551
         '
         'DocumentViewer1
         '
         Me.DocumentViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+<<<<<<< HEAD
         Me.DocumentViewer1.Location = New Point(0, 175)
         Me.DocumentViewer1.Name = "DocumentViewer1"
         Me.DocumentViewer1.Size = New Size(1105, 313)
+=======
+        Me.DocumentViewer1.IsMetric = True
+        Me.DocumentViewer1.Location = New System.Drawing.Point(0, 175)
+        Me.DocumentViewer1.Name = "DocumentViewer1"
+        Me.DocumentViewer1.Size = New System.Drawing.Size(1105, 317)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DocumentViewer1.TabIndex = 0
         '
         'Panel3
@@ -732,10 +1081,17 @@ Public Class Form_barcode
         Me.Panel3.Controls.Add(Me.GroupControl1)
         Me.Panel3.Controls.Add(Me.GroupControl2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+<<<<<<< HEAD
         Me.Panel3.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Panel3.Location = New Point(0, 34)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New Size(1105, 141)
+=======
+        Me.Panel3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.Panel3.Location = New System.Drawing.Point(0, 34)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1105, 141)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.TabIndex = 1552
         '
         'RibbonPage2
@@ -767,10 +1123,49 @@ Public Class Form_barcode
         Me.DocumentViewerBarManager1.MainMenu = Me.PreviewBar3
         Me.DocumentViewerBarManager1.MaxItemId = 59
         Me.DocumentViewerBarManager1.PreviewBar = Me.PreviewBar1
+<<<<<<< HEAD
         Me.DocumentViewerBarManager1.RepositoryItems.AddRange(New Repository.RepositoryItem() {Me.RepositoryItemProgressBar1, Me.RepositoryItemZoomTrackBar1, Me.PrintPreviewRepositoryItemComboBox1})
         Me.DocumentViewerBarManager1.StatusBar = Me.PreviewBar2
         Me.DocumentViewerBarManager1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
         '
+=======
+        Me.DocumentViewerBarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemProgressBar1, Me.RepositoryItemZoomTrackBar1, Me.PrintPreviewRepositoryItemComboBox1})
+        Me.DocumentViewerBarManager1.StatusBar = Me.PreviewBar2
+        Me.DocumentViewerBarManager1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.[True]
+        '
+        'barDockControlTop
+        '
+        Me.BarDockControlTop.CausesValidation = False
+        Me.BarDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BarDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.BarDockControlTop.Manager = Me.DocumentViewerBarManager1
+        Me.BarDockControlTop.Size = New System.Drawing.Size(1105, 45)
+        '
+        'barDockControlBottom
+        '
+        Me.BarDockControlBottom.CausesValidation = False
+        Me.BarDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BarDockControlBottom.Location = New System.Drawing.Point(0, 537)
+        Me.BarDockControlBottom.Manager = Me.DocumentViewerBarManager1
+        Me.BarDockControlBottom.Size = New System.Drawing.Size(1105, 22)
+        '
+        'barDockControlLeft
+        '
+        Me.BarDockControlLeft.CausesValidation = False
+        Me.BarDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.BarDockControlLeft.Location = New System.Drawing.Point(0, 45)
+        Me.BarDockControlLeft.Manager = Me.DocumentViewerBarManager1
+        Me.BarDockControlLeft.Size = New System.Drawing.Size(0, 492)
+        '
+        'barDockControlRight
+        '
+        Me.BarDockControlRight.CausesValidation = False
+        Me.BarDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.BarDockControlRight.Location = New System.Drawing.Point(1105, 45)
+        Me.BarDockControlRight.Manager = Me.DocumentViewerBarManager1
+        Me.BarDockControlRight.Size = New System.Drawing.Size(0, 492)
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'PreviewBar1
         '
         Me.PreviewBar1.BarName = "Toolbar"
@@ -780,6 +1175,7 @@ Public Class Form_barcode
         Me.PreviewBar1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BbiDocumentMap), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiParameters), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiThumbnails), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiFind), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiHighlightEditingFields), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiCustomize, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiOpen, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiSave), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPrint, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPrintDirect), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPageSetup), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiEditPageHF), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiScale), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiHandTool, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiMagnifier), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiZoomOut, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiZoom), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiZoomIn), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiShowFirstPage, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiShowPrevPage), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiShowNextPage), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiShowLastPage), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiMultiplePages, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiFillBackground), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiWatermark), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiExportFile, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiSendFile), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiClosePreview, True)})
         Me.PreviewBar1.Text = "Toolbar"
         '
+<<<<<<< HEAD
         'BbiDocumentMap
         '
         Me.BbiDocumentMap.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
@@ -1054,6 +1450,8 @@ Public Class Form_barcode
         Me.BbiClosePreview.Id = 32
         Me.BbiClosePreview.Name = "BbiClosePreview"
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'PreviewBar2
         '
         Me.PreviewBar2.BarName = "Status Bar"
@@ -1067,6 +1465,20 @@ Public Class Form_barcode
         Me.PreviewBar2.OptionsBar.UseWholeRow = True
         Me.PreviewBar2.Text = "Status Bar"
         '
+<<<<<<< HEAD
+=======
+        'PreviewBar3
+        '
+        Me.PreviewBar3.BarName = "Main Menu"
+        Me.PreviewBar3.DockCol = 0
+        Me.PreviewBar3.DockRow = 0
+        Me.PreviewBar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
+        Me.PreviewBar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MiFile), New DevExpress.XtraBars.LinkPersistInfo(Me.MiView), New DevExpress.XtraBars.LinkPersistInfo(Me.MiBackground)})
+        Me.PreviewBar3.OptionsBar.MultiLine = True
+        Me.PreviewBar3.OptionsBar.UseWholeRow = True
+        Me.PreviewBar3.Text = "Main Menu"
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'PrintPreviewStaticItem1
         '
         Me.PrintPreviewStaticItem1.Border = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
@@ -1077,6 +1489,13 @@ Public Class Form_barcode
         Me.PrintPreviewStaticItem1.RightIndent = 1
         Me.PrintPreviewStaticItem1.Type = "PageOfPages"
         '
+<<<<<<< HEAD
+=======
+        'RepositoryItemProgressBar1
+        '
+        Me.RepositoryItemProgressBar1.Name = "RepositoryItemProgressBar1"
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'ProgressBarEditItem1
         '
         Me.ProgressBarEditItem1.Edit = Me.RepositoryItemProgressBar1
@@ -1086,10 +1505,13 @@ Public Class Form_barcode
         Me.ProgressBarEditItem1.Name = "ProgressBarEditItem1"
         Me.ProgressBarEditItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
+<<<<<<< HEAD
         'RepositoryItemProgressBar1
         '
         Me.RepositoryItemProgressBar1.Name = "RepositoryItemProgressBar1"
         '
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'PrintPreviewBarItem1
         '
         Me.PrintPreviewBarItem1.Caption = "Stop"
@@ -1110,6 +1532,17 @@ Public Class Form_barcode
         Me.PrintPreviewStaticItem2.TextAlignment = System.Drawing.StringAlignment.Far
         Me.PrintPreviewStaticItem2.Type = "ZoomFactor"
         '
+<<<<<<< HEAD
+=======
+        'RepositoryItemZoomTrackBar1
+        '
+        Me.RepositoryItemZoomTrackBar1.Alignment = DevExpress.Utils.VertAlignment.Center
+        Me.RepositoryItemZoomTrackBar1.AllowFocused = False
+        Me.RepositoryItemZoomTrackBar1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.RepositoryItemZoomTrackBar1.Maximum = 180
+        Me.RepositoryItemZoomTrackBar1.Name = "RepositoryItemZoomTrackBar1"
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'ZoomTrackBarEditItem1
         '
         Me.ZoomTrackBarEditItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
@@ -1121,6 +1554,7 @@ Public Class Form_barcode
         Me.ZoomTrackBarEditItem1.Name = "ZoomTrackBarEditItem1"
         Me.ZoomTrackBarEditItem1.Range = New Integer() {10, 500}
         '
+<<<<<<< HEAD
         'RepositoryItemZoomTrackBar1
         '
         Me.RepositoryItemZoomTrackBar1.Alignment = DevExpress.Utils.VertAlignment.Center
@@ -1141,30 +1575,333 @@ Public Class Form_barcode
         Me.PreviewBar3.Text = "Main Menu"
         '
         'MiFile
+=======
+        'bbiDocumentMap
+        '
+        Me.BbiDocumentMap.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiDocumentMap.Caption = "Document Map"
+        Me.BbiDocumentMap.Command = DevExpress.XtraPrinting.PrintingSystemCommand.DocumentMap
+        Me.BbiDocumentMap.Enabled = False
+        Me.BbiDocumentMap.Hint = "Document Map"
+        Me.BbiDocumentMap.Id = 5
+        Me.BbiDocumentMap.Name = "bbiDocumentMap"
+        '
+        'bbiParameters
+        '
+        Me.BbiParameters.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiParameters.Caption = "Parameters"
+        Me.BbiParameters.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Parameters
+        Me.BbiParameters.Enabled = False
+        Me.BbiParameters.Hint = "Parameters"
+        Me.BbiParameters.Id = 6
+        Me.BbiParameters.Name = "bbiParameters"
+        '
+        'bbiThumbnails
+        '
+        Me.BbiThumbnails.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiThumbnails.Caption = "Thumbnails"
+        Me.BbiThumbnails.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Thumbnails
+        Me.BbiThumbnails.Enabled = False
+        Me.BbiThumbnails.Hint = "Thumbnails"
+        Me.BbiThumbnails.Id = 7
+        Me.BbiThumbnails.Name = "bbiThumbnails"
+        '
+        'bbiFind
+        '
+        Me.BbiFind.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiFind.Caption = "Search"
+        Me.BbiFind.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Find
+        Me.BbiFind.Enabled = False
+        Me.BbiFind.Hint = "Search"
+        Me.BbiFind.Id = 8
+        Me.BbiFind.Name = "bbiFind"
+        '
+        'bbiHighlightEditingFields
+        '
+        Me.BbiHighlightEditingFields.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiHighlightEditingFields.Caption = "Editing Fields"
+        Me.BbiHighlightEditingFields.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HighlightEditingFields
+        Me.BbiHighlightEditingFields.Enabled = False
+        Me.BbiHighlightEditingFields.Hint = "Highlight Editing Fields"
+        Me.BbiHighlightEditingFields.Id = 9
+        Me.BbiHighlightEditingFields.Name = "bbiHighlightEditingFields"
+        '
+        'bbiCustomize
+        '
+        Me.BbiCustomize.Caption = "Customize"
+        Me.BbiCustomize.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Customize
+        Me.BbiCustomize.Enabled = False
+        Me.BbiCustomize.Hint = "Customize"
+        Me.BbiCustomize.Id = 10
+        Me.BbiCustomize.Name = "bbiCustomize"
+        '
+        'bbiOpen
+        '
+        Me.BbiOpen.Caption = "Open"
+        Me.BbiOpen.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Open
+        Me.BbiOpen.Enabled = False
+        Me.BbiOpen.Hint = "Open a document"
+        Me.BbiOpen.Id = 11
+        Me.BbiOpen.Name = "bbiOpen"
+        '
+        'bbiSave
+        '
+        Me.BbiSave.Caption = "Save"
+        Me.BbiSave.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Save
+        Me.BbiSave.Enabled = False
+        Me.BbiSave.Hint = "Save the document"
+        Me.BbiSave.Id = 12
+        Me.BbiSave.Name = "bbiSave"
+        '
+        'bbiPrint
+        '
+        Me.BbiPrint.Caption = "&Print..."
+        Me.BbiPrint.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Print
+        Me.BbiPrint.Enabled = False
+        Me.BbiPrint.Hint = "Print"
+        Me.BbiPrint.Id = 13
+        Me.BbiPrint.Name = "bbiPrint"
+        '
+        'bbiPrintDirect
+        '
+        Me.BbiPrintDirect.Caption = "P&rint"
+        Me.BbiPrintDirect.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect
+        Me.BbiPrintDirect.Enabled = False
+        Me.BbiPrintDirect.Hint = "Quick Print"
+        Me.BbiPrintDirect.Id = 14
+        Me.BbiPrintDirect.Name = "bbiPrintDirect"
+        '
+        'bbiPageSetup
+        '
+        Me.BbiPageSetup.Caption = "Page Set&up..."
+        Me.BbiPageSetup.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageSetup
+        Me.BbiPageSetup.Enabled = False
+        Me.BbiPageSetup.Hint = "Page Setup"
+        Me.BbiPageSetup.Id = 15
+        Me.BbiPageSetup.Name = "bbiPageSetup"
+        '
+        'bbiEditPageHF
+        '
+        Me.BbiEditPageHF.Caption = "Header And Footer"
+        Me.BbiEditPageHF.Command = DevExpress.XtraPrinting.PrintingSystemCommand.EditPageHF
+        Me.BbiEditPageHF.Enabled = False
+        Me.BbiEditPageHF.Hint = "Header And Footer"
+        Me.BbiEditPageHF.Id = 16
+        Me.BbiEditPageHF.Name = "bbiEditPageHF"
+        '
+        'bbiScale
+        '
+        Me.BbiScale.ActAsDropDown = True
+        Me.BbiScale.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown
+        Me.BbiScale.Caption = "Scale"
+        Me.BbiScale.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Scale
+        Me.BbiScale.Enabled = False
+        Me.BbiScale.Hint = "Scale"
+        Me.BbiScale.Id = 17
+        Me.BbiScale.Name = "bbiScale"
+        '
+        'bbiHandTool
+        '
+        Me.BbiHandTool.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiHandTool.Caption = "Hand Tool"
+        Me.BbiHandTool.Command = DevExpress.XtraPrinting.PrintingSystemCommand.HandTool
+        Me.BbiHandTool.Enabled = False
+        Me.BbiHandTool.Hint = "Hand Tool"
+        Me.BbiHandTool.Id = 18
+        Me.BbiHandTool.Name = "bbiHandTool"
+        '
+        'bbiMagnifier
+        '
+        Me.BbiMagnifier.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BbiMagnifier.Caption = "Magnifier"
+        Me.BbiMagnifier.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Magnifier
+        Me.BbiMagnifier.Enabled = False
+        Me.BbiMagnifier.Hint = "Magnifier"
+        Me.BbiMagnifier.Id = 19
+        Me.BbiMagnifier.Name = "bbiMagnifier"
+        '
+        'bbiZoomOut
+        '
+        Me.BbiZoomOut.Caption = "Zoom Out"
+        Me.BbiZoomOut.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomOut
+        Me.BbiZoomOut.Enabled = False
+        Me.BbiZoomOut.Hint = "Zoom Out"
+        Me.BbiZoomOut.Id = 20
+        Me.BbiZoomOut.Name = "bbiZoomOut"
+        '
+        'bbiZoom
+        '
+        Me.BbiZoom.Caption = "Zoom"
+        Me.BbiZoom.Edit = Me.PrintPreviewRepositoryItemComboBox1
+        Me.BbiZoom.EditValue = "100%"
+        Me.BbiZoom.EditWidth = 70
+        Me.BbiZoom.Enabled = False
+        Me.BbiZoom.Hint = "Zoom"
+        Me.BbiZoom.Id = 21
+        Me.BbiZoom.Name = "bbiZoom"
+        '
+        'PrintPreviewRepositoryItemComboBox1
+        '
+        Me.PrintPreviewRepositoryItemComboBox1.AutoComplete = False
+        Me.PrintPreviewRepositoryItemComboBox1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.PrintPreviewRepositoryItemComboBox1.DropDownRows = 11
+        Me.PrintPreviewRepositoryItemComboBox1.Name = "PrintPreviewRepositoryItemComboBox1"
+        '
+        'bbiZoomIn
+        '
+        Me.BbiZoomIn.Caption = "Zoom In"
+        Me.BbiZoomIn.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ZoomIn
+        Me.BbiZoomIn.Enabled = False
+        Me.BbiZoomIn.Hint = "Zoom In"
+        Me.BbiZoomIn.Id = 22
+        Me.BbiZoomIn.Name = "bbiZoomIn"
+        '
+        'bbiShowFirstPage
+        '
+        Me.BbiShowFirstPage.Caption = "Last Page"
+        Me.BbiShowFirstPage.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowLastPage
+        Me.BbiShowFirstPage.Enabled = False
+        Me.BbiShowFirstPage.Hint = "Last Page"
+        Me.BbiShowFirstPage.Id = 23
+        Me.BbiShowFirstPage.Name = "bbiShowFirstPage"
+        '
+        'bbiShowPrevPage
+        '
+        Me.BbiShowPrevPage.Caption = "Next Page"
+        Me.BbiShowPrevPage.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowNextPage
+        Me.BbiShowPrevPage.Enabled = False
+        Me.BbiShowPrevPage.Hint = "Next Page"
+        Me.BbiShowPrevPage.Id = 24
+        Me.BbiShowPrevPage.Name = "bbiShowPrevPage"
+        '
+        'bbiShowNextPage
+        '
+        Me.BbiShowNextPage.Caption = "Previous Page"
+        Me.BbiShowNextPage.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowPrevPage
+        Me.BbiShowNextPage.Enabled = False
+        Me.BbiShowNextPage.Hint = "Previous Page"
+        Me.BbiShowNextPage.Id = 25
+        Me.BbiShowNextPage.Name = "bbiShowNextPage"
+        '
+        'bbiShowLastPage
+        '
+        Me.BbiShowLastPage.Caption = "First Page"
+        Me.BbiShowLastPage.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ShowFirstPage
+        Me.BbiShowLastPage.Enabled = False
+        Me.BbiShowLastPage.Hint = "First Page"
+        Me.BbiShowLastPage.Id = 26
+        Me.BbiShowLastPage.Name = "bbiShowLastPage"
+        '
+        'bbiMultiplePages
+        '
+        Me.BbiMultiplePages.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown
+        Me.BbiMultiplePages.Caption = "Multiple Pages"
+        Me.BbiMultiplePages.Command = DevExpress.XtraPrinting.PrintingSystemCommand.MultiplePages
+        Me.BbiMultiplePages.Enabled = False
+        Me.BbiMultiplePages.Hint = "Multiple Pages"
+        Me.BbiMultiplePages.Id = 27
+        Me.BbiMultiplePages.Name = "bbiMultiplePages"
+        '
+        'bbiFillBackground
+        '
+        Me.BbiFillBackground.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown
+        Me.BbiFillBackground.Caption = "&Color..."
+        Me.BbiFillBackground.Command = DevExpress.XtraPrinting.PrintingSystemCommand.FillBackground
+        Me.BbiFillBackground.Enabled = False
+        Me.BbiFillBackground.Hint = "Background"
+        Me.BbiFillBackground.Id = 28
+        Me.BbiFillBackground.Name = "bbiFillBackground"
+        '
+        'bbiWatermark
+        '
+        Me.BbiWatermark.Caption = "&Watermark..."
+        Me.BbiWatermark.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Watermark
+        Me.BbiWatermark.Enabled = False
+        Me.BbiWatermark.Hint = "Watermark"
+        Me.BbiWatermark.Id = 29
+        Me.BbiWatermark.Name = "bbiWatermark"
+        '
+        'bbiExportFile
+        '
+        Me.BbiExportFile.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown
+        Me.BbiExportFile.Caption = "Export Document..."
+        Me.BbiExportFile.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ExportFile
+        Me.BbiExportFile.Enabled = False
+        Me.BbiExportFile.Hint = "Export Document..."
+        Me.BbiExportFile.Id = 30
+        Me.BbiExportFile.Name = "bbiExportFile"
+        '
+        'bbiSendFile
+        '
+        Me.BbiSendFile.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown
+        Me.BbiSendFile.Caption = "Send via E-Mail..."
+        Me.BbiSendFile.Command = DevExpress.XtraPrinting.PrintingSystemCommand.SendFile
+        Me.BbiSendFile.Enabled = False
+        Me.BbiSendFile.Hint = "Send via E-Mail..."
+        Me.BbiSendFile.Id = 31
+        Me.BbiSendFile.Name = "bbiSendFile"
+        '
+        'bbiClosePreview
+        '
+        Me.BbiClosePreview.Caption = "E&xit"
+        Me.BbiClosePreview.Command = DevExpress.XtraPrinting.PrintingSystemCommand.ClosePreview
+        Me.BbiClosePreview.Enabled = False
+        Me.BbiClosePreview.Hint = "Close Preview"
+        Me.BbiClosePreview.Id = 32
+        Me.BbiClosePreview.Name = "bbiClosePreview"
+        '
+        'miFile
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         Me.MiFile.Caption = "&File"
         Me.MiFile.Command = DevExpress.XtraPrinting.PrintingSystemCommand.File
         Me.MiFile.Id = 33
         Me.MiFile.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPageSetup), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPrint), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiPrintDirect), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiExportFile, True), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiSendFile), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiClosePreview, True)})
+<<<<<<< HEAD
         Me.MiFile.Name = "MiFile"
         '
         'MiView
+=======
+        Me.MiFile.Name = "miFile"
+        '
+        'miView
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         Me.MiView.Caption = "&View"
         Me.MiView.Command = DevExpress.XtraPrinting.PrintingSystemCommand.View
         Me.MiView.Id = 34
         Me.MiView.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MiPageLayout, True), New DevExpress.XtraBars.LinkPersistInfo(Me.MiToolbars, True)})
+<<<<<<< HEAD
         Me.MiView.Name = "MiView"
         '
         'MiPageLayout
+=======
+        Me.MiView.Name = "miView"
+        '
+        'miBackground
+        '
+        Me.MiBackground.Caption = "&Background"
+        Me.MiBackground.Command = DevExpress.XtraPrinting.PrintingSystemCommand.Background
+        Me.MiBackground.Id = 35
+        Me.MiBackground.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BbiFillBackground), New DevExpress.XtraBars.LinkPersistInfo(Me.BbiWatermark)})
+        Me.MiBackground.Name = "miBackground"
+        '
+        'miPageLayout
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         Me.MiPageLayout.Caption = "&Page Layout"
         Me.MiPageLayout.Command = DevExpress.XtraPrinting.PrintingSystemCommand.PageLayout
         Me.MiPageLayout.Id = 36
         Me.MiPageLayout.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.MiPageLayoutFacing), New DevExpress.XtraBars.LinkPersistInfo(Me.MiPageLayoutContinuous)})
+<<<<<<< HEAD
         Me.MiPageLayout.Name = "MiPageLayout"
         '
         'MiPageLayoutFacing
+=======
+        Me.MiPageLayout.Name = "miPageLayout"
+        '
+        'miPageLayoutFacing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         Me.MiPageLayoutFacing.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
         Me.MiPageLayoutFacing.Caption = "&Facing"
@@ -1172,9 +1909,15 @@ Public Class Form_barcode
         Me.MiPageLayoutFacing.Enabled = False
         Me.MiPageLayoutFacing.GroupIndex = 100
         Me.MiPageLayoutFacing.Id = 37
+<<<<<<< HEAD
         Me.MiPageLayoutFacing.Name = "MiPageLayoutFacing"
         '
         'MiPageLayoutContinuous
+=======
+        Me.MiPageLayoutFacing.Name = "miPageLayoutFacing"
+        '
+        'miPageLayoutContinuous
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         Me.MiPageLayoutContinuous.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
         Me.MiPageLayoutContinuous.Caption = "&Continuous"
@@ -1182,6 +1925,7 @@ Public Class Form_barcode
         Me.MiPageLayoutContinuous.Enabled = False
         Me.MiPageLayoutContinuous.GroupIndex = 100
         Me.MiPageLayoutContinuous.Id = 38
+<<<<<<< HEAD
         Me.MiPageLayoutContinuous.Name = "MiPageLayoutContinuous"
         '
         'MiToolbars
@@ -1229,6 +1973,15 @@ Public Class Form_barcode
         Me.BarDockControlRight.Location = New Point(1105, 47)
         Me.BarDockControlRight.Manager = Me.DocumentViewerBarManager1
         Me.BarDockControlRight.Size = New Size(0, 488)
+=======
+        Me.MiPageLayoutContinuous.Name = "miPageLayoutContinuous"
+        '
+        'miToolbars
+        '
+        Me.MiToolbars.Caption = "Bars"
+        Me.MiToolbars.Id = 39
+        Me.MiToolbars.Name = "miToolbars"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'PrintPreviewBarCheckItem1
         '
@@ -1428,25 +2181,40 @@ Public Class Form_barcode
         '
         Me.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold
         Me.Appearance.Options.UseFont = True
+<<<<<<< HEAD
         Me.AutoScaleDimensions = New SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New Size(1105, 559)
+=======
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1105, 559)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BarDockControlLeft)
         Me.Controls.Add(Me.BarDockControlRight)
         Me.Controls.Add(Me.BarDockControlBottom)
         Me.Controls.Add(Me.BarDockControlTop)
+<<<<<<< HEAD
         Me.Font = New Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Icon = CType(resources.GetObject("Form_barcode.IconOptions.Icon"), Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.MinimumSize = New Size(1000, 550)
+=======
+        Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        Me.IconOptions.Icon = CType(resources.GetObject("Form_barcode.IconOptions.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "Form_barcode"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+<<<<<<< HEAD
         CType(Me.PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtSettingsEntreprise.Properties, ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl4, ComponentModel.ISupportInitialize).EndInit()
@@ -1468,6 +2236,29 @@ Public Class Form_barcode
         CType(Me.PrintPreviewRepositoryItemComboBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemZoomTrackBar1, ComponentModel.ISupportInitialize).EndInit()
+=======
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtSettingsEntreprise.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl4.ResumeLayout(False)
+        CType(Me.TxtItemsPrixVente.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtItemsName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtItemsBarcode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SearchLookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SearchLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl2.ResumeLayout(False)
+        CType(Me.TxtNumberStickers.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.DocumentViewerBarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemZoomTrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintPreviewRepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

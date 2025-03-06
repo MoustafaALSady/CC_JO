@@ -1,10 +1,17 @@
 ﻿Option Explicit Off
 Imports System.Data.SqlClient
 Public Class FormTreeView
+<<<<<<< HEAD
     Inherits Form
     Dim WithEvents BS As New BindingSource
     Dim ds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Dim WithEvents BS As New BindingSource
+    Dim ds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
@@ -24,7 +31,11 @@ Public Class FormTreeView
     Private Acc_ID2 As Integer
     Private New_ID As String ' المتغير
 
+<<<<<<< HEAD
     Public Sub FormTreeView_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Public Sub FormTreeView_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -33,7 +44,11 @@ Public Class FormTreeView
                 Me.Opacity = a / 10
             Next
 
+<<<<<<< HEAD
             Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+            Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -48,7 +63,11 @@ Public Class FormTreeView
         Try
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("SELECT  acc1, GUID, END_ACCOUNT, PARTENT_ACCOUNT, COUINT_ACCOUNT, acc, account_no, account_name, acc4, account_belong, acc6, acc7, acc8, acc9, acc10, acc11, acc12  FROM ACCOUNTSTREE ORDER BY account_no", Consum)
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
@@ -139,7 +158,11 @@ Public Class FormTreeView
     End Sub
     Public Sub Refsh()
         'On Error Resume Next
+<<<<<<< HEAD
         Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -148,11 +171,19 @@ Public Class FormTreeView
     End Sub
     Private Sub MAXRECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim f As New FRM_ACCOUNT
         Dim V As Integer
         Dim SQL As New SqlCommand("SELECT MAX(ACC1) FROM ACCOUNTSTREE", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim f As New FRM_ACCOUNT
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(ACC1) FROM ACCOUNTSTREE", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -169,7 +200,11 @@ Public Class FormTreeView
         f.TextACC11.Text = V
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
             Exit Sub
@@ -178,12 +213,20 @@ Public Class FormTreeView
             MsgBox("عفوا .. قام الأدمن بمنع خاصية اضافة وتعديل السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FRM_ACCOUNT
         Try
             Dim V As Integer
             Dim SQL As New SqlCommand("SELECT MAX(ACC1) FROM ACCOUNTSTREE", Consum)
+<<<<<<< HEAD
             Dim CMD As New SqlCommand
+=======
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -275,12 +318,21 @@ Public Class FormTreeView
         Public acc_crd As Double = 0.0
         Public acc_dep As Double = 0.0
     End Class
+<<<<<<< HEAD
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         On Error Resume Next
         Dim Consum As New SqlConnection(constring)
         Dim strsql1 As New SqlCommand("SELECT * FROM ACCOUNTSTREE WHERE account_no = '" & Split(e.Node.Text, "-")(0) & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql1)
+=======
+    Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
+        On Error Resume Next
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql1 As New SqlCommand("SELECT * FROM ACCOUNTSTREE WHERE account_no = '" & Split(e.Node.Text, "-")(0) & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -317,9 +369,15 @@ Public Class FormTreeView
             Me.EDITBUTTON.Enabled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As TreeViewEventArgs) Handles TreeView1.AfterSelect
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         For Each row As DataRowView In BS
         Next
@@ -327,7 +385,11 @@ Public Class FormTreeView
         Me.BS.Filter = "(account_name='" & Split(Me.TreeView1.SelectedNode.Text, "-")(1) & "')"
         Dim strsql1 As New SqlCommand("SELECT * FROM ACCOUNTSTREE WHERE account_no = '" & Split(Me.TreeView1.SelectedNode.Text, "-")(0) & "'", Consum)
         Dim ds As New DataSet
+<<<<<<< HEAD
         Adp = New SqlDataAdapter(strsql1)
+=======
+        Adp = New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -419,7 +481,11 @@ Public Class FormTreeView
     '            AddChildNodeData(node.Nodes(i))
     '        Next i
     '    End Sub
+<<<<<<< HEAD
     Private Sub FormTreeView_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles MyBase.FormClosing
+=======
+    Private Sub FormTreeView_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.BS.Filter IsNot Nothing Then
             Me.BS.Filter = Nothing
@@ -427,14 +493,23 @@ Public Class FormTreeView
         Me.BS.CancelEdit()
         Me.ds.RejectChanges()
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If InternalAuditor = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية اضافة وتعديل السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
         Dim ds As New DataSet
+<<<<<<< HEAD
         Dim SqlDataAdapter1 As New SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FRM_ACCOUNT
         Try
             If Me.TreeView1.SelectedNode.Level < 4 Then
@@ -461,8 +536,13 @@ Public Class FormTreeView
             End If
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT account_no FROM ACCOUNTSTREE", Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
             Dim builder33 As New SqlCommandBuilder(SqlDataAdapter1)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+            Dim builder33 As New SqlClient.SqlCommandBuilder(SqlDataAdapter1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "ACCOUNTSTREE")
             f.BS.DataMember = "ACCOUNTSTREE"
@@ -483,7 +563,11 @@ Public Class FormTreeView
         SqlDataAdapter1.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub TreeView1_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles TreeView1.DoubleClick
+=======
+    Private Sub TreeView1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TreeView1.DoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'If InternalAuditor = False Then
         '    MsgBox("عفوا .. قام الأدمن بمنع خاصية اضافة وتعديل السجلات من البرنامج", 16, "تنبيه")
         '    Exit Sub
@@ -538,6 +622,7 @@ Public Class FormTreeView
         'Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonUpdateA_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonUpdateA.Click
         Me.Refsh()
     End Sub
@@ -551,16 +636,39 @@ Public Class FormTreeView
         Me.ADDBUTTON_Click(sender, e)
     End Sub
     Private Sub MenuItem4_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles MenuItem4.Click
+=======
+    Private Sub ButtonUpdateA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonUpdateA.Click
+        Me.Refsh()
+    End Sub
+    Private Sub MenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem1.Click
+        Me.TreeView1.CollapseAll()
+    End Sub
+    Private Sub MenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem2.Click
+        Me.TreeView1.ExpandAll()
+    End Sub
+    Private Sub MenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem3.Click
+        Me.ADDBUTTON_Click(sender, e)
+    End Sub
+    Private Sub MenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MenuItem4.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.EDITBUTTON_Click(sender, e)
     End Sub
 
 
 
+<<<<<<< HEAD
     Private Sub BtnSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BtnSearch.Click
         Dim Consum As New SqlConnection(constring)
         Dim StrSQL As String = "Select * From ACCOUNTSTREE  Where account_name Like '%" & Me.TxtSearch.Text & "%'"
         If Consum.State = ConnectionState.Closed Then Consum.Open()
         Dim da As New SqlDataAdapter(StrSQL, Consum)
+=======
+    Private Sub BtnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSearch.Click
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim StrSQL As String = "Select * From ACCOUNTSTREE  Where account_name Like '%" & Me.TxtSearch.Text & "%'"
+        If Consum.State = ConnectionState.Closed Then Consum.Open()
+        Dim da As New SqlClient.SqlDataAdapter(StrSQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim dt As New DataTable
         dt.Clear()
         da.Fill(dt)

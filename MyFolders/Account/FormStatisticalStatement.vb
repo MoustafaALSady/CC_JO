@@ -1,10 +1,17 @@
 ﻿Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 Public Class FormStatisticalStatement
+<<<<<<< HEAD
     Inherits Form
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Inherits System.Windows.Forms.Form
+    Public WithEvents BS As New BindingSource
+    Dim myds As New DataSet
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveDataBase As System.ComponentModel.BackgroundWorker
     Public Delegate Sub LoadDataBaseCallBack()
@@ -18,6 +25,7 @@ Public Class FormStatisticalStatement
     Dim IDss1 As Integer
 
 
+<<<<<<< HEAD
     Private Sub ComboBoxEx2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboAssociationName.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -25,6 +33,15 @@ Public Class FormStatisticalStatement
         Dim strsql As New SqlCommand("SELECT CMP5, CMP7, CMP8, CUser    FROM COMPANY WHERE CMP2 ='" & Me.ComboAssociationName.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboBoxEx2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboAssociationName.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT CMP5, CMP7, CMP8, CUser    FROM COMPANY WHERE CMP2 ='" & Me.ComboAssociationName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -45,7 +62,11 @@ Public Class FormStatisticalStatement
         FrmMAIN.ComboGetAssociationName_SelectedIndexChanged(sender, e)
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormStatisticalStatement_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FormStatisticalStatement_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -75,9 +96,15 @@ Public Class FormStatisticalStatement
     Private Sub MAXRECORD()
         On Error Resume Next
         Dim V As Integer
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim SQL As New SqlCommand("SELECT MAX(IDSS) FROM StatisticalStatement", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim SQL As New SqlCommand("SELECT MAX(IDSS) FROM StatisticalStatement", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -95,6 +122,7 @@ Public Class FormStatisticalStatement
     End Sub
     Private Sub StatisticalStatementInquiryID()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -102,6 +130,15 @@ Public Class FormStatisticalStatement
         Dim strSQLmc1 As New SqlCommand("SELECT IDSS  FROM StatisticalStatement WHERE CUser ='" & ModuleGeneral.CUser & "' and Year(convert(date,SS1, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim dsMC1 As New DataSet
         MC1 = New SqlDataAdapter(strSQLmc1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        Dim MC1 As SqlClient.SqlDataAdapter
+        Dim strSQLmc1 As New SqlCommand("SELECT IDSS  FROM StatisticalStatement WHERE CUser ='" & ModuleGeneral.CUser & "' and Year(convert(date,SS1, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim dsMC1 As New DataSet
+        MC1 = New SqlClient.SqlDataAdapter(strSQLmc1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC1.Clear()
         MC1.Fill(dsMC1)
         If dsMC1.Tables(0).Rows.Count > 0 Then
@@ -119,6 +156,7 @@ Public Class FormStatisticalStatement
 
         Dim EMA As Integer = 0
         Dim EMB As Integer = 0
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
@@ -126,6 +164,15 @@ Public Class FormStatisticalStatement
         Dim strSQLmc1 As New SqlCommand("SELECT COUNT(IDmc)  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc7 ='" & Trim("True") & "' and mc3 <>'" & Trim("محاسب") & "'", Consum)
         Dim dsMC1 As New DataSet
         MC1 = New SqlDataAdapter(strSQLmc1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        If Consum.State = ConnectionState.Open Then Consum.Close()
+        Consum.Open()
+        Dim MC1 As SqlClient.SqlDataAdapter
+        Dim strSQLmc1 As New SqlCommand("SELECT COUNT(IDmc)  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc7 ='" & Trim("True") & "' and mc3 <>'" & Trim("محاسب") & "'", Consum)
+        Dim dsMC1 As New DataSet
+        MC1 = New SqlClient.SqlDataAdapter(strSQLmc1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC1.Clear()
         MC1.Fill(dsMC1)
         If dsMC1.Tables(0).Rows.Count > 0 Then
@@ -135,10 +182,17 @@ Public Class FormStatisticalStatement
         End If
         MC1.Dispose()
 
+<<<<<<< HEAD
         Dim MC2 As SqlDataAdapter
         Dim strSQLmc2 As New SqlCommand("SELECT COUNT(IDmc)  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc7 ='" & Trim("False") & "'", Consum)
         Dim dsMC2 As New DataSet
         MC2 = New SqlDataAdapter(strSQLmc2)
+=======
+        Dim MC2 As SqlClient.SqlDataAdapter
+        Dim strSQLmc2 As New SqlCommand("SELECT COUNT(IDmc)  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc7 ='" & Trim("False") & "'", Consum)
+        Dim dsMC2 As New DataSet
+        MC2 = New SqlClient.SqlDataAdapter(strSQLmc2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC2.Clear()
         MC2.Fill(dsMC2)
         If dsMC2.Tables(0).Rows.Count > 0 Then
@@ -148,10 +202,17 @@ Public Class FormStatisticalStatement
         End If
         MC2.Dispose()
 
+<<<<<<< HEAD
         Dim MC3 As SqlDataAdapter
         Dim strSQLmc3 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("سكرتير") & "'", Consum)
         Dim dsMC3 As New DataSet
         MC3 = New SqlDataAdapter(strSQLmc3)
+=======
+        Dim MC3 As SqlClient.SqlDataAdapter
+        Dim strSQLmc3 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("سكرتير") & "'", Consum)
+        Dim dsMC3 As New DataSet
+        MC3 = New SqlClient.SqlDataAdapter(strSQLmc3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC3.Clear()
         MC3.Fill(dsMC3)
         If dsMC3.Tables(0).Rows.Count > 0 Then
@@ -161,10 +222,17 @@ Public Class FormStatisticalStatement
         End If
         MC3.Dispose()
 
+<<<<<<< HEAD
         Dim MC4 As SqlDataAdapter
         Dim strSQLmc4 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("امين الصندوق") & "'", Consum)
         Dim dsMC4 As New DataSet
         MC4 = New SqlDataAdapter(strSQLmc4)
+=======
+        Dim MC4 As SqlClient.SqlDataAdapter
+        Dim strSQLmc4 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("امين الصندوق") & "'", Consum)
+        Dim dsMC4 As New DataSet
+        MC4 = New SqlClient.SqlDataAdapter(strSQLmc4)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC4.Clear()
         MC4.Fill(dsMC4)
         If dsMC4.Tables(0).Rows.Count > 0 Then
@@ -174,10 +242,17 @@ Public Class FormStatisticalStatement
         End If
         MC4.Dispose()
 
+<<<<<<< HEAD
         Dim MC5 As SqlDataAdapter
         Dim strSQLmc5 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("محاسب") & "'", Consum)
         Dim dsMC5 As New DataSet
         MC5 = New SqlDataAdapter(strSQLmc5)
+=======
+        Dim MC5 As SqlClient.SqlDataAdapter
+        Dim strSQLmc5 As New SqlCommand("SELECT mc1  FROM ManagementCommittee WHERE CUser ='" & ModuleGeneral.CUser & "' and mc3 ='" & Trim("محاسب") & "'", Consum)
+        Dim dsMC5 As New DataSet
+        MC5 = New SqlClient.SqlDataAdapter(strSQLmc5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsMC5.Clear()
         MC5.Fill(dsMC5)
         If dsMC5.Tables(0).Rows.Count > 0 Then
@@ -187,10 +262,17 @@ Public Class FormStatisticalStatement
         End If
         MC5.Dispose()
 
+<<<<<<< HEAD
         Dim EM1 As SqlDataAdapter
         Dim strSQLEM1 As New SqlCommand("SELECT COUNT(EMP1)  FROM EMPLOYEES WHERE CUser ='" & ModuleGeneral.CUser & "' and EMP22 ='" & Trim("True") & "'", Consum)
         Dim dsEM1 As New DataSet
         EM1 = New SqlDataAdapter(strSQLEM1)
+=======
+        Dim EM1 As SqlClient.SqlDataAdapter
+        Dim strSQLEM1 As New SqlCommand("SELECT COUNT(EMP1)  FROM EMPLOYEES WHERE CUser ='" & ModuleGeneral.CUser & "' and EMP22 ='" & Trim("True") & "'", Consum)
+        Dim dsEM1 As New DataSet
+        EM1 = New SqlClient.SqlDataAdapter(strSQLEM1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsEM1.Clear()
         EM1.Fill(dsEM1)
         If dsEM1.Tables(0).Rows.Count > 0 Then
@@ -200,10 +282,17 @@ Public Class FormStatisticalStatement
         End If
         EM1.Dispose()
 
+<<<<<<< HEAD
         Dim EM2 As SqlDataAdapter
         Dim strSQLEM2 As New SqlCommand("SELECT COUNT(EMP1)  FROM EMPLOYEES WHERE CUser ='" & ModuleGeneral.CUser & "' and EMP22 ='" & Trim("False") & "'", Consum)
         Dim dsEM2 As New DataSet
         EM2 = New SqlDataAdapter(strSQLEM2)
+=======
+        Dim EM2 As SqlClient.SqlDataAdapter
+        Dim strSQLEM2 As New SqlCommand("SELECT COUNT(EMP1)  FROM EMPLOYEES WHERE CUser ='" & ModuleGeneral.CUser & "' and EMP22 ='" & Trim("False") & "'", Consum)
+        Dim dsEM2 As New DataSet
+        EM2 = New SqlClient.SqlDataAdapter(strSQLEM2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsEM2.Clear()
         EM2.Fill(dsEM2)
         If dsEM2.Tables(0).Rows.Count > 0 Then
@@ -213,10 +302,17 @@ Public Class FormStatisticalStatement
         End If
         EM2.Dispose()
 
+<<<<<<< HEAD
         Dim AP1 As SqlDataAdapter
         Dim strSQLAP1 As New SqlCommand("SELECT AP7, AP8  FROM AssociationProjects WHERE CUser ='" & ModuleGeneral.CUser & "' ", Consum)
         Dim dsAP1 As New DataSet
         AP1 = New SqlDataAdapter(strSQLAP1)
+=======
+        Dim AP1 As SqlClient.SqlDataAdapter
+        Dim strSQLAP1 As New SqlCommand("SELECT AP7, AP8  FROM AssociationProjects WHERE CUser ='" & ModuleGeneral.CUser & "' ", Consum)
+        Dim dsAP1 As New DataSet
+        AP1 = New SqlClient.SqlDataAdapter(strSQLAP1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsAP1.Clear()
         AP1.Fill(dsAP1)
         If dsAP1.Tables(0).Rows.Count > 0 Then
@@ -229,10 +325,17 @@ Public Class FormStatisticalStatement
         End If
         AP1.Dispose()
 
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim strSQL1 As New SqlCommand("SELECT COUNT(IDcust)  FROM AllCustomers WHERE CUser ='" & ModuleGeneral.CUser & "' and cust33 ='" & Trim("True") & "' and Year(convert(date,cust27, 103)) <>'" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strSQL1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim strSQL1 As New SqlCommand("SELECT COUNT(IDcust)  FROM AllCustomers WHERE CUser ='" & ModuleGeneral.CUser & "' and cust33 ='" & Trim("True") & "' and Year(convert(date,cust27, 103)) <>'" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strSQL1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1)
         If ds1.Tables(0).Rows.Count > 0 Then
@@ -241,10 +344,17 @@ Public Class FormStatisticalStatement
             Me.TextNumberOfMembersAtBeginningOfYear.Text = "0"
         End If
         Adp1.Dispose()
+<<<<<<< HEAD
         Dim Adp2 As SqlDataAdapter
         Dim SQL2 As New SqlCommand("SELECT Count(IDcust)  FROM AllCustomers WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,cust27, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim ds2 As New DataSet
         Adp2 = New SqlDataAdapter(SQL2)
+=======
+        Dim Adp2 As SqlClient.SqlDataAdapter
+        Dim SQL2 As New SqlCommand("SELECT Count(IDcust)  FROM AllCustomers WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,cust27, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim ds2 As New DataSet
+        Adp2 = New SqlClient.SqlDataAdapter(SQL2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds2.Clear()
         Adp2.Fill(ds2)
         If ds2.Tables(0).Rows.Count > 0 Then
@@ -253,10 +363,17 @@ Public Class FormStatisticalStatement
             Me.TextNumberOfMembersWhoWereAcceptedDuringYear.Text = "0"
         End If
         Adp2.Dispose()
+<<<<<<< HEAD
         Dim Adp3 As SqlDataAdapter
         Dim SQL3 As New SqlCommand("SELECT Count(IDcust)  FROM AllCustomers WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,cust29, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim ds3 As New DataSet
         Adp3 = New SqlDataAdapter(SQL3)
+=======
+        Dim Adp3 As SqlClient.SqlDataAdapter
+        Dim SQL3 As New SqlCommand("SELECT Count(IDcust)  FROM AllCustomers WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,cust29, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim ds3 As New DataSet
+        Adp3 = New SqlClient.SqlDataAdapter(SQL3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds3.Clear()
         Adp3.Fill(ds3)
         If ds3.Tables(0).Rows.Count > 0 Then
@@ -268,10 +385,17 @@ Public Class FormStatisticalStatement
         Me.TextNumberOfMembersAtEndOfYear.Text = Val(Me.TextNumberOfMembersAtBeginningOfYear.Text) + Val(Me.TextNumberOfMembersWhoWereAcceptedDuringYear.Text) - Val(Me.TextNumberOfWithdrawnMembers.Text)
         Me.TextSharesSubscribedAtBeginningOfYear.EditValue = Val(BANSL) * Val(Me.TextNumberOfMembersAtEndOfYear.Text)
 
+<<<<<<< HEAD
         Dim AS1 As SqlDataAdapter
         Dim SQLAS1 As New SqlCommand("SELECT SUM(OpeningBalance2)  FROM ALLShares WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,TBNK3, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim dsAS1 As New DataSet
         AS1 = New SqlDataAdapter(SQLAS1)
+=======
+        Dim AS1 As SqlClient.SqlDataAdapter
+        Dim SQLAS1 As New SqlCommand("SELECT SUM(OpeningBalance2)  FROM ALLShares WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,TBNK3, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim dsAS1 As New DataSet
+        AS1 = New SqlClient.SqlDataAdapter(SQLAS1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsAS1.Clear()
         AS1.Fill(dsAS1)
         If dsAS1.Tables(0).Rows.Count > 0 Then
@@ -280,10 +404,17 @@ Public Class FormStatisticalStatement
             Me.TextSharesPaidAtBeginningOfYear.EditValue = "0"
         End If
         AS1.Dispose()
+<<<<<<< HEAD
         Dim ME1 As SqlDataAdapter
         Dim SQLME1 As New SqlCommand("SELECT Count(IDME)  FROM Meetings WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,ME3, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim dsME1 As New DataSet
         ME1 = New SqlDataAdapter(SQLME1)
+=======
+        Dim ME1 As SqlClient.SqlDataAdapter
+        Dim SQLME1 As New SqlCommand("SELECT Count(IDME)  FROM Meetings WHERE  CUser='" & ModuleGeneral.CUser & "' and Year(convert(date,ME3, 103)) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim dsME1 As New DataSet
+        ME1 = New SqlClient.SqlDataAdapter(SQLME1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         dsME1.Clear()
         ME1.Fill(dsME1)
         If dsME1.Tables(0).Rows.Count > 0 Then
@@ -295,7 +426,11 @@ Public Class FormStatisticalStatement
         Consum.Close()
 
     End Sub
+<<<<<<< HEAD
     Private Sub FormStatisticalStatement_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FormStatisticalStatement_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             For a As Byte = 0 To 10
                 System.Threading.Thread.Sleep(10)
@@ -303,7 +438,11 @@ Public Class FormStatisticalStatement
                 Me.Opacity = a / 10
             Next
 
+<<<<<<< HEAD
             Me.BackWorker2 = New ComponentModel.BackgroundWorker With {
+=======
+            Me.BackWorker2 = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -363,7 +502,11 @@ Public Class FormStatisticalStatement
                 MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح" & vbCrLf & " تنبيه : قام احد المستخدمين باضافة سجلات عدد " & BS.Count - RowCount, 64 + 524288, " نجاح الحفظ والتغييرات")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             If Click1 = True Then
                 Try
@@ -500,7 +643,11 @@ Public Class FormStatisticalStatement
         On Error Resume Next
         Me.RECORDSLABEL.Text = Me.BS.Position + 1 & " من " & Me.BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -531,14 +678,22 @@ Public Class FormStatisticalStatement
             'Me.TextBox2.Focus()
             Me.ADDBUTTON.Enabled = False
             Me.SAVEBUTTON.Enabled = True
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.addv
+=======
+            Dim Sound As System.IO.Stream = My.Resources.addv
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -556,7 +711,11 @@ Public Class FormStatisticalStatement
         Me.SAVERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -568,10 +727,17 @@ Public Class FormStatisticalStatement
 
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As String = "INSERT INTO StatisticalStatement(  SS1, SS2, SS3, SS4, SS5, SS7, SS6, SS8, SS9, SS10, SS11, SS12, SS13, SS14, SS15, SS16, SS17, SS18, SS19, SS20, SS21, SS22, SS23, SS24, SS25, SS26, SS27, SS28, SS29, SS30, SS31, SS32, USERNAME, CUser, COUser, da, ne) VALUES   (  @SS1, @SS2, @SS3, @SS4, @SS5, @SS7, @SS6, @SS8, @SS9, @SS10, @SS11, @SS12, @SS13, @SS14, @SS15, @SS16, @SS17, @SS18, @SS19, @SS20, @SS21, @SS22, @SS23, @SS24, @SS25, @SS26, @SS27, @SS28, @SS29, @SS30, @SS31, @SS32, @USERNAME, @CUser, @COUser, @da, @ne)"
 
             Dim cmd As New SqlCommand(SQL, Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As String = "INSERT INTO StatisticalStatement(  SS1, SS2, SS3, SS4, SS5, SS7, SS6, SS8, SS9, SS10, SS11, SS12, SS13, SS14, SS15, SS16, SS17, SS18, SS19, SS20, SS21, SS22, SS23, SS24, SS25, SS26, SS27, SS28, SS29, SS30, SS31, SS32, USERNAME, CUser, COUser, da, ne) VALUES   (  @SS1, @SS2, @SS3, @SS4, @SS5, @SS7, @SS6, @SS8, @SS9, @SS10, @SS11, @SS12, @SS13, @SS14, @SS15, @SS16, @SS17, @SS18, @SS19, @SS20, @SS21, @SS22, @SS23, @SS24, @SS25, @SS26, @SS27, @SS28, @SS29, @SS30, @SS31, @SS32, @USERNAME, @CUser, @COUser, @da, @ne)"
+
+            Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With cmd
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -646,12 +812,21 @@ Public Class FormStatisticalStatement
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim strSQL As New SqlCommand("", Consum) With {
                 .CommandText = String.Concat(New String() {"SELECT   IDSS, SS1, SS2, SS3, SS4, SS5, SS7, SS6, SS8, SS9, SS10, SS11, SS12, SS13, SS14, SS15, SS16, SS17, SS18, SS19, SS20, SS21, SS22, SS23, SS24, SS25, SS26, SS27, SS28, SS29, SS30, SS31, SS32, USERNAME, CUser, COUser, da, ne FROM StatisticalStatement  WHERE  CUser='", ModuleGeneral.CUser, "' and Year(SS1) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY IDSS"})
             }
 
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strSQL As New SqlClient.SqlCommand("", Consum) With {
+                .CommandText = String.Concat(New String() {"SELECT   IDSS, SS1, SS2, SS3, SS4, SS5, SS7, SS6, SS8, SS9, SS10, SS11, SS12, SS13, SS14, SS15, SS16, SS17, SS18, SS19, SS20, SS21, SS22, SS23, SS24, SS25, SS26, SS27, SS28, SS29, SS30, SS31, SS32, USERNAME, CUser, COUser, da, ne FROM StatisticalStatement  WHERE  CUser='", ModuleGeneral.CUser, "' and Year(SS1) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY IDSS"})
+            }
+
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
             Me.myds = New DataSet
             Consum.Open()
@@ -728,9 +903,15 @@ Public Class FormStatisticalStatement
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update StatisticalStatement SET  SS1 = @SS1, SS2 = @SS2, SS3 = @SS3, SS4 = @SS4, SS5 = @SS5, SS6 = @SS6, SS7 = @SS7, SS8 = @SS8, SS9 = @SS9, SS10 = @SS10,SS11 = @SS11, SS12 = @SS12, SS13 = @SS13, SS14 = @SS14, SS15 = @SS15, SS16 = @SS16, SS17 = @SS17, SS18 = @SS18, SS19 = @SS19, SS20 = @SS20,SS21 = @SS21, SS22 = @SS22, SS23 = @SS23, SS24 = @SS24, SS25 = @SS25, SS26 = @SS26, SS27 = @SS27, SS28 = @SS28, SS29 = @SS29, SS30 = @SS30, SS31 = @SS31, SS32 = @SS32, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDSS = @IDSS", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update StatisticalStatement SET  SS1 = @SS1, SS2 = @SS2, SS3 = @SS3, SS4 = @SS4, SS5 = @SS5, SS6 = @SS6, SS7 = @SS7, SS8 = @SS8, SS9 = @SS9, SS10 = @SS10,SS11 = @SS11, SS12 = @SS12, SS13 = @SS13, SS14 = @SS14, SS15 = @SS15, SS16 = @SS16, SS17 = @SS17, SS18 = @SS18, SS19 = @SS19, SS20 = @SS20,SS21 = @SS21, SS22 = @SS22, SS23 = @SS23, SS24 = @SS24, SS25 = @SS25, SS26 = @SS26, SS27 = @SS27, SS28 = @SS28, SS29 = @SS29, SS30 = @SS30, SS31 = @SS31, SS32 = @SS32, USERNAME = @USERNAME, Auditor = @Auditor, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne WHERE IDSS = @IDSS", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -803,7 +984,11 @@ Public Class FormStatisticalStatement
 
 
 
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -825,7 +1010,11 @@ Public Class FormStatisticalStatement
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -833,13 +1022,21 @@ Public Class FormStatisticalStatement
         Click2 = True
     End Sub
 
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.CancelEdit()
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -856,7 +1053,11 @@ Public Class FormStatisticalStatement
         Dim ds As New DataSet
         Dim str As New SqlCommand("SELECT * FROM StatisticalStatement   WHERE  CUser='" & ModuleGeneral.CUser & "' and SS7 ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  ", Consum)
         Dim builder19 As New SqlCommandBuilder(SqlDataAdapter1)
+<<<<<<< HEAD
         SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+        SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         SqlDataAdapter1.Fill(ds, "StatisticalStatement")
         rpt.SetDataSource(ds)

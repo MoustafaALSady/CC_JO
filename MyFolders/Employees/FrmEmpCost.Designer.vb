@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+=======
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 Partial Class FrmEmpCost
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
+<<<<<<< HEAD
     <System.Diagnostics.DebuggerNonUserCode()>
+=======
+    <System.Diagnostics.DebuggerNonUserCode()> _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +28,33 @@ Partial Class FrmEmpCost
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
+<<<<<<< HEAD
     <System.Diagnostics.DebuggerStepThrough()>
+=======
+    <System.Diagnostics.DebuggerStepThrough()> _
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Sub InitializeComponent()
         Dim Panel11 As System.Windows.Forms.Panel
         Dim Panel10 As System.Windows.Forms.Panel
         Dim Panel5 As System.Windows.Forms.Panel
+<<<<<<< HEAD
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpCost))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+=======
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpCost))
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.Check_OptionsTransforAccounts = New System.Windows.Forms.CheckBox()
         Me.ButtonTransferofAccounts = New System.Windows.Forms.Button()
@@ -100,6 +124,18 @@ Partial Class FrmEmpCost
         Me.TextTimeAdd = New System.Windows.Forms.TextBox()
         Me.TEXTReferenceName = New System.Windows.Forms.TextBox()
         Me.TextreviewTime = New System.Windows.Forms.TextBox()
+<<<<<<< HEAD
+=======
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CSDT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CST1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CSDT6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateMovementHistory = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -146,6 +182,7 @@ Partial Class FrmEmpCost
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+<<<<<<< HEAD
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CSDT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CSDT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -155,6 +192,8 @@ Partial Class FrmEmpCost
         Me.CST1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CSDT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CSDT6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TEXTEmployeeCode = New System.Windows.Forms.Label()
         Me.TextMovementSymbol = New DevExpress.XtraEditors.TextEdit()
@@ -198,6 +237,10 @@ Partial Class FrmEmpCost
         Me.Panel13.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel14.SuspendLayout()
+<<<<<<< HEAD
+=======
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +250,10 @@ Partial Class FrmEmpCost
         Me.TabPage1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel6.SuspendLayout()
+<<<<<<< HEAD
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.SuspendLayout()
         CType(Me.TextMovementSymbol.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TEXTID.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1218,6 +1264,127 @@ Partial Class FrmEmpCost
         Me.TextreviewTime.TabIndex = 754
         Me.TextreviewTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+<<<<<<< HEAD
+=======
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Honeydew
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Maroon
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CSDT1, Me.CSDT2, Me.CSDT3, Me.CSDT4, Me.CSDT5, Me.CST1, Me.CSDT, Me.CSDT6})
+        Me.DataGridView1.GridColor = System.Drawing.Color.Blue
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 25
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.Honeydew
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle16
+        Me.DataGridView1.Size = New System.Drawing.Size(742, 208)
+        Me.DataGridView1.TabIndex = 459
+        '
+        'CSDT1
+        '
+        Me.CSDT1.DataPropertyName = "CSDT1"
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.Pink
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.Format = "N0"
+        DataGridViewCellStyle10.NullValue = "0"
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CSDT1.DefaultCellStyle = DataGridViewCellStyle10
+        Me.CSDT1.FillWeight = 15.0!
+        Me.CSDT1.HeaderText = "م"
+        Me.CSDT1.Name = "CSDT1"
+        Me.CSDT1.ReadOnly = True
+        '
+        'CSDT2
+        '
+        Me.CSDT2.DataPropertyName = "CSDT2"
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Pink
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.Format = "N3"
+        DataGridViewCellStyle11.NullValue = "0.000"
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CSDT2.DefaultCellStyle = DataGridViewCellStyle11
+        Me.CSDT2.FillWeight = 30.0!
+        Me.CSDT2.HeaderText = "مدين"
+        Me.CSDT2.Name = "CSDT2"
+        '
+        'CSDT3
+        '
+        Me.CSDT3.DataPropertyName = "CSDT3"
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle12.Format = "N3"
+        DataGridViewCellStyle12.NullValue = "0.000"
+        Me.CSDT3.DefaultCellStyle = DataGridViewCellStyle12
+        Me.CSDT3.FillWeight = 30.0!
+        Me.CSDT3.HeaderText = "دائن"
+        Me.CSDT3.Name = "CSDT3"
+        '
+        'CSDT4
+        '
+        Me.CSDT4.DataPropertyName = "CSDT4"
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.Pink
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CSDT4.DefaultCellStyle = DataGridViewCellStyle13
+        Me.CSDT4.FillWeight = 50.0!
+        Me.CSDT4.HeaderText = "البيان"
+        Me.CSDT4.Name = "CSDT4"
+        '
+        'CSDT5
+        '
+        Me.CSDT5.DataPropertyName = "CSDT5"
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle14.Format = "d"
+        DataGridViewCellStyle14.NullValue = Nothing
+        Me.CSDT5.DefaultCellStyle = DataGridViewCellStyle14
+        Me.CSDT5.FillWeight = 30.0!
+        Me.CSDT5.HeaderText = "التاريخ"
+        Me.CSDT5.Name = "CSDT5"
+        Me.CSDT5.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'CST1
+        '
+        Me.CST1.DataPropertyName = "CST1"
+        DataGridViewCellStyle15.NullValue = Nothing
+        Me.CST1.DefaultCellStyle = DataGridViewCellStyle15
+        Me.CST1.HeaderText = "CST1"
+        Me.CST1.Name = "CST1"
+        Me.CST1.Visible = False
+        '
+        'CSDT
+        '
+        Me.CSDT.DataPropertyName = "CSDT"
+        Me.CSDT.HeaderText = "CSDT"
+        Me.CSDT.Name = "CSDT"
+        Me.CSDT.Visible = False
+        '
+        'CSDT6
+        '
+        Me.CSDT6.DataPropertyName = "CSDT6"
+        Me.CSDT6.HeaderText = "CSDT6"
+        Me.CSDT6.Name = "CSDT6"
+        Me.CSDT6.Visible = False
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -1241,7 +1408,11 @@ Partial Class FrmEmpCost
         Me.DateMovementHistory.CustomFormat = "dd/MM/yyyy"
         Me.DateMovementHistory.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.DateMovementHistory.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+<<<<<<< HEAD
         Me.DateMovementHistory.Location = New System.Drawing.Point(3, 8)
+=======
+        Me.DateMovementHistory.Location = New System.Drawing.Point(3, 7)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.DateMovementHistory.Name = "DateMovementHistory"
         Me.DateMovementHistory.RightToLeftLayout = True
         Me.DateMovementHistory.Size = New System.Drawing.Size(115, 22)
@@ -1295,7 +1466,11 @@ Partial Class FrmEmpCost
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.Label3.Location = New System.Drawing.Point(480, 63)
+=======
+        Me.Label3.Location = New System.Drawing.Point(480, 64)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(34, 15)
         Me.Label3.TabIndex = 462
@@ -1762,7 +1937,11 @@ Partial Class FrmEmpCost
         Me.TEXTEmployeeName.Cursor = System.Windows.Forms.Cursors.Default
         Me.TEXTEmployeeName.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.TEXTEmployeeName.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
         Me.TEXTEmployeeName.Location = New System.Drawing.Point(119, 32)
+=======
+        Me.TEXTEmployeeName.Location = New System.Drawing.Point(119, 33)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTEmployeeName.Name = "TEXTEmployeeName"
         Me.TEXTEmployeeName.Size = New System.Drawing.Size(316, 23)
         Me.TEXTEmployeeName.TabIndex = 462
@@ -1813,11 +1992,19 @@ Partial Class FrmEmpCost
         Me.TEXTStatement.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TEXTStatement.Cursor = System.Windows.Forms.Cursors.Default
         Me.TEXTStatement.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
+<<<<<<< HEAD
         Me.TEXTStatement.Location = New System.Drawing.Point(3, 58)
         Me.TEXTStatement.Name = "TEXTStatement"
         Me.TEXTStatement.Size = New System.Drawing.Size(432, 22)
         Me.TEXTStatement.TabIndex = 5
         Me.TEXTStatement.Text = "0"
+=======
+        Me.TEXTStatement.Location = New System.Drawing.Point(3, 59)
+        Me.TEXTStatement.Name = "TEXTStatement"
+        Me.TEXTStatement.Size = New System.Drawing.Size(432, 22)
+        Me.TEXTStatement.TabIndex = 5
+        Me.TEXTStatement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         '
         'TabControl1
         '
@@ -1861,7 +2048,11 @@ Partial Class FrmEmpCost
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label21)
         Me.Panel3.Controls.Add(Me.TEXTMonths)
+<<<<<<< HEAD
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
+=======
+        Me.Panel3.Location = New System.Drawing.Point(3, 9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(230, 88)
         Me.Panel3.TabIndex = 921
@@ -1870,6 +2061,7 @@ Partial Class FrmEmpCost
         '
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel6.Controls.Add(Me.DataGridView1)
+<<<<<<< HEAD
         Me.Panel6.Location = New System.Drawing.Point(3, 95)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(751, 222)
@@ -1963,6 +2155,13 @@ Partial Class FrmEmpCost
         Me.CSDT6.Name = "CSDT6"
         Me.CSDT6.Visible = False
         '
+=======
+        Me.Panel6.Location = New System.Drawing.Point(3, 102)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(751, 216)
+        Me.Panel6.TabIndex = 922
+        '
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
@@ -1977,7 +2176,11 @@ Partial Class FrmEmpCost
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.TEXTEmployeeName)
         Me.Panel2.Controls.Add(Me.TEXTID1)
+<<<<<<< HEAD
         Me.Panel2.Location = New System.Drawing.Point(234, 3)
+=======
+        Me.Panel2.Location = New System.Drawing.Point(234, 9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(520, 88)
         Me.Panel2.TabIndex = 921
@@ -1988,7 +2191,11 @@ Partial Class FrmEmpCost
         Me.TEXTEmployeeCode.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TEXTEmployeeCode.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold)
         Me.TEXTEmployeeCode.ForeColor = System.Drawing.Color.White
+<<<<<<< HEAD
         Me.TEXTEmployeeCode.Location = New System.Drawing.Point(3, 32)
+=======
+        Me.TEXTEmployeeCode.Location = New System.Drawing.Point(3, 33)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTEmployeeCode.Name = "TEXTEmployeeCode"
         Me.TEXTEmployeeCode.Size = New System.Drawing.Size(115, 23)
         Me.TEXTEmployeeCode.TabIndex = 1005
@@ -2237,6 +2444,10 @@ Partial Class FrmEmpCost
         Me.GroupBox3.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
+<<<<<<< HEAD
+=======
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2249,7 +2460,10 @@ Partial Class FrmEmpCost
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel6.ResumeLayout(False)
+<<<<<<< HEAD
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.TextMovementSymbol.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2395,8 +2609,11 @@ Partial Class FrmEmpCost
     Private WithEvents TextMovementSymbol As DevExpress.XtraEditors.TextEdit
     Private WithEvents TEXTID1 As TextBox
     Public WithEvents load1 As Button
+<<<<<<< HEAD
     Friend WithEvents TEXTEmployeeCode As Label
     Friend WithEvents DataGridView1 As DataGridView
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Friend WithEvents CSDT1 As DataGridViewTextBoxColumn
     Friend WithEvents CSDT2 As DataGridViewTextBoxColumn
     Friend WithEvents CSDT3 As DataGridViewTextBoxColumn
@@ -2405,4 +2622,9 @@ Partial Class FrmEmpCost
     Friend WithEvents CST1 As DataGridViewTextBoxColumn
     Friend WithEvents CSDT As DataGridViewTextBoxColumn
     Friend WithEvents CSDT6 As DataGridViewTextBoxColumn
+<<<<<<< HEAD
+=======
+    Private WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TEXTEmployeeCode As Label
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 End Class

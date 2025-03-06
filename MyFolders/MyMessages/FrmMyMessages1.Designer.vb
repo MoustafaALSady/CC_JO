@@ -3225,7 +3225,10 @@ Partial Class FrmMyMessages1
         Me.Controls.Add(Me.RibbonControl1)
         Me.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(178, Byte))
         Me.IconOptions.Image = Global.CC_JO.My.Resources.Resources.logCO12
+<<<<<<< HEAD
         Me.MinimumSize = New System.Drawing.Size(1000, 550)
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Name = "FrmMyMessages1"
         Me.Ribbon = Me.RibbonControl1
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes

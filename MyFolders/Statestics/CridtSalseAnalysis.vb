@@ -1,8 +1,13 @@
 Imports System.Data.SqlClient
 Public Class CridtSalseAnalysis
     Dim VTotal, VOther, VDiscount, VNet As Double
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
     Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+    Private Sub MTextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             If Not IsDate(MTextBox1.Text) Then
                 MsgBox(" «—ÌŒ €Ì— ’«·Œ")
@@ -17,7 +22,11 @@ Public Class CridtSalseAnalysis
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
+=======
+    Private Sub MTextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Asc(e.KeyChar) = 13 Then
             FillGrid()
         End If
@@ -35,15 +44,24 @@ Public Class CridtSalseAnalysis
         Dim ds As DataSet
         ds = New DataSet
         Dgrd.Rows.Clear()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "SELECT SLS2, SLS3, SLS5, SLS6, SLS8, SLS11,SLS13,SLS14, SLS16 FROM SALES  WHERE deleted ='" & False & "' and type_cash ='" & F & "' and CUser='" & CUser & "'  ORDER BY SLS1"
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         adp = New SqlDataAdapter(strSQL)
         Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+        adp = New SqlClient.SqlDataAdapter(strSQL)
+        Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         adp.Fill(ds, "SALES")
         If Me.BindingContext(ds, "SALES").Count = 0 Then
             MsgBox("·« ÌÊÃœ »Ì«‰«  ·⁄—÷Â«", 64 + 524288, "⁄—÷ «·»Ì«‰« ")
@@ -91,7 +109,11 @@ Public Class CridtSalseAnalysis
         TextVNet.Text = VNet
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub CmdExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dgrd.Rows.Clear()
         TextVTotal.Clear()
         TextVOther.Clear()
@@ -100,7 +122,11 @@ Public Class CridtSalseAnalysis
         MTextBox1.Focus()
         Me.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub CridtSalseAnalysis_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub CridtSalseAnalysis_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10

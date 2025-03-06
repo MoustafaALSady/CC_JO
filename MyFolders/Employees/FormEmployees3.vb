@@ -1,11 +1,18 @@
 ﻿
+<<<<<<< HEAD
 'The main objective Of the project Is To calculate overtime For employees. This Is the complete code
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FormEmployees3
+<<<<<<< HEAD
     Dim SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Dim WithEvents BS As New BindingSource
     Dim ds As New DataSet
 
@@ -17,7 +24,11 @@ Public Class FormEmployees3
     Dim RowCount As Integer = 0
     Private ReadOnly OverTimeH As DateTime
 
+<<<<<<< HEAD
     Private Sub FrmEmployees3_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyUp
+=======
+    Private Sub FrmEmployees3_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If CheckLogReview.Checked = True Then
                 Me.KeyPreview = False
@@ -55,7 +66,11 @@ Public Class FormEmployees3
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmEmployees3_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmEmployees3_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -64,7 +79,11 @@ Public Class FormEmployees3
             Me.Opacity = a / 10
         Next
 
+<<<<<<< HEAD
         ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -93,7 +112,11 @@ Public Class FormEmployees3
         Me.SAVEBUTTON.Enabled = False
         Me.BUTTONCANCEL.Enabled = True
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         RecordCount()
     End Sub
@@ -101,14 +124,22 @@ Public Class FormEmployees3
         Try
 
 1:
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
             ds.EnforceConstraints = False
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
             Consum.Open()
+<<<<<<< HEAD
             Dim strSQL As New SqlCommand("", Consum)
+=======
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With strSQL
                 .CommandText = "SELECT EWRK1, EWRK2, EWRK3, DateEwrk, EWRK4, EWRK5, EWRK6, EWRK7, EWRK8, EWRK9, EWRK10, EWRK11, USERNAME, Auditor, Cuser, COUSER, da, ne, da1, ne1 FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'  ORDER BY EWRK1"
                 If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -188,9 +219,15 @@ Public Class FormEmployees3
     End Sub
     Private Sub SAVERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim N As Double
             Dim cmd1 As New SqlCommand("SELECT MAX(EWRK1) FROM EXTRAWORK", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim N As Double
+            Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(EWRK1) FROM EXTRAWORK", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim resualt As Object = cmd1.ExecuteScalar()
@@ -201,7 +238,11 @@ Public Class FormEmployees3
             End If
             Consum.Close()
             Dim SQL As String = "INSERT INTO EXTRAWORK( EWRK2, EWRK3, DateEwrk, EWRK4, EWRK5, EWRK6, EWRK7, EWRK8, EWRK9, EWRK10, EWRK11, USERNAME, Cuser, COUSER, da, ne) VALUES     ( @EWRK2, @EWRK3, @DateEwrk, @EWRK4, @EWRK5, @EWRK6, @EWRK7, @EWRK8, @EWRK9, @EWRK10, @EWRK11, @USERNAME, @Cuser, @COUSER, @da, @ne)"
+<<<<<<< HEAD
             Dim CMD As New SqlCommand
+=======
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -209,8 +250,13 @@ Public Class FormEmployees3
                 .Parameters.Add("@EWRK2", SqlDbType.NVarChar).Value = Me.ComboEmployeeName.Text
                 .Parameters.Add("@EWRK3", SqlDbType.NVarChar).Value = Me.ComboMonths.Text
                 .Parameters.Add("@DateEwrk", SqlDbType.Date).Value = Me.DateMovementHistory.Value.ToString
+<<<<<<< HEAD
                 .Parameters.Add("@EWRK4", SqlDbType.DateTime).Value = Me.TimeAttendance.EditValue
                 .Parameters.Add("@EWRK5", SqlDbType.DateTime).Value = Me.TimeToLeave.EditValue
+=======
+                .Parameters.Add("@EWRK4", SqlDbType.DateTime).Value = Me.TimeAttendance.Value
+                .Parameters.Add("@EWRK5", SqlDbType.DateTime).Value = Me.TimeToLeave.Value
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .Parameters.Add("@EWRK6", SqlDbType.NVarChar).Value = Me.TEXTBasicWorkingHours.EditValue
                 .Parameters.Add("@EWRK7", SqlDbType.NVarChar).Value = Me.TEXTOvertimeHours.Text
                 .Parameters.Add("@EWRK8", SqlDbType.NVarChar).Value = Me.TEXTEmployeeCode.Text
@@ -234,9 +280,15 @@ Public Class FormEmployees3
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update EXTRAWORK SET  EWRK2 = @EWRK2, EWRK3 = @EWRK3, DateEwrk = @DateEwrk, EWRK4 = @EWRK4, EWRK5 = @EWRK5, EWRK6 = @EWRK6, EWRK7 = @EWRK7, EWRK8 = @EWRK8, EWRK9 = @EWRK9, EWRK10 = @EWRK10, EWRK11 = @EWRK11, USERNAME = @USERNAME, Auditor = @Auditor, Cuser = @Cuser, COUSER = @COUSER, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE EWRK1 = @EWRK1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlCommand(" Update EXTRAWORK SET  EWRK2 = @EWRK2, EWRK3 = @EWRK3, DateEwrk = @DateEwrk, EWRK4 = @EWRK4, EWRK5 = @EWRK5, EWRK6 = @EWRK6, EWRK7 = @EWRK7, EWRK8 = @EWRK8, EWRK9 = @EWRK9, EWRK10 = @EWRK10, EWRK11 = @EWRK11, USERNAME = @USERNAME, Auditor = @Auditor, Cuser = @Cuser, COUSER = @COUSER, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE EWRK1 = @EWRK1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -247,8 +299,13 @@ Public Class FormEmployees3
                 .Parameters.Add("@EWRK2", SqlDbType.NVarChar).Value = Me.ComboEmployeeName.Text
                 .Parameters.Add("@EWRK3", SqlDbType.NVarChar).Value = Me.ComboMonths.Text
                 .Parameters.Add("@DateEwrk", SqlDbType.Date).Value = Me.DateMovementHistory.Value.ToString
+<<<<<<< HEAD
                 .Parameters.Add("@EWRK4", SqlDbType.DateTime).Value = Me.TimeAttendance.EditValue
                 .Parameters.Add("@EWRK5", SqlDbType.DateTime).Value = Me.TimeToLeave.EditValue
+=======
+                .Parameters.Add("@EWRK4", SqlDbType.DateTime).Value = Me.TimeAttendance.Value
+                .Parameters.Add("@EWRK5", SqlDbType.DateTime).Value = Me.TimeToLeave.Value
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .Parameters.Add("@EWRK6", SqlDbType.NVarChar).Value = Me.TEXTBasicWorkingHours.EditValue
                 .Parameters.Add("@EWRK7", SqlDbType.NVarChar).Value = Me.TEXTOvertimeHours.Text
                 .Parameters.Add("@EWRK8", SqlDbType.NVarChar).Value = Me.TEXTEmployeeCode.Text
@@ -341,7 +398,11 @@ Public Class FormEmployees3
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
             Me.SAVEBUTTON.Enabled = False
@@ -372,6 +433,7 @@ Public Class FormEmployees3
         Me.InternalAuditorERBUTTON.Enabled = InternalAuditor
         Me.ButtonCancellationAuditingAndACheckingAccounts.Enabled = InternalAuditor
     End Sub
+<<<<<<< HEAD
     Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.Click
         On Error Resume Next
         Me.ComboEmployeeName1.Enabled = True
@@ -381,6 +443,17 @@ Public Class FormEmployees3
         Me.ComboEmployeeName1.Enabled = False
     End Sub
     Private Sub ComboBox1_KeyDown(ByVal sender As System.Object, ByVal e As KeyEventArgs) Handles ComboEmployeeName.KeyDown, TEXTUserName.KeyDown, TEXTReferenceName.KeyDown, TEXTReviewDate.KeyDown, ComboMonths.KeyDown
+=======
+    Private Sub RadioButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton1.Click
+        On Error Resume Next
+        Me.ComboEmployeeName1.Enabled = True
+    End Sub
+    Private Sub RadioButton2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles RadioButton2.Click
+        On Error Resume Next
+        Me.ComboEmployeeName1.Enabled = False
+    End Sub
+    Private Sub ComboBox1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles ComboEmployeeName.KeyDown, TEXTUserName.KeyDown, TEXTReferenceName.KeyDown, TEXTReviewDate.KeyDown, ComboMonths.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -398,10 +471,17 @@ Public Class FormEmployees3
     End Sub
     Private Sub MAXRECORD()
         On Error Resume Next
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim V As Integer
         Dim SQL As New SqlCommand("SELECT MAX(EWRK1) FROM EXTRAWORK", Consum)
         Dim CMD As New SqlCommand
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim V As Integer
+        Dim SQL As New SqlCommand("SELECT MAX(EWRK1) FROM EXTRAWORK", Consum)
+        Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With CMD
             .CommandType = CommandType.Text
             .Connection = Consum
@@ -418,6 +498,7 @@ Public Class FormEmployees3
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DateTimePicker2_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTBasicWorkingHours.EditValueChanged, TimeAttendance.EditValueChanged, TimeToLeave.EditValueChanged
         Try
             Dim F As Double
@@ -433,6 +514,17 @@ Public Class FormEmployees3
 
 
     Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles InternalAuditorERBUTTON.Click
+=======
+    Private Sub DateTimePicker2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TimeToLeave.TextChanged, TimeAttendance.TextChanged, TEXTBasicWorkingHours.EditValueChanged
+        On Error Resume Next
+        Dim F As Double
+        F = DateDiff(DateInterval.Minute, Me.TimeAttendance.Value, Me.TimeToLeave.Value) / 60
+        Me.TEXTOvertimeHours.EditValue = Format(F - Val(Me.TEXTBasicWorkingHours.EditValue), "0.00")
+    End Sub
+
+
+    Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InternalAuditorERBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -464,7 +556,11 @@ Public Class FormEmployees3
         UPDATERECORD()
         BS.EndEdit()
         RowCount = BS.Count
+<<<<<<< HEAD
         SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -473,7 +569,11 @@ Public Class FormEmployees3
         Insert_Actions(Me.TEXT1.Text, "المراجع", Me.Text)
         BS.Position = P
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+=======
+    Private Sub ButtonXP3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -500,7 +600,11 @@ Public Class FormEmployees3
         UPDATERECORD()
         BS.EndEdit()
         RowCount = BS.Count
+<<<<<<< HEAD
         SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -510,6 +614,7 @@ Public Class FormEmployees3
         MsgBox("تمت عملية إلغاءالمراجعة بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
     End Sub
 
+<<<<<<< HEAD
     Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
         AutoComplete(ComboEmployeeName, e, )
     End Sub
@@ -517,6 +622,15 @@ Public Class FormEmployees3
         AutoComplete(ComboEmployeeName1, e, )
     End Sub
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboEmployeeName, e, )
+    End Sub
+    Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboEmployeeName1, e, )
+    End Sub
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -543,7 +657,11 @@ Public Class FormEmployees3
         UPDATERECORD()
         BS.EndEdit()
         RowCount = BS.Count
+<<<<<<< HEAD
         SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -552,7 +670,11 @@ Public Class FormEmployees3
         Insert_Actions(Me.TEXT1.Text, "تعديل", Me.Text)
         Me.SAVEBUTTON.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -576,7 +698,11 @@ Public Class FormEmployees3
         SAVERECORD()
         BS.EndEdit()
         RowCount = BS.Count
+<<<<<<< HEAD
         SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -587,38 +713,66 @@ Public Class FormEmployees3
         Insert_Actions(Me.TEXT1.Text, "حفظ", Me.Text)
 
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.CancelEdit()
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Count - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position + 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = BS.Position - 1
         RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         BS.Position = 0
         RecordCount()
     End Sub
     Private Function SumAmountEMP() As Double
         Try
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
             Dim strsql As New SqlCommand("SELECT Sum(EWRK7) AS SUMSUBTOTALS  FROM EXTRAWORK WHERE EWRK8 = '" & Me.TEXTEmployeeCode.Text & "'" & " ", Consum)
             Dim ds As New DataSet
             Adp = New SqlDataAdapter(strsql)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim strsql As New SqlCommand("SELECT Sum(EWRK7) AS SUMSUBTOTALS  FROM EXTRAWORK WHERE EWRK8 = '" & Me.TEXTEmployeeCode.Text & "'" & " ", Consum)
+            Dim ds As New DataSet
+            Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp.Fill(ds)
             If ds.Tables(0).Rows.Count > 0 Then
@@ -636,8 +790,13 @@ Public Class FormEmployees3
     End Function
     Private Function SumExtraValuePercentage() As Double
         Try
+<<<<<<< HEAD
             Dim Adp As SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Adp As SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strsql As New SqlCommand("SELECT SLY24  FROM SALARIES WHERE SLYCod = '" & Me.TEXTEmployeeCode.Text & "' ORDER BY SLY26 DESC ", Consum)
 
             'Dim query As String = "SELECT [First Name], RunningSpeed FROM Trainee ORDER BY RunningSpeed DESC"
@@ -645,7 +804,11 @@ Public Class FormEmployees3
 
 
             Dim ds As New DataSet
+<<<<<<< HEAD
             Adp = New SqlDataAdapter(strsql)
+=======
+            Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp.Fill(ds)
             If ds.Tables(0).Rows.Count > 0 Then
@@ -666,9 +829,15 @@ Public Class FormEmployees3
 
     Private Sub UPDATEALLCUSTOMERS2()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim SQL As New SqlCommand(" Update EMPLOYEES SET  EMP23 = @EMP23  WHERE EMP1 = @EMP1", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim SQL As New SqlClient.SqlCommand(" Update EMPLOYEES SET  EMP23 = @EMP23  WHERE EMP1 = @EMP1", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -688,7 +857,11 @@ Public Class FormEmployees3
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -716,12 +889,21 @@ Public Class FormEmployees3
                 ComboEmployeeName.Focus()
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
             Dim str As New SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK3 like '" & Me.ComboMonths1.Text & "' AND EWRK2 like '" & ComboEmployeeName1.Text & "'", Consum)
             Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
+            Dim ds As New DataSet
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK3 like '" & Me.ComboMonths1.Text & "' AND EWRK2 like '" & ComboEmployeeName1.Text & "'", Consum)
+            Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "EXTRAWORK")
             rpt.SetDataSource(ds)
@@ -750,9 +932,15 @@ Public Class FormEmployees3
             End If
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK3 like '" & Me.ComboMonths1.Text & "'", Consum)
             Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK3 like '" & Me.ComboMonths1.Text & "'", Consum)
+            Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "EXTRAWORK")
             rpt.SetDataSource(ds)
@@ -781,9 +969,15 @@ Public Class FormEmployees3
             End If
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK11 ='" & False & "'", Consum)
             Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM EXTRAWORK   WHERE  CUser='" & CUser & "' and Year(DateEwrk) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and EWRK11 ='" & False & "'", Consum)
+            Dim builder24 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "EXTRAWORK")
             rpt.SetDataSource(ds)
@@ -807,7 +1001,11 @@ Public Class FormEmployees3
 
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If LockDelete = False Then
             MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
@@ -821,7 +1019,11 @@ Public Class FormEmployees3
         FrmEmployees3_Load(sender, e)
         Insert_Actions(Me.TEXT1.Text.Trim, "حذف", Me.Text)
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -845,8 +1047,13 @@ Public Class FormEmployees3
         MAXRECORD()
         Me.DateMovementHistory.Text = MaxDate.ToString("yyyy-MM-dd")
         Me.TEXTBasicWorkingHours.EditValue = "8.00"
+<<<<<<< HEAD
         Me.TimeAttendance.EditValue = "08:00  AM"
         Me.TimeToLeave.EditValue = "04:00  PM"
+=======
+        Me.TimeAttendance.Value = "08:00  AM"
+        Me.TimeToLeave.Value = "04:00  PM"
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.TEXTUserName.Text = USERNAME
         Me.TEXTReferenceName.Text = CUser
         Me.TextDefinitionDirectorate.Text = COUser
@@ -894,6 +1101,7 @@ Public Class FormEmployees3
             Me.Panel2.Enabled = True
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ComboEmployeeName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles ComboEmployeeName.SelectedIndexChanged
         Dim Adp As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
@@ -901,6 +1109,15 @@ Public Class FormEmployees3
         Dim strsql As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboEmployeeName.Text & "'", Consum)
         Dim ds As New DataSet
         Adp = New SqlDataAdapter(strsql)
+=======
+    Private Sub ComboEmployeeName_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboEmployeeName.SelectedIndexChanged
+        Dim Adp As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsql As New SqlCommand("SELECT EMP1  FROM EMPLOYEES WHERE EMP2 ='" & Me.ComboEmployeeName.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp = New SqlClient.SqlDataAdapter(strsql)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Adp.Fill(ds)
         If ds.Tables(0).Rows.Count > 0 Then
@@ -913,7 +1130,11 @@ Public Class FormEmployees3
         Consum.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub ButtonCUSTOMER1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonTransferToEmployee.Click
+=======
+    Private Sub ButtonCUSTOMER1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonTransferToEmployee.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -929,7 +1150,11 @@ Public Class FormEmployees3
             UPDATEALLCUSTOMERS2()
             Me.CheckTransferAccounts.Checked = True
             UPDATERECORD()
+<<<<<<< HEAD
             SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }

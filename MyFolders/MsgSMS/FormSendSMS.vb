@@ -7,7 +7,11 @@ Imports GsmComm.PduConverter
 
 Public Class FormSendSMS
     Private Shared comm_Port As Short = 0
+<<<<<<< HEAD
     Private Shared ReadOnly comm_BaudRate As Short = 0
+=======
+    Private Shared comm_BaudRate As Short = 0
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private Shared comm_TimeOut As Short = 0
     Private comm As GsmCommMain
 
@@ -23,7 +27,11 @@ Public Class FormSendSMS
     Public Delegate Sub CallLoadDataBase()
     Public Delegate Sub PictureBox2Callback()
     Dim RowCount As Short = 0
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Dim ds1 As New DataSet
     Dim ds2 As New DataSet
@@ -107,24 +115,40 @@ Public Class FormSendSMS
         Try
 1:
             'On Error Resume Next
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 If Me.RB1.Checked = True Then
                     .CommandText = "SELECT  cust13 FROM AllCustomers  WHERE  CUser='" & CUser & "' and cust33 ='" & True & "'"
+<<<<<<< HEAD
                     Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+                    Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Me.ds1.Clear()
                     Me.ds1 = New DataSet
                     Me.SqlDataAdapter1.Fill(Me.ds1, "AllCustomers")
                 ElseIf Me.RB2.Checked = True Then
                     .CommandText = "SELECT  cust13 FROM AllCustomers  WHERE  CUser='" & CUser & "' and cust33 ='" & False & "'"
+<<<<<<< HEAD
                     Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+                    Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Me.ds2.Clear()
                     Me.ds2 = New DataSet
                     Me.SqlDataAdapter1.Fill(Me.ds2, "AllCustomers")
                 ElseIf Me.RB3.Checked = True Then
                     .CommandText = "SELECT  EMP4 FROM EMPLOYEES  WHERE  CUser='" & CUser & "'"
+<<<<<<< HEAD
                     Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+                    Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Me.ds3.Clear()
                     Me.ds3 = New DataSet
                     Me.SqlDataAdapter1.Fill(Me.ds3, "EMPLOYEES")
@@ -187,7 +211,11 @@ Public Class FormSendSMS
         Consum.Close()
 
     End Sub
+<<<<<<< HEAD
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         Me.tabPage1.BackgroundImage = img
@@ -196,7 +224,11 @@ Public Class FormSendSMS
         ButPortDisconnect.Enabled = False
 
 
+<<<<<<< HEAD
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -209,8 +241,13 @@ Public Class FormSendSMS
             .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub RB1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RB1.CheckedChanged
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Private Sub RB1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RB1.CheckedChanged
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -222,8 +259,13 @@ Public Class FormSendSMS
             .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub RB2_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RB2.CheckedChanged
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Private Sub RB2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RB2.CheckedChanged
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -235,8 +277,13 @@ Public Class FormSendSMS
             .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
         End With
     End Sub
+<<<<<<< HEAD
     Private Sub RB3_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles RB3.CheckedChanged
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Private Sub RB3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RB3.CheckedChanged
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -482,7 +529,11 @@ Public Class FormSendSMS
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub FormSendSMS_FormClosed1(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
+=======
+    Private Sub FormSendSMS_FormClosed1(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Comm.IsOpen() = True Then
                 Comm.Close()

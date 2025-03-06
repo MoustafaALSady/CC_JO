@@ -3,13 +3,22 @@
 Imports System.Data.SqlClient
 
 Public Class FrmAllCustomers
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Dim myds As New DataSet
     ReadOnly ds As New DataSet
 
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
     Public SqlDataAdapter2 As New SqlDataAdapter
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Public SqlDataAdapter2 As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
     Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
@@ -25,7 +34,11 @@ Public Class FrmAllCustomers
     Public TB2 As String
     Public APALL As Boolean = False
     Public APALL1 As Boolean = False
+<<<<<<< HEAD
     Private Sub FrmAllCustomers_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Shown
+=======
+    Private Sub FrmAllCustomers_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Shown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Show()
         Me.TabPage1.Show()
@@ -33,7 +46,11 @@ Public Class FrmAllCustomers
         Me.TabPage5.Show()
         Me.TabPage4.Show()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAllCustomers_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmAllCustomers_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         Me.TabPage1.BackgroundImage = img
@@ -63,9 +80,15 @@ Public Class FrmAllCustomers
 
 
     End Sub
+<<<<<<< HEAD
     Public Sub Load1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles load1.Click
         On Error Resume Next
         Me.ConnectDataBase = New ComponentModel.BackgroundWorker With {
+=======
+    Public Sub Load1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles load1.Click
+        On Error Resume Next
+        Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -78,7 +101,11 @@ Public Class FrmAllCustomers
         End With
         Me.load1.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAllCustomers_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+=======
+    Private Sub FrmAllCustomers_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.CheckLogReview.Checked = True Then
                 Me.KeyPreview = False
@@ -112,7 +139,11 @@ Public Class FrmAllCustomers
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub Text19_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextClass.SelectedIndexChanged
+=======
+    Private Sub Text19_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextClass.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.TextClass.Text = "2" Then
                 Me.Label3.Text = "الرقم الوطني _العسكري"
@@ -175,7 +206,11 @@ Public Class FrmAllCustomers
         Try
 1:
 
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
 
             With strSQL
@@ -188,7 +223,11 @@ Public Class FrmAllCustomers
                 End If
 
             End With
+<<<<<<< HEAD
             Me.SqlDataAdapter1 = New SqlDataAdapter(strSQL)
+=======
+            Me.SqlDataAdapter1 = New SqlClient.SqlDataAdapter(strSQL)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
             Me.myds.Clear()
             Me.myds = New DataSet
@@ -337,9 +376,15 @@ Public Class FrmAllCustomers
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim sql As New SqlCommand("UPDATE AllCustomers SET  cust2 = @cust2, cust3 = @cust3, cust4 = @cust4, cust5 = @cust5, cust6 = @cust6, cust7 = @cust7, cust8 = @cust8 , cust9 = @cust9, cust10 = @cust10, cust11 = @cust11,cust12 = @cust12, cust13 = @cust13, cust14 = @cust14, cust15 = @cust15, cust16 = @cust16, cust17 = @cust17, cust18 = @cust18 , cust19 = @cust19, cust20 = @cust20, cust21 = @cust21,cust22 = @cust22, cust23 = @cust23, cust24 = @cust24, cust25 = @cust25, cust26 = @cust26, cust27 = @cust27, cust28 = @cust28 , cust29 = @cust29, cust30 = @cust30, cust31 = @cust31, cust32 = @cust32, cust33 = @cust33, USERNAME = @USERNAME, Cuser = @Cuser, COUSER = @COUSER, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE IDcust = @IDcust", Consum)
             Dim CMD As New SqlCommand With {
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim sql As New SqlCommand("UPDATE AllCustomers SET  cust2 = @cust2, cust3 = @cust3, cust4 = @cust4, cust5 = @cust5, cust6 = @cust6, cust7 = @cust7, cust8 = @cust8 , cust9 = @cust9, cust10 = @cust10, cust11 = @cust11,cust12 = @cust12, cust13 = @cust13, cust14 = @cust14, cust15 = @cust15, cust16 = @cust16, cust17 = @cust17, cust18 = @cust18 , cust19 = @cust19, cust20 = @cust20, cust21 = @cust21,cust22 = @cust22, cust23 = @cust23, cust24 = @cust24, cust25 = @cust25, cust26 = @cust26, cust27 = @cust27, cust28 = @cust28 , cust29 = @cust29, cust30 = @cust30, cust31 = @cust31, cust32 = @cust32, cust33 = @cust33, USERNAME = @USERNAME, Cuser = @Cuser, COUSER = @COUSER, da = @da, ne = @ne, da1 = @da1, ne1 = @ne1 WHERE IDcust = @IDcust", Consum)
+            Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .CommandType = CommandType.Text,
                 .Connection = Consum
             }
@@ -402,13 +447,21 @@ Public Class FrmAllCustomers
         On Error Resume Next
         Me.lblNavLocation.Text = Me.BS.Position + 1 & " من " & Me.BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub LblNavLocation_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Label1.TextChanged
+=======
+    Private Sub LblNavLocation_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label1.TextChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.Count()
     End Sub
     Private Sub RefreshData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles RefreshTab.DoWork
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then
                 Consum.Close()
             End If
@@ -564,9 +617,15 @@ Public Class FrmAllCustomers
         Me.btnNavNext.Enabled = Forward
         Me.btnLast.Enabled = Forward
         Me.InternalAuditorType()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strSQL1 As New SqlCommand("SELECT  DOC1, LO, DOC2, DOC4, DOC5 FROM MYDOCUMENTSHOME WHERE  CUser='" & ModuleGeneral.CUser & "' and LO ='" & Me.TextNationalNo.Text.Trim & "'", Consum)
         Me.SqlDataAdapter2 = New SqlDataAdapter(strSQL1)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strSQL1 As New SqlClient.SqlCommand("SELECT  DOC1, LO, DOC2, DOC4, DOC5 FROM MYDOCUMENTSHOME WHERE  CUser='" & ModuleGeneral.CUser & "' and LO ='" & Me.TextNationalNo.Text.Trim & "'", Consum)
+        Me.SqlDataAdapter2 = New SqlClient.SqlDataAdapter(strSQL1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ds.Clear()
         Consum.Open()
         Me.SqlDataAdapter2.Fill(Me.ds, "MYDOCUMENTSHOME")
@@ -575,41 +634,69 @@ Public Class FrmAllCustomers
         Me.DataGridView3.DataMember = "MYDOCUMENTSHOME"
         Me.TextCOUser.Text = COUser
     End Sub
+<<<<<<< HEAD
     Private Sub BtnNavFirst_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNavFirst.Click
+=======
+    Private Sub BtnNavFirst_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNavFirst.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnNavPrev_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNavPrev.Click
+=======
+    Private Sub BtnNavPrev_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNavPrev.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnNavNext_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNavNext.Click
+=======
+    Private Sub BtnNavNext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNavNext.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnLast_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLast.Click
+=======
+    Private Sub BtnLast_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLast.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT2_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextMembersName.KeyUp
+=======
+    Private Sub TEXT2_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextMembersName.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextClass.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT20_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextClass.KeyUp
+=======
+    Private Sub TEXT20_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextClass.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextNationalNo.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT3_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextNationalNo.KeyUp
+=======
+    Private Sub TEXT3_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextNationalNo.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -620,35 +707,55 @@ Public Class FrmAllCustomers
                 End If
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT4_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextMilitaryNumber.KeyUp
+=======
+    Private Sub TEXT4_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextMilitaryNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextPlaceOfBirth.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT5_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextPlaceOfBirth.KeyUp
+=======
+    Private Sub TEXT5_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextPlaceOfBirth.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.DateOfBirth.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT6_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles DateOfBirth.KeyUp
+=======
+    Private Sub TEXT6_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DateOfBirth.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTJobTitle.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT8_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTJobTitle.KeyUp
+=======
+    Private Sub TEXT8_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTJobTitle.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextDepartmentAdministration.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT9_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextDepartmentAdministration.KeyUp
+=======
+    Private Sub TEXT9_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextDepartmentAdministration.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -656,98 +763,154 @@ Public Class FrmAllCustomers
                 Me.TextDegree.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT19_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextDegree.KeyUp
+=======
+    Private Sub TEXT19_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextDegree.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextCondition.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT21_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextCondition.KeyUp
+=======
+    Private Sub TEXT21_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextCondition.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextSex.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT18_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextSex.KeyUp
+=======
+    Private Sub TEXT18_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextSex.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextClientType.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT22_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextClientType.KeyUp
+=======
+    Private Sub TEXT22_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextClientType.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTBalance_shareLimit.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT15_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTBalance_shareLimit.KeyUp
+=======
+    Private Sub TEXT15_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTBalance_shareLimit.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextAffiliationFee.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT16_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextAffiliationFee.KeyUp
+=======
+    Private Sub TEXT16_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextAffiliationFee.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextNotebookName.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT23_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextNotebookName.KeyUp
+=======
+    Private Sub TEXT23_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextNotebookName.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextContributorPageNumber.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT24_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextContributorPageNumber.KeyUp
+=======
+    Private Sub TEXT24_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextContributorPageNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextCustomerPageNumber.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT25_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextCustomerPageNumber.KeyUp
+=======
+    Private Sub TEXT25_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextCustomerPageNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextAffiliationDecisionNumber.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT26_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextAffiliationDecisionNumber.KeyUp
+=======
+    Private Sub TEXT26_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextAffiliationDecisionNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.JoinDate.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT27_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles JoinDate.KeyUp
+=======
+    Private Sub TEXT27_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles JoinDate.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextWithdrawalNumber.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT28_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextWithdrawalNumber.KeyUp
+=======
+    Private Sub TEXT28_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextWithdrawalNumber.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.DateWithdrawal.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT29_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles DateWithdrawal.KeyUp
+=======
+    Private Sub TEXT29_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DateWithdrawal.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTComments.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT31_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTComments.KeyUp
+=======
+    Private Sub TEXT31_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTComments.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
@@ -755,52 +918,83 @@ Public Class FrmAllCustomers
                 Me.TEXTADDRESS.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT7_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TEXTADDRESS.KeyUp
+=======
+    Private Sub TEXT7_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TEXTADDRESS.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextWorkAddress.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT10_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextWorkAddress.KeyUp
+=======
+    Private Sub TEXT10_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextWorkAddress.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextTheJudiciary.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT30_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextTheJudiciary.KeyUp
+=======
+    Private Sub TEXT30_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextTheJudiciary.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TextGovernorate.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT17_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs) Handles TextGovernorate.KeyUp
+=======
+    Private Sub TEXT17_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextGovernorate.KeyUp
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTPHONE.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT12_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs)
+=======
+    Private Sub TEXT12_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTFAX.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT13_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs)
+=======
+    Private Sub TEXT13_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Select Case e.KeyCode
             Case Keys.Enter
                 Me.TEXTMOBILE.Focus()
         End Select
     End Sub
+<<<<<<< HEAD
     Private Sub TEXT14_KeyUp(ByVal sender As Object, ByVal e As KeyEventArgs)
 
     End Sub
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub TEXT14_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
+
+    End Sub
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -828,7 +1022,11 @@ Public Class FrmAllCustomers
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -837,12 +1035,20 @@ Public Class FrmAllCustomers
         Me.SHOWBUTTON()
         Insert_Actions(Me.TextMembersCode.EditValue, "تعديل", Me.Text)
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -853,12 +1059,21 @@ Public Class FrmAllCustomers
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية حذف السجلات من البرنامج", 16, "تنبيه")
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim strsql1 As New SqlCommand("SELECT DISTINCT IDCAB FROM CABLES WHERE CAB11 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds1 As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            If Consum.State = ConnectionState.Open Then Consum.Close()
+            Consum.Open()
+            Dim strsql1 As New SqlClient.SqlCommand("SELECT DISTINCT IDCAB FROM CABLES WHERE CAB11 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds1 As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Adp1.Fill(ds1, "CABLES")
             If ds1.Tables(0).Rows.Count > 0 Then
@@ -866,9 +1081,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql2 As New SqlCommand("SELECT DISTINCT CEMP1 FROM CABLESCOEMPLOYEES WHERE CEMP29 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds2 As New DataSet
             Dim Adp2 As New SqlDataAdapter(strsql2)
+=======
+            Dim strsql2 As New SqlClient.SqlCommand("SELECT DISTINCT CEMP1 FROM CABLESCOEMPLOYEES WHERE CEMP29 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds2 As New DataSet
+            Dim Adp2 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds2.Clear()
             Adp2.Fill(ds2, "CABLESCOEMPLOYEES")
             If ds2.Tables(0).Rows.Count > 0 Then
@@ -876,9 +1097,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql3 As New SqlCommand("SELECT DISTINCT PTRO1 FROM Invoice WHERE PTRO21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds3 As New DataSet
             Dim Adp3 As New SqlDataAdapter(strsql3)
+=======
+            Dim strsql3 As New SqlClient.SqlCommand("SELECT DISTINCT PTRO1 FROM Invoice WHERE PTRO21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds3 As New DataSet
+            Dim Adp3 As New SqlClient.SqlDataAdapter(strsql3)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds3.Clear()
             Adp3.Fill(ds3, "Invoice")
             If ds3.Tables(0).Rows.Count > 0 Then
@@ -886,9 +1113,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql4 As New SqlCommand("SELECT DISTINCT PTRO1 FROM PETRO WHERE PTRO21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds4 As New DataSet
             Dim Adp4 As New SqlDataAdapter(strsql4)
+=======
+            Dim strsql4 As New SqlClient.SqlCommand("SELECT DISTINCT PTRO1 FROM PETRO WHERE PTRO21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds4 As New DataSet
+            Dim Adp4 As New SqlClient.SqlDataAdapter(strsql4)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds4.Clear()
             Adp4.Fill(ds4, "PETRO")
             If ds4.Tables(0).Rows.Count > 0 Then
@@ -896,9 +1129,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql5 As New SqlCommand("SELECT DISTINCT SLS1 FROM SALES WHERE SLS5 = '" & Me.TextMembersName.Text & "'", Consum)
             Dim ds5 As New DataSet
             Dim Adp5 As New SqlDataAdapter(strsql5)
+=======
+            Dim strsql5 As New SqlClient.SqlCommand("SELECT DISTINCT SLS1 FROM SALES WHERE SLS5 = '" & Me.TextMembersName.Text & "'", Consum)
+            Dim ds5 As New DataSet
+            Dim Adp5 As New SqlClient.SqlDataAdapter(strsql5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds5.Clear()
             Adp5.Fill(ds5, "SALES")
             If ds5.Tables(0).Rows.Count > 0 Then
@@ -906,9 +1145,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql6 As New SqlCommand("SELECT DISTINCT CST1 FROM MYCOSTS WHERE CST9 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds6 As New DataSet
             Dim Adp6 As New SqlDataAdapter(strsql6)
+=======
+            Dim strsql6 As New SqlClient.SqlCommand("SELECT DISTINCT CST1 FROM MYCOSTS WHERE CST9 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds6 As New DataSet
+            Dim Adp6 As New SqlClient.SqlDataAdapter(strsql6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds6.Clear()
             Adp6.Fill(ds6, "MYCOSTS")
             If ds6.Tables(0).Rows.Count > 0 Then
@@ -916,9 +1161,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql7 As New SqlCommand("SELECT DISTINCT IDCH FROM Checks WHERE CH8 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds7 As New DataSet
             Dim Adp7 As New SqlDataAdapter(strsql7)
+=======
+            Dim strsql7 As New SqlClient.SqlCommand("SELECT DISTINCT IDCH FROM Checks WHERE CH8 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds7 As New DataSet
+            Dim Adp7 As New SqlClient.SqlDataAdapter(strsql7)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds7.Clear()
             Adp7.Fill(ds7, "Checks")
             If ds7.Tables(0).Rows.Count > 0 Then
@@ -926,9 +1177,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql8 As New SqlCommand("SELECT DISTINCT Lo1 FROM Loans WHERE Lo4 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds8 As New DataSet
             Dim Adp8 As New SqlDataAdapter(strsql8)
+=======
+            Dim strsql8 As New SqlClient.SqlCommand("SELECT DISTINCT Lo1 FROM Loans WHERE Lo4 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds8 As New DataSet
+            Dim Adp8 As New SqlClient.SqlDataAdapter(strsql8)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds8.Clear()
             Adp8.Fill(ds8, "EMPSOLF")
             If ds8.Tables(0).Rows.Count > 0 Then
@@ -936,9 +1193,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsql9 As New SqlCommand("SELECT DISTINCT TBNK1 FROM Deposits WHERE TBNK21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds9 As New DataSet
             Dim Adp9 As New SqlDataAdapter(strsql9)
+=======
+            Dim strsql9 As New SqlClient.SqlCommand("SELECT DISTINCT TBNK1 FROM Deposits WHERE TBNK21 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds9 As New DataSet
+            Dim Adp9 As New SqlClient.SqlDataAdapter(strsql9)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds9.Clear()
             Adp9.Fill(ds9, "Deposits")
             If ds9.Tables(0).Rows.Count > 0 Then
@@ -946,9 +1209,15 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
 
+<<<<<<< HEAD
             Dim strsq20 As New SqlCommand("SELECT DISTINCT TBNK1 FROM PTRANSACTION WHERE TBNK23 = '" & Me.TextMembersCode.EditValue & "'", Consum)
             Dim ds10 As New DataSet
             Dim Adp10 As New SqlDataAdapter(strsq20)
+=======
+            Dim strsq20 As New SqlClient.SqlCommand("SELECT DISTINCT TBNK1 FROM PTRANSACTION WHERE TBNK23 = '" & Me.TextMembersCode.EditValue & "'", Consum)
+            Dim ds10 As New DataSet
+            Dim Adp10 As New SqlClient.SqlDataAdapter(strsq20)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds10.Clear()
             Adp10.Fill(ds10, "PTRANSACTION")
             If ds10.Tables(0).Rows.Count > 0 Then
@@ -963,7 +1232,11 @@ Public Class FrmAllCustomers
             Me.BS.RemoveCurrent()
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
             Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -973,12 +1246,20 @@ Public Class FrmAllCustomers
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub List1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles List1.SelectedIndexChanged
+=======
+    Private Sub List1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles List1.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.List1.SelectedIndex
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PRINTBUTTON.Click
+=======
+    Private Sub PRINTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PRINTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim F As New FrmPRINT
         Dim txt As CrystalDecisions.CrystalReports.Engine.TextObject
@@ -992,14 +1273,24 @@ Public Class FrmAllCustomers
             MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.RadioButton1.Checked Then
             Dim rpt As New rptAllCustomers
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM AllCustomers  WHERE cust2 ='" & Me.List1.Text & "'", Consum)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM AllCustomers  WHERE cust2 ='" & Me.List1.Text & "'", Consum)
+            Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "AllCustomers")
             rpt.SetDataSource(ds)
@@ -1023,9 +1314,15 @@ Public Class FrmAllCustomers
             Dim rpt As New rptAllCustomers
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM AllCustomers WHERE  CUser='" & CUser & "' ORDER BY IDcust", Consum)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM AllCustomers WHERE  CUser='" & CUser & "' ORDER BY IDcust", Consum)
+            Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "AllCustomers")
             rpt.SetDataSource(ds)
@@ -1048,9 +1345,15 @@ Public Class FrmAllCustomers
             Dim rpt As New rptAllCustomers
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust15 <'" & Val(BANSL) & "'  ORDER BY IDcust", Consum)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust15 <'" & Val(BANSL) & "'  ORDER BY IDcust", Consum)
+            Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "AllCustomers")
             rpt.SetDataSource(ds)
@@ -1073,9 +1376,15 @@ Public Class FrmAllCustomers
             Dim rpt As New rptAllCustomers
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust33 ='" & True & "'  ORDER BY IDcust", Consum)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust33 ='" & True & "'  ORDER BY IDcust", Consum)
+            Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "AllCustomers")
             rpt.SetDataSource(ds)
@@ -1098,9 +1407,15 @@ Public Class FrmAllCustomers
             Dim rpt As New rptAllCustomers
             GETSERVERNAMEANDDATABASENAME(rpt, DBServer, "", "")
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim str As New SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust33 ='" & False & "'  ORDER BY IDcust", Consum)
             Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim str As New SqlClient.SqlCommand("SELECT * FROM AllCustomers  WHERE CUser='" & CUser & "' And cust33 ='" & False & "'  ORDER BY IDcust", Consum)
+            Dim builder3 As New SqlCommandBuilder(SqlDataAdapter1)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "AllCustomers")
             rpt.SetDataSource(ds)
@@ -1122,7 +1437,11 @@ Public Class FrmAllCustomers
 
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSearch.Click
+=======
+    Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.TxtSearch.Text = "" Then
             MessageBox.Show("الرجاء وضع قيمة للبحث عنها", " البحث في داتا جريد", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1181,7 +1500,11 @@ Public Class FrmAllCustomers
             Me.ListBox3.SelectedIndex = Me.ListBox3.Items.Count - 1
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDisplyAll.Click
+=======
+    Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDisplyAll.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.myds = New DataSet
             Me.SqlDataAdapter1.Fill(myds, "AllCustomers")
@@ -1193,7 +1516,11 @@ Public Class FrmAllCustomers
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+=======
+    Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strFileName As String
         If Me.DataGridView1.RowCount <= 1 Then
             MessageBox.Show("الجدول فارغ من السجلات", " ملحوظة", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1220,18 +1547,31 @@ Public Class FrmAllCustomers
             Dim excel As New Microsoft.Office.Interop.Excel.Application
             Dim wBook As Microsoft.Office.Interop.Excel.Workbook
             Dim wSheet As Microsoft.Office.Interop.Excel.Worksheet
+<<<<<<< HEAD
             Dim newCulture As Globalization.CultureInfo
             Dim OldCulture As Globalization.CultureInfo
             OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
             newCulture = New Globalization.CultureInfo(
+=======
+            Dim newCulture As System.Globalization.CultureInfo
+            Dim OldCulture As System.Globalization.CultureInfo
+            OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
+            newCulture = New System.Globalization.CultureInfo(
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 excel.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID.msoLanguageIDUI))
             System.Threading.Thread.CurrentThread.CurrentCulture = newCulture
             wBook = excel.Workbooks.Add()
             wSheet = wBook.ActiveSheet()
             wSheet.Name = "بيانات_الاعضاء_العملاء"
+<<<<<<< HEAD
             Dim dt As DataTable = dset.Tables(0)
             Dim dc As DataColumn
             Dim dr As DataRow
+=======
+            Dim dt As System.Data.DataTable = dset.Tables(0)
+            Dim dc As System.Data.DataColumn
+            Dim dr As System.Data.DataRow
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim colIndex As Integer = 0
             Dim rowIndex As Integer = 0
             For Each dc In dt.Columns
@@ -1269,7 +1609,11 @@ Public Class FrmAllCustomers
                 End If
             End With
             Try
+<<<<<<< HEAD
                 Dim fileTemp As IO.FileStream = System.IO.File.OpenWrite(strFileName)
+=======
+                Dim fileTemp As System.IO.FileStream = System.IO.File.OpenWrite(strFileName)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 fileTemp.Close()
             Catch ex As Exception
                 blnFileOpen = False
@@ -1293,7 +1637,11 @@ Public Class FrmAllCustomers
             End If
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox3.SelectedIndexChanged
+=======
+    Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBox3.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim Str As String = Me.ListBox3.Text
             Dim strArr() As String
@@ -1322,7 +1670,11 @@ Public Class FrmAllCustomers
             End If
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles InternalAuditorERBUTTON.Click
+=======
+    Private Sub InternalAuditorERBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InternalAuditorERBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1346,7 +1698,11 @@ Public Class FrmAllCustomers
         Me.PictureBox2.Visible = True
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -1355,11 +1711,19 @@ Public Class FrmAllCustomers
         Insert_Actions(Me.TextMembersCode.EditValue, "المراجع", Me.Text)
         MsgBox("تمت عملية المراجعة بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
         'لتجاوز رسائل اخطاء داتا جريد
         MsgBox(e.Exception.Message, 16, "Error")
     End Sub
     Private Sub ButtonCancellationAuditingAndACheckingAccounts_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+=======
+    Private Sub DataGridView1_DataError(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewDataErrorEventArgs) Handles DataGridView1.DataError
+        'لتجاوز رسائل اخطاء داتا جريد
+        MsgBox(e.Exception.Message, 16, "Error")
+    End Sub
+    Private Sub ButtonCancellationAuditingAndACheckingAccounts_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonCancellationAuditingAndACheckingAccounts.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1382,7 +1746,11 @@ Public Class FrmAllCustomers
         Me.UPDATERECORD()
         Me.BS.EndEdit()
         Me.RowCount = Me.BS.Count
+<<<<<<< HEAD
         Me.SaveTab = New ComponentModel.BackgroundWorker With {
+=======
+        Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -1391,7 +1759,11 @@ Public Class FrmAllCustomers
         Insert_Actions(Me.TextMembersCode.EditValue, "إلغاء المراجعة", Me.Text)
         MsgBox("تمت عملية إلغاء المراجعة بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonUpdateA_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonUpdateA.Click
+=======
+    Private Sub ButtonUpdateA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonUpdateA.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1400,7 +1772,11 @@ Public Class FrmAllCustomers
             Me.Cursor = Cursors.WaitCursor
             'Me.TextMembersCode.Clear()
             Me.PictureBox2.Visible = True
+<<<<<<< HEAD
             Me.RefreshTab = New ComponentModel.BackgroundWorker With {
+=======
+            Me.RefreshTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -1410,11 +1786,23 @@ Public Class FrmAllCustomers
         End Try
     End Sub
 
+<<<<<<< HEAD
     Private Sub Text22_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextClientType.SelectedIndexChanged
         Me.AccountsEnquiry()
     End Sub
     Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonAttachDocument.Click
         Try
+=======
+    Private Sub Text22_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextClientType.SelectedIndexChanged
+        Me.AccountsEnquiry()
+    End Sub
+    Private Sub ButtonAttachDocument_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonAttachDocument.Click
+        Try
+            If TestNet = False Then
+                MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
+                Exit Sub
+            End If
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If BS.Count = 0 Then Beep() : Exit Sub
             If LockAddRow = False Then
                 MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
@@ -1423,16 +1811,28 @@ Public Class FrmAllCustomers
             Dim XLO As Int64
             XLO = Me.DataGridView3.RowCount
             Dim f As New FrmJPG0
+<<<<<<< HEAD
             f.Show()
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             f.ADDBUTTON.Enabled = False
             f.SAVEBUTTON.Enabled = True
             f.ButScan.Enabled = True
             f.ButSaveFile.Enabled = False
             f.ButLogq.Enabled = True
             f.ButEditImage.Enabled = False
+<<<<<<< HEAD
             f.BS.EndEdit()
             f.BS.AddNew()
             f.MAXRECORD()
+=======
+            f.Show()
+            f.ADDBUTTON_Click(sender, e)
+            f.BS.Position = BS.Count - 1
+            f.BS.EndEdit()
+            f.BS.AddNew()
+            CLEARDATA1(Me)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             f.DateP1.Text = ServerDateTime.ToString("yyyy-MM-dd")
             f.TextLO.Text = TextNationalNo.Text
             f.TEXTFileNo.Text = Val(XLO) + 1
@@ -1446,7 +1846,11 @@ Public Class FrmAllCustomers
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonViewDocuments.Click
+=======
+    Private Sub ButtonViewDocuments_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonViewDocuments.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1458,13 +1862,22 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim f As New FrmJPG
             ds.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand(String.Concat(New String() {"SELECT DOC1 FROM MYDOCUMENTSHOME WHERE  CUser='", ModuleGeneral.CUser, "' and DOC1 ='", Trim(Me.TextDOC1.Text), "'"}), Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "MYDOCUMENTSHOME")
             f.BS.DataMember = "MYDOCUMENTSHOME"
@@ -1493,7 +1906,11 @@ Public Class FrmAllCustomers
         Consum.Close()
 
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView3_CellEnter(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView3.CellEnter
+=======
+    Private Sub DataGridView3_CellEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView3.CellEnter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.TextDOC1.Text = CDbl(DataGridView3("DOC1", Me.DataGridView3.CurrentRow.Index).Value)
         Catch ex As Exception
@@ -1501,7 +1918,11 @@ Public Class FrmAllCustomers
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView3_DoubleClick(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView3.DoubleClick
+=======
+    Private Sub DataGridView3_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DataGridView3.DoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -1513,13 +1934,22 @@ Public Class FrmAllCustomers
                 Exit Sub
             End If
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim SqlDataAdapter1 As New SqlDataAdapter
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim f As New FrmJPG
             ds.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand(String.Concat(New String() {"SELECT DOC1 FROM MYDOCUMENTSHOME WHERE  CUser='", ModuleGeneral.CUser, "' and DOC1 ='", Trim(Me.TextDOC1.Text), "'"}), Consum)
+<<<<<<< HEAD
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "MYDOCUMENTSHOME")
             f.BS.DataMember = "MYDOCUMENTSHOME"

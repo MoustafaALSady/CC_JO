@@ -1,7 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Module MD_PUBLIC
     Public NUMBER_CHECK As Integer = 0
+<<<<<<< HEAD
     Public Sub AUTO_NUMER_NUM(ByVal DGV As DataGridView, ByVal CLR As Color, ByVal e As DataGridViewCellFormattingEventArgs, ByVal FON As Color)
+=======
+    Public Sub AUTO_NUMER_NUM(ByVal DGV As DataGridView, ByVal CLR As Color, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs, ByVal FON As Color)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim ROW = DGV.Rows(e.RowIndex)
             Dim CELL = ROW.Cells(0)
@@ -53,7 +57,11 @@ Module MD_PUBLIC
 
     Public Sub ACTIVAT(ByVal GUID As String, ByVal VAL_ As Integer)
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim UPDATE_STRING As String = "UPDATE [ACCOUNTSTREE] SET [ACTIVAT]=@ACTIVAT WHERE GUID= '" & GUID & "'"
             Dim CMD As New SqlCommand(UPDATE_STRING, Consum)
             CMD.Parameters.Add(New SqlParameter("@ACTIVAT", SqlDbType.Int)).Value = VAL_

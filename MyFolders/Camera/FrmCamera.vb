@@ -81,7 +81,11 @@ Public Class FrmCamera
 
 
 
+<<<<<<< HEAD
     Private Sub FrmCamera_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmCamera_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.F1
@@ -98,7 +102,11 @@ Public Class FrmCamera
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmVideoCapture_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FrmVideoCapture_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         'LoadDeviceList()
@@ -114,7 +122,11 @@ Public Class FrmCamera
         'SAVEBUTTON.Enabled = False
         'PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
+<<<<<<< HEAD
     Private Sub STARTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub STARTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'iDevice = ComboBox1.SelectedIndex
         OpenPInternalAuditorWindow()
     End Sub
@@ -124,21 +136,34 @@ Public Class FrmCamera
         ' «€·«ﬁ «·‰«›–…
         DestroyWindow(hHwnd)
     End Sub
+<<<<<<< HEAD
     Private Sub STOPBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub STOPBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ClosePInternalAuditorWindow()
         'SAVEBUTTON.Enabled = False
         'STARTBUTTON.Enabled = True
         'STOPBUTTON.Enabled = False
     End Sub
+<<<<<<< HEAD
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs)
+=======
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim data As IDataObject
         Dim bmap As Image
         ' ‰”Œ «·’Ê—… ··ﬂ·Ì»»Ê—œ
         Dim unused = SendMessage(hHwnd, WM_CAP_EDIT_COPY, 0, 0)
         ' ﬁ—«¡… «·’Ê—… „‰ «·ﬂ·Ì»»Ê—œ Ê ÕÊÌ·Â« «·Ï «„ÌœÃ
         data = Clipboard.GetDataObject()
+<<<<<<< HEAD
         If data.GetDataPresent(GetType(Bitmap)) Then
             bmap = CType(data.GetData(GetType(Bitmap)), Image)
+=======
+        If data.GetDataPresent(GetType(System.Drawing.Bitmap)) Then
+            bmap = CType(data.GetData(GetType(System.Drawing.Bitmap)), Image)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             'PictureBox1.Image = bmap
             ClosePInternalAuditorWindow()
             'SAVEBUTTON.Enabled = False

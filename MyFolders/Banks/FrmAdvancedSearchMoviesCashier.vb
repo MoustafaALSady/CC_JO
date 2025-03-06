@@ -5,7 +5,11 @@ Imports CrystalDecisions.CrystalReports.Engine
 
 Public Class FrmAdvancedSearchMoviesCashier
 
+<<<<<<< HEAD
     Dim Adp As New SqlDataAdapter
+=======
+    Dim Adp As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Private ReadOnly ds As New DataSet
     Private ReadOnly bs As New BindingSource
 
@@ -22,7 +26,11 @@ Public Class FrmAdvancedSearchMoviesCashier
     'Private Sub frmAdvancedSearchMoviesCashier_Resize(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Resize
     '    R.ResizeControls()
     'End Sub
+<<<<<<< HEAD
     Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonSearch.Click
+=======
+    Private Sub ButtonSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonSearch.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -101,7 +109,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim DataSetTab7 As DataSet
         DataSetTab7 = ds.GetChanges
         DataSetTab7 = New DataSet
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strSQL As New SqlCommand("", Consum)
         With strSQL
             .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE  CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY CSH1"
@@ -137,7 +149,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         recNo = 0
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAdvancedSearchMoviesCustomers_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Me.KeyDown
+=======
+    Private Sub FrmAdvancedSearchMoviesCustomers_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Select Case e.KeyCode
                 Case Keys.Escape
@@ -150,7 +166,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub FrmAdvancedSearchMoviesCustomers_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+=======
+    Private Sub FrmAdvancedSearchMoviesCustomers_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.BackgroundImage = img
             For a As Byte = 0 To 10
@@ -160,7 +180,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             Next
             Me.DataGridView1.AutoGenerateColumns = False
             FillDataBS()
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL1 As New SqlCommand("SELECT distinct  CSH12 FROM CASHIER WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
             Consum.Open()
             DR = strSQL1.ExecuteReader()
@@ -211,6 +235,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         '==============================
         Call MangUsers()
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs)
         AutoComplete(ComboBEnquiry, e, )
     End Sub
@@ -230,6 +255,27 @@ Public Class FrmAdvancedSearchMoviesCashier
         AutoComplete(ComboStatement, e, )
     End Sub
     Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox3.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboBEnquiry, e, )
+    End Sub
+    Private Sub ComboBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboSource, e, )
+    End Sub
+    Private Sub ComboBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboMovements, e, )
+    End Sub
+    Private Sub ComboBox4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboType, e, )
+    End Sub
+    Private Sub ComboBox5_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboDetails, e, )
+    End Sub
+    Private Sub TEXTBOX14_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        AutoComplete(ComboStatement, e, )
+    End Sub
+    Private Sub ListBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ListBox3.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Dim Str As String = ListBox3.Text
             Dim strArr() As String
@@ -241,7 +287,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonPrintreport_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonPrintreport.Click
+=======
+    Private Sub ButtonPrintreport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonPrintreport.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim F As New FrmPRINT
         Dim txtFromDate As String
         Dim txtToDate As String
@@ -256,7 +306,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MsgBox("عفوا .. قام الأدمن بمنع خاصية معاينة او طباعة السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد  حركة الصندوق خلال فترة معينة" Then
                 If Me.DateFrom.Checked = False And Me.DateTO.Checked = False Then
@@ -269,7 +323,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                 With str
                     Dim ds As New DataSet
                     .CommandText = "SELECT * FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'"
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -296,7 +354,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                 With str
                     Dim ds As New DataSet
                     .CommandText = "SELECT * FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'"
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -323,7 +385,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                 With str
                     Dim ds As New DataSet
                     .CommandText = "SELECT * FROM CASHIER   WHERE CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH11='" & ComboDetails.Text & "'"
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -351,7 +417,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT * FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH12='" & ComboStatement.Text & "'"
                     SumAmounFINALBALANCE6()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -379,7 +449,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT * FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH3='" & ComboType.Text & "'"
                     SumAmounFINALBALANCE7()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -412,7 +486,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                         .CommandText = "SELECT * FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH8='" & TextMovements.Text & "'"
                         SumAmounFINALBALANCE10()
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
                     rpt.SetDataSource(ds)
@@ -435,6 +513,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         End Try
     End Sub
     Private Sub SumAmounFINALBALANCE1()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -442,6 +521,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER WHERE CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER WHERE CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -455,6 +543,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Me.TextBalance.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE52()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -462,6 +551,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7 - CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
         Dim DS As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7 - CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+        Dim DS As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         DS.Clear()
         Consum.Open()
         Adp1.Fill(DS)
@@ -475,6 +573,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Me.TextBalance.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE3()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -482,6 +581,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'  AND CSH6='" & ComboStatement.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'  AND CSH6='" & ComboStatement.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -495,6 +603,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         TextBalance.Text = Format(Val(SUM1), "#,#0.00")
     End Sub
     Private Sub SumAmounFINALBALANCE4()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -502,6 +611,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         Adp1.Fill(ds1)
@@ -515,6 +633,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE5()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -522,6 +641,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH11='" & ComboDetails.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH11='" & ComboDetails.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         Adp1.Fill(ds1)
@@ -535,6 +663,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE6()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -542,6 +671,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH12='" & ComboStatement.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH12='" & ComboStatement.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         Adp1.Fill(ds1)
@@ -555,6 +693,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE7()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -562,6 +701,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH3='" & ComboType.Text & "'", Consum)
         Dim ds1 As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH3='" & ComboType.Text & "'", Consum)
+        Dim ds1 As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Consum.Open()
         Adp1.Fill(ds1)
@@ -575,6 +723,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE8()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -582,6 +731,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT  Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH5='" & TextMovements.Text & "'  AND CSH6='" & ComboStatement.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH3 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH5='" & TextMovements.Text & "'  AND CSH6='" & ComboStatement.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -595,6 +753,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE9()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -602,6 +761,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH7='" & TextMovements.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH7='" & TextMovements.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -615,6 +783,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum.Close()
     End Sub
     Private Sub SumAmounFINALBALANCE10()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -622,6 +791,15 @@ Public Class FrmAdvancedSearchMoviesCashier
         Dim strsq1 As New SqlCommand("SELECT  Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH8='" & TextMovements.Text & "'", Consum)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT  Sum(CSH7-CSH8) FROM CASHIER  WHERE   CUser='" & CUser & "'  and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH8='" & TextMovements.Text & "'", Consum)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         Consum.Open()
         Adp1.Fill(ds)
@@ -634,7 +812,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         TextBalance.Text = Format(Val(SUM1), "#,#0.00")
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEnquiry.Click
+=======
+    Private Sub ButtonXP1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEnquiry.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.ListBox3.Items.Clear()
         Me.TxtSearch.Text = ""
         Me.Label1.Text = ""
@@ -652,7 +834,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MsgBox("عفوا .. قام الأدمن بمنع خاصية قرات السجلات من البرنامج", 16, "تنبيه")
             Exit Sub
         End If
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد  حركة الصندوق خلال فترة معينة" Then
                 If Me.DateFrom.Checked = False And Me.DateTO.Checked = False Then
@@ -664,7 +850,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds1 As New DataSet
                     .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  ORDER BY CSH1"
                     SumAmounFINALBALANCE52()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds1.Clear()
                     SqlDataAdapter1.Fill(ds1, "CASHIER")
@@ -687,7 +877,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH10='" & ComboSource.Text & "'  ORDER BY CSH1"
                     SumAmounFINALBALANCE4()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
@@ -710,7 +904,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH11='" & ComboDetails.Text & "'  ORDER BY CSH1"
                     SumAmounFINALBALANCE5()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
@@ -733,7 +931,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH12='" & ComboStatement.Text & "'  ORDER BY CSH1"
                     SumAmounFINALBALANCE6()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
@@ -755,7 +957,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                     Dim ds As New DataSet
                     .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "' and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH3='" & ComboType.Text & "'  ORDER BY CSH1"
                     SumAmounFINALBALANCE7()
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
@@ -782,7 +988,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                         .CommandText = "SELECT CSH1, CSH2, CSH3, CSH4, CSH5, CSH6, CSH7, CSH8, CSH9, CSH10, CSH11, CSH12, CSH14, CSH15, CSH16, CSH17 FROM CASHIER  WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'and CSH2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'  AND CSH8='" & TextMovements.Text & "'  ORDER BY CSH1"
                         SumAmounFINALBALANCE10()
                     End If
+<<<<<<< HEAD
                     SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+                    SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim builder10 As New SqlCommandBuilder(SqlDataAdapter1)
                     ds.Clear()
                     SqlDataAdapter1.Fill(ds, "CASHIER")
@@ -801,7 +1011,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBEnquiry.SelectedIndexChanged
+=======
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComboBEnquiry.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If Me.ComboBEnquiry.Text = "رصيد  حركة الصندوق خلال فترة معينة" Then
                 Me.ComboStatement.Enabled = False
@@ -850,7 +1064,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonDisplyAll.Click
+=======
+    Private Sub ButtonDisplyAll_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonDisplyAll.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             FillDataBS()
             Me.ListBox3.Items.Clear()
@@ -872,11 +1090,19 @@ Public Class FrmAdvancedSearchMoviesCashier
                 Exit Sub
             End If
             Dim rpt1 As New rptAccount
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             GETSERVERNAMEANDDATABASENAME(rpt1, DBServer, "", "")
             Dim DataSetTab33 As New DataSet
             Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            GETSERVERNAMEANDDATABASENAME(rpt1, DBServer, "", "")
+            Dim DataSetTab33 As New DataSet
+            Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             DataSetTab33.Clear()
             SqlDataAdapter1.Fill(DataSetTab33, "DETAILSACCOUNT")
             rpt1.SetDataSource(DataSetTab33)
@@ -908,9 +1134,15 @@ Public Class FrmAdvancedSearchMoviesCashier
                 Exit Sub
             End If
             Dim ds As New DataSet
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
             SqlDataAdapter1 = New SqlDataAdapter(str)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim str As New SqlCommand("SELECT * FROM DETAILSACCOUNT  WHERE   CUser='" & CUser & "' and CEMP2 BETWEEN '" & Format(Me.DateFrom.Value, "yyyy/MM/dd") & "'  AND  '" & Format(Me.DateTO.Value, "yyyy/MM/dd") & "'", Consum)
+            SqlDataAdapter1 = New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             SqlDataAdapter1.Fill(ds, "DETAILSACCOUNT")
             bs.DataSource = ds
@@ -925,6 +1157,7 @@ Public Class FrmAdvancedSearchMoviesCashier
         End Try
     End Sub
     Private Sub SELECTTHECUSTOMERFORCERTIFICATE()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim SUM1 As Double
         Dim Consum As New SqlConnection(constring)
@@ -933,6 +1166,16 @@ Public Class FrmAdvancedSearchMoviesCashier
         Consum = New SqlConnection(constring)
         Dim ds As New DataSet
         Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim SUM1 As Double
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        On Error Resume Next
+        Dim strsq1 As New SqlCommand("SELECT CEMP3 FROM CABLESCOEMPLOYEES WHERE   CUser='" & CUser & "' and CEMP28 = '" & Me.ComboSource.Text & "'" & "ORDER BY CEMP3", Consum)
+        Consum = New SqlClient.SqlConnection(constring)
+        Dim ds As New DataSet
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds.Clear()
         ComboStatement.Items.Clear()
         Adp1.Fill(ds)
@@ -947,14 +1190,24 @@ Public Class FrmAdvancedSearchMoviesCashier
         End If
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim ds As New DataSet
         Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Dim ds As New DataSet
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim f As New FrmBanks5
         Try
             ds.EnforceConstraints = False
             Dim str As New SqlCommand("SELECT CSH1 FROM CASHIER WHERE   CUser='" & CUser & "' and Year(CSH2) ='" & FiscalYear_currentDateMustBeInFiscalYear() & "'ORDER BY CSH1", Consum)
+<<<<<<< HEAD
             Dim SqlDataAdapter1 As New SqlDataAdapter(str)
+=======
+            Dim SqlDataAdapter1 As New SqlClient.SqlDataAdapter(str)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
@@ -975,7 +1228,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         End Try
 
     End Sub
+<<<<<<< HEAD
     Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+=======
+    Private Sub ButtonEXPORTTPEXCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonEXPORTTPEXCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim strFileName As String
         If DataGridView1.RowCount <= 1 Then
             MessageBox.Show("الجدول فارغ من السجلات", " ملحوظة", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -1001,18 +1258,31 @@ Public Class FrmAdvancedSearchMoviesCashier
             Dim excel As New Microsoft.Office.Interop.Excel.Application
             Dim wBook As Microsoft.Office.Interop.Excel.Workbook
             Dim wSheet As Microsoft.Office.Interop.Excel.Worksheet
+<<<<<<< HEAD
             Dim newCulture As Globalization.CultureInfo
             Dim OldCulture As Globalization.CultureInfo
             OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
             newCulture = New Globalization.CultureInfo(
+=======
+            Dim newCulture As System.Globalization.CultureInfo
+            Dim OldCulture As System.Globalization.CultureInfo
+            OldCulture = System.Threading.Thread.CurrentThread.CurrentCulture
+            newCulture = New System.Globalization.CultureInfo(
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 excel.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoConnectorType.msoConnectorTypeMixed))
             System.Threading.Thread.CurrentThread.CurrentCulture = newCulture
             wBook = excel.Workbooks.Add()
             wSheet = wBook.ActiveSheet()
             wSheet.Name = "حركة_الصندوق"
+<<<<<<< HEAD
             Dim dt As DataTable = dset.Tables(0)
             Dim dc As DataColumn
             Dim dr As DataRow
+=======
+            Dim dt As System.Data.DataTable = dset.Tables(0)
+            Dim dc As System.Data.DataColumn
+            Dim dr As System.Data.DataRow
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim colIndex As Integer = 0
             Dim rowIndex As Integer = 0
             For Each dc In dt.Columns
@@ -1050,7 +1320,11 @@ Public Class FrmAdvancedSearchMoviesCashier
                 End If
             End With
             Try
+<<<<<<< HEAD
                 Dim fileTemp As IO.FileStream = System.IO.File.OpenWrite(strFileName)
+=======
+                Dim fileTemp As System.IO.FileStream = System.IO.File.OpenWrite(strFileName)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 fileTemp.Close()
             Catch ex As Exception
                 blnFileOpen = False
@@ -1086,7 +1360,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         TextCred.Text = Format(Val(TextCred.Text), "#,#0.00")
         TextBalance1.Text = Format(Val(TextDebit.Text - TextCred.Text), "#,#0.00")
     End Sub
+<<<<<<< HEAD
     Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles Buttoncalcluter.Click
+=======
+    Private Sub Buttoncalcluter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Buttoncalcluter.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Process.Start("calc.exe")
     End Sub
@@ -1122,7 +1400,11 @@ Public Class FrmAdvancedSearchMoviesCashier
             CheckFillButton = True
         End If
     End Function
+<<<<<<< HEAD
     Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnNextPage.Click
+=======
+    Private Sub BtnNextPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNextPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         currentPage -= 1
         If currentPage < 1 Then
@@ -1134,7 +1416,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         End If
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnPreviousPage.Click
+=======
+    Private Sub BtnPreviousPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPreviousPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If pageSize = 0 Then
             MessageBox.Show("ضبط حجم الصفحة، ثم انقر فوق ""ملء الشبكة"" زر!")
@@ -1150,7 +1436,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         End If
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnFirstPage.Click
+=======
+    Private Sub BtnFirstPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFirstPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If recNo = maxRec Then
             MessageBox.Show("أنت في الصفحة الأخيرة!")
@@ -1160,7 +1450,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         recNo = pageSize * (currentPage - 1)
         LoadPage()
     End Sub
+<<<<<<< HEAD
     Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles btnLastPage.Click
+=======
+    Private Sub BtnLastPage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLastPage.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Not CheckFillButton() Then Return
         If currentPage = 1 Then
             MessageBox.Show("أنت في الصفحة الأولى!")
@@ -1171,7 +1465,11 @@ Public Class FrmAdvancedSearchMoviesCashier
         LoadPage()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+=======
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
     End Sub
 

@@ -128,7 +128,11 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
+<<<<<<< HEAD
         DAAAAk1TRnQBSQFMAgEBBAEAAcgBCQHIAQkBEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+=======
+        DAAAAk1TRnQBSQFMAgEBBAEAATgBCQE4AQkBEAEAARABAAT/AREBAAj/AUIBTQE2BwABNgMAASgDAAFA
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         AwABIAMAAQEBAAEQBgABEP8A/wD/AP8A/wD/AP8A/wAiAAH/AX8B3gF7AbEBLQHQATUBlQFOAZwBcwHe
         AXcB/wF/Af8BfwH/AX8B/wF/SAAB/wF/AYwBYgFIAV4B0AFmATUBbwFXAW8BNgFvAfIBagHxAWYB3QF7
         DAAB/wF/Ad4BewHzAQQB0wEAAdMBAAHTAQABjgEEAewBFAGwATEBlQFOAZwBcwH/AX8B/wF/IAABGAFj
@@ -189,9 +193,12 @@
   <metadata name="Timsum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>150, 5</value>
   </metadata>
+<<<<<<< HEAD
   <metadata name="SITM1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   <metadata name="SITM2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -219,6 +226,7 @@
   <metadata name="SITM10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<<<<<<< HEAD
   <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>553, 9</value>
   </metadata>
@@ -228,6 +236,14 @@
   <metadata name="BackgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>833, 9</value>
   </metadata>
+=======
+  <metadata name="SITM1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>553, 9</value>
+  </metadata>
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>33</value>
   </metadata>

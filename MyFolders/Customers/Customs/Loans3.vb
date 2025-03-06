@@ -2,12 +2,20 @@
 
 Imports System.Data.SqlClient
 Public Class Loans3
+<<<<<<< HEAD
     Inherits Form
+=======
+    Inherits System.Windows.Forms.Form
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Public SqlDataAdapter1 As SqlDataAdapter
     ReadOnly ds As New DataSet
     Dim xxk As Double
+<<<<<<< HEAD
     Private Sub Loans3_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Loans3_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -16,11 +24,19 @@ Public Class Loans3
             Me.Opacity = a / 10
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles TextTBNK1.TextChanged
         Try
             Dim f As New Loans2
             Me.DataGridView1.AutoGenerateColumns = False
             Dim Consum As New SqlConnection(constring)
+=======
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextTBNK1.TextChanged
+        Try
+            Dim f As New Loans2
+            Me.DataGridView1.AutoGenerateColumns = False
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim strSQL As New SqlCommand("", Consum)
             With strSQL
                 .CommandText = "SELECT  TBNK4,TBNK6, TBNK8, TBNK9, TBNK10, TBNK11, TBNK22, TBNK23 FROM PTRANSACTION  WHERE  CUser='" & CUser & "' and TBNK1 ='" & Me.TextTBNK1.Text & "'"

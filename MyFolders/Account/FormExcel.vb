@@ -8,12 +8,21 @@ Imports DevExpress.XtraSplashScreen
 Public Class FormExcel
     'Inherits DevExpress.XtraBars.Ribbon.RibbonForm
     Dim WithEvents BS As New BindingSource
+<<<<<<< HEAD
     Public SqlDataAdapter1 As New SqlDataAdapter
     Dim ds As New DataSet
     Private ReadOnly currentFile As String
     Private ReadOnly checkPrint As Integer
     Private WithEvents ConnectDataBase As BackgroundWorker
     Private WithEvents SaveTab As BackgroundWorker
+=======
+    Public SqlDataAdapter1 As New SqlClient.SqlDataAdapter
+    Dim ds As New DataSet
+    Private ReadOnly currentFile As String
+    Private ReadOnly checkPrint As Integer
+    Private WithEvents ConnectDataBase As System.ComponentModel.BackgroundWorker
+    Private WithEvents SaveTab As System.ComponentModel.BackgroundWorker
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Delegate Sub LoadDataBaseCallBack()
     Public Delegate Sub CallLoadDataBase()
     Public Delegate Sub PictureBox2Callback()
@@ -54,7 +63,11 @@ Public Class FormExcel
     Private Sub FormExcel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Call MangUsers()
+<<<<<<< HEAD
             Me.ConnectDataBase = New BackgroundWorker With {
+=======
+            Me.ConnectDataBase = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             .WorkerReportsProgress = True,
             .WorkerSupportsCancellation = True
         }
@@ -69,15 +82,26 @@ Public Class FormExcel
         Me.SAVEBUTTON.Enabled = False
     End Sub
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles ConnectDataBase.DoWork
+=======
+    Private Sub ConnectDataBase_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles ConnectDataBase.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             SplashScreenManager.ShowForm(Me, GetType(WaitForm), True, True, False)
 1:
             Me.Invoke(New LoadDataBaseCallBack(AddressOf LoadDataBase), Array.Empty(Of Object)())
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Me.ds.EnforceConstraints = False
             Consum.Open()
             Dim str As New SqlCommand("", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Me.ds.EnforceConstraints = False
+            Consum.Open()
+            Dim str As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With str
                 If RAdmin = True Then
                     'MsgBox(1)
@@ -135,7 +159,11 @@ Public Class FormExcel
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+=======
+    Private Sub ConnectDataBase_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles ConnectDataBase.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             'Dim text As Byte()
@@ -207,8 +235,13 @@ Public Class FormExcel
     Private Sub SAVERECORD()
         Try
             Dim N As Double
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim cmd1 As New SqlCommand("SELECT MAX(EW1) FROM ExcelWorksheet", Consum)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(EW1) FROM ExcelWorksheet", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             Dim resualt As Object = cmd1.ExecuteScalar()
@@ -227,7 +260,11 @@ Public Class FormExcel
                 .Connection = Consum
                 .Parameters.Add("@EW1", SqlDbType.Int).Value = Val(N) + 1
                 .Parameters.Add("@EW2", SqlDbType.NVarChar).Value = Me.TEXTBOX2.Text
+<<<<<<< HEAD
                 .Parameters.Add("@EW3", SqlDbType.NVarChar).Value = Me.TEXTBOX3.Value.ToString("yyyy-MM-dd")
+=======
+                .Parameters.Add("@EW3", SqlDbType.NVarChar).Value = TEXTBOX3.Text
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
                 Dim dataParameter As New SqlParameter("@WorksheetData", SqlDbType.VarBinary) With {
                     .Value = SpreadsheetControl1.SaveDocument(DevExpress.Spreadsheet.DocumentFormat.OpenXml)
@@ -249,7 +286,11 @@ Public Class FormExcel
     End Sub
     Private Sub UPDATERECORD()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             Dim command As SqlCommand = Consum.CreateCommand()
             command.CommandText = " Update ExcelWorksheet SET  EW2 = @EW2, EW3 = @EW3, WorksheetData = @WorksheetData, CUser = @CUser, COUser = @COUser, da = @da, ne = @ne  WHERE EW1 =" & Val(ID)
             Dim N As Integer
@@ -281,7 +322,11 @@ Public Class FormExcel
         On Error Resume Next
         Me.RECORDSLABEL.Text = Me.BS.Position + 1 & " من " & Me.BS.Count
     End Sub
+<<<<<<< HEAD
     Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As DoWorkEventArgs) Handles SaveTab.DoWork
+=======
+    Private Sub SaveData_DoWork(ByVal sender As Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles SaveTab.DoWork
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
 
             'Me.RichEditControl1.RtfText
@@ -322,7 +367,11 @@ Public Class FormExcel
             End If
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+=======
+    Private Sub SaveData_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles SaveTab.RunWorkerCompleted
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If DelRow = True Then
 
@@ -346,7 +395,11 @@ Public Class FormExcel
 
                 Exit Sub
             End If
+<<<<<<< HEAD
             Dim Sound As IO.Stream = My.Resources.save
+=======
+            Dim Sound As System.IO.Stream = My.Resources.save
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
             MsgBox("تمت عملية الحفظ في قاعدة البيانات بنجاح", 64 + 524288, "نجاح الحفظ والتغييرات والتحديث")
         Catch Ex As Exception
@@ -365,7 +418,11 @@ Public Class FormExcel
             Me.TEXTBOX2.SelectAll()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As EventArgs) Handles BS.PositionChanged
+=======
+    Private Sub BS_PositionChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles BS.PositionChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.RecordCount()
     End Sub
@@ -421,27 +478,47 @@ Public Class FormExcel
         Me.TEXTBOX3.Text = Me.ds.Tables("MYMESSAGES").Rows(Me.BS.Position)("MSG3").ToString
         'Me.SpreadsheetControl1.RtfText = Me.ds.Tables("MYMESSAGES").Rows(Me.BS.Position)("MSG4").ToString
     End Sub
+<<<<<<< HEAD
     Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles FIRSTBUTTON.Click
+=======
+    Private Sub FIRSTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FIRSTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = 0
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles PREVIOUSBUTTON.Click
+=======
+    Private Sub PREVIOUSBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PREVIOUSBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles NEXTBUTTON.Click
+=======
+    Private Sub NEXTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NEXTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Position + 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles LASTBUTTON.Click
+=======
+    Private Sub LASTBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LASTBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BS.Position = Me.BS.Count - 1
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ADDBUTTON.Click
+=======
+    Private Sub ADDBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ADDBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.ADDBUTTON.Enabled = False
             Me.EDITBUTTON.Enabled = False
@@ -482,10 +559,17 @@ Public Class FormExcel
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+<<<<<<< HEAD
         Dim Sound As IO.Stream = My.Resources.addv
         My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
     End Sub
     Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles SAVEBUTTON.Click
+=======
+        Dim Sound As System.IO.Stream = My.Resources.addv
+        My.Computer.Audio.Play(Sound, AudioPlayMode.WaitToComplete)
+    End Sub
+    Private Sub SAVEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             Me.ADDBUTTON.Enabled = True
             Me.SAVEBUTTON.Enabled = False
@@ -508,7 +592,11 @@ Public Class FormExcel
             Me.BS.EndEdit()
             Me.RowCount = Me.BS.Count
             Me.SAVERECORD()
+<<<<<<< HEAD
             Me.SaveTab = New BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -518,7 +606,11 @@ Public Class FormExcel
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles EDITBUTTON.Click
+=======
+    Private Sub EDITBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EDITBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Try
             If TestNet = False Then
                 MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -546,7 +638,11 @@ Public Class FormExcel
             Me.RowCount = Me.BS.Count
 
 
+<<<<<<< HEAD
             Me.SaveTab = New BackgroundWorker With {
+=======
+            Me.SaveTab = New System.ComponentModel.BackgroundWorker With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                 .WorkerReportsProgress = True,
                 .WorkerSupportsCancellation = True
             }
@@ -556,7 +652,11 @@ Public Class FormExcel
             MessageBox.Show(ex.Message & ex.Source)
         End Try
     End Sub
+<<<<<<< HEAD
     Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BUTTONCANCEL.Click
+=======
+    Private Sub BUTTONCANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BUTTONCANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.ADDBUTTON.Enabled = True
         Me.SAVEBUTTON.Enabled = False
@@ -566,7 +666,11 @@ Public Class FormExcel
         Me.BS.CancelEdit()
         Me.RecordCount()
     End Sub
+<<<<<<< HEAD
     Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles DELETEBUTTON.Click
+=======
+    Private Sub DELETEBUTTON_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DELETEBUTTON.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")
@@ -586,7 +690,11 @@ Public Class FormExcel
         Me.RecordCount()
     End Sub
 
+<<<<<<< HEAD
     Private Sub TEXTBOX2_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TEXTBOX2.SelectedIndexChanged
+=======
+    Private Sub TEXTBOX2_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TEXTBOX2.SelectedIndexChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         'BS.Position = BS.Find("MSG1", Me.TEXTBOX2.Text)
         Me.SpreadsheetControl1.Focus()
         Me.RecordCount()

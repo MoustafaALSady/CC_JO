@@ -53,7 +53,11 @@ Module PrintSettingModule
                 Dim dt As New DataTable
                 dt.Columns.Add("ID", Type.GetType("System.Int16"))
                 dt.Columns.Add("Name", Type.GetType("System.String"))
+<<<<<<< HEAD
                 For Each xPaperSize As PaperSize In xDoc.PrinterSettings.PaperSizes
+=======
+                For Each xPaperSize As System.Drawing.Printing.PaperSize In xDoc.PrinterSettings.PaperSizes
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim xrow = dt.NewRow
                     xrow("ID") = xPaperSize.RawKind
                     xrow("Name") = xPaperSize.PaperName
@@ -71,7 +75,10 @@ Module PrintSettingModule
             Return
         End Try
     End Sub
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public Sub FillComboByPagesize(ByVal Combo As ComboBox, ByVal SelectedPrinter As String)
         Try
             Combo.DataSource = Nothing
@@ -83,7 +90,11 @@ Module PrintSettingModule
                 dt.Columns.Add("Name", Type.GetType("System.String"))
                 'xDoc.PrinterSettings.DefaultPageSettings.PaperSize.PaperName = Printing.PaperKind.A5
 
+<<<<<<< HEAD
                 For Each xPaperSize As PaperSize In xDoc.PrinterSettings.PaperSizes
+=======
+                For Each xPaperSize As System.Drawing.Printing.PaperSize In xDoc.PrinterSettings.PaperSizes
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     Dim xrow = dt.NewRow
                     xrow("ID") = xPaperSize.RawKind
                     xrow("Name") = xPaperSize.PaperName
@@ -139,7 +150,11 @@ Module PrintSettingModule
         If Comb.Items.Count > 0 Then Comb.SelectedIndex = 0
     End Sub
 
+<<<<<<< HEAD
     Public Sub ApplayPrinteringOptions(ByVal Rpt As ReportDocument)
+=======
+    Public Sub ApplayPrinteringOptions(ByVal Rpt As CrystalDecisions.CrystalReports.Engine.ReportDocument)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Rpt.PrintOptions.PrinterName = XPrinterName
         'Rpt.PrintOptions.PaperSize = XPaperSize
         'Rpt.PrintOptions.PaperOrientation = XPaperOrientation

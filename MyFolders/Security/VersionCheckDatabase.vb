@@ -13,7 +13,11 @@ Public Class VersionCheckDatabase
     End Enum
     Private sqlCmd As New SqlCommand()
 
+<<<<<<< HEAD
     Private Sub VersionCheckDatabase_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub VersionCheckDatabase_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If SetupDatabase() = False Then
             Return
         End If

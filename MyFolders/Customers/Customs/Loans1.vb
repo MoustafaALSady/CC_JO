@@ -4,7 +4,11 @@ Imports System.Data.SqlClient
 Public Class Loans1
     Public xx As Integer = 0
     ReadOnly InvDataset As New DataSet, Flt As String
+<<<<<<< HEAD
     Dim adp As New SqlDataAdapter
+=======
+    Dim adp As New SqlClient.SqlDataAdapter
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
     Public WithEvents BS As New BindingSource
     Dim nem, nem1, nem2, nem3, nem4, nem5 As String
     Dim pp As Integer
@@ -29,6 +33,7 @@ Public Class Loans1
     Dim ppp As String
     Dim te1 As String
 
+<<<<<<< HEAD
     Private Sub Loans1_FormClosed(ByVal sender As Object, ByVal e As FormClosedEventArgs) Handles Me.FormClosed
         Me.Timer1.Enabled = False
     End Sub
@@ -37,6 +42,16 @@ Public Class Loans1
         Dim strsql2 As New SqlCommand("select Loa7  from LoansPa  WHERE  CUser='" & CUser & "' and Loa2<='" & ServerDateTime.ToString("yyyy-MM-dd") & "' and Loa6='" & 0 & "'and Loa15='" & True & "'ORDER BY Lo", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+    Private Sub Loans1_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        Me.Timer1.Enabled = False
+    End Sub
+    Private Sub Premiums()
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("select Loa7  from LoansPa  WHERE  CUser='" & CUser & "' and Loa2<='" & ServerDateTime.ToString("yyyy-MM-dd") & "' and Loa6='" & 0 & "'and Loa15='" & True & "'ORDER BY Lo", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         Consum.Open()
@@ -53,7 +68,11 @@ Public Class Loans1
         Me.ButtonTransferOfInstallmentsReceived.Enabled = LockAddRow
         Me.ButtonTransferOfInstallmentsReceived.Enabled = LockSave
     End Sub
+<<<<<<< HEAD
     Private Sub Loans1_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub Loans1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Me.BackgroundImage = img
         For a As Byte = 0 To 10
@@ -71,15 +90,25 @@ Public Class Loans1
         Dim ds As DataSet
         ds = New DataSet
         DataGridView1.Rows.Clear()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strSQL As New SqlCommand("", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strSQL As New SqlClient.SqlCommand("", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With strSQL
             .CommandText = "select Loa1, Lo, Loa, Loa2, Loa3, Loa4, Loa5, Loa6, Loa7, Loa8, Loa9, Loa10, Loa11, Loa12, Loa13, Loa14, Loa15, Loa16, LO25, USERNAME, CUser, COUser, da, ne  from LoansPa  WHERE  CUser='" & CUser & "' and Loa2<='" & ServerDateTime.ToString("yyyy-MM-dd") & "' and Loa6<'" & PremiumsK & "'and Loa15='" & True & "'ORDER BY Lo"
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
         End With
+<<<<<<< HEAD
         adp = New SqlDataAdapter(strSQL)
         Dim oCommandBuilder As New SqlCommandBuilder(adp)
+=======
+        adp = New SqlClient.SqlDataAdapter(strSQL)
+        Dim oCommandBuilder As New SqlClient.SqlCommandBuilder(adp)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         adp.Fill(ds, "LoansPa")
         If Me.BindingContext(ds, "LoansPa").Count = 0 Then
             MsgBox("لا يوجد بيانات لعرضها", 64 + 524288, "عرض البيانات")
@@ -134,7 +163,11 @@ Public Class Loans1
             End If
         Next
     End Sub
+<<<<<<< HEAD
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timer1.Tick
+=======
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
 
         If xx >= 1 And xx <= 20 Then
             For I As Integer = 0 To Me.DataGridView1.Rows.Count - 1
@@ -171,7 +204,11 @@ Public Class Loans1
         End If
         xx += 1
     End Sub
+<<<<<<< HEAD
     Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As EventArgs) Handles ToolStripButton2.Click
+=======
+    Private Sub ToolStripButton2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton2.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Me.Timer1.Stop()
         Me.Close()
     End Sub
@@ -179,10 +216,17 @@ Public Class Loans1
 
 
     Private Sub SEARCHDATAITEMS10()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK6 FROM PTRANSACTION WHERE TBNK23 = '" & Val(Me.DataGridView1.Item("Loa10", Me.DataGridView1.CurrentRow.Index).Value()) & "'", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK6 FROM PTRANSACTION WHERE TBNK23 = '" & Val(Me.DataGridView1.Item("Loa10", Me.DataGridView1.CurrentRow.Index).Value()) & "'", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -197,10 +241,17 @@ Public Class Loans1
         End If
     End Sub
     Private Sub SEARCHDATAITEMS1()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK6 FROM PTRANSACTION WHERE TBNK23 = '" & Val(Me.DataGridView3.Item("LOK2", Me.DataGridView3.CurrentRow.Index).Value()) & "'", Consum)
         Dim ds2 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql2)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim strsql2 As New SqlCommand("SELECT DISTINCT TBNK6 FROM PTRANSACTION WHERE TBNK23 = '" & Val(Me.DataGridView3.Item("LOK2", Me.DataGridView3.CurrentRow.Index).Value()) & "'", Consum)
+        Dim ds2 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql2)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         ds2.Clear()
         If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -215,7 +266,11 @@ Public Class Loans1
         End If
     End Sub
     Private Sub PtransactionEnquiry()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str1 As New SqlCommand("", Consum)
         With str1
             .CommandText = "SELECT DISTINCT TBNK6,TBNK8 ,TBNK22 ,TBNK23 FROM PTRANSACTION WHERE  TBNK23 ='" & Val(Me.DataGridView1.Item("Loa10", Me.DataGridView1.CurrentRow.Index).Value()) & "'"
@@ -223,7 +278,11 @@ Public Class Loans1
             Consum.Open()
             Dim ds As New DataSet
             Dim dt As New DataTable
+<<<<<<< HEAD
             Dim Adp1 As New SqlDataAdapter(str1)
+=======
+            Dim Adp1 As New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             On Error Resume Next
             ds.Clear()
             Adp1.Fill(ds, "PTRANSACTION")
@@ -237,7 +296,11 @@ Public Class Loans1
     End Sub
     Private Sub FundBalance()
         Me.InternalAuditorBalance1()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str1 As New SqlCommand("", Consum)
         With str1
             .CommandText = "SELECT DISTINCT LOK2 ,LOK3,TBNK7 ,LOK FROM LoansK WHERE  LOK ='" & Val(DataGridView1.Item("Lo", Me.DataGridView1.CurrentRow.Index).Value()) & "'" & " AND TBNK7> '" & 0 & "'"
@@ -245,7 +308,11 @@ Public Class Loans1
             Consum.Open()
             Dim ds As New DataSet
             Dim dt As New DataTable
+<<<<<<< HEAD
             Dim Adp1 As New SqlDataAdapter(str1)
+=======
+            Dim Adp1 As New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             On Error Resume Next
             ds.Clear()
             If Consum.State = ConnectionState.Open Then Consum.Close()
@@ -258,7 +325,11 @@ Public Class Loans1
         End With
     End Sub
     Private Sub SEARCHDATAITEMS13()
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim str1 As New SqlCommand("", Consum)
         With str1
             .CommandText = "SELECT DISTINCT TBNK6,TBNK8 ,TBNK22 ,TBNK23 FROM PTRANSACTION WHERE  TBNK23 ='" & Val(DataGridView3.Item("LOK2", DataGridView3.CurrentRow.Index).Value()) & "'"
@@ -266,7 +337,11 @@ Public Class Loans1
             Consum.Open()
             Dim ds As New DataSet
             Dim dt As New DataTable
+<<<<<<< HEAD
             Dim Adp1 As New SqlDataAdapter(str1)
+=======
+            Dim Adp1 As New SqlClient.SqlDataAdapter(str1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             On Error Resume Next
             ds.Clear()
             Adp1.Fill(ds, "PTRANSACTION")
@@ -278,12 +353,21 @@ Public Class Loans1
         End With
     End Sub
     Private Sub InternalAuditorBalance()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim Adp2 As SqlDataAdapter
         Dim Adp3 As SqlDataAdapter
         Dim Adp4 As SqlDataAdapter
         Dim Adp5 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Adp2 As SqlClient.SqlDataAdapter
+        Dim Adp3 As SqlClient.SqlDataAdapter
+        Dim Adp4 As SqlClient.SqlDataAdapter
+        Dim Adp5 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim SUM1, SUM2, SUM3, SUM4, SUM5 As Double
         On Error Resume Next
         Dim strsq1 As New SqlCommand("SELECT Sum(PTRANSACTION.TBNK4) AS SumDEBIT,Sum(PTRANSACTION.TBNK5) AS SumDEBIT1 FROM PTRANSACTION WHERE TBNK6 = '" & Me.TEXTBOX6.Text & "'" & "AND TBNK8='امانات'", Consum)
@@ -296,11 +380,19 @@ Public Class Loans1
         Dim ds3 As New DataSet
         Dim ds4 As New DataSet
         Dim ds5 As New DataSet
+<<<<<<< HEAD
         Adp1 = New SqlDataAdapter(strsq1)
         Adp2 = New SqlDataAdapter(strsq2)
         Adp3 = New SqlDataAdapter(strsq3)
         Adp4 = New SqlDataAdapter(strsq4)
         Adp5 = New SqlDataAdapter(strsq5)
+=======
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+        Adp3 = New SqlClient.SqlDataAdapter(strsq3)
+        Adp4 = New SqlClient.SqlDataAdapter(strsq4)
+        Adp5 = New SqlClient.SqlDataAdapter(strsq5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         ds2.Clear()
         ds3.Clear()
@@ -351,12 +443,21 @@ Public Class Loans1
         Consum.Close()
     End Sub
     Private Sub InternalAuditorBalance1()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim Adp2 As SqlDataAdapter
         Dim Adp3 As SqlDataAdapter
         Dim Adp4 As SqlDataAdapter
         Dim Adp5 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Adp2 As SqlClient.SqlDataAdapter
+        Dim Adp3 As SqlClient.SqlDataAdapter
+        Dim Adp4 As SqlClient.SqlDataAdapter
+        Dim Adp5 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim SUM1, SUM2, SUM3, SUM4, SUM5 As Double
         On Error Resume Next
         Dim strsq1 As New SqlCommand("SELECT Sum(PTRANSACTION.TBNK4) AS SumDEBIT,Sum(PTRANSACTION.TBNK5) AS SumDEBIT1 FROM PTRANSACTION WHERE TBNK6 = '" & Me.TextBox19.Text & "'" & "AND TBNK8='امانات'", Consum)
@@ -369,11 +470,19 @@ Public Class Loans1
         Dim ds3 As New DataSet
         Dim ds4 As New DataSet
         Dim ds5 As New DataSet
+<<<<<<< HEAD
         Adp1 = New SqlDataAdapter(strsq1)
         Adp2 = New SqlDataAdapter(strsq2)
         Adp3 = New SqlDataAdapter(strsq3)
         Adp4 = New SqlDataAdapter(strsq4)
         Adp5 = New SqlDataAdapter(strsq5)
+=======
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+        Adp3 = New SqlClient.SqlDataAdapter(strsq3)
+        Adp4 = New SqlClient.SqlDataAdapter(strsq4)
+        Adp5 = New SqlClient.SqlDataAdapter(strsq5)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         ds2.Clear()
         ds3.Clear()
@@ -425,6 +534,7 @@ Public Class Loans1
         Consum.Close()
     End Sub
     Private Sub InternalAuditorAccount_name()
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim Adp2 As SqlDataAdapter
         Dim Adp3 As SqlDataAdapter
@@ -432,6 +542,15 @@ Public Class Loans1
         Dim Adp5 As SqlDataAdapter
         Dim Adp6 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Adp2 As SqlClient.SqlDataAdapter
+        Dim Adp3 As SqlClient.SqlDataAdapter
+        Dim Adp4 As SqlClient.SqlDataAdapter
+        Dim Adp5 As SqlClient.SqlDataAdapter
+        Dim Adp6 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim account_name1, account_name2, account_name3, account_name4, account_name5, account_name6 As String
         Dim account_no1, account_no2, account_no3, account_no4, account_no5, account_no6 As String
         On Error Resume Next
@@ -453,12 +572,21 @@ Public Class Loans1
         Dim ds4 As New DataSet
         Dim ds5 As New DataSet
         Dim ds6 As New DataSet
+<<<<<<< HEAD
         Adp1 = New SqlDataAdapter(strsq1)
         Adp2 = New SqlDataAdapter(strsq2)
         Adp3 = New SqlDataAdapter(strsq3)
         Adp4 = New SqlDataAdapter(strsq4)
         Adp5 = New SqlDataAdapter(strsq5)
         Adp6 = New SqlDataAdapter(strsq6)
+=======
+        Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+        Adp2 = New SqlClient.SqlDataAdapter(strsq2)
+        Adp3 = New SqlClient.SqlDataAdapter(strsq3)
+        Adp4 = New SqlClient.SqlDataAdapter(strsq4)
+        Adp5 = New SqlClient.SqlDataAdapter(strsq5)
+        Adp6 = New SqlClient.SqlDataAdapter(strsq6)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         ds2.Clear()
         ds3.Clear()
@@ -529,7 +657,11 @@ Public Class Loans1
         Adp6.Dispose()
         Consum.Close()
     End Sub
+<<<<<<< HEAD
     Private Sub Ch1_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch1.CheckedChanged
+=======
+    Private Sub Ch1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch1.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.Ch1.Checked = True Then
             Me.DataGridView1.Focus()
             For Each r As DataGridViewRow In DataGridView1.Rows
@@ -555,7 +687,11 @@ Public Class Loans1
             Me.Timsum.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Ch2_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch2.CheckedChanged
+=======
+    Private Sub Ch2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch2.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.Ch2.Checked = True Then
             Me.DataGridView2.Focus()
             tota1 = "0.00"
@@ -566,7 +702,11 @@ Public Class Loans1
             Me.Timsum1.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Ch3_CheckedChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles Ch3.CheckedChanged
+=======
+    Private Sub Ch3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ch3.CheckedChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Me.Ch3.Checked = True Then
             Me.DataGridView3.Focus()
             xxk1 = "0.00"
@@ -589,7 +729,11 @@ Public Class Loans1
             Me.Timsum2.Stop()
         End If
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum.Tick
+=======
+    Private Sub Timsum_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch1.Checked = True Then
             Dim tota2 As Double
@@ -935,7 +1079,11 @@ Public Class Loans1
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum1.Tick
+=======
+    Private Sub Timsum1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum1.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If Me.Ch2.Checked = True Then
             Dim I As Integer
@@ -1106,7 +1254,11 @@ Public Class Loans1
         End If
 
     End Sub
+<<<<<<< HEAD
     Private Sub Timsum2_Tick(ByVal sender As System.Object, ByVal e As EventArgs) Handles Timsum2.Tick
+=======
+    Private Sub Timsum2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timsum2.Tick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         Dim totak2 As Double
         Dim tota3 As Double
@@ -1440,8 +1592,13 @@ Public Class Loans1
     Private Sub INSERTRECORDempsolf()
         On Error Resume Next
         Dim N As Double
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim cmd1 As New SqlCommand("SELECT MAX(TBNK1) FROM PTRANSACTION", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(TBNK1) FROM PTRANSACTION", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim resualt As Object = cmd1.ExecuteScalar()
@@ -1451,11 +1608,19 @@ Public Class Loans1
             N = CType(resualt, Integer) + 1
         End If
         Consum.Close()
+<<<<<<< HEAD
         Dim strsql1 As New SqlCommand("", Consum) With {
             .CommandText = "SELECT TBNK6 FROM Deposits WHERE  TBNK6 = '" & Me.TEXTBOX6.Text & "' and CUser ='" & CUser & "'"
         }
         Dim ds1 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+        Dim strsql1 As New SqlClient.SqlCommand("", Consum) With {
+            .CommandText = "SELECT TBNK6 FROM Deposits WHERE  TBNK6 = '" & Me.TEXTBOX6.Text & "' and CUser ='" & CUser & "'"
+        }
+        Dim ds1 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1)
         Consum.Close()
@@ -1464,7 +1629,11 @@ Public Class Loans1
             te1 = ds1.Tables(0).Rows(II).Item("TBNK6")
         Next
         Dim SQL As String = "INSERT INTO PTRANSACTION( TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK22, TBNK23, USERNAME, CUser, COUser, da, ne, da1, ne1) VALUES     ( @TBNK2, @TBNK3, @TBNK4, @TBNK5, @TBNK6, @TBNK7, @TBNK8, @TBNK9, @TBNK10, @TBNK11, @TBNK12, @TBNK13, @TBNK14, @TBNK15, @TBNK16, @TBNK17, @TBNK18, @TBNK22, @TBNK23, @USERNAME, @CUser, @COUser, @da, @ne, @da1, @ne1)"
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(SQL, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With cmd.Parameters
             .AddWithValue("@TBNK2", Format(Val(SumAmounTOTALCASHANDCHEQUES2(Me.TEXTBOX6.Text, Me.DataGridView2("TBNK8", Me.DataGridView2.CurrentRow.Index).Value, N)), "0.000"))
             .AddWithValue("@TBNK3", MaxDate.ToString("yyyy-MM-dd"))
@@ -1504,8 +1673,13 @@ Public Class Loans1
     Private Sub INSERTRECORDempsolf1()
         On Error Resume Next
         Dim N As Double
+<<<<<<< HEAD
         Dim Consum As New SqlConnection(constring)
         Dim cmd1 As New SqlCommand("SELECT MAX(TBNK1) FROM PTRANSACTION", Consum)
+=======
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Dim cmd1 As New SqlClient.SqlCommand("SELECT MAX(TBNK1) FROM PTRANSACTION", Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         If Consum.State = ConnectionState.Open Then Consum.Close()
         Consum.Open()
         Dim resualt As Object = cmd1.ExecuteScalar()
@@ -1515,11 +1689,19 @@ Public Class Loans1
             N = CType(resualt, Integer) + 1
         End If
         Consum.Close()
+<<<<<<< HEAD
         Dim strsql1 As New SqlCommand("", Consum) With {
             .CommandText = "SELECT TBNK6 FROM Deposits WHERE  TBNK6 = '" & Me.TextBox19.Text & "' and CUser ='" & CUser & "'"
         }
         Dim ds1 As New DataSet
         Dim Adp1 As New SqlDataAdapter(strsql1)
+=======
+        Dim strsql1 As New SqlClient.SqlCommand("", Consum) With {
+            .CommandText = "SELECT TBNK6 FROM Deposits WHERE  TBNK6 = '" & Me.TextBox19.Text & "' and CUser ='" & CUser & "'"
+        }
+        Dim ds1 As New DataSet
+        Dim Adp1 As New SqlClient.SqlDataAdapter(strsql1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ds1.Clear()
         Adp1.Fill(ds1)
 
@@ -1529,7 +1711,11 @@ Public Class Loans1
         Next
         Consum.Close()
         Dim SQL As String = "INSERT INTO PTRANSACTION( TBNK2, TBNK3, TBNK4, TBNK5, TBNK6, TBNK7, TBNK8, TBNK9, TBNK10, TBNK11, TBNK12, TBNK13, TBNK14, TBNK15, TBNK16, TBNK17, TBNK18, TBNK22, TBNK23, USERNAME, CUser, COUser, da, ne, da1, ne1) VALUES     ( @TBNK2, @TBNK3, @TBNK4, @TBNK5, @TBNK6, @TBNK7, @TBNK8, @TBNK9, @TBNK10, @TBNK11, @TBNK12, @TBNK13, @TBNK14, @TBNK15, @TBNK16, @TBNK17, @TBNK18, @TBNK22, @TBNK23, @USERNAME, @CUser, @COUser, @da, @ne, @da1, @ne1)"
+<<<<<<< HEAD
         Dim cmd As New SqlCommand(SQL, Consum)
+=======
+        Dim cmd As New SqlClient.SqlCommand(SQL, Consum)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         With cmd.Parameters
             .AddWithValue("@TBNK2", Format(Val(SumAmounTOTALCASHANDCHEQUES2(Val(Me.TextBox19.Text), Me.DataGridView2("TBNK8", Me.DataGridView2.CurrentRow.Index).Value, N)), "0.000"))
             .AddWithValue("@TBNK3", MaxDate.ToString("yyyy-MM-dd"))
@@ -1568,7 +1754,11 @@ Public Class Loans1
     End Sub
     Private Sub UPDATELoansPa()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If DataGridView1.Rows.Count > 0 Then
 
                 If CDbl(Val(Me.Textk77.Text)) = CDbl(Me.DataGridView1("Loa7", Me.DataGridView1.CurrentRow.Index).Value) Then
@@ -1583,7 +1773,11 @@ Public Class Loans1
                 LSet(Me.DataGridView1("Lo25", Me.DataGridView1.CurrentRow.Index).Value, 2)
                 Dim PA As String = "WD" & "-" & DataGridView1("Loa1", Me.DataGridView1.CurrentRow.Index).Value
                 Dim SQL As New SqlCommand(" UPDATE LoansPa SET   Loa3 = @Loa3, Loa4 = @Loa4, Loa5 = @Loa5, Loa6 = @Loa6, Loa8 = @Loa8, Loa12 = @Loa12, Loa13 = @Loa13, Loa14 = @Loa14     WHERE Loa1 = '" & DataGridView1("Loa1", DataGridView1.CurrentRow.Index).Value & "'", Consum)
+<<<<<<< HEAD
                 Dim CMD As New SqlCommand With {
+=======
+                Dim CMD As New SqlClient.SqlCommand With {
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
                     .CommandType = CommandType.Text,
                     .Connection = Consum
                 }
@@ -1612,12 +1806,21 @@ Public Class Loans1
     End Sub
 
     Private Shared Function FEXISTS(ByVal s1 As String, ByVal s2 As Date, ByVal s3 As String, ByVal s4 As String, ByVal s5 As String) As Boolean
+<<<<<<< HEAD
         Dim Adp1 As SqlDataAdapter
         Dim Consum As New SqlConnection(constring)
         Try
             Dim strsq1 As New SqlCommand("SELECT TBNK9,TBNK3,TBNK11,TBNK10 FROM PTRANSACTION WHERE TBNK9 ='" & s1 & "'" & "AND  TBNK8='" & s3 & "'" & "AND  TBNK11='" & s4 & "'" & "AND  TBNK10='" & s5 & "'" & "AND  year(TBNK3)='" & s2.Year & "'" & "AND  month(TBNK3)='" & s2.Month & "'" & "AND  day(TBNK3)='" & s2.Day & "'", Consum)
             Dim ds1 As New DataSet
             Adp1 = New SqlDataAdapter(strsq1)
+=======
+        Dim Adp1 As SqlClient.SqlDataAdapter
+        Dim Consum As New SqlClient.SqlConnection(constring)
+        Try
+            Dim strsq1 As New SqlCommand("SELECT TBNK9,TBNK3,TBNK11,TBNK10 FROM PTRANSACTION WHERE TBNK9 ='" & s1 & "'" & "AND  TBNK8='" & s3 & "'" & "AND  TBNK11='" & s4 & "'" & "AND  TBNK10='" & s5 & "'" & "AND  year(TBNK3)='" & s2.Year & "'" & "AND  month(TBNK3)='" & s2.Month & "'" & "AND  day(TBNK3)='" & s2.Day & "'", Consum)
+            Dim ds1 As New DataSet
+            Adp1 = New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds1.Clear()
             Adp1.Fill(ds1)
             Adp1.Dispose()
@@ -1651,12 +1854,21 @@ Public Class Loans1
             nem7 = "سداد اقساط من حساب الاعضاء"
             nem9 = "سداد اقساط من حساب الاعضاء"
             pp = "1"
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             Dim kast As Double
             kast = CDbl(Val(Textk7.Text))
             Dim strsq1 As New SqlCommand("SELECT MOV1  FROM MOVES  WHERE (MOVES.MOV11)='" & Me.TextBox15.Text & "'", Consum)
             Dim ds As New DataSet
             Dim Adp1 As New SqlDataAdapter(strsq1)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            Dim kast As Double
+            kast = CDbl(Val(Textk7.Text))
+            Dim strsq1 As New SqlClient.SqlCommand("SELECT MOV1  FROM MOVES  WHERE (MOVES.MOV11)='" & Me.TextBox15.Text & "'", Consum)
+            Dim ds As New DataSet
+            Dim Adp1 As New SqlClient.SqlDataAdapter(strsq1)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             ds.Clear()
             Adp1.Fill(ds, "MOVES")
 
@@ -1689,8 +1901,13 @@ Public Class Loans1
             Box10 = ID_Nam
             GetNoRecord("ACCOUNTSTREE", "ACC", "account_name", Me.ComboBox6.Text, 1)
             Box11 = ID_Nam
+<<<<<<< HEAD
             Dim strSQL As New SqlCommand("", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim strSQL As New SqlClient.SqlCommand("", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With strSQL
 
                 If Me.CheckBox1.Checked = True And Me.CheckBox2.Checked = False And Me.CheckBox3.Checked = False And CheckBox4.Checked = False And Me.CheckBox5.Checked = False Then
@@ -2760,10 +2977,17 @@ Public Class Loans1
     End Sub
     Private Sub SaveMOVES()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
             SEARCHDATA.MAXIDMOVES()
             Dim SQL As New SqlCommand("INSERT INTO MOVES ( MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV10, MOV11, MOV12, USERNAME, Realname, cuser, COUser, da, ne) VALUES     ( @MOV1, @MOV2, @MOV3, @MOV4, @MOV5, @MOV6, @MOV7, @MOV8, @MOV9, @MOV10, @MOV11, @MOV12, @USERNAME, @Realname, @cuser, @COUser, @da, @ne)", Consum)
             Dim CMD As New SqlCommand
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+            SEARCHDATA.MAXIDMOVES()
+            Dim SQL As New SqlClient.SqlCommand("INSERT INTO MOVES ( MOV1, MOV2, MOV3, MOV4, MOV5, MOV6, MOV7, MOV8, MOV9, MOV10, MOV11, MOV12, USERNAME, Realname, cuser, COUser, da, ne) VALUES     ( @MOV1, @MOV2, @MOV3, @MOV4, @MOV5, @MOV6, @MOV7, @MOV8, @MOV9, @MOV10, @MOV11, @MOV12, @USERNAME, @Realname, @cuser, @COUser, @da, @ne)", Consum)
+            Dim CMD As New SqlClient.SqlCommand
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             With CMD
                 .CommandType = CommandType.Text
                 .Connection = Consum
@@ -2797,7 +3021,11 @@ Public Class Loans1
     End Sub
     Private Sub DELETEDATMOVESDATA()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             MYDELETERECORD("MOVES", "MOV2", TextBox11, BS, True)
@@ -2808,7 +3036,11 @@ Public Class Loans1
     End Sub
     Private Sub DELETEDATMOVESDATA1()
         Try
+<<<<<<< HEAD
             Dim Consum As New SqlConnection(constring)
+=======
+            Dim Consum As New SqlClient.SqlConnection(constring)
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
             If Consum.State = ConnectionState.Open Then Consum.Close()
             Consum.Open()
             MYDELETERECORD("MOVESDATA", "MOV2", TextBox11, BS, True)
@@ -2819,12 +3051,17 @@ Public Class Loans1
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub NumericUpDown1_ValueChanged_1(ByVal sender As System.Object, ByVal e As EventArgs) Handles NumericUpDown1.ValueChanged
+=======
+    Private Sub NumericUpDown1_ValueChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown1.ValueChanged
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown1.Value, Me.ComboBox1)
     End Sub
 
 
+<<<<<<< HEAD
     Private Sub NumericUpDown2_ValueChanged(ByVal sender As System.Object, ByVal e As EventArgs) Handles NumericUpDown2.ValueChanged
         On Error Resume Next
         FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown2.Value, Me.ComboBox2)
@@ -2846,6 +3083,29 @@ Public Class Loans1
         FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown6.Value, Me.ComboBox6)
     End Sub
     Private Sub ButtonTransferOfInstallmentsReceived_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles ButtonTransferOfInstallmentsReceived.Click
+=======
+    Private Sub NumericUpDown2_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown2.ValueChanged
+        On Error Resume Next
+        FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown2.Value, Me.ComboBox2)
+    End Sub
+    Private Sub NumericUpDown3_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown3.ValueChanged
+        On Error Resume Next
+        FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown3.Value, Me.ComboBox3)
+    End Sub
+    Private Sub NumericUpDown4_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown4.ValueChanged
+        On Error Resume Next
+        FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown4.Value, Me.ComboBox4)
+    End Sub
+    Private Sub NumericUpDown5_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown5.ValueChanged
+        On Error Resume Next
+        FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown5.Value, Me.ComboBox5)
+    End Sub
+    Private Sub NumericUpDown6_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown6.ValueChanged
+        On Error Resume Next
+        FILLCOMBOBOX2("ACCOUNTSTREE", "account_name", "acc", NumericUpDown6.Value, Me.ComboBox6)
+    End Sub
+    Private Sub ButtonTransferOfInstallmentsReceived_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonTransferOfInstallmentsReceived.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         On Error Resume Next
         If TestNet = False Then
             MsgBox("الاتصال بالانترنت غير متوفر", 16, "تنبيه")

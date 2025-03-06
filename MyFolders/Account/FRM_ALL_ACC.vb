@@ -21,17 +21,26 @@
         End If
     End Sub
 
+<<<<<<< HEAD
     Private Sub FRM_ALL_ACC_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+=======
+    Private Sub FRM_ALL_ACC_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         LOAD_ACCOUNT()
     End Sub
 
 
 
+<<<<<<< HEAD
     Private Sub DGV_CellDoubleClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles DGV.CellDoubleClick
+=======
+    Private Sub DGV_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGV.CellDoubleClick
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ACCEPT = True
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub DGV_CellFormatting(ByVal sender As Object, ByVal e As DataGridViewCellFormattingEventArgs) Handles DGV.CellFormatting
         AUTO_NUMER_NUM(DGV, Color.SaddleBrown, e, Color.White)
     End Sub
@@ -41,16 +50,35 @@
     End Sub
 
     Private Sub BTN_OK_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BTN_OK.Click
+=======
+    Private Sub DGV_CellFormatting(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles DGV.CellFormatting
+        AUTO_NUMER_NUM(DGV, Color.SaddleBrown, e, Color.White)
+    End Sub
+
+    Private Sub TXT_SEARCH_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXT_SEARCH.TextChanged
+        LOAD_ACCOUNT()
+    End Sub
+
+    Private Sub BTN_OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTN_OK.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ACCEPT = True
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BTN_CANCEL_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BTN_CANCEL.Click
+=======
+    Private Sub BTN_CANCEL_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTN_CANCEL.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         ACCEPT = False
         Me.Close()
     End Sub
 
+<<<<<<< HEAD
     Private Sub BTN_NEW_Click(ByVal sender As System.Object, ByVal e As EventArgs) Handles BTN_NEW.Click
+=======
+    Private Sub BTN_NEW_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTN_NEW.Click
+>>>>>>> c3c12be08c1593ad8bd7ed80a18e0ca7a526c28c
         Dim F As New FRM_ACCOUNT
         F.NEW_()
         F.ShowDialog()
